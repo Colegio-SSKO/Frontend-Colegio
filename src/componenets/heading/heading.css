@@ -1,0 +1,18 @@
+
+@import url("/font.css");
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.page-heading {
+    font-size: 32px;
+    color: #767676;
+}
+
+.section-heading{
+    font-size: 24px;
+    color: #767676;
+}
