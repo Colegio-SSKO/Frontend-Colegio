@@ -35,6 +35,12 @@ const Routes = {
         path:"/frontendcol_war_exploded/SPAroutes/contact.html",
         title: "contact",
         data : "This is the contact page"
+    },
+
+    "/question" : {
+        path:"/frontendcol_war_exploded/views/Question/html_template.jsp",
+        title: "contact",
+        data : "This is the contact page"
     }
 };
 
@@ -59,7 +65,7 @@ const urlLocation = async () =>{
         response.text()
     );
 
-    document.querySelector(".main").innerHTML = html;
+    document.querySelector(".cont-body-left").innerHTML = html;
 
 };
 
