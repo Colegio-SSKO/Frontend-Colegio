@@ -15,7 +15,8 @@ body {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 100vh;
+    height: max-content;
+
 }
 
 .main-left{
@@ -90,21 +91,20 @@ body {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 100%;
+
 }
 
 
 .main-right .cont-body .cont-body-left{
     width: 50%;
     height: 100%;
-    overflow-y: scroll;
-
+    padding: 20px;
 }
 
 .main-right .cont-body .cont-body-right{
     width: 50%;
     height: 100%;
-
+    padding: 20px;
 }
 
 footer {
