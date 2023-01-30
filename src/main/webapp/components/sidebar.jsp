@@ -30,7 +30,7 @@
 
         <div class="side_icons">
             <i class="material-icons">help_outline</i>
-            <label>Questions</label>
+            <label> <a href="/question">Quizzes</a></label>
         </div>
 
          <div class="side_icons">
