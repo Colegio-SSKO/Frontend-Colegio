@@ -62,6 +62,9 @@ const urlLocation = async () =>{
 
     console.log(location);
     const route = Routes[location] || Routes[404];
+    console.log(route.path_left);
+    console.log(route.path_right);
+
     let html_cont_left = await fetch(route.path_left).then((response)=>
         response.text()
     );
