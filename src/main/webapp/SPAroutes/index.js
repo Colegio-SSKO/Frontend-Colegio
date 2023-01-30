@@ -1,6 +1,6 @@
 document.addEventListener("click", (ev)=>{
     let {target} = ev;
-    if(!target.matches("nav a")){
+    if(!target.matches(" a")){
         return;
     }
     else{
@@ -56,16 +56,17 @@ const router = (ev) =>{
 const urlLocation = async () =>{
     let location = window.location.pathname;
     if (location.length==0){
-        location = "../../../../../../../IdeaProjects/colfrontend/src/main/webapp";
+        location = "/";
     }
 
     console.log(location);
     const route = Routes[location] || Routes[404];
-    let html = await fetch(route.path).then((response)=>
+    let html_cont = await fetch(route.path).then((response)=>
         response.text()
     );
 
-    document.querySelector(".cont-body-left").innerHTML = html;
+    document.querySelector(".cont-body-left").innerHTML = html_cont;
+    document.querySelector(".pagename").innerText = route.title;
 
 };
 

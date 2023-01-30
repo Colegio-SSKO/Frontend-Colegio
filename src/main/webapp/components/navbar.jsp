@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <jsp:include page="imports.jsp"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/da4dde32c9.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <h3 class="pagename">Notifications</h3>
+        
+        <div class="nav-middle">
+            <a href="#"> <h5>Categories</h5> </a>
+            <input type="text" placeholder="Search here ...">
+        </div>
+        
+        <div class="main-profile">
+            <i class="material-icons">shopping_cart</i>
+            <i class="material-icons notif">notifications</i>
+            <div class="profile-pic">
+                <img src="./images/R.jpg" alt="" srcset="">
+            </div>
+            <h5>Senith Uthsara</h5>
+        </div>
+        
+    </nav>
+</body>
+</html>

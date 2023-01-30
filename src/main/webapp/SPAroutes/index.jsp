@@ -12,6 +12,7 @@
 
         <div class="main-cont">
             <div class="main-left">
+                <jsp:include page="../components/sidebar.jsp"/>
                 <div class="burger">
                     <div class="burgerbar burger-up"></div>
                     <div class="burgerbar burger-middle"></div>
@@ -20,12 +21,10 @@
             </div>
 
             <div class="main-right">
-                <nav>
-                    <a href="/">Home</a>
-                    <a href="/about">About</a>
-                    <a href="/contact">Contact</a>
-                    <a href="/question">Questions</a>
-                </nav>
+
+                <jsp:include page="../components/navbar.jsp"/>
+
+
                 <div class="cont-body">
                     <div class="cont-body-left">
 
