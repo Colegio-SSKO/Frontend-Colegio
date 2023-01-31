@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="../static/css/views_styles.css">
-    <link rel="stylesheet" href="../static/css/html_template.css">
     <link rel="stylesheet" href="../static/css/style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,12 +26,9 @@
 
 
                 <div class="cont-body">
-                    <div class="cont-body-left">
 
-                    </div>
-                    <div class="cont-body-right">
 
-                    </div>
+
                 </div>
 
             </div>

@@ -27,6 +27,14 @@ body {
     position: relative;
 }
 
+.styles {
+    display: none;
+}
+
+.cont-body-content {
+    width: 100%;
+    height: 100%;
+}
 
 .burger {
     width: 50px;
