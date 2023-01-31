@@ -32,6 +32,8 @@
 
 <footer></footer>
 
+<script src="index_single.js"></script>
+
 <script>
 
   let menu = document.querySelector(".burger");
