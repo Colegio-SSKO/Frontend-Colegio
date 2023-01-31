@@ -13,16 +13,16 @@ document.addEventListener("click", (ev)=>{
 const Routes = {
     404 : {
         isSingle : true,
-        template : "/frontendcol_war_exploded/SPAroutes/index_single.jsp",
-        path_left:"/frontendcol_war_exploded/SPAroutes/pagenotfound.html",
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/SPAroutes/pagenotfound.html",
         title: "404 | Page not found",
         data : "Page does not exists"
     },
 
     "/" : {
         isSingle : true,
-        template : "/frontendcol_war_exploded/SPAroutes/index_single.jsp",
-        path_left:"/frontendcol_war_exploded/views/Home_content.jsp",
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Home_content.jsp",
         title: "Home",
         data : "This is the home page"
     },
@@ -30,8 +30,8 @@ const Routes = {
 
     "/about" : {
         isSingle : false,
-        template : "/frontendcol_war_exploded/SPAroutes/index_double.jsp",
-        path_left:"/frontendcol_war_exploded/SPAroutes/about.html",
+        template : "/SPAroutes/index_double.jsp",
+        path_left:"/SPAroutes/about.html",
         title: "about",
         data : "This is the about page"
     },
@@ -39,17 +39,17 @@ const Routes = {
 
     "/contact" : {
         isSingle : false,
-        template : "/frontendcol_war_exploded/SPAroutes/index_double.jsp",
-        path_left:"/frontendcol_war_exploded/SPAroutes/contact.html",
+        template : "/SPAroutes/index_double.jsp",
+        path_left:"/SPAroutes/contact.html",
         title: "contact",
         data : "This is the contact page"
     },
 
     "/question" : {
         isSingle : false,
-        template : "/frontendcol_war_exploded/SPAroutes/index_double.jsp",
-        path_left:"/frontendcol_war_exploded/views/Question_student_1_left.jsp",
-        path_right: "/frontendcol_war_exploded/views/Question_student_1_right.jsp",
+        template : "/SPAroutes/index_double.jsp",
+        path_left:"/views/Question_student_1_left.jsp",
+        path_right: "/views/Question_student_1_right.jsp",
         title: "contact",
         data : "This is the contact page"
     }
