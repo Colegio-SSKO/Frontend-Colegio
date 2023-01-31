@@ -12,7 +12,7 @@
     <div class="sidebar1">
 
         
-        <img src="/images/Collegio.png" alt="logo">
+        <img src="../static/img/components_images/COLEGIO.png" alt="logo">
         <div class="side_icons">
             <i class="material-icons">home</i>
             <label> <a href="/">Home</a></label>

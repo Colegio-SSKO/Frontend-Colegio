@@ -10,7 +10,7 @@
 <body>
     <div class="noti-notification">
         <div class="noti-prof-img">
-            <img src="images/profile picture.png" alt="">
+            <img src="../static/img/components_images/profile%20picture.png" alt="">
         </div>
         <div class="noti-msg">
             <h3>Ravin Silva has accepted your session request.</h3>

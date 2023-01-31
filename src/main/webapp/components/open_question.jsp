@@ -35,7 +35,7 @@
             </div>
             <div class="open-question-msgBox">
                 <form action="#">
-                    <input type="text" name="message" placeholder="Type your response" >
+                    <input type="text" name="message"  class="fnt" placeholder="Type your response" >
                     
                     <span class="material-icons">attach_file</span>
                     <jsp:include page="send_button.jsp"/>
@@ -49,12 +49,12 @@
             <!-- replace this with the component -->
             <div class="profilepic-card">
                 <div class="pic-container">
-                    <img src="images/R.jpg" alt="profile picture" srcset="">
+                    <img src="../static/img/components_images/R.jpg" alt="profile picture" srcset="">
                    
                 </div>
                 <div class="name-container">
-                    <h5>Senith Uthsara Karunarathne</h5>
-                    <h6>Professional Video Editor</h6>
+                    <h5 class="fnt">Senith Uthsara Karunarathne</h5>
+                    <h6 class="fnt">Professional Video Editor</h6>
                 </div>
             </div>
             <!--  -->

@@ -21,7 +21,7 @@
         </div>
 
         <div class="q-2-price">
-            <img src="./images/more_vert.png" alt="">
+            <img src="../static/img/components_images/more_vert.png" alt="">
         </div>
     </div>
 </body>

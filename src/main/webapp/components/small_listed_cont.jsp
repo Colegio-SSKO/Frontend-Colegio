@@ -12,7 +12,7 @@
 <body>
     <div class="small-listed-cont-wrap">
         <div class="small-listed-cont-image">
-            <img src="images/elec.jpg" alt="course image">
+            <img src="../static/img/components_images/elec.jpg" alt="course image">
         </div>
            
        

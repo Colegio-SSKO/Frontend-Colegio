@@ -11,20 +11,20 @@
 </head>
 <body>
     <nav>
-        <h3 class="pagename">Notifications</h3>
+        <h3 class="pagename fnt fnt-bold fnt-extraLarge">Notifications</h3>
         
         <div class="nav-middle">
-            <a href="#"> <h5>Categories</h5> </a>
-            <input type="text" placeholder="Search here ...">
+            <a href="#"> <h5 class="fnt fnt-bold fnt-large">Categories</h5> </a>
+            <input type="text" class="fnt fnt-bold" placeholder="Search here ...">
         </div>
         
         <div class="main-profile">
             <i class="material-icons">shopping_cart</i>
             <i class="material-icons notif">notifications</i>
             <div class="profile-pic">
-                <img src="./images/R.jpg" alt="" srcset="">
+                <img src="../static/img/components_images/R.jpg" alt="" srcset="">
             </div>
-            <h5>Senith Uthsara</h5>
+            <h5 class="fnt fnt-bold fnt-mid">Senith Uthsara</h5>
         </div>
         
     </nav>

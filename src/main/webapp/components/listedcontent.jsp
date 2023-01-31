@@ -12,7 +12,7 @@
 <body>
     <div class="courseList-card">
         <div class="course-image">
-            <img src="images/elec.jpg" alt="course image">
+            <img src="../static/img/components_images/elec.jpg" alt="course image">
         </div>
            
        

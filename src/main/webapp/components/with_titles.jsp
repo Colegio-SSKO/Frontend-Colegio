@@ -15,7 +15,7 @@
     <!-- start -->
     <div class="profilepic-card">
         <div class="pic-container">
-            <img src="images/R.jpg" alt="profile picture" srcset="">
+            <img src="../static/img/components_images/R.jpg" alt="profile picture" srcset="">
            
         </div>
         <div class="name-container">

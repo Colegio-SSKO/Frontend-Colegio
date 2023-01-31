@@ -12,7 +12,7 @@
 <body>
     <div class="open-course-wrap">
         <div class="open-course-image">
-            <img src="images/video.jpg" alt="">
+            <img src="../static/img/components_images/video.jpg" alt="">
         </div>
 
         <jsp:include page="ratings.jsp"/>

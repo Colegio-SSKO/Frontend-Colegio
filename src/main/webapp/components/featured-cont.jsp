@@ -13,7 +13,7 @@
 <body>
     <div class="featured-cont-wrap">
         <div class="featured-cont-image">
-            <img src="images/violinist.jpg" alt="">
+            <img src="../static/img/components_images/violinist.jpg" alt="">
         </div>
         <div class="featured-cont-details">
             <h4>Western music for GCE OLs - The Complete Guide</h4>

@@ -348,37 +348,6 @@ body {
 }
 
 
-/* .btn {
-    width: 150px;
-    height: 40px;
-    border: 0px;
-    border-radius: 30px;
-    color: #FE793D;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-.btn-solid{
-    background-color: #FE793D;
-    color: white;
-    border: 0px;
-    border-radius: 30px;
-    box-shadow: none;
-}
-
-.btn-small{
-    width: 100px;
-}
-
-.btn-large{
-    width: 150px;
-}
-
-
-.btn-outlined {
-    box-shadow: none;
-    border: 1px #FE793D solid;
-}
- */
 
 
 .quiz-wrap {
@@ -530,6 +499,7 @@ body {
     border: 0px;
     border-radius: 30px;
     box-shadow: none;
+    line-height: 15px;
 }
 
 .btn-small{
@@ -537,7 +507,7 @@ body {
 }
 
 .btn-large{
-    width: 200px;
+    width: 150px;
 }
 
 
@@ -1030,6 +1000,9 @@ nav {
     justify-content: space-between;
     color: #767676;
     font-family: 'Poppins', sans-serif;
+    margin-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 nav .nav-middle{
@@ -1038,7 +1011,7 @@ nav .nav-middle{
     justify-content: space-between;
     align-items: center;
     position: relative;
-    right: 75px;
+    /*right: 75px;*/
 
 
 }
@@ -1053,15 +1026,15 @@ nav .nav-middle input {
     background-repeat: no-repeat;
     width: 70%;
     position: relative;
-    right: 25px;
-    height: 30px;
+    /*right: 25px;*/
+    height: 40px;
     border:none;
-    border-bottom: 1px solid #767676;
     font-family: 'Poppins', sans-serif;
     padding: 10px;
     padding-left: 30px;
-
-
+    outline: none;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
 }
 
 nav .main-profile {
