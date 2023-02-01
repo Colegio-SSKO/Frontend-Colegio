@@ -17,14 +17,14 @@
         <div class="nav-middle">
             <input type="text" class="fnt fnt-bold" placeholder="Search here ...">
         </div>
-        
-        <div class="main-profile">
+
+        <div class="main-profile router">
             <i class="material-icons cart-icon">shopping_cart</i>
             <i class="material-icons notif">notifications</i>
             <div class="profile-pic">
                 <img src="../static/img/components_images/R.jpg" alt="" srcset="">
             </div>
-            <h5 class="fnt fnt-bold fnt-mid">Senith Uthsara</h5>
+            <h5 class="fnt fnt-bold fnt-mid"><a href="/profile">Senith Uthsara</a> </h5>
         </div>
         
     </nav>

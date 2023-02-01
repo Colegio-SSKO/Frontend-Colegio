@@ -20,7 +20,7 @@
 
         <div class="side_icons">
             <i class="material-icons">ondemand_video</i>
-            <label> <a href="/contact">My Courses</a></label>
+            <label> <a href="/viewCourses">My Courses</a></label>
         </div>
 
         <div class="side_icons">
@@ -35,7 +35,7 @@
 
          <div class="side_icons">
             <i class="material-icons">person</i>
-            <label>Profile</label>
+            <label><a href="/profile">Profile</a></label>
         </div>
 
         <div class="side_icons">
