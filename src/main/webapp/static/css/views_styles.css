@@ -31,7 +31,6 @@ body {
 
 
 .btn-solid{
-    margin-left: 0.5rem;
     margin-top: 1rem;
     border: #FE793D 1px solid;
     background: #E4E4E4;
@@ -39,7 +38,6 @@ body {
 }
 
 .btn-shadow{
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
     background: #E4E4E4;
     color: #FE793D;
 }

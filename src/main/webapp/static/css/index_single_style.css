@@ -144,7 +144,7 @@ footer {
 }
 
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 780px){
     .main-left{
         position: absolute;
         transform: translateX(-100%);

@@ -11,15 +11,15 @@
 </head>
 <body>
     <nav>
+
         <h3 class="pagename fnt fnt-bold fnt-extraLarge">Notifications</h3>
         
         <div class="nav-middle">
-            <a href="#"> <h5 class="fnt fnt-bold fnt-large">Categories</h5> </a>
             <input type="text" class="fnt fnt-bold" placeholder="Search here ...">
         </div>
         
         <div class="main-profile">
-            <i class="material-icons">shopping_cart</i>
+            <i class="material-icons cart-icon">shopping_cart</i>
             <i class="material-icons notif">notifications</i>
             <div class="profile-pic">
                 <img src="../static/img/components_images/R.jpg" alt="" srcset="">

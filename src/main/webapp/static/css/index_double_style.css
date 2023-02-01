@@ -8,7 +8,6 @@ body {
     width: 100%;
     height: auto;
     overflow: scroll;
-
 }
 
 .main-cont{
@@ -16,7 +15,7 @@ body {
     flex-direction: row;
     width: 100%;
     height: max-content;
-
+    position: relative;
 }
 
 .main-left{
@@ -139,12 +138,13 @@ footer {
   }
 
 
-@media screen and (max-width: 400px){
-    .main-left{
+@media screen and (max-width: 780px){
+    .main-left {
         position: absolute;
         transform: translateX(-100%);
 
     }
+
 
     .main-right{
         position: absolute;

@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../static/css/html_template.css">
+<link rel="stylesheet" href="../static/css/index_double_style.css">
 
 <div class="cont-body-left">
 

@@ -79,7 +79,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background: azure;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     padding: 10px;
 }
 
@@ -490,7 +491,7 @@ body {
     border: 0px;
     border-radius: 30px;
     color: #FE793D;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .btn-solid{
@@ -778,6 +779,8 @@ body {
     width: 90%;
     margin: auto;
     margin-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
 
 }
 
@@ -830,6 +833,8 @@ body {
     width: 90%;
     margin: auto;
     margin-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
 }
 
 
@@ -864,6 +869,8 @@ body {
     width: 90%;
     margin: auto;
     margin-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
 }
 
 
@@ -1003,6 +1010,7 @@ nav {
     margin-top: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
+    position: relative;
 }
 
 nav .nav-middle{
@@ -1010,16 +1018,11 @@ nav .nav-middle{
     width: 40%;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    position: absolute;
     /*right: 75px;*/
-
-
+    left: 35%;
 }
 
-nav .nav-middle a {
-    text-decoration: none;
-    color: #767676;
-}
 
 nav .nav-middle input {
     /* background-image: url("/images/search_black_24dp.svg"); */
@@ -1034,6 +1037,7 @@ nav .nav-middle input {
     padding-left: 30px;
     outline: none;
     border-radius: 8px;
+    /*margin-left: 15px;*/
     box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
 }
 
@@ -1043,8 +1047,11 @@ nav .main-profile {
     width: 25%;
     align-items: center;
     height: auto;
-
+    position: absolute;
+    left: 75%;
 }
+
+
 
 nav .main-profile i {
     color: #767676;
@@ -1054,9 +1061,14 @@ nav .main-profile .notif {
     color: #FE793D;
 }
 
+.cart-icon{
+    margin-left: 3rem;
+}
+
 nav .main-profile .profile-pic {
     width: 40px;
     height: 40px;
+    margin-left: 20px;
 }
 
 nav .main-profile .profile-pic img {
@@ -1068,7 +1080,7 @@ nav .main-profile .profile-pic img {
 
 nav .main-profile h5 {
     position: relative;
-    right: 10px;
+    margin-right: 3rem;
 }
 
 /*sidebar*/
