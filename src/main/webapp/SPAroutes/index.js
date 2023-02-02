@@ -63,6 +63,9 @@ const Routes = {
         title: "profile",
         data : "This is the profile page"
     }
+
+
+
 };
 
 
