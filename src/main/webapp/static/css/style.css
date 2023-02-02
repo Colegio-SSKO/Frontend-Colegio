@@ -70,6 +70,7 @@ body {
 }
 
 
+
 .open-question-wrap {
     width: 90%;
     margin: auto;
@@ -79,11 +80,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: azure;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
     padding: 10px;
 }
-
 .open-question-message-wrap {
     height: 300px;
 
@@ -94,7 +94,7 @@ body {
 }
 
 .open-question-msg {
-    background-color: #E4E4E4;
+    background: #ffffff;
     width: fit-content;
     padding-left: 20px;
     padding-right: 20px;
@@ -150,7 +150,7 @@ body {
     width: 50%;
     border-style: none;
     transition: all 0.25s ease-in-out;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
     border-radius: 20px;
 }
 
@@ -176,7 +176,7 @@ body {
     align-items: center;
     border: 0px;
     padding-left: 5px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
 
 }
 
@@ -195,7 +195,7 @@ body {
     width: 500px;
     height: 600px;
     padding: 10px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
     border-radius: 20px;
 }
 
@@ -266,8 +266,9 @@ body {
     display: flex;
     padding: 10px;
     justify-content: space-between;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
     border-radius: 20px;
+    margin-bottom: 40px;
 }
 
 .featured-cont-image {
@@ -308,7 +309,7 @@ body {
     display: flex;
     border-radius: 40px;
     overflow: hidden;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
 }
 
 .desc-head {
@@ -354,7 +355,7 @@ body {
 .quiz-wrap {
     width: 600px;
     height: 380px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
     padding: 16px;
     padding-top: 0px;
     padding-bottom: 0px;
@@ -368,7 +369,7 @@ body {
 
 
 .quiz-q {
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
     width: 100%;
     height: 50px;
     margin-top: 16px;
@@ -491,16 +492,16 @@ body {
     border: 0px;
     border-radius: 30px;
     color: #FE793D;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
 }
 
 .btn-solid{
-    background-color: #FE793D;
-    color: white;
+    background-color: white;
+    color: #FE793D;
     border: 0px;
     border-radius: 30px;
-    box-shadow: none;
     line-height: 15px;
+    border: 1px solid #FE793D;
 }
 
 .btn-small{
@@ -511,7 +512,11 @@ body {
     width: 150px;
 }
 
+.btn-shadow{
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 4px;
 
+}
 .btn-outlined {
     box-shadow: none;
     border: 1px #FE793D solid;
@@ -523,7 +528,7 @@ body {
     width: 500px;
     height: 130px;
     padding: 16px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
     border-radius: 20px;
 
 }
@@ -581,12 +586,12 @@ body {
     width: 1330px;
     height: 280px;
     border-radius: 32px;
-    background: azure;
+    background: #ffffff;
     padding: 16px;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
 }
 
 
@@ -632,7 +637,8 @@ body {
 .comment-main {
     padding: 16px;
     width: 880px;
-    background: azure;
+    background: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
 }
 
 .comment-about {
@@ -681,7 +687,8 @@ body {
 
 .comment-cmnt {
     padding: 24px;
-    background: #F5F5F5;
+    background: #ffffff;
+
 }
 
 .comment-comment-box {
@@ -746,7 +753,7 @@ body {
 .noti-notification{
     width: 806px;
     height: 80px;
-    background: azure;
+    background: #ffffff;
     border-radius: 16px;
     padding: 16px;
     display: flex;
@@ -771,7 +778,7 @@ body {
     width: 1330px;
     height: 280px;
     border-radius: 32px;
-    background: azure;
+    background: #ffffff;
     padding: 16px;
     display: flex;
     flex-direction: row;
@@ -779,7 +786,7 @@ body {
     width: 90%;
     margin: auto;
     margin-top: 20px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
 
 
 }
@@ -824,7 +831,7 @@ body {
 .q-2-cart-item{
     width: 1330px;
     border-radius: 32px;
-    background: azure;
+    background: #ffffff;
     padding: 16px;
     display: flex;
     flex-direction: row;
@@ -833,7 +840,7 @@ body {
     width: 90%;
     margin: auto;
     margin-top: 20px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
 
 }
 
@@ -864,12 +871,12 @@ body {
 
 .q-3-main {
     padding: 16px;
-    background: azure;
+    background: #ffffff;
     border-radius:32px;
     width: 90%;
     margin: auto;
     margin-top: 20px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
 
 }
 
@@ -915,7 +922,7 @@ body {
 }
 
 .q-3-cmnt {
-    background: #F5F5F5;
+    background: #ffffff;
 }
 
 .q-3-comment-box {
@@ -954,10 +961,11 @@ body {
 
 
 .small-listed-cont-wrap {
-    display: flex;flex-direction: column;
+    display: flex;
+    flex-direction: column;
     width: 200px;
     height: 230px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
     padding: 10px;
     border-radius: 20px;
 }
@@ -985,14 +993,13 @@ body {
 
 
 .content-list-wrap {
-    width: 90%;
-    height: 300px;
-    grid-template-columns: repeat(auto-fill, 200px);
+    width: 100%;
+    height: 280px;
+    grid-template-columns: repeat(auto-fit, 200px);
     grid-template-rows: 300px;
     grid-gap:5px 5px;
     display: grid;
     overflow: hidden;
-
 }
 
 
@@ -1038,7 +1045,7 @@ nav .nav-middle input {
     outline: none;
     border-radius: 8px;
     /*margin-left: 15px;*/
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
 }
 
 nav .main-profile {
