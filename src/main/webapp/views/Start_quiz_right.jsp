@@ -1,0 +1,1 @@
+<jsp:include page="../../componenets/quiz_question.jsp"/>
