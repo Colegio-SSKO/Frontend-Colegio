@@ -16,7 +16,7 @@
         <div class="q-2-content">
             <h2>Electronic Gates for GCE ALs Sinhala Medium</h2>
             <p>pending</p>
-            <h3>amet consectetur adipisicing elit. Dolorum pariatur at natus id earum incidunt ipsam quis, recusandae tenetur quibusdam.</h3>
+            <h3>amet consectetur adipisicing elit. Dolorum pariatur at natus id earum incidunt ipsam quis, recusandae tenetur quibusdam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum deleniti dolorem doloribus fugiat in, laboriosam nostrum nulla quos reprehenderit similique soluta tempora temporibus ut vitae!</h3>
             <button class="btn btn-solid btn-small">Session</button>
         </div>
 
