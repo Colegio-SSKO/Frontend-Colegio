@@ -13,7 +13,7 @@
             <img src="../static/img/components_images/profile%20picture.png" alt="">
         </div>
         <div class="noti-msg">
-            <h3>Ravin Silva has accepted your session request.</h3>
+            <h3 class="fnt fnt-bold fnt-mid">Ravin Silva has accepted your session request.</h3>
         </div>
     </div>
 </body>

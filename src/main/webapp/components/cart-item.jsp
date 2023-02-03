@@ -14,17 +14,17 @@
             </div>
     
             <div class="cart-item-content">
-                <h2 class="js-title">Western music for GCE OLs - The Complete Guide</h2>
-                <h3 class="js-description">Learn about western music in a way catered towards your OLs, fundemantals straight to master level.</h3>
-                <p class="js-author">By Sachini Usha </p>
+                <h2 class="fnt fnt-extraLarge">Western music for GCE OLs - The Complete Guide</h2>
+                <h3 class="fnt fnt-bold fnt-mid">Learn about western music in a way catered towards your OLs, fundemantals straight to master level.</h3>
+                <p class="fnt fnt-bold fnt-small">By Sachini Usha </p>
                 <jsp:include page="ratings.jsp"/>
-                <p>Published <span class="js-date">January 2022</span></p>
-                <p class="js-time">11 Total hours | 12 videos</p>
-                <p class="js-audience">OL Levels</p>
+                <p class="fnt fnt-small">Published <span>January 2022</span></p>
+                <p class="fnt fnt-small">11 Total hours | 12 videos</p>
+                <p class="fnt fnt-small">OL Levels</p>
             </div>
     
             <div class="cart-item-price">
-                <h1 class="js-price">$19.99</h1>
+                <h1 class="fnt fnt-bold fnt-extraLarge">$19.99</h1>
                 <button>Remove</button>
             </div>
     </div>

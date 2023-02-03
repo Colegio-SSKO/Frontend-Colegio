@@ -17,16 +17,16 @@
            
        
         <div class="small-listed-cont-details">
-            <h5>Electronics basics for GCE ALs</h5>
+            <h5 class="fnt fnt-bold fnt-large">Electronics basics for GCE ALs</h5>
 
                 <div class="small-listed-cont-author">
-                    <h6>Senith Uthsara</h6>
+                    <h6 class="fnt fnt-bold fnt-small">Senith Uthsara</h6>
 
                     <jsp:include page="ratings.jsp"/>
                 </div>
 
 
-            <h3>$19.99</h3>
+            <h3 class="fnt fnt-bold fnt-extraLarge">$19.99</h3>
         </div>
         
     </div>

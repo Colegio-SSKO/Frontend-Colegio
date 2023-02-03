@@ -13,8 +13,8 @@
 <body>
     <div class="comment-main">
         <div class="comment-about">
-            <h3>Video editing basics</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur,
+            <h3 class="fnt fnt-bold fnt-large">Video editing basics</h3>
+            <p class="fnt fnt-bold fnt-mid">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur,
                 adipisicing elit. Magnam dolores nam, explicabo adipisci tempore voluptatibus eaque eveniet unde,
                 mollitia sed accusantium veritatis itaque ducimus non totam! Distinctio itaque ad voluptatem. Natus rem
                 soluta maiores corporis magnam id officia odio ipsa quasi ex laudantium, corrupti atque alias
@@ -27,8 +27,8 @@
                     <img src="./images/profile picture (1).png" alt="">
                 </div>
                 <div class="comment-author-name">
-                    <h3>George gunathilake</h3>
-                    <p>Lorem, ipsum dolor.</p>
+                    <h3 class="fnt fnt-bold fnt-small">George gunathilake</h3>
+                    <p class="fnt fnt-small">Lorem, ipsum dolor.</p>
                 </div>
             </div>
         </div>
@@ -46,21 +46,21 @@
             <div class="comment-comments">
                 <div class="comment-cmnt-1">
                     <img src="./images/pro.png" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, quidem dolor. Minus, veniam
+                    <p class="fnt fnt-mid">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, quidem dolor. Minus, veniam
                         inventore pariatur ipsam, similique nemo voluptatibus dolor neque voluptatum est dolore quas!
                     </p>
                 </div>
 
                 <div class="comment-cmnt-1">
                     <img src="./images/pro.png" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, quidem dolor. Minus, veniam
+                    <p class="fnt fnt-mid">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, quidem dolor. Minus, veniam
                         inventore pariatur ipsam, similique nemo voluptatibus dolor neque voluptatum est dolore quas!
                     </p>
                 </div>
 
                 <div class="comment-cmnt-1">
                     <img src="./images/pro.png" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, quidem dolor. Minus, veniam
+                    <p class="fnt fnt-mid">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, quidem dolor. Minus, veniam
                         inventore pariatur ipsam, similique nemo voluptatibus dolor neque voluptatum est dolore quas!
                     </p>
                 </div>

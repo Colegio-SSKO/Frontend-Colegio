@@ -16,14 +16,14 @@
             <img src="../static/img/components_images/violinist.jpg" alt="">
         </div>
         <div class="featured-cont-details">
-            <h4>Western music for GCE OLs - The Complete Guide</h4>
-            <p>Learn about western music in a way catered towards your OLs, fundemantals straight to master level.</p>
-            <h6>Senith Uthsara</h6>
-            <h6>Published January 2022  | 11 total hours | 12 videos | OL Levels</h6>
+            <h4 class="fnt fnt-extraBold fnt-large">Western music for GCE OLs - The Complete Guide</h4>
+            <p class="fnt fnt-bold fnt-mid">Learn about western music in a way catered towards your OLs, fundemantals straight to master level.</p>
+            <h6 class="fnt fnt-bold fnt-small">Senith Uthsara</h6>
+            <h6 class="fnt fnt-small">Published January 2022  | 11 total hours | 12 videos | OL Levels</h6>
 
             <jsp:include page="ratings.jsp"/>
 
-            <h3>$19.99</h3>
+            <h3 class="fnt fnt-bold fnt-extraLarge">$19.99</h3>
 
             <div class="featured-cont-actions">
                 <button class="btn btn-solid btn-large">Add to cart</button>

@@ -14,8 +14,8 @@
 <body>
     <div class="q-3-main">
         <div class="q-3-about">
-            <h2>Electronics circuits for GCE OLs English Medium</h2>
-            <p>Lorem ipsum, dolor ipsa quasi ex laudantium, corrupti atque alias
+            <h2 class="fnt fnt-bold fnt-large">Electronics circuits for GCE OLs English Medium</h2>
+            <p class="fnt fnt-mid">Lorem ipsum, dolor ipsa quasi ex laudantium, corrupti atque alias
                 perspiciatis debitis molestias error, libero provident.</p>
 
             <div class="q-3-cmnt">
