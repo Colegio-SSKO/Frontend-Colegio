@@ -14,9 +14,9 @@
             <img src="/ppic.jpg" alt="profile picture" srcset="">
         </div>
         <div class="profile-card-details">
-            <h4>Senith Uthsara Karunarathne <span class="material-icons-outlined"> male</span></h4>
-            <p>February 2000</p>
-            <p>Undergraduate | UCSC</p>
+            <h4 class="fnt fnt-bold fnt-small">Senith Uthsara Karunarathne <span class="material-icons-outlined"> male</span></h4>
+            <p class="fnt fnt-small">February 2000</p>
+            <p class="fnt fnt-small">Undergraduate | UCSC</p>
 
         </div>
 

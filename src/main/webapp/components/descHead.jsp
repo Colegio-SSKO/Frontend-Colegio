@@ -12,7 +12,7 @@
     <div class="desc-head-wrap">
         <div class="desc-head">Heading</div>
         <div class="desc-cont">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. orrupti doloremque laudantium sequi.</p>
+            <p class="fnt fnt-light fnt-large">Lorem ipsum dolor sit amet, consectetur adipisicing elit. orrupti doloremque laudantium sequi.</p>
             <span class="material-icons">play_circle_filled</span>
         </div>
     </div>
