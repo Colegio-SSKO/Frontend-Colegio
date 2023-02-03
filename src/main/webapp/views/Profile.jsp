@@ -1,3 +1,6 @@
+
+
+
 <div class="first">
   <h2>Recommended for you</h2><p>
   <jsp:include page="../components/featured-cont.jsp"/>

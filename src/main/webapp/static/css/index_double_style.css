@@ -136,7 +136,7 @@ body {
   }
 
 
-@media screen and (max-width: 780px){
+@media screen and (max-width: 400px){
     .main-left {
         position: absolute;
         transform: translateX(-100%);
@@ -146,6 +146,7 @@ body {
 
     .main-right{
         position: absolute;
+
 
     }
 
