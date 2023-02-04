@@ -26,8 +26,8 @@
             <h3 class="fnt fnt-bold fnt-extraLarge">$19.99</h3>
 
             <div class="featured-cont-actions">
-                <button class="btn btn-solid btn-large">Add to cart</button>
-                <button class="btn btn-solid btn-large">Buy Now</button>
+                <button class="btn btn-solid btn-large"><a class="fnt fnt-mid fnt-bold" href="">Add to cart</a></button>
+                <button class="btn btn-solid btn-large"><a class="fnt fnt-mid fnt-bold" href="">Buy Now</a></button>
             </div>
 
         </div>

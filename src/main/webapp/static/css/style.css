@@ -45,7 +45,14 @@
 
 
 
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
 
+button{
+    cursor: pointer;
+}
 
 body {
     overflow-x: hidden;
@@ -65,11 +72,14 @@ body {
     position: relative;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     border-radius: 20px;
+    margin: auto;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
 }
 
 .profile-card-image {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
 
 }
 
@@ -82,7 +92,6 @@ body {
 
 .profile-card-details {
     position: relative;
-    line-height: 5px;
     margin-left: 20px;
 }
 
@@ -119,6 +128,7 @@ body {
 .open-question-wrap {
     width: 90%;
     margin: auto;
+    cursor: pointer;
     margin-top: 20px;
     border-radius: 32px;
     height: 450px;
@@ -237,6 +247,7 @@ body {
 
 .open-course-wrap{
     position: relative;
+    cursor: pointer;
     width: 80%;
     height: 700px;
     padding: 10px;
@@ -309,7 +320,8 @@ body {
 
 .featured-cont-wrap {
     width: 700px;
-    height: 250px;
+    height: 300px;
+    cursor: pointer;
     display: flex;
     padding: 10px;
     justify-content: space-between;
@@ -333,20 +345,23 @@ body {
 
 .featured-cont-details {
     width: 450px;
-    padding: 10px;
-    padding-bottom: 10px;
-    padding-top: 0px;
+    height: 100%;
+    padding: 5px;
     display: flex;
     flex-direction: column;
     position: relative;
+    margin-bottom: 10px;
+    margin-left: 10px;
 }
 
-.featured-cont-details > * {
+
+.featured-cont-actions {
     margin-bottom: 10px;
 }
 
-.featured-cont-actions {
-    bottom: 15px;
+
+.featured-cont-actions button{
+    margin-right: 10px;
 }
 
 
@@ -354,6 +369,7 @@ body {
 .desc-head-wrap {
     width: 100%;
     height: 50px;
+    cursor: pointer;
     display: flex;
     border-radius: 40px;
     overflow: hidden;
@@ -406,6 +422,7 @@ body {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
     padding: 16px;
     padding-top: 0px;
+    cursor: pointer;
     padding-bottom: 0px;
     display: flex;
     flex-direction: column;
@@ -574,7 +591,7 @@ body {
     display: flex;
     align-items: center;
     width: 100%;
-    height: 130px;
+    height: 180px;
     padding: 16px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
     border-radius: 20px;
@@ -1009,15 +1026,22 @@ body {
 
 
 .small-listed-cont-wrap {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     width: 250px;
-    height: 280px;
+    height: 250px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
     padding: 10px;
     border-radius: 20px;
     background: white;
     margin-bottom: 1rem;
+}
+
+.small-listed-cont-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .small-listed-cont-image{
@@ -1043,9 +1067,11 @@ body {
 
 
 .content-list-wrap {
+    cursor: pointer;
     width: 100%;
     height: 280px;
     display: flex;
+    cursor: pointer;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
@@ -1063,10 +1089,10 @@ nav {
     justify-content: space-between;
     color: #767676;
     font-family: 'Poppins', sans-serif;
-    margin-top: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
     position: relative;
+    margin-top: 1rem;
 }
 
 nav .nav-middle{
@@ -1151,39 +1177,43 @@ nav .main-profile h5 a{
 .sidebar1 {
     height: 100vh;
     width: 100%;
-    background-color: #FFAE89;
+    background-color: #FE793D;
     border-bottom-right-radius: 30px;
     border-top-right-radius: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     position: absolute;
     text-align: center;
 }
 
 .sidebar1 img {
-    width: 68px;
-    height: 48px;
+    width: 100%;
+    height: auto;
     object-fit: contain;
     position:absolute;
+    cursor: pointer;
     top: 10px;
+    margin-bottom: 2rem;
 }
 
 .material-icons {
     color: white;
     display: flex;
     justify-content: center;
-
+    margin-right: 5px;
 }
 
 .side_icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     color: white;
     margin: 10px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 10px;
-
+    cursor: pointer;
+    margin: 2rem 1rem;
 }
 
 .side_icons:last-child {
@@ -1193,4 +1223,7 @@ nav .main-profile h5 a{
 
 .sidebar1 label a{
     text-decoration: none;
+}
+h3{
+    font-family: 'Poppins', sans-serif;
 }

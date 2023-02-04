@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../static/css/style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,16 +11,15 @@
 <body>
     <div class="profile-card-wrap">
         <div class="profile-card-image">
-            <img src="/ppic.jpg" alt="profile picture" srcset="">
+            <img src="../static/img/components_images/pro.png" alt="profile picture" srcset="">
         </div>
         <div class="profile-card-details">
-            <h4 class="fnt fnt-bold fnt-small">Senith Uthsara Karunarathne <span class="material-icons-outlined"> male</span></h4>
-            <p class="fnt fnt-small">February 2000</p>
-            <p class="fnt fnt-small">Undergraduate | UCSC</p>
-
+            <h3 class="fnt fnt-bold fnt-mid">Senith Uthsara Karunarathne <span class="material-icons-outlined"> male</span></h3>
+            <p class="fnt fnt-mid">February 2000</p>
+            <p class="fnt fnt-mid">Undergraduate | UCSC</p>
         </div>
 
-        <span class="profile-card-details-edit material-icons-outlined">edit</span>
+        <span class="profile-card-details-edit material-icons-outlined fnt">edit</span>
     </div>
 </body>
 </html>
