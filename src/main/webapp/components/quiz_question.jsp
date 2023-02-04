@@ -10,26 +10,26 @@
 <body>
 
     <div class="quiz-wrap">
-        <h3>Video editing basics</h3>
-        <p>Which one of the follwing filters is best in low light situations?</p>
+        <h3 class="fnt fnt-bold fnt-large">Video editing basics</h3>
+        <p class="fnt fnt-mid">Which one of the following filters is best in low light situations?</p>
         <div class="quiz-q">
-            <div class="q-number">A</div>
-            <div class="question">Series Inductor filter</div>
+            <div class="q-number fnt fnt-bold fnt-mid">A</div>
+            <div class="question fnt fnt-mid">Series Inductor filter</div>
         </div>
 
         <div class="quiz-q">
-            <div class="q-number">B</div>
-            <div class="question">Choke Input LC filter</div>
+            <div class="q-number fnt fnt-bold fnt-mid">B</div>
+            <div class="question fnt fnt-mid">Choke Input LC filter</div>
         </div>
 
         <div class="quiz-q">
-            <div class="q-number">C</div>
-            <div class="question">Capacitor Input filter</div>
+            <div class="q-number fnt fnt-bold fnt-mid">C</div>
+            <div class="question fnt fnt-mid">Capacitor Input filter</div>
         </div>
 
         <div class="quiz-q">
-            <div class="q-number">D</div>
-            <div class="question">RC filter</div>
+            <div class="q-number fnt fnt-bold fnt-mid">D</div>
+            <div class="question fnt fnt-mid">RC filter</div>
         </div>
 
         <ul>

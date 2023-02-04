@@ -17,8 +17,8 @@
 
         <jsp:include page="ratings.jsp"/>
 
-        <h4 class="open-course-title">Video editing for beginners </h4>
-        <p class="open-course-desc">The basics include editing videos, removing and including sound, correcting the colors, 
+        <h4 class="open-course-title fnt fnt-bold fnt-large">Video editing for beginners </h4>
+        <p class="open-course-desc fnt fnt-light fnt-mid">The basics include editing videos, removing and including sound, correcting the colors,
             managing the picture, 
             bringing continuity in the video, and adding some special effects. 
             These are all requirements for a video editor to start with, and let me guide you through your journey.

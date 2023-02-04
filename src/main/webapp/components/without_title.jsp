@@ -9,25 +9,15 @@
 </head>
 <body>
 
-
-
-    <!-- start -->
     <div class="profilepic-card">
         <div class="pic-container">
             <img src="../static/img/components_images/R.jpg" alt="profile picture" srcset="">
            
         </div>
         <div class="name-container">
-            <h5>Senith Uthsara Karunarathne</h6>
+            <h5 class="fnt fnt-bold fnt-small">Senith Uthsara Karunarathne</h5>
         </div>
     </div>
 
-    <script src="/profilecards/profilecards.js"></script>
-
-    <!-- end -->
-
-
-
-    
 </body>
 </html>

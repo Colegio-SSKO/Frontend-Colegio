@@ -17,7 +17,7 @@
 <body>
 <div class="session_request_form">
     <form>
-        <h3>Lets publish your session request</h3>
+        <h3 >Lets publish your session request</h3>
         <div class="inputs">
             <div class="input-field">
                 <label for="">Enter an appropriate title for your session request.</label><br><br>

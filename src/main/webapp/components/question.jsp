@@ -14,7 +14,7 @@
 <div class="question-comment-main">
     <div class="comment-about">
         <div class="Q_title">
-            <h3 class="fnt fnt-bold fnt-large">Basic algebra grade 9 help</h3>
+            <h3 class="fnt fnt-extraBold fnt-large">Basic algebra grade 9 help</h3>
         </div>
 
         <div class="Q_description">

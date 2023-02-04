@@ -14,7 +14,7 @@
             </div>
     
             <div class="cart-item-content">
-                <h2 class="fnt fnt-extraLarge">Western music for GCE OLs - The Complete Guide</h2>
+                <h2 class="fnt fnt-bold fnt-large">Western music for GCE OLs - The Complete Guide</h2>
                 <h3 class="fnt fnt-bold fnt-mid">Learn about western music in a way catered towards your OLs, fundemantals straight to master level.</h3>
                 <p class="fnt fnt-bold fnt-small">By Sachini Usha </p>
                 <jsp:include page="ratings.jsp"/>

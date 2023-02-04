@@ -25,7 +25,7 @@
 
         <div class="side_icons">
             <i class="material-icons">quiz</i>
-            <label> <a href="/about">Quizzes</a></label>
+            <label> <a href="/quizzes">Quizzes</a></label>
         </div>
 
         <div class="side_icons">

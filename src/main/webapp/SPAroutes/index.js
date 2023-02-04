@@ -62,8 +62,16 @@ const Routes = {
         path_right: "",
         title: "profile",
         data : "This is the profile page"
-    }
+    },
 
+    "/quizzes" : {
+        isSingle : false,
+        template : "/SPAroutes/index_double.jsp",
+        path_left:"/views/Start_quiz_right.jsp",
+        path_right: "/views/Start_quiz_left.jsp",
+        title: "profile",
+        data : "This is the quiz page"
+    }
 
 
 };

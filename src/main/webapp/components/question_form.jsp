@@ -16,7 +16,7 @@
 </head>
 <body>
 <div class="form">
-    <h3>Lets publish your question</h3><br>
+    <h3 class="fnt fnt-bold fnt-large">Lets publish your question</h3><br>
     <div class="inputs">
         <div class="input-field">
             <label for="">Enter an appropriate title for your question.</label><br><br>

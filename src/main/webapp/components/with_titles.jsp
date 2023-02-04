@@ -19,12 +19,11 @@
            
         </div>
         <div class="name-container">
-            <h5>Senith Uthsara Karunarathne</h5>
-            <h6>Professional Video Editor</h6>
+            <h5 class="fnt fnt-bold fnt-small">Senith Uthsara Karunarathne</h5>
+            <h6 class="fnt fnt-small">Professional Video Editor</h6>
         </div>
     </div>
 
-   <script src="/profilecards/profilecards.js"></script>
     <!-- end -->
 
 

@@ -17,15 +17,12 @@
         </div>
 
         <div class="q-1-content">
-            <h2 class="fnt fnt-extraBold fnt-large">Basic algebra grade 9 help</h2>
+            <h2 class="fnt fnt-bold fnt-large">Basic algebra grade 9 help</h2>
             <p class="fnt fnt-bold fnt-small">Accepted By Sachini Usha</p>
             <h3 class="fnt fnt-light fnt-mid">Learn about western music in a way catered towards your OLs, fundemantals straight to master level. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum pariatur at natus id earum incidunt ipsam quis, recusandae tenetur quibusdam.</h3>
             <button class="btn btn-small btn-solid">Session</button>
         </div>
 
-        <div class="q-1-price">
-            <img src="../static/img/components_images/more_vert.png" alt="">
-        </div>
     </div>
 </body>
 
