@@ -42,7 +42,7 @@ const Routes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/view_course_left.jsp",
         path_right: "/views/view_course_right.jsp",
-        title: "View Courses",
+        title: "My Courses",
         data : "This is the contact page"
     },
 

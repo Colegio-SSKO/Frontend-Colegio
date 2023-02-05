@@ -11,7 +11,7 @@
 /* 300 400 600 800 */
 .fnt {
     font-family: 'Poppins', sans-serif;
-    color: #9d8d8f;
+    color: #5a5560;
     font-weight: 300;
 }
 
@@ -48,11 +48,14 @@
 a{
     cursor: pointer;
     text-decoration: none;
+    transition: 0.4s;
 }
 
 button{
     cursor: pointer;
+    transition: 0.4s;
 }
+
 
 body {
     overflow-x: hidden;
@@ -116,7 +119,7 @@ body {
 .cont-ratings span{
     margin-left: 2px;
     font-size: small;
-    color: #46344e;
+    color: #FE793D;
 }
 
 .cont-ratings span:last-child{
@@ -282,7 +285,7 @@ body {
     align-items: center;
 }
 
-.open-course-ratings span{
+.open-course-rating span{
     margin-left: 2px;
     font-size: small;
     color: #46344e;
@@ -1223,6 +1226,8 @@ nav .main-profile h5 a{
 
 .sidebar1 label a{
     text-decoration: none;
+    color: #9d8d8f; !important;
+
 }
 h3{
     font-family: 'Poppins', sans-serif;
