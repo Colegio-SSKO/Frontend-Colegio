@@ -1,1 +1,1 @@
-<jsp:include page="../../componenets/question.jsp"/>
+<jsp:include page="../components/question.jsp"/>

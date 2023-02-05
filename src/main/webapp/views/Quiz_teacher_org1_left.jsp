@@ -2,6 +2,7 @@
 <button class="btn btn-outlined btn-small">Completed</button>
 <button class="btn btn-outlined btn-small">Create Quiz</button><br><br>
 
-<jsp:include page="../../componenets/listedcontent.jsp"/><br>
-<jsp:include page="../../componenets/listedcontent.jsp"/><br>
-<jsp:include page="../../componenets/listedcontent.jsp"/>
+<jsp:include page="../components/listedcontent.jsp"/><br>
+<jsp:include page="../components/listedcontent.jsp"/><br>
+<jsp:include page="../components/listedcontent.jsp"/><br>
+<jsp:include page="../components/listedcontent.jsp"/>

@@ -17,7 +17,7 @@
            
        
         <div class="course-details">
-            <h5 class="fnt fnt-extraBold fnt-mid">Electronics basics for GCE ALs</h5>
+            <h5 class="fnt fnt-extraBold fnt-large">Electronics basics for GCE ALs</h5>
             <div class="tutor">
                 <div class="ratings">
                     <h6 class="fnt fnt-bold fnt-small">by Senith Uthsara</h6>
@@ -25,7 +25,7 @@
                     <jsp:include page="ratings.jsp"/>
                 </div>
             </div>
-            <p class="fnt fnt-light fnt-mid">
+            <p class="fnt fnt-light fnt-extraLarge">
                 Learn about Electronics in a way catered towards your ALs, fundemantals straight to master level.
             </p>
         </div>

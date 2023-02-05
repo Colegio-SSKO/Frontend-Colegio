@@ -4,5 +4,5 @@
 <button class="btn btn-small">Publish Question</button>
 <button class="btn btn-small">Request Session</button><br><br>
 
-<jsp:include page="../../componenets/q-1.jsp"/><br>
-<jsp:include page="../../componenets/q-2.jsp"/>
+<jsp:include page="../components/q-1.jsp"/><br>
+<jsp:include page="../components/q-2.jsp"/>

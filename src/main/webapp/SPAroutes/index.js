@@ -67,10 +67,37 @@ const Routes = {
     "/quizzes" : {
         isSingle : false,
         template : "/SPAroutes/index_double.jsp",
-        path_left:"/views/Start_quiz_left.jsp",
-        path_right: "/views/Start_quiz_right.jsp",
+        path_left:"/views/Student_quiz_left.jsp",
+        path_right: "/views/Student_quiz_right.jsp",
         title: "Quizzes",
         data : "This is the quiz page"
+    },
+
+    "/start_quiz" : {
+        isSingle : false,
+        template : "/SPAroutes/index_double.jsp",
+        path_left:"/views/Start_quiz_left.jsp",
+        path_right: "/views/Start_quiz_right.jsp",
+        title: "Start Quiz",
+        data : "This is the start quiz page"
+    },
+
+    "/cart" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/1_item_in_cart.jsp",
+        path_right: "",
+        title: "Cart",
+        data : "This is the cart page"
+    },
+
+    "/notification" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Notification.jsp",
+        path_right: "",
+        title: "Notification",
+        data : "This is the notification page"
     }
 
 
