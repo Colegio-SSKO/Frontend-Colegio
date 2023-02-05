@@ -42,7 +42,7 @@ const Routes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/view_course_left.jsp",
         path_right: "/views/view_course_right.jsp",
-        title: "contact",
+        title: "View Courses",
         data : "This is the contact page"
     },
 
@@ -51,8 +51,8 @@ const Routes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/Question_student_1_left.jsp",
         path_right: "/views/Question_student_1_right.jsp",
-        title: "contact",
-        data : "This is the contact page"
+        title: "Question",
+        data : "This is the Question page"
     },
 
     "/profile" : {
@@ -67,9 +67,9 @@ const Routes = {
     "/quizzes" : {
         isSingle : false,
         template : "/SPAroutes/index_double.jsp",
-        path_left:"/views/Start_quiz_right.jsp",
-        path_right: "/views/Start_quiz_left.jsp",
-        title: "profile",
+        path_left:"/views/Start_quiz_left.jsp",
+        path_right: "/views/Start_quiz_right.jsp",
+        title: "Quizzes",
         data : "This is the quiz page"
     }
 
