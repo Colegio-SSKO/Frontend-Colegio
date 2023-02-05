@@ -1,8 +1,8 @@
-<button class="btn btn-solid btn-small">All</button>
-<button class="btn btn-outlined btn-small">Answered</button>
-<button class="btn btn-outlined btn-small">Pending</button>
-<button class="btn btn-small">Publish Question</button>
-<button class="btn btn-small">Request Session</button><br><br>
+<button class="btn btn-solid btn-small"><a class="fnt fnt-bold fnt-mid" href="">All</a></button>
+<button class="btn btn-outlined btn-small"><a class="fnt fnt-bold fnt-mid" href="">Answered</a></button>
+<button class="btn btn-outlined btn-small"><a class="fnt fnt-bold fnt-mid" href="">Pending</a></button>
+<button class="btn btn-small"><a class="fnt fnt-bold fnt-mid" href="">Publish Question</a></button>
+<button class="btn btn-small"><a class="fnt fnt-bold fnt-mid" href="">Request Session</a></button><br><br>
 
 <jsp:include page="../components/q-1.jsp"/><br>
 <jsp:include page="../components/q-2.jsp"/>

@@ -25,7 +25,7 @@
     
             <div class="cart-item-price">
                 <h1 class="fnt fnt-bold fnt-extraLarge">$19.99</h1>
-                <button>Remove</button>
+                <button><a class="fnt fnt-bold fnt-mid" href="">Remove</a></button>
             </div>
     </div>
 </body>

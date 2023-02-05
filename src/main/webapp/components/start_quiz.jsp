@@ -14,7 +14,7 @@
     <div class="starQuiz">
         <jsp:include page="comment.jsp"/>
         <div class="quiz_button">
-            <button class="btn btn-solid btn-large"><a href="/start_quiz">Start Quiz</a></button>
+            <button class="btn btn-solid btn-large"><a class="fnt fnt-bold fnt-mid" href="/start_quiz">Start Quiz</a></button>
         </div>
 
     </div>
