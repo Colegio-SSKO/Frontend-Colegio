@@ -11,7 +11,7 @@
 /* 300 400 600 800 */
 .fnt {
     font-family: 'Poppins', sans-serif;
-    color: #767676;
+    color: #9d8d8f;
     font-weight: 300;
 }
 
@@ -116,7 +116,7 @@ body {
 .cont-ratings span{
     margin-left: 2px;
     font-size: small;
-    color: #FE793D;
+    color: #46344e;
 }
 
 .cont-ratings span:last-child{
@@ -179,7 +179,7 @@ body {
     border-top-right-radius: 40px;
     border-bottom-right-radius: 0px;
     float: right;
-    background-color: #FE793D;
+    background-color: #46344e;
     color: white;
 }
 
@@ -223,7 +223,7 @@ body {
 
 .send-button{
     border-radius: 50%;
-    background-color: #FE793D;
+    background-color: #46344e;
     width: 35px;
     height: 35px;
     display: flex;
@@ -285,7 +285,7 @@ body {
 .open-course-ratings span{
     margin-left: 2px;
     font-size: small;
-    color: #FE793D;
+    color: #46344e;
 }
 
 .open-course-ratings span:last-child{
@@ -378,7 +378,7 @@ body {
 
 .desc-head {
     width: 20%;
-    background-color: #FE793D;
+    background-color: #46344e;
     height: 100%;
     display: flex;
     justify-content: space-around;
@@ -446,7 +446,7 @@ body {
 .q-number {
     width: 15%;
     height: 100%;
-    background-color: #FE793D;
+    background-color: #46344e;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -556,17 +556,17 @@ body {
     height: 40px;
     border: 0px;
     border-radius: 30px;
-    color: #FE793D;
+    color: #46344e;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
 }
 
 .btn-solid{
     background-color: white;
-    color: #FE793D;
+    color: #46344e;
     border: 0px;
     border-radius: 30px;
     line-height: 15px;
-    border: 1px solid #FE793D;
+    border: 1px solid #46344e;
 }
 
 .btn-small{
@@ -584,7 +584,7 @@ body {
 }
 .btn-outlined {
     box-shadow: none;
-    border: 1px #FE793D solid;
+    border: 1px #46344e solid;
 }
 
 .courseList-card{
@@ -1081,9 +1081,8 @@ body {
 /*navbar*/
 
 nav {
-    /*background-color: transparent;*/
+    background-color: transparent;
     width: 100%;
-    background: #5cdb95;
     height: 50px;
     display: flex;
     align-items: center;
@@ -1141,7 +1140,7 @@ nav .main-profile i {
 }
 
 nav .main-profile .notif {
-    color: #FE793D;
+    color: #46344e;
     cursor: pointer;
 }
 
@@ -1178,7 +1177,7 @@ nav .main-profile h5 a{
 .sidebar1 {
     height: 100vh;
     width: 100%;
-    background-color: #5cdb95;
+    background: #46344e;
     border-bottom-right-radius: 30px;
     border-top-right-radius: 30px;
     display: flex;
