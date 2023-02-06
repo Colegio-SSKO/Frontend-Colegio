@@ -11,7 +11,7 @@
 <body>
 <div class="profile-card-wrap">
     <div class="profile-card-image">
-        <img src="../static/img/components/images/pro0" alt="profile picture" srcset="">
+        <img src="../static/img/components_images/profile%20picture(2).png" alt="profile picture" srcset="">
     </div>
     <div class="profile-card-details">
         <h3 class="fnt fnt-bold fnt-mid">Kavinda Medagoda <span class="material-icons-outlined"> male</span></h3>

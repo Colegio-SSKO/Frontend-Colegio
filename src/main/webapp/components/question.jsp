@@ -22,7 +22,7 @@
         </div>
 
         <div class="upload_image">
-            <img src="./images/Rectangle 231.png" alt="" width="350px" height="350px">
+            <img src="../static/img/components_images/Rectangle_231.png" alt="" width="350px" height="350px">
         </div>
 
         <jsp:include page="Accepted.jsp"/>

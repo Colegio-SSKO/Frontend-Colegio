@@ -91,6 +91,24 @@ const Routes = {
         data : "This is the cart page"
     },
 
+    "/session_request" : {
+        isSingle : false,
+        template : "/SPAroutes/index_double.jsp",
+        path_left:"/views/Session_request_left.jsp",
+        path_right: "/views/Session_request_right.jsp",
+        title: "Session Request",
+        data : "This is the Session request page"
+    },
+
+    "/publish_question" : {
+        isSingle : false,
+        template : "/SPAroutes/index_double.jsp",
+        path_left:"/views/publish_question_left.jsp",
+        path_right: "/views/publish_question_right.jsp",
+        title: "Publish Question",
+        data : "This is the Publish question page"
+    },
+
     "/notification" : {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",

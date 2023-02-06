@@ -16,7 +16,7 @@
 
     <div class="comment-profile">
       <div class="comment-author">
-        <img src="./images/profile picture (1).png" alt="">
+        <img src="../static/img/components_images/profile%20picture(2).png" alt="">
       </div>
 
       <div class="comment-author-name">
@@ -31,7 +31,7 @@
 
   <div class="comment-cmnt">
     <div class="comment-comment-box">
-      <img src="./images/pro.png" alt="">
+      <img src="../static/img/components_images/pro.png" alt="">
       <form action="submit">
         <input type="text" placeholder="Comment here...">
         <button type="submit">></button>

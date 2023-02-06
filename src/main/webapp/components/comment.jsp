@@ -24,7 +24,7 @@
             <jsp:include page="ratings.jsp"/>
             <div class="comment-profile">
                 <div class="comment-author">
-                    <img src="./images/profile picture (1).png" alt="">
+                    <img src="../static/img/components_images/profile_picture_(1).png" alt="">
                 </div>
                 <div class="comment-author-name">
                     <h3 class="fnt fnt-bold fnt-small">George gunathilake</h3>
@@ -36,7 +36,7 @@
 
         <div class="comment-cmnt">
             <div class="comment-comment-box">
-                <img src="./images/pro.png" alt="">
+                <img src="../static/img/components_images/pro.png" alt="">
                 <form action="submit">
                     <input type="text" placeholder="Comment here...">
                     <button type="submit">></button>
@@ -45,21 +45,21 @@
 
             <div class="comment-comments">
                 <div class="comment-cmnt-1">
-                    <img src="./images/pro.png" alt="">
+                    <img src="../static/img/components_images/pro.png" alt="">
                     <p class="fnt fnt-mid">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, quidem dolor. Minus, veniam
                         inventore pariatur ipsam, similique nemo voluptatibus dolor neque voluptatum est dolore quas!
                     </p>
                 </div>
 
                 <div class="comment-cmnt-1">
-                    <img src="./images/pro.png" alt="">
+                    <img src="../static/img/components_images/pro.png" alt="">
                     <p class="fnt fnt-mid">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, quidem dolor. Minus, veniam
                         inventore pariatur ipsam, similique nemo voluptatibus dolor neque voluptatum est dolore quas!
                     </p>
                 </div>
 
                 <div class="comment-cmnt-1">
-                    <img src="./images/pro.png" alt="">
+                    <img src="../static/img/components_images/pro.png" alt="">
                     <p class="fnt fnt-mid">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, quidem dolor. Minus, veniam
                         inventore pariatur ipsam, similique nemo voluptatibus dolor neque voluptatum est dolore quas!
                     </p>
