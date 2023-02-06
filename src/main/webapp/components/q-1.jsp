@@ -20,7 +20,7 @@
             <h2 class="fnt fnt-bold fnt-large">Basic algebra grade 9 help</h2>
             <p class="fnt fnt-bold fnt-small">Accepted By Sachini Usha</p>
             <h3 class="fnt fnt-light fnt-mid">Learn about western music in a way catered towards your OLs, fundemantals straight to master level. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum pariatur at natus id earum incidunt ipsam quis, recusandae tenetur quibusdam.</h3>
-            <button class="btn btn-small btn-solid">Session</button>
+            <button class="btn btn-small btn-solid"><a class="fnt fnt-bold fnt-mid" href="">Session</a></button>
         </div>
 
     </div>
