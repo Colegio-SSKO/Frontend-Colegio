@@ -22,7 +22,7 @@ class Open_question extends HTMLElement {
                 <div class="open-question-msg open-question-outgoingMSG"> <p>${reply1}</p></div>
                 <br>
 
-                <div class="open-question-msg open-question-incomMSG"><p> ${msg2}0<br></p></div>
+                <div class="open-question-msg open-question-incomMSG"><p> ${msg2}<br></p></div>
                 <br>
                 <div class="open-question-msg open-question-outgoingMSG"> <p>${reply2}</p></div>
                 <br>

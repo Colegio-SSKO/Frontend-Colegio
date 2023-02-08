@@ -1,1 +1,2 @@
-<jsp:include page="../components/quiz_question.jsp"/>
+<%--<jsp:include page="../components/quiz_question.jsp"/>--%>
+<quiz-question title="Video editing basics" question="Which one of the following filters is best in low light situations?" answer1="Series Inductor filter" answer2="Choke Input LC filter" answer3="Capacitor Input filter" answer4="RC filter"></quiz-question>

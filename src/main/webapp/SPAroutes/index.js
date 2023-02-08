@@ -33,6 +33,7 @@ const Routes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/SPAroutes/about.html",
         title: "about",
+        script: "../static/viewsJS/about.js",
         data : "This is the about page"
     },
 
@@ -42,6 +43,7 @@ const Routes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/view_course_left.jsp",
         path_right: "/views/view_course_right.jsp",
+        script: "../static/viewsJS/view_course.js",
         title: "My Courses",
         data : "This is the contact page"
     },
@@ -51,6 +53,7 @@ const Routes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/Question_student_1_left.jsp",
         path_right: "/views/Question_student_1_right.jsp",
+        script: "../static/viewsJS/about.js",
         title: "Question",
         data : "This is the Question page"
     },
@@ -60,6 +63,7 @@ const Routes = {
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Profile.jsp",
         path_right: "",
+        script: "../static/viewsJS/Profile.js",
         title: "profile",
         data : "This is the profile page"
     },
@@ -69,6 +73,24 @@ const Routes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/Student_quiz_left.jsp",
         path_right: "/views/Student_quiz_right.jsp",
+        title: "Quizzes",
+        data : "This is the quiz page"
+    },
+
+    "/session" : {
+        isSingle : false,
+        template : "/SPAroutes/index_double.jsp",
+        path_left:"/views/Question_student_1_left.jsp",
+        path_right: "/views/Question_student_2_right.jsp",
+        title: "session",
+        data : "This is the session page"
+    },
+
+    "/chat" : {
+        isSingle : false,
+        template : "/SPAroutes/index_double.jsp",
+        path_left:"/views/Question_student_1_left.jsp",
+        path_right: "/views/Question_right.jsp",
         title: "Quizzes",
         data : "This is the quiz page"
     },
@@ -144,6 +166,12 @@ const urlLocation = async () =>{
     let html_template = await fetch(route.template).then((response)=>
         response.text()
     );
+
+    //executing js
+    let head= document.getElementsByTagName('head')[0];
+    let script= document.createElement('script');
+    script.src=route.script;
+    head.appendChild(script);
 
 
     //rendering the appropriate template

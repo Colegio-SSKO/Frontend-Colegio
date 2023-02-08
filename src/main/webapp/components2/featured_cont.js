@@ -5,10 +5,7 @@ class Featured_cont extends HTMLElement {
         let title = this.attributes.title.value;
         let description = this.attributes.description.value;
         let author = this.attributes.author.value;
-        let date = this.attributes.date.value;
-        let duration = this.attributes.duration.value;
-        let num_videos = this.attributes.num_videos.value;
-        let education = this.attributes.education.value;
+        let description2 = this.attributes.description2.value;
         let price = this.attributes.price.value;
         let rating = this.attributes.rating.value;
         let votes = this.attributes.votes.value;
@@ -21,7 +18,7 @@ class Featured_cont extends HTMLElement {
             <h4 class="fnt fnt-extraBold fnt-large">${title}</h4>
             <p class="fnt fnt-bold fnt-mid">${description}</p>
             <h6 class="fnt fnt-bold fnt-small">${author}</h6>
-            <h6 class="fnt fnt-small">${date}  | ${duration} | ${num_videos} | ${education}</h6>
+            <h6 class="fnt fnt-small">${description2}</h6>
 
             <ratings-content rating="${rating}" votes="${votes}"/>
 

@@ -5,6 +5,10 @@ class Open_course extends HTMLElement {
         let title= this.attributes.title.value;
         let description= this.attributes.description.value;
         let author = this.attributes.author.value;
+        let heading= this.attributes.heading.value;
+        let content= this.attributes.content.value;
+        let heading2= this.attributes.heading2.value;
+        let content2= this.attributes.content2.value;
         this.innerHTML = `
         <div class="open-course-wrap">
         <div class="open-course-image">
@@ -29,8 +33,8 @@ class Open_course extends HTMLElement {
         <div class="open-course-cont">
 
     
-            <description-head heading="heading" content="hello"/>
-            <description-head heading="heading2" content="hello2"/>
+            <description-head heading="${heading}" content="${content}"/>
+            <description-head heading="${heading2}" content="${content2}"/>
 
 
         </div>
