@@ -1,8 +1,7 @@
-<%--<jsp:include page="../components/help.jsp"/>--%>
-<question-help title="Help with grade 9 algebra GCE OLs" description="Can you help me with understanding basic algebra for grade 9." img_src="../static/img/components_images/R.jpg" name="Senith Uthsara Karunarathne" qulifi="Professional Video Editor"></question-help>
+<jsp:include page="../components/q-3.jsp"/>
+<%--<div class="Q-3">--%>
+<%--    <q-3 title="Electronics circuits for GCE OLs English Medium" description="Lorem ipsum, dolor ipsa quasi ex laudantium, corrupti atque alias--%>
+<%--                perspiciatis debitis molestias error, libero provident." img_src="../static/img/components_images/R.jpg" name="Senith Uthsara Karunarathne" qulifi="Professional Video Editor"></q-3>--%>
 
-<div class="session_requestButton">
-    <button class="btn btn-outlined btn-large"><a class="fnt fnt-bold fnt-mid" href="">Continue to payment</a></button>
-    <button class="btn btn-outlined btn-large"><a class="fnt fnt-bold fnt-mid" href="">Cancel</a></button></center>
 
-</div>
+<%--</div>--%>

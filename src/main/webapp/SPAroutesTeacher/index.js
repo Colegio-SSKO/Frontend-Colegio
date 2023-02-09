@@ -58,8 +58,9 @@ const Routes = {
     "/question" : {
         isSingle : false,
         template : "/SPAroutesTeacher/index_double.jsp",
-        path_left:"/views/Question_teacher1_left.jsp",
-        path_right: "/views/Question_teacher1_right.jsp",
+        path_left:"/views/Question_student_1_left.jsp",
+        path_right: "/views/Question_student_1_right.jsp",
+        script: "../static/viewsJS/about.js",
         title: "Question",
         data : "This is the Question page"
     },

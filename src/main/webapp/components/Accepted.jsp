@@ -11,35 +11,29 @@
 </head>
 
 <body>
-<div class="comment-main">
-  <div class="comment-about">
-
-    <div class="comment-profile">
-      <div class="comment-author">
+<div class="accept_main">
+      <div class="accept">
         <img src="../static/img/components_images/profile%20picture(2).png" alt="">
       </div>
 
-      <div class="comment-author-name">
+      <div class="accept_person-details">
         <h3 class="fnt fnt-bold fnt-mid">Accepted by:- </h3>
-        <div class="accept_person">
-
+        <div class="accept_person fnt fnt-mid">
+              Osura De Silva
         </div>
       </div>
-    </div>
-  </div>
 
-
-  <div class="comment-cmnt">
-    <div class="comment-comment-box">
-      <img src="../static/img/components_images/pro.png" alt="">
-      <form action="submit">
-        <input type="text" placeholder="Comment here...">
-        <button type="submit">></button>
-      </form>
+    <div class="accept-comment-box">
+        <form action="submit">
+            <input type="text" placeholder="Comment here...">
+            <jsp:include page="send_button.jsp"/>
+        </form>
     </div>
-  </div>
+
 
 </div>
+
+
 
 </body>
 

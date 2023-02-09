@@ -15,8 +15,7 @@
     <div class="q-3-main">
         <div class="q-3-about">
             <h2 class="fnt fnt-bold fnt-large">Electronics circuits for GCE OLs English Medium</h2>
-            <p class="fnt fnt-light fnt-mid">Lorem ipsum, dolor ipsa quasi ex laudantium, corrupti atque alias
-                perspiciatis debitis molestias error, libero provident.</p>
+            <p class="fnt fnt-light fnt-mid">Lorem ipsum, dolor ipsa quasi ex laudantium, corrupti atque alias perspiciatis debitis molestias error, libero provident.</p>
 
             <div class="q-3-cmnt">
                 <div class="q-3-comment-box">
@@ -30,6 +29,11 @@
             <jsp:include page="with_titles.jsp"/>
 
         </div>
+
+        <div class="Q-3_button"><center>
+            <button class="btn btn-solid btn-large"><a class="fnt fnt-bold fnt-mid" href="">Payment</a></button>
+            <button class="btn btn-solid btn-large"><a class="fnt fnt-bold fnt-mid" href="">Cancel</a></button>
+        </center></div>
 
     </div>
 

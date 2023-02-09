@@ -14,7 +14,6 @@
 <body>
 <div class="option_box">
     <form>
-        <h4>Question 1</h4><br>
         <input type="text" id="option1" name="option" placeholder="Enter Option 1"><br><br>
         <input type="text" id="option2" name="option" placeholder="Enter Option 2"><br><br>
         <input type="text" id="option3" name="option" placeholder="Enter Option 3"><br><br>
