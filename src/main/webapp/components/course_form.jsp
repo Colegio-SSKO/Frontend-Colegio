@@ -12,10 +12,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<%--    <link rel="stylesheet" href="course_form.css">--%>
+    <jsp:include page="imports.jsp"/>
 </head>
 <body>
-<div class="form">
+<div class="course_form">
     <h3 class="fnt fnt-bold fnt-large">Lets create your Course</h3><br>
     <div class="inputs">
         <div class="input-field">

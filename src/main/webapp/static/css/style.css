@@ -69,15 +69,16 @@ body {
     height: 200px;
     background-color: white;
     display: flex;
+    flex-direction: row;
     padding: 20px;
     align-items: center;
     justify-content: flex-start;
-    position: relative;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     border-radius: 20px;
     margin: auto;
     margin-bottom: 2rem;
     margin-top: 2rem;
+
 }
 
 .profile-card-image {
@@ -95,6 +96,8 @@ body {
 
 .profile-card-details {
     position: relative;
+    display: flex;
+    flex-direction: column;
     margin-left: 20px;
 }
 
@@ -420,9 +423,10 @@ body {
 
 
 .quiz-wrap {
-    width: 600px;
+    width: 550px;
     height: 380px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
+    background-color: white;
     padding: 16px;
     padding-top: 0px;
     cursor: pointer;
@@ -619,12 +623,8 @@ body {
     width: 334px;
     height: 100%;
     margin-left: 16px;
-    font-family: 'Poppins', sans-serif;
 }
 
-.courseList-card .course-details p{
-    font-size: 10px;
-}
 
 
 
@@ -702,11 +702,15 @@ body {
 }
 
 
+.comment-cmnt-1{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
+}
 
 .comment-main {
     padding: 16px;
-    width: 880px;
+    width: 520px;
     background: #ffffff;
+    border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
 }
 
@@ -715,7 +719,6 @@ body {
 }
 
 .comment-about h2 {
-    font-weight: bold;
     margin-bottom: 5px;
 }
 
@@ -839,20 +842,19 @@ body {
 
 
 
-.q-1-content p{
-    font-weight: bold;
-}
+
 
 .q-1-cart-item{
-    width: 1330px;
-    height: 280px;
+    /*position: absolute;*/
+    width: 560px;
+    height: 230px;
     border-radius: 32px;
     background: #ffffff;
-    padding: 16px;
+    padding: 5px;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    width: 90%;
+    /*width: 90%;*/
     margin: auto;
     margin-top: 20px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
@@ -860,10 +862,11 @@ body {
 }
 
 
-
 .q-1-tumbnail-img{
-    width: 580px;
+    position: relative;
+    width: 250px;
     height: auto;
+    margin-left:5px;
     margin-top: 5px;
 }
 
@@ -873,22 +876,136 @@ body {
 }
 
 .q-1-content{
+    position: relative;
     margin-top: 5px;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 0px;
+    width: 310px;
+    height: 250px ;
+    padding: 2px;
+    /*margin-right: 15px;*/
+}
+
+.q-1-content h2{
+    position: relative;
+    margin: 0;
 }
 
 .q-1-content h3{
-    font-weight: bold;
-    margin-bottom: 16px;
+    position: relative;
+    margin-top: 5px;
 }
 
 
 .q-1-content p{
-    font-weight: bold;
-    margin-bottom: 16px;
+    position: relative;
+    margin-top: 2px;
 }
 
+.q-1-content button{
+    position: relative;
+    margin-bottom: 0px;
+}
+
+
+.question_large{
+    width: 560px;
+    height: 550px;
+    border-radius: 32px;
+    background: #ffffff;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /*width: 90%;*/
+    margin: auto;
+    margin-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
+}
+
+.Q_title{
+    position: relative;
+    margin-top: 2px;
+}
+
+.Q_description{
+    position: relative;
+    margin-top: 2px;
+}
+
+.upload_image{
+    position: relative;
+    width: 550px;
+    height: 320px;
+}
+
+.upload_image img{
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+.accept_main{
+    position: relative;
+    width: 550px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+}
+
+
+.accept_img img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.accept_person-details{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.accept_person{
+    position: relative;
+    margin-left: 3px;
+    margin-top: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.accept-comment-box{
+    position: relative;
+    margin-left: 8px;
+}
+.accept-comment-box form{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.accept-comment-box form input {
+    height: 48px;
+    width: 100%;
+    border-radius: 16px;
+    font-size: large;
+    border: none;
+    padding-left: 20px;
+}
+
+.accept img{
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+}
+
+.accept-comment-box input:focus {
+    outline: none;
+}
 
 
 
@@ -930,11 +1047,6 @@ body {
     margin-bottom: 16px;
 }
 
-
-
-.q-3-main p{
-    font-weight: bold;
-}
 
 
 .q-3-main {
@@ -1231,4 +1343,87 @@ nav .main-profile h5 a{
 }
 h3{
     font-family: 'Poppins', sans-serif;
+}
+
+
+.question_form {
+    width: 1400px;
+    border-radius: 32px;
+    background: #ffffff;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    margin-top: 0px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
+}
+
+.question_form input[type=text]{
+    width: 80%;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+.session_request_form{
+    width: 1400px;
+    border-radius: 32px;
+    background: #ffffff;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    margin-top: 0px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
+}
+
+.session_request_form input[type=text]{
+    width: 80%;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+.quiz_form{
+    width: 1400px;
+    border-radius: 32px;
+    background: #ffffff;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    margin-top: 0px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
+}
+.quiz_form input[type=text]{
+    width: 80%;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+.course_form{
+    width: 1400px;
+    border-radius: 32px;
+    background: #ffffff;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    margin-top: 0px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
+}
+.course_form input[type=text]{
+    width: 80%;
+    height: 30px;
+    box-sizing: border-box;
 }

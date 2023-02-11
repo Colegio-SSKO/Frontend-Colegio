@@ -22,7 +22,7 @@
             <a href="/cart"><i class="material-icons cart-icon">shopping_cart</i></a>
             <a href="/notification"><i class="material-icons notif">notifications</i></a>
             <div class="profile-pic">
-                <img src="../static/img/components_images/R.jpg" alt="" srcset="">
+                <img src="../static/img/components_images/pro.png" alt="" srcset="">
             </div>
             <h5 class="fnt fnt-bold fnt-mid"><a href="/profile">Senith Uthsara</a> </h5>
         </div>

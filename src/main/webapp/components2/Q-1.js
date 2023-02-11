@@ -1,4 +1,4 @@
-class Q_1 extends HTMLElement {
+class Q1 extends HTMLElement {
     connectedCallback() {
 
         let img_src = this.attributes.img_src.value;
@@ -23,4 +23,4 @@ class Q_1 extends HTMLElement {
     }
 }
     
-customElements.define('q-1', Q_1);
+customElements.define('q-1', Q1);

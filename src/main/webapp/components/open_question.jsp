@@ -21,7 +21,7 @@
             <div class="open-question-msg open-question-outgoingMSG"> <p>Yeah, Sure</p></div>
             <br>
 
-            <div class="open-question-msg open-question-incomMSG"><p> hi <br> In which time madam?<br></p></div>
+            <div class="open-question-msg open-question-incomMSG"><p>In which time madam?<br></p></div>
             <br>
             <div class="open-question-msg open-question-outgoingMSG"> <p>Can it be at 9.30a.m</p></div>
             <br>

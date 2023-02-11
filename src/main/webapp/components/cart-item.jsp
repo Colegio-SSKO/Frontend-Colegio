@@ -10,7 +10,7 @@
 <body>
     <div class="cart-item">
             <div class="tumbnail-img">
-                <img src="./images/Thumbnail.png" alt="">
+                <img src="../static/img/components_images/violinist.jpg" alt="">
             </div>
     
             <div class="cart-item-content">

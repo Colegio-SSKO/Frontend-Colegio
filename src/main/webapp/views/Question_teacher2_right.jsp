@@ -1,1 +1,2 @@
-<jsp:include page="../../componenets/question.jsp"/>
+<%--<jsp:include page="../../componenets/question.jsp"/>--%>
+<q-question title="Basic algebra grade 9 help" description="Can you help me with understanding basic algebra for grade 9, A step by step answer for the attached question with an explanation." img_src2="../static/img/components_images/Rectangle_231.png" img_src="../static/img/components_images/profile%20picture(2).png" accept_person="Osura De Silva" pro_pic="../static/img/components_images/pro.png"></q-question>

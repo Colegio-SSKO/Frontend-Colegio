@@ -9,9 +9,6 @@
 </head>
 <body>
 
-
-
-
     <!-- start -->
     <div class="profilepic-card">
         <div class="pic-container">
