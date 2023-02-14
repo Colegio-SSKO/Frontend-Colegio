@@ -8,7 +8,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="basic.js">
 
+    </script>
+
+
+</head>
+<body>
+
+<div id="components">
     <script src="../components2/accepted.js"></script>
     <script src="../components2/descHead.js"></script>
     <script src="../components2/featured_cont.js"></script>
@@ -27,8 +35,16 @@
     <script src="../components2/with_titles.js"></script>
     <script src="../components2/without_title.js"></script>
     <script src="../components2/help.js"></script>
-</head>
-<body>
+    <script src="../components2/ratings.js"></script>
+    <script src="../components2/startQuiz.js"></script>
+    <script src="../components2/comment.js"></script>
+    <script src="../components2/course_form1.js"></script>
+</div>
+
+<div id="viewsScript">
+
+</div>
+
 
         <div class="main-cont">
             <div class="main-left">
@@ -61,7 +77,18 @@
 
 
 
+<div id="mainScript">
     <script src="index.js"></script>
+</div>>
+
+<%--handle back button--%>
+<script>
+    window.addEventListener("popstate", () => {
+        urlLocation();
+    })
+
+
+</script>
 
         <script>
 

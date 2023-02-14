@@ -51,13 +51,6 @@
                     <p class="fnt fnt-mid">Superb course.. highly recommended
                     </p>
                 </div>
-
-<%--                <div class="comment-cmnt-1">--%>
-<%--                    <img src="../static/img/components_images/pro.png" alt="">--%>
-<%--                    <p class="fnt fnt-mid">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, quidem dolor. Minus, veniam--%>
-<%--                        inventore pariatur ipsam, similique nemo voluptatibus dolor neque voluptatum est dolore quas!--%>
-<%--                    </p>--%>
-<%--                </div>--%>
             </div>
         </div>
 

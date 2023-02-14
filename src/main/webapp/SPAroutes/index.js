@@ -33,7 +33,7 @@ const Routes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/SPAroutes/about.html",
         title: "about",
-        script: "../static/viewsJS/about.js",
+        script: "../static/viewsJS/about_test.js",
         data : "This is the about page"
     },
 
@@ -43,7 +43,7 @@ const Routes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/view_course_left.jsp",
         path_right: "/views/view_course_right.jsp",
-        script: "../static/viewsJS/view_course.js",
+        script: "../static/viewsJS/view_courses1.js",
         title: "My Courses",
         data : "This is the contact page"
     },
@@ -53,7 +53,7 @@ const Routes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/Question_student_1_left.jsp",
         path_right: "/views/Question_student_1_right.jsp",
-        script: "../static/viewsJS/about.js",
+        script: "../static/viewsJS/about_test.js",
         title: "Question",
         data : "This is the Question page"
     },
@@ -63,7 +63,7 @@ const Routes = {
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Profile.jsp",
         path_right: "",
-        script: "../static/viewsJS/Profile.js",
+        script: "../static/viewsJS/Profile_test.js",
         title: "profile",
         data : "This is the profile page"
     },

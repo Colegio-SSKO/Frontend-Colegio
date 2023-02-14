@@ -1,17 +1,18 @@
 class Q_2 extends HTMLElement {
     connectedCallback() {
+        let question_ID = this.attributes.question_ID.value;
         let img_src= this.attributes.img_src.value;
         let title = this.attributes.title.value;
-        let flag = this.attributes.flag.value;
+        let accept = this.attributes.accept.value;
         let description = this.attributes.description.value;
         this.innerHTML = `
-        <div class="q-2-cart-item">
+        <div class="q-2-cart-item js-questionCards" id="${question_ID}">
 
         <div class="q-2-content">
             <h2 class="fnt fnt-extraBold fnt-large">${title}</h2>
-            <p class="fnt fnt-small">${flag}</p>
+            <p class="fnt fnt-small">${accept}</p>
             <h3 class="fnt fnt-light fnt-mid">${description}</h3>
-            <button class="btn btn-solid btn-small">Session</button>
+            <button class="btn btn-solid btn-small js-questionButton">Session</button>
         </div>
 
         <div class="q-2-price">

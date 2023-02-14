@@ -3,6 +3,7 @@
 class ListedContent extends HTMLElement {
     connectedCallback() {
 
+        let content_ID = this.attributes.content_ID.value;
         let img_src = this.attributes.img_src.value;
         let title = this.attributes.title.value;
         let author = this.attributes.author.value;
@@ -10,7 +11,7 @@ class ListedContent extends HTMLElement {
         let rating = this.attributes.rating.value;
         let votes = this.attributes.votes.value;
         this.innerHTML = `
-        <div class="courseList-card">
+        <div class="courseList-card" id="${content_ID}">
         <div class="course-image">
             <img src="${img_src}" alt="course image">
         </div>
