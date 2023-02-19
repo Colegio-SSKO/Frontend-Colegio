@@ -22,10 +22,10 @@ class CourseForm extends HTMLElement {
         <div class="input-field">
             <label for="" class="fnt fnt-mid">Course Thumbnail image
                 <p style="color: #767676; margin: 10px 0;" class="fnt fnt-mid">your course image here. <br>Important Guideline : At least 564x368 pixels; jpeg, jpg, or png</p></label>
-            <img src="images/upload_question.svg" width="330px" height="250px" style="border: 0.5px solid black";>
+           
         </div>
 
-        <input type="file" class="myFile" name="filename">
+        <input type="file" class="js-myFile-course-form myFile" name="filename">
 
         <div class="input-field">
             <label for="" class="fnt fnt-mid">Course Content Sections <br>

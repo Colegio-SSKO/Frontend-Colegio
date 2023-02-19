@@ -12,7 +12,7 @@ class Open_course extends HTMLElement {
         this.innerHTML = `
         <div class="open-course-wrap">
         <div class="open-course-image">
-            <img src="${img_src}" alt="">
+            <img src="${img_src}" alt="" onerror="this.src = '../static/img/components_images/maths.jpeg'">
         </div>
 
         <div class="cont-ratings">

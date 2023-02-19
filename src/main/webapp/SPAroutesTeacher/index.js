@@ -59,7 +59,7 @@ const Routes = {
         template : "/SPAroutesTeacher/index_double.jsp",
         path_left:"/views/Create_course_left.jsp",
         path_right: "/views/Create_course_right.jsp",
-        script: "../static/viewsJS/create_course.js",
+        script: "../static/viewsJS/create_course1.js",
         title: "Create Course",
         data : "This is the create course page"
     },
