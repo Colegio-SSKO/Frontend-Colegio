@@ -1,16 +1,15 @@
-alert("Helleo");
+alert("Hello courses");
 
-async function fetchData() {
+async function fetchData(){
     const req = {
-        "user_ID" : "23",
-        "name": ""
+        "user_ID" : "23"
     }
 
-// uncomment this when connecting the database
-//     let res = await fetch("http://localhost:8081/api/getUserCourses", {method : "POST",  body : JSON.stringify(req)}).then((response)=>
-//         response.json()
-//
-//     );
+//uncomment this when connecting the database
+    // let res = await fetch("http://localhost:8081/api/getUserCourses", {method : "POST",  body : JSON.stringify(req)}).then((response)=>
+    //     response.json()
+    //
+    // );
 
 
     //delete this. this one will return a dummy data to test
@@ -21,6 +20,7 @@ async function fetchData() {
             "course_title" : "This is a small title",
             "f_name" : "Senith",
             "l_name" : "Uthsara",
+            "author_title" : "O/L Science teacher",
             "description" : "This is a dummy description"
 
 
@@ -32,7 +32,8 @@ async function fetchData() {
             "course_title" : "This is a small title 2",
             "f_name" : "Kavinda",
             "l_name" : "Medagoda",
-            "description" : "This is a dummy description 2"
+            "author_title" : "O/L Maths teacher",
+            "description" : "This is a dummy description 2. This is a dummy description 2.. This is a dummy description 2.. This is a dummy description 2."
 
 
         },
@@ -40,13 +41,16 @@ async function fetchData() {
         {
             "content_ID" : "3",
             "content_image" : "../static/img/components_images/ict.jpg",
-            "course_title" : "This is a small title 3",
+            "course_title" : "This is a small title 2 quiz",
             "f_name" : "Sachini",
             "l_name" : "Usha",
+            "author_title" : "O/L ICT teacher",
             "description" : "This is a dummy description 3"
 
 
+
         }
+
     ]
 
     return res
@@ -60,7 +64,7 @@ function renderRight(data) {
     let html_right = "";
 
     html_right += `
-<open-course img_src="${data["content_image"]}" title="${data["course_title"]}" description="${data["description"]}" author="${data["f_name"] + " " +data["l_name"]}" heading="heading" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. orrupti doloremque laudantium sequi." heading2="heading" content2="Lorem ipsum dolor sit amet, consectetur adipisicing elit. orrupti doloremque laudantium sequi."></open-course>`;
+<start-quiz img_src="${data["content_image"]}" title="${data["course_title"]}" description="${data["description"]}" author="${data["f_name"] + " " +data["l_name"]}" author_title="${data["author_title"]}", heading="heading" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. orrupti doloremque laudantium sequi." heading2="heading" content2="Lorem ipsum dolor sit amet, consectetur adipisicing elit. orrupti doloremque laudantium sequi."></start-quiz>`;
     document.querySelector(".cont-body-right").innerHTML = html_right;
 
 
@@ -79,13 +83,12 @@ function renderLeft() {
 
         let html_left = "";
 
-        html_left += `
-        <button class="btn btn-solid btn-small"><a class="fnt fnt-bold fnt-mid" href="">All</a></button>
-        <button class="btn btn-outlined btn-small"><a class="fnt fnt-bold fnt-mid" href="">Continuing</a></button>          
-        <button class="btn btn-outlined btn-small"><a class="fnt fnt-bold fnt-mid" href="">Completed</a></button>
-        <button class="btn btn-outlined btn-large js-createCourseButton"><a class="fnt fnt-bold fnt-mid" href="/create_course">Create Course</a></button><br><br>
-
-        `;
+        html_left += "" +
+            "<button class=\"btn btn-solid btn-small\"><a class=\"fnt fnt-bold fnt-mid\" href=\"\">All</a></button>\n" +
+            "<button class=\"btn btn-outlined btn-small\"><a class=\"fnt fnt-bold fnt-mid\" href=\"\">Continuing</a></button>\n" +
+            "<button class=\"btn btn-outlined btn-small\"><a class=\"fnt fnt-bold fnt-mid\" href=\"\">Completed</a></button><br><br>\n" +
+            "\n" +
+            "";
 
 
         for (let i of data){
@@ -106,7 +109,6 @@ function renderLeft() {
                 }
             })
         }
-
 
 
 

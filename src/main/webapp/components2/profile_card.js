@@ -18,7 +18,7 @@ class Profile_card extends HTMLElement {
 
         </div>
 
-        <span class="profile-card-details-edit material-icons-outlined">edit</span>
+        <span class="profile-card-details-edit material-icons-outlined"><a href="/edit_profile">edit</a></span>
     </div>
         `;
     }

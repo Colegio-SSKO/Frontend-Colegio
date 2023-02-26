@@ -78,6 +78,7 @@ body {
     margin: auto;
     margin-bottom: 2rem;
     margin-top: 2rem;
+    position: relative;
 
 }
 
@@ -1427,3 +1428,234 @@ h3{
     height: 30px;
     box-sizing: border-box;
 }
+
+
+
+/*kavinda new components*/
+
+
+
+.pro-pic-edit{
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.pro-pic-edit img{
+    width: 217px;
+    height: 217px;
+}
+a{
+    text-decoration: none;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    transition: 0.4s;
+}
+
+.pro-pic-edit:hover .text {
+    visibility: visible;
+}
+
+
+.pro-pic-edit img:hover{
+    opacity: 50%;
+}
+
+.edit-profile input{
+    border: 0;
+    border-bottom: 2px solid black;
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+    outline: none;
+    background: transparent;
+}
+
+
+.edit-profile{
+    display: flex;
+    width: 880px;
+    height: 648px;
+    border-radius: 32px;
+    background-color: azure;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.edit-profile select{
+    /* padding: 5px 10px; */
+    /* margin: 5px 10px; */
+    margin-top: 0.5rem;
+    border: 0;
+    border-bottom: 2px solid black;
+    background: transparent;
+    margin-bottom: 1rem;
+    outline: none;
+}
+
+
+
+.edit-profile button{
+    margin-bottom: 1rem;
+}
+
+/*======================*/
+
+
+
+.pro-pic-edit{
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.pro-pic-edit img{
+    width: 217px;
+    height: 217px;
+}
+a{
+    text-decoration: none;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    transition: 0.4s;
+}
+
+.pro-pic-edit:hover .text {
+    visibility: visible;
+}
+
+
+.pro-pic-edit img:hover{
+    opacity: 50%;
+}
+
+.edit-profile input{
+    border: 0;
+    border-bottom: 2px solid black;
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+    outline: none;
+    background: transparent;
+}
+
+
+.edit-profile{
+    display: flex;
+    width: 880px;
+    height: 648px;
+    border-radius: 32px;
+    background-color: azure;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.edit-profile select{
+    /* padding: 5px 10px; */
+    /* margin: 5px 10px; */
+    margin-top: 0.5rem;
+    border: 0;
+    border-bottom: 2px solid black;
+    background: transparent;
+    margin-bottom: 1rem;
+    outline: none;
+}
+
+
+
+.edit-profile button{
+    margin-bottom: 1rem;
+}
+
+/*=====================*/
+
+
+
+.pro-pic-edit{
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.pro-pic-edit img{
+    width: 217px;
+    height: 217px;
+}
+
+.text a{
+    text-decoration: none;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    transition: 0.4s;
+}
+
+.pro-pic-edit:hover .text {
+    visibility: visible;
+}
+
+
+.pro-pic-edit img:hover{
+    opacity: 50%;
+}
+
+.edit-profile input{
+    border: 0;
+    border-bottom: 2px solid black;
+    margin-bottom: 1rem;
+    outline: none;
+    background: transparent;
+}
+
+
+.edit-profile{
+    display: flex;
+    width: 880px;
+    height: 352px;
+    border-radius: 32px;
+    background-color: azure;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.edit-profile select{
+    /* padding: 5px 10px; */
+    /* margin: 5px 10px; */
+    margin-top: 10px;
+    border: 0;
+    border-bottom: 2px solid black;
+    background: transparent;
+    margin-bottom: 1rem;
+    outline: none;
+    text-align: ;
+}
+
+
+
+.edit-profile button{
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+

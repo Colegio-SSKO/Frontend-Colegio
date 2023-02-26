@@ -196,7 +196,7 @@ const urlLocation = async () =>{
 
 
 
-    //rendering the main content(left content)
+    //fetching the main content(left content)
     let html_cont_left = await fetch(route.path_left).then((response)=>
         response.text()
     );
@@ -207,9 +207,9 @@ const urlLocation = async () =>{
     }
     else{
         //fetching the right hand side content as well
-        let html_cont_right = await fetch(route.path_right).then((response)=>
-            response.text()
-        );
+        // let html_cont_right = await fetch(route.path_right).then((response)=>
+        //     response.text()
+        // );
 
         renderLeft();
         // document.querySelector(".cont-body-right").innerHTML = html_cont_right;

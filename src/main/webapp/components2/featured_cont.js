@@ -1,14 +1,14 @@
 class Featured_cont extends HTMLElement {
     connectedCallback() {
 
-        // let img_src = this.attributes.img_src.value;
-        // let title = this.attributes.title.value;
-        // let description = this.attributes.description.value;
-        // let author = this.attributes.author.value;
-        // let description2 = this.attributes.description2.value;
-        // let price = this.attributes.price.value;
-        // let rating = this.attributes.rating.value;
-        // let votes = this.attributes.votes.value;
+        let img_src = this.attributes.img_src.value;
+        let title = this.attributes.title.value;
+        let description = this.attributes.description.value;
+        let author = this.attributes.author.value;
+        let description2 = this.attributes.description2.value;
+        let price = this.attributes.price.value;
+        let rating = this.attributes.rating.value;
+        let votes = this.attributes.votes.value;
         this.innerHTML = `
         <div class="featured-cont-wrap">
         <div class="featured-cont-image">
