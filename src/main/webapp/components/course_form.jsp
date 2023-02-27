@@ -46,6 +46,7 @@
                 <p style="color: #767676; margin: 10px 0" class="fnt fnt-mid">Upload your course content here.<br> Important Guideline : All files should be at least 480p and less than 3 GB.</p>
             </label>
         </div>
+
     </div>
 </div>
 </body>

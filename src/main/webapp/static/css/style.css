@@ -78,10 +78,9 @@ body {
     margin: auto;
     margin-bottom: 2rem;
     margin-top: 2rem;
+    position: relative;
 
 }
-
-
 
 .profile-card-image {
     width: 150px;
@@ -563,7 +562,6 @@ body {
 .btn {
     width: 150px;
     height: 40px;
-    margin-right: 10px;
     border: 0px;
     border-radius: 30px;
     color: #46344e;
@@ -1156,23 +1154,7 @@ body {
     margin-bottom: 1rem;
 }
 
-.teacher-card-wrap {
-    cursor: pointer;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    width: 250px;
-    height: 320px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
-    border-radius: 20px;
-    background-color: white;
-    margin: 1rem;
-}
-
-.teacher-card-wrap h3{
-    text-align: right;
-}
-.small-listed-cont-details .teacher-card-details {
+.small-listed-cont-details{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1184,27 +1166,11 @@ body {
     margin-bottom: 20px;
 }
 
-.teacher-card-image{
-    width: 160px;
-    height: 160px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
 .small-listed-cont-image img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
-}
-
-.teacher-card-image img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
 }
 
 .small-listed-cont-author {
@@ -1220,15 +1186,6 @@ body {
     cursor: pointer;
     width: 100%;
     height: 280px;
-    display: flex;
-    cursor: pointer;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-}
- .teacher_list {
-    cursor: pointer;
-    width: 100%;
     display: flex;
     cursor: pointer;
     flex-wrap: wrap;
@@ -1472,42 +1429,233 @@ h3{
     box-sizing: border-box;
 }
 
-.inviteTeacher{
-    margin-left: 150px;
-    margin-top: 100px;
-    width: 380px;
-    height: 100px;
-}
 
-.main_img{
-    margin-top: -100px;
-    margin-left: 380px;
+
+/*kavinda new components*/
+
+
+
+.pro-pic-edit{
     position: relative;
-
+    display: inline-block;
+    border-radius: 50%;
 }
 
-
-
-.box-container input[type=text] {
-    padding: 6px;
-    margin-top: 10px;
-    margin-left: 10px;
-    width:260px;
-    border: 2px solid #46344e;
-    border-radius: 15px;
-    font-size: 17px;
-    position:relative;
-
+.pro-pic-edit img{
+    width: 217px;
+    height: 217px;
+}
+a{
+    text-decoration: none;
 }
 
-.box-container button {
+.text {
     position: absolute;
-    float: right;
-    padding: 6px 10px;
-    margin-top: 384px;
-
-    background: #F5F5F5;
-    font-size: 17px;
-    border: none;
-    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    transition: 0.4s;
 }
+
+.pro-pic-edit:hover .text {
+    visibility: visible;
+}
+
+
+.pro-pic-edit img:hover{
+    opacity: 50%;
+}
+
+.edit-profile input{
+    border: 0;
+    border-bottom: 2px solid black;
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+    outline: none;
+    background: transparent;
+}
+
+
+.edit-profile{
+    display: flex;
+    width: 880px;
+    height: 648px;
+    border-radius: 32px;
+    background-color: azure;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.edit-profile select{
+    /* padding: 5px 10px; */
+    /* margin: 5px 10px; */
+    margin-top: 0.5rem;
+    border: 0;
+    border-bottom: 2px solid black;
+    background: transparent;
+    margin-bottom: 1rem;
+    outline: none;
+}
+
+
+
+.edit-profile button{
+    margin-bottom: 1rem;
+}
+
+/*======================*/
+
+
+
+.pro-pic-edit{
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.pro-pic-edit img{
+    width: 217px;
+    height: 217px;
+}
+a{
+    text-decoration: none;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    transition: 0.4s;
+}
+
+.pro-pic-edit:hover .text {
+    visibility: visible;
+}
+
+
+.pro-pic-edit img:hover{
+    opacity: 50%;
+}
+
+.edit-profile input{
+    border: 0;
+    border-bottom: 2px solid black;
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+    outline: none;
+    background: transparent;
+}
+
+
+.edit-profile{
+    display: flex;
+    width: 880px;
+    height: 648px;
+    border-radius: 32px;
+    background-color: azure;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.edit-profile select{
+    /* padding: 5px 10px; */
+    /* margin: 5px 10px; */
+    margin-top: 0.5rem;
+    border: 0;
+    border-bottom: 2px solid black;
+    background: transparent;
+    margin-bottom: 1rem;
+    outline: none;
+}
+
+
+
+.edit-profile button{
+    margin-bottom: 1rem;
+}
+
+/*=====================*/
+
+
+
+.pro-pic-edit{
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.pro-pic-edit img{
+    width: 217px;
+    height: 217px;
+}
+
+.text a{
+    text-decoration: none;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    transition: 0.4s;
+}
+
+.pro-pic-edit:hover .text {
+    visibility: visible;
+}
+
+
+.pro-pic-edit img:hover{
+    opacity: 50%;
+}
+
+.edit-profile input{
+    border: 0;
+    border-bottom: 2px solid black;
+    margin-bottom: 1rem;
+    outline: none;
+    background: transparent;
+}
+
+
+.edit-profile{
+    display: flex;
+    width: 880px;
+    height: 352px;
+    border-radius: 32px;
+    background-color: azure;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.edit-profile select{
+    /* padding: 5px 10px; */
+    /* margin: 5px 10px; */
+    margin-top: 10px;
+    border: 0;
+    border-bottom: 2px solid black;
+    background: transparent;
+    margin-bottom: 1rem;
+    outline: none;
+    text-align: ;
+}
+
+
+
+.edit-profile button{
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+
