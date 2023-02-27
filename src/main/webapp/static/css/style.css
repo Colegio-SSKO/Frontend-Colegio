@@ -81,6 +81,8 @@ body {
 
 }
 
+
+
 .profile-card-image {
     width: 150px;
     height: 150px;
@@ -561,6 +563,7 @@ body {
 .btn {
     width: 150px;
     height: 40px;
+    margin-right: 10px;
     border: 0px;
     border-radius: 30px;
     color: #46344e;
@@ -1153,7 +1156,23 @@ body {
     margin-bottom: 1rem;
 }
 
-.small-listed-cont-details{
+.teacher-card-wrap {
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 320px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
+    border-radius: 20px;
+    background-color: white;
+    margin: 1rem;
+}
+
+.teacher-card-wrap h3{
+    text-align: right;
+}
+.small-listed-cont-details .teacher-card-details {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1165,11 +1184,27 @@ body {
     margin-bottom: 20px;
 }
 
+.teacher-card-image{
+    width: 160px;
+    height: 160px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .small-listed-cont-image img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
+}
+
+.teacher-card-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .small-listed-cont-author {
@@ -1185,6 +1220,15 @@ body {
     cursor: pointer;
     width: 100%;
     height: 280px;
+    display: flex;
+    cursor: pointer;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+ .teacher_list {
+    cursor: pointer;
+    width: 100%;
     display: flex;
     cursor: pointer;
     flex-wrap: wrap;
@@ -1426,4 +1470,44 @@ h3{
     width: 80%;
     height: 30px;
     box-sizing: border-box;
+}
+
+.inviteTeacher{
+    margin-left: 150px;
+    margin-top: 100px;
+    width: 380px;
+    height: 100px;
+}
+
+.main_img{
+    margin-top: -100px;
+    margin-left: 380px;
+    position: relative;
+
+}
+
+
+
+.box-container input[type=text] {
+    padding: 6px;
+    margin-top: 10px;
+    margin-left: 10px;
+    width:260px;
+    border: 2px solid #46344e;
+    border-radius: 15px;
+    font-size: 17px;
+    position:relative;
+
+}
+
+.box-container button {
+    position: absolute;
+    float: right;
+    padding: 6px 10px;
+    margin-top: 384px;
+
+    background: #F5F5F5;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
 }

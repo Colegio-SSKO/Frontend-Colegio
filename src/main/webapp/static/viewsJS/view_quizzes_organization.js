@@ -34,6 +34,8 @@ async function fetchData() {
             "l_name" : "Medagoda",
             "author_title" : "O/L Maths teacher",
             "description" : "This is a dummy description 2. This is a dummy description 2.. This is a dummy description 2.. This is a dummy description 2."
+
+
         },
 
         {
@@ -62,11 +64,8 @@ function renderRight(data) {
     let html_right = "";
 
     html_right += `
-    <start-quiz img_src="${data["content_image"]}" title="${data["course_title"]}" description="${data["description"]}" author="${data["f_name"] + " " +data["l_name"]}" author_title="${data["author_title"]}", heading="heading" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. orrupti doloremque laudantium sequi." heading2="heading" content2="Lorem ipsum dolor sit amet, consectetur adipisicing elit. orrupti doloremque laudantium sequi."></start-quiz>
-
-    <center><button class="btn btn-solid btn-large"><a class="fnt fnt-bold fnt-mid" href="/start_quiz">Start Quiz</a></button></center>`;
-
-    document.querySelector(".cont-body-right").innerHTML = html_right;
+        <start-quiz img_src="${data["content_image"]}" title="${data["course_title"]}" description="${data["description"]}" author="${data["f_name"] + " " +data["l_name"]}" author_title="${data["author_title"]}", heading="heading" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. orrupti doloremque laudantium sequi." heading2="heading" content2="Lorem ipsum dolor sit amet, consectetur adipisicing elit. orrupti doloremque laudantium sequi."></start-quiz>`;
+        document.querySelector(".cont-body-right").innerHTML = html_right;
 
 
 
@@ -85,9 +84,8 @@ function renderLeft() {
         let html_left = "";
 
         html_left += "" +
-            "<button class=\"btn btn-solid btn-small\"><a class=\"fnt fnt-bold fnt-mid\" href=\"\">All</a></button>\n" +
-            "<button class=\"btn btn-outlined btn-small\"><a class=\"fnt fnt-bold fnt-mid\" href=\"\">Continuing</a></button>\n" +
-            "<button class=\"btn btn-outlined btn-small\"><a class=\"fnt fnt-bold fnt-mid\" href=\"\">Completed</a></button><br><br>\n" +
+            "<button class=\"btn btn-solid btn-small\"><a class=\"fnt fnt-bold fnt-mid\" href=\"\">All Quizzes</a></button></br>\n" +
+
             "\n" +
             "";
 

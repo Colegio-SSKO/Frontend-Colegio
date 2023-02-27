@@ -10,11 +10,7 @@ class StartQuiz extends HTMLElement {
         this.innerHTML = `
             <div class="starQuiz">
                 <quiz-comment img_src="${img_src}" title="${title}" description="${description}" author="${author}" author_title="${author_title}"></quiz-comment>
-                <div class="quiz_button">
-               <button class="btn btn-solid btn-large"><a class="fnt fnt-bold fnt-mid" href="/start_quiz">Start Quiz</a></button>
-        </div>
-
-    </div>
+            </div>
         `;
     }
 }

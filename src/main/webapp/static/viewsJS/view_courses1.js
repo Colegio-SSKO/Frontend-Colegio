@@ -1,4 +1,4 @@
-alert("Helleo");
+alert("hhhh55sdsd");
 
 async function fetchData() {
     const req = {
@@ -59,8 +59,11 @@ function renderRight(data) {
     let html_right = "";
 
     html_right += `
-<open-course img_src="${data["content_image"]}" title="${data["course_title"]}" description="${data["description"]}" author="${data["f_name"] + " " +data["l_name"]}" heading="heading" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. orrupti doloremque laudantium sequi." heading2="heading" content2="Lorem ipsum dolor sit amet, consectetur adipisicing elit. orrupti doloremque laudantium sequi."></open-course>`;
-    document.querySelector(".cont-body-right").innerHTML = html_right;
+        <center><button class="btn btn-solid btn-small"><a class="fnt fnt-bold fnt-mid" href="">Add to cart</a></button>
+        <button class="btn btn-solid btn-small"><a class="fnt fnt-bold fnt-mid" href="">Buy now</a></button></center>
+        <open-course img_src="${data["content_image"]}" title="${data["course_title"]}" description="${data["description"]}" author="${data["f_name"] + " " +data["l_name"]}" heading="heading" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. orrupti doloremque laudantium sequi." heading2="heading" content2="Lorem ipsum dolor sit amet, consectetur adipisicing elit. orrupti doloremque laudantium sequi."></open-course>
+        `;
+        document.querySelector(".cont-body-right").innerHTML = html_right;
 
 
 
