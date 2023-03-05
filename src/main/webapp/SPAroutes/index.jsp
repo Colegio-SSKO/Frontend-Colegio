@@ -40,6 +40,8 @@
     <script src="../components2/comment.js"></script>
     <script src="../components2/course_form1.js"></script>
     <script src="../components2/edit_profile.js"></script>
+    <script src="../components2/edit_email.js"></script>
+    <script src="../components2/change_password1.js"></script>
 
 </div>
 

@@ -1481,6 +1481,7 @@ a{
     display: flex;
     width: 880px;
     height: 648px;
+    position: relative;
     border-radius: 32px;
     background-color: azure;
     align-items: center;
@@ -1510,7 +1511,7 @@ a{
 
 
 .pro-pic-edit{
-    position: relative;
+    /*position: relative;*/
     display: inline-block;
     border-radius: 50%;
 }
@@ -1625,15 +1626,15 @@ a{
 }
 
 
-.edit-profile{
-    display: flex;
-    width: 880px;
-    height: 352px;
-    border-radius: 32px;
-    background-color: azure;
-    align-items: center;
-    justify-content: space-around;
-}
+/*.edit-profile{*/
+/*    display: flex;*/
+/*    width: 880px;*/
+/*    height: 352px;*/
+/*    border-radius: 32px;*/
+/*    background-color: azure;*/
+/*    align-items: center;*/
+/*    justify-content: space-around;*/
+/*}*/
 
 
 .edit-profile select{
@@ -1645,7 +1646,7 @@ a{
     background: transparent;
     margin-bottom: 1rem;
     outline: none;
-    text-align: ;
+    /*text-align: ;*/
 }
 
 

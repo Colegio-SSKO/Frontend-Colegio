@@ -1,4 +1,4 @@
-class Edit_email extends HTMLElement {
+class Change_password1 extends HTMLElement {
     connectedCallback() {
 
 
@@ -53,4 +53,4 @@ class Edit_email extends HTMLElement {
     }
 }
 
-customElements.define('change-password', Change_password);
+customElements.define('change-password', Change_password1);

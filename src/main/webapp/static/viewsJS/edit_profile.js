@@ -1,7 +1,8 @@
-alert("hello edit");
-alert("rrrrr");
 
 async function fetchData(){
+
+
+
     return "eeew";
 };
 
@@ -11,7 +12,7 @@ async function sendData(jsonRequest){
 }
 
 
- function renderSingle(){
+function renderSingle(){
 
 
     fetchData().then((data)=>{
@@ -26,6 +27,8 @@ async function sendData(jsonRequest){
 
         let selected = document.querySelectorAll(".courseList-card");
 
+
+        //sending data
         let fName = document.querySelector(".fname");
         let lName = document.querySelector(".lname");
         let edu = document.querySelector("#edu");
@@ -33,14 +36,17 @@ async function sendData(jsonRequest){
 
         let saveBtn = document.querySelector("#save-btn");
 
-        saveBtn.addEventListener('click', ()=>{
-            let request = {
+        saveBtn.addEventListener('click', async ()=>{
+            let req = {
                 "fName" : fName.value,
                 "lName" : lName.value,
                 "edu" : edu.value,
                 "gender" : gender.value
             }
 
+            let resp = await fetch("http://localhost:8090/api/users/editProfile/:1", {method : "POST",  body : JSON.stringify(req)}).then((data)=>{
+                data.text()
+            });
 
 
 
@@ -49,3 +55,6 @@ async function sendData(jsonRequest){
 
     });
 }
+
+
+
