@@ -1,57 +1,57 @@
-alert("Hello mf");
+alert("Hello coursessssss");
 
-async function fetchData() {
+async function fetchData(){
     const req = {
         "user_ID" : "23"
     }
 
 //uncomment this when connecting the database
-    // let res = await fetch("http://localhost:8081/api/getUserCourses", {method : "POST",  body : JSON.stringify(req)}).then((response)=>
-    //     response.json()
-    //
-    // );
+    let res = await fetch("http://localhost:8090/api/users/viewpurchaseCourse", {method : "POST",  body : JSON.stringify(req)}).then((response)=>
+        response.json()
+
+    );
 
 
     //delete this. this one will return a dummy data to test
-    let res = [
-        {
-            "content_ID" : "1",
-            "content_image" : "../static/img/components_images/elec.jpg",
-            "course_title" : "This is a small title",
-            "f_name" : "Senith",
-            "l_name" : "Uthsara",
-            "author_title" : "O/L Science teacher",
-            "description" : "This is a dummy description"
-
-
-        },
-
-        {
-            "content_ID" : "2",
-            "content_image" : "../static/img/components_images/maths.jpeg",
-            "course_title" : "This is a small title 2",
-            "f_name" : "Kavinda",
-            "l_name" : "Medagoda",
-            "author_title" : "O/L Maths teacher",
-            "description" : "This is a dummy description 2. This is a dummy description 2.. This is a dummy description 2.. This is a dummy description 2."
-
-
-        },
-
-        {
-            "content_ID" : "3",
-            "content_image" : "../static/img/components_images/ict.jpg",
-            "course_title" : "This is a small title 2 quiz",
-            "f_name" : "Sachini",
-            "l_name" : "Usha",
-            "author_title" : "O/L ICT teacher",
-            "description" : "This is a dummy description 3"
-
-
-
-        }
-
-    ]
+    // let res = [
+    //     {
+    //         "content_ID" : "1",
+    //         "content_image" : "../static/img/components_images/elec.jpg",
+    //         "course_title" : "This is a small title",
+    //         "f_name" : "Senith",
+    //         "l_name" : "Uthsara",
+    //         "author_title" : "O/L Science teacher",
+    //         "description" : "This is a dummy description"
+    //
+    //
+    //     },
+    //
+    //     {
+    //         "content_ID" : "2",
+    //         "content_image" : "../static/img/components_images/maths.jpeg",
+    //         "course_title" : "This is a small title 2",
+    //         "f_name" : "Kavinda",
+    //         "l_name" : "Medagoda",
+    //         "author_title" : "O/L Maths teacher",
+    //         "description" : "This is a dummy description 2. This is a dummy description 2.. This is a dummy description 2.. This is a dummy description 2."
+    //
+    //
+    //     },
+    //
+    //     {
+    //         "content_ID" : "3",
+    //         "content_image" : "../static/img/components_images/ict.jpg",
+    //         "course_title" : "This is a small title 2 quiz",
+    //         "f_name" : "Sachini",
+    //         "l_name" : "Usha",
+    //         "author_title" : "O/L ICT teacher",
+    //         "description" : "This is a dummy description 3"
+    //
+    //
+    //
+    //     }
+    //
+    // ]
 
     return res
 };

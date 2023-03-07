@@ -1,5 +1,4 @@
-alert("student profile");
-
+alert("View cart");
 
 async function fetchData(){
     const req = {
@@ -7,7 +6,7 @@ async function fetchData(){
     }
 
 //uncomment this when connecting the database
-    let res = await fetch("http://localhost:8090/api/users/viewprofile", {method : "POST",  body : JSON.stringify(req)}).then((response)=>
+    let res = await fetch("http://localhost:8090/api/users/viewcart", {method : "POST",  body : JSON.stringify(req)}).then((response)=>
         response.json()
 
     );
@@ -56,6 +55,8 @@ async function fetchData(){
 };
 
 
+
+
 function renderSingle(){
 
 
@@ -64,8 +65,9 @@ function renderSingle(){
 
         let html_left = "";
 
-        html_left += ` <profile-card profile_img="${"img_src"}" name="${"name"}" date="${"date"}" gender="${"gender"}" education_level="${"level"}" ></profile-card>` + ` <featured-cont img_src="kask" title="kavinda" description="2000/12/5" author="male" description2="olevel" price="20" rating="ssd" votes=" sdsd"></featured-cont> + `;
-
+        for (let i of data){
+            html_left += ` <cart-item img_src="${i["img_src"]}" title=${i["title"]}" description="${i["description"]}" author="${i["author"]}" description2="${i["description2"]}" price="${i["price"]}"></cart-item>`;
+        }
 
         document.querySelector(".cont-body-content").innerHTML = html_left;
 

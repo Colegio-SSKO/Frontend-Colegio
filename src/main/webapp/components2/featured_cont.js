@@ -25,7 +25,7 @@ class Featured_cont extends HTMLElement {
             <h3 class="fnt fnt-bold fnt-extraLarge">${price}</h3>
 
             <div class="featured-cont-actions">
-                <button class="btn btn-solid btn-large">Add to cart</button>
+                <button class="btn btn-solid btn-large" id="addtocart">Add to cart</button>
                 <button class="btn btn-solid btn-large">Buy Now</button>
             </div>
 

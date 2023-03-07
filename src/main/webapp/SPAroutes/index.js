@@ -50,7 +50,7 @@ const Routes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/View_course2_left.jsp",
         path_right: "/views/View_course2_right.jsp",
-        script: "../static/viewsJS/Student_view_courses.js",
+        script: "../static/viewsJS/Student_view_courses_new.js",
         title: "My Courses",
         data : "This is the contact page"
     },
@@ -70,7 +70,7 @@ const Routes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/Question_student_1_left.jsp",
         path_right: "/views/Question_student_1_right.jsp",
-        script: "../static/viewsJS/Student_question1.js",
+        script: "../static/viewsJS/question1.js",
         title: "Question",
         data : "This is the Question page"
     },
@@ -108,7 +108,7 @@ const Routes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/Quiz_teacher_org1_left.jsp",
         path_right: "/views/Quiz_teacher_org1_right.jsp",
-        script: "../static/viewsJS/Student_view_quizzes.js",
+        script: "../static/viewsJS/Student_view_quizzes1.js",
         title: "Quizzes",
         data : "This is the quiz page"
     },
@@ -134,10 +134,11 @@ const Routes = {
     "/cart" : {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
-        path_left:"/views/1_item_in_cart.jsp",
+        path_left:"/views/view_cart.jsp",
+        script: "../static/viewsJS/View_cart.js",
         path_right: "",
-        title: "Cart",
-        data : "This is the cart page"
+        title: "cart",
+        data : "This is cart page"
     },
 
     "/notification" : {
@@ -153,7 +154,7 @@ const Routes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/",
-        script: "../static/viewsJS/edit_profile.js",
+        script: "../static/viewsJS/edit_profile1.js",
         path_right: "",
         title: "Notification",
         data : "This is the notification page"
@@ -246,8 +247,6 @@ const urlLocation = async () =>{
 
         renderLeft();
         // document.querySelector(".cont-body-right").innerHTML = html_cont_right;
-
-
 
     }
 

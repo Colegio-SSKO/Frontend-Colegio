@@ -1,6 +1,6 @@
-alert("Hello courses");
+alert("Hello mf");
 
-async function fetchData(){
+async function fetchData() {
     const req = {
         "user_ID" : "23"
     }
@@ -64,7 +64,7 @@ function renderRight(data) {
     let html_right = "";
 
     html_right += `
-<start-quiz img_src="${data["content_image"]}" title="${data["course_title"]}" description="${data["description"]}" author="${data["f_name"] + " " +data["l_name"]}" author_title="${data["author_title"]}", heading="heading" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. orrupti doloremque laudantium sequi." heading2="heading" content2="Lorem ipsum dolor sit amet, consectetur adipisicing elit. orrupti doloremque laudantium sequi."></start-quiz>`;
+<quiz-question img_src="${data["content_image"]}" title="${data["course_title"]}" Question="${data["question"]}" answer1="${data["f_name"]}" answer2="${data["f_name"]}" answer3="${data["f_name"]}" answer4="${data["f_name"]}" ></start-quiz>`;
     document.querySelector(".cont-body-right").innerHTML = html_right;
 
 

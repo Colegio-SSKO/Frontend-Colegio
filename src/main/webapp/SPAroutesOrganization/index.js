@@ -158,7 +158,7 @@ const Routes = {
     "/cart" : {
         isSingle : true,
         template : "/SPAroutesTeacher/index_single.jsp",
-        path_left:"/views/1_item_in_cart.jsp",
+        path_left:"/views/view_cart.jsp",
         path_right: "",
         title: "Cart",
         data : "This is the cart page"

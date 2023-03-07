@@ -132,7 +132,8 @@ const Routes = {
     "/cart" : {
         isSingle : true,
         template : "/SPAroutesTeacher/index_single.jsp",
-        path_left:"/views/1_item_in_cart.jsp",
+        path_left:"/views/view_cart.jsp",
+        script: "../static/viewsJS/View_cart.js",
         path_right: "",
         title: "Cart",
         data : "This is the cart page"
@@ -154,8 +155,6 @@ const Routes = {
 const router = (ev) =>{
     window.history.pushState({}, "", ev.target.href);
     urlLocation();
-
-
 };
 
 
@@ -203,7 +202,7 @@ const urlLocation = async () =>{
 
     //rendering the appropriate content
     if (route.isSingle){
-        document.querySelector(".cont-body-content").innerHTML = html_cont_left;
+        renderSingle();
     }
     else{
         //fetching the right hand side content as well
@@ -214,12 +213,10 @@ const urlLocation = async () =>{
         renderLeft();
         // document.querySelector(".cont-body-right").innerHTML = html_cont_right;
 
-
-
     }
 
 
-   //changing the page name
+    //changing the page name
     document.querySelector(".pagename").innerText = route.title;
 
 };
