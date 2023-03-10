@@ -97,6 +97,7 @@ const Routes = {
         template : "/SPAroutesTeacher/index_single.jsp",
         path_left:"/views/Teahcer_profile.jsp",
         path_right: "",
+        script: "../static/viewsJS/profile.js",
         title: "profile",
         data : "This is the profile page"
     },
@@ -203,16 +204,12 @@ const urlLocation = async () =>{
 
     //rendering the appropriate content
     if (route.isSingle){
-        document.querySelector(".cont-body-content").innerHTML = html_cont_left;
+        renderSingle();
     }
     else{
-        //fetching the right hand side content as well
-        let html_cont_right = await fetch(route.path_right).then((response)=>
-            response.text()
-        );
 
         renderLeft();
-        // document.querySelector(".cont-body-right").innerHTML = html_cont_right;
+
 
 
 

@@ -39,6 +39,7 @@
     <script src="../components2/startQuiz.js"></script>
     <script src="../components2/comment.js"></script>
     <script src="../components2/course_form1.js"></script>
+    <script src="../components2/contentList.js"></script>
 </div>
 
 <div id="viewsScript">

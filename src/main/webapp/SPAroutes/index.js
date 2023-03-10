@@ -63,7 +63,7 @@ const Routes = {
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Profile.jsp",
         path_right: "",
-        script: "../static/viewsJS/Profile_test.js",
+        script: "../static/viewsJS/profile.js",
         title: "profile",
         data : "This is the profile page"
     },
