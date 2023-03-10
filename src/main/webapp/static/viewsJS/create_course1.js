@@ -1,4 +1,4 @@
-alert("Hellpp");
+alert("Hellppaa");
 
 async function fetchData() {
     const req = {
@@ -132,6 +132,42 @@ function renderLeft() {
 
 
         })
+
+
+        let submit = document.querySelector("#submitbtn");
+
+
+        submit.addEventListener('click', ()=>{
+            alert("wed");
+            let thumbnail = document.querySelector(".js-myFile-course-form").files[0];
+            let videos = document.querySelectorAll(".js-video-files").files[0];
+            let formData =  new FormData();
+
+            let title = document.querySelector(".js-course-title-course-form").value;
+            let category = document.querySelector(".js-course-category-course-form").value;
+            let description = document.querySelector(".js-course-description-course-form").value;
+
+
+
+            let textData = {
+                "title" : title,
+                "category" : category,
+                "description" : description
+            }
+
+
+            formData.append("file", thumbnail);
+            formData.append("textData", JSON.stringify(textData));
+
+
+
+            fetch("http://localhost:8100/api/teachers/createCourse", {
+                method: 'POST',
+                body: formData,
+            }).then(()=>{
+                alert("uploaded");
+            })
+        });
 
 
 

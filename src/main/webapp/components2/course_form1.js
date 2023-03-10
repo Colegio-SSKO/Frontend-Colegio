@@ -6,7 +6,7 @@ class CourseForm extends HTMLElement {
     <div class="inputs">
         <div class="input-field">
             <label for="" class="fnt fnt-mid">Select a unique title for your Course.</label><br><br>
-            <input class="js-course-title-course-form" type="text" required placeholder="Course Title">
+            <input name="title" class="js-course-title-course-form" type="text" required placeholder="Course Title">
         </div><br><br>
 
         <div class="input-field">
@@ -32,8 +32,18 @@ class CourseForm extends HTMLElement {
                 <p style="color: #767676; margin: 10px 0" class="fnt fnt-mid">Upload your course content here.<br> Important Guideline : All files should be at least 480p and less than 3 GB.</p>
             </label>
         </div>
+        
+      
     </div>
+    
+      <input type="file" class="js-video-files" formenctype="multipart/form-data">
+      <button type="submit" id="submitbtn" class="btn">Submit</button>
+      
+
 </div>
+        
+      
+        
         `;
     }
 }
