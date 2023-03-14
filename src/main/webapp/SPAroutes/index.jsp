@@ -41,7 +41,10 @@
     <script src="../components2/course_form1.js"></script>
     <script src="../components2/edit_profile.js"></script>
     <script src="../components2/edit_email.js"></script>
-    <script src="../components2/change_password1.js"></script>
+    <script src="../components2/change_password.js"></script>
+    <script src="../components2/Q-4.js"></script>
+    <script src="../components2/popup.js"></script>
+
 
 </div>
 

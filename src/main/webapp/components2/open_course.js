@@ -1,10 +1,12 @@
 class Open_course extends HTMLElement {
     connectedCallback() {
 
+        let author_pic = this.attributes.author_pic.value;
         let img_src = this.attributes.img_src.value;
         let title= this.attributes.title.value;
         let description= this.attributes.description.value;
         let author = this.attributes.author.value;
+        let author_title = this.attributes.author_title.value;
         let heading= this.attributes.heading.value;
         let content= this.attributes.content.value;
         let heading2= this.attributes.heading2.value;
@@ -29,7 +31,7 @@ class Open_course extends HTMLElement {
         <p class="open-course-desc">${description}
         </p>
 
-        <div class="open-course-author">${author}</div>
+        <with-title img_src = "${author_pic}" name = "${author}" qulifi = "${author_title}"></with-title>
         <div class="open-course-cont">
 
     

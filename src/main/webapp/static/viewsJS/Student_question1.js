@@ -1,4 +1,4 @@
-alert("Hello this is questions");
+alert("Hello this ssss");
 
 async function fetchData() {
     const req = {
@@ -6,55 +6,16 @@ async function fetchData() {
     }
 
 //uncomment this when connecting the database
-    // let res = await fetch("http://localhost:8081/api/getUserCourses", {method : "POST",  body : JSON.stringify(req)}).then((response)=>
-    //     response.json()
-    //
-    // );
 
+    let res = await fetch("http://localhost:8080/api/users/myQuestions/:"+getUserID(), {method : "GET"}).then((response)=>
+        response.json()
 
-    //delete this. this one will return a dummy data to test
-    let res = [
-        {
-            "content_ID" : "1",
-            "content_image" : "../static/img/components_images/elec.jpg",
-            "course_title" : "This is a small title",
-            "f_name" : "Senith",
-            "l_name" : "Uthsara",
-            "author_title" : "O/L Science teacher",
-            "description" : "This is a dummy description"
-
-
-        },
-
-        {
-            "content_ID" : "2",
-            "content_image" : "../static/img/components_images/maths.jpeg",
-            "course_title" : "This is a small title 2",
-            "f_name" : "Kavinda",
-            "l_name" : "Medagoda",
-            "author_title" : "O/L Maths teacher",
-            "description" : "This is a dummy description 2. This is a dummy description 2.. This is a dummy description 2.. This is a dummy description 2."
-
-
-        },
-
-        {
-            "content_ID" : "3",
-            "content_image" : "../static/img/components_images/ict.jpg",
-            "course_title" : "This is a small title 2 quiz",
-            "f_name" : "Sachini",
-            "l_name" : "Usha",
-            "author_title" : "O/L ICT teacher",
-            "description" : "This is a dummy description 3"
-
-
-
-        }
-
-    ]
+    );
 
     return res
 };
+
+
 
 
 //function to render right content
@@ -63,8 +24,14 @@ function renderRight(data) {
 
     let html_right = "";
 
-    html_right += `
-<start-quiz img_src="${data["content_image"]}" title="${data["course_title"]}" description="${data["description"]}" author="${data["f_name"] + " " +data["l_name"]}" author_title="${data["author_title"]}", heading="heading" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. orrupti doloremque laudantium sequi." heading2="heading" content2="Lorem ipsum dolor sit amet, consectetur adipisicing elit. orrupti doloremque laudantium sequi."></start-quiz>`;
+    if (data["status"]== 1){
+        html_right += ` <open-question  img_src="${i["question_img"]}" qualifi="${data[""]}" title="${i["question_title"]}" author="${i["f_name"]+" "+ i["l_name"]}" description="${i["question_description"]}""></open-question>`;
+
+    }
+    else if (data["status"]== 0) {
+        html_right += ` <question  img_src2="${i["question_img"]}" img_src="${i["question_img"]}" title="${i["question_title"]}" accept_person="${i["f_name"]+" "+ i["l_name"]}"  description="${i["question_description"]}""></question>`;
+
+    }
     document.querySelector(".cont-body-right").innerHTML = html_right;
 
 
@@ -90,16 +57,36 @@ function renderLeft() {
             "\n" +
             "";
 
-
         for (let i of data){
-            html_left += ` <listed-content content_ID="${i["content_ID"]}" img_src="${i["content_image"]}" title="${i["course_title"]}" author="${i["f_name"] + " " +i["l_name"]}" description="${i["description"]}" rating=\"5\" votes=\"102\"></listed-content>`;
+            if (i["status"]== 0){
+                html_left += ` <q-1 question_ID="${i["question_Id"]}" img_src="${i["question_img"]}" title="${i["question_title"]}" accept="${i["f_name"]+" "+ i["l_name"]}" description="${i["question_description"]}""></q-1>`;
+            }else if (i["status"]== 1){
+                html_left += ` <q-2 question_ID="${i["question_Id"]}" img_src="${i["question_img"]}" title="${i["question_title"]}" accept="${i["f_name"]+" "+ i["l_name"]}" description="${i["question_description"]}""></q-2>`;
+            }
+            else {
+                alert("kkkkkkkk")
+                html_left += ` <q-4 question_ID="${i["question_Id"]}" img_src="${i["question_img"]}" title="${i["question_title"]}" accept="${i["f_name"]+" "+ i["l_name"]}" description="${i["question_description"]}""></q-4>`;
+            }
         }
 
         document.querySelector(".cont-body-left").innerHTML = html_left;
 
-        let selected = document.querySelectorAll(".courseList-card");
+        let selected_session = document.querySelectorAll(".js-session");
 
-        for (let element of selected){
+        for (let element of selected_session){
+            element.addEventListener('click', ()=>{
+
+                for (let el of data){
+                    if (el["content_ID"] == element.getAttribute("id")){
+                        renderRight(el);
+                    }
+                }
+            })
+        }
+
+        let selected_question= document.querySelectorAll(".js-question");
+
+        for (let element of selected_question){
             element.addEventListener('click', ()=>{
 
                 for (let el of data){

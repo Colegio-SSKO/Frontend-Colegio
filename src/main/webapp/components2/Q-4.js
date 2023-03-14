@@ -1,4 +1,4 @@
-class Q_2 extends HTMLElement {
+class Q_4 extends HTMLElement {
     connectedCallback() {
         let question_ID = this.attributes.question_ID.value;
         let img_src= this.attributes.img_src.value;
@@ -10,11 +10,8 @@ class Q_2 extends HTMLElement {
 
         <div class="q-2-content" id="${question_ID}">
             <h2 class="fnt fnt-extraBold fnt-large">${title}</h2>
-            <p class="fnt fnt-small">Session Accepted</p>
+            <p class="fnt fnt-small">pending</p>
             <h3 class="fnt fnt-light fnt-mid">${description}</h3>
-            <button class="btn btn-solid btn-small js-questionButton js-session">Session</button>
-            <button class="btn btn-solid btn-small js-questionButton js-question">Question</button>
-
         </div>
 
         <div class="q-2-price">
@@ -24,5 +21,5 @@ class Q_2 extends HTMLElement {
         `;
     }
 }
-    
-customElements.define('q-2', Q_2);
+
+customElements.define('q-4', Q_4);

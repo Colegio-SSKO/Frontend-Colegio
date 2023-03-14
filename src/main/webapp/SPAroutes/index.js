@@ -50,7 +50,7 @@ const Routes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/View_course2_left.jsp",
         path_right: "/views/View_course2_right.jsp",
-        script: "../static/viewsJS/Student_view_courses.js",
+        script: "../static/viewsJS/Student_view_courses1.js",
         title: "My Courses",
         data : "This is the contact page"
     },
@@ -97,7 +97,7 @@ const Routes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Teahcer_profile.jsp",
-        script: "../static/viewsJS/Student_profile1.js",
+        script: "../static/viewsJS/Student_profile.js",
         path_right: "",
         title: "profile",
         data : "This is the profile page"
@@ -108,7 +108,7 @@ const Routes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/Quiz_teacher_org1_left.jsp",
         path_right: "/views/Quiz_teacher_org1_right.jsp",
-        script: "../static/viewsJS/Student_view_quizzes1.js",
+        script: "../static/viewsJS/Student_view_quizzes.js",
         title: "Quizzes",
         data : "This is the quiz page"
     },
@@ -163,7 +163,7 @@ const Routes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/",
-        script: "../static/viewsJS/edit_email.js",
+        script: "../static/viewsJS/edit_email1.js",
         path_right: "",
         title: "Notification",
         data : "This is the notification page"
