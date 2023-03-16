@@ -78,9 +78,10 @@ body {
     margin: auto;
     margin-bottom: 2rem;
     margin-top: 2rem;
-    position: relative;
 
 }
+
+
 
 .profile-card-image {
     width: 150px;
@@ -326,15 +327,15 @@ body {
 
 
 .featured-cont-wrap {
-    width: 780px;
-    height: 230px;
+    width: 700px;
+    height: 300px;
     cursor: pointer;
     display: flex;
     padding: 10px;
     justify-content: space-between;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
     border-radius: 20px;
-    margin: 40px;
+    margin-bottom: 40px;
     background: white;
 }
 
@@ -350,34 +351,25 @@ body {
     border-radius: 20px;
 }
 
-.featured-cont{
-    position: relative;
-    cursor: pointer;
-    display: table-column;
-    justify-content: space-between;
-    height: 220px;
-}
-
 .featured-cont-details {
-    position: relative;
     width: 450px;
     height: 100%;
-    padding: 10px;
+    padding: 5px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px;
+    position: relative;
+    margin-bottom: 10px;
     margin-left: 10px;
 }
 
 
-/*.featured-cont-actions {*/
-/*    position: relative;*/
-/*    margin-bottom: 10px;*/
-/*}*/
+.featured-cont-actions {
+    margin-bottom: 10px;
+}
 
 
 .featured-cont-actions button{
-    margin: 0 30px 20px 30px;
+    margin-right: 10px;
 }
 
 
@@ -571,6 +563,8 @@ body {
 .btn {
     width: 150px;
     height: 40px;
+    margin-right: 10px;
+    margin-bottom: 10px;
     border: 0px;
     border-radius: 30px;
     color: #46344e;
@@ -589,8 +583,6 @@ body {
 .btn-small{
     width: 100px;
 }
-
-
 
 .btn-large{
     width: 150px;
@@ -663,69 +655,20 @@ body {
 
 
 
-.cart-item{
-    width: 800px;
-    height: 250px;
-    border-radius: 32px;
-    background: white;
-    margin-left: 10px;
-    margin-bottom: 20px;
-    padding: 15px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+
+
+.tumbnail-img{
+    width: 380px;
+    height: 248px;
+    margin-top: 5px;
 }
 
-
-.cart-tumbnail-img{
-    width: 250px;
-    height: 200px;
-    margin: 5px;
-}
-
-.cart-tumbnail-img img{
+.tumbnail-img img{
     width: 100%;
     height: 100%;
-    border-radius: 10px;
 
 }
-
-.cart-item-content{
-    margin: 5px;
-    width:430px;
-    height: 200px;
-    flex-direction: column;
-    padding: 0;
-}
-
-.cart-item-content h2{
-    font-weight: bold;
-    margin-bottom: 16px;
-}
-
-.cart-item-content h3{
-    margin-bottom: 16px;
-}
-
-.cart-item-price{
-    position: relative;
-    text-align: right;
-    margin-top: 10px;
-    margin-right: 5px;
-}
-
-.cart-item-price button{
-    background: transparent;
-    color: orange;
-    border: none;
-}
-
-
-
-
-
-
 
 
 .comment-cmnt-1{
@@ -848,63 +791,9 @@ body {
     margin-right: 15px;
 }
 
-.noti-notification{
-    width: 800px;
-    height: 100px;
-    background: white;
-    border-radius: 16px;
-    padding: 16px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-left: 10px;
-    margin-bottom: 15px;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-}
 
-.noti-prof-img img{
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    margin-right: 25px;
-}
 
-/*.result-container{*/
-/*    position: relative;*/
-/*    margine-left:500px;*/
-/*    margin-top: 10px;*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    background-color: yellow;*/
 
-/*}*/
-
-.result-notification{
-    position: relative;
-    margin-left: 150px;
-    width: 350px;
-    height: 60px;
-    background: white;
-    border-radius: 16px;
-    padding: 5px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 15px;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-}
-
-.result-prof-img img{
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    margin-right: 25px;
-}
- .result-notification button{
-     position: relative;
-     text-align: right;
-     margin-right: 5px;
- }
 
 
 .q-1-cart-item{
@@ -1213,10 +1102,27 @@ body {
     padding: 10px;
     border-radius: 20px;
     background: white;
-    margin:40px;
+    margin-bottom: 1rem;
 }
 
-.small-listed-cont-details{
+.teacher-card-wrap {
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 320px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
+    border-radius: 20px;
+    background-color: white;
+    margin: 1rem;
+}
+
+.teacher-card-wrap h3{
+    position: relative;
+    text-align: right;
+}
+.small-listed-cont-details .teacher-card-details {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1228,11 +1134,27 @@ body {
     margin-bottom: 20px;
 }
 
+.teacher-card-image{
+    width: 160px;
+    height: 160px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .small-listed-cont-image img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
+}
+
+.teacher-card-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .small-listed-cont-author {
@@ -1241,22 +1163,6 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-
-
-.cart-price-wrap {
-    position: absolute;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-    height: 250px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
-    padding: 10px;
-    border-radius: 20px;
-    background: white;
-    margin-left:850px;
-}
-
 
 
 
@@ -1270,15 +1176,24 @@ body {
     flex-direction: row;
     justify-content: space-around;
 }
+ .teacher_list {
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    cursor: pointer;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
 
-.result-list-wrap {
+.teacher_list_view {
     cursor: pointer;
     width: 100%;
     height: 280px;
     display: flex;
     cursor: pointer;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
 }
 
@@ -1519,257 +1434,48 @@ h3{
 
 
 
-/*kavinda new components*/
 
-
-
-.pro-pic-edit{
-    position: relative;
-    display: inline-block;
-    border-radius: 50%;
+.inviteTeacher{
+    margin-left: 150px;
+    margin-top: 100px;
+    width: 380px;
+    height: 100px;
 }
 
-.pro-pic-edit img{
-    width: 217px;
-    height: 217px;
-}
-a{
-    text-decoration: none;
-}
-
-.text {
+.description{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    visibility: hidden;
-    transition: 0.4s;
+    width:260px;
+    margin-left: 10px;
+    margin-top: 170px;
+    height:300px;
 }
 
-.pro-pic-edit:hover .text {
-    visibility: visible;
-}
-
-
-.pro-pic-edit img:hover{
-    opacity: 50%;
-}
-
-.edit-profile input{
-    border: 0;
-    border-bottom: 2px solid black;
-    margin-bottom: 1.5rem;
-    margin-top: 0.5rem;
-    outline: none;
-    background: transparent;
-}
-
-
-.edit-profile{
-    display: flex;
-    width: 880px;
-    height: 648px;
-    border-radius: 32px;
-    background-color: azure;
-    align-items: center;
-    justify-content: space-around;
-}
-
-
-.edit-profile select{
-    /* padding: 5px 10px; */
-    /* margin: 5px 10px; */
-    margin-top: 0.5rem;
-    border: 0;
-    border-bottom: 2px solid black;
-    background: transparent;
-    margin-bottom: 1rem;
-    outline: none;
-}
-
-
-
-.edit-profile button{
-    margin-bottom: 1rem;
-}
-
-/*======================*/
-
-
-
-.pro-pic-edit{
+.main_img{
+    margin-top: -100px;
+    margin-left: 380px;
     position: relative;
-    display: inline-block;
-    border-radius: 50%;
-}
 
-.pro-pic-edit img{
-    width: 217px;
-    height: 217px;
-}
-a{
-    text-decoration: none;
-}
-
-.text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    visibility: hidden;
-    transition: 0.4s;
-}
-
-.pro-pic-edit:hover .text {
-    visibility: visible;
-}
-
-
-.pro-pic-edit img:hover{
-    opacity: 50%;
-}
-
-.edit-profile input{
-    border: 0;
-    border-bottom: 2px solid black;
-    margin-bottom: 1.5rem;
-    margin-top: 0.5rem;
-    outline: none;
-    background: transparent;
-}
-
-
-.edit-profile{
-    display: flex;
-    width: 880px;
-    height: 648px;
-    border-radius: 32px;
-    background-color: azure;
-    align-items: center;
-    justify-content: space-around;
-}
-
-
-.edit-profile select{
-    /* padding: 5px 10px; */
-    /* margin: 5px 10px; */
-    margin-top: 0.5rem;
-    border: 0;
-    border-bottom: 2px solid black;
-    background: transparent;
-    margin-bottom: 1rem;
-    outline: none;
 }
 
 
 
-.edit-profile button{
-    margin-bottom: 1rem;
-}
-
-/*=====================*/
-
-
-
-.pro-pic-edit{
-    position: relative;
-    display: inline-block;
-    border-radius: 50%;
-}
-
-.pro-pic-edit img{
-    width: 217px;
-    height: 217px;
-}
-
-.text a{
-    text-decoration: none;
-}
-
-.text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    visibility: hidden;
-    transition: 0.4s;
-}
-
-.pro-pic-edit:hover .text {
-    visibility: visible;
-}
-
-
-.pro-pic-edit img:hover{
-    opacity: 50%;
-}
-
-.edit-profile input{
-    border: 0;
-    border-bottom: 2px solid black;
-    margin-bottom: 1rem;
-    outline: none;
-    background: transparent;
-}
-
-
-.edit-profile{
-    display: flex;
-    width: 880px;
-    height: 352px;
-    border-radius: 32px;
-    background-color: azure;
-    align-items: center;
-    justify-content: space-around;
-}
-
-
-.edit-profile select{
-    /* padding: 5px 10px; */
-    /* margin: 5px 10px; */
+.box-container input[type=text] {
+    padding: 6px;
     margin-top: 10px;
-    border: 0;
-    border-bottom: 2px solid black;
-    background: transparent;
-    margin-bottom: 1rem;
-    outline: none;
-    text-align:0 ;
-}
-
-
-
-.edit-profile button{
-    margin-bottom: 1rem;
-}
-
-
-.upload_pic{
-    width: 330px;
-    height: 250px;
-    background-image: url("../img/components_images/quiz_pic.jpg");
-    background-position: center;
-    background-size: cover;
-    border: 1px solid black;
-}
-
-
-.add{
-    width:330px;
-    text-align: center;
-}
-
-.option_box button{
-    width: 50px;
-    background-size: cover;
-}
-
-.question_form{
-    width: 500px;
-    margin: 0;
+    margin-left: 10px;
+    width:260px;
+    border: 2px solid #46344e;
+    border-radius: 15px;
+    font-size: 17px;
+    position:relative;
 
 }
 
-
-
-
-
+.box-container button {
+    position: relative;
+    float: right;
+    background: yellow;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}

@@ -3,6 +3,11 @@ function getUserID() {
     return userID;
 }
 
+function getOrgID() {
+    let organizationID = 80;
+    return organizationID;
+}
+
 function  getUsername() {
     let username = "Senith Uthsara";
     return username;

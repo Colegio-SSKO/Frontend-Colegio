@@ -9,10 +9,10 @@
 </head>
 <body>
     <div class="cart-item">
-            <div class="tumbnail-img">
+            <div class="cart-tumbnail-img">
                 <img src="../static/img/components_images/violinist.jpg" alt="">
             </div>
-    
+
             <div class="cart-item-content">
                 <h2 class="fnt fnt-bold fnt-large">Western music for GCE OLs - The Complete Guide</h2>
                 <h3 class="fnt fnt-bold fnt-mid">Learn about western music in a way catered towards your OLs, fundemantals straight to master level.</h3>
@@ -22,7 +22,7 @@
                 <p class="fnt fnt-small">11 Total hours | 12 videos</p>
                 <p class="fnt fnt-small">OL Levels</p>
             </div>
-    
+
             <div class="cart-item-price">
                 <h1 class="fnt fnt-bold fnt-extraLarge">$19.99</h1>
                 <button><a class="fnt fnt-bold fnt-mid" href="">Remove</a></button>

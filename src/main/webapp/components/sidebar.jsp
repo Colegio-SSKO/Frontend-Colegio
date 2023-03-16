@@ -33,6 +33,10 @@
         </div>
 
         <div class="side_icons">
+            <label><a class="fnt fnt-bold fnt-mid" href="/organization">Organization</a></label>
+        </div>
+
+        <div class="side_icons">
             <label ><a class="fnt fnt-bold fnt-mid" href="">Logout</a></label>
         </div>
         

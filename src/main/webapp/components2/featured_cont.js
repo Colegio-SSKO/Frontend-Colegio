@@ -1,37 +1,62 @@
 class Featured_cont extends HTMLElement {
-    connectedCallback() {
+    async connectedCallback() {
+        let data= await fetch("http://localhost:8090/api/users/view_featured_cont", {method: 'GET'}).then(
+            (res)=>{
+                return res.json();
+            }
+        )
 
-        let img_src = this.attributes.img_src.value;
-        let title = this.attributes.title.value;
-        let description = this.attributes.description.value;
-        let author = this.attributes.author.value;
-        let description2 = this.attributes.description2.value;
-        let price = this.attributes.price.value;
-        let rating = this.attributes.rating.value;
-        let votes = this.attributes.votes.value;
         this.innerHTML = `
+        <div class="fnt fnt-bold fnt-large">Featured in Colegio</div>
         <div class="featured-cont-wrap">
         <div class="featured-cont-image">
-            <img src="${img_src}" alt="">
+            <img src="${data['img_src']}" alt="">
         </div>
-        <div class="featured-cont-details">
-            <h4 class="fnt fnt-extraBold fnt-large">${title}</h4>
-            <p class="fnt fnt-bold fnt-mid">${description}</p>
-            <h6 class="fnt fnt-bold fnt-small">${author}</h6>
-            <h6 class="fnt fnt-small">${description2}</h6>
+        
+        <div class="featured-cont">
+            <div class="featured-cont-details">
+                <h4 class="fnt fnt-extraBold fnt-large">${data['title']}</h4>
+                <p class="fnt fnt-bold fnt-mid">${data['description']}</p>
+                <h6 class="fnt fnt-bold fnt-small">By ${data['author']}</h6><br>
+                <h6 class="fnt fnt-small">Published on <bold>${data['date']}</bold>| ${data['subject']}</h6>
 
-            <ratings-content rating="${rating}" votes="${votes}"/>
-
-            <h3 class="fnt fnt-bold fnt-extraLarge">${price}</h3>
+                <h3 class="fnt fnt-bold fnt-extraLarge">LKR.${data['price']}</h3>
+            </div>
 
             <div class="featured-cont-actions">
-                <button class="btn btn-solid btn-large" id="addtocart">Add to cart</button>
+                <button class="addtocart btn btn-solid btn-large" id="${data['content_id']}"><a href="/cart">Add to </a></button>
                 <button class="btn btn-solid btn-large">Buy Now</button>
             </div>
 
         </div>
+
+        
     </div>
         `;
+
+        let addtocart = document.querySelectorAll(".addtocart");
+
+
+        for (let element of addtocart){
+            element.addEventListener('click',async (event)=>{
+
+                let content_id = event.target.id;
+
+
+                let requestBody= {
+                    "content_id": content_id
+                }
+                let url = "http://localhost:8090/api/users/addtocart/:" + getUserID();
+                let res = await fetch(url, {method : "POST",  body : JSON.stringify(requestBody)}).then((response)=>
+                    response.json()
+
+                );
+                // let location = window.location;
+                // window.history.pushState({}, "", location);
+                // urlLocation();
+            })
+        }
+
     }
 }
     

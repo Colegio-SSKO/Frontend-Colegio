@@ -41,6 +41,8 @@
     <script src="../components2/course_form1.js"></script>
     <script src="../components2/organization_profile_card.js"></script>
     <script src="../components2/teacher-card.js"></script>
+    <script src="../components2/contentList.js"></script>
+    <script src="../components2/teacherlist.js"></script>
 </div>
 
 <div id="viewsScript">

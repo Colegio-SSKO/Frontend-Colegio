@@ -10,26 +10,19 @@ document.addEventListener("click", (ev)=>{
 });
 
 
+
 const Routes = {
     404 : {
         isSingle : true,
-        template : "/SPAroutesTeacher/index_single.jsp",
-        path_left:"/SPAroutesTeacher/pagenotfound.html",
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/SPAroutes/pagenotfound.html",
         title: "404 | Page not found",
         data : "Page does not exists"
     },
 
-    "/SPAroutesOrganization/index.jsp" : {
-        isSingle : true,
-        template : "/SPAroutesTeacher/index_single.jsp",
-        path_left:"/views/Home_content.jsp",
-        title: "Home",
-        data : "This is the home page"
-    },
-
     "/" : {
         isSingle : true,
-        template : "/SPAroutesTeacher/index_single.jsp",
+        template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Home_content.jsp",
         title: "Home",
         data : "This is the home page"
@@ -38,47 +31,46 @@ const Routes = {
 
     "/about" : {
         isSingle : false,
-        template : "/SPAroutesTeacher/index_double.jsp",
-        path_left:"/SPAroutesTeacher/about.html",
+        template : "/SPAroutes/index_double.jsp",
+        path_left:"/SPAroutes/about.html",
         title: "about",
         data : "This is the about page"
     },
 
 
     "/viewCourses" : {
-        isSingle : true,
-        template : "/SPAroutesTeacher/index_single.jsp",
-        path_left:"/views/organization_courses.jsp",
-        path_right: "",
-        script: "../static/viewsJS/view_course_organization.js",
-        title: "All Courses",
-        data : "This is the organization_course page"
+        isSingle : false,
+        template : "/SPAroutes/index_double.jsp",
+        path_left:"/views/View_course2_left.jsp",
+        path_right: "/views/View_course2_right.jsp",
+        script: "../static/viewsJS/Student_view_courses_new.js",
+        title: "My Courses",
+        data : "This is the contact page"
     },
 
-    "/Org_teacher_courses" : {
-        isSingle : true,
-        template : "/SPAroutesTeacher/index_single.jsp",
-        path_left:"/views/Org_teacher_courses.jsp",
-        path_right: "",
-        script: "../static/viewsJS/view_course_organization.js",
-        title: "All Courses",
-        data : "This is the organization_course page"
+    "/create_course" : {
+        isSingle : false,
+        template : "/SPAroutes/index_double.jsp",
+        path_left:"/views/Create_course_left.jsp",
+        path_right: "/views/Create_course_right.jsp",
+        script: "../static/viewsJS/create_course.js",
+        title: "Create Course",
+        data : "This is the create course page"
     },
-
 
     "/question" : {
-        isSingle : true,
-        template : "/SPAroutesTeacher/index_single.jsp",
-        path_left:"/views/Organization_view.jsp",
-        path_right: "",
-        // script: "../static/viewsJS/question1.js",
-        title: "Organizations",
-        data : "This is the Organization page"
+        isSingle : false,
+        template : "/SPAroutes/index_double.jsp",
+        path_left:"/views/Question_student_1_left.jsp",
+        path_right: "/views/Question_student_1_right.jsp",
+        script: "../static/viewsJS/question1.js",
+        title: "Question",
+        data : "This is the Question page"
     },
 
     "/session_request" : {
         isSingle : false,
-        template : "/SPAroutesTeacher/index_double.jsp",
+        template : "/SPAroutes/index_double.jsp",
         path_left:"/views/Session_request_left.jsp",
         path_right: "/views/Session_request_right.jsp",
         title: "Session Request",
@@ -87,7 +79,7 @@ const Routes = {
 
     "/publish_question" : {
         isSingle : false,
-        template : "/SPAroutesTeacher/index_double.jsp",
+        template : "/SPAroutes/index_double.jsp",
         path_left:"/views/publish_question_left.jsp",
         path_right: "/views/publish_question_right.jsp",
         title: "Publish Question",
@@ -96,82 +88,134 @@ const Routes = {
 
     "/profile" : {
         isSingle : true,
-        template : "/SPAroutesTeacher/index_single.jsp",
-        path_left:"/views/Organization_profile.jsp",
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Teahcer_profile.jsp",
+        script: "../static/viewsJS/Student_profile_new.js",
         path_right: "",
-        // script: "../static/viewsJS/Profile_test.js",
-        title: "Profile",
+        title: "profile",
         data : "This is the profile page"
-    },
-
-    "/Organization_profile(stu)" : {
-        isSingle : true,
-        template : "/SPAroutesTeacher/index_single.jsp",
-        path_left:"/views/Organization_profile(stu).jsp",
-        path_right: "",
-        // script: "../static/viewsJS/Profile_test.js",
-        title: "Profile",
-        data : "This is the profile page"
-    },
-
-    "/invite_teacher" : {
-        isSingle : true,
-        template : "/SPAroutesTeacher/index_single.jsp",
-        path_left:"/views/InviteTeachers.jsp",
-        path_right: "",
-        // script: "../static/viewsJS/Profile_test.js",
-        title: "Invite Teacher",
-        data : "This is the Invite teacher page"
-    },
-
-    "/org_teacher" : {
-        isSingle : true,
-        template : "/SPAroutesTeacher/index_single.jsp",
-        path_left:"/views/Org_teacherlist_view.jsp",
-        path_right: "",
-        // script: "../static/viewsJS/Profile_test.js",
-        title: "All Teachers",
-        data : "This is the view all teachers page"
-    },
-
-    "/org_teacher(stu)" : {
-        isSingle : true,
-        template : "/SPAroutesTeacher/index_single.jsp",
-        path_left:"/views/Org_teacherlist_view(stu).jsp",
-        path_right: "",
-        // script: "../static/viewsJS/Profile_test.js",
-        title: "All Teachers",
-        data : "This is the view all teachers page"
     },
 
     "/quizzes" : {
         isSingle : false,
-        template : "/SPAroutesTeacher/index_double.jsp",
+        template : "/SPAroutes/index_double.jsp",
         path_left:"/views/Quiz_teacher_org1_left.jsp",
-        path_right: "/views/view_quiz_organization_right.jsp",
-        script: "../static/viewsJS/view_quizzes_organization.js",
+        path_right: "/views/Quiz_teacher_org1_right.jsp",
+        script: "../static/viewsJS/Student_view_quizzes1.js",
         title: "Quizzes",
         data : "This is the quiz page"
     },
 
+    "/create_quiz" : {
+        isSingle : false,
+        template : "/SPAroutes/index_double.jsp",
+        path_left:"/views/Create_quiz_left.jsp",
+        path_right: "/views/Create_quiz_right.jsp",
+        title: "Create quiz",
+        data : "This is the  create quiz page"
+    },
+
+    "/start_quiz" : {
+        isSingle : false,
+        template : "/SPAroutes/index_double.jsp",
+        path_left:"/views/Start_quiz_left.jsp",
+        path_right: "/views/Start_quiz_right.jsp",
+        title: "Start Quiz",
+        data : "This is the start quiz page"
+    },
 
     "/cart" : {
         isSingle : true,
-        template : "/SPAroutesTeacher/index_single.jsp",
+        template : "/SPAroutes/index_single.jsp",
         path_left:"/views/view_cart.jsp",
+        script: "../static/viewsJS/View_cart.js",
         path_right: "",
-        title: "Cart",
-        data : "This is the cart page"
+        title: "cart",
+        data : "This is cart page"
     },
 
     "/notification" : {
         isSingle : true,
-        template : "/SPAroutesTeacher/index_single.jsp",
+        template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Notification.jsp",
         path_right: "",
         title: "Notification",
         data : "This is the notification page"
-    }
+    },
+
+    "/edit_profile" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/",
+        script: "../static/viewsJS/edit_profile1.js",
+        path_right: "",
+        title: "Notification",
+        data : "This is the notification page"
+    },
+
+    "/edit_email" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/",
+        script: "../static/viewsJS/edit_email.js",
+        path_right: "",
+        title: "Notification",
+        data : "This is the notification page"
+    },
+
+    "/change_password" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/",
+        script: "../static/viewsJS/change_password.js",
+        path_right: "",
+        title: "Notification",
+        data : "This is the notification page"
+    },
+
+
+    "/organization" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Organization_view.jsp",
+        script: "../static/viewsJS/organization_view.js",
+        path_right: "",
+        title: "Organization",
+        data : "This is the notification page"
+    },
+
+    "/organization_Teachers" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Org_teacherlist_view(stu).jsp",
+        script: "../static/viewsJS/teacherlist_view.js",
+        path_right: "",
+        title: "Organization",
+        data : "This is the notification page"
+    },
+
+    "/Organization_profile(stu)" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Organization_profile(stu).jsp",
+        script: "../static/viewsJS/Organization_profile_new.js",
+        path_right: "",
+        title: "Organization",
+        data : "This is the notification page"
+    },
+
+    "/teacher_course" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Organization_profile(stu).jsp",
+        script: "../static/viewsJS/teacher_course_view.js",
+        path_right: "",
+        title: "Organization",
+        data : "This is the notification page"
+    },
+
+
+
 
 
 };
@@ -229,20 +273,19 @@ const urlLocation = async () =>{
 
     //rendering the appropriate content
     if (route.isSingle){
-        document.querySelector(".cont-body-content").innerHTML = html_cont_left;
+        renderSingle();
     }
     else{
-        //fetching the right hand side content as well
-        let html_cont_right = await fetch(route.path_right).then((response)=>
-            response.text()
-        );
 
         renderLeft();
-        // document.querySelector(".cont-body-right").innerHTML = html_cont_right;
+
+
+
 
     }
 
-   //changing the page name
+
+    //changing the page name
     document.querySelector(".pagename").innerText = route.title;
 
 };

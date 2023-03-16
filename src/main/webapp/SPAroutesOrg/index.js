@@ -90,7 +90,7 @@ const Routes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Teahcer_profile.jsp",
-        script: "../static/viewsJS/Student_profile_new.js",
+        script: "../static/viewsJS/Organization_profile(org)1.js",
         path_right: "",
         title: "profile",
         data : "This is the profile page"
@@ -139,6 +139,7 @@ const Routes = {
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Notification.jsp",
         path_right: "",
+        script: "../static/viewsJS/view_org_teacher_noti.js",
         title: "Notification",
         data : "This is the notification page"
     },
@@ -188,9 +189,9 @@ const Routes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Org_teacherlist_view(stu).jsp",
-        script: "../static/viewsJS/teacherlist_view.js",
+        script: "../static/viewsJS/teacherlist_view(org).js",
         path_right: "",
-        title: "Organization",
+        title: "Teachers",
         data : "This is the notification page"
     },
 
@@ -213,6 +214,16 @@ const Routes = {
         title: "Organization",
         data : "This is the notification page"
     },
+
+    "/invite_teachers" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Organization_profile(stu).jsp",
+        script: "../static/viewsJS/invite_teacher_view1.js",
+        path_right: "",
+        title: "Invite Teacher",
+        data : "This is the notification page"
+    }
 
 
 
