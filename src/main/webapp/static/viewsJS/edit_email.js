@@ -51,14 +51,22 @@ function renderSingle(){
                 popup.innerHTML = `
                      <img src="../static/img/components_images/sucsess.png" alt="">
                        <h2>${message}</h2>
+               <button class="btn" id="ok-btn">OK</button>
+                       
                 `;
             }
             else {
                 popup.innerHTML = `
                      <img src="../static/img/components_images/error.png" alt="">
                        <h2>${message}</h2>
+               <button class="btn" id="ok-btn">OK</button>
+                       
                 `;
             }
+            let ok_btn = document.getElementById("ok-btn");
+            ok_btn.addEventListener("click", ()=>{
+                document.querySelector(".popup-container").style.display = "none";
+            })
         })
 
 

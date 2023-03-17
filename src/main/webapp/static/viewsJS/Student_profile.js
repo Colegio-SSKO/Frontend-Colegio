@@ -62,12 +62,16 @@ function renderSingle(){
                 popup.innerHTML = `
                      <img src="../static/img/components_images/sucsess.png" alt="">
                        <h2>${message}</h2>
+                        <button btn btn-primary>OK</button>
+                       
                 `;
             }
             else {
                 popup.innerHTML = `
                      <img src="../static/img/components_images/error.png" alt="">
                        <h2>${message}</h2>
+                        <button btn btn-primary>OK</button>
+                       
                 `;
             }
             alert("888")

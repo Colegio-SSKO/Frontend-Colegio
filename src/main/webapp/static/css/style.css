@@ -1710,6 +1710,13 @@ a{
     height: 100px;
 }
 
+.popup-content button{
+    background: #46344e;
+    padding: 5px 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
 
 
 

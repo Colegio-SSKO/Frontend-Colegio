@@ -1,5 +1,5 @@
 
-
+alert("ghjhgj")
 async function fetchData(){
     // return "eeew";
 };
@@ -41,8 +41,9 @@ function renderSingle(){
                 method: "POST",
                 body: JSON.stringify(req)
             }).then((data) => {
-                data.json()
+                return data.json()
             });
+            alert(resp);
 
             let popup = document.querySelector(".popup-content");
             alert("helloo weeessa")
@@ -55,14 +56,24 @@ function renderSingle(){
                 popup.innerHTML = `
                      <img src="../static/img/components_images/sucsess.png" alt="">
                        <h2>${message}</h2>
+               <button class="btn" id="ok-btn">OK</button>
+                       
                 `;
             }
             else {
                 popup.innerHTML = `
                      <img src="../static/img/components_images/error.png" alt="">
                        <h2>${message}</h2>
+               <button class="btn" id="ok-btn">OK</button>
+                       
                 `;
+
             }
+            let ok_btn = document.getElementById("ok-btn");
+            alert(ok_btn);
+            ok_btn.addEventListener("click", ()=>{
+                document.querySelector(".popup-container").style.display = "none";
+            })
         })
     });
 }

@@ -1,4 +1,4 @@
-alert("Hello this ssss");
+alert("He");
 
 async function fetchData() {
     const req = {
@@ -24,12 +24,15 @@ function renderRight(data) {
 
     let html_right = "";
 
+    alert(data["status"])
     if (data["status"]== 1){
-        html_right += ` <open-question  img_src="${i["question_img"]}" qualifi="${data[""]}" title="${i["question_title"]}" author="${i["f_name"]+" "+ i["l_name"]}" description="${i["question_description"]}""></open-question>`;
+        alert("kabmmm")
+        html_right = ` <open-question img_src="${data["pro_pic"]}" qulifi="${data["qulification_level"]}" title="${data["question_title"]}"  author="${data["f_name"]+" "+ data["l_name"]}" description="${data["question_description"]}""></open-question>`;
 
     }
-    else if (data["status"]== 0) {
-        html_right += ` <question  img_src2="${i["question_img"]}" img_src="${i["question_img"]}" title="${i["question_title"]}" accept_person="${i["f_name"]+" "+ i["l_name"]}"  description="${i["question_description"]}""></question>`;
+    else {
+        alert("kavind")
+        html_right = ` <question img_src2="${data["question_img"]}" img_src="${data["pro_pic"]}" title="${data["question_title"]}" accept_person="${data["f_name"]+" "+ data["l_name"]}"  description="${data["question_description"]}""></question>`;
 
     }
     document.querySelector(".cont-body-right").innerHTML = html_right;
@@ -64,7 +67,6 @@ function renderLeft() {
                 html_left += ` <q-2 question_ID="${i["question_Id"]}" img_src="${i["question_img"]}" title="${i["question_title"]}" accept="${i["f_name"]+" "+ i["l_name"]}" description="${i["question_description"]}""></q-2>`;
             }
             else {
-                alert("kkkkkkkk")
                 html_left += ` <q-4 question_ID="${i["question_Id"]}" img_src="${i["question_img"]}" title="${i["question_title"]}" accept="${i["f_name"]+" "+ i["l_name"]}" description="${i["question_description"]}""></q-4>`;
             }
         }
