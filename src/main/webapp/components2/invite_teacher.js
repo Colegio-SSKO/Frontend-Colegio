@@ -20,7 +20,7 @@ class invite_teacher extends HTMLElement {
 
         searchButton.addEventListener('click', async (event) => {
             const teacherName = this.querySelector("#searchTeacher").value;
-            const url = "http://localhost:8090/api/users/search_teacher";
+            const url = "http://localhost:8090/api/organizations/search_teacher";
             const requestBody = {"teacher_name": teacherName};
             const response = await fetch(url, {method: "POST", body: JSON.stringify(requestBody)});
             const searchResults = await response.text();

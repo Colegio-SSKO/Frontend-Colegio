@@ -146,7 +146,37 @@ const Routes = {
         path_right: "",
         title: "Notification",
         data : "This is the notification page"
-    }
+    },
+
+    "/organization" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Organization_view.jsp",
+        script: "../static/viewsJS/organization_view(teacher).js",
+        path_right: "",
+        title: "Organization",
+        data : "This is the notification page"
+    },
+
+    "/organization_Teachers" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Org_teacherlist_view(stu).jsp",
+        script: "../static/viewsJS/teacherlist_view(org).js",
+        path_right: "",
+        title: "Teachers",
+        data : "This is the notification page"
+    },
+
+    "/Organization_profile(stu)" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Organization_profile(stu).jsp",
+        script: "../static/viewsJS/Organization_profile_new1.js",
+        path_right: "",
+        title: "Organization",
+        data : "This is the notification page"
+    },
 
 
 };

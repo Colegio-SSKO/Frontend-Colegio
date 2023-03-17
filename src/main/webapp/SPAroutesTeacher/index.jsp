@@ -40,6 +40,23 @@
     <script src="../components2/comment.js"></script>
     <script src="../components2/course_form1.js"></script>
     <script src="../components2/cart_item.js"></script>
+    <script src="../components2/organization_card.js"></script>
+    <script src="../components2/organization_list.js"></script>
+    <script src="../components2/contentList.js"></script>
+    <script src="../components2/organization_profile_card.js"></script>
+    <script src="../components2/teacher_list.js"></script>
+    <script src="../components2/teacher_card.js"></script>
+    <script src="../components2/teacherlist.js"></script>
+    <script src="../components2/cart_total_price.js"></script>
+    <script src="../components2/teacher_cardOrg.js"></script>
+    <script src="../components2/teacher_listOrg.js"></script>
+    <script src="../components2/invite_teacher.js"></script>
+    <script src="../components2/org_teacher_request.js"></script>
+    <script src="../components2/search_result.js"></script>
+    <script src="../components2/search_resultlist.js"></script>
+    <script src="../components2/organization_profile_card(stu).js"></script>
+    <script src="../components2/organization_card(teacher).js"></script>
+    <script src="../components2/organization_list(teacher).js"></script>
 </div>
 
 <div id="viewsScript">

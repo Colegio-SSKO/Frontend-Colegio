@@ -33,7 +33,7 @@ class search_result extends HTMLElement {
                 let requestBody= {
                     "teacher_id": teacher_id
                 }
-                let url = "http://localhost:8090/api/users/org_send_request/:" + getOrgID();
+                let url = "http://localhost:8090/api/organizations/org_send_request/:" + getOrgID();
                 let res = await fetch(url, {method : "POST",  body : JSON.stringify(requestBody)}).then((response)=>
                     response.json()
                 );
