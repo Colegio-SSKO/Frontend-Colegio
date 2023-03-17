@@ -40,7 +40,7 @@ class Featured_cont extends HTMLElement {
         for (let element of addtocart){
             element.addEventListener('click',async (event)=>{
 
-                let content_id = event.target.id;
+                let content_id = event.target.parentElement.id;
 
 
                 let requestBody= {
@@ -51,6 +51,15 @@ class Featured_cont extends HTMLElement {
                     response.json()
 
                 );
+
+                if(res.message==="You already added this content"){
+                    alert(res.message);
+                }
+
+                else{
+                    alert("added content successfully");
+                }
+
                 // let location = window.location;
                 // window.history.pushState({}, "", location);
                 // urlLocation();

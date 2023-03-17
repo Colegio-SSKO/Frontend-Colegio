@@ -1,4 +1,4 @@
-alert("organization_profile");
+alert("organization_profilenewww");
 
 async function fetchData(){
     const req = {
@@ -24,7 +24,7 @@ async function renderSingle() {
         alert(data);
         const res2 = await fetch("http://localhost:8090/api/users/ViewCont_list", { method: "GET" }).then((response) => response.text());
         const html_left = `
-                            <organizationprofile-card profile_img="${data.img_src}" name="${data.name}" address="${data.address}" tel_num="${data.tel_num}" organization_id="${data.organization_id}"></organizationprofile-card>`+ "Trending in Colegio"+ `<content-list dataString="${encodeURIComponent(res2)}"></content-list>`;
+                            <organizationprofile-cardstu profile_img="${data.img_src}" name="${data.name}" address="${data.address}" tel_num="${data.tel_num}" organization_id="${data.organization_id}"></organizationprofile-cardstu>`+ "Trending in Colegio"+ `<content-list dataString="${encodeURIComponent(res2)}"></content-list>`;
 
         document.querySelector(".cont-body-content").innerHTML = html_left;
 

@@ -49,7 +49,7 @@
     <script src="../components2/teacher_card.js"></script>
     <script src="../components2/teacherlist.js"></script>
     <script src="../components2/cart_total_price.js"></script>
-
+    <script src="../components2/organization_profile_card(stu).js"></script>
 
 
 
