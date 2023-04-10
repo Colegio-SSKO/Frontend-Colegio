@@ -55,6 +55,8 @@
     <script src="../components2/org_teacher_request.js"></script>
     <script src="../components2/search_result.js"></script>
     <script src="../components2/search_resultlist.js"></script>
+    <script src="../components2/organization_profile_card(stu).js"></script>
+    <script src="../components2/featured_cont.js"></script>
 
 
 

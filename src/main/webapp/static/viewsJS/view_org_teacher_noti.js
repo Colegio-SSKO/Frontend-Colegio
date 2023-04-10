@@ -46,11 +46,15 @@ function renderSingle(){
                     response.json()
 
                 );
+                alert("Teacher request accept successfully");
                 let location = window.location;
                 window.history.pushState({}, "", location);
                 urlLocation();
             })
         }
+
+
+
 
     });
 }
