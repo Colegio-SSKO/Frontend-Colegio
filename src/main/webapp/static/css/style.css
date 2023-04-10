@@ -69,15 +69,17 @@ body {
     height: 200px;
     background-color: white;
     display: flex;
+    flex-direction: row;
     padding: 20px;
     align-items: center;
     justify-content: flex-start;
-    position: relative;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     border-radius: 20px;
     margin: auto;
     margin-bottom: 2rem;
     margin-top: 2rem;
+    position: relative;
+
 }
 
 .profile-card-image {
@@ -95,6 +97,8 @@ body {
 
 .profile-card-details {
     position: relative;
+    display: flex;
+    flex-direction: column;
     margin-left: 20px;
 }
 
@@ -322,15 +326,15 @@ body {
 
 
 .featured-cont-wrap {
-    width: 700px;
-    height: 300px;
+    width: 780px;
+    height: 230px;
     cursor: pointer;
     display: flex;
     padding: 10px;
     justify-content: space-between;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
     border-radius: 20px;
-    margin-bottom: 40px;
+    margin: 40px;
     background: white;
 }
 
@@ -346,25 +350,34 @@ body {
     border-radius: 20px;
 }
 
+.featured-cont{
+    position: relative;
+    cursor: pointer;
+    display: table-column;
+    justify-content: space-between;
+    height: 220px;
+}
+
 .featured-cont-details {
+    position: relative;
     width: 450px;
     height: 100%;
-    padding: 5px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
-    position: relative;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     margin-left: 10px;
 }
 
 
-.featured-cont-actions {
-    margin-bottom: 10px;
-}
+/*.featured-cont-actions {*/
+/*    position: relative;*/
+/*    margin-bottom: 10px;*/
+/*}*/
 
 
 .featured-cont-actions button{
-    margin-right: 10px;
+    margin: 0 30px 20px 30px;
 }
 
 
@@ -420,9 +433,10 @@ body {
 
 
 .quiz-wrap {
-    width: 600px;
+    width: 550px;
     height: 380px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
+    background-color: white;
     padding: 16px;
     padding-top: 0px;
     cursor: pointer;
@@ -576,6 +590,8 @@ body {
     width: 100px;
 }
 
+
+
 .btn-large{
     width: 150px;
 }
@@ -619,12 +635,8 @@ body {
     width: 334px;
     height: 100%;
     margin-left: 16px;
-    font-family: 'Poppins', sans-serif;
 }
 
-.courseList-card .course-details p{
-    font-size: 10px;
-}
 
 
 
@@ -652,34 +664,39 @@ body {
 
 
 .cart-item{
-    width: 1330px;
-    height: 280px;
+    width: 800px;
+    height: 250px;
     border-radius: 32px;
-    background: #ffffff;
-    padding: 16px;
+    background: white;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 
-.tumbnail-img{
-    width: 380px;
-    height: 248px;
-    margin-top: 5px;
+.cart-tumbnail-img{
+    width: 250px;
+    height: 200px;
+    margin: 5px;
 }
 
-.tumbnail-img img{
+.cart-tumbnail-img img{
     width: 100%;
     height: 100%;
+    border-radius: 10px;
 
 }
 
 .cart-item-content{
-    margin-top: 5px;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin: 5px;
+    width:430px;
+    height: 200px;
+    flex-direction: column;
+    padding: 0;
 }
 
 .cart-item-content h2{
@@ -692,7 +709,10 @@ body {
 }
 
 .cart-item-price{
+    position: relative;
+    text-align: right;
     margin-top: 10px;
+    margin-right: 5px;
 }
 
 .cart-item-price button{
@@ -703,10 +723,20 @@ body {
 
 
 
+
+
+
+
+
+.comment-cmnt-1{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
+}
+
 .comment-main {
     padding: 16px;
-    width: 880px;
+    width: 520px;
     background: #ffffff;
+    border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
 }
 
@@ -715,7 +745,6 @@ body {
 }
 
 .comment-about h2 {
-    font-weight: bold;
     margin-bottom: 5px;
 }
 
@@ -820,39 +849,75 @@ body {
 }
 
 .noti-notification{
-    width: 806px;
-    height: 80px;
-    background: #ffffff;
+    width: 800px;
+    height: 100px;
+    background: white;
     border-radius: 16px;
     padding: 16px;
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .noti-prof-img img{
-    width: 48px;
-    height: 48px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
     margin-right: 25px;
 }
 
+/*.result-container{*/
+/*    position: relative;*/
+/*    margine-left:500px;*/
+/*    margin-top: 10px;*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    background-color: yellow;*/
 
+/*}*/
 
-.q-1-content p{
-    font-weight: bold;
+.result-notification{
+    position: relative;
+    margin-left: 150px;
+    width: 350px;
+    height: 60px;
+    background: white;
+    border-radius: 16px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
+.result-prof-img img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 25px;
+}
+ .result-notification button{
+     position: relative;
+     text-align: right;
+     margin-right: 5px;
+ }
+
+
 .q-1-cart-item{
-    width: 1330px;
-    height: 280px;
+    /*position: absolute;*/
+    width: 560px;
+    height: 230px;
     border-radius: 32px;
     background: #ffffff;
-    padding: 16px;
+    padding: 5px;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    width: 90%;
+    /*width: 90%;*/
     margin: auto;
     margin-top: 20px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
@@ -860,10 +925,11 @@ body {
 }
 
 
-
 .q-1-tumbnail-img{
-    width: 580px;
+    position: relative;
+    width: 250px;
     height: auto;
+    margin-left:5px;
     margin-top: 5px;
 }
 
@@ -873,22 +939,136 @@ body {
 }
 
 .q-1-content{
+    position: relative;
     margin-top: 5px;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 0px;
+    width: 310px;
+    height: 250px ;
+    padding: 2px;
+    /*margin-right: 15px;*/
+}
+
+.q-1-content h2{
+    position: relative;
+    margin: 0;
 }
 
 .q-1-content h3{
-    font-weight: bold;
-    margin-bottom: 16px;
+    position: relative;
+    margin-top: 5px;
 }
 
 
 .q-1-content p{
-    font-weight: bold;
-    margin-bottom: 16px;
+    position: relative;
+    margin-top: 2px;
 }
 
+.q-1-content button{
+    position: relative;
+    margin-bottom: 0px;
+}
+
+
+.question_large{
+    width: 560px;
+    height: 550px;
+    border-radius: 32px;
+    background: #ffffff;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /*width: 90%;*/
+    margin: auto;
+    margin-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
+}
+
+.Q_title{
+    position: relative;
+    margin-top: 2px;
+}
+
+.Q_description{
+    position: relative;
+    margin-top: 2px;
+}
+
+.upload_image{
+    position: relative;
+    width: 550px;
+    height: 320px;
+}
+
+.upload_image img{
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+.accept_main{
+    position: relative;
+    width: 550px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+}
+
+
+.accept_img img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.accept_person-details{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.accept_person{
+    position: relative;
+    margin-left: 3px;
+    margin-top: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.accept-comment-box{
+    position: relative;
+    margin-left: 8px;
+}
+.accept-comment-box form{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.accept-comment-box form input {
+    height: 48px;
+    width: 100%;
+    border-radius: 16px;
+    font-size: large;
+    border: none;
+    padding-left: 20px;
+}
+
+.accept img{
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+}
+
+.accept-comment-box input:focus {
+    outline: none;
+}
 
 
 
@@ -930,11 +1110,6 @@ body {
     margin-bottom: 16px;
 }
 
-
-
-.q-3-main p{
-    font-weight: bold;
-}
 
 
 .q-3-main {
@@ -1038,7 +1213,7 @@ body {
     padding: 10px;
     border-radius: 20px;
     background: white;
-    margin-bottom: 1rem;
+    margin:40px;
 }
 
 .small-listed-cont-details{
@@ -1068,6 +1243,22 @@ body {
 }
 
 
+.cart-price-wrap {
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 250px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
+    padding: 10px;
+    border-radius: 20px;
+    background: white;
+    margin-left:850px;
+}
+
+
+
 
 .content-list-wrap {
     cursor: pointer;
@@ -1080,6 +1271,16 @@ body {
     justify-content: space-around;
 }
 
+.result-list-wrap {
+    cursor: pointer;
+    width: 100%;
+    height: 280px;
+    display: flex;
+    cursor: pointer;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+}
 
 /*navbar*/
 
@@ -1232,3 +1433,343 @@ nav .main-profile h5 a{
 h3{
     font-family: 'Poppins', sans-serif;
 }
+
+
+.question_form {
+    width: 1400px;
+    border-radius: 32px;
+    background: #ffffff;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    margin-top: 0px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
+}
+
+.question_form input[type=text]{
+    width: 80%;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+.session_request_form{
+    width: 1400px;
+    border-radius: 32px;
+    background: #ffffff;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    margin-top: 0px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
+}
+
+.session_request_form input[type=text]{
+    width: 80%;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+.quiz_form{
+    width: 1400px;
+    border-radius: 32px;
+    background: #ffffff;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    margin-top: 0px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
+}
+.quiz_form input[type=text]{
+    width: 80%;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+.course_form{
+    width: 1400px;
+    border-radius: 32px;
+    background: #ffffff;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    margin-top: 0px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
+}
+.course_form input[type=text]{
+    width: 80%;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+
+
+/*kavinda new components*/
+
+
+
+.pro-pic-edit{
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.pro-pic-edit img{
+    width: 217px;
+    height: 217px;
+}
+a{
+    text-decoration: none;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    transition: 0.4s;
+}
+
+.pro-pic-edit:hover .text {
+    visibility: visible;
+}
+
+
+.pro-pic-edit img:hover{
+    opacity: 50%;
+}
+
+.edit-profile input{
+    border: 0;
+    border-bottom: 2px solid black;
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+    outline: none;
+    background: transparent;
+}
+
+
+.edit-profile{
+    display: flex;
+    width: 880px;
+    height: 648px;
+    border-radius: 32px;
+    background-color: azure;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.edit-profile select{
+    /* padding: 5px 10px; */
+    /* margin: 5px 10px; */
+    margin-top: 0.5rem;
+    border: 0;
+    border-bottom: 2px solid black;
+    background: transparent;
+    margin-bottom: 1rem;
+    outline: none;
+}
+
+
+
+.edit-profile button{
+    margin-bottom: 1rem;
+}
+
+/*======================*/
+
+
+
+.pro-pic-edit{
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.pro-pic-edit img{
+    width: 217px;
+    height: 217px;
+}
+a{
+    text-decoration: none;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    transition: 0.4s;
+}
+
+.pro-pic-edit:hover .text {
+    visibility: visible;
+}
+
+
+.pro-pic-edit img:hover{
+    opacity: 50%;
+}
+
+.edit-profile input{
+    border: 0;
+    border-bottom: 2px solid black;
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+    outline: none;
+    background: transparent;
+}
+
+
+.edit-profile{
+    display: flex;
+    width: 880px;
+    height: 648px;
+    border-radius: 32px;
+    background-color: azure;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.edit-profile select{
+    /* padding: 5px 10px; */
+    /* margin: 5px 10px; */
+    margin-top: 0.5rem;
+    border: 0;
+    border-bottom: 2px solid black;
+    background: transparent;
+    margin-bottom: 1rem;
+    outline: none;
+}
+
+
+
+.edit-profile button{
+    margin-bottom: 1rem;
+}
+
+/*=====================*/
+
+
+
+.pro-pic-edit{
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.pro-pic-edit img{
+    width: 217px;
+    height: 217px;
+}
+
+.text a{
+    text-decoration: none;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    transition: 0.4s;
+}
+
+.pro-pic-edit:hover .text {
+    visibility: visible;
+}
+
+
+.pro-pic-edit img:hover{
+    opacity: 50%;
+}
+
+.edit-profile input{
+    border: 0;
+    border-bottom: 2px solid black;
+    margin-bottom: 1rem;
+    outline: none;
+    background: transparent;
+}
+
+
+.edit-profile{
+    display: flex;
+    width: 880px;
+    height: 352px;
+    border-radius: 32px;
+    background-color: azure;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.edit-profile select{
+    /* padding: 5px 10px; */
+    /* margin: 5px 10px; */
+    margin-top: 10px;
+    border: 0;
+    border-bottom: 2px solid black;
+    background: transparent;
+    margin-bottom: 1rem;
+    outline: none;
+    text-align:0 ;
+}
+
+
+
+.edit-profile button{
+    margin-bottom: 1rem;
+}
+
+
+.upload_pic{
+    width: 330px;
+    height: 250px;
+    background-image: url("../img/components_images/quiz_pic.jpg");
+    background-position: center;
+    background-size: cover;
+    border: 1px solid black;
+}
+
+
+.add{
+    width:330px;
+    text-align: center;
+}
+
+.option_box button{
+    width: 50px;
+    background-size: cover;
+}
+
+.question_form{
+    width: 500px;
+    margin: 0;
+
+}
+
+
+
+
+

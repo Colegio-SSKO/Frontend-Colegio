@@ -1,1 +1,1 @@
-<jsp:include page="../../componenets/course_form.jsp"/>
+<jsp:include page="../components/course_form.jsp"/>

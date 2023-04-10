@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 1vh;
+    display: grid;
+    grid-template-columns: 8fr 5fr;
+    grid-template-rows: 95vh 5vh;
+    grid-template-areas: 
+        "form vec"
+        "footer footer"    
+    ;
+    overflow-x: hidden;
+}
+
+.form-container{
+    grid-area: form;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+#signinA {
+    position: absolute;
+    top: 40px;
+    left: 700px;
+    
+
+}
+
+#signinA .simpleBtnWht:hover{
+    color: #FE793D;
+    transform:scale(1.05)
+}
+
+
+/* reuse */
+.simpleBtnWht {
+    font-family: 'Poppins', sans-serif;
+    width: 150px;
+    height: 38px;
+    color: #FFAE89;
+    border-radius: 32px;
+    border-style: none;
+    font-weight: 700;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.simpleBtnOrng {
+    font-family: 'Poppins', sans-serif;
+    width: 150px;
+    height: 38px;
+    color: white;
+    background-color: #FE793D;
+    border-radius: 32px;
+    border-style: none;
+    font-weight: 700;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.form-area {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-area h1 {
+    margin-bottom: 20px;
+    color: #767676;
+    
+}
+
+/* reuse */
+.simpleForm {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    color: #767676;
+    align-items: center;
+    
+}
+.simpleForm input {
+    border-style: none;
+    border-bottom-style:solid;
+    border-width: 1px;
+    border-color: #767676;
+    margin-top: 5px;
+    padding: 5px;
+    width: 90%;
+    transition: all 0.3s ease-in-out;
+}
+
+.simpleForm input:hover {
+    width: 100%;
+}
+
+.simpleForm input:focus {
+    outline: none;
+}
+
+.simpleForm label {
+    margin-top: 15px;
+    width: 90%;
+}
+
+.simpleForm button {
+    margin-top: 20px;
+    align-self: center;
+}
+
+.simpleForm button:hover{
+    transform:scale(1.05)
+}
+
+
+/* reuse form ends */
+
+
+.vectors{
+    background-color: #FFAE89;
+    grid-area: vec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.vectors img {
+    width:  300px;
+    height: 340px;
+}
+
+.intro {
+    font-family: 'Poppins', sans-serif;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    top: 50px;
+}
+
+.introList {
+    display: flex;
+}
+
+.introcont {
+    width: 200px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -40px;
+    transition:all 2s ease-in-out;
+}
+
+#middle {
+    position: absolute;
+    transform: translate(100%);
+    z-index: 100;
+    
+}
+
+#right {
+    position: absolute;
+    transform: translate(200%);
+    z-index: 100;
+    
+}
+
+.introHide {
+    position: absolute;
+
+    background-color: black;
+}
+
+
+
+
+.intro p {
+    color: white;
+    text-align: center;
+}
+.intro h4 {
+    color: #767676;
+}
+
+.div-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    
+}
+
+.simpleDots {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 2px;
+}
+
+.simpleDots-act{
+    width: 9px;
+    height: 9px;
+    background-color: #FE793D;
+}
+
+/* nav bar */
+
+.bottom-nav {
+    font-family: 'Poppins', sans-serif;
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+}
+.nav-cont {
+    width: 60%;
+    height: 100%;
+}
+
+.bottom-nav .nav-cont ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+.bottom-nav .nav-cont ul a {
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.bottom-nav .nav-cont ul a:hover{
+    color: #FE793D;
+}
+

@@ -22,7 +22,7 @@ class Q_3 extends HTMLElement {
             </div>
 
             <With-title img_src="${img_src}" name="${name}" qulifi="${qulifi}"/>
-
+            
         </div>
 
     </div>

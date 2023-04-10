@@ -17,7 +17,7 @@
             <h2 class="fnt fnt-bold fnt-large">Electronic Gates for GCE ALs Sinhala Medium</h2>
             <p class="fnt fnt-small">pending</p>
             <h3 class="fnt fnt-light fnt-mid">amet consectetur adipisicing elit. Dolorum pariatur at natus id earum incidunt ipsam quis, recusandae tenetur quibusdam.</h3>
-            <button class="btn btn-solid btn-small"><a class="fnt fnt-bold fnt-mid" href="">Session</a></button>
+            <button class="btn btn-solid btn-small"><a class="fnt fnt-bold fnt-mid" href="/session">Session</a></button>
         </div>
 
         <div class="q-2-price">

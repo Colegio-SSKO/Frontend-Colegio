@@ -10,6 +10,7 @@ document.addEventListener("click", (ev)=>{
 });
 
 
+
 const Routes = {
     404 : {
         isSingle : true,
@@ -40,10 +41,21 @@ const Routes = {
     "/viewCourses" : {
         isSingle : false,
         template : "/SPAroutes/index_double.jsp",
-        path_left:"/views/view_course_left.jsp",
-        path_right: "/views/view_course_right.jsp",
+        path_left:"/views/View_course2_left.jsp",
+        path_right: "/views/View_course2_right.jsp",
+        script: "../static/viewsJS/Student_view_courses_new.js",
         title: "My Courses",
         data : "This is the contact page"
+    },
+
+    "/create_course" : {
+        isSingle : false,
+        template : "/SPAroutes/index_double.jsp",
+        path_left:"/views/Create_course_left.jsp",
+        path_right: "/views/Create_course_right.jsp",
+        script: "../static/viewsJS/create_course.js",
+        title: "Create Course",
+        data : "This is the create course page"
     },
 
     "/question" : {
@@ -51,14 +63,34 @@ const Routes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/Question_student_1_left.jsp",
         path_right: "/views/Question_student_1_right.jsp",
+        script: "../static/viewsJS/question1.js",
         title: "Question",
         data : "This is the Question page"
+    },
+
+    "/session_request" : {
+        isSingle : false,
+        template : "/SPAroutes/index_double.jsp",
+        path_left:"/views/Session_request_left.jsp",
+        path_right: "/views/Session_request_right.jsp",
+        title: "Session Request",
+        data : "This is the Session request page"
+    },
+
+    "/publish_question" : {
+        isSingle : false,
+        template : "/SPAroutes/index_double.jsp",
+        path_left:"/views/publish_question_left.jsp",
+        path_right: "/views/publish_question_right.jsp",
+        title: "Publish Question",
+        data : "This is the Publish question page"
     },
 
     "/profile" : {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
-        path_left:"/views/Profile.jsp",
+        path_left:"/views/Teahcer_profile.jsp",
+        script: "../static/viewsJS/Student_profile_new.js",
         path_right: "",
         title: "profile",
         data : "This is the profile page"
@@ -67,10 +99,20 @@ const Routes = {
     "/quizzes" : {
         isSingle : false,
         template : "/SPAroutes/index_double.jsp",
-        path_left:"/views/Student_quiz_left.jsp",
-        path_right: "/views/Student_quiz_right.jsp",
+        path_left:"/views/Quiz_teacher_org1_left.jsp",
+        path_right: "/views/Quiz_teacher_org1_right.jsp",
+        script: "../static/viewsJS/Student_view_quizzes1.js",
         title: "Quizzes",
         data : "This is the quiz page"
+    },
+
+    "/create_quiz" : {
+        isSingle : false,
+        template : "/SPAroutes/index_double.jsp",
+        path_left:"/views/Create_quiz_left.jsp",
+        path_right: "/views/Create_quiz_right.jsp",
+        title: "Create quiz",
+        data : "This is the  create quiz page"
     },
 
     "/start_quiz" : {
@@ -85,10 +127,11 @@ const Routes = {
     "/cart" : {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
-        path_left:"/views/1_item_in_cart.jsp",
+        path_left:"/views/view_cart.jsp",
+        script: "../static/viewsJS/View_cart.js",
         path_right: "",
-        title: "Cart",
-        data : "This is the cart page"
+        title: "cart",
+        data : "This is cart page"
     },
 
     "/notification" : {
@@ -98,7 +141,81 @@ const Routes = {
         path_right: "",
         title: "Notification",
         data : "This is the notification page"
-    }
+    },
+
+    "/edit_profile" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/",
+        script: "../static/viewsJS/edit_profile1.js",
+        path_right: "",
+        title: "Notification",
+        data : "This is the notification page"
+    },
+
+    "/edit_email" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/",
+        script: "../static/viewsJS/edit_email.js",
+        path_right: "",
+        title: "Notification",
+        data : "This is the notification page"
+    },
+
+    "/change_password" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/",
+        script: "../static/viewsJS/change_password.js",
+        path_right: "",
+        title: "Notification",
+        data : "This is the notification page"
+    },
+
+
+    "/organization" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Organization_view.jsp",
+        script: "../static/viewsJS/organization_view.js",
+        path_right: "",
+        title: "Organization",
+        data : "This is the notification page"
+    },
+
+    "/organization_Teachers" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Org_teacherlist_view(stu).jsp",
+        script: "../static/viewsJS/teacherlist_view.js",
+        path_right: "",
+        title: "Organization",
+        data : "This is the notification page"
+    },
+
+    "/Organization_profile(stu)" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Organization_profile(stu).jsp",
+        script: "../static/viewsJS/Organization_profile_new1.js",
+        path_right: "",
+        title: "Organization",
+        data : "This is the notification page"
+    },
+
+    "/teacher_course" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Organization_profile(stu).jsp",
+        script: "../static/viewsJS/teacher_course_view.js",
+        path_right: "",
+        title: "Organization",
+        data : "This is the notification page"
+    },
+
+
+
 
 
 };
@@ -115,10 +232,18 @@ const router = (ev) =>{
 const urlLocation = async () =>{
     let location = window.location.pathname;
 
-    //setting the location to "/" if no path is empty
+    //setting the location to "/" if path is empty
     if (location.length==0){
         location = "/";
     }
+
+    //if the path is /SPAroutesTeacher/index_single.jsp change it to "/"
+    // uncomment this after adding the signup and login
+    // if(location == "/SPAroutesTeacher/index.jsp"){
+    //     alert("www")
+    //     window.history.pushState({}, "", "/");
+    // }
+
 
     const route = Routes[location] || Routes[404];
 
@@ -132,6 +257,13 @@ const urlLocation = async () =>{
     document.querySelector(".cont-body").innerHTML = html_template;
 
 
+    //re-executing js
+    let target = document.getElementById("viewsScript");
+    target.innerHTML = "";
+    let script= document.createElement('script');
+    script.src=route.script;
+    target.appendChild(script);
+
 
 
     //rendering the main content(left content)
@@ -141,21 +273,19 @@ const urlLocation = async () =>{
 
     //rendering the appropriate content
     if (route.isSingle){
-        document.querySelector(".cont-body-content").innerHTML = html_cont_left;
+        renderSingle();
     }
     else{
-        //fetching the right hand side content as well
-        let html_cont_right = await fetch(route.path_right).then((response)=>
-            response.text()
-        );
-        document.querySelector(".cont-body-left").innerHTML = html_cont_left;
-        document.querySelector(".cont-body-right").innerHTML = html_cont_right;
+
+        renderLeft();
+
 
 
 
     }
 
-   //changing the page name
+
+    //changing the page name
     document.querySelector(".pagename").innerText = route.title;
 
 };

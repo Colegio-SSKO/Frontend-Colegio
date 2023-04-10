@@ -12,13 +12,13 @@ class Profile_card extends HTMLElement {
             <img src="${profile_img}" alt="profile picture" srcset="">
         </div>
         <div class="profile-card-details">
-            <h4 class="fnt fnt-bold fnt-small">${name} <span class="material-icons-outlined"> ${gender}</span></h4>
-            <p class="fnt fnt-small">${date}</p>
-            <p class="fnt fnt-small">${education_level}</p>
+            <h4 class="fnt fnt-bold fnt-mid">${name} <span class="material-icons-outlined"> ${gender}</span></h4>
+            <p class="fnt fnt-mid">${date}</p>
+            <p class="fnt fnt-mid">${education_level}</p>
 
         </div>
 
-        <span class="profile-card-details-edit material-icons-outlined">edit</span>
+        <span class="profile-card-details-edit material-icons-outlined"><a href="/edit_profile">edit</a></span>
     </div>
         `;
     }
