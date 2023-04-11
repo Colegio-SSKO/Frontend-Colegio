@@ -50,7 +50,11 @@
     <script src="../components2/teacherlist.js"></script>
     <script src="../components2/cart_total_price.js"></script>
     <script src="../components2/organization_profile_card(stu).js"></script>
-
+    <script src="../components2/edit_profile.js"></script>
+    <script src="../components2/edit_email.js"></script>
+    <script src="../components2/change_password.js"></script>
+    <script src="../components2/Q-4.js"></script>
+    <script src="../components2/popup.js"></script>
 
 
 </div>

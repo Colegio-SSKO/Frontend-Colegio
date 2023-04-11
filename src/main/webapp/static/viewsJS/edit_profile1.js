@@ -1,6 +1,4 @@
-alert("hello edit");
-alert("rra");
-
+alert("00ssssss")
 async function fetchData(){
 
 
@@ -22,7 +20,7 @@ function renderSingle(){
 
         let html_left = "";
 
-        html_left += ` <edit-profile></edit-profile>`;
+        html_left += `  <pop-up></pop-up>  <edit-profile></edit-profile>`;
 
 
         document.querySelector(".cont-body-content").innerHTML = html_left;
@@ -39,20 +37,48 @@ function renderSingle(){
         let saveBtn = document.querySelector("#save-btn");
 
         saveBtn.addEventListener('click', async ()=>{
+
             let req = {
                 "fName" : fName.value,
                 "lName" : lName.value,
                 "edu" : edu.value,
                 "gender" : gender.value
             }
-
-            let resp = await fetch("http://localhost:8090/api/users/editProfile", {method : "POST",  body : JSON.stringify(req)}).then((data)=>{
-                data.text()
+            let resp = await fetch("http://localhost:8080/api/users/editProfile/:1", {method : "POST",  body : JSON.stringify(req)}).then((data)=>{
+                return data.json()
             });
+            let popup = document.querySelector(".popup-content");
+            alert("helloo weeessa")
+            document.querySelector(".popup-container").style.display = "flex";
 
+            alert(resp);
+            let isError = resp["isError"];
+            let message = resp["message"];
+            if (isError==0){
+                popup.innerHTML = `
+                     <img src="../static/img/components_images/sucsess.png" alt="">
+                       <h2>${message}</h2>
+               <button class="btn" id="ok-btn">OK</button>
+                       
+                `;
+            }
+            else {
+                popup.innerHTML = `
+                     <img src="../static/img/components_images/error.png" alt="">
+                       <h2>${message}</h2>
+               <button class="btn" id="ok-btn">OK</button>
+                       
+                `;
+            }
 
-
+            let ok_btn = document.getElementById("ok-btn");
+            ok_btn.addEventListener("click", ()=>{
+                alert("ok eka wada");
+                document.querySelector(".popup-container").style.display = "none";
+            })
         })
+
+
 
 
     });

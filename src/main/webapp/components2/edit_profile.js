@@ -18,10 +18,10 @@ class Edit_profile extends HTMLElement {
 
                 <label for="edu">Education Level</label><br>
                 <select name="edu" id="edu" >
-                    <option value="">Undergraduate</option>
-                    <option value="">Postgraduate</option>
-                    <option value="">A-Level</option>
-                    <option value="">O-level</option>
+                    <option >Undergraduate</option>
+                    <option >Postgraduate</option>
+                    <option >A-Level</option>
+                    <option >O-level</option>
                 </select><br>
 
                 <button id="save-btn" class="btn btn-solid" >Save</button><br>
@@ -32,9 +32,9 @@ class Edit_profile extends HTMLElement {
         <div class="gender">
             <label for="edu">Gender</label><br>
             <select name="gender" id="gender" >
-                <option value="">Male</option>
-                <option value="">Female</option>
-                <option value="">Other</option>
+                <option >Male</option>
+                <option >Female</option>
+                <option >Other</option>
             </select><br>
         </div>
         <div class="back-btn">

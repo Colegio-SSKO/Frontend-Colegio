@@ -9,43 +9,13 @@ class Edit_email extends HTMLElement {
             <div class="text"><a href="">Edit</a></div>
         </div>
         <div class="main-details">
-            <form action="submit">
-                <label for="Fname">Fname</label><br>
-                <input type="text" name="Fname" id=""><br>
-
-                <label for="Lname">Lname</label><br>
-                <input type="text" name="Lname" id=""><br>
-
-                <label for="edu">Education Level</label><br>
-                <select name="edu" id="edu" >
-                    <option value="">Undergraduate</option>
-                    <option value="">Postgraduate</option>
-                    <option value="">A-Level</option>
-                    <option value="">O-level</option>
-                </select><br>
-                
                 <label for="email">Email</label><br>
-                <input type="email" name="" id="" placeholder="Enter Current Email"><br>
-                <input type="email" name="" id="" placeholder="Enter New Email"><br>
-
-
-                <label for="email">Password</label><br>
-                <input type="email" name="" id="" placeholder="Enter Current Password"><br>
-                <input type="email" name="" id="" placeholder="Enter New Password"><br>
-                <input type="email" name="" id="" placeholder="Enter Old Password"><br>
-
-                <button class="btn btn-solid" type="submit">Save</button><br>
-
-            </form>
+                <input type="Password" name="" id="currPassword1" placeholder="Enter Current Password"><br>
+                <input type="email" name="" id="currEmail1" placeholder="Enter Current Email"><br>
+                <input type="email" name="" id="newEmail1" placeholder="Enter New Email"><br>
+                <button class="btn btn-solid" id="email-save-btn" type="submit">Save</button><br>
         </div>
-        <div class="gender">
-            <label for="edu">Gender</label><br>
-            <select name="edu" id="edu" >
-                <option value="">Male</option>
-                <option value="">Female</option>
-                <option value="">Other</option>
-            </select><br>
-        </div>
+
         <div class="back-btn">
             <a href=""><img src="./images/arrow_back.png" alt=""></a>
         </div>
