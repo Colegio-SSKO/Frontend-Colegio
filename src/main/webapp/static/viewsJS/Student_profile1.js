@@ -1,4 +1,4 @@
-alert("999999999")
+alert("11111")
 async function fetchData(){
     return "eeew";
 };
@@ -14,7 +14,7 @@ async function fetchData() {
 
 
 //uncomment this when connecting the database
-    let res = await fetch("http://localhost:8080/api/users/myQuestions/:1", {method : "GET"}).then((response)=>
+    let res = await fetch("http://localhost:8090/api/users/myQuestions/:1", {method : "GET"}).then((response)=>
         response.json()
 
     );

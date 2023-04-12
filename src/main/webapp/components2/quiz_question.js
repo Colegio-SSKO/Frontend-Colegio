@@ -1,9 +1,8 @@
 class QuizQuestion extends HTMLElement {
     connectedCallback() {
 
-        let img_src = this.attributes.img_src.value;
         let title = this.attributes.title.value;
-        let question = this.attributes.question.value;
+        let Question = this.attributes.Question.value;
         let answer1 = this.attributes.answer1.value;
         let answer2 = this.attributes.answer2.value;
         let answer3 = this.attributes.answer3.value;
@@ -11,7 +10,7 @@ class QuizQuestion extends HTMLElement {
         this.innerHTML = `
         <div class="quiz-wrap">
         <h3>${title}</h3>
-        <p>${question}</p>
+        <p>${Question}</p>
         <div class="quiz-q">
             <div class="q-number">A</div>
             <div class="question">${answer1}</div>
@@ -43,5 +42,5 @@ class QuizQuestion extends HTMLElement {
         `;
     }
 }
-    
+
 customElements.define('quiz-question', QuizQuestion);

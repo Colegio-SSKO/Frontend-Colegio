@@ -934,8 +934,9 @@ body {
 }
 
 .q-1-tumbnail-img img{
-    width: 100%;
-    height: 100%;
+    width: 248px;
+    height: 168px;
+
 }
 
 .q-1-content{
@@ -2822,7 +2823,10 @@ body {
     font-weight: bold;
     margin-bottom: 16px;
 }
-
+.q-2-price img{
+    width: 268px;
+    height: 168px;
+}
 
 
 .q-3-main {

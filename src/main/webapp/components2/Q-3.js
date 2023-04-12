@@ -29,5 +29,5 @@ class Q_3 extends HTMLElement {
         `;
     }
 }
-    
+
 customElements.define('q-3', Q_3);

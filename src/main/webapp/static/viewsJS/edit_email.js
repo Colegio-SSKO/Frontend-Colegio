@@ -1,5 +1,4 @@
 
-alert("ghjhgj")
 async function fetchData(){
     // return "eeew";
 };
@@ -11,52 +10,44 @@ function renderSingle(){
 
     fetchData().then((data)=>{
 
-
         let html_left = "";
-
-        html_left += `<pop-up></pop-up> <change-password></change-password>`;
-
-
+        html_left += `<pop-up></pop-up> <edit-email></edit-email>`;
         document.querySelector(".cont-body-content").innerHTML = html_left;
-
         let selected = document.querySelectorAll(".courseList-card");
 
-
-        let currPassword = document.querySelector("#currPassword");
-        let newPassword = document.querySelector("#newPassword");
-        let againPassword = document.querySelector("#againPassword");
-
-
-        let pass_save_btn = document.querySelector("#Pass-save-btn") ;
+        let currPassword = document.querySelector("#currPassword1");
+        let currEmail = document.querySelector("#currEmail1");
+        let newEmail = document.querySelector("#newEmail1");
+        let email_save_btn = document.querySelector("#email-save-btn");
 
 
-        pass_save_btn.addEventListener('click', async  (event)=> {
+        email_save_btn.addEventListener('click', async  (event)=> {
             event.preventDefault();
             let req = {
-                "currPassword": currPassword.value,
-                "newPassword": newPassword.value,
-                "againPassword": againPassword.value
+                "currPassword1": currPassword1.value,
+                "currEmail1": currEmail1.value,
+                "newEmail1": newEmail1.value
             }
-            let resp = await fetch("http://localhost:8080/api/users/changePassword/:1", {
+            let resp = await fetch("http://localhost:8090/api/users/editEmail/:1", {
                 method: "POST",
                 body: JSON.stringify(req)
             }).then((data) => {
-                return data.json()
+                return  data.json();
             });
-            alert(resp);
 
             let popup = document.querySelector(".popup-content");
             alert("helloo wekkkksa")
             document.querySelector(".popup-container").style.display = "flex";
-
+            alert("kkkkksss");
             alert(resp);
             let isError = resp["isError"];
             let message = resp["message"];
+            alert(message);
             if (isError==0){
                 popup.innerHTML = `
                      <img src="../static/img/components_images/sucsess.png" alt="">
                        <h2>${message}</h2>
-               <button class="btn" id="ok-btn">OK</button>
+               <button class="btn" id="ok-btn" >OK</button>
                        
                 `;
             }
@@ -67,13 +58,13 @@ function renderSingle(){
                <button class="btn" id="ok-btn">OK</button>
                        
                 `;
-
             }
             let ok_btn = document.getElementById("ok-btn");
-            alert(ok_btn);
             ok_btn.addEventListener("click", ()=>{
                 document.querySelector(".popup-container").style.display = "none";
             })
         })
+
+
     });
 }
