@@ -101,7 +101,7 @@ const Routes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/Quiz_teacher_org1_left.jsp",
         path_right: "/views/Quiz_teacher_org1_right.jsp",
-        script: "../static/viewsJS/Student_view_quizzes1.js",
+        script: "../static/viewsJS/Student_view_quizzes.js",
         title: "Quizzes",
         data : "This is the quiz page"
     },

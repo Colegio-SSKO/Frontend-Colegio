@@ -32,11 +32,13 @@ class QuizQuestion extends HTMLElement {
         </div>
 
         <ul>
+            <li><a href="#"><span class="material-symbols-outlined">keyboard_double_arrow_left</span></a></li>
             <li><a href="#">1</a></li>
             <li><a href="#">2</a></li>
             <li><a href="#">3</a></li>
             <li><a href="#">4</a></li>
             <li><a href="#">5</a></li>
+            <li><a href="#"><span class="material-symbols-outlined">keyboard_double_arrow_right</span></a></li>
         </ul>
     </div>
         `;

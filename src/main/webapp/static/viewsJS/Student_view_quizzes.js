@@ -54,10 +54,7 @@ function renderLeft() {
 
         for (let element of selected){
             element.addEventListener('click', (ev)=>{
-                alert("clicknam una")
-                alert(element.getAttribute("id"))
                 for (let el of data){
-                    alert("kiii")
                     if (el["content_id"] == element.getAttribute("id")){
                         // renderRight(el);
                         quizcard(el);

@@ -2380,7 +2380,7 @@ body {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
     border-radius: 20px;
     background: white;
-
+    margin-bottom: 20px;
 }
 
 .courseList-card .course-image {
