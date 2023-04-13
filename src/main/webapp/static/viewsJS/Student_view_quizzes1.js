@@ -59,7 +59,8 @@ function renderLeft() {
                 for (let el of data){
                     alert("kiii")
                     if (el["content_id"] == element.getAttribute("id")){
-                        renderRight(el);
+                        // renderRight(el);
+                        quizcard(el);
                     }
                 }
             })
@@ -73,4 +74,21 @@ function renderLeft() {
 
 
 
+}
+
+
+
+//display the main quiz card
+
+function quizcard(element){
+
+    alert("runn")
+    let html_right = "";
+
+    html_right = `<start-quiz quiz_id="${element["content_id"]}" img_src="/new" title="${element["quiz_title"]}" description=${element["description"]} author=${element["f_name"] + " " + element["l_name"]} author_title=${element["qulification_level"]}></start-quiz>`;
+    document.querySelector(".cont-body-right").innerHTML = html_right;
+
+    document.querySelector(".js-startquiz-start-btn").addEventListener('click', ()=>{
+        renderRight(element);
+    })
 }
