@@ -36,13 +36,9 @@ function renderSingle(){
             });
 
             let popup = document.querySelector(".popup-content");
-            alert("helloo wekkkksa")
             document.querySelector(".popup-container").style.display = "flex";
-            alert("kkkkksss");
-            alert(resp);
             let isError = resp["isError"];
             let message = resp["message"];
-            alert(message);
             if (isError==0){
                 popup.innerHTML = `
                      <img src="../static/img/components_images/sucsess.png" alt="">

@@ -1,4 +1,3 @@
-alert("eiii")
 async function fetchData(){
 
 
@@ -48,10 +47,8 @@ function renderSingle(){
                 return data.json()
             });
             let popup = document.querySelector(".popup-content");
-            alert("helloo weeessa")
             document.querySelector(".popup-container").style.display = "flex";
 
-            alert(resp);
             let isError = resp["isError"];
             let message = resp["message"];
             if (isError==0){
@@ -73,7 +70,6 @@ function renderSingle(){
 
             let ok_btn = document.getElementById("ok-btn");
             ok_btn.addEventListener("click", ()=>{
-                alert("ok eka wada");
                 document.querySelector(".popup-container").style.display = "none";
             })
         })

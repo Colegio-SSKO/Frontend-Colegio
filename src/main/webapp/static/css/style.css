@@ -3335,10 +3335,12 @@ a{
 .edit-profile{
     display: flex;
     width: 880px;
-    height: 648px;
+    height: 500px;
     border-radius: 32px;
-    background-color: azure;
+    background-color: #ffffff;
+    margin: auto;
     align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     justify-content: space-around;
 }
 

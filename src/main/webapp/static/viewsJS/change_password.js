@@ -1,5 +1,4 @@
 
-alert("ei333")
 async function fetchData(){
     // return "eeew";
 };
@@ -43,13 +42,10 @@ function renderSingle(){
             }).then((data) => {
                 return data.json()
             });
-            alert(resp);
 
             let popup = document.querySelector(".popup-content");
-            alert("helloo wekkkksa")
             document.querySelector(".popup-container").style.display = "flex";
 
-            alert(resp);
             let isError = resp["isError"];
             let message = resp["message"];
             if (isError==0){
@@ -70,7 +66,6 @@ function renderSingle(){
 
             }
             let ok_btn = document.getElementById("ok-btn");
-            alert(ok_btn);
             ok_btn.addEventListener("click", ()=>{
                 document.querySelector(".popup-container").style.display = "none";
             })
