@@ -12,13 +12,108 @@ async function fetchData() {
 
 //function to render right content
 
-function renderRight(data) {
-    alert("runn")
+async function renderRight(data) {
+
+    let questions = await fetch("http://localhost:8090/api/users/getQuestions/:" + data["quiz_id"], {method : "GET"}).then((response)=>{
+        return response.json();
+    })
+    console.log(questions);
+
     let html_right = "";
 
     html_right += `
-<quiz-question title="${data["quiz_title"]}" Question="${data["question"]}" answer1="${data["op1"]}" answer2="${data["op2"]}" answer3="${data["op3"]}" answer4="${data["op4"]}" ></quiz-question>`;
+<quiz-question q_number="${"1/"+ questions.length.toString()}" title="${data["quiz_title"]}" Question="${questions[0]["question"]}" answer1="${questions[0]["op1"]}" answer2="${questions[0]["op2"]}" answer3="${questions[0]["op3"]}" answer4="${questions[0]["op4"]}" ></quiz-question>`;
     document.querySelector(".cont-body-right").innerHTML = html_right;
+
+    let previous = document.querySelector(".js-quiz-previous");
+    let next = document.querySelector(".js-quiz-next");
+    let theQuestion = document.querySelector("#js-quiz-q-question");
+    let choice1 = document.querySelector("#js-quiz-q-answer-1");
+    let choice2 = document.querySelector("#js-quiz-q-answer-2");
+    let choice3 = document.querySelector("#js-quiz-q-answer-3");
+    let choice4 = document.querySelector("#js-quiz-q-answer-4");
+    let qNumber = document.querySelector("#js-quiz-q-number");
+    let containerCollection = document.querySelectorAll(".quiz-q");// answer containers
+
+
+    //controlling next and previous buttons
+    let questionTracker = 1;
+
+
+    previous.addEventListener('click', ()=>{
+
+
+
+        if (questionTracker != 1){
+            questionTracker--;
+            theQuestion.innerHTML = questions[questionTracker-1]["question"];
+            choice1.innerHTML = questions[questionTracker-1]["op1"];
+            choice2.innerHTML = questions[questionTracker-1]["op2"];
+            choice3.innerHTML = questions[questionTracker-1]["op3"];
+            choice4.innerHTML = questions[questionTracker-1]["op4"];
+            qNumber.innerHTML = questionTracker.toString() + "/" + questions.length.toString();
+        }
+
+        alert("previouss")
+
+    })
+
+    next.addEventListener('click', ()=>{
+        if (questionTracker != questions.length){
+            questionTracker++;
+            theQuestion.innerHTML = questions[questionTracker-1]["question"];
+            choice1.innerHTML = questions[questionTracker-1]["op1"];
+            choice2.innerHTML = questions[questionTracker-1]["op2"];
+            choice3.innerHTML = questions[questionTracker-1]["op3"];
+            choice4.innerHTML = questions[questionTracker-1]["op4"];
+            qNumber.innerHTML = questionTracker.toString() + "/" + questions.length.toString();
+        }
+        alert("nextt")
+    })
+
+
+    //answer containers
+    let containers = {
+        "js-quiz-q-answer-1-backg": "op1",
+        "js-quiz-q-answer-2-backg": "op2",
+        "js-quiz-q-answer-3-backg": "op3",
+        "js-quiz-q-answer-4-backg": "op4"
+
+    }
+
+    //adding event listners to containers
+    for (let container of containerCollection){
+        container.addEventListener('click', (event)=>{
+            alert("container clicked")
+            alert(event.target.id);
+            for(let selectedContainer of containerCollection){
+                let children = selectedContainer.querySelectorAll("*");
+                children[0].style.backgroundColor = "#46344e";
+                children[1].style.backgroundColor = "transparent";
+            }
+
+            if(event.target.classList.contains("q-number")){
+                alert("wed");
+                event.target.style.backgroundColor = "#6D6D6D";
+            }
+            else {
+                event.target.previousElementSibling.style.backgroundColor = "#6D6D6D";
+            }
+
+
+            //saving answer
+            let reqBody = {
+                "quiz_qid" : questions[questionTracker-1]["quiz_qid"],
+                "user_id" : getUserID(),
+                "answer" : containers[event.target.parentNode.id]
+            }
+            fetch("http://localhost:8090/api/users/saveAnswer", {method : "POST", body :JSON.stringify(reqBody)}).then((response)=>{
+                response.json();
+            })
+        })
+    }
+
+
 
 
 
