@@ -19,8 +19,8 @@
         </div>
 
         <div class="main-profile router">
-            <i class="material-icons cart-icon"><a href="/cart">shopping_cart</a></i>
-            <i class="material-icons notif"><a href="/notification">notifications</a></i>
+            <i><a href="/cart"><span class="material-symbols-outlined">shopping_cart</span></a></i>
+            <i><a href="/notification"><span class="material-symbols-outlined">notifications</span></a></i>
             <div class="profile-pic">
                 <img src="../static/img/components_images/pro.png" alt="" srcset="">
             </div>

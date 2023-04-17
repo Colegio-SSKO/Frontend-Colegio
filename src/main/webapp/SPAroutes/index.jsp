@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="../static/css/views_styles.css">
     <link rel="stylesheet" href="../static/css/style.css">
     <link rel="stylesheet" href="../static/css/html_template.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,7 +51,11 @@
     <script src="../components2/teacherlist.js"></script>
     <script src="../components2/cart_total_price.js"></script>
     <script src="../components2/organization_profile_card(stu).js"></script>
-
+    <script src="../components2/edit_profile.js"></script>
+    <script src="../components2/edit_email.js"></script>
+    <script src="../components2/change_password.js"></script>
+    <script src="../components2/Q-4.js"></script>
+    <script src="../components2/popup.js"></script>
 
 
 </div>

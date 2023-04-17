@@ -1,8 +1,14 @@
-
 async function fetchData(){
-    // return "eeew";
+
+
+
+    return "eeew";
 };
 
+
+async function sendData(jsonRequest){
+    await fetch("")
+}
 
 
 function renderSingle(){
@@ -13,7 +19,7 @@ function renderSingle(){
 
         let html_left = "";
 
-        html_left += `<pop-up></pop-up> <change-password></change-password>`;
+        html_left += `  <pop-up></pop-up>  <edit-profile></edit-profile>`;
 
 
         document.querySelector(".cont-body-content").innerHTML = html_left;
@@ -21,28 +27,25 @@ function renderSingle(){
         let selected = document.querySelectorAll(".courseList-card");
 
 
-        let currPassword = document.querySelector("#currPassword");
-        let newPassword = document.querySelector("#newPassword");
-        let againPassword = document.querySelector("#againPassword");
+        //sending data
+        let fName = document.querySelector(".fname");
+        let lName = document.querySelector(".lname");
+        let edu = document.querySelector("#edu");
+        let gender = document.querySelector("#gender");
 
+        let saveBtn = document.querySelector("#save-btn");
 
-        let pass_save_btn = document.querySelector("#Pass-save-btn") ;
+        saveBtn.addEventListener('click', async ()=>{
 
-
-        pass_save_btn.addEventListener('click', async  (event)=> {
-            event.preventDefault();
             let req = {
-                "currPassword": currPassword.value,
-                "newPassword": newPassword.value,
-                "againPassword": againPassword.value
+                "fName" : fName.value,
+                "lName" : lName.value,
+                "edu" : edu.value,
+                "gender" : gender.value
             }
-            let resp = await fetch("http://localhost:8090/api/users/changePassword/:1", {
-                method: "POST",
-                body: JSON.stringify(req)
-            }).then((data) => {
+            let resp = await fetch("http://localhost:8090/api/users/editProfile/:1", {method : "POST",  body : JSON.stringify(req)}).then((data)=>{
                 return data.json()
             });
-
             let popup = document.querySelector(".popup-content");
             document.querySelector(".popup-container").style.display = "flex";
 
@@ -63,12 +66,19 @@ function renderSingle(){
                <button class="btn" id="ok-btn">OK</button>
                        
                 `;
-
             }
+
             let ok_btn = document.getElementById("ok-btn");
             ok_btn.addEventListener("click", ()=>{
                 document.querySelector(".popup-container").style.display = "none";
             })
         })
+
+
+
+
     });
 }
+
+
+
