@@ -128,7 +128,7 @@ const Routes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/view_cart.jsp",
-        script: "../static/viewsJS/View_cart.js",
+        script: "../static/viewsJS/View_cart2.js",
         path_right: "",
         title: "cart",
         data : "This is cart page"
@@ -214,10 +214,46 @@ const Routes = {
         data : "This is the notification page"
     },
 
+    "/generate_report" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/report_content.jsp",
+        script: "../static/viewsJS/genarate_report(course)1.js",
+        path_right: "",
+        title: "report",
+        data : "This is the report page"
+    },
+
+    "/report_course" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/report_content.jsp",
+        script: "../static/viewsJS/view_reported_courses.js",
+        path_right: "",
+        title: "report",
+        data : "This is the report page"
+    },
 
 
+    "/report_person" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/report_content.jsp",
+        script: "../static/viewsJS/view_reported_person1.js",
+        path_right: "",
+        title: "report",
+        data : "This is the report page"
+    },
 
-
+    "/generate_report_person" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/report_content.jsp",
+        script: "../static/viewsJS/genarate_report(user).js",
+        path_right: "",
+        title: "report",
+        data : "This is the report page"
+    },
 };
 
 
@@ -276,12 +312,7 @@ const urlLocation = async () =>{
         renderSingle();
     }
     else{
-
         renderLeft();
-
-
-
-
     }
 
 

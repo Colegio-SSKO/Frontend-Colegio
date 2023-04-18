@@ -1,8 +1,8 @@
-alert("invite_teacher111222");
+alert("invite_teacher");
 
 async function renderSingle() {
     try {
-        const html_left = `<invite-teacher></invite-teacher>`;
+        const html_left = `<pop-up></pop-up> <invite-teacher></invite-teacher>`;
         document.querySelector(".cont-body-content").innerHTML = html_left;
 
         // let search = document.querySelectorAll(".search");

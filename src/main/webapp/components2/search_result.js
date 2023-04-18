@@ -15,38 +15,59 @@ class search_result extends HTMLElement {
                     <h3 class="fnt fnt-bold fnt-small">${quli}</h3>
                 </div>
 
-                <div style="text-align: right" class="send_request" id="${teacher_id}">
-                    <button class="request-button">send</button>
+                <div style="text-align: right" class="send_request">
+                    <button class="request-button" id="${teacher_id}">send</button>
                 </div>
-
             </div>
         `;
 
-        let send_request = document.querySelectorAll(".send_request");
+
+
+
+        let send_request = document.querySelectorAll(".request-button");
+
 
         for (let element of send_request){
-            let button = element.querySelector('.request-button');
+            element.addEventListener('click',async (event)=>{
 
-            button.addEventListener('click',async (event)=>{
-                let teacher_id = event.target.parentElement.id;
+                let teacher_id = event.target.id;
+
 
                 let requestBody= {
                     "teacher_id": teacher_id
                 }
+                alert(teacher_id);
                 let url = "http://localhost:8090/api/organizations/org_send_request/:" + getOrgID();
                 let res = await fetch(url, {method : "POST",  body : JSON.stringify(requestBody)}).then((response)=>
                     response.json()
+
                 );
 
-                // Add the "disabled" attribute to the button after fetch call
-                event.target.disabled = true;
+                alert(res.message);
+                let popup = document.querySelector(".popup-content");
+                document.querySelector(".popup-container").style.display = "flex";
+                alert(res.message);
 
-                // Remove the event listener from the button
-                button.removeEventListener('click', onClick);
-            });
+                if(res.message==="Send request successfully"){
+                    popup.innerHTML = `
+                      <img src="../static/img/components_images/success.jpg" alt="">
+                      <h2>${res.message}</h2>
+                      <button class="btn" id="ok-btn">OK</button>       
+                `;
+                }
+                else{
+                     popup.innerHTML = `
+                       <img src="../static/img/components_images/error.jpg" alt="">
+                       <h2>${res.message}</h2>
+                       <button class="btn" id="ok-btn">OK</button>       
+                    `;
+                }
 
-            // Check if the button has the "disabled" attribute when loading the search results
-
+                let ok_btn = document.getElementById("ok-btn");
+                ok_btn.addEventListener("click", ()=>{
+                    document.querySelector(".popup-container").style.display = "none";
+                })
+            })
         }
     }
 }

@@ -1,58 +1,49 @@
-alert("Notification");
+class org_requestteacher extends HTMLElement {
+    connectedCallback() {
 
-async function fetchData(){
-    const req = {
-        "user_ID" : "23"
-    }
-
-//uncomment this when connecting the database
-
-    let url = "http://localhost:8090/api/organizations/org_view_teacher_req/:" + getOrgID();
-    let res3 = await fetch(url, {method: "GET"}).then((response) =>
-        response.text()
-    );
-    let data2 = JSON.parse(res3);
-    return data2;
-};
-
-
-function renderSingle(){
-
-
-    fetchData().then((data)=>{
-
-        let html_left = ""
-
-        for (let i of data){
-            html_left += ` <pop-up></pop-up> <org-teacherrequest img_src="${i["img_src"]}" quli="${i["quli"]}"  name="${i["name"]}" teacher_id="${i["teacher_id"]}" ></org-teacherrequest>`;
-        }
-
-        document.querySelector(".cont-body-content").innerHTML = html_left;
+        let img_src = this.attributes.img_src.value;
+        let name = this.attributes.name.value;
+        let organization_id = this.attributes.organization_id.value;
+        let address= this.attributes.address.value;
+        this.innerHTML = `
+        <div class="noti-notification">
+            <div class="noti-prof-img">
+                <img src="${img_src}" alt="">
+            </div>
+            <div class="noti-msg">
+                <h3 class="fnt fnt-bold fnt-mid">${name} send request to join your organization</h3>
+                <h3 class="fnt fnt-bold fnt-mid">Address: ${address}</h3>
+                <button class="accept fnt fnt-bold fnt-small btn btn-solid btn-small" id="${organization_id}">Accept</button>
+                <button class="remove fnt fnt-bold fnt-small btn btn-solid btn-small" id="${organization_id}">Delete</button>
+            </div>
+        </div>
+        `;
 
 
-        //accept teacher
-        let accept = document.querySelectorAll(".accept");
+        //remove request
+        let remove = document.querySelectorAll(".remove");
 
 
-        for (let element of accept){
+        for (let element of remove){
             element.addEventListener('click',async (event)=>{
 
-                let teacher_id = event.target.id;
+                let organization_id = event.target.id;
 
 
                 let requestBody= {
-                    "teacher_id": teacher_id
+                    "organization_id": organization_id
                 }
-                let url = "http://localhost:8090/api/organizations/org_accept_teacher/:" + getOrgID();
+                let url = "http://localhost:8090/api/teachers/teacher_remove_org_req/:" + getTeacherID();
                 let res = await fetch(url, {method : "POST",  body : JSON.stringify(requestBody)}).then((response)=>
                     response.json()
 
                 );
 
+
                 let popup = document.querySelector(".popup-content");
                 document.querySelector(".popup-container").style.display = "flex";
 
-                if(res.message==="Accept teacher successfully"){
+                if(res.message==="Remove organization request successfully"){
                     popup.innerHTML = `
                       <img src="../static/img/components_images/success.jpg" alt="">
                       <h2>${res.message}</h2>
@@ -73,14 +64,13 @@ function renderSingle(){
                     document.querySelector(".popup-container").style.display = "none";
                 })
                 alert(res.message);
+                // alert("Teacher request removed");
                 // let location = window.location;
                 // window.history.pushState({}, "", location);
                 // urlLocation();
             })
         }
-
-
-
-
-    });
+    }
 }
+
+customElements.define('org-requestteacher', org_requestteacher);

@@ -1,11 +1,7 @@
-alert("new_organization10");
+alert("new_organization10x");
 
 async function fetchData(){
-    const req = {
-        "user_ID" : "23"
-    }
 
-//uncomment this when connecting the database
     let res = await fetch("http://localhost:8090/api/users/vieworganization", {method : "GET"}).then((response)=>
         response.text()
 
@@ -17,7 +13,7 @@ function renderSingle(){
     fetchData().then((data)=>{
 
 
-        let html = `
+        let html = `<pop-up></pop-up>
         
         <organization-listteacher dataString="${encodeURIComponent(data)}"></organization-listteacher>`;
 
@@ -38,15 +34,6 @@ function renderSingle(){
                     "organization_id": organization_id
                 }
 
-                alert(organization_id);
-                // let url = "http://localhost:8090/api/users/Vieworg_teacher";
-                // let res3 = await fetch(url, {method: "POST", body: JSON.stringify(requestBody)}).then((response) =>
-                //     response.json()
-                // );
-
-                // let location = window.location;
-                // window.history.pushState({}, "", location);
-                // urlLocation();
             })
 
         }
@@ -70,27 +57,39 @@ function renderSingle(){
 
                 );
 
-                if(res.message==="You already send request"){
-                    alert(res.message);
-                }
 
+                let popup = document.querySelector(".popup-content");
+                document.querySelector(".popup-container").style.display = "flex";
+
+                if(res.message==="You already send request"){
+                    popup.innerHTML = `
+                      <img src="../static/img/components_images/error.jpg" alt="">
+                      <h2>${res.message}</h2>
+                      <button class="btn" id="ok-btn">OK</button>       
+                `;
+                }
                 else{
                     if(res.message==="You already a teacher of this organization"){
-                        alert(res.message);
+                        popup.innerHTML = `
+                          <img src="../static/img/components_images/error.jpg" alt="">
+                          <h2>${res.message}</h2>
+                          <button class="btn" id="ok-btn">OK</button>       
+                    `;
                     }
                     else {
-                        alert("send request successfully");
-                        element.disabled= true;
+                        popup.innerHTML = `
+                            <img src="../static/img/components_images/success.jpg" alt="">
+                            <h2>${res.message}</h2>
+                            <button class="btn" id="ok-btn">OK</button>
+                        `;
                     }
                 }
+
+                let ok_btn = document.getElementById("ok-btn");
+                ok_btn.addEventListener("click", ()=>{
+                    document.querySelector(".popup-container").style.display = "none";
+                })
             })
         }
-
     });
 }
-
-
-
-
-
-

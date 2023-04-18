@@ -1,4 +1,4 @@
-alert("Notification");
+alert("Notification1234");
 
 async function fetchData(){
     const req = {
@@ -7,12 +7,13 @@ async function fetchData(){
 
 //uncomment this when connecting the database
 
-    let url = "http://localhost:8090/api/organizations/org_view_teacher_req/:" + getOrgID();
+    let url = "http://localhost:8090/api/teachers/teacher_view_org_req/:" + getTeacherID();
     let res3 = await fetch(url, {method: "GET"}).then((response) =>
         response.text()
     );
     let data2 = JSON.parse(res3);
     return data2;
+
 };
 
 
@@ -24,7 +25,7 @@ function renderSingle(){
         let html_left = ""
 
         for (let i of data){
-            html_left += ` <pop-up></pop-up> <org-teacherrequest img_src="${i["img_src"]}" quli="${i["quli"]}"  name="${i["name"]}" teacher_id="${i["teacher_id"]}" ></org-teacherrequest>`;
+            html_left += ` <pop-up></pop-up> <org-requestteacher img_src="${i["img_src"]}" address="${i["address"]}"  name="${i["name"]}" organization_id="${i["organization_id"]}" ></org-requestteacher>`;
         }
 
         document.querySelector(".cont-body-content").innerHTML = html_left;
@@ -37,13 +38,13 @@ function renderSingle(){
         for (let element of accept){
             element.addEventListener('click',async (event)=>{
 
-                let teacher_id = event.target.id;
+                let organization_id = event.target.id;
 
 
                 let requestBody= {
-                    "teacher_id": teacher_id
+                    "organization_id": organization_id
                 }
-                let url = "http://localhost:8090/api/organizations/org_accept_teacher/:" + getOrgID();
+                let url = "http://localhost:8090/api/teachers/teacher_accept_org/:" + getTeacherID();
                 let res = await fetch(url, {method : "POST",  body : JSON.stringify(requestBody)}).then((response)=>
                     response.json()
 
@@ -52,7 +53,7 @@ function renderSingle(){
                 let popup = document.querySelector(".popup-content");
                 document.querySelector(".popup-container").style.display = "flex";
 
-                if(res.message==="Accept teacher successfully"){
+                if(res.message==="Join organization successfully"){
                     popup.innerHTML = `
                       <img src="../static/img/components_images/success.jpg" alt="">
                       <h2>${res.message}</h2>

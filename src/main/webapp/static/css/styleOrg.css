@@ -1493,3 +1493,177 @@ h3{
     border: none;
     cursor: pointer;
 }
+
+
+
+
+/* new style start from this*/
+.report-cont-wrap {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
+    padding: 10px;
+    border-radius: 20px;
+    background: #d9d7de;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.report-cont-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+
+}
+
+.report_button {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+.report_person {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+
+.report_person td, .report_person th {
+    border: 1px solid #a8a2a2;
+    padding: 8px;
+}
+
+.report_person tr {
+    background-color: #f2f2f2;
+}
+
+.report_person tr:hover  {
+    background-color: #ddd;
+}
+
+.report_person th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #46344e;
+    color: white;
+}
+
+
+
+.report-course{
+    width: 920px;
+    height: 150px;
+    border-radius: 32px;
+    background: white;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+
+.report-course-tumbnail-img{
+    width: 120px;
+    height: 120px;
+    margin: 5px;
+}
+
+.report-course-tumbnail-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+
+}
+
+.report-course-item-content{
+    margin-left: 10px ;
+    width:550px;
+    height: 200px;
+    flex-direction: column;
+    padding: 0;
+}
+
+.report-course-item-content h2{
+    margin-bottom: 10px;
+}
+
+.report-course-item-content h3{
+    margin-bottom: 10px;
+}
+
+.report-course-item-btn{
+    position: relative;
+    text-align: right;
+    margin-left: 15px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+
+.report-person{
+    width: 850px;
+    height: 130px;
+    border-radius: 32px;
+    background: white;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+
+.report-person-tumbnail-img{
+    width: 100px;
+    height: 100px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.report-person-tumbnail-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+}
+
+.report-person-item-content{
+    margin-left: 30px ;
+    margin-top: 20px;
+    width:550px;
+    height: 200px;
+    flex-direction: column;
+    padding: 0;
+}
+
+.report-person-item-btn{
+    position: relative;
+    text-align: right;
+    margin-left: 15px;
+    margin-top: auto;
+    margin-bottom: auto;
+}

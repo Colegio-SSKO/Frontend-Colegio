@@ -3,7 +3,7 @@ class OrganizationListteacher extends HTMLElement {
 
 
         let dataString = decodeURIComponent(this.getAttribute('dataString'));
-        alert(dataString);
+
         let data = JSON.parse(dataString);
 
 

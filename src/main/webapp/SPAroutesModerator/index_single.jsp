@@ -16,8 +16,6 @@
 <script src="../components2/with_titles.js"></script>
 <script src="../components2/without_title.js"></script>
 <script src="../components2/help.js"></script>
-<script src="../components2/organization_profile_card.js"></script>
-<script src="../components2/teacher-cardde.js"></script>
 
 <link rel="stylesheet" href="../static/css/index_single_style.css">
 <div class="cont-body-content">
