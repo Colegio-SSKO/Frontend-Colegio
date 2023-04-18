@@ -234,6 +234,26 @@ const Routes = {
         data : "This is the report page"
     },
 
+    "/generate_report_quiz" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/report_content.jsp",
+        script: "../static/viewsJS/genarate_report(quiz).js",
+        path_right: "",
+        title: "report",
+        data : "This is the report page"
+    },
+
+    "/report_quiz" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/report_content.jsp",
+        script: "../static/viewsJS/view_reported_quizzes.js",
+        path_right: "",
+        title: "report",
+        data : "This is the report page"
+    },
+
 
     "/report_person" : {
         isSingle : true,
