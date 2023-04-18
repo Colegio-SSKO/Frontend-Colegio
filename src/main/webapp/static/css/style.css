@@ -123,7 +123,7 @@ body {
 .cont-ratings span{
     margin-left: 2px;
     font-size: small;
-    color: #FE793D;
+    color: #46344e;
 }
 
 .cont-ratings span:last-child{
@@ -717,7 +717,7 @@ body {
 
 .cart-item-price button{
     background: transparent;
-    color: orange;
+    color: #46344e;
     border: none;
 }
 
@@ -819,7 +819,7 @@ body {
     position: absolute;
     left: 850px;
     border: none;
-    background-color: orange;
+    background-color: #46344e;
     font-size: large;
     font-weight: bold;
     border-radius: 50%;
@@ -1899,7 +1899,7 @@ body {
 .cont-ratings span{
     margin-left: 2px;
     font-size: small;
-    color: #FE793D;
+    color: #46344e;
 }
 
 .cont-ratings span:last-child{
@@ -2474,7 +2474,7 @@ body {
 
 .cart-item-price button{
     background: transparent;
-    color: orange;
+    color: #46344e;
     border: none;
 }
 
@@ -2570,7 +2570,7 @@ body {
     position: absolute;
     left: 850px;
     border: none;
-    background-color: orange;
+    background-color: #46344e;
     font-size: large;
     font-weight: bold;
     border-radius: 50%;
