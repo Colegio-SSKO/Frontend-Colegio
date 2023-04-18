@@ -7,10 +7,13 @@ class StartQuiz extends HTMLElement {
         let description = this.attributes.description.value;
         let author = this.attributes.author.value;
         let author_title = this.attributes.author_title.value;
+        let rating = this.attributes.rating.value;
+        let votes = this.attributes.votes.value;
+
 
         this.innerHTML = `
             <div class="starQuiz">
-                <quiz-comment img_src="${img_src}" title="${title}" description="${description}" author="${author}" author_title="${author_title}"></quiz-comment>
+                <quiz-comment rating="${rating}" votes="${votes}" img_src="${img_src}" title="${title}" description="${description}" author="${author}" author_title="${author_title}"></quiz-comment>
                 <button class="js-startquiz-start-btn btn btn-large btn-solid" id="${quiz_id}">Start Quiz</button>
             </div>
             
