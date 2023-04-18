@@ -18,6 +18,10 @@
     </div>
 
     <div class="side_icons">
+        <label><a class="fnt fnt-bold fnt-mid" href="/report_quiz">Reported quizzes</a></label>
+    </div>
+
+    <div class="side_icons">
         <label><a class="fnt fnt-bold fnt-mid" href="/report_person">Handle Users</a></label>
     </div>
 

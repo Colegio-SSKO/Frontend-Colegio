@@ -57,6 +57,8 @@
     <script src="../components2/report_details(course).js"></script>
     <script src="../components2/reported_course_card.js"></script>
     <script src="../components2/reported_person_card.js"></script>
+    <script src="../components2/reported_quiz_card.js"></script>
+    <script src="../components2/report_details(quiz).js"></script>
     <script src="../components2/report_details(user).js"></script>
     <script src="../components2/popup.js"></script>
 
