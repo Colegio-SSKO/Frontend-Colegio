@@ -177,7 +177,7 @@ function quizcard(element){
     alert("runn")
     let html_right = "";
 
-    html_right = `<start-quiz quiz_id="${element["content_id"]}" img_src="/new" title="${element["quiz_title"]}" description=${element["description"]} author=${element["f_name"] + " " + element["l_name"]} author_title=${element["qulification_level"]}></start-quiz>`;
+    html_right = `<start-quiz rating="4" votes="110" quiz_id="${element["content_id"]}" img_src="/new" title="${element["quiz_title"]}" description=${element["description"]} author=${element["f_name"] + " " + element["l_name"]} author_title=${element["qulification_level"]}></start-quiz>`;
     document.querySelector(".cont-body-right").innerHTML = html_right;
 
     document.querySelector(".js-startquiz-start-btn").addEventListener('click', ()=>{
