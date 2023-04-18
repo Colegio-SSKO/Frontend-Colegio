@@ -1,4 +1,19 @@
-alert("student profile11");
+alert("student home");
+
+
+
+
+async function fetchData(){
+
+
+//uncomment this when connecting the database
+        let res = await fetch("http://localhost:8090/api/users/view_featured_cont/:1", {method : "GET"}).then((response)=>
+            response.json()
+
+        );
+
+        return res
+};
 
 
 // async function fetchData(){
@@ -59,18 +74,18 @@ alert("student profile11");
 function renderSingle(){
 
 
-    // fetchData().then((data)=>{
+     fetchData().then((data)=>{
 
 
         let html_left = "";
 
-        html_left += `<featured-cont></featured-cont> + `;
+        html_left += `<featured-cont img_src = "${"img_src"}" title = "${"title"}" description = "${"description"}" author = "${"author"}" date = "${"date"}" price = "${"price"}" subject = "${"subject"}"></featured-cont> + `;
 
 
         document.querySelector(".cont-body-content").innerHTML = html_left;
 
 
 
-    // // }
-    // );
+     }
+    );
 }
