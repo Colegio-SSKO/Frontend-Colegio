@@ -100,7 +100,7 @@
 
 <div id="mainScript">
     <script src="index.js"></script>
-</div>>
+</div>
 
 <%--handle back button--%>
 <script>
