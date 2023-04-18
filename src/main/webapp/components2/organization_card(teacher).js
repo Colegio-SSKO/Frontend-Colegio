@@ -18,7 +18,7 @@ class Organization_cardteacher extends HTMLElement {
             <h5 class="fnt fnt-bold fnt-mid">${address}</h5>
         </div><br><br>
         
-        <h3 class="fnt-mid fnt-light"><a class="teacher_send_request" href="" id="${organization_id}">Send Request>></a></h3>
+        <h3 class="teacher_send_request fnt-mid fnt-light" id="${organization_id}">Send Request>></h3>
 
         </div>
         `;

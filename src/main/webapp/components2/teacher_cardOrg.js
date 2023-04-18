@@ -19,7 +19,7 @@ class Teacher_cardorg extends HTMLElement {
                 <h5 class="fnt fnt-bold fnt-mid">${quli}</h5>
             </div>
         
-            <h3 class="fnt-mid fnt-light"><a class="remove_teacher" href="" id="${teacher_id}">Remove</a></h3>
+            <h3 class="remove_teacher fnt-mid fnt-light" id="${teacher_id}">Remove</h3>
         </div>
         `;
     }

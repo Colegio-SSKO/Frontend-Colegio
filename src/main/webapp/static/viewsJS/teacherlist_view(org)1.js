@@ -1,4 +1,4 @@
-alert("org_teachers(Org1)");
+alert("org_teachers(Org1)123");
 
 async function fetchData(){
     const req = {
@@ -17,7 +17,7 @@ function renderSingle(){
 
     fetchData().then((data)=>{
 
-        let html = '<button class="btn btn-outlined btn-large"><a class="fnt fnt-bold fnt-mid" href="/invite_teachers">Invite teachers>></a></button>';
+        let html = '<pop-up></pop-up> <button class="btn btn-outlined btn-large"><a class="fnt fnt-bold fnt-mid" href="/invite_teachers">Invite teachers>></a></button>';
 
         html += `
         
@@ -67,14 +67,37 @@ function renderSingle(){
                 let requestBody= {
                     "teacher_id": teacher_id
                 }
-                let url = "http://localhost:8090/api/users/remove_teacher/:" + getOrgID();
+                let url = "http://localhost:8090/api/organizations/remove_teacher/:" + getOrgID();
                 let res = await fetch(url, {method : "POST",  body : JSON.stringify(requestBody)}).then((response)=>
                     response.json()
 
                 );
-                let location = window.location;
-                window.history.pushState({}, "", location);
-                urlLocation();
+
+
+                let popup = document.querySelector(".popup-content");
+                alert("helloo weeessa")
+                alert(res.message);
+                document.querySelector(".popup-container").style.display = "flex";
+
+                alert(res.message);
+
+                if(res.message==="Remove teacher successfully"){
+                    popup.innerHTML = `
+                        <img src="../static/img/components_images/success.jpg" alt="">
+                        <h2>${res.message}</h2>
+                        <button btn btn-primary><a href="/organization_Teachers">OK</a></button>
+
+                `;
+                }
+                else {
+                    popup.innerHTML = `
+                        <img src="../static/img/components_images/error.jpg" alt="">
+                        <h2>${res.message}</h2>
+                        <button btn btn-primary><a href="/organization_Teachers">OK</a></button>
+
+                `;
+                }
+
             })
         }
 

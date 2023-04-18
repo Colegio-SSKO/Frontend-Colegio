@@ -19,11 +19,6 @@
         </div>
 
         <div class="main-profile router">
-            <i><a href="/cart">shopping_cart</a></i>
-            <i><a href="/notification">notifications</a></i>
-            <div class="profile-pic">
-                <img src="../static/img/components_images/pro.png" alt="" srcset="">
-            </div>
             <h5 class="fnt fnt-bold fnt-mid"><a href="/profile">Senith Uthsara</a> </h5>
         </div>
         

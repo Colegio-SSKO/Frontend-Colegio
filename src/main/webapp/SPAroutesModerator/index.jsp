@@ -49,18 +49,16 @@
     <script src="../components2/teacher_card.js"></script>
     <script src="../components2/teacherlist.js"></script>
     <script src="../components2/cart_total_price.js"></script>
-    <script src="../components2/teacher_cardOrg.js"></script>
-    <script src="../components2/teacher_listOrg.js"></script>
-    <script src="../components2/invite_teacher.js"></script>
-    <script src="../components2/org_teacher_request.js"></script>
-    <script src="../components2/search_result.js"></script>
-    <script src="../components2/search_resultlist.js"></script>
     <script src="../components2/organization_profile_card(stu).js"></script>
-    <script src="../components2/featured_cont.js"></script>
+    <script src="../components2/report.js"></script>
+    <script src="../components2/report_personrow.js"></script>
+    <script src="../components2/report_personrowd.js"></script>
+    <script src="../components2/report_personrowr.js"></script>
+    <script src="../components2/report_details(course).js"></script>
+    <script src="../components2/reported_course_card.js"></script>
+    <script src="../components2/reported_person_card.js"></script>
+    <script src="../components2/report_details(user).js"></script>
     <script src="../components2/popup.js"></script>
-
-
-
 
 </div>
 
@@ -71,7 +69,7 @@
 
 <div class="main-cont">
     <div class="main-left">
-        <jsp:include page="../components/sidebar.jsp"/>
+        <jsp:include page="../components/sidebar_moderator.jsp"/>
         <div class="burger">
             <div class="burgerbar burger-up"></div>
             <div class="burgerbar burger-middle"></div>
@@ -81,7 +79,7 @@
 
     <div class="main-right">
 
-        <jsp:include page="../components/navbar.jsp"/>
+        <jsp:include page="../components/navbar_moderator.jsp"/>
 
 
         <div class="cont-body">

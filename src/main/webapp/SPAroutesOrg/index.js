@@ -189,7 +189,7 @@ const Routes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Org_teacherlist_view(stu).jsp",
-        script: "../static/viewsJS/teacherlist_view(org).js",
+        script: "../static/viewsJS/teacherlist_view(org)1.js",
         path_right: "",
         title: "Teachers",
         data : "This is the notification page"

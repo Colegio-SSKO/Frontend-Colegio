@@ -57,6 +57,8 @@
     <script src="../components2/organization_profile_card(stu).js"></script>
     <script src="../components2/organization_card(teacher).js"></script>
     <script src="../components2/organization_list(teacher).js"></script>
+    <script src="../components2/org_req_teacher_card.js"></script>
+    <script src="../components2/popup.js"></script>
 </div>
 
 <div id="viewsScript">
