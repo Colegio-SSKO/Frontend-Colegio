@@ -24,7 +24,7 @@ class Featured_cont extends HTMLElement {
             </div>
 
             <div class="featured-cont-actions">
-                <button class="addtocart btn btn-solid btn-large" id="${data['content_id']}"><a href="/cart">Add to </a></button>
+                <button class="addtocart btn btn-solid btn-large" id="${data['content_id']}">Add to</button>
                 <button class="btn btn-solid btn-large">Buy Now</button>
             </div>
 
@@ -40,7 +40,7 @@ class Featured_cont extends HTMLElement {
         for (let element of addtocart){
             element.addEventListener('click',async (event)=>{
 
-                let content_id = event.target.parentElement.id;
+                let content_id = event.target.id;
 
 
                 let requestBody= {
@@ -51,22 +51,47 @@ class Featured_cont extends HTMLElement {
                     response.json()
 
                 );
-
-                if(res.message==="You already added this content"){
-                    alert(res.message);
-                }
-
-                else{
-                    alert("added content successfully");
-                }
+                // alert(res.message);
+                //
+                // if(res.message==="You already added this content"){
+                //     alert(res.message);
+                // }
+                //
+                // else{
+                //     alert("added content successfully");
+                // }
 
                 // let location = window.location;
                 // window.history.pushState({}, "", location);
                 // urlLocation();
+
+
+                let popup = document.querySelector(".popup-content");
+                alert("helloo weeessa")
+                document.querySelector(".popup-container").style.display = "flex";
+
+                alert(res.message);
+
+                if(res.message==="You already added this content"){
+                    popup.innerHTML = `
+                        <img src="../static/img/components_images/error.jpg" alt="">
+                        <h2>${res.message}</h2>
+                        <button btn btn-primary><a href="/cart">OK</a></button>
+
+                `;
+                }
+                else {
+                    popup.innerHTML = `
+                        <img src="../static/img/components_images/success.jpg" alt="">
+                        <h2>${res.message}</h2>
+                        <button btn btn-primary><a href="/cart">OK</a></button>
+
+                `;
+                }
             })
         }
 
     }
 }
-    
+
 customElements.define('featured-cont', Featured_cont);
