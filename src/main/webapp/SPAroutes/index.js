@@ -1,3 +1,9 @@
+
+//changing the default path
+if(window.location.pathname == "/SPAroutes/index.jsp"){
+    window.history.pushState({}, "", "/home");
+}
+
 document.addEventListener("click", (ev)=>{
     let {target} = ev;
     if(!target.matches(" a")){
@@ -292,3 +298,5 @@ const urlLocation = async () =>{
 };
 
 urlLocation();
+
+
