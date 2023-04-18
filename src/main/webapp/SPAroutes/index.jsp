@@ -58,6 +58,7 @@
     <script src="../components2/change_password.js"></script>
     <script src="../components2/Q-4.js"></script>
     <script src="../components2/popup.js"></script>
+    <script src="../components2/quiz_number.js"></script>
 
 
 </div>

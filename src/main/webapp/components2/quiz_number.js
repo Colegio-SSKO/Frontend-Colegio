@@ -1,4 +1,4 @@
-class Edit_profile extends HTMLElement {
+class Quiz_number extends HTMLElement {
     connectedCallback() {
 
 
@@ -24,4 +24,4 @@ class Edit_profile extends HTMLElement {
     }
 }
 
-customElements.define('edit-profile', Edit_profile);
+customElements.define('quiz-number', Quiz_number);
