@@ -18,6 +18,7 @@ body {
     width: 100%;
     height: max-content;
     position: relative;
+    overflow-x: hidden !important;
 }
 
 .main-left{
