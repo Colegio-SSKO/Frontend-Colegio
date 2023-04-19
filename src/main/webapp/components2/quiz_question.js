@@ -9,7 +9,7 @@ class QuizQuestion extends HTMLElement {
         let answer3 = this.attributes.answer3.value;
         let answer4 = this.attributes.answer4.value;
         this.innerHTML = `
-        <div class="quiz-wrap">
+        <div id="js-quiz-question-wrap" class="quiz-wrap">
         <h3>${title}</h3>
         <p id="js-quiz-q-question">${Question}</p>
         <div id="js-quiz-q-answer-1-backg" class="quiz-q">
