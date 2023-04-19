@@ -1,8 +1,5 @@
 
-//changing the default path
-if(window.location.pathname == "/SPAroutes/index.jsp"){
-    window.history.pushState({}, "", "/home");
-}
+
 
 document.addEventListener("click", (ev)=>{
     let {target} = ev;
@@ -108,7 +105,7 @@ const Routes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/Quiz_teacher_org1_left.jsp",
         path_right: "/views/Quiz_teacher_org1_right.jsp",
-        script: "../static/viewsJS/Student_view_quizzes.js",
+        script: "../static/viewsJS/Student_view_quizzes1.js",
         title: "Quizzes",
         data : "This is the quiz page"
     },
@@ -219,7 +216,7 @@ const Routes = {
         path_right: "",
         title: "Organization",
         data : "This is the notification page"
-    },
+    }
 
 
 
@@ -237,6 +234,13 @@ const router = (ev) =>{
 
 
 const urlLocation = async () =>{
+
+    //changing the default path
+    if(window.location.pathname == "/SPAroutes/index.jsp"){
+        window.history.pushState({}, "", "/");
+
+    }
+
     let location = window.location.pathname;
 
     //setting the location to "/" if path is empty
