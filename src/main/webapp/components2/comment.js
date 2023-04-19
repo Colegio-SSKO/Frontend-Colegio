@@ -54,6 +54,7 @@ class Comment extends HTMLElement {
         let sendButton = document.querySelector("#js-quiz-comment-send-btn");
         sendButton.addEventListener("click" , (ev)=>{
             quizCommentSocket.send(comment.value);
+            comment.value = "";
         })
 
         quizCommentSocket.addEventListener('message', (event)=>{
