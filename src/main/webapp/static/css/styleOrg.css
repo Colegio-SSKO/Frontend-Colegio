@@ -1670,3 +1670,99 @@ h3{
     margin-top: auto;
     margin-bottom: auto;
 }
+
+
+
+
+/*Open question*/
+
+
+.open-question-new-container{
+    width: 880px;
+    margin: auto;
+}
+
+.open-question-new-image1{
+    display: flex;
+    justify-content: center;
+}
+
+.open-question-new-profile img{
+    width: 63px;
+    height: 63px;
+}
+
+.open-question-new-btn{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.open-question-new-profile{
+    display: flex;
+    align-items: center;
+}
+
+.open-question-new-answers{
+    display: flex;
+    justify-content: space-around;
+    overflow-x: scroll;
+    padding-bottom: 20px;
+}
+
+
+.open-question-new-feedback{
+    margin-top: 40px;
+}
+
+.open-question-new-comment{
+    display: flex;
+    align-items: center;
+    margin: 40px auto;
+    width: 100%;
+}
+
+
+.open-question-new-comment img{
+    margin: auto 10px;
+    width: 40px;
+    height: 40px;
+}
+
+.open-question-new-comment input{
+    border: none;
+    height: 30px;
+    width: 100%;
+    border-bottom: 2px solid #767676;
+}
+
+.open-question-new-comment input:focus{
+    outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+.video-upload-wrapper {
+    width: 400px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: 5px;
+}
+
+#js-video-upload-container-add-btn, .video-upload-wrapper i {
+    cursor: pointer;
+    }

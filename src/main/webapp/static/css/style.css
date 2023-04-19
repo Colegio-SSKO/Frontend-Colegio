@@ -3587,3 +3587,27 @@ a{
 .open-question-new-comment input:focus{
     outline: none;
 }
+
+
+
+
+
+
+
+.video-upload-wrapper {
+    width: 400px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: 5px;
+}
+
+#js-video-upload-container-add-btn, .video-upload-wrapper i {
+    cursor: pointer;
+    }
