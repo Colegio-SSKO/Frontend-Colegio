@@ -34,12 +34,38 @@ class CourseForm extends HTMLElement {
                             <p style="color: #767676; margin: 10px 0" class="fnt fnt-mid fnt-light">Upload your course content here.<br> Important Guideline : All files should be at least 480p and less than 3 GB.</p>
                         </label>
     
-                        <course-videoupload></course-videoupload>
+                        <div class="video-upload-wrapper-container">
+                            <div id="video-upload-wrapper1" class="video-upload-wrapper">
+                                <h3>Title</h3>
+                                <i class="material-icons">e3c9</i>
+                                <input type="text" name="video-description" class="video-upload-container-description-box" placeholder="Description">
+                                <i class="material-icons">video_file</i>
+                                <i class="material-icons">delete</i>
+                                
+                            </div>
+                        </div>
+                        <i id="js-video-upload-container-add-btn" class="material-icons">add_box</i>
                     </div>
                 </div>
             </div>
     </form>
         `;
+
+        let wrapperCount = 1;
+        let addVideoButton = document.querySelector("#js-video-upload-container-add-btn");
+
+        addVideoButton.addEventListener('click', ()=>{
+            wrapperCount ++;
+            document.querySelector(".video-upload-wrapper-container").innerHTML += `
+            <div id="video-upload-wrapper${wrapperCount}" class="video-upload-wrapper">
+                <h3>Title</h3>
+                <i class="material-icons">edit</i>
+                <input type="text" name="video-description" class="video-upload-container-description-box" placeholder="Description">
+                <i class="material-icons">video_file</i>
+                <i class="material-icons">delete</i>
+            </div>
+            `;
+        })
     }
 }
 

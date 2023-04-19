@@ -1,4 +1,4 @@
-alert("Hellpp");
+alert("Hellpaaaaagit stap");
 
 async function fetchData() {
     const req = {
@@ -89,49 +89,9 @@ function renderLeft() {
         let title = document.querySelector(".js-course-title-course-form");
         let description = document.querySelector(".js-course-description-course-form");
         let imageInput = document.querySelector('.js-myFile-course-form');
-        title.addEventListener('input', ()=>{
-            let html_right = `
-                <open-course img_src="/null" title="${title.value}" description="${description.value}" author="${getUsername()}" heading="heading" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. orrupti doloremque laudantium sequi." heading2="heading" content2="Lorem ipsum dolor sit amet, consectetur adipisicing elit. orrupti doloremque laudantium sequi."></open-course>`;
 
 
-            document.querySelector(".cont-body-right").innerHTML = html_right;
 
-        })
-
-        description.addEventListener('input', ()=>{
-            let html_right = `
-                <open-course img_src="/null" title="${title.value}" description="${description.value}" author="${getUsername()}" heading="heading" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. orrupti doloremque laudantium sequi." heading2="heading" content2="Lorem ipsum dolor sit amet, consectetur adipisicing elit. orrupti doloremque laudantium sequi."></open-course>`;
-
-
-            document.querySelector(".cont-body-right").innerHTML = html_right;
-
-        })
-
-        imageInput.addEventListener('change', ()=>{
-            let html_right = `
-                <open-course img_src="/null" title="${title.value}" description="${description.value}" author="${getUsername()}" heading="heading" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. orrupti doloremque laudantium sequi." heading2="heading" content2="Lorem ipsum dolor sit amet, consectetur adipisicing elit. orrupti doloremque laudantium sequi."></open-course>`;
-
-
-            document.querySelector(".cont-body-right").innerHTML = html_right;
-
-            //handling the uploaded thumbnail image
-            let preview = document.querySelector('.open-course-image img');
-            let reader = new FileReader();
-            let file  = imageInput.files[0];
-
-            reader.onloadend = () => {
-                preview.src = reader.result;
-            }
-
-            if (file){
-                reader.readAsDataURL(file);
-            }
-            else{
-                preview.src = "";
-            }
-
-
-        })
 
 
 

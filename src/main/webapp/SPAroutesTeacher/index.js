@@ -10,26 +10,21 @@ document.addEventListener("click", (ev)=>{
 });
 
 
+
 const Routes = {
     404 : {
         isSingle : true,
-        template : "/SPAroutesTeacher/index_single.jsp",
-        path_left:"/SPAroutesTeacher/pagenotfound.html",
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/SPAroutes/pagenotfound.html",
         title: "404 | Page not found",
         data : "Page does not exists"
-    },
-    "/SPAroutesTeacher/index.jsp" : {
-        isSingle : true,
-        template : "/SPAroutesTeacher/index_single.jsp",
-        path_left:"/views/Home_content.jsp",
-        title: "Home",
-        data : "This is the home page"
     },
 
     "/" : {
         isSingle : true,
-        template : "/SPAroutesTeacher/index_single.jsp",
+        template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Home_content.jsp",
+        script: "../static/viewsJS/home22.js",
         title: "Home",
         data : "This is the home page"
     },
@@ -49,7 +44,7 @@ const Routes = {
         template : "/SPAroutesTeacher/index_double.jsp",
         path_left:"/views/View_course2_left.jsp",
         path_right: "/views/View_course2_right.jsp",
-        script: "../static/viewsJS/view_courses1.js",
+        script: "../static/viewsJS/teacher_view_courses1.js",
         title: "My Courses",
         data : "This is the contact page"
     },
@@ -59,7 +54,7 @@ const Routes = {
         template : "/SPAroutesTeacher/index_double.jsp",
         path_left:"/views/Create_course_left.jsp",
         path_right: "/views/Create_course_right.jsp",
-        script: "../static/viewsJS/create_course1.js",
+        script: "../static/viewsJS/create_course2.js",
         title: "Create Course",
         data : "This is the create course page"
     },
@@ -183,13 +178,23 @@ const Routes = {
 };
 
 
+
 const router = (ev) =>{
     window.history.pushState({}, "", ev.target.href);
     urlLocation();
+
+
 };
 
 
 const urlLocation = async () =>{
+
+    //changing the default path
+    if(window.location.pathname == "/SPAroutesTeacher/index.jsp"){
+        window.history.pushState({}, "", "/");
+
+    }
+
     let location = window.location.pathname;
 
     //setting the location to "/" if path is empty
@@ -226,7 +231,7 @@ const urlLocation = async () =>{
 
 
 
-    //fetching the main content(left content)
+    //rendering the main content(left content)
     let html_cont_left = await fetch(route.path_left).then((response)=>
         response.text()
     );
@@ -236,13 +241,11 @@ const urlLocation = async () =>{
         renderSingle();
     }
     else{
-        //fetching the right hand side content as well
-        // let html_cont_right = await fetch(route.path_right).then((response)=>
-        //     response.text()
-        // );
 
         renderLeft();
-        // document.querySelector(".cont-body-right").innerHTML = html_cont_right;
+
+
+
 
     }
 
@@ -253,3 +256,5 @@ const urlLocation = async () =>{
 };
 
 urlLocation();
+
+
