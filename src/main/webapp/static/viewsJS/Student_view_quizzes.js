@@ -1,4 +1,4 @@
-alert("Heliidd2");
+alert("Heliidd3");
 
 //element selectors
 if (typeof previous === 'undefined') {
@@ -36,20 +36,6 @@ if (typeof containerCollection === 'undefined') {
     let containerCollection;
 }
 
-
-
-
-
-
-
-
-
-
-
-//user selected answers
-if (typeof answers === 'undefined') {
-    let answers = {};
-}
 
 
 
@@ -106,6 +92,7 @@ async function renderRight(data) {
 
 
     //controlling next and previous buttons
+    let answers = {};
 
 
     previous.addEventListener('click', ()=>{
@@ -114,7 +101,7 @@ async function renderRight(data) {
         changeColorOfNumber(questionTracker, "#d9d9d9");
         if (questionTracker != 1){
             questionTracker--;
-            changeQuestion(questionTracker, questions)
+            changeQuestion(questionTracker, questions, answers)
         }
 
         changeColorOfNumber(questionTracker, "#46344e");
@@ -127,7 +114,7 @@ async function renderRight(data) {
         changeColorOfNumber(questionTracker, "#d9d9d9");
         if (questionTracker != questions.length){
             questionTracker++;
-            changeQuestion(questionTracker, questions)
+            changeQuestion(questionTracker, questions, answers)
         }
 
         changeColorOfNumber(questionTracker, "#46344e");
@@ -165,7 +152,6 @@ async function renderRight(data) {
 
 
             //saving answer
-
             answers[questionTracker] = event.target.parentNode.id;
 
             let reqBody = {
@@ -191,31 +177,13 @@ async function renderRight(data) {
             alert(targetID);
             changeColorOfNumber(questionTracker, "#d9d9d9");
             questionTracker = targetID
-            changeQuestion(questionTracker, questions);
+            changeQuestion(questionTracker, questions,answers);
             changeColorOfNumber(questionTracker, "#46344e");
 
 
         })
     }
 
-    //check whether the user leaved or not
-    let quizComponentParent = document.querySelector(".cont-body-left");
-
-
-    let observer = new MutationObserver((mutations)=>{
-        alert("metnt enw")
-        for (let mutation of mutations){
-            if (mutation.type === "childList"){
-                alert("Gonna remove")
-            }
-        }
-    })
-
-    let config = {
-        childList: true,
-        subtree: true
-    };
-    observer.observe(quizComponentParent, config);
 
 
 }
@@ -306,7 +274,7 @@ function changeColorOfNumber(questionNumber, color){
 }
 
 
-function changeQuestion(questionTracker, questions){
+function changeQuestion(questionTracker, questions, answers){
 
 
     theQuestion.innerHTML = questions[questionTracker-1]["question"];

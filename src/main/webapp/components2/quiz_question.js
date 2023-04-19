@@ -39,6 +39,38 @@ class QuizQuestion extends HTMLElement {
         </ul>
     </div>
         `;
+
+    let observingElementsAncestor = document.querySelector(".cont-body");
+    let observingElement = document.querySelector("#js-quiz-question-wrap");
+
+    let quizObserver = new MutationObserver((mutations)=> {
+        for(let mutation of mutations){
+            if(mutation.type === "childList" && !document.contains(observingElement)){
+                alert("Remove wennai ynne deiyoo");
+
+                observingElement.dispatchEvent(new Event('beforeRemove', {cancelable: true}));
+            }
+        }
+    })
+
+    let congif = {
+        childList : true,
+        subtree: true
+    }  ;
+
+    quizObserver.observe(observingElementsAncestor, congif);
+    observingElement.addEventListener('beforeRemove', (event)=>{
+        if(confirm("Are you sure you want to remove this element?")){
+            quizObserver.disconnect();
+            alert("true");
+
+        }
+        else{
+            event.preventDefault()
+        }
+
+    })
+
     }
 }
 
