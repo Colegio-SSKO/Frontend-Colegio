@@ -28,7 +28,6 @@ function renderRight(data) {
     if (data["status"]== 1){
         alert("kabmmm")
         html_right = ` <open-question img_src="${data["pro_pic"]}" qulifi="${data["qulification_level"]}" title="${data["question_title"]}"  author="${data["f_name"]+" "+ data["l_name"]}" description="${data["question_description"]}""></open-question>`;
-
     }
     else {
         alert("asd")
