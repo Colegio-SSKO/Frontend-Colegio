@@ -190,10 +190,10 @@ const router = (ev) =>{
 const urlLocation = async () =>{
 
     //changing the default path
-    if(window.location.pathname == "/SPAroutesTeacher/index.jsp"){
-        window.history.pushState({}, "", "/");
-
-    }
+    // if(window.location.pathname == "/SPAroutesTeacher/index.jsp"){
+    //     window.history.pushState({}, "", "/");
+    //
+    // }
 
     let location = window.location.pathname;
 
