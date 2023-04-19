@@ -1,4 +1,4 @@
-alert("Heliidd");
+alert("Heliidd1");
 
 async function fetchData() {
     let res = await fetch("http://localhost:8090/api/users/myQuizes/:1", {method : "GET"}).then((response)=>
@@ -23,7 +23,7 @@ async function renderRight(data) {
 
     html_right += `
 <quiz-question q_number="${"1/"+ questions.length.toString()}" title="${data["quiz_title"]}" Question="${questions[0]["question"]}" answer1="${questions[0]["op1"]}" answer2="${questions[0]["op2"]}" answer3="${questions[0]["op3"]}" answer4="${questions[0]["op4"]}" ></quiz-question>`;
-    document.querySelector(".cont-body-right").innerHTML = html_right;
+    document.querySelector(".cont-body-left").innerHTML = html_right;
 
     let previous = document.querySelector(".js-quiz-previous");
     let next = document.querySelector(".js-quiz-next");
