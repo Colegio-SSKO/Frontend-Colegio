@@ -31,8 +31,8 @@ function renderRight(data) {
 
     }
     else {
-        alert("kavind")
-        html_right = ` <question img_src2="${data["question_img"]}" img_src="${data["pro_pic"]}" title="${data["question_title"]}" accept_person="${data["f_name"]+" "+ data["l_name"]}"  description="${data["question_description"]}""></question>`;
+        alert("asd")
+        html_right = ` <open-question-question img_src2="${data["question_img"]}" img_src="${data["pro_pic"]}" title="${data["question_title"]}" accept_person="${data["f_name"]+" "+ data["l_name"]}"  description="${data["question_description"]}""></open-question-question>`;
 
     }
     document.querySelector(".cont-body-right").innerHTML = html_right;
@@ -61,7 +61,8 @@ function renderLeft() {
             "";
 
         for (let i of data){
-            if (i["status"]== 0){
+            alert(i["status"])
+            if (i["status"]== 0){ /**/
                 html_left += ` <q-1 question_ID="${i["question_Id"]}" img_src="${i["question_img"]}" title="${i["question_title"]}" accept="${i["f_name"]+" "+ i["l_name"]}" description="${i["question_description"]}""></q-1>`;
             }else if (i["status"]== 1){
                 html_left += ` <q-2 question_ID="${i["question_Id"]}" img_src="${i["question_img"]}" title="${i["question_title"]}" accept="${i["f_name"]+" "+ i["l_name"]}" description="${i["question_description"]}""></q-2>`;
