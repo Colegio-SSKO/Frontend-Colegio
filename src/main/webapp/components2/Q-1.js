@@ -12,11 +12,11 @@ class Q1 extends HTMLElement {
             <img src="${img_src}" alt="" srcset="">
         </div>
 
-        <div class="q-1-content" id="${question_ID}">
+        <div class="q-1-content">
             <h2 class="fnt fnt-extraBold fnt-large">${title}</h2>
             <p class="fnt fnt-bold fnt-small">${accept}</p>
             <h3 class="fnt fnt-light fnt-mid">${description}</h3>
-            <button class="btn btn-small btn-solid js-question ">Question</button>
+            <button id="js-quession-${question_ID}" class="btn btn-small btn-solid js-question ">Question</button>
 
         </div>
 

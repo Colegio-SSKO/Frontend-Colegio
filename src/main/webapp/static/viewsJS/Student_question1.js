@@ -1,4 +1,4 @@
-alert("dddd");
+alert("daddad");
 
 async function fetchData() {
     const req = {
@@ -20,12 +20,12 @@ async function fetchData() {
 
 //function to render right content
 
-function renderRight(data) {
+function renderRight(data, type) {
 
     let html_right = "";
 
     alert(data["status"])
-    if (data["status"]== 1){
+    if (type== 1){
         alert("kabmmm")
         html_right = ` <open-question img_src="${data["pro_pic"]}" qulifi="${data["qulification_level"]}" title="${data["question_title"]}"  author="${data["f_name"]+" "+ data["l_name"]}" description="${data["question_description"]}""></open-question>`;
     }
@@ -74,30 +74,47 @@ function renderLeft() {
         document.querySelector(".cont-body-left").innerHTML = html_left;
 
         let selected_session = document.querySelectorAll(".js-session");
+        alert(`Sessions length: ${selected_session.length}`);
 
-        for (let element of selected_session){
-            element.addEventListener('click', ()=>{
+        let clicked_data;
+        let targetId;
+        let buttonID;
 
-                for (let el of data){
-                    if (el["content_ID"] == element.getAttribute("id")){
-                        renderRight(el);
-                    }
-                }
+        selected_session.forEach((session)=>{
+            session.addEventListener('click', (event)=>{
+                targetId = event.target.id.split("-");
+                buttonID = targetId[targetId.length-1];
+                alert(targetId[targetId.length-1]);
+                clicked_data = data.find((value)=>value["question_Id"] == buttonID )
+                console.log(clicked_data);
+                renderRight(clicked_data, 1); //1 for session 0 for question
             })
-        }
+        })
 
         let selected_question= document.querySelectorAll(".js-question");
-
-        for (let element of selected_question){
-            element.addEventListener('click', ()=>{
-
-                for (let el of data){
-                    if (el["content_ID"] == element.getAttribute("id")){
-                        renderRight(el);
-                    }
-                }
+        selected_question.forEach((quession)=>{
+            quession.addEventListener('click', (event)=>{
+                targetId = event.target.id.split("-");
+                buttonID = targetId[targetId.length-1];
+                alert(targetId[targetId.length-1]);
+                clicked_data = data.find((value)=>value["question_Id"] == buttonID )
+                console.log(clicked_data);
+                renderRight(clicked_data, 0); //1 for session 0 for question
             })
-        }
+        })
+
+
+        // alert(`quessions length: ${selected_question.length}`)
+        // for (let element of selected_question){
+        //     element.addEventListener('click', ()=>{
+        //
+        //         for (let el of data){
+        //             if (el["content_ID"] == element.getAttribute("id")){
+        //                 renderRight(el);
+        //             }
+        //         }
+        //     })
+        // }
 
 
 

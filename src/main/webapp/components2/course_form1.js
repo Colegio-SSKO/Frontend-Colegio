@@ -7,17 +7,26 @@ class CourseForm extends HTMLElement {
                 <div class="inputs">
                     <div class="input-field">
                         <label for="" class="fnt fnt-mid fnt-bold">Select a unique title for your Course.</label><br><br>
-                        <input type="text" class="fnt fnt-mid fnt-light" required placeholder="Course Title">
+                        <input id="js-course-upload-title" type="text" class="fnt fnt-mid fnt-light" required placeholder="Course Title">
                     </div><br><br>
     
                     <div class="input-field">
-                        <label for="" class="fnt fnt-mid fnt-bold">Select the most appropriate category for your course.</label><br><br>
-                        <input type="text" class="fnt fnt-mid fnt-light" required placeholder="Mathematics/ Science/ English...">
+                        <p for="" class="fnt fnt-mid fnt-bold">Select the most appropriate category for your course.</p><br><br>
+                        <select id="js-course-upload-subject">
+                            <option value="Science">Science</option>
+                            <option value="Mathematics">Mathematics</option>
+                            <option value="English">English</option>
+                        </select>
                     </div><br><br>
     
                     <div class="input-field">
                         <label for="" class="fnt fnt-mid fnt-bold">Give your course a good description.</label><br><br>
-                        <textarea class="fnt fnt-mid fnt-light description_box" name="description_box" rows="7" cols="40" placeholder="Enter course description here"></textarea>
+                        <textarea id="js-course-upload-description" class="fnt fnt-mid fnt-light description_box" name="description_box" rows="7" cols="40" placeholder="Enter course description here"></textarea>
+                    </div><br><br>
+                    
+                    <div class="input-field">
+                        <label for="" class="fnt fnt-mid fnt-bold">Price (In LKR).</label><br><br>
+                        <input id="js-course-upload-price" type="text" class="fnt fnt-mid fnt-light" required placeholder="Price for the course">
                     </div><br><br>
     
                     <div class="input-field">
@@ -36,8 +45,7 @@ class CourseForm extends HTMLElement {
     
                         <div class="video-upload-wrapper-container">
                            <div id="video-upload-wrapper1" class="video-upload-wrapper">
-                                <h3>Title</h3>
-                                <i class="material-icons">edit</i>
+                                <input type="text" name="video-title" class="video-upload-container-title-box" placeholder="Title">
                                 <input type="text" name="video-description" class="video-upload-container-description-box" placeholder="Description">
                                 <i id="js-video-upload-icon" class="material-icons">video_file</i>
                                 <input class="js-course-video-uploader" style="display: none;" type="file" name="videoupload">
@@ -73,8 +81,7 @@ class CourseForm extends HTMLElement {
             newVideoWrapper.classList.add("video-upload-wrapper");
             newVideoWrapper.id = `video-upload-wrapper${wrapperCount}`;
             newVideoWrapper.innerHTML = `
-                       <h3>Title</h3>
-                       <i class="material-icons">edit</i>
+                       <input type="text" name="video-title" class="video-upload-container-title-box" placeholder="Title">
                        <input type="text" name="video-description" class="video-upload-container-description-box" placeholder="Description">
                        <i id="js-video-upload-icon" class="material-icons">video_file</i>
                        <input class="js-course-video-uploader" style="display: none;" type="file" name="videoupload">
@@ -110,6 +117,44 @@ class CourseForm extends HTMLElement {
                 formData.append('videoFiles', video.files[0]);
             })
 
+            //textData
+            let courseTitle = document.querySelector("#js-course-upload-title");
+            let courseSubject = document.querySelector("#js-course-upload-subject");
+            let courseDescription = document.querySelector("#js-course-upload-description");
+            let coursePrice = document.querySelector("#js-course-upload-price");
+            let videoTitles = document.querySelectorAll(".video-upload-container-title-box");
+            let videoDescription = document.querySelectorAll(".video-upload-container-description-box");
+
+            let videoTitleData = new Array(0);;
+
+            let videoNumber = 0;
+            videoTitles.forEach((title)=>{
+                videoTitleData[videoNumber] = title.value;
+                videoNumber ++;
+            })
+
+            let videoDescriptionData = new Array(0);;
+
+            videoNumber = 0;
+            videoDescription.forEach((description)=>{
+                videoDescriptionData[videoNumber] = description.value;
+                videoNumber ++;
+            })
+
+            console.log(videoTitleData)
+
+            let textData = {
+
+                "userId" : getUserID(),
+                "courseTitle" : courseTitle.value,
+                "courseSubject" : 10,
+                "courseDescription" : courseDescription.value,
+                "coursePrice" : coursePrice.value,
+                "videoTitles" : videoTitleData,
+                "videoDescriptions" : videoDescriptionData
+            }
+
+            formData.append('textData', JSON.stringify(textData));
 
 
             //send the request
