@@ -79,39 +79,7 @@ class Open_question extends HTMLElement {
         })
 
 
-        let chatContainer = document.querySelector(".open-question-chat");
-        let receivedMessage;
-        alert("methnta nm enw")
-        questionCHat.addEventListener('message', (event)=>{
-            alert("msg ek awa")
-            receivedMessage = JSON.parse(event.data)
 
-
-            //check whether this message is valid(for security)
-            // if (receivedMessage["receiver"] == getUserID() || receivedMessage["sender"] == getUserID() ){
-            //
-            //     if (receivedMessage == )
-            //
-            //
-            // }
-
-            if (receivedMessage["receiver"] == getUserID()){
-                chatContainer.innerHTML += `
-                    <div class="open-question-msg open-question-incomMSG"><p>${receivedMessage["message"]}<br></p></div>
-                    <br>
-            `
-            }
-            else if(receivedMessage["sender"] == getUserID()){
-                chatContainer.innerHTML += `
-                    <div class="open-question-msg open-question-outgoingMSG"> <p>${receivedMessage["message"]}</p></div>
-                    <br>
-            `
-            }
-
-
-
-            chatContainer.scrollTop = chatContainer.scrollHeight;
-        })
 
 
     }

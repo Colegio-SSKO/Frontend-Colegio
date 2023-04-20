@@ -64,6 +64,8 @@
     <script src="../components2/search_main_quiz.js"></script>
     <script src="../components2/search_main_results.js"></script>
     <script src="../components2/open_course_video_play.js"></script>
+    <script src="../components2/navbar.js"></script>
+
 
 
 
@@ -87,7 +89,7 @@
 
     <div class="main-right">
 
-        <jsp:include page="../components/navbar.jsp"/>
+        <nav-bar></nav-bar>
 
 
         <div class="cont-body">
