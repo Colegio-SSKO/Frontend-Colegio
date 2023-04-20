@@ -18,15 +18,15 @@ class ListedContent extends HTMLElement {
            
        
         <div class="course-details">
-            <h5>${title}</h5>
+            <h5 class="fnt fnt-bold fnt-large">${title}</h5>
             <div class="tutor">
                 <div class="ratings">
-                    <h6>by ${author}</h6>
+                    <h6 class="fnt fnt-bold fnt-small">by ${author}</h6>
                 
                     <ratings-content rating="${rating}" votes="${votes}"/>
                 </div>
             </div>
-            <p>
+            <p class="fnt fnt-light fnt-mid">
                 ${description}
             </p>
         </div>
@@ -35,5 +35,5 @@ class ListedContent extends HTMLElement {
         `;
     }
 }
-    
+
 customElements.define('listed-content', ListedContent);
