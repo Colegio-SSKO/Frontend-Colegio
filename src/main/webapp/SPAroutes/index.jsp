@@ -60,6 +60,11 @@
     <script src="../components2/popup.js"></script>
     <script src="../components2/quiz_number.js"></script>
     <script src="../components2/open_question_question.js"></script>
+    <script src="../components2/search_main_course.js"></script>
+    <script src="../components2/search_main_quiz.js"></script>
+    <script src="../components2/search_main_results.js"></script>
+    <script src="../components2/open_course_video_play.js"></script>
+
 
 
 

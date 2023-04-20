@@ -33,6 +33,16 @@ const Routes = {
     },
 
 
+    "/test" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Home_content.jsp",
+        script: "../static/viewsJS/main_search.js",
+        title: "Home",
+        data : "This is the home page"
+    },
+
+
     "/about" : {
         isSingle : false,
         template : "/SPAroutes/index_double.jsp",
