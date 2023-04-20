@@ -1,26 +1,33 @@
 class Open_question_question extends HTMLElement {
     connectedCallback() {
+        let question_ID = this.attributes.question_ID.value;
+        let img_src = this.attributes.img_src.value;
+        let img_src2 = this.attributes.img_src2.value;
+        let title = this.attributes.title.value;
+        let accept = this.attributes.accept.value;
+        let description = this.attributes.description.value;
+        let quli = this.attributes.quli.value;
 
 
         this.innerHTML = `
        <div class="open-question-new-container">
         <div class="open-question-new-heading">
-            <h3>Basic algebra grade 9 help </h3>
+            <h3>${title}</h3>
             <p>
-                Can you help me with understanding basic algebra for grade 9, A step by step answer for the attached question with an explanation.
+               ${description}
             </p>
         </div>
         <div class="open-question-new-image1">
-            <img  src="../static/img/components_images/video.png" alt="">
+            <img src="${img_src}">
         </div>
         <div class="open-question-new-btn">
             <div class="open-question-new-profile">
                 <div class="img">
-                    <img src="./profile picture.png" alt="">
+                    <img src="${img_src2}">
                 </div>
                 <div class="texts">
-                    <h4>Accepted by: <span>Ranil Perera</span></h4>
-                    <h5>OL Maths Teacher</h5>
+                    <h4>Accepted by: ${accept}</h4>
+                    <h5>${quli}</h5>
                 </div>
             </div>
             <div class="open-question-new-btn">

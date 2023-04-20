@@ -1,4 +1,4 @@
-alert("dddd");
+alert("dddd1");
 
 async function fetchData() {
     const req = {
@@ -16,22 +16,22 @@ async function fetchData() {
 };
 
 
-
+let tocheck="";
 
 //function to render right content
 
-function renderRight(data) {
+function renderRight(data, tocheck ) {
 
     let html_right = "";
 
     alert(data["status"])
-    if (data["status"]== 1){
+    if (tocheck== 0){
         alert("kabmmm")
-        html_right = ` <open-question img_src="${data["pro_pic"]}" qulifi="${data["qulification_level"]}" title="${data["question_title"]}"  author="${data["f_name"]+" "+ data["l_name"]}" description="${data["question_description"]}""></open-question>`;
+        html_right = ` <open-question  img_src="${data["pro_pic"]}" qulifi="${data["qulification_level"]}" title="${data["question_title"]}"  author="${data["f_name"]+" "+ data["l_name"]}" description="${data["question_description"]}""></open-question>`;
     }
     else {
         alert("asd")
-        html_right = ` <open-question-question img_src2="${data["question_img"]}" img_src="${data["pro_pic"]}" title="${data["question_title"]}" accept_person="${data["f_name"]+" "+ data["l_name"]}"  description="${data["question_description"]}""></open-question-question>`;
+        html_right = ` <open-question-question img_src2="${data["pro_pic"]}" img_src="${data["question_img"]}" quli="${data["qulification_level"]}" title="${data["question_title"]}" accept="${data["f_name"]+" "+ data["l_name"]}"  description="${data["question_description"]}" question_ID="${data["question.question_id"]}"></open-question-question>`;
 
     }
     document.querySelector(".cont-body-right").innerHTML = html_right;
@@ -60,14 +60,14 @@ function renderLeft() {
             "";
 
         for (let i of data){
-            alert(i["status"])
-            if (i["status"]== 0){ /**/
-                html_left += ` <q-1 question_ID="${i["question_Id"]}" img_src="${i["question_img"]}" title="${i["question_title"]}" accept="${i["f_name"]+" "+ i["l_name"]}" description="${i["question_description"]}""></q-1>`;
-            }else if (i["status"]== 1){
-                html_left += ` <q-2 question_ID="${i["question_Id"]}" img_src="${i["question_img"]}" title="${i["question_title"]}" accept="${i["f_name"]+" "+ i["l_name"]}" description="${i["question_description"]}""></q-2>`;
+            alert(i["question.status"])
+            if (i["question.status"]== 0){ /**/
+                html_left += ` <q-4 question_ID="${i["question.question_id"]}" img_src="${i["question_img"]}" title="${i["question_title"]}" accept="${i["f_name"]+" "+ i["l_name"]}" description="${i["question_description"]}""></q-4>`;
+            }else if (i["question.status"]== 1){
+                html_left += ` <q-1 question_ID="${i["question.question_id"]}" img_src="${i["question_img"]}" title="${i["question_title"]}" accept="${i["f_name"]+" "+ i["l_name"]}" description="${i["question_description"]}""></q-1>`;
             }
             else {
-                html_left += ` <q-4 question_ID="${i["question_Id"]}" img_src="${i["question_img"]}" title="${i["question_title"]}" accept="${i["f_name"]+" "+ i["l_name"]}" description="${i["question_description"]}""></q-4>`;
+                html_left += ` <q-2 question_ID="${i["question.question_id"]}" img_src="${i["question_img"]}" title="${i["question_title"]}" accept="${i["f_name"]+" "+ i["l_name"]}" description="${i["question_description"]}""></q-2>`;
             }
         }
 
@@ -77,10 +77,10 @@ function renderLeft() {
 
         for (let element of selected_session){
             element.addEventListener('click', ()=>{
-
+                alert(data);
                 for (let el of data){
-                    if (el["content_ID"] == element.getAttribute("id")){
-                        renderRight(el);
+                    if (el["question.question_id"] == element.getAttribute("id")){
+                        renderRight(el,0);
                     }
                 }
             })
@@ -92,8 +92,8 @@ function renderLeft() {
             element.addEventListener('click', ()=>{
 
                 for (let el of data){
-                    if (el["content_ID"] == element.getAttribute("id")){
-                        renderRight(el);
+                    if (el["question.question_id"] == element.getAttribute("id")){
+                        renderRight(el,1);
                     }
                 }
             })

@@ -10,10 +10,10 @@ class Q_2 extends HTMLElement {
 
         <div class="q-2-content" id="${question_ID}">
             <h2 class="fnt fnt-extraBold fnt-large">${title}</h2>
-            <p class="fnt fnt-small">Session Accepted</p>
+            <p class="fnt fnt-small">Accept by:- ${accept}</p>
             <h3 class="fnt fnt-light fnt-mid">${description}</h3>
-            <button class="btn btn-solid btn-small js-questionButton js-session">Session</button>
-            <button class="btn btn-solid btn-small js-questionButton js-question">Question</button>
+            <button class="btn btn-solid btn-small js-questionButton js-session" id="${question_ID}">Session</button>
+            <button class="btn btn-solid btn-small js-questionButton js-question" id="${question_ID}">Question</button>
 
         </div>
 
