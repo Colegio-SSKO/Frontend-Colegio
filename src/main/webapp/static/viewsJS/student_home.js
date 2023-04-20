@@ -1,44 +1,46 @@
 async function fetchData(){
     return "eeew";
 };
+alert("menna wda")
 
 
+async function renderSingle() {
 
-function renderSingle(){
-
-
-    fetchData().then((data)=>{
+    try {
 
 
-        let html_left = "";
+        const data = await fetchData();
+        alert(data);
 
-        html_left += ` <featured-cont img_src="../static/img/components_images/elec.jpg" title="kavinda" description="2000/12/5" author="male" description2="olevel" price="20" rating="ssd" votes=" sdsd"></featured-cont>  `;
+        const res3 = await fetch("http://localhost:8090/api/users/ViewCont_list", {method: "GET"}).then((response) => response.text());
 
+
+        const html_left = ` <featured-cont></featured-cont> + <content-list dataString="${encodeURIComponent(res3)}"></content-list>`;
 
         document.querySelector(".cont-body-content").innerHTML = html_left;
 
-        let selected = document.querySelectorAll(".courseList-card");
-
-        // let fName = document.querySelector(".fname");
-        // let lName = document.querySelector(".lname");
-        // let edu = document.querySelector("#edu");
-        // let gender = document.querySelector("#gender");
 
         let addtoCartBtn = document.querySelector("#addtocart");
 
-        addtoCartBtn.addEventListener('click', async ()=>{
+        addtoCartBtn.addEventListener('click', async () => {
             let req = {
-                "user_ID" : 1,
-                "content_ID" : 12
+                "user_ID": 1,
+                "content_ID": 12
             }
 
-            let resp = await fetch("http://localhost:8090/api/users/addtocart", {method : "POST",  body : JSON.stringify(req)}).then((data)=>{
+            let resp = await fetch("http://localhost:8090/api/users/addtocart", {
+                method: "POST",
+                body: JSON.stringify(req)
+            }).then((data) => {
                 data.text()
             });
 
 
-
         })
 
-    });
+    } catch (error) {
+        console.error(error);
+    }
+
+
 }
