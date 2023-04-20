@@ -216,7 +216,17 @@ const Routes = {
         path_right: "",
         title: "Organization",
         data : "This is the notification page"
-    }
+    },
+
+    "/continuecourse" : {
+        isSingle : false,
+        template : "/SPAroutes/index_double.jsp",
+        path_left:"/views/Create_quiz_left.jsp",
+        path_right: "/views/Create_quiz_right.jsp",
+        script: "../static/viewsJS/Student_continue_course.js",
+        title: "Create quiz",
+        data : "This is the  create quiz page"
+    },
 
 
 
