@@ -4,7 +4,7 @@ class Open_question_question extends HTMLElement {
 
     connectedCallback() {
 
-        let img_src = this.attributes.img_src.value;
+        let author_propic = this.attributes.author_propic.value;
         let qulifi = this.attributes.qulifi.value;
         let title= this.attributes.title.value;
         let media= this.attributes.media.value;
@@ -25,11 +25,11 @@ class Open_question_question extends HTMLElement {
         <div class="open-question-new-btn">
             <div class="open-question-new-profile">
                 <div class="img">
-                    <img src="./profile picture.png" alt="">
+                    <img src="${author_propic}" alt="">
                 </div>
                 <div class="texts">
-                    <h4>Accepted by: <span>Ranil Perera</span></h4>
-                    <h5>OL Maths Teacher</h5>
+                    <h4>Accepted by: <span>${author}</span></h4>
+                    <h5>${qulifi}</h5>
                 </div>
             </div>
             <div class="open-question-new-btn">
@@ -46,7 +46,7 @@ class Open_question_question extends HTMLElement {
         <div class="open-question-new-feedback">
             <h3>Feedback for the answers</h3>
             <div class="open-question-new-comment">
-                <img src="./Vector.png" alt="">
+                <img src="${getUserProfileImage()}" alt="">
                 <input placeholder="Comment here..." type="text">
             </div>
         </div>
