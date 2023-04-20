@@ -1678,12 +1678,13 @@ h3{
 
 
 .open-question-new-container{
-    width: 880px;
+    width: 500px;
     margin: auto;
 }
 
 .open-question-new-image1{
     display: flex;
+    width: 482px;
     justify-content: center;
 }
 
