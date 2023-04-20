@@ -16,3 +16,6 @@ function getUserProfileImage(){
 let temporary_data;
 
 const quizCommentSocket = new WebSocket('ws://localhost:8090/quizCommentsHandler');
+
+
+const quessionCHat = new WebSocket('ws://localhost:8090/questionChatHandler');
