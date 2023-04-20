@@ -1,4 +1,4 @@
-alert("daddad");
+alert("adaddad");
 
 async function fetchData() {
     const req = {
@@ -27,11 +27,11 @@ function renderRight(data, type) {
     alert(data["status"])
     if (type== 1){
         alert("kabmmm")
-        html_right = ` <open-question img_src="${data["pro_pic"]}" qulifi="${data["qulification_level"]}" title="${data["question_title"]}"  author="${data["f_name"]+" "+ data["l_name"]}" description="${data["question_description"]}""></open-question>`;
+        html_right = ` <open-question img_src="${data["pro_pic"]}" qulifi="${data["qulification_level"]}" title="${data["question_title"]}"  author="${data["f_name"]+" "+ data["l_name"]}" description="${data["question_description"]}" author_ID="${data["question.accept_teacher_id"]}""></open-question>`;
     }
     else {
         alert("asd")
-        html_right = ` <open-question-question img_src2="${data["question_img"]}" img_src="${data["pro_pic"]}" title="${data["question_title"]}" accept_person="${data["f_name"]+" "+ data["l_name"]}"  description="${data["question_description"]}""></open-question-question>`;
+        html_right = ` <open-question-question media="${data["question_img"]}" author_propic="${data["pro_pic"]}" title="${data["question_title"]}" author="${data["f_name"]+" "+ data["l_name"]}"  description="${data["question_description"]}" qulifi="${data["qulification_level"]}""></open-question-question>`;
 
     }
     document.querySelector(".cont-body-right").innerHTML = html_right;
@@ -60,21 +60,22 @@ function renderLeft() {
             "";
 
         for (let i of data){
-            alert(i["status"])
+
+
             if (i["status"]== 0){ /**/
-                html_left += ` <q-1 question_ID="${i["question_Id"]}" img_src="${i["question_img"]}" title="${i["question_title"]}" accept="${i["f_name"]+" "+ i["l_name"]}" description="${i["question_description"]}""></q-1>`;
+                html_left += ` <q-1 question_ID="${i["question.question_id"]}" img_src="${i["question_img"]}" title="${i["question_title"]}" accept="${i["f_name"]+" "+ i["l_name"]}" description="${i["question_description"]}""></q-1>`;
             }else if (i["status"]== 1){
-                html_left += ` <q-2 question_ID="${i["question_Id"]}" img_src="${i["question_img"]}" title="${i["question_title"]}" accept="${i["f_name"]+" "+ i["l_name"]}" description="${i["question_description"]}""></q-2>`;
+                html_left += ` <q-2 question_ID="${i["question.question_id"]}" img_src="${i["question_img"]}" title="${i["question_title"]}" accept="${i["f_name"]+" "+ i["l_name"]}" description="${i["question_description"]}""></q-2>`;
             }
             else {
-                html_left += ` <q-4 question_ID="${i["question_Id"]}" img_src="${i["question_img"]}" title="${i["question_title"]}" accept="${i["f_name"]+" "+ i["l_name"]}" description="${i["question_description"]}""></q-4>`;
+                html_left += ` <q-4 question_ID="${i["question.question_id"]}" img_src="${i["question_img"]}" title="${i["question_title"]}" accept="${i["f_name"]+" "+ i["l_name"]}" description="${i["question_description"]}""></q-4>`;
             }
         }
 
         document.querySelector(".cont-body-left").innerHTML = html_left;
 
         let selected_session = document.querySelectorAll(".js-session");
-        alert(`Sessions length: ${selected_session.length}`);
+
 
         let clicked_data;
         let targetId;
@@ -84,8 +85,8 @@ function renderLeft() {
             session.addEventListener('click', (event)=>{
                 targetId = event.target.id.split("-");
                 buttonID = targetId[targetId.length-1];
-                alert(targetId[targetId.length-1]);
-                clicked_data = data.find((value)=>value["question_Id"] == buttonID )
+
+                clicked_data = data.find((value)=>value["question.question_id"] == buttonID )
                 console.log(clicked_data);
                 renderRight(clicked_data, 1); //1 for session 0 for question
             })
@@ -96,8 +97,8 @@ function renderLeft() {
             quession.addEventListener('click', (event)=>{
                 targetId = event.target.id.split("-");
                 buttonID = targetId[targetId.length-1];
-                alert(targetId[targetId.length-1]);
-                clicked_data = data.find((value)=>value["question_Id"] == buttonID )
+
+                clicked_data = data.find((value)=>value["question.question_id"] == buttonID )
                 console.log(clicked_data);
                 renderRight(clicked_data, 0); //1 for session 0 for question
             })
