@@ -7,18 +7,16 @@ class Search_main_quiz extends HTMLElement {
         let img_src = this.attributes.img_src.value;
         let title = this.attributes.title.value;
         let author = this.attributes.author.value;
-        let description = this.attributes.description.value;
-        let rating = this.attributes.rating.value;
-        let votes = this.attributes.votes.value;
+
         this.innerHTML = `
-        <div class="courseList-card" id="${content_ID}">
+        <div class="courseList-card search_quiz_main" id="${content_ID}">
         <div class="course-image">
             <img src="${img_src}" alt="course image">
         </div>
            
        
         <div class="course-details">
-            <h5>${title}</h5>
+            <h5><a href="/quiz_serachopen">${title}</a> </h5>
             <div class="tutor">
                 <div class="ratings">
                     <h6>by ${author}</h6>
@@ -28,7 +26,20 @@ class Search_main_quiz extends HTMLElement {
         
     </div>
         `;
+
+        let search_quiz = document.querySelectorAll(".search_quiz_main");
+
+        for (let element of search_quiz){
+            element.addEventListener('click',async (event)=> {
+
+                    let content_id = event.currentTarget.id;
+                    alert("ao")
+                    temporary_data = content_id;
+                    alert(temporary_data);
+                }
+            );
+        }
     }
 }
 
-customElements.define('search-main-quiz', Search_main_quiz);
+customElements.define('search-mainquiz', Search_main_quiz);

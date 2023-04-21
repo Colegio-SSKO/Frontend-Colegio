@@ -15,8 +15,20 @@ async function fetchData(){
         return res
 
 
+
+
+
 };
 
+
+        function addEventListenerToSmallListedItems() {
+            const smallListedItems = document.querySelectorAll("small-listed");
+            smallListedItems.forEach((item) => {
+                item.addEventListener('click', () => {
+                    alert('helloww');
+                });
+            });
+        }
 
 function renderSingle(){
 
@@ -32,7 +44,12 @@ function renderSingle(){
 
          document.querySelector(".cont-body-content").innerHTML = html_left;
 
+         addEventListenerToSmallListedItems();
+
+
 
      }
     );
+
+
 }

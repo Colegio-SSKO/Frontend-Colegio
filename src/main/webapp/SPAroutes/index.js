@@ -42,6 +42,25 @@ const Routes = {
         data : "This is the home page"
     },
 
+    "/small_cardopen" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Home_content.jsp",
+        script: "../static/viewsJS/small_card_open.js",
+        title: "small card open",
+        data : "This is the home page"
+    },
+
+    "/quiz_serachopen" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Home_content.jsp",
+        script: "../static/viewsJS/quiz_purchase_search.js",
+        title: "small card open",
+        data : "This is the home page"
+    },
+
+
 
     "/about" : {
         isSingle : false,
