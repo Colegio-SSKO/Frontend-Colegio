@@ -1,15 +1,12 @@
 class Search_quiz_open extends HTMLElement {
     async connectedCallback() {
 
-    alert("mekath weda habai")
         let img_src = this.attributes.img_src.value;
         let title = this.attributes.title.value;
         let description = this.attributes.description.value;
         let author = this.attributes.author.value;
         let date = this.attributes.date.value;
         let content_id = this.attributes.content_id.value;
-
-
 
         this.innerHTML = `
         <div class="featured-cont-wrap">
