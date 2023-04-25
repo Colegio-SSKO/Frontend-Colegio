@@ -1,18 +1,15 @@
 
-alert(typeof(bbb))
 async function fetchData(){
     let bbb = document.querySelector("#main_search_icon").value;
     try {
         let requestBody = {
             "name": bbb
         };
-        alert("sass")
         //uncomment this when connecting the database
         let url = "http://localhost:8090/api/users/search_main";
         let response = await fetch(url, {method: "POST", body: JSON.stringify(requestBody)});
         let data = await response.text();
         // alert("sads")
-        alert(data)
         return data;
     } catch (error) {
         console.error(error);
