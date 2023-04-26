@@ -1,4 +1,4 @@
-class Navbar extends HTMLElement {
+class Navbar1 extends HTMLElement {
     connectedCallback() {
 
 
@@ -30,4 +30,4 @@ class Navbar extends HTMLElement {
 
 }
 
-customElements.define('nav-bar', Navbar);
+customElements.define('nav-bar', Navbar1);
