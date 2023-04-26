@@ -21,11 +21,11 @@
         </div>
 
         <div class="side_icons">
-            <label> <a class="fnt fnt-bold fnt-mid" href="/quizzes">Quizzes</a></label>
+            <label> <a class="fnt fnt-bold fnt-mid" href="/quizzes">My Quizzes</a></label>
         </div>
 
         <div class="side_icons">
-            <label> <a class="fnt fnt-bold fnt-mid" href="/question">Questions</a></label>
+            <label> <a class="fnt fnt-bold fnt-mid" href="/question">My Questions</a></label>
         </div>
 
          <div class="side_icons">

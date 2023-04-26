@@ -1,4 +1,3 @@
-alert("student home");
 
 
 
@@ -25,7 +24,6 @@ async function fetchData(){
             const smallListedItems = document.querySelectorAll("small-listed");
             smallListedItems.forEach((item) => {
                 item.addEventListener('click', () => {
-                    alert('helloww');
                 });
             });
         }

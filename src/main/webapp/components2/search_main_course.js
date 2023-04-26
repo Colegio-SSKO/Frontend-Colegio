@@ -33,9 +33,7 @@ class Search_main_course extends HTMLElement {
             element.addEventListener('click',async (event)=> {
 
                     let content_id = event.currentTarget.id;
-                    alert("app")
                     temporary_data = content_id;
-                    alert(temporary_data);
                 }
             );
         }
