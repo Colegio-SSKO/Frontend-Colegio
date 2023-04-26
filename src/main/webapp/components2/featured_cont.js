@@ -24,8 +24,8 @@ class Featured_cont extends HTMLElement {
             </div>
 
             <div class="featured-cont-actions">
-                <button class="addtocart btn btn-solid btn-large" id="${data['content_id']}">Add to</button>
-                <button class="btn btn-solid btn-large">Buy Now</button>
+                <button class="addtocart btn btn-solid btn-large fnt fnt-bold fnt-mid" id="${data['content_id']}">Add to</button>
+                <button class="btn btn-solid btn-large fnt fnt-bold fnt-mid">Buy Now</button>
             </div>
 
         </div>
@@ -67,7 +67,6 @@ class Featured_cont extends HTMLElement {
 
 
                 let popup = document.querySelector(".popup-content");
-                alert("helloo weeessa")
                 document.querySelector(".popup-container").style.display = "flex";
 
                 alert(res.message);
