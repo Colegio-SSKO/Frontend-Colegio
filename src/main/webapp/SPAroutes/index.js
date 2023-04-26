@@ -3,7 +3,6 @@
 
 document.addEventListener("click", (ev)=>{
     let {target} = ev;
-    alert(target.classList[0]);
     if(target.matches(" a")){
         ev.preventDefault();
         router(target.href);
@@ -269,6 +268,7 @@ const Routes = {
 };
 
 
+
 const router = (newRoute) =>{
     window.history.pushState({}, "", newRoute);
     urlLocation();
@@ -292,14 +292,42 @@ const urlLocation = async () =>{
         location = "/";
     }
 
-    //if the path is /SPAroutesTeacher/index_single.jsp change it to "/"
-    // uncomment this after adding the signup and login
-    // if(location == "/SPAroutesTeacher/index.jsp"){
-    //     alert("www")
-    //     window.history.pushState({}, "", "/");
-    // }
+    if(location.includes("auth")){
+        alert("aa")
+        handleAuthRoutes(location);
+    }
+    else{
+        handleNormalRoutes(location);
+    }
+
+};
 
 
+const handleAuthRoutes = async (location) => {
+
+    //check is signup
+    let pageContent = "";
+    if(location.includes("signin")){
+        pageContent = `<sign-in></sign-in>`;
+
+        alert(pageContent);
+    }
+    else if (location.includes("signup")){
+        pageContent = "signup"
+    }
+    else{
+        window.history.pushState({}, "", "/");
+        urlLocation();
+    }
+
+    document.querySelector(".main-cont").innerHTML = pageContent;
+}
+
+
+
+
+
+const handleNormalRoutes = async (location)=>{
     const route = Routes[location] || Routes[404];
 
     //fetching the template
@@ -307,10 +335,8 @@ const urlLocation = async () =>{
         response.text()
     );
 
-
     //rendering the appropriate template
     document.querySelector(".cont-body").innerHTML = html_template;
-
 
     //re-executing js
     let target = document.getElementById("viewsScript");
@@ -318,8 +344,6 @@ const urlLocation = async () =>{
     let script= document.createElement('script');
     script.src=route.script;
     target.appendChild(script);
-
-
 
     //rendering the main content(left content)
     let html_cont_left = await fetch(route.path_left).then((response)=>
@@ -333,17 +357,12 @@ const urlLocation = async () =>{
     else{
 
         renderLeft();
-
-
-
-
     }
-
 
     //changing the page name
     document.querySelector(".pagename").innerText = route.title;
+}
 
-};
 
 urlLocation();
 
