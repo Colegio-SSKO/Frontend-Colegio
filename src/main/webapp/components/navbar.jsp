@@ -21,7 +21,7 @@
 
         <div class="main-profile router">
             <a href="/cart"><i class="is-a-route">shopping_cart</i></a>
-            <a href="/notification"><i>notifications</i></a>
+            <a href="/auth/signin"><i class="is-a-route">notifications</i></a>
             <div class="profile-pic">
                 <img src="../static/img/components_images/pro.png" alt="" srcset="">
             </div>

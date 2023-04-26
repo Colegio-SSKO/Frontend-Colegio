@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="../static/css/loginStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
 
 
     <link rel="stylesheet" href="../static/css/views_styles.css">
@@ -70,6 +75,7 @@
     <script src="../components2/navbar1.js"></script>
     <script src="../components2/search_main_teacher.js"></script>
     <script src="../components2/search_main_organization.js"></script>
+    <script src="../components2/signin.js"></script>
 
 
 
