@@ -67,7 +67,7 @@
     <script src="../components2/small_card_open_com.js"></script>
     <script src="../components2/search_result.js"></script>
     <script src="../components2/search_quiz_open.js"></script>
-    <script src="../components2/navbar.js"></script>
+    <script src="../components2/navbar1.js"></script>
     <script src="../components2/search_main_teacher.js"></script>
     <script src="../components2/search_main_organization.js"></script>
 

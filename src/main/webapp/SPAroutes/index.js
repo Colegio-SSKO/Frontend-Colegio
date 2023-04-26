@@ -3,12 +3,17 @@
 
 document.addEventListener("click", (ev)=>{
     let {target} = ev;
-    if(!target.matches(" a")){
-        return;
+    alert(target.classList[0]);
+    if(target.matches(" a")){
+        ev.preventDefault();
+        router(target.href);
+    }
+    else if(target.classList.contains("is-a-route")){
+        ev.preventDefault();
+        router(target.parentElement.href)
     }
     else{
-        ev.preventDefault();
-        router(ev);
+        return;
     }
 });
 
@@ -264,8 +269,8 @@ const Routes = {
 };
 
 
-const router = (ev) =>{
-    window.history.pushState({}, "", ev.target.href);
+const router = (newRoute) =>{
+    window.history.pushState({}, "", newRoute);
     urlLocation();
 
 
