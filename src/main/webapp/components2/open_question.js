@@ -1,11 +1,13 @@
 class Open_question extends HTMLElement {
     connectedCallback() {
 
+        let author_ID = this.attributes.author_ID.value;
         let img_src = this.attributes.img_src.value;
         let qulifi = this.attributes.qulifi.value;
         let title= this.attributes.title.value;
         let description= this.attributes.description.value;
         let author = this.attributes.author.value;
+        // let authour_ID =
         this.innerHTML = `
         <div class="open-question-wrap">
             <h4 class="fnt fnt-extraBold fnt-large">${title}</h4>
@@ -30,7 +32,7 @@ class Open_question extends HTMLElement {
         </div>
         <div class="open-question-msgBox">
             <form action="#">
-                <input type="text" name="message"  class="fnt" placeholder="Type your response" >
+                <input id="js-quession-chat-input" type="text" name="message"  class="fnt" placeholder="Type your response" >
 
                 <span class="material-icons">attach_file</span>
                 <send-button/>
@@ -57,7 +59,30 @@ class Open_question extends HTMLElement {
 </div>
 
         `;
+
+
+        let messageSendButton = document.querySelector("#js-quession-chat-send-btn");
+        let message = document.querySelector("#js-quession-chat-input");
+        let messageData = {};
+        messageSendButton.addEventListener('click', (event)=>{
+            alert("send btn ek wed")
+            event.preventDefault();
+            messageData = {
+                "message" : message.value,
+                "receiver": author_ID,
+                "sender" : getUserID()
+            }
+            console.log(messageData)
+
+            questionCHat.send(JSON.stringify(messageData));
+            message.value = "";
+        })
+
+
+
+
+
     }
 }
-    
+
 customElements.define('open-question', Open_question);

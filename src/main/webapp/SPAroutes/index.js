@@ -1,13 +1,21 @@
+
+
+
 document.addEventListener("click", (ev)=>{
     let {target} = ev;
-    if(!target.matches(" a")){
-        return;
+    if(target.matches(" a")){
+        ev.preventDefault();
+        router(target.href);
+    }
+    else if(target.classList.contains("is-a-route")){
+        ev.preventDefault();
+        router(target.parentElement.href)
     }
     else{
-        ev.preventDefault();
-        router(ev);
+        return;
     }
 });
+
 
 
 const Routes = {
@@ -19,21 +27,43 @@ const Routes = {
         data : "Page does not exists"
     },
 
-    "/SPAroutes/index.jsp" : {
-        isSingle : true,
-        template : "/SPAroutes/index_single.jsp",
-        path_left:"/views/Home_content.jsp",
-        title: "Home",
-        data : "This is the home page"
-    },
-
     "/" : {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Home_content.jsp",
+        script: "../static/viewsJS/home1.js",
         title: "Home",
         data : "This is the home page"
     },
+
+
+    "/test" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Home_content.jsp",
+        script: "../static/viewsJS/main_search1.js",
+        title: "Home",
+        data : "This is the home page"
+    },
+
+    "/small_cardopen" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Home_content.jsp",
+        script: "../static/viewsJS/small_card_open.js",
+        title: "small card open",
+        data : "This is the home page"
+    },
+
+    "/quiz_serachopen" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Home_content.jsp",
+        script: "../static/viewsJS/quiz_purchase_search.js",
+        title: "small card open",
+        data : "This is the home page"
+    },
+
 
 
     "/about" : {
@@ -70,7 +100,7 @@ const Routes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/Question_student_1_left.jsp",
         path_right: "/views/Question_student_1_right.jsp",
-        script: "../static/viewsJS/Student_question1.js",
+        script: "../static/viewsJS/Student_question.js",
         title: "Question",
         data : "This is the Question page"
     },
@@ -97,7 +127,7 @@ const Routes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Teahcer_profile.jsp",
-        script: "../static/viewsJS/Student_profile.js",
+        script: "../static/viewsJS/Student_profile_new1.js",
         path_right: "",
         title: "profile",
         data : "This is the profile page"
@@ -134,10 +164,11 @@ const Routes = {
     "/cart" : {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
-        path_left:"/views/1_item_in_cart.jsp",
+        path_left:"/views/view_cart.jsp",
+        script: "../static/viewsJS/View_cart.js",
         path_right: "",
-        title: "Cart",
-        data : "This is the cart page"
+        title: "cart",
+        data : "This is cart page"
     },
 
     "/notification" : {
@@ -153,7 +184,7 @@ const Routes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/",
-        script: "../static/viewsJS/edit_profile1.js",
+        script: "../static/viewsJS/edit_profile.js",
         path_right: "",
         title: "Notification",
         data : "This is the notification page"
@@ -173,10 +204,61 @@ const Routes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/",
-        script: "../static/viewsJS/change_password1.js",
+        script: "../static/viewsJS/change_password.js",
         path_right: "",
         title: "Notification",
         data : "This is the notification page"
+    },
+
+
+    "/organization" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Organization_view.jsp",
+        script: "../static/viewsJS/organization_view.js",
+        path_right: "",
+        title: "Organization",
+        data : "This is the notification page"
+    },
+
+    "/organization_Teachers" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Org_teacherlist_view(stu).jsp",
+        script: "../static/viewsJS/teacherlist_view.js",
+        path_right: "",
+        title: "Organization",
+        data : "This is the notification page"
+    },
+
+    "/Organization_profile(stu)" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Organization_profile(stu).jsp",
+        script: "../static/viewsJS/Organization_profile_new1.js",
+        path_right: "",
+        title: "Organization",
+        data : "This is the notification page"
+    },
+
+    "/teacher_course" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Organization_profile(stu).jsp",
+        script: "../static/viewsJS/teacher_course_view.js",
+        path_right: "",
+        title: "Organization",
+        data : "This is the notification page"
+    },
+
+    "/continuecourse" : {
+        isSingle : false,
+        template : "/SPAroutes/index_double.jsp",
+        path_left:"/views/Create_quiz_left.jsp",
+        path_right: "/views/Create_quiz_right.jsp",
+        script: "../static/viewsJS/Student_continue_course.js",
+        title: "Create quiz",
+        data : "This is the  create quiz page"
     },
 
 
@@ -186,13 +268,23 @@ const Routes = {
 };
 
 
-const router = (ev) =>{
-    window.history.pushState({}, "", ev.target.href);
+
+const router = (newRoute) =>{
+    window.history.pushState({}, "", newRoute);
     urlLocation();
+
+
 };
 
 
 const urlLocation = async () =>{
+
+    //changing the default path
+    if(window.location.pathname == "/SPAroutes/index.jsp"){
+        window.history.pushState({}, "", "/");
+
+    }
+
     let location = window.location.pathname;
 
     //setting the location to "/" if path is empty
@@ -200,14 +292,42 @@ const urlLocation = async () =>{
         location = "/";
     }
 
-    //if the path is /SPAroutesTeacher/index_single.jsp change it to "/"
-    // uncomment this after adding the signup and login
-    // if(location == "/SPAroutesTeacher/index.jsp"){
-    //     alert("www")
-    //     window.history.pushState({}, "", "/");
-    // }
+    if(location.includes("auth")){
+        alert("aa")
+        handleAuthRoutes(location);
+    }
+    else{
+        handleNormalRoutes(location);
+    }
+
+};
 
 
+const handleAuthRoutes = async (location) => {
+
+    //check is signup
+    let pageContent = "";
+    if(location.includes("signin")){
+        pageContent = `<sign-in></sign-in>`;
+
+        alert(pageContent);
+    }
+    else if (location.includes("signup")){
+        pageContent = "signup"
+    }
+    else{
+        window.history.pushState({}, "", "/");
+        urlLocation();
+    }
+
+    document.querySelector(".main-cont").innerHTML = pageContent;
+}
+
+
+
+
+
+const handleNormalRoutes = async (location)=>{
     const route = Routes[location] || Routes[404];
 
     //fetching the template
@@ -215,10 +335,8 @@ const urlLocation = async () =>{
         response.text()
     );
 
-
     //rendering the appropriate template
     document.querySelector(".cont-body").innerHTML = html_template;
-
 
     //re-executing js
     let target = document.getElementById("viewsScript");
@@ -227,9 +345,7 @@ const urlLocation = async () =>{
     script.src=route.script;
     target.appendChild(script);
 
-
-
-    //fetching the main content(left content)
+    //rendering the main content(left content)
     let html_cont_left = await fetch(route.path_left).then((response)=>
         response.text()
     );
@@ -239,22 +355,15 @@ const urlLocation = async () =>{
         renderSingle();
     }
     else{
-        //fetching the right hand side content as well
-        // let html_cont_right = await fetch(route.path_right).then((response)=>
-        //     response.text()
-        // );
 
         renderLeft();
-        // document.querySelector(".cont-body-right").innerHTML = html_cont_right;
-
-
-
     }
-
 
     //changing the page name
     document.querySelector(".pagename").innerText = route.title;
+}
 
-};
 
 urlLocation();
+
+

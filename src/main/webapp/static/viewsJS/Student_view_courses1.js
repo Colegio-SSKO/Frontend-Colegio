@@ -1,10 +1,10 @@
-alert("Hello cc");
+alert("Hello cc51");
 
 async function fetchData(){
 
 
 //uncomment this when connecting the database
-    let res = await fetch("http://localhost:8080/api/users/myCources/:1", {method : "GET"}).then((response)=>
+    let res = await fetch("http://localhost:8090/api/users/myCources/:"+ getUserID(), {method : "GET"}).then((response)=>
         response.json()
 
     );
@@ -20,7 +20,7 @@ function renderRight(data) {
     let html_right = "";
 
     html_right += `
-<open-course author_pic = "${data["pro_pic"]}" img_src="${data["media"]}" title="${data["course_title"]}" description="${data["description"]}" author="${data["f_name"] + " " +data["l_name"]}" author_title="${data["publisher_title"]}", heading="heading" content="" heading2="heading" content2=""></open-course>`;
+    <open-course author_pic = "${data["pro_pic"]}" img_src="${data["introduction_media"]}" title="${data["course_title"]}" description="${data["decription"]}" author="${data["f_name"] + " " +data["l_name"]}" author_title="${data["qulification_level"]}" course_id="${data["course_id"]}" content_id="${data["content_id"]}"></open-course>`;
     document.querySelector(".cont-body-right").innerHTML = html_right;
 
 
@@ -48,7 +48,7 @@ function renderLeft() {
 
 
         for (let i of data){
-            html_left += ` <listed-content content_ID="${i["content_id"]}" img_src="${i["media"]}" title="${i["course_title"]}" author="${i["f_name"] + " " +i["l_name"]}" description="${i["description"]}" rating=\"5\" votes=\"102\"></listed-content>`;
+            html_left += `  <pop-up></pop-up><listed-content content_ID="${i["content_id"]}" img_src="${i["introduction_media"]}" title="${i["course_title"]}" author="${i["f_name"] + " " +i["l_name"]}" description="${i["decription"]}" rating=\"5\" votes=\"102\"></listed-content>`;
         }
 
         document.querySelector(".cont-body-left").innerHTML = html_left;
@@ -71,9 +71,6 @@ function renderLeft() {
 
 
     });
-
-
-
 
 
 }

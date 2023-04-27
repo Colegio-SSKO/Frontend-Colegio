@@ -11,19 +11,19 @@
 </head>
 
 <body>
-<div class="q-1-cart-item">
-    <div class="q-1-tumbnail-img">
-        <img src="../static/img/Rectangle_231.png" alt="" srcset="">
-    </div>
+    <div class="q-2-cart-item">
 
-    <div class="q-1-content">
-        <h2 class="fnt fnt-bold fnt-large">Basic algebra grade 9 help</h2>
-        <p class="fnt fnt-bold fnt-small">Pending</p>
-        <h3 class="fnt fnt-light fnt-mid">Learn about western music in a way catered towards your OLs, fundemantals straight to master level. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum pariatur at natus id earum incidunt ipsam quis, recusandae tenetur quibusdam.</h3>
-        <button class="btn btn-small btn-solid"><a class="fnt fnt-bold fnt-mid" href="/session">Session</a></button>
-    </div>
+        <div class="q-2-content">
+            <h2 class="fnt fnt-bold fnt-large">Electronic Gates for GCE ALs Sinhala Medium</h2>
+            <p class="fnt fnt-small">pending</p>
+            <h3 class="fnt fnt-light fnt-mid">amet consectetur adipisicing elit. Dolorum pariatur at natus id earum incidunt ipsam quis, recusandae tenetur quibusdam.</h3>
+            <button class="btn btn-solid btn-small"><a class="fnt fnt-bold fnt-mid" href="/session">Session</a></button>
+        </div>
 
-</div>
+        <div class="q-2-price">
+            <img src="../static/img/components_images/more_vert.png" alt="">
+        </div>
+    </div>
 </body>
 
 </html>
