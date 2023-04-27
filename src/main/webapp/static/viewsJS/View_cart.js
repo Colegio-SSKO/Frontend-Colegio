@@ -1,4 +1,4 @@
-alert("View cartnew");
+alert("View cartnew1");
 
 async function fetchData(){
     const req = {
@@ -32,7 +32,7 @@ function renderSingle(){
         for (let i of data){
             html_left += ` <cart-item img_src="${i["img_src"]}" title="${i["title"]}" description="${i["description"]}" author="${i["author"]}" description2="${i["description2"]}" price="${i["price"]}" content_id="${i["content_id"]}"></cart-item>`;
         }
-        html_left +=  `<div style="text-align: center"><button class="btn btn-solid btn-large fnt fnt-bold fnt-mid">Keep Shopping</button></div>`;
+        html_left +=  `<div style="text-align: center"><a href="/"><button class="btn btn-solid btn-large fnt fnt-bold fnt-mid is-a-route">Keep Shopping</button></a></div>`;
         document.querySelector(".cont-body-content").innerHTML = html_left;
 
 

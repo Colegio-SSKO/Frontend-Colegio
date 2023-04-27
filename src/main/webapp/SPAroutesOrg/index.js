@@ -128,7 +128,7 @@ const Routes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/view_cart.jsp",
-        script: "../static/viewsJS/View_cart.js",
+        script: "../static/viewsJS/View_cart1.js",
         path_right: "",
         title: "cart",
         data : "This is cart page"
@@ -148,7 +148,7 @@ const Routes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/",
-        script: "../static/viewsJS/edit_profile.js",
+        script: "../static/viewsJS/edit_profile1.js",
         path_right: "",
         title: "Notification",
         data : "This is the notification page"
@@ -179,7 +179,7 @@ const Routes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Organization_view.jsp",
-        script: "../static/viewsJS/organization_view.js",
+        script: "../static/viewsJS/organization_view(teacher).js",
         path_right: "",
         title: "Organization",
         data : "This is the notification page"
@@ -189,7 +189,7 @@ const Routes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Org_teacherlist_view(stu).jsp",
-        script: "../static/viewsJS/teacherlist_view(org)1.js",
+        script: "../static/viewsJS/teacherlist_view.js",
         path_right: "",
         title: "Teachers",
         data : "This is the notification page"
@@ -209,9 +209,19 @@ const Routes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Organization_profile(stu).jsp",
-        script: "../static/viewsJS/teacher_course_view.js",
+        script: "../static/viewsJS/teacher_content_view.js",
         path_right: "",
         title: "Organization",
+        data : "This is the notification page"
+    },
+
+    "/myorganization_Teachers" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Organization_profile(stu).jsp",
+        script: "../static/viewsJS/teacherlist_view(org)1.js",
+        path_right: "",
+        title: "Invite Teacher",
         data : "This is the notification page"
     },
 
@@ -223,7 +233,57 @@ const Routes = {
         path_right: "",
         title: "Invite Teacher",
         data : "This is the notification page"
-    }
+    },
+
+    "/edit_profileOrg" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Organization_profile(stu).jsp",
+        script: "../static/viewsJS/edit_profile_org.js",
+        path_right: "",
+        title: "Invite Teacher",
+        data : "This is the notification page"
+    },
+    "/edit_email" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/",
+        script: "../static/viewsJS/edit_email.js",
+        path_right: "",
+        title: "Notification",
+        data : "This is the notification page"
+    },
+
+    "/change_password" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/",
+        script: "../static/viewsJS/change_password.js",
+        path_right: "",
+        title: "Notification",
+        data : "This is the notification page"
+    },
+
+    "/teacher_published_course" : {
+        isSingle : true,
+        template : "/SPAroutesTeacher/index_single.jsp",
+        path_left:"/views/Teahcer_profile.jsp",
+        path_right: "",
+        script: "../static/viewsJS/published_course_list(teacher)1.js",
+        title: "profile",
+        data : "This is the profile page"
+    },
+
+    "/teacher_published_quiz" : {
+        isSingle : true,
+        template : "/SPAroutesTeacher/index_single.jsp",
+        path_left:"/views/Teahcer_profile.jsp",
+        path_right: "",
+        script: "../static/viewsJS/published_quiz_list(teacher)1.js",
+        title: "profile",
+        data : "This is the profile page"
+    },
+
 
 
 

@@ -61,6 +61,12 @@
     <script src="../components2/organization_list(teacher).js"></script>
     <script src="../components2/org_req_teacher_card.js"></script>
     <script src="../components2/popup.js"></script>
+    <script src="../components2/edit_profileTeacher.js"></script>
+    <script src="../components2/edit_email.js"></script>
+    <script src="../components2/change_password.js"></script>
+    <script src="../components2/teacher_profile_card.js"></script>
+    <script src="../components2/teacher_published_course_quiz_card.js"></script>
+    <script src="../components2/published_course_quiz_list(teacher).js"></script>
 </div>
 
 <div id="viewsScript">

@@ -272,6 +272,26 @@ const Routes = {
         data : "This is the  create quiz page"
     },
 
+    "/teacher_published_course" : {
+        isSingle : true,
+        template : "/SPAroutesTeacher/index_single.jsp",
+        path_left:"/views/Teahcer_profile.jsp",
+        path_right: "",
+        script: "../static/viewsJS/published_course_list(teacher)1.js",
+        title: "profile",
+        data : "This is the profile page"
+    },
+
+    "/teacher_published_quiz" : {
+        isSingle : true,
+        template : "/SPAroutesTeacher/index_single.jsp",
+        path_left:"/views/Teahcer_profile.jsp",
+        path_right: "",
+        script: "../static/viewsJS/published_quiz_list(teacher)1.js",
+        title: "profile",
+        data : "This is the profile page"
+    },
+
 
 
 

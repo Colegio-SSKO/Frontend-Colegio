@@ -1,4 +1,4 @@
-alert("new_organization10");
+alert("new_organization101");
 
 async function fetchData(){
     const req = {
@@ -25,7 +25,7 @@ function renderSingle(){
         document.querySelector(".cont-body-content").innerHTML = html;
 
 
-        let teachers = document.querySelectorAll(".org_name");
+        let teachers = document.querySelectorAll(".teacher-card-wrap");
 
         for (let element of teachers) {
             element.addEventListener('click', async (event) => {

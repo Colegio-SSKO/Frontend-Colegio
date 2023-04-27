@@ -7,6 +7,7 @@ class Open_course extends HTMLElement {
         let description= this.attributes.description.value;
         let author = this.attributes.author.value;
         let author_title = this.attributes.author_title.value;
+        let rates_count = this.attributes.rates_count.value;
         let course_id = this.attributes.course_id.value;
         let content_id = this.attributes.content_id.value;
         this.innerHTML = `
@@ -17,11 +18,8 @@ class Open_course extends HTMLElement {
 
         <div class="cont-ratings">
             <span class="material-icons">star</span>
-            <span class="material-icons">star</span>
-            <span class="material-icons">star</span>
-            <span class="material-icons">star</span>
-            <span class="material-icons">star</span>
-            <span>(102)</span>
+            <div class="fnt fnt-light fnt-small">Rates:- </div>
+            <div class="fnt fnt-bold fnt-small">(${rates_count})</div>
     
         </div>
         
@@ -56,7 +54,7 @@ class Open_course extends HTMLElement {
                 document.querySelector(".popup-container").style.display = "flex";
 
                 popup.innerHTML = `
-                        <h4 class="fnt fnt-bold fnt-large">Add your Rates</h4>
+                        <h4 class="fnt fnt-bold fnt-large">Add your Ratess</h4>
                         <div class="rate">
                             <input type="radio" id="star5" name="rates" value="5" />
                             <label for="star5" title="text">5 stars</label>
@@ -79,6 +77,8 @@ class Open_course extends HTMLElement {
                     element.addEventListener('click',async (event)=>{
 
                         let rateValue = event.target.value;
+                        alert(rateValue);
+                        alert("sachini");
 
 
                         let requestBody= {

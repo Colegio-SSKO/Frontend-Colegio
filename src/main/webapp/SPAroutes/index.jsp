@@ -78,6 +78,9 @@
     <script src="../components2/signin.js"></script>
     <script src="../components2/notification_msg.js"></script>
     <script src="../components2/profile_upgrade_form.js"></script>
+    <script src="../components2/follow_course.js"></script>
+    <script src="../components2/teacher_published_course_quiz_card.js"></script>
+    <script src="../components2/published_course_quiz_list(teacher).js"></script>
 
 
 
