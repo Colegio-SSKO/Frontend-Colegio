@@ -67,7 +67,7 @@ body {
 .profile-card-wrap {
     width: 550px;
     height: 200px;
-    background-color: white;
+    background-color: #F9F7F7;
     display: flex;
     flex-direction: row;
     padding: 20px;
@@ -123,7 +123,7 @@ body {
 .cont-ratings span{
     margin-left: 2px;
     font-size: small;
-    color: #FE793D;
+    color: #112D4E;
 }
 
 .cont-ratings span:last-child{
@@ -142,7 +142,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: #ffffff;
+    background: #F9F7F7;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
     padding: 20px;
 }
@@ -156,7 +156,7 @@ body {
 }
 
 .open-question-msg {
-    background: #ffffff;
+    background: #F9F7F7;
     width: fit-content;
     padding-left: 20px;
     padding-right: 20px;
@@ -186,8 +186,8 @@ body {
     border-top-right-radius: 40px;
     border-bottom-right-radius: 0px;
     float: right;
-    background-color: #46344e;
-    color: white;
+    background-color: #112D4E;
+    color: #F9F7F7;
 }
 
 .open-question-msgBox {
@@ -230,7 +230,7 @@ body {
 
 .send-button{
     border-radius: 50%;
-    background-color: #46344e;
+    background-color: #112D4E;
     width: 35px;
     height: 35px;
     display: flex;
@@ -243,7 +243,7 @@ body {
 }
 
 .send-button span{
-    color: white !important;
+    color: #F9F7F7 !important;
     font-size: 22px;
 }
 
@@ -260,7 +260,7 @@ body {
     padding: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
     border-radius: 20px;
-    background: white;
+    background: #F9F7F7;
     margin: auto;
 }
 
@@ -292,7 +292,7 @@ body {
 .open-course-rating span{
     margin-left: 2px;
     font-size: small;
-    color: #46344e;
+    color: #112D4E;
 }
 
 .open-course-ratings span:last-child{
@@ -330,12 +330,13 @@ body {
     height: 230px;
     cursor: pointer;
     display: flex;
+    /*margin: auto;*/
     padding: 10px;
     justify-content: space-between;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
     border-radius: 20px;
     margin: 40px;
-    background: white;
+    background: #F9F7F7;
 }
 
 .featured-cont-image {
@@ -394,7 +395,7 @@ body {
 
 .desc-head {
     width: 20%;
-    background-color: #46344e;
+    background-color: #112D4E;
     height: 100%;
     display: flex;
     justify-content: space-around;
@@ -436,7 +437,7 @@ body {
     width: 550px;
     height: 380px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
-    background-color: white;
+    background-color: #F9F7F7;
     padding: 16px;
     padding-top: 0px;
     cursor: pointer;
@@ -463,7 +464,7 @@ body {
 .q-number {
     width: 15%;
     height: 100%;
-    background-color: #46344e;
+    background-color: #112D4E;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -505,7 +506,7 @@ body {
 .profilepic-card{
     width: 300px;
     height: 50px;
-    background-color: white;
+    background-color: #F9F7F7;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -573,17 +574,17 @@ body {
     height: 40px;
     border: 0px;
     border-radius: 30px;
-    color: #46344e;
+    color: #112D4E;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
 }
 
 .btn-solid{
-    background-color: white;
-    color: #46344e;
+    background-color: #F9F7F7;
+    color: #112D4E;
     border: 0px;
     border-radius: 30px;
     line-height: 15px;
-    border: 1px solid #46344e;
+    border: 1px solid #112D4E;
 }
 
 .btn-small{
@@ -603,7 +604,7 @@ body {
 }
 .btn-outlined {
     box-shadow: none;
-    border: 1px #46344e solid;
+    border: 1px #112D4E solid;
 }
 
 .courseList-card{
@@ -614,7 +615,7 @@ body {
     padding: 16px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
     border-radius: 20px;
-    background: white;
+    background: #F9F7F7;
 
 }
 
@@ -663,13 +664,11 @@ body {
 
 
 
-/*shopping cart style*/
-
 .cart-item{
     width: 800px;
     height: 250px;
     border-radius: 32px;
-    background: white;
+    background: #F9F7F7;
     margin-left: 10px;
     margin-bottom: 20px;
     padding: 15px;
@@ -702,6 +701,7 @@ body {
 }
 
 .cart-item-content h2{
+    font-weight: bold;
     margin-bottom: 16px;
 }
 
@@ -718,7 +718,7 @@ body {
 
 .cart-item-price button{
     background: transparent;
-    color: orange;
+    color: #112D4E;
     border: none;
 }
 
@@ -736,7 +736,7 @@ body {
 .comment-main {
     padding: 16px;
     width: 520px;
-    background: #ffffff;
+    background: #F9F7F7;
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
 }
@@ -786,7 +786,7 @@ body {
 
 .comment-cmnt {
     padding: 24px;
-    background: #ffffff;
+    background: #F9F7F7;
 
 }
 
@@ -820,7 +820,7 @@ body {
     position: absolute;
     left: 850px;
     border: none;
-    background-color: orange;
+    background-color: #112D4E;
     font-size: large;
     font-weight: bold;
     border-radius: 50%;
@@ -852,7 +852,7 @@ body {
 .noti-notification{
     width: 800px;
     height: 100px;
-    background: white;
+    background: #F9F7F7;
     border-radius: 16px;
     padding: 16px;
     display: flex;
@@ -885,7 +885,7 @@ body {
     margin-left: 150px;
     width: 350px;
     height: 60px;
-    background: white;
+    background: #F9F7F7;
     border-radius: 16px;
     padding: 5px;
     display: flex;
@@ -913,7 +913,7 @@ body {
     width: 560px;
     height: 230px;
     border-radius: 32px;
-    background: #ffffff;
+    background: #F9F7F7;
     padding: 5px;
     display: flex;
     flex-direction: row;
@@ -976,7 +976,7 @@ body {
     width: 560px;
     height: 550px;
     border-radius: 32px;
-    background: #ffffff;
+    background: #F9F7F7;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -1081,7 +1081,7 @@ body {
 .q-2-cart-item{
     width: 1330px;
     border-radius: 32px;
-    background: #ffffff;
+    background: #F9F7F7;
     padding: 16px;
     display: flex;
     flex-direction: row;
@@ -1116,7 +1116,7 @@ body {
 
 .q-3-main {
     padding: 16px;
-    background: #ffffff;
+    background: #F9F7F7;
     border-radius:32px;
     width: 90%;
     margin: auto;
@@ -1167,7 +1167,7 @@ body {
 }
 
 .q-3-cmnt {
-    background: #ffffff;
+    background: #F9F7F7;
 }
 
 .q-3-comment-box {
@@ -1214,7 +1214,7 @@ body {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
     padding: 10px;
     border-radius: 20px;
-    background: white;
+    background: #F9F7F7;
     margin:40px;
 }
 
@@ -1255,7 +1255,7 @@ body {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
     padding: 10px;
     border-radius: 20px;
-    background: white;
+    background: #F9F7F7;
     margin-left:850px;
 }
 
@@ -1346,7 +1346,7 @@ nav .main-profile i {
 }
 
 nav .main-profile .notif {
-    color: #46344e;
+    color: #112D4E;
     cursor: pointer;
 }
 
@@ -1383,7 +1383,7 @@ nav .main-profile h5 a{
 .sidebar1 {
     height: 100vh;
     width: 100%;
-    background: #46344e;
+    background: #112D4E;
     border-bottom-right-radius: 30px;
     border-top-right-radius: 30px;
     display: flex;
@@ -1405,7 +1405,7 @@ nav .main-profile h5 a{
 }
 
 .material-icons {
-    color: white;
+    color: #F9F7F7;
     display: flex;
     justify-content: center;
     margin-right: 5px;
@@ -1416,7 +1416,7 @@ nav .main-profile h5 a{
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    color: white;
+    color: #F9F7F7;
     margin: 10px;
     cursor: pointer;
     margin: 2rem 1rem;
@@ -1440,7 +1440,7 @@ h3{
 .question_form {
     width: 1400px;
     border-radius: 32px;
-    background: #ffffff;
+    background: #F9F7F7;
     padding: 16px;
     display: flex;
     flex-direction: column;
@@ -1461,7 +1461,7 @@ h3{
 .session_request_form{
     width: 1400px;
     border-radius: 32px;
-    background: #ffffff;
+    background: #F9F7F7;
     padding: 16px;
     display: flex;
     flex-direction: column;
@@ -1482,7 +1482,7 @@ h3{
 .quiz_form{
     width: 1400px;
     border-radius: 32px;
-    background: #ffffff;
+    background: #F9F7F7;
     padding: 16px;
     display: flex;
     flex-direction: column;
@@ -1502,7 +1502,7 @@ h3{
 .course_form{
     width: 1400px;
     border-radius: 32px;
-    background: #ffffff;
+    background: #F9F7F7;
     padding: 16px;
     display: flex;
     flex-direction: column;
@@ -1520,7 +1520,7 @@ h3{
 }
 
 .course_form .material-icons{
-    color: #46344e;
+    color: #112D4E;
 }
 
 
@@ -1848,7 +1848,7 @@ body {
 .profile-card-wrap {
     width: 550px;
     height: 200px;
-    background-color: white;
+    background-color: #F9F7F7;
     display: flex;
     flex-direction: row;
     padding: 20px;
@@ -1904,7 +1904,7 @@ body {
 .cont-ratings span{
     margin-left: 2px;
     font-size: small;
-    color: #FE793D;
+    color: #112D4E;
 }
 
 .cont-ratings span:last-child{
@@ -1923,7 +1923,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: #ffffff;
+    background: #F9F7F7;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
     padding: 20px;
 }
@@ -1937,7 +1937,7 @@ body {
 }
 
 .open-question-msg {
-    background: #ffffff;
+    background: #F9F7F7;
     width: fit-content;
     padding-left: 20px;
     padding-right: 20px;
@@ -1967,8 +1967,8 @@ body {
     border-top-right-radius: 40px;
     border-bottom-right-radius: 0px;
     float: right;
-    background-color: #46344e;
-    color: white;
+    background-color: #112D4E;
+    color: #F9F7F7;
 }
 
 .open-question-msgBox {
@@ -2011,7 +2011,7 @@ body {
 
 .send-button{
     border-radius: 50%;
-    background-color: #46344e;
+    background-color: #112D4E;
     width: 35px;
     height: 35px;
     display: flex;
@@ -2024,7 +2024,7 @@ body {
 }
 
 .send-button span{
-    color: white !important;
+    color: #F9F7F7 !important;
     font-size: 22px;
 }
 
@@ -2041,7 +2041,7 @@ body {
     padding: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
     border-radius: 20px;
-    background: white;
+    background: #F9F7F7;
     margin: auto;
 }
 
@@ -2081,7 +2081,7 @@ body {
 .open-course-rating span{
     margin-left: 2px;
     font-size: small;
-    color: #46344e;
+    color: #112D4E;
 }
 
 .open-course-ratings span:last-child{
@@ -2124,7 +2124,7 @@ body {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
     border-radius: 20px;
     margin-bottom: 40px;
-    background: white;
+    background: #F9F7F7;
 }
 
 .featured-cont-image {
@@ -2174,7 +2174,7 @@ body {
 
 .desc-head {
     width: 20%;
-    background-color: #46344e;
+    background-color: #112D4E;
     height: 100%;
     display: flex;
     justify-content: space-around;
@@ -2216,7 +2216,7 @@ body {
     width: 550px;
     height: 380px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
-    background-color: white;
+    background-color: #F9F7F7;
     padding: 16px;
     padding-top: 0px;
     cursor: pointer;
@@ -2243,7 +2243,7 @@ body {
 .q-number {
     width: 15%;
     height: 100%;
-    background-color: #46344e;
+    background-color: #112D4E;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2285,7 +2285,7 @@ body {
 .profilepic-card{
     width: 300px;
     height: 50px;
-    background-color: white;
+    background-color: #F9F7F7;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -2353,17 +2353,17 @@ body {
     height: 40px;
     border: 0px;
     border-radius: 30px;
-    color: #46344e;
+    color: #112D4E;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
 }
 
 .btn-solid{
-    background-color: white;
-    color: #46344e;
+    background-color: #F9F7F7;
+    color: #112D4E;
     border: 0px;
     border-radius: 30px;
     line-height: 15px;
-    border: 1px solid #46344e;
+    border: 1px solid #112D4E;
 }
 
 .btn-small{
@@ -2381,7 +2381,7 @@ body {
 }
 .btn-outlined {
     box-shadow: none;
-    border: 1px #46344e solid;
+    border: 1px #112D4E solid;
 }
 
 .courseList-card{
@@ -2392,7 +2392,7 @@ body {
     padding: 16px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
     border-radius: 20px;
-    background: white;
+    background: #F9F7F7;
     margin-bottom: 20px;
 }
 
@@ -2417,6 +2417,81 @@ body {
 
 
 
+
+/*new*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cart-item{
+    width: 1330px;
+    height: 280px;
+    border-radius: 32px;
+    background: #F9F7F7;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
+}
+
+
+.tumbnail-img{
+    width: 380px;
+    height: 248px;
+    margin-top: 5px;
+}
+
+.tumbnail-img img{
+    width: 100%;
+    height: 100%;
+
+}
+
+.cart-item-content{
+    margin-top: 5px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.cart-item-content h2{
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.cart-item-content h3{
+    margin-bottom: 16px;
+}
+
+.cart-item-price{
+    margin-top: 10px;
+}
+
+.cart-item-price button{
+    background: transparent;
+    color: #112D4E;
+    border: none;
+}
+
+
 .comment-cmnt-1{
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
 }
@@ -2424,7 +2499,7 @@ body {
 .comment-main {
     padding: 16px;
     width: 520px;
-    background: #ffffff;
+    background: #F9F7F7;
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
 }
@@ -2474,7 +2549,7 @@ body {
 
 .comment-cmnt {
     padding: 24px;
-    background: #ffffff;
+    background: #F9F7F7;
 
 }
 
@@ -2508,7 +2583,7 @@ body {
     position: absolute;
     left: 850px;
     border: none;
-    background-color: orange;
+    background-color: #112D4E;
     font-size: large;
     font-weight: bold;
     border-radius: 50%;
@@ -2540,7 +2615,7 @@ body {
 .noti-notification{
     width: 806px;
     height: 80px;
-    background: #ffffff;
+    background: #F9F7F7;
     border-radius: 16px;
     padding: 16px;
     display: flex;
@@ -2564,7 +2639,7 @@ body {
     width: 560px;
     height: 230px;
     border-radius: 32px;
-    background: #ffffff;
+    background: #F9F7F7;
     padding: 5px;
     display: flex;
     flex-direction: row;
@@ -2626,7 +2701,7 @@ body {
     width: 560px;
     height: 550px;
     border-radius: 32px;
-    background: #ffffff;
+    background: #F9F7F7;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -2731,7 +2806,7 @@ body {
 .q-2-cart-item{
     width: 1330px;
     border-radius: 32px;
-    background: #ffffff;
+    background: #F9F7F7;
     padding: 16px;
     display: flex;
     flex-direction: row;
@@ -2769,7 +2844,7 @@ body {
 
 .q-3-main {
     padding: 16px;
-    background: #ffffff;
+    background: #F9F7F7;
     border-radius:32px;
     width: 90%;
     margin: auto;
@@ -2820,7 +2895,7 @@ body {
 }
 
 .q-3-cmnt {
-    background: #ffffff;
+    background: #F9F7F7;
 }
 
 .q-3-comment-box {
@@ -2867,7 +2942,7 @@ body {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
     padding: 10px;
     border-radius: 20px;
-    background: white;
+    background: #F9F7F7;
     margin-bottom: 1rem;
 }
 
@@ -2973,7 +3048,7 @@ nav .main-profile i {
 }
 
 nav .main-profile .notif {
-    color: #46344e;
+    color: #112D4E;
     cursor: pointer;
 }
 
@@ -3011,7 +3086,7 @@ nav .main-profile h5 a{
     height: 100vh;
     width: 100%;
     z-index: 900;
-    background: #46344e;
+    background: #112D4E;
     border-bottom-right-radius: 30px;
     border-top-right-radius: 30px;
     display: flex;
@@ -3033,7 +3108,7 @@ nav .main-profile h5 a{
 }
 
 .material-icons {
-    color: white;
+    color: #F9F7F7;
     display: flex;
     justify-content: center;
     margin-right: 5px;
@@ -3044,7 +3119,7 @@ nav .main-profile h5 a{
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    color: white;
+    color: #F9F7F7;
     margin: 10px;
     cursor: pointer;
     margin: 2rem 1rem;
@@ -3068,7 +3143,7 @@ h3{
 .question_form {
     width: 1400px;
     border-radius: 32px;
-    background: #ffffff;
+    background: #F9F7F7;
     padding: 16px;
     display: flex;
     flex-direction: column;
@@ -3089,7 +3164,7 @@ h3{
 .session_request_form{
     width: 1400px;
     border-radius: 32px;
-    background: #ffffff;
+    background: #F9F7F7;
     padding: 16px;
     display: flex;
     flex-direction: column;
@@ -3110,7 +3185,7 @@ h3{
 .quiz_form{
     width: 1400px;
     border-radius: 32px;
-    background: #ffffff;
+    background: #F9F7F7;
     padding: 16px;
     display: flex;
     flex-direction: column;
@@ -3130,7 +3205,7 @@ h3{
 .course_form{
     width: 1400px;
     border-radius: 32px;
-    background: #ffffff;
+    background: #F9F7F7;
     padding: 16px;
     display: flex;
     flex-direction: column;
@@ -3275,7 +3350,7 @@ a{
     width: 880px;
     height: 500px;
     border-radius: 32px;
-    background-color: #ffffff;
+    background-color: #F9F7F7;
     margin: auto;
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
@@ -3430,11 +3505,11 @@ a{
 }
 
 .popup-content button{
-    background: #46344e;
+    background: #112D4E;
     padding: 5px 15px;
     border-radius: 10px;
     margin-top: 10px;
-    color: white;
+    color: #F9F7F7;
 
 }
 
@@ -3444,7 +3519,7 @@ a{
 
 .quiz-numbers-main{
     width: 490px;
-    background: #ffffff;
+    background: #F9F7F7;
 }
 
 .quiz-numbers{
@@ -3541,7 +3616,7 @@ a{
     padding-left: 5px;
     padding-right: 5px;
     border-radius: 10px;
-    background-color: white;
+    background-color: #F9F7F7;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin-top: 5px;
 }

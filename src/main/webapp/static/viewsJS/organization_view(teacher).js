@@ -1,4 +1,5 @@
-alert("new_organization10x");
+alert("new_organization10");
+
 
 async function fetchData(){
 
@@ -93,3 +94,8 @@ function renderSingle(){
         }
     });
 }
+
+
+
+
+

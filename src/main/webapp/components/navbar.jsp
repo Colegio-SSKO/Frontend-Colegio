@@ -20,8 +20,10 @@
         </div>
 
         <div class="main-profile router">
-            <i><a href="/cart">Shopping Cart</a></i>
-            <i><a href="/notification">notifications</a></i>
+            <a href="/cart"><img class="is-a-route" src="../static/img/components_images/shopping_cart.svg" alt=""></a>
+            <div class="noti-wrapper">
+                <a href="/notification"><img class="is-a-route" src="../static/img/components_images/notifications.svg" alt=""><span class="fnt fnt-small is-a-route">4</span></a>
+            </div>
             <div class="profile-pic">
                 <img src="../static/img/components_images/pro.png" alt="" srcset="">
             </div>

@@ -56,7 +56,7 @@ class search_result extends HTMLElement {
                 `;
                 }
                 else{
-                     popup.innerHTML = `
+                    popup.innerHTML = `
                        <img src="../static/img/components_images/error.jpg" alt="">
                        <h2>${res.message}</h2>
                        <button class="btn" id="ok-btn">OK</button>       

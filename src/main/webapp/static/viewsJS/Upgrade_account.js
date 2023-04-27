@@ -1,11 +1,3 @@
-alert("00ssssss")
-async function fetchData(){
-
-
-
-    return "eeew";
-};
-
 
 async function sendData(jsonRequest){
     await fetch("")
@@ -20,38 +12,38 @@ function renderSingle(){
 
         let html_left = "";
 
-        html_left += `  <pop-up></pop-up>  <edit-profile></edit-profile>`;
+        html_left += `  <pop-up></pop-up>  <upgrade-form></upgrade-form>`;
 
 
         document.querySelector(".cont-body-content").innerHTML = html_left;
 
-        let selected = document.querySelectorAll(".courseList-card");
+        let selected = document.querySelectorAll(".account-upgrade-container");
 
 
         //sending data
         let fName = document.querySelector(".fname");
         let lName = document.querySelector(".lname");
-        let edu = document.querySelector("#edu");
-        let gender = document.querySelector("#gender");
+        let edu_level = document.querySelector(".edu_level");
+        let quli_certificates = document.querySelector(".quli_certificates");
+        let references = document.querySelector(".refer");
 
-        let saveBtn = document.querySelector("#save-btn");
+        let submit_btn = document.querySelector("#submit_btn");
 
-        saveBtn.addEventListener('click', async ()=>{
+        submit_btn.addEventListener('click', async ()=>{
 
             let req = {
                 "fName" : fName.value,
                 "lName" : lName.value,
-                "edu" : edu.value,
-                "gender" : gender.value
+                "edu" : edu_level.value,
+                "quli" : quli_certificates.value,
+                "refer" : references.value
             }
-            let resp = await fetch("http://localhost:8080/api/users/editProfile/:1", {method : "POST",  body : JSON.stringify(req)}).then((data)=>{
+            let resp = await fetch("http://localhost:8090/api/users/upgrade_to_teacher/:1", {method : "POST",  body : JSON.stringify(req)}).then((data)=>{
                 return data.json()
             });
             let popup = document.querySelector(".popup-content");
-            alert("helloo weeessa")
             document.querySelector(".popup-container").style.display = "flex";
 
-            alert(resp);
             let isError = resp["isError"];
             let message = resp["message"];
             if (isError==0){
@@ -73,7 +65,6 @@ function renderSingle(){
 
             let ok_btn = document.getElementById("ok-btn");
             ok_btn.addEventListener("click", ()=>{
-                alert("ok eka wada");
                 document.querySelector(".popup-container").style.display = "none";
             })
         })
