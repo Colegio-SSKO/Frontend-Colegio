@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: CS COMPUTERS
-  Date: 1/30/2023
-  Time: 9:42 PM
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -15,38 +9,47 @@
     <jsp:include page="imports.jsp"/>
 </head>
 <body>
-<div class="course_form">
-    <h3 class="fnt fnt-bold fnt-large">Lets create your Course</h3><br>
-    <div class="inputs">
-        <div class="input-field">
-            <label for="" class="fnt fnt-mid">Select a unique title for your Course.</label><br><br>
-            <input type="text" required placeholder="Course Title">
-        </div><br><br>
+    <form>
+        <div class="course_form">
+            <h3 class="fnt fnt-bold fnt-large">Lets create your Course</h3><br>
+            <div class="inputs">
+                <div class="input-field">
+                    <label for="" class="fnt fnt-mid fnt-bold">Select a unique title for your Course.</label><br><br>
+                    <input type="text" class="fnt fnt-mid fnt-light" required placeholder="Course Title">
+                </div><br><br>
 
-        <div class="input-field">
-            <label for="" class="fnt fnt-mid">Select the most appropriate category for your course.</label><br><br>
-            <input type="text" required placeholder="Mathematics/ Science/ English...">
-        </div><br><br>
+                <div class="input-field">
+                    <label for="" class="fnt fnt-mid fnt-bold">Select the most appropriate category for your course.</label><br><br>
+                    <input type="text" class="fnt fnt-mid fnt-light" required placeholder="Mathematics/ Science/ English...">
+                </div><br><br>
 
-        <div class="input-field">
-            <label for="" class="fnt fnt-mid">Give your course a good description.</label><br><br>
-            <textarea class="description_box" name="description_box" rows="7" cols="40" placeholder="Enter course description here"></textarea>
+                <div class="input-field">
+                    <label for="" class="fnt fnt-mid fnt-bold">Give your course a good description.</label><br><br>
+                    <textarea class="fnt fnt-mid fnt-light description_box" name="description_box" rows="7" cols="40" placeholder="Enter course description here"></textarea>
+                </div><br><br>
+
+                <div class="input-field">
+                    <label for="" class="fnt fnt-mid fnt-bold">Course Thumbnail image
+                        <p style="color: #767676; margin: 10px 0;" class="fnt fnt-mid fnt-light">your course image here. <br>Important Guideline : At least 564x368 pixels; jpeg, jpg, or png</p></label>
+                </div>
+
+                <input type="file" class="myFile fnt fnt-light fnt-mid" name="filename"><br><br>
+
+                <div class="upload_pic"></div><br><br>
+
+                <div class="input-field">
+                    <label for="" class="fnt fnt-mid fnt-bold">Course Content Sections <br>
+                        <p style="color: #767676; margin: 10px 0" class="fnt fnt-mid fnt-light">Upload your course content here.<br> Important Guideline : All files should be at least 480p and less than 3 GB.</p>
+                    </label>
+
+                    <jsp:include page="../components/course_video_upload.jsp"/>
+                </div>
+
+
+
+            </div>
         </div>
+    </form>
 
-        <div class="input-field">
-            <label for="" class="fnt fnt-mid">Course Thumbnail image
-                <p style="color: #767676; margin: 10px 0;" class="fnt fnt-mid">your course image here. <br>Important Guideline : At least 564x368 pixels; jpeg, jpg, or png</p></label>
-            <img src="images/upload_question.svg" width="330px" height="250px" style="border: 0.5px solid black";>
-        </div>
-
-        <input type="file" class="myFile" name="filename">
-
-        <div class="input-field">
-            <label for="" class="fnt fnt-mid">Course Content Sections <br>
-                <p style="color: #767676; margin: 10px 0" class="fnt fnt-mid">Upload your course content here.<br> Important Guideline : All files should be at least 480p and less than 3 GB.</p>
-            </label>
-        </div>
-    </div>
-</div>
 </body>
 </html>

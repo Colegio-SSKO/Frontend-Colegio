@@ -2,15 +2,14 @@ class ContentList extends HTMLElement {
     connectedCallback() {
 
 
-        let dataString = this.attributes.dataString.value;
-
+        let dataString = decodeURIComponent(this.getAttribute('dataString'));
         let data = JSON.parse(dataString);
 
 
         let htmlcontent = "";
 
         for (let i of data) {
-            htmlcontent += `<small-listed votes="${i["votes"]}" rating="${i["ratings"]}" img_src="${i["img_src"]}" title="${i["title"]}" author="${i["author"]}" price="${i["price"]}"></small-listed>
+            htmlcontent += `<small-listed content_id="${i["content_id"]}" img_src="${i["img_src"]}" title="${i["title"]}" author="${i["author"]}" price="${i["price"]}"></small-listed>
             `;
         }
 
@@ -25,3 +24,8 @@ class ContentList extends HTMLElement {
 }
 
 customElements.define('content-list', ContentList);
+
+
+
+
+

@@ -27,5 +27,5 @@ class Question extends HTMLElement {
         `;
     }
 }
-    
+
 customElements.define('q-question', Question);

@@ -10,26 +10,21 @@ document.addEventListener("click", (ev)=>{
 });
 
 
+
 const Routes = {
     404 : {
         isSingle : true,
-        template : "/SPAroutesTeacher/index_single.jsp",
-        path_left:"/SPAroutesTeacher/pagenotfound.html",
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/SPAroutes/pagenotfound.html",
         title: "404 | Page not found",
         data : "Page does not exists"
-    },
-    "/SPAroutesTeacher/index.jsp" : {
-        isSingle : true,
-        template : "/SPAroutesTeacher/index_single.jsp",
-        path_left:"/views/Home_content.jsp",
-        title: "Home",
-        data : "This is the home page"
     },
 
     "/" : {
         isSingle : true,
-        template : "/SPAroutesTeacher/index_single.jsp",
+        template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Home_content.jsp",
+        script: "../static/viewsJS/home1.js",
         title: "Home",
         data : "This is the home page"
     },
@@ -49,7 +44,7 @@ const Routes = {
         template : "/SPAroutesTeacher/index_double.jsp",
         path_left:"/views/View_course2_left.jsp",
         path_right: "/views/View_course2_right.jsp",
-        script: "../static/viewsJS/view_courses1.js",
+        script: "../static/viewsJS/teacher_view_courses1.js",
         title: "My Courses",
         data : "This is the contact page"
     },
@@ -59,7 +54,7 @@ const Routes = {
         template : "/SPAroutesTeacher/index_double.jsp",
         path_left:"/views/Create_course_left.jsp",
         path_right: "/views/Create_course_right.jsp",
-        script: "../static/viewsJS/create_course1.js",
+        script: "../static/viewsJS/create_course2.js",
         title: "Create Course",
         data : "This is the create course page"
     },
@@ -97,7 +92,6 @@ const Routes = {
         template : "/SPAroutesTeacher/index_single.jsp",
         path_left:"/views/Teahcer_profile.jsp",
         path_right: "",
-        script: "../static/viewsJS/profile.js",
         title: "profile",
         data : "This is the profile page"
     },
@@ -133,7 +127,8 @@ const Routes = {
     "/cart" : {
         isSingle : true,
         template : "/SPAroutesTeacher/index_single.jsp",
-        path_left:"/views/1_item_in_cart.jsp",
+        path_left:"/views/view_cart.jsp",
+        script: "../static/viewsJS/View_cart.js",
         path_right: "",
         title: "Cart",
         data : "This is the cart page"
@@ -144,12 +139,44 @@ const Routes = {
         template : "/SPAroutesTeacher/index_single.jsp",
         path_left:"/views/Notification.jsp",
         path_right: "",
+        script: "../static/viewsJS/view_teacher_org_noti.js",
         title: "Notification",
         data : "This is the notification page"
-    }
+    },
+
+    "/organization" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Organization_view.jsp",
+        script: "../static/viewsJS/organization_view(teacher).js",
+        path_right: "",
+        title: "Organization",
+        data : "This is the notification page"
+    },
+
+    "/organization_Teachers" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Org_teacherlist_view(stu).jsp",
+        script: "../static/viewsJS/teacherlist_view(org)1.js",
+        path_right: "",
+        title: "Teachers",
+        data : "This is the notification page"
+    },
+
+    "/Organization_profile(stu)" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Organization_profile(stu).jsp",
+        script: "../static/viewsJS/Organization_profile_new1.js",
+        path_right: "",
+        title: "Organization",
+        data : "This is the notification page"
+    },
 
 
 };
+
 
 
 const router = (ev) =>{
@@ -161,6 +188,13 @@ const router = (ev) =>{
 
 
 const urlLocation = async () =>{
+
+    //changing the default path
+    // if(window.location.pathname == "/SPAroutesTeacher/index.jsp"){
+    //     window.history.pushState({}, "", "/");
+    //
+    // }
+
     let location = window.location.pathname;
 
     //setting the location to "/" if path is empty
@@ -216,9 +250,11 @@ const urlLocation = async () =>{
     }
 
 
-   //changing the page name
+    //changing the page name
     document.querySelector(".pagename").innerText = route.title;
 
 };
 
 urlLocation();
+
+

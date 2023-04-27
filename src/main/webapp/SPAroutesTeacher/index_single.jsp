@@ -16,6 +16,7 @@
 <script src="../components2/with_titles.js"></script>
 <script src="../components2/without_title.js"></script>
 <script src="../components2/help.js"></script>
+<script src="../components2/featured_cont.js"></script>
 
 <link rel="stylesheet" href="../static/css/index_single_style.css">
 <div class="cont-body-content">

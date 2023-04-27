@@ -10,10 +10,11 @@
 <body>
     <div class="noti-notification">
         <div class="noti-prof-img">
-            <img src="../static/img/components_images/profile%20picture.png" alt="">
+            <img src="../static/img/components_images/elec.jpg" alt="">
         </div>
         <div class="noti-msg">
             <h3 class="fnt fnt-bold fnt-mid">Ravin Silva has accepted your session request.</h3>
+
         </div>
     </div>
 </body>

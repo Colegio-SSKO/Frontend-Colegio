@@ -6,13 +6,15 @@ class Q_2 extends HTMLElement {
         let accept = this.attributes.accept.value;
         let description = this.attributes.description.value;
         this.innerHTML = `
-        <div class="q-2-cart-item js-questionCards" id="${question_ID}">
+        <div class="q-2-cart-item js-questionCards" >
 
-        <div class="q-2-content">
+        <div class="q-2-content" >
             <h2 class="fnt fnt-extraBold fnt-large">${title}</h2>
-            <p class="fnt fnt-small">${accept}</p>
+            <p class="fnt fnt-small">Session Accepted</p>
             <h3 class="fnt fnt-light fnt-mid">${description}</h3>
-            <button class="btn btn-solid btn-small js-questionButton">Session</button>
+            <button id="js-session-${question_ID}" class="btn btn-solid btn-small js-questionButton js-session">Session</button>
+            <button id="js-quession-${question_ID}" class="btn btn-solid btn-small js-questionButton js-question">Question</button>
+
         </div>
 
         <div class="q-2-price">
@@ -22,5 +24,5 @@ class Q_2 extends HTMLElement {
         `;
     }
 }
-    
+
 customElements.define('q-2', Q_2);

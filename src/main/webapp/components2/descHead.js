@@ -1,10 +1,10 @@
 class DescHead extends HTMLElement {
     connectedCallback() {
-
+        let course_media_id = this.attributes.course_media_id.value;
         let heading = this.attributes.heading.value;
         let content = this.attributes.content.value;
         this.innerHTML = `
-        <div class="desc-head-wrap">
+        <div id="${course_media_id}" class="desc-head-wrap">
         <div class="desc-head">${heading}</div>
         <div class="desc-cont">
             <p class="fnt fnt-light fnt-large">${content}</p>
@@ -14,5 +14,5 @@ class DescHead extends HTMLElement {
         `;
     }
 }
-    
+
 customElements.define('description-head', DescHead);
