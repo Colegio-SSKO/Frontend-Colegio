@@ -1,4 +1,4 @@
-class Signin extends HTMLElement {
+class Signin1 extends HTMLElement {
     connectedCallback() {
 
         this.innerHTML = `
@@ -72,7 +72,7 @@ class Signin extends HTMLElement {
                 }
 
 
-                let response = await fetch("http://localhost:8090/api/authenticate/signin", {method : "POST",  body : JSON.stringify(data)}).then((response) => {
+                let response = await fetch("http://localhost:8090/api/authenticate/signin", {method : "POST",  body : JSON.stringify(data), credentials: 'include'}).then((response) => {
                     return response;
                 })
 
@@ -83,8 +83,37 @@ class Signin extends HTMLElement {
 
                 else{
                     alert(receivedData["message"])
-                    window.location.replace("http://localhost:8080/");
+                    const jwtToken = await fetch("http://localhost:8090/api/users/getToken/", {
+                        credentials: 'include'
+                    })
+                        .then((response)=>{
+                            return response.json()
+                        })
 
+
+                    //notifications handling
+                    const notificationWebSocket = new WebSocket('ws://localhost:8090/notificationHandler');
+
+
+                    console.log("mekth wed");
+                    console.log(jwtToken["token"]);
+                    console.log("wed");
+                    notificationWebSocket.onopen = () =>{
+                        alert("open unaaa");
+                        const message = {
+                            "config" : true,
+                            "token" : jwtToken["token"]
+                        }
+                        notificationWebSocket.send(JSON.stringify(message));
+                    }
+
+                    notificationWebSocket.onerror = (error) => {
+                        console.error('notification web socket error:', error);
+                    };
+
+                    //sending to home page
+                    window.history.pushState({}, "", "/");
+                    urlLocation();
 
                 }
             }
@@ -98,4 +127,4 @@ class Signin extends HTMLElement {
     }
 }
 
-customElements.define('sign-in', Signin);
+customElements.define('sign-in', Signin1);

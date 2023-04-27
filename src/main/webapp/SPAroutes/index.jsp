@@ -75,7 +75,7 @@
     <script src="../components2/navbar1.js"></script>
     <script src="../components2/search_main_teacher.js"></script>
     <script src="../components2/search_main_organization.js"></script>
-    <script src="../components2/signin.js"></script>
+    <script src="../components2/signin1.js"></script>
 
 
 
