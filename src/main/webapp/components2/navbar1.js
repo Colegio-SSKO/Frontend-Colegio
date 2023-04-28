@@ -1,7 +1,22 @@
 class Navbar1 extends HTMLElement {
-    connectedCallback() {
 
 
+
+
+
+    async connectedCallback() {
+        alert("gemmmmmmak tm")
+        let userData = await fetch('http://localhost:8090/api/authenticate/getUserData/', {
+            method : "GET",
+            credentials: 'include'
+        }).then((response)=>{
+            return response.json();
+        })
+        alert(userData["userName"])
+
+        username = userData["userName"];
+        userID = userData["userID"];
+        userProfileImage = userData["userProPic"];
         this.innerHTML = `
     <nav>
 
@@ -15,17 +30,26 @@ class Navbar1 extends HTMLElement {
         <div class="main-profile router">
             <a href="/cart"><img class="is-a-route" src="../static/img/components_images/shopping_cart.svg" alt=""></a>
             <div class="noti-wrapper">
-                <a href="/notification"><img class="is-a-route" src="../static/img/components_images/notifications.svg" alt=""><span class="fnt fnt-small is-a-route">4</span></a>
+                <a href="/notification"><img class="is-a-route" src="../static/img/components_images/notifications.svg" alt=""><span id="navbar-notification-count" class="fnt fnt-small is-a-route">4</span></a>
             </div>
             <div class="profile-pic">
-                <img src="../static/img/components_images/pro.png" alt="" srcset="">
+                <img src="${userProfileImage}" alt="" srcset="">
             </div>
-            <h5 class="fnt fnt-bold fnt-mid"><a href="/profile">Senith Uthsara</a> </h5>
+            <h5 class="fnt fnt-bold fnt-mid"><a href="/profile">${username}</a> </h5>
         </div>
         
     </nav>
         `;
+
+
+            increaseNotificationCount = ()=>{
+            let notificationCount = document.querySelector("#navbar-notification-count");
+            let count = parseInt(notificationCount.innerHTML);
+            count++;
+            notificationCount.innerHTML = count.toString();
+        }
     }
+
 
 
 

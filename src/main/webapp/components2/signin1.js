@@ -91,13 +91,12 @@ class Signin1 extends HTMLElement {
                         })
 
 
-                    //notifications handling
-                    const notificationWebSocket = new WebSocket('ws://localhost:8090/notificationHandler');
-
-
                     console.log("mekth wed");
                     console.log(jwtToken["token"]);
                     console.log("wed");
+
+                    //notifications handling
+                    notificationWebSocket = new WebSocket('ws://localhost:8090/notificationHandler');
                     notificationWebSocket.onopen = () =>{
                         alert("open unaaa");
                         const message = {
@@ -106,14 +105,69 @@ class Signin1 extends HTMLElement {
                         }
                         notificationWebSocket.send(JSON.stringify(message));
                     }
+                    notificationWebSocket.onerror = (error) => {
+                        console.error('notification web socket error:', error);
+                    };
+
+
+                    //question chat handling
+                    questionCHat = new WebSocket('ws://localhost:8090/questionChatHandler');
+                    let chatContainer = document.querySelector(".open-question-chat");
+                    let receivedMessage;
+
+                    questionCHat.onopen = () => {
+                        alert("question chat ekth open una");
+                        const message = {
+                            "config" : true,
+                            "token" : jwtToken["token"]
+                        };
+                        questionCHat.send(JSON.stringify(message));
+                    }
 
                     notificationWebSocket.onerror = (error) => {
                         console.error('notification web socket error:', error);
                     };
 
+
+                    alert("methnta nm enw")
+                    questionCHat.addEventListener('message', (event)=>{
+                        alert("msg ek awa")
+                        receivedMessage = JSON.parse(event.data);
+
+                        if (receivedMessage["receiver"] == getUserID()){
+                            if (chatContainer){
+                                chatContainer.innerHTML += `
+                                <div class="open-question-msg open-question-incomMSG"><p>${receivedMessage["message"]}<br></p></div>
+                                <br>
+                                 `
+                            }
+                            else{
+                                alert(receivedMessage["message"]);
+                            }
+
+
+                        }
+                        else if(receivedMessage["sender"] == getUserID()){
+                            if (chatContainer){
+                                chatContainer.innerHTML += `
+                    <div class="open-question-msg open-question-outgoingMSG"> <p>${receivedMessage["message"]}</p></div>
+                    <br>
+            `
+                            }
+                            else{
+                                alert(receivedMessage["message"]);
+                            }
+
+                        }
+
+
+
+                        chatContainer.scrollTop = chatContainer.scrollHeight;
+                    })
+
+
                     //setting the user type
                     userType = 1;
-
                     //sending to home page
                     window.history.pushState({}, "", "/");
                     urlLocation();

@@ -68,6 +68,7 @@ class Open_question extends HTMLElement {
             alert("send btn ek wed")
             event.preventDefault();
             messageData = {
+                "config" : false,
                 "message" : message.value,
                 "receiver": author_ID,
                 "sender" : getUserID()
