@@ -1793,42 +1793,42 @@ h3{
 
 
 
-/*main ekta add krnna*/
-.rate {
-    float: left;
-    height: 46px;
-    padding: 0 10px;
-}
-.rate:not(:checked) > input {
-    position:absolute;
-    top:-9999px;
-}
-.rate:not(:checked) > label {
-    float:right;
-    width:1em;
-    overflow:hidden;
-    white-space:nowrap;
-    cursor:pointer;
-    font-size:50px;
-    color:#ccc;
-}
-.rate:not(:checked) > label:before {
-    content: '★ ';
-}
-.rate > input:checked ~ label {
-    color: #112D4E;
-}
-.rate:not(:checked) > label:hover,
-.rate:not(:checked) > label:hover ~ label {
-    color: #112D4E;
-}
-.rate > input:checked + label:hover,
-.rate > input:checked + label:hover ~ label,
-.rate > input:checked ~ label:hover,
-.rate > input:checked ~ label:hover ~ label,
-.rate > label:hover ~ input:checked ~ label {
-    color: #112D4E;
-}
+/*!*main ekta add krnna*!*/
+/*.rate {*/
+/*    float: left;*/
+/*    height: 46px;*/
+/*    padding: 0 10px;*/
+/*}*/
+/*.rate:not(:checked) > input {*/
+/*    position:absolute;*/
+/*    top:-9999px;*/
+/*}*/
+/*.rate:not(:checked) > label {*/
+/*    float:right;*/
+/*    width:1em;*/
+/*    overflow:hidden;*/
+/*    white-space:nowrap;*/
+/*    cursor:pointer;*/
+/*    font-size:50px;*/
+/*    color:#ccc;*/
+/*}*/
+/*.rate:not(:checked) > label:before {*/
+/*    content: '★ ';*/
+/*}*/
+/*.rate > input:checked ~ label {*/
+/*    color: #112D4E;*/
+/*}*/
+/*.rate:not(:checked) > label:hover,*/
+/*.rate:not(:checked) > label:hover ~ label {*/
+/*    color: #112D4E;*/
+/*}*/
+/*.rate > input:checked + label:hover,*/
+/*.rate > input:checked + label:hover ~ label,*/
+/*.rate > input:checked ~ label:hover,*/
+/*.rate > input:checked ~ label:hover ~ label,*/
+/*.rate > label:hover ~ input:checked ~ label {*/
+/*    color: #112D4E;*/
+/*}*/
 
 
 
@@ -1948,5 +1948,37 @@ input[type="file"] {
 .upgrade-textarea {
     resize: vertical;
     height: 80px;
+}
+
+
+
+
+
+.rating-box header {
+    font-size: 22px;
+    color: #3b3838;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.rating-box .stars {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.stars i {
+    color: #e6e6e6;
+    font-size: 35px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.stars i.active {
+    color: #112D4E;
+}
+
+.message{
+    margin: auto;
+    text-align: center;
 }
 
