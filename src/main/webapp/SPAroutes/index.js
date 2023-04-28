@@ -369,6 +369,18 @@ const handleNormalRoutes = async (location)=>{
     //rendering the appropriate template
     document.querySelector(".cont-body").innerHTML = html_template;
 
+    //rendering nav bar and sidebar
+
+    if (getUserType()==0){//visitor
+        document.querySelector("#sidebar-containter").innerHTML = `<sidebar-normaluser></sidebar-normaluser>`;
+        document.querySelector("#navbar-container").innerHTML = `<navbar-normaluser></navbar-normaluser>`;
+    }
+    else if(getUserType()==1){//student or a teacher
+        document.querySelector("#sidebar-containter").innerHTML = `<side-bar></side-bar>`;
+        document.querySelector("#navbar-container").innerHTML = `<nav-bar></nav-bar>`;
+    }
+
+
     //re-executing js
     let target = document.getElementById("viewsScript");
     target.innerHTML = "";

@@ -111,6 +111,9 @@ class Signin1 extends HTMLElement {
                         console.error('notification web socket error:', error);
                     };
 
+                    //setting the user type
+                    userType = 1;
+
                     //sending to home page
                     window.history.pushState({}, "", "/");
                     urlLocation();
