@@ -897,12 +897,16 @@ const handleNormalRoutes = async (location)=>{
     //rendering nav bar and sidebar
 
     if (getUserType()==0){//visitor
-        document.querySelector("#sidebar-containter").innerHTML = `<sidebar-normaluser></sidebar-normaluser>`;
         document.querySelector("#navbar-container").innerHTML = `<navbar-normaluser></navbar-normaluser>`;
+        document.querySelector("#sidebar-containter").innerHTML = `<sidebar-normaluser></sidebar-normaluser>`;
     }
-    else if(getUserType()==1 || getUserType()==2 ){//student or a teacher
-        document.querySelector("#sidebar-containter").innerHTML = `<side-bar></side-bar>`;
+    else if(getUserType()==1 ){//student
         document.querySelector("#navbar-container").innerHTML = `<nav-bar></nav-bar>`;
+        document.querySelector("#sidebar-containter").innerHTML = `<side-bar></side-bar>`;
+    }
+    else if (getUserType()==2){ //teacher
+        document.querySelector("#navbar-container").innerHTML = `<nav-bar></nav-bar>`;
+        document.querySelector("#sidebar-containter").innerHTML = `<sidebar-teacher></sidebar-teacher>`;
     }
 
 
