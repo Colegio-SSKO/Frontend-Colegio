@@ -1,16 +1,24 @@
+let userID = 1;
 function getUserID() {
-    let userID = 1;
+
     return userID;
 }
 
+let username = "Senith Uthsara";
 function  getUsername() {
-    let username = "Senith Uthsara";
+
     return username;
 }
-
+let userProfileImage = "../static/img/components_images/pro.png";
 function getUserProfileImage(){
-    let userProfileImage = "../static/img/components_images/pro.png";
+
     return userProfileImage;
+}
+
+let userType = 0;
+function getUserType(){
+
+    return userType;
 }
 
 let temporary_data;

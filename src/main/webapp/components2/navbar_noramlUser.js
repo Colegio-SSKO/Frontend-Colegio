@@ -10,10 +10,10 @@ class navbar_normaluser extends HTMLElement {
                     </div>
             
                     <div class="main-profile router">
-                        <div class="btn btn-outlined btn-small">Signin</div>
-                        <div class="noti-wrapper">
-                            <div class="btn btn-outlined btn-small">SignUp</div>
-                        </div>
+                        <a href="/auth/signin"><button class="btn btn-outlined btn-small is-a-route">Sign in</button><a>
+                    
+                         <button class="btn btn-outlined btn-small">Sign Up</button>
+                   
                     </div>
                     
                 </nav>

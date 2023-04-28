@@ -9,14 +9,16 @@ class Navbar1 extends HTMLElement {
         
         <div class="nav-middle">
             <input type="text" id="main_search_icon" class="fnt fnt-bold" placeholder="Search here ...">
-            <button style="display: none" class="btn btn-solid btn-small">search</button>
+            <button class="btn btn-solid"><a href="/test">search</a></button>
         </div>
 
         <div class="main-profile router">
-            <a href="/cart"><i class="material-icons-outlined">shopping_cart</i></a>
-            <i><a href="/notification">notifications</a></i>
+            <a href="/cart"><img class="is-a-route" src="../static/img/components_images/shopping_cart.svg" alt=""></a>
+            <div class="noti-wrapper">
+                <a href="/notification"><img class="is-a-route" src="../static/img/components_images/notifications.svg" alt=""><span class="fnt fnt-small is-a-route">4</span></a>
+            </div>
             <div class="profile-pic">
-                <img src="${getUserProfileImage()}" alt="" srcset="">
+                <img src="../static/img/components_images/pro.png" alt="" srcset="">
             </div>
             <h5 class="fnt fnt-bold fnt-mid"><a href="/profile">Senith Uthsara</a> </h5>
         </div>
