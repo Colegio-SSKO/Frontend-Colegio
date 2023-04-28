@@ -351,7 +351,7 @@ const handleAuthRoutes = async (location) => {
         urlLocation();
     }
 
-    document.querySelector(".main-cont").innerHTML = pageContent;
+    document.querySelector(".cont-body").innerHTML = pageContent;
 }
 
 

@@ -1,4 +1,4 @@
-
+alert("wedwed");
 async function fetchData(){
     const req = {
         "user_ID" : "23"
@@ -31,6 +31,8 @@ async function renderSingle() {
     } catch (error) {
         console.error(error);
     }
+
+
 }
 
 
