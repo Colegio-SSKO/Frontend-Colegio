@@ -1,4 +1,4 @@
-alert("organization_profile(org)");
+alert("organization_profile(org)   qqqqq");
 
 async function fetchData(){
     const req = {
@@ -6,7 +6,7 @@ async function fetchData(){
     }
 
 //uncomment this when connecting the database
-    let url = "http://localhost:8090/api/users/vieworganizationprofile/:"+ getOrgID();
+    let url = "http://localhost:8090/api/users/vieworganizationprofile/:"+ getUserID();
     let res3 = await fetch(url, {method: "GET"}).then((response) =>
         response.json()
     );
@@ -21,10 +21,10 @@ async function renderSingle() {
     try {
         const data = await fetchData();
         alert(typeof (data));
-        alert(data);
+        console.log(data);
         const res2 = await fetch("http://localhost:8090/api/users/ViewCont_list", { method: "GET" }).then((response) => response.text());
         const html_left = `
-                            <organizationprofile-card profile_img="${data.img_src}" name="${data.name}" address="${data.address}" tel_num="${data.tel_num}" organization_id="${data.organization_id}"></organizationprofile-card>`+ "Trending in Colegio"+ `<content-list dataString="${encodeURIComponent(res2)}"></content-list>`;
+                            <organizationprofile-card profile_img="${data["img_src"]}" name="${data["name"]}" address="${data["address"]}" tel_num="${data["tel_num"]}" organization_id="${data["organization_id"]}"></organizationprofile-card>`+ "Trending in Colegio"+ `<content-list dataString="${encodeURIComponent(res2)}"></content-list>`;
 
         document.querySelector(".cont-body-content").innerHTML = html_left;
 

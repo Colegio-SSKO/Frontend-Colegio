@@ -13,10 +13,12 @@ class Navbar1 extends HTMLElement {
             return response.json();
         })
         alert(userData["userName"])
+        alert(userData["userType"])
 
         username = userData["userName"];
         userID = userData["userID"];
         userProfileImage = userData["userProPic"];
+        userType = userData["userType"];
         this.innerHTML = `
     <nav>
 

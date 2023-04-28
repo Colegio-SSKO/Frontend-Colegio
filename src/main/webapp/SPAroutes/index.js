@@ -18,7 +18,7 @@ document.addEventListener("click", (ev)=>{
 
 
 
-const Routes = {
+const studentRoutes = {
     404 : {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
@@ -298,6 +298,514 @@ const Routes = {
 
 };
 
+const teacherRoutes =  {
+    404 : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/SPAroutes/pagenotfound.html",
+        title: "404 | Page not found",
+        data : "Page does not exists"
+    },
+
+    "/" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Home_content.jsp",
+        script: "../static/viewsJS/home1.js",
+        title: "Home",
+        data : "This is the home page"
+    },
+
+
+    "/about" : {
+        isSingle : false,
+        template : "/SPAroutesTeacher/index_double.jsp",
+        path_left:"/SPAroutesTeacher/about.html",
+        title: "about",
+        data : "This is the about page"
+    },
+
+
+    "/viewCourses" : {
+        isSingle : false,
+        template : "/SPAroutesTeacher/index_double.jsp",
+        path_left:"/views/View_course2_left.jsp",
+        path_right: "/views/View_course2_right.jsp",
+        script: "../static/viewsJS/teacher_view_courses1.js",
+        title: "My Courses",
+        data : "This is the contact page"
+    },
+
+    "/create_course" : {
+        isSingle : false,
+        template : "/SPAroutesTeacher/index_double.jsp",
+        path_left:"/views/Create_course_left.jsp",
+        path_right: "/views/Create_course_right.jsp",
+        script: "../static/viewsJS/create_course2.js",
+        title: "Create Course",
+        data : "This is the create course page"
+    },
+
+    "/question" : {
+        isSingle : false,
+        template : "/SPAroutesTeacher/index_double.jsp",
+        path_left:"/views/Question_student_1_left.jsp",
+        path_right: "/views/Question_student_1_right.jsp",
+        script: "../static/viewsJS/question1.js",
+        title: "Question",
+        data : "This is the Question page"
+    },
+
+    "/session_request" : {
+        isSingle : false,
+        template : "/SPAroutesTeacher/index_double.jsp",
+        path_left:"/views/Session_request_left.jsp",
+        path_right: "/views/Session_request_right.jsp",
+        title: "Session Request",
+        data : "This is the Session request page"
+    },
+
+    "/publish_question" : {
+        isSingle : false,
+        template : "/SPAroutesTeacher/index_double.jsp",
+        path_left:"/views/publish_question_left.jsp",
+        path_right: "/views/publish_question_right.jsp",
+        title: "Publish Question",
+        data : "This is the Publish question page"
+    },
+
+    "/profile" : {
+        isSingle : true,
+        template : "/SPAroutesTeacher/index_single.jsp",
+        path_left:"/views/Teahcer_profile.jsp",
+        path_right: "",
+        script: "../static/viewsJS/teacher_profile(teacher)1.js",
+        title: "profile",
+        data : "This is the profile page"
+    },
+
+    "/quizzes" : {
+        isSingle : false,
+        template : "/SPAroutesTeacher/index_double.jsp",
+        path_left:"/views/Quiz_teacher_org1_left.jsp",
+        path_right: "/views/Quiz_teacher_org1_right.jsp",
+        script: "../static/viewsJS/view_quizzes.js",
+        title: "Quizzes",
+        data : "This is the quiz page"
+    },
+
+    "/create_quiz" : {
+        isSingle : false,
+        template : "/SPAroutesTeacher/index_double.jsp",
+        path_left:"/views/Create_quiz_left.jsp",
+        path_right: "/views/Create_quiz_right.jsp",
+        title: "Create quiz",
+        data : "This is the  create quiz page"
+    },
+
+    "/start_quiz" : {
+        isSingle : false,
+        template : "/SPAroutesTeacher/index_double.jsp",
+        path_left:"/views/Start_quiz_left.jsp",
+        path_right: "/views/Start_quiz_right.jsp",
+        title: "Start Quiz",
+        data : "This is the start quiz page"
+    },
+
+    "/cart" : {
+        isSingle : true,
+        template : "/SPAroutesTeacher/index_single.jsp",
+        path_left:"/views/view_cart.jsp",
+        script: "../static/viewsJS/View_cart.js",
+        path_right: "",
+        title: "Cart",
+        data : "This is the cart page"
+    },
+
+    "/notification" : {
+        isSingle : true,
+        template : "/SPAroutesTeacher/index_single.jsp",
+        path_left:"/views/Notification.jsp",
+        path_right: "",
+        script: "../static/viewsJS/view_teacher_org_noti.js",
+        title: "Notification",
+        data : "This is the notification page"
+    },
+
+    "/organization" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Organization_view.jsp",
+        script: "../static/viewsJS/organization_view(teacher).js",
+        path_right: "",
+        title: "Organization",
+        data : "This is the notification page"
+    },
+
+    "/organization_Teachers" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Org_teacherlist_view(stu).jsp",
+        script: "../static/viewsJS/teacherlist_view.js",
+        path_right: "",
+        title: "Teachers",
+        data : "This is the notification page"
+    },
+
+    "/teacher_content" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Organization_profile(stu).jsp",
+        script: "../static/viewsJS/teacher_content_view.js",
+        path_right: "",
+        title: "Organization",
+        data : "This is the notification page"
+    },
+
+    "/Organization_profile(stu)" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Organization_profile(stu).jsp",
+        script: "../static/viewsJS/Organization_profile_new1.js",
+        path_right: "",
+        title: "Organization",
+        data : "This is the notification page"
+    },
+
+    "/edit_profileTeacher" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Organization_profile(stu).jsp",
+        script: "../static/viewsJS/edit_profile_teacher.js",
+        path_right: "",
+        title: "Invite Teacher",
+        data : "This is the notification page"
+    },
+    "/edit_email" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/",
+        script: "../static/viewsJS/edit_email.js",
+        path_right: "",
+        title: "Notification",
+        data : "This is the notification page"
+    },
+
+    "/change_password" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/",
+        script: "../static/viewsJS/change_password.js",
+        path_right: "",
+        title: "Notification",
+        data : "This is the notification page"
+    },
+
+    "/teacher_published_course" : {
+        isSingle : true,
+        template : "/SPAroutesTeacher/index_single.jsp",
+        path_left:"/views/Teahcer_profile.jsp",
+        path_right: "",
+        script: "../static/viewsJS/published_course_list(teacher)1.js",
+        title: "profile",
+        data : "This is the profile page"
+    },
+
+    "/teacher_published_quiz" : {
+        isSingle : true,
+        template : "/SPAroutesTeacher/index_single.jsp",
+        path_left:"/views/Teahcer_profile.jsp",
+        path_right: "",
+        script: "../static/viewsJS/published_quiz_list(teacher)1.js",
+        title: "profile",
+        data : "This is the profile page"
+    },
+
+
+};
+
+const organizationRoutes = {
+    404 : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/SPAroutes/pagenotfound.html",
+        title: "404 | Page not found",
+        data : "Page does not exists"
+    },
+
+    "/" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Home_content.jsp",
+        title: "Home",
+        data : "This is the home page"
+    },
+
+
+    "/about" : {
+        isSingle : false,
+        template : "/SPAroutes/index_double.jsp",
+        path_left:"/SPAroutes/about.html",
+        title: "about",
+        data : "This is the about page"
+    },
+
+
+    "/viewCourses" : {
+        isSingle : false,
+        template : "/SPAroutes/index_double.jsp",
+        path_left:"/views/View_course2_left.jsp",
+        path_right: "/views/View_course2_right.jsp",
+        script: "../static/viewsJS/Student_view_courses1.js",
+        title: "My Courses",
+        data : "This is the contact page"
+    },
+
+    "/create_course" : {
+        isSingle : false,
+        template : "/SPAroutes/index_double.jsp",
+        path_left:"/views/Create_course_left.jsp",
+        path_right: "/views/Create_course_right.jsp",
+        script: "../static/viewsJS/create_course.js",
+        title: "Create Course",
+        data : "This is the create course page"
+    },
+
+    "/question" : {
+        isSingle : false,
+        template : "/SPAroutes/index_double.jsp",
+        path_left:"/views/Question_student_1_left.jsp",
+        path_right: "/views/Question_student_1_right.jsp",
+        script: "../static/viewsJS/question1.js",
+        title: "Question",
+        data : "This is the Question page"
+    },
+
+    "/session_request" : {
+        isSingle : false,
+        template : "/SPAroutes/index_double.jsp",
+        path_left:"/views/Session_request_left.jsp",
+        path_right: "/views/Session_request_right.jsp",
+        title: "Session Request",
+        data : "This is the Session request page"
+    },
+
+    "/publish_question" : {
+        isSingle : false,
+        template : "/SPAroutes/index_double.jsp",
+        path_left:"/views/publish_question_left.jsp",
+        path_right: "/views/publish_question_right.jsp",
+        title: "Publish Question",
+        data : "This is the Publish question page"
+    },
+
+    "/profile" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Teahcer_profile.jsp",
+        script: "../static/viewsJS/Organization_profile(org).js",
+        path_right: "",
+        title: "profile",
+        data : "This is the profile page"
+    },
+
+    "/quizzes" : {
+        isSingle : false,
+        template : "/SPAroutes/index_double.jsp",
+        path_left:"/views/Quiz_teacher_org1_left.jsp",
+        path_right: "/views/Quiz_teacher_org1_right.jsp",
+        script: "../static/viewsJS/Student_view_quizzes1.js",
+        title: "Quizzes",
+        data : "This is the quiz page"
+    },
+
+    "/create_quiz" : {
+        isSingle : false,
+        template : "/SPAroutes/index_double.jsp",
+        path_left:"/views/Create_quiz_left.jsp",
+        path_right: "/views/Create_quiz_right.jsp",
+        title: "Create quiz",
+        data : "This is the  create quiz page"
+    },
+
+    "/start_quiz" : {
+        isSingle : false,
+        template : "/SPAroutes/index_double.jsp",
+        path_left:"/views/Start_quiz_left.jsp",
+        path_right: "/views/Start_quiz_right.jsp",
+        title: "Start Quiz",
+        data : "This is the start quiz page"
+    },
+
+    "/cart" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/view_cart.jsp",
+        script: "../static/viewsJS/View_cart1.js",
+        path_right: "",
+        title: "cart",
+        data : "This is cart page"
+    },
+
+    "/notification" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Notification.jsp",
+        path_right: "",
+        script: "../static/viewsJS/view_org_teacher_noti.js",
+        title: "Notification",
+        data : "This is the notification page"
+    },
+
+    "/edit_profile" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/",
+        script: "../static/viewsJS/edit_profile1.js",
+        path_right: "",
+        title: "Notification",
+        data : "This is the notification page"
+    },
+
+    "/edit_email" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/",
+        script: "../static/viewsJS/edit_email.js",
+        path_right: "",
+        title: "Notification",
+        data : "This is the notification page"
+    },
+
+    "/change_password" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/",
+        script: "../static/viewsJS/change_password.js",
+        path_right: "",
+        title: "Notification",
+        data : "This is the notification page"
+    },
+
+
+    "/organization" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Organization_view.jsp",
+        script: "../static/viewsJS/organization_view(teacher).js",
+        path_right: "",
+        title: "Organization",
+        data : "This is the notification page"
+    },
+
+    "/organization_Teachers" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Org_teacherlist_view(stu).jsp",
+        script: "../static/viewsJS/teacherlist_view.js",
+        path_right: "",
+        title: "Teachers",
+        data : "This is the notification page"
+    },
+
+    "/Organization_profile(stu)" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Organization_profile(stu).jsp",
+        script: "../static/viewsJS/Organization_profile_new1.js",
+        path_right: "",
+        title: "Organization",
+        data : "This is the notification page"
+    },
+
+    "/teacher_course" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Organization_profile(stu).jsp",
+        script: "../static/viewsJS/teacher_content_view.js",
+        path_right: "",
+        title: "Organization",
+        data : "This is the notification page"
+    },
+
+    "/myorganization_Teachers" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Organization_profile(stu).jsp",
+        script: "../static/viewsJS/teacherlist_view(org)1.js",
+        path_right: "",
+        title: "Invite Teacher",
+        data : "This is the notification page"
+    },
+
+    "/invite_teachers" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Organization_profile(stu).jsp",
+        script: "../static/viewsJS/invite_teacher_view1.js",
+        path_right: "",
+        title: "Invite Teacher",
+        data : "This is the notification page"
+    },
+
+    "/edit_profileOrg" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Organization_profile(stu).jsp",
+        script: "../static/viewsJS/edit_profile_org.js",
+        path_right: "",
+        title: "Invite Teacher",
+        data : "This is the notification page"
+    },
+    "/edit_email" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/",
+        script: "../static/viewsJS/edit_email.js",
+        path_right: "",
+        title: "Notification",
+        data : "This is the notification page"
+    },
+
+    "/change_password" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/",
+        script: "../static/viewsJS/change_password.js",
+        path_right: "",
+        title: "Notification",
+        data : "This is the notification page"
+    },
+
+    "/teacher_published_course" : {
+        isSingle : true,
+        template : "/SPAroutesTeacher/index_single.jsp",
+        path_left:"/views/Teahcer_profile.jsp",
+        path_right: "",
+        script: "../static/viewsJS/published_course_list(teacher)1.js",
+        title: "profile",
+        data : "This is the profile page"
+    },
+
+    "/teacher_published_quiz" : {
+        isSingle : true,
+        template : "/SPAroutesTeacher/index_single.jsp",
+        path_left:"/views/Teahcer_profile.jsp",
+        path_right: "",
+        script: "../static/viewsJS/published_quiz_list(teacher)1.js",
+        title: "profile",
+        data : "This is the profile page"
+    },
+
+
+
+
+
+
+};
+
+
+
 
 
 const router = (newRoute) =>{
@@ -359,6 +867,23 @@ const handleAuthRoutes = async (location) => {
 
 
 const handleNormalRoutes = async (location)=>{
+
+    //selecting the appropriate route
+    let Routes;
+    if (getUserType() == 1){
+        Routes = studentRoutes;
+    }
+    else if (getUserType() == 2){
+        Routes = teacherRoutes;
+    }
+    else if(getUserType()==3){
+        Routes = organizationRoutes;
+    }
+    else {
+        Routes = studentRoutes;
+    }
+
+
     const route = Routes[location] || Routes[404];
 
     //fetching the template
@@ -375,7 +900,7 @@ const handleNormalRoutes = async (location)=>{
         document.querySelector("#sidebar-containter").innerHTML = `<sidebar-normaluser></sidebar-normaluser>`;
         document.querySelector("#navbar-container").innerHTML = `<navbar-normaluser></navbar-normaluser>`;
     }
-    else if(getUserType()==1){//student or a teacher
+    else if(getUserType()==1 || getUserType()==2 ){//student or a teacher
         document.querySelector("#sidebar-containter").innerHTML = `<side-bar></side-bar>`;
         document.querySelector("#navbar-container").innerHTML = `<nav-bar></nav-bar>`;
     }
