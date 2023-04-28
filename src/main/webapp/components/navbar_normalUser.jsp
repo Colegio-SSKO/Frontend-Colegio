@@ -12,7 +12,7 @@
 <body>
     <nav>
 
-        <h3 class="pagename fnt fnt-bold fnt-extraLarge">Notifications</h3>
+        <h3 class="pagename fnt fnt-bold fnt-extraLarge">Home</h3>
         
         <div class="nav-middle">
             <input type="text" id="main_search_icon" class="fnt fnt-bold" placeholder="Search here ...">
