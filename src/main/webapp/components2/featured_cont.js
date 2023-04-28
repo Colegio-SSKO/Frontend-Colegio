@@ -16,15 +16,15 @@ class Featured_cont extends HTMLElement {
         <div class="featured-cont">
             <div class="featured-cont-details">
                 <h4 class="fnt fnt-extraBold fnt-large">${data['title']}</h4>
-                <p class="fnt fnt-bold fnt-mid">${data['description']}</p>
-                <h6 class="fnt fnt-bold fnt-small">By ${data['author']}</h6><br>
+                <p class="fnt fnt-bold fnt-mid">${data['description']}</p><br>
+                <h6 class="fnt fnt-bold fnt-small">By ${data['author']}</h6>
                 <h6 class="fnt fnt-small">Published on <bold>${data['date']}</bold>| ${data['subject']}</h6>
 
                 <h3 class="fnt fnt-bold fnt-extraLarge">LKR.${data['price']}</h3>
             </div>
 
             <div class="featured-cont-actions">
-                <button class="addtocart btn btn-solid btn-large fnt fnt-bold fnt-mid" id="${data['content_id']}">Add to</button>
+                <button class="addtocart btn btn-solid btn-large fnt fnt-bold fnt-mid" id="${data['content_id']}">Add to Cart</button>
                 <button class="btn btn-solid btn-large fnt fnt-bold fnt-mid">Buy Now</button>
             </div>
 

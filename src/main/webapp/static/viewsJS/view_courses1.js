@@ -2,7 +2,8 @@ alert("Helleo");
 
 async function fetchData() {
     const req = {
-        "user_ID" : "23"
+        "user_ID" : "23",
+        "name": ""
     }
 
 // uncomment this when connecting the database

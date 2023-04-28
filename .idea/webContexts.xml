@@ -5,6 +5,7 @@
       <map>
         <entry key="file://$PROJECT_DIR$/src/main/webapp/SPAroutes/index.jsp" value="file://$PROJECT_DIR$/src/main/webapp/SPAroutes" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/components/navbar.jsp" value="file://$PROJECT_DIR$/src/main/webapp/components" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/views/Organization_profile.jsp" value="file://$PROJECT_DIR$/src/main/webapp/views" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/views/Question_student_1_left.jsp" value="file://$PROJECT_DIR$/src/main/webapp/views" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/views/Question_student_1_right.jsp" value="file://$PROJECT_DIR$/src/main/webapp/views" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/views/view_course_left.jsp" value="file://$PROJECT_DIR$/src/main/webapp/views" />

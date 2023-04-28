@@ -6,7 +6,7 @@ class Organization_card extends HTMLElement {
         let address = this.attributes.address.value;
         let organization_id = this.attributes.organization_id.value;
         this.innerHTML = `
-        <div class="teacher-card-wrap">
+        <a href="/Organization_profile(stu)"><div class="teacher-card-wrap is-a-route" id="${organization_id}">
 
         <div class="teacher-card-image">
             <img src="${img_src}" alt="course image"><br/>
@@ -14,12 +14,12 @@ class Organization_card extends HTMLElement {
 
 
         <div class="teacher-card-details">
-            <h5 class="fnt fnt-bold fnt-large"><a class="org_name" href="/Organization_profile(stu)" style="text-decoration: none"  id="${organization_id}">${name}</a></h5>
+            <h5 class="fnt fnt-bold fnt-large org_name">${name}</h5>
             <h5 class="fnt fnt-bold fnt-mid">${address}</h5>
         </div>
 
 
-        </div>
+        </div></a>
         `;
     }
 }

@@ -25,7 +25,7 @@ class Cart_item extends HTMLElement {
             </div>  
             
             <div class="cart-item-price">
-                    <h1 class="fnt fnt-bold fnt-extraLarge">${price}</h1>
+                    <h1 class="fnt fnt-bold fnt-extraLarge">LKR.${price}</h1>
                     <button><a class="remove_cart fnt fnt-bold fnt-mid" href="" id="${content_id}">Remove</a></button>
             </div>
         </div>

@@ -21,7 +21,7 @@ function renderRight(data) {
     let html_right = "";
 
     html_right += `
-    <open-course author_pic = "${data["meida_title"]}" img_src="${data["meida_title"]}" title="${data["meida_title"]}" description="${data["meida_title"]}" author="${data["meida_title"] + " " +data["meida_title"]}" author_title="${data["meida_title"]}" course_id="${data["course_media_id"]}" content_id="${data["course_media_id"]}"></open-course>`;
+    <follow-course author_pic = "${data["pro_pic"]}" media="${data["media"]}" title="${data["meida_title"]}" description="${data["media_description"]}" author="${data["f_name"] + " " +data["l_name"]}" author_title="${data["qulification_level"]}" ></follow-course>`;
     document.querySelector(".cont-body-right").innerHTML = html_right;
 
 

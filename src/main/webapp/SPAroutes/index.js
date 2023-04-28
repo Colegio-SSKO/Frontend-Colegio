@@ -176,6 +176,7 @@ const Routes = {
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Notification.jsp",
         path_right: "",
+        script: "../static/viewsJS/notification_view.js",
         title: "Notification",
         data : "This is the notification page"
     },
@@ -205,6 +206,16 @@ const Routes = {
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/",
         script: "../static/viewsJS/change_password.js",
+        path_right: "",
+        title: "Notification",
+        data : "This is the notification page"
+    },
+
+    "/upgrade" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/",
+        script: "../static/viewsJS/Upgrade_account.js",
         path_right: "",
         title: "Notification",
         data : "This is the notification page"
@@ -259,6 +270,26 @@ const Routes = {
         script: "../static/viewsJS/Student_continue_course.js",
         title: "Create quiz",
         data : "This is the  create quiz page"
+    },
+
+    "/teacher_published_course" : {
+        isSingle : true,
+        template : "/SPAroutesTeacher/index_single.jsp",
+        path_left:"/views/Teahcer_profile.jsp",
+        path_right: "",
+        script: "../static/viewsJS/published_course_list(teacher)1.js",
+        title: "profile",
+        data : "This is the profile page"
+    },
+
+    "/teacher_published_quiz" : {
+        isSingle : true,
+        template : "/SPAroutesTeacher/index_single.jsp",
+        path_left:"/views/Teahcer_profile.jsp",
+        path_right: "",
+        script: "../static/viewsJS/published_quiz_list(teacher)1.js",
+        title: "profile",
+        data : "This is the profile page"
     },
 
 

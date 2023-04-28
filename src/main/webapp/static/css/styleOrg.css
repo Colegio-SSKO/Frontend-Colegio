@@ -1829,3 +1829,124 @@ h3{
 .rate > label:hover ~ input:checked ~ label {
     color: #112D4E;
 }
+
+
+
+
+
+/*notification and upgrade account */
+
+
+
+
+.notifications-container {
+    width: 60%;
+    margin: auto;
+}
+
+.notification {
+    background-color: #F9F7F7;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.notification-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.notification-date,
+.notification-time {
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
+    margin-right: 10px;
+}
+
+.notification-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.notification-sender {
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.notification-message {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.account-upgrade-container {
+    width: 60%;
+    margin: auto;
+}
+
+.upgrade {
+    background-color: #F9F7F7;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
+
+}
+
+.upgrade-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.upgrade-label{
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.upgrade-inputs {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+
+input[type="file"] {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.upgrade-textarea {
+    resize: vertical;
+    height: 80px;
+}
+

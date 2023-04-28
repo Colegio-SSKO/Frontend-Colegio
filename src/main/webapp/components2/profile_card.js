@@ -19,7 +19,7 @@ class Profile_card extends HTMLElement {
         </div>
         <div class="edit-and-delte-btns">
             <button class="btn btn-solid fnt fnt-bold fnt-mid"><a href="/edit_profile" >Edit Profile</a></button>
-            <button id="upgrade-to-teacher" class="btn btn-solid fnt fnt-bold fnt-mid">Upgrade to Teacher</button>
+            <a href="/upgrade"><button id="upgrade-to-teacher" class="btn btn-solid fnt is-a-route fnt-bold fnt-mid">Upgrade to Teacher</button></a>
             <button id="delete-profile" class="btn btn-solid fnt fnt-bold fnt-mid">Delete Profile</button>
         </div>
 

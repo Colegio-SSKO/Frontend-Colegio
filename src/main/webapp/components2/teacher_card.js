@@ -14,7 +14,7 @@ class Teacher_card extends HTMLElement {
 
 
         <div class="teacher-card-details">
-            <h5 class="fnt fnt-bold fnt-large"><a class="teacher_cont" href="/teacher_course" style="text-decoration: none" id="${user_id}">${name}</a></h5>
+            <h5 class="fnt fnt-bold fnt-large"><a class="teacher_cont" href="/teacher_content" style="text-decoration: none" id="${user_id}">${name}</a></h5>
             <h5 class="fnt fnt-bold fnt-mid">${quli}</h5>
         </div>
 
