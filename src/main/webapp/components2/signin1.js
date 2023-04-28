@@ -166,8 +166,22 @@ class Signin1 extends HTMLElement {
                     })
 
 
-                    //setting the user type
-                    userType = 1;
+                    //setting the user data
+
+                    alert("gemmmmmmak tm")
+                    let userData = await fetch('http://localhost:8090/api/authenticate/getUserData/', {
+                        method : "GET",
+                        credentials: 'include'
+                    }).then((response)=>{
+                        return response.json();
+                    })
+                    alert(userData["userName"])
+                    alert(userData["userType"])
+
+                    username = userData["userName"];
+                    userID = userData["userID"];
+                    userProfileImage = userData["userProPic"];
+                    userType = userData["userType"];
                     //sending to home page
                     window.history.pushState({}, "", "/");
                     urlLocation();
