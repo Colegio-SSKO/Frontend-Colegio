@@ -7,7 +7,7 @@ async function fetchData(){
 
 //uncomment this when connecting the database
 
-    let url = "http://localhost:8090/api/teachers/teacher_view_org_req/:" + getTeacherID();
+    let url = "http://localhost:8090/api/teachers/teacher_view_org_req/:" + getUserID();
     let res3 = await fetch(url, {method: "GET"}).then((response) =>
         response.text()
     );

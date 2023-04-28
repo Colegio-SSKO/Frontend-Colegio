@@ -83,7 +83,7 @@ class Signin1 extends HTMLElement {
 
                 else{
                     alert(receivedData["message"])
-                    const jwtToken = await fetch("http://localhost:8090/api/users/getToken/", {
+                    const jwtToken = await fetch("http://localhost:8090/api/authenticate/getToken/", {
                         credentials: 'include'
                     })
                         .then((response)=>{
@@ -98,7 +98,7 @@ class Signin1 extends HTMLElement {
                     //notifications handling
                     notificationWebSocket = new WebSocket('ws://localhost:8090/notificationHandler');
                     notificationWebSocket.onopen = () =>{
-                        alert("open unaaa");
+                        alert("open unaaaaa");
                         const message = {
                             "config" : true,
                             "token" : jwtToken["token"]
