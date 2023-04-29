@@ -85,6 +85,8 @@ body {
     display: flex;
     flex-direction: column;
     z-index: 999;
+    padding-right: 30px;
+    padding-left: 30px;
 }
 
 .main-right nav {
