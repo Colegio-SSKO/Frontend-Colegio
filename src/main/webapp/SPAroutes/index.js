@@ -356,6 +356,18 @@ const teacherRoutes =  {
         data : "This is the Question page"
     },
 
+
+    "/answer_question" : {
+        isSingle : false,
+        template : "/SPAroutesTeacher/index_double.jsp",
+        path_left:"/views/Question_student_1_left.jsp",
+        path_right: "/views/Question_student_1_right.jsp",
+        script: "../static/viewsJS/teacher_answer_questions.js",
+        title: "Answer Question",
+        data : "This is the Question page"
+    },
+
+
     "/session_request" : {
         isSingle : false,
         template : "/SPAroutesTeacher/index_double.jsp",

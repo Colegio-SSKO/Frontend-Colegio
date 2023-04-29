@@ -130,6 +130,7 @@
     <script src="../components2/sidebar_teacher.js"></script>
     <script src="../components2/Ans_q1.js"></script>
     <script src="../components2/Ans_q2.js"></script>
+    <script src="../components2/send_answers.js"></script>
 
 
 

@@ -16,7 +16,7 @@
         
         <div class="nav-middle">
             <input type="text" id="main_search_icon" class="fnt fnt-bold" placeholder="Search here ...">
-            <a href="/test"><img src="../static/img/components_images/search_icon.svg" alt=""></a>
+            <a href="/test"><img class="is-a-route" src="../static/img/components_images/search_icon.svg" alt=""></a>
         </div>
 
         <div class="main-profile router">

@@ -7,7 +7,7 @@ async function fetchData() {
 
 //uncomment this when connecting the database
 
-    let res = await fetch("http://localhost:8080/api/users/myQuestions/:"+getUserID(), {method : "GET"}).then((response)=>
+    let res = await fetch("http://localhost:8090/api/users/myQuestions/:"+getUserID(), {method : "GET"}).then((response)=>
         response.json()
 
     );
@@ -27,12 +27,12 @@ function renderRight(data) {
     alert(data["status"])
     if (data["status"]== 1){
         alert("kabmmm")
-        html_right = ` <open-question img_src="${data["pro_pic"]}" qulifi="${data["qulification_level"]}" title="${data["question_title"]}"  author="${data["f_name"]+" "+ data["l_name"]}" description="${data["question_description"]}""></open-question>`;
+        html_right = ` <open-question img_src="${data["pro_pic"]}" qulifi="${data["qulification_level"]}" title="${data["question_title"]}"  author="${data["f_name"]+" "+ data["l_name"]}" description="${data["question_description"]}"></open-question>`;
 
     }
     else {
         alert("kavind")
-        html_right = ` <question img_src2="${data["question_img"]}" img_src="${data["pro_pic"]}" title="${data["question_title"]}" accept_person="${data["f_name"]+" "+ data["l_name"]}"  description="${data["question_description"]}""></question>`;
+        html_right = ` <question img_src2="${data["question_img"]}" img_src="${data["pro_pic"]}" title="${data["question_title"]}" accept_person="${data["f_name"]+" "+ data["l_name"]}"  description="${data["question_description"]}"></question>`;
 
     }
     document.querySelector(".cont-body-right").innerHTML = html_right;
