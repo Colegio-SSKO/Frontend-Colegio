@@ -5,20 +5,17 @@ class Signin1 extends HTMLElement {
                   <section class="signup">
                       <div class="hero">
                     
-                        <div class="right">
-                          <div class="img">
-                            <img src="../static/img/login/art2.png" alt="">
-                          </div>
-                          <div class="text">
-                            <h2>Distance Learning</h2>
-                            <p>Follow online cource on various subjects</p>
-                          </div>
-                        </div>
+<!--                        <div class="right">-->
+<!--                          <div class="img">-->
+<!--                            <img src="../static/img/login/art2.png" alt="">-->
+<!--                          </div>-->
+<!--                          <div class="text">-->
+<!--                            <h2>Distance Learning</h2>-->
+<!--                            <p>Follow online cource on various subjects</p>-->
+<!--                          </div>-->
+<!--                        </div>-->
                     
-                        <div class="left">
-                          <div class="btn-top">
-                            <a class="btn" href="">Sign In</a>
-                          </div>
+<!--                        <div class="left">-->
                           <div class="form">
                             <h1>Wellcome To Colegio</h1>
                             <div class="inputs">
@@ -35,10 +32,10 @@ class Signin1 extends HTMLElement {
                                 <label for="">Forget Your <span>Password</span> ?</label>
                               </div>
                             </div>
-                            <button id="js-signin-btn" class="btn btn-small btn-solid"> Sign in </button>
+                            <button id="js-signin-btn" class="btn  btn-solid"> Sign in </button>
                             <h3>or</h3>
                           </div>
-                        </div>
+<!--                        </div>-->
                       </div>
                     
                       <div class="footer">
