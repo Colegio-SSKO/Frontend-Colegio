@@ -13,7 +13,7 @@ class Navbar1 extends HTMLElement {
         
         <nav>
       <div class="navbar-left">
-        <span class="pagename">Logo</span>
+        <div class="fnt fnt-bold fnt-extraLarge"><span class="pagename">Home</span></div>
       </div>
       <div class="navbar-middle">
         <form class="search-form">
