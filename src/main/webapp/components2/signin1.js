@@ -17,7 +17,7 @@ class Signin1 extends HTMLElement {
                     
 <!--                        <div class="left">-->
                           <div class="form">
-                            <h1>Wellcome To Colegio</h1>
+                            <h1 class="fnt fnt-extraBold fnt-extraLarge">Wellcome To Colegio</h1>
                             <div class="inputs">
                     
                               <div class="input-field">
@@ -32,8 +32,7 @@ class Signin1 extends HTMLElement {
                                 <label for="">Forget Your <span>Password</span> ?</label>
                               </div>
                             </div>
-                            <button id="js-signin-btn" class="btn  btn-solid"> Sign in </button>
-                            <h3>or</h3>
+                            <button id="js-signin-btn" class="btn btn-solid fnt fnt-mid fnt-bold"> Sign in </button>
                           </div>
 <!--                        </div>-->
                       </div>
@@ -41,11 +40,11 @@ class Signin1 extends HTMLElement {
                       <div class="footer">
                         <div class="footer-menu">
                           <ul>
-                            <li><a href="">About</a></li>
-                            <li><a href="">Help Center</a></li>
-                            <li><a href="">User Agrement</a></li>
-                            <li><a href="">Privacy Policy</a></li>
-                            <li><a href="">Cookie Policy</a></li>
+                            <li><a href="" class="fnt fnt-mid fnt-bold">About</a></li>
+                            <li><a href="" class="fnt fnt-mid fnt-bold">Help Center</a></li>
+                            <li><a href="" class="fnt fnt-mid fnt-bold">User Agrement</a></li>
+                            <li><a href="" class="fnt fnt-mid fnt-bold">Privacy Policy</a></li>
+                            <li><a href="" class="fnt fnt-mid fnt-bold">Cookie Policy</a></li>
                           </ul>
                         </div>
                       </div>

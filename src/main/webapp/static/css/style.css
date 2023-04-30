@@ -3624,3 +3624,49 @@ a{
 #js-video-upload-container-add-btn, .video-upload-wrapper i {
     cursor: pointer;
     }
+
+
+
+
+
+/*comment conatiner css*/
+
+.comment-container {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.comment-container-profile-pic {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.comment-container-comment-details {
+    flex-grow: 1;
+}
+
+.comment-container-commenter-name {
+    margin: 0 0 5px 0;
+    font-weight: bold;
+}
+
+.comment-container-comment-text {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.comment-container-comment-actions {
+    margin-top: 5px;
+}
+
+.comment-container a{
+    text-decoration: none;
+    color: #3F72AF;
+}

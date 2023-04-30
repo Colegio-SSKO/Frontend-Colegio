@@ -131,6 +131,8 @@
     <script src="../components2/Ans_q1.js"></script>
     <script src="../components2/Ans_q2.js"></script>
     <script src="../components2/send_answers.js"></script>
+    <script src="../components2/comment-container.js"></script>
+    <script src="../components2/comment_container_list.js"></script>
 
 
 
