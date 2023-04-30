@@ -7,7 +7,10 @@ async function fetchData(){
         };
         //uncomment this when connecting the database
         let url = "http://localhost:8090/api/users/show_notifications/:2";
-        let response = await fetch(url, {method: "GET"}).then((response)=> response.text());
+        let response = await fetch(url, {
+            method: "GET",
+            credentials : "include"
+        }).then((response)=> response.text());
         let data = JSON.parse(response);
         // alert("sads")
         return data;

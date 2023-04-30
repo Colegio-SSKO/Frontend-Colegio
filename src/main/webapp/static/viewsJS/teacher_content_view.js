@@ -7,7 +7,10 @@ async function fetchData(){
 
 //uncomment this when connecting the database
     let url = "http://localhost:8090/api/users/teacher_course/:"+ temporary_data;
-    let res3 = await fetch(url, {method: "GET"}).then((response) =>
+    let res3 = await fetch(url, {
+        method: "GET",
+        credentials : "include"
+    }).then((response) =>
         response.text()
     );
 
@@ -18,7 +21,10 @@ function renderSingle(){
     fetchData().then(async (data)=>{
 
         alert(data);
-        const res3 = await fetch("http://localhost:8090/api/users/teacher_quiz/:"+ temporary_data, {method: "GET"}).then((response) => response.text());
+        const res3 = await fetch("http://localhost:8090/api/users/teacher_quiz/:"+ temporary_data, {
+            method: "GET",
+            credentials : "include"
+        }).then((response) => response.text());
         alert(res3);
         let html = "<div class='fnt fnt-bold fnt-large'>Courses</div>"+
  

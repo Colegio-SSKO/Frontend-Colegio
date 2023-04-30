@@ -32,8 +32,8 @@ class sidebar_teacher extends HTMLElement {
             <label><a class="fnt fnt-bold fnt-mid" href="/organization">Organization</a></label>
         </div>
 
-        <div class="side_icons">
-            <label ><a class="fnt fnt-bold fnt-mid" href="">Logout</a></label>
+        <div class="side_icons" id="js-logout-btn">
+            <label class="fnt fnt-bold fnt-mid">Logout</label>
         </div>
         
 
@@ -41,6 +41,29 @@ class sidebar_teacher extends HTMLElement {
         
     </div>
         `;
+
+        let logoutBtn = document.querySelector("#js-logout-btn");
+        logoutBtn.addEventListener('click', async ()=>{
+            alert("logout");
+            let logoutResponse = await fetch('http://localhost:8090/api/authenticate/logout/', {
+                credentials: 'include'
+            })
+                .then((response)=>{
+                    return response.json();
+                })
+            alert(logoutResponse["isSuccess"]);
+            if (logoutResponse["isSuccess"]){
+                //sending to home page
+                window.history.pushState({}, "", "/");
+                urlLocation();
+            }
+            else{
+                alert("logout error");
+            }
+
+        })
+
+
     }
 }
 

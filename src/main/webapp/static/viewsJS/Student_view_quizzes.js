@@ -42,7 +42,10 @@ if (typeof containerCollection === 'undefined') {
 
 
 async function fetchData() {
-    let res = await fetch("http://localhost:8090/api/users/myQuizes/:1", {method : "GET"}).then((response)=>
+    let res = await fetch("http://localhost:8090/api/users/myQuizes/:1", {
+        method : "GET",
+        credentials : "include"
+    }).then((response)=>
         response.json()
 
     );
@@ -57,7 +60,10 @@ async function renderRight(data) {
 
 
 
-    let questions = await fetch("http://localhost:8090/api/users/getQuestions/:" + data["quiz_id"], {method : "GET"}).then((response)=>{
+    let questions = await fetch("http://localhost:8090/api/users/getQuestions/:" + data["quiz_id"], {
+        method : "GET",
+        credentials : "include"
+    }).then((response)=>{
         return response.json();
     })
     console.log(questions);
@@ -159,7 +165,11 @@ async function renderRight(data) {
                 "user_id" : getUserID(),
                 "answer" : containers[event.target.parentNode.id]
             }
-            fetch("http://localhost:8090/api/users/saveAnswer", {method : "POST", body :JSON.stringify(reqBody)}).then((response)=>{
+            fetch("http://localhost:8090/api/users/saveAnswer", {
+                method : "POST",
+                body :JSON.stringify(reqBody),
+                credentials : "include"
+            }).then((response)=>{
                 response.json();
             })
         })

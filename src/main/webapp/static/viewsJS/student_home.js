@@ -12,7 +12,10 @@ async function renderSingle() {
         const data = await fetchData();
         alert(data);
 
-        const res3 = await fetch("http://localhost:8090/api/users/ViewCont_list", {method: "GET"}).then((response) => response.text());
+        const res3 = await fetch("http://localhost:8090/api/users/ViewCont_list", {
+            method: "GET",
+            credentials : "include"
+        }).then((response) => response.text());
 
 
         const html_left = ` <featured-cont></featured-cont> + <content-list dataString="${encodeURIComponent(res3)}"></content-list>`;
@@ -30,7 +33,8 @@ async function renderSingle() {
 
             let resp = await fetch("http://localhost:8090/api/users/addtocart", {
                 method: "POST",
-                body: JSON.stringify(req)
+                body: JSON.stringify(req),
+                credentials : "include"
             }).then((data) => {
                 data.text()
             });

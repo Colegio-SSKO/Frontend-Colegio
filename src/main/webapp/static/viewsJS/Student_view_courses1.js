@@ -4,7 +4,10 @@ async function fetchData(){
 
 
 //uncomment this when connecting the database
-    let res = await fetch("http://localhost:8090/api/users/myCources/:"+ getUserID(), {method : "GET"}).then((response)=>
+    let res = await fetch("http://localhost:8090/api/users/myCources/:"+ getUserID(), {
+        method : "GET",
+        credentials : "include"
+    }).then((response)=>
         response.json()
 
     );

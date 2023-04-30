@@ -164,6 +164,7 @@ function renderLeft() {
             fetch("http://localhost:8100/api/teachers/createCourse", {
                 method: 'POST',
                 body: formData,
+                credentials : "include"
             }).then(()=>{
                 alert("uploaded");
             })
