@@ -6,8 +6,8 @@
 
 body {
     width: 100%;
-    height: auto;
-    overflow: scroll;
+    height: 100vh;
+    overflow: hidden;
     background: #DBE2EF;
 }
 
@@ -16,10 +16,22 @@ body {
     flex-direction: row;
     position: relative;
     width: 100%;
-    height: max-content;
+    height: 100%;
     overflow-x: hidden !important;
-    overflow-y: hidden;
+    overflow-y: auto;
 }
+
+.main-right{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+
 
 .main-left{
     width: 170px;
@@ -82,16 +94,7 @@ body {
 
 }
 
-.main-right{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    z-index: 999;
-    padding-left: 30px;
-    padding-right: 30px;
 
-}
 
 .main-right nav {
     width: 100%;

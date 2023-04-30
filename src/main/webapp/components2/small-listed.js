@@ -6,29 +6,31 @@ class Small_listed extends HTMLElement {
         let title = this.attributes.title.value;
         let author = this.attributes.author.value;
         let price = this.attributes.price.value;
-        // let rating = this.attributes.rating.value;
+        let rates = this.attributes.rates.value;
         // let votes = this.attributes.votes.value;
         this.innerHTML = `
         
-        <div class="small-listed-cont-wrap"> <div class="small-listed-cont-image">
-        
-            <img src="${img_src}" alt="course image">
-        
-        </div>
+        <div class="small-listed-cont-wrap"> 
+            <div class="small-listed-cont-image">
+                <img src="${img_src}" alt="course image">
+            </div>
            
        
-        <div class="small-listed-cont-details">
-            <h5 class="small_listed fnt fnt-bold fnt-mid"><a id="${content_id}" href="/small_cardopen">${title}</a></h5>
-                <div class="small-listed-cont-author">
-                    <h6 class="fnt fnt-bold fnt-small">${author}</h6>
-
-     
-                </div>
-
-
+            <div class="small-listed-cont-details">
+                <h5 class="small_listed fnt fnt-bold fnt-mid"><a id="${content_id}" href="/small_cardopen">${title}</a></h5>
+                    <div class="small-listed-cont-author">
+                        <h6 class="fnt fnt-bold fnt-small">${author}</h6>
+                        <div class="ratings" style="display: flex; align-items: center; justify-content: flex-end;">
+                          <i class="fas fa-star star-yellow" style="color: orange; font-size:10px;"></i>
+                          <i class="fas fa-star star-yellow" style="color: orange; font-size:15px;"></i>
+                          <i class="fas fa-star star-yellow" style="color: orange; font-size:10px;"></i>
+                          <h6 class="fnt fnt-light fnt-small">Ratings(${rates})</h6>
+                        </div><br>
+                    </div>
             <h3 class="fnt fnt-bold fnt-large">LKR.${price}</h3>
+            
+            </div>
         </div>
-    </div>
         `;
         let small_lited = document.querySelectorAll(".small_listed");
 
@@ -36,7 +38,6 @@ class Small_listed extends HTMLElement {
             element.addEventListener('click',async (event)=> {
 
                     let content_id = event.target.id;
-                    alert("aiii")
                     temporary_data = content_id;
                     alert(temporary_data);
                 }

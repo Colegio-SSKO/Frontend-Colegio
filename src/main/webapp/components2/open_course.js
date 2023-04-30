@@ -12,19 +12,22 @@ class Open_course extends HTMLElement {
         let content_id = this.attributes.content_id.value;
         this.innerHTML = `
         <div class="open-course-wrap">
-        <div class="open-course-image">
-            <img src="${img_src}" alt="">
-        </div>
+            <div class="open-course-image">
+                <img src="${img_src}" alt="">
+            </div>
 
-        <div class="cont-ratings">
-            <span class="material-icons">star</span>
-            <div class="fnt fnt-light fnt-small">Rates count </div>
-            <div class="fnt fnt-bold fnt-small">(${rates_count})</div>
-    
-        </div>
+            <div class="ratings" style="display: flex; align-items: center;">
+                 <i class="fas fa-star star-yellow" style="color: orange; font-size:10px;"></i>
+                 <i class="fas fa-star star-yellow" style="color: orange; font-size:15px;"></i>
+                 <i class="fas fa-star star-yellow" style="color: orange; font-size:10px;"></i>
+                 <h6 class="fnt fnt-light fnt-small">Ratings(${rates_count})</h6>
+                 <div class="rate_report">
+                    <a href=""><div class="addrate fnt fnt-bold fnt-mid" id="${content_id}">Rate</div></a>
+                    <div class="addreport fnt fnt-bold fnt-mid" id="${course_id}">Report</div>
+                 </div>
+            </div><br>
         
-        <button class="addrate fnt fnt-bold fnt-mid" id="${content_id}">Rate</button>
-        <button class="addreport fnt fnt-bold fnt-mid" id="${course_id}">Report</button>
+        
 
         <h4 class="open-course-title fnt fnt-bold fnt-large">${title} </h4>
         <p class="open-course-desc fnt fnt-light fnt-mid">${description}

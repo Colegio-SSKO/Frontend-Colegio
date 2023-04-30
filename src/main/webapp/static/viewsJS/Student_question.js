@@ -105,17 +105,6 @@ function renderLeft() {
         })
 
 
-        // alert(`quessions length: ${selected_question.length}`)
-        // for (let element of selected_question){
-        //     element.addEventListener('click', ()=>{
-        //
-        //         for (let el of data){
-        //             if (el["content_ID"] == element.getAttribute("id")){
-        //                 renderRight(el);
-        //             }
-        //         }
-        //     })
-        // }
 
 
 

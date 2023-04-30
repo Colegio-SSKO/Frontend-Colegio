@@ -1,4 +1,4 @@
-class ContentList extends HTMLElement {
+class Comment_container_list extends HTMLElement {
     connectedCallback() {
 
 
@@ -9,7 +9,8 @@ class ContentList extends HTMLElement {
         let htmlcontent = "";
 
         for (let i of data) {
-            htmlcontent += `<small-listed content_id="${i["content_id"]}" img_src="${i["img_src"]}" title="${i["title"]}" author="${i["author"]}" price="${i["price"]}" rates="${i["rate_count"]}"></small-listed>
+            alert("data enwa")
+            htmlcontent += `<comment-container commenter="${i["f_name"]+" "+i["l_name"]}" img_src="${i["pro_pic"]}" text="${i["message"]}" date="${i["date"]}" user_id="${i["user_id"]}"></comment-container><br>
             `;
         }
 
@@ -23,7 +24,7 @@ class ContentList extends HTMLElement {
     }
 }
 
-customElements.define('content-list', ContentList);
+customElements.define('comment-list', Comment_container_list);
 
 
 

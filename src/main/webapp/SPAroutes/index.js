@@ -47,10 +47,10 @@ const studentRoutes = {
     },
 
     "/small_cardopen" : {
-        isSingle : true,
+        isSingle : false,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Home_content.jsp",
-        script: "../static/viewsJS/small_card_open.js",
+        script: "../static/viewsJS/small_card_open_new.js",
         title: "small card open",
         data : "This is the home page"
     },
@@ -375,6 +375,18 @@ const teacherRoutes =  {
         title: "Question",
         data : "This is the Question page"
     },
+
+
+    "/answer_question" : {
+        isSingle : false,
+        template : "/SPAroutesTeacher/index_double.jsp",
+        path_left:"/views/Question_student_1_left.jsp",
+        path_right: "/views/Question_student_1_right.jsp",
+        script: "../static/viewsJS/teacher_answer_questions.js",
+        title: "Answer Question",
+        data : "This is the Question page"
+    },
+
 
     "/session_request" : {
         isSingle : false,

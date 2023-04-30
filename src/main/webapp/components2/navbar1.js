@@ -7,27 +7,39 @@ class Navbar1 extends HTMLElement {
     async connectedCallback() {
 
         this.innerHTML = `
-    <nav>
+   
 
-        <h3 class="pagename fnt fnt-bold fnt-extraLarge">Notifications</h3>
+    
         
-        <div class="nav-middle">
-            <input type="text" id="main_search_icon" class="fnt fnt-bold" placeholder="Search here ...">
-            <a href="/test"><img src="../static/img/components_images/search_icon.svg" alt=""></a>
+        <nav>
+      <div class="navbar-left">
+        <span pagename>Logo</span>
+      </div>
+      <div class="navbar-middle">
+        <form class="search-form">
+          <input type="text" id="main_search_icon" placeholder="Search...">
+          <a href="/test"><button class="signin-user-is-a-route is-a-route" type="submit">Search</button></a>
+        </form>
+      </div>
+      <div class="navbar-right">
+        <a href="/cart" class="navbar-right-icon"><img class="signin-user-is-a-route is-a-route" src="../static/img/components_images/shopping_cart.svg" alt=""></a>
+        <a href="/notification" class="navbar-right-icon"><img class="signin-user-is-a-route is-a-route" src="../static/img/components_images/notifications.svg" alt=""></i></a>
+        <div class="navbar-right-user">
+          <img src="${userProfileImage}" alt="" srcset="">
+          <a href="/profile"><span class="signin-user-is-a-route is-a-route">${username}</span></a>
         </div>
-
-        <div class="main-profile router">
-            <a href="/cart"><img class="is-a-route" src="../static/img/components_images/shopping_cart.svg" alt=""></a>
-            <div class="noti-wrapper">
-                <a href="/notification"><img class="is-a-route" src="../static/img/components_images/notifications.svg" alt=""><span id="navbar-notification-count" class="fnt fnt-small is-a-route">4</span></a>
-            </div>
-            <div class="profile-pic">
-                <img src="${userProfileImage}" alt="" srcset="">
-            </div>
-            <h5 class="fnt fnt-bold fnt-mid"><a href="/profile">${username}</a> </h5>
-        </div>
-        
+      </div>
     </nav>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
         `;
 
 

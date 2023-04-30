@@ -21,7 +21,7 @@ class sidebar_teacher extends HTMLElement {
         </div>
 
         <div class="side_icons">
-            <label> <a class="fnt fnt-bold fnt-mid" href="/question">Answer Questions</a></label>
+            <label> <a class="fnt fnt-bold fnt-mid" href="/answer_question">Answer Questions</a></label>
         </div>
 
          <div class="side_icons">
