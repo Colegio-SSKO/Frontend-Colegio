@@ -15,7 +15,7 @@ async function fetchData() {
 
 };
 
-renderLeft();
+
 
 
 //function to render right content

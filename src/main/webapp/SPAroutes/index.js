@@ -47,7 +47,7 @@ const studentRoutes = {
     },
 
     "/small_cardopen" : {
-        isSingle : true,
+        isSingle : false,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Home_content.jsp",
         script: "../static/viewsJS/small_card_open_new.js",

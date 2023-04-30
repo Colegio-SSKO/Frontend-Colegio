@@ -19,7 +19,14 @@ class Featured_cont extends HTMLElement {
                 <p class="fnt fnt-bold fnt-mid">${data['description']}</p><br>
                 <h6 class="fnt fnt-bold fnt-small">By ${data['author']}</h6>
                 <h6 class="fnt fnt-small">Published on <bold>${data['date']}</bold>| ${data['subject']}</h6>
-
+                
+                <div style="display: flex; align-items: center;">
+                  <i class="fas fa-star star-yellow" style="color: orange; font-size:10px;"></i>
+                  <i class="fas fa-star star-yellow" style="color: orange; font-size:15px;"></i>
+                  <i class="fas fa-star star-yellow" style="color: orange; font-size:10px;"></i>
+                  <h6 class="fnt fnt-light fnt-small">Ratings(${data['rates']})</h6>
+                </div><br>
+                
                 <h3 class="fnt fnt-bold fnt-extraLarge">LKR.${data['price']}</h3>
             </div>
 
