@@ -49,9 +49,9 @@ const studentRoutes = {
 
     "/small_cardopen" : {
         isSingle : false,
-        template : "/SPAroutes/index_single.jsp",
+        template : "/SPAroutes/index_double.jsp",
         path_left:"/views/Home_content.jsp",
-        script: "../static/viewsJS/small_card_open_new.js",
+        script: "../static/viewsJS/small_card_open_new1.js",
         title: "small card open",
         data : "This is the home page"
     },

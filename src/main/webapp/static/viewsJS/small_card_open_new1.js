@@ -1,4 +1,4 @@
-alert("miyaawww");
+alert("mi");
 
 async function fetchData() {
     const req = {
@@ -50,21 +50,17 @@ function renderLeft() {
     alert("render left awa")
     fetchData().then(async (data) => {
     alert("fetch ekatat awa")
-        try {
-            let data = await fetchData();
+
             alert("try  eka weda");
 
 
-            const res3 = await fetch("http://localhost:8090/api/users/small_card_open_comment/:" + temporary_data, {method: "GET"}).then((response) => response.json());
+            const res3 = await fetch("http://localhost:8090/api/users/small_card_open_comment/:" + temporary_data, {method: "GET"}).then((response) => response.text());
             alert("deweni api eka res3 " + res3)
 
             let html_left = `<pop-up></pop-up> <small-cardopen img_src="${data["introduction_media"]}" title="${data["course_title"]}" description="${data["decription"]}" author="${data["f_name"]}+${data["l_name"]}" price="${data["price"]}" date="${data["date"]}" content_id="${data["content_id"]}" ></small-cardopen><comment-list dataString="${encodeURIComponent(res3)}"> </comment-list>`;
+            alert(html_left)
+            document.querySelector(".cont-body-left").innerHTML = html_left;
 
-            document.querySelector(".cont-body-content").innerHTML = html_left;
-
-        } catch (error) {
-            console.error(error);
-        }
 
         document.querySelector(".cont-body-left").innerHTML = html_left;
 

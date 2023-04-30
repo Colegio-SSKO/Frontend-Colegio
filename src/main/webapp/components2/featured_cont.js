@@ -44,76 +44,7 @@ class Featured_cont extends HTMLElement {
     </div>
     
         `;
-        //payhere
 
-
-        // Show the payhere.js popup, when "PayHere Pay" is clicked
-        document.querySelector('.js-payhere-buyNow').onclick = async function (e) {
-
-            let orderData = {
-                "merchant_id" : "1222924",
-                "order_id" : 1,
-                "amount" : 100.0,
-                "currency" : "LKR"
-            }
-
-            let hash = await fetch('http://localhost:8090/api/authenticate/getOrderHash/', {
-                body : JSON.stringify(orderData),
-                method : "POST"
-            })
-                .then((response)=>{
-                    return response.json();
-                })
-            alert(hash["hash"])
-
-            // Payment completed. It can be a successful failure.
-            payhere.onCompleted = function onCompleted(orderId) {
-                console.log("Payment completed. OrderID:" + orderId);
-                // Note: validate the payment and show success or failure page to the customer
-            };
-
-            // Payment window closed
-            payhere.onDismissed = function onDismissed() {
-                // Note: Prompt user to pay again or show an error page
-                console.log("Payment dismissed");
-            };
-
-            // Error occurred
-            payhere.onError = function onError(error) {
-                // Note: show an error page
-                console.log("Error:"  + error);
-            };
-
-            // Put the payment variables here
-
-            var payment = {
-                "sandbox": true,
-                "merchant_id" : "1222924",    // Replace your Merchant ID
-                "return_url": "http://localhost:8080/",     // Important
-                "cancel_url": "http://localhost:8080/",     // Important
-                "notify_url": "http://sample.com/notify",
-                "order_id" : "12345",
-                "items": "Door bell wireles",
-                "amount" : 1000,
-                "currency" : "LKR",
-                "hash": hash["hash"], // *Replace with generated hash retrieved from backend
-                "first_name": "Saman",
-                "last_name": "Perera",
-                "email": "samanp@gmail.com",
-                "phone": "0771234567",
-                "address": "No.1, Galle Road",
-                "city": "Colombo",
-                "country": "Sri Lanka",
-                "delivery_address": "No. 46, Galle road, Kalutara South",
-                "delivery_city": "Kalutara",
-                "delivery_country": "Sri Lanka",
-                "custom_1": "",
-                "custom_2": ""
-            };
-
-
-            payhere.startPayment(payment);
-        };
 
 
         let addtocart = document.querySelectorAll(".addtocart");
