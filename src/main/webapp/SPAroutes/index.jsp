@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="../static/css/html_template.css">
 
     <link rel="stylesheet" href="../static/css/style.css">
-    <link rel="stylesheet" href="../static/css/styleOrg.css">
+<%--    <link rel="stylesheet" href="../static/css/styleOrg.css">--%>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

@@ -57,7 +57,6 @@ function renderLeft() {
 
             const res3 = await fetch("http://localhost:8090/api/users/small_card_open_comment/:" + temporary_data, {method: "GET"}).then((response) => response.json());
             alert("deweni api eka res3 " + res3)
-            return res3;
 
             let html_left = `<pop-up></pop-up> <small-cardopen img_src="${data["introduction_media"]}" title="${data["course_title"]}" description="${data["decription"]}" author="${data["f_name"]}+${data["l_name"]}" price="${data["price"]}" date="${data["date"]}" content_id="${data["content_id"]}" ></small-cardopen><comment-list dataString="${encodeURIComponent(res3)}"> </comment-list>`;
 

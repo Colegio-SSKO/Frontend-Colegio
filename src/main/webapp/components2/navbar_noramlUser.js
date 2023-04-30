@@ -1,22 +1,23 @@
 class navbar_normaluser extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-             <nav>
-                    <h3 class="pagename fnt fnt-bold fnt-extraLarge">Home</h3>
-                    
-                    <div class="nav-middle">
-                        <input type="text" id="main_search_icon" class="fnt fnt-bold" placeholder="Search here ...">
-                        <a href="/test"><img class="is-a-route" src="../static/img/components_images/search_icon.svg" alt=""></a>
+         
+                
+                <nav>
+                    <div class="normal-user-navbar-left">
+                      <span class="normal-user-pagename pagename">Logo</span>
                     </div>
-            
-                    <div class="main-profile router">
-                        <a href="/auth/signin"><button class="btn btn-outlined  is-a-route">Sign in</button><a>
-                    
-                         <button class="btn btn-outlined">Sign Up</button>
-                   
+                    <div class="normal-user-navbar-middle">
+                      <form class="normal-user-search-form">
+                        <input type="text" id="main_search_icon"  placeholder="Search...">
+                        <a href="/test"><button class="normal-user-is-a-route is-a-route" type="submit">Search</button></a>
+                      </form>
                     </div>
-                    
-                </nav>
+                    <div class="normal-user-main-profile router main-profile normal-user-navbar-right">
+                     <a href="/auth/signin"><button class="normal-user-is-a-route is-a-route">Sign In</button></a>
+                     <a href=""><button class="normal-user-is-a-route is-a-route">Sign Up</button></a>
+                    </div>
+              </nav>
         `;
     }
 }

@@ -32,7 +32,7 @@ function renderSingle(){
 
             let html_left = "";
 
-            html_left += `<featured-cont img_src = "${"img_src"}" title = "${"title"}" description = "${"description"}" author = "${"author"}" date = "${"date"}" price = "${"price"}" subject = "${"subject"}"></featured-cont> <content-list dataString="${encodeURIComponent(res3)}"></content-list>`;
+            html_left += `<featured-cont img_src = "${"img_src"}" title = "${"title"}" description = "${"description"}" author = "${"author"}" date = "${"date"}" price = "${"price"}" subject = "${"subject"}"></featured-cont>` +'<div class="fnt fnt-bold fnt-large">Trending in Colegio</div>'+` <content-list dataString="${encodeURIComponent(res3)}"></content-list>`;
 
 
             document.querySelector(".cont-body-content").innerHTML = html_left;

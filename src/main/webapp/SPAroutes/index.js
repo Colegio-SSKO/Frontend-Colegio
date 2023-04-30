@@ -50,7 +50,7 @@ const studentRoutes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Home_content.jsp",
-        script: "../static/viewsJS/small_card_open.js",
+        script: "../static/viewsJS/small_card_open_new.js",
         title: "small card open",
         data : "This is the home page"
     },
