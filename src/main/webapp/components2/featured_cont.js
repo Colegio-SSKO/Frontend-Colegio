@@ -24,7 +24,7 @@ class Featured_cont extends HTMLElement {
             </div>
 
             <div class="featured-cont-actions">
-                <button class="addtocart btn btn-solid btn-large fnt fnt-bold fnt-mid" id="${data['content_id']}">Add to Cart</button>
+                <a href="/cart"><button class="addtocart btn btn-solid btn-large fnt fnt-bold fnt-mid is-a-route" id="${data['content_id']}">Add to Cart</button></a>
                 <button class="btn btn-solid btn-large fnt fnt-bold fnt-mid">Buy Now</button>
             </div>
 

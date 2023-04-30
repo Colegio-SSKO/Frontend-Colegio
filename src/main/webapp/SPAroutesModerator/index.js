@@ -90,7 +90,7 @@ const Routes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Teahcer_profile.jsp",
-        script: "../static/viewsJS/Student_profile_new1.js",
+        script: "../static/viewsJS/Student_profile_new.js",
         path_right: "",
         title: "profile",
         data : "This is the profile page"

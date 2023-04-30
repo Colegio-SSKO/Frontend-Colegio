@@ -130,6 +130,10 @@
     <script src="../components2/sidebar_teacher.js"></script>
     <script src="../components2/Ans_q1.js"></script>
     <script src="../components2/Ans_q2.js"></script>
+    <script src="../components2/teacher_profile_card.js"></script>
+    <script src="../components2/organization_card(teacher).js"></script>
+    <script src="../components2/organization_list(teacher).js"></script>
+    <script src="../components2/upgrade_form_org.js"></script>
 
 
 
