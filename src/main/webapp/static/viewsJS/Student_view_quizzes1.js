@@ -1,4 +1,4 @@
-alert("Heliidd31");
+alert("www");
 
 //element selectors
 if (typeof previous === 'undefined') {
@@ -214,7 +214,7 @@ function renderLeft() {
         html_left += "" +
             "<a  href=\"\"><button class=\"fnt fnt-bold fnt-mid btn btn-solid btn-a btn-small is-a-route\">All</button></a>\n" +
             "<a  href=\"\"><button class=\"fnt fnt-bold fnt-mid btn btn-solid btn-a btn-small is-a-route\">Continuing</button></a>\n" +
-            "<a  href=\"\"><button class=\"fnt fnt-bold fnt-mid btn btn-solid btn-a btn-small is-a-route\">Completed</button></a><br><br>\n" +
+            "<a  href=\"\"><button class=\"fnt fnt-bold fnt-mid btn btn-solid btn-a btn-small is-a-route\">Completed</button></a><br>\n" +
             "\n" +
             "";
 

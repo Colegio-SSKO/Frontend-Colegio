@@ -25,8 +25,7 @@ class Profile_card extends HTMLElement {
             <a href="/upgrade_to_org"><button id="upgrade-to-organization" class="btn btn-solid fnt is-a-route fnt-bold fnt-mid" ${
                 veri === "1" ? "disabled style='pointer-events: none; background-color: lightslategray;'" : ""
             }>Upgrade to Organization</button></a>
-            <button id="delete-profile" class="btn btn-solid fnt fnt-bold fnt-mid">Delete Profile</button>
-             
+            <a href="/delete_profile"><button id="upgrade-to-teacher" class="btn btn-solid fnt is-a-route fnt-bold fnt-mid">Delete Profile</button></a>
         </div>
 
     </div>

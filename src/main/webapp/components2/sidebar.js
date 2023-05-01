@@ -29,7 +29,7 @@ class sidebar extends HTMLElement {
         </div>
 
         <div class="side_icons" id="js-logout-btn">
-            <label class="fnt fnt-bold fnt-mid">Logout</label>
+            <label class="fnt fnt-bold fnt-mid logout">Logout</label>
         </div>
         
 

@@ -17,8 +17,8 @@ class Navbar1 extends HTMLElement {
       </div>
       <div class="navbar-middle">
         <form class="search-form">
-          <input type="text" id="main_search_icon" placeholder="Search...">
-          <a href="/test"><button class="signin-user-is-a-route is-a-route" type="submit">Search</button></a>
+          <input type="text" class="fnt fnt-bold fnt-mid" id="main_search_icon" placeholder="Search...">
+          <a href="/test"><button class="signin-user-is-a-route normal-user-is-a-route fnt-mid fnt fnt-bold is-a-route" type="submit">Search</button></a>
         </form>
       </div>
       <div class="navbar-right">
@@ -26,7 +26,7 @@ class Navbar1 extends HTMLElement {
         <a href="/notification" class="navbar-right-icon"><img class="signin-user-is-a-route is-a-route" src="../static/img/components_images/notifications.svg" alt=""></i></a>
         <div class="navbar-right-user">
           <img src="${userProfileImage}" alt="" srcset="">
-          <a href="/profile"><span class="signin-user-is-a-route is-a-route">${username}</span></a>
+          <a href="/profile"><span class="signin-user-is-a-route fnt-mid fnt fnt-bold is-a-route">${username}</span></a>
         </div>
       </div>
     </nav>
