@@ -52,6 +52,15 @@ class QuizForm extends HTMLElement {
                                 <input id="quiz-upload-container-option-box3" type="text" name="option" class="quiz-upload-container-option-box" placeholder="Option 3">
                                 <input id="quiz-upload-container-option-box4" type="text" name="option" class="quiz-upload-container-option-box" placeholder="Option 4">
                                 
+                                
+                                <!--                                correct answerr-->
+                                <p class="fnt fnt-mid fnt-bold">Correct Answer</p>
+                                <select id="js-quiz-upload-answer">
+                                    <option value="opt1">Option 01</option>
+                                    <option value="opt2">Option 02</option>
+                                    <option value="opt3">Option 03</option>
+                                    <option value="opt4">Option 04</option>
+                                </select>
                             </div>
                         </div>
                         <i id="js-quiz-upload-container-add-btn" class="material-icons">add_box</i>
@@ -64,7 +73,20 @@ class QuizForm extends HTMLElement {
     </form>
         `;
 
+        function addQuestionPreview(questionNumber){
+            let leftDiv = document.querySelector(".cont-body-right");
+            leftDiv.innerHTML += `<quiz-question title="Your title goes here"
+                                            Question="Your question goes here"
+                                            q_number=${questionNumber}
+                                            answer1="Answer A"
+                                            answer2="Answer B"
+                                            answer3="Answer C"
+                                            answer4="Answer D"
+                ></quiz-question>`
+        }
 
+
+        addQuestionPreview(1);
         let wrapperCount = 1;
         let addquestionButton = document.querySelector("#js-quiz-upload-container-add-btn");
 
@@ -82,8 +104,18 @@ class QuizForm extends HTMLElement {
                       <input id="quiz-upload-container-option-box2" type="text" name="option" class="quiz-upload-container-option-box" placeholder="Option 2">
                       <input id="quiz-upload-container-option-box3" type="text" name="option" class="quiz-upload-container-option-box" placeholder="Option 3">
                       <input id="quiz-upload-container-option-box4" type="text" name="option" class="quiz-upload-container-option-box" placeholder="Option 4">
+                      
+                      <!--correct answerr-->
+                      <p class="fnt fnt-mid fnt-bold">Correct Answer</p>
+                      <select id="js-quiz-upload-answer">
+                          <option value="opt1">Option 01</option>
+                          <option value="opt2">Option 02</option>
+                          <option value="opt3">Option 03</option>
+                          <option value="opt4">Option 04</option>
+                      </select>
         `;
             document.querySelector(".quiz-upload-wrapper-container").appendChild(newQuestionWrapper);
+            addQuestionPreview(wrapperCount);
         })
 
 
