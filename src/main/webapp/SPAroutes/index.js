@@ -936,6 +936,10 @@ const handleAuthRoutes = async (location) => {
     else if (location.includes("signup")){
         // pageContent = <sign-up></sign-up>
     }
+    else if(location.includes("forgotPassword")) {
+        pageContent = `<forgot-password></forgot-password>`;
+    }
+
     else{
         window.history.pushState({}, "", "/");
         urlLocation();
