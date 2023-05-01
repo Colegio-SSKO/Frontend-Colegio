@@ -120,6 +120,7 @@ const studentRoutes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/publish_question_left.jsp",
         path_right: "/views/publish_question_right.jsp",
+        script: "../static/viewsJS/userPublishQuestion.js",
         title: "Publish Question",
         data : "This is the Publish question page"
     },
@@ -153,14 +154,14 @@ const studentRoutes = {
     //     data : "This is the  create quiz page"
     // },
 
-    "/start_quiz" : {
-        isSingle : false,
-        template : "/SPAroutes/index_double.jsp",
-        path_left:"/views/Start_quiz_left.jsp",
-        path_right: "/views/Start_quiz_right.jsp",
-        title: "Start Quiz",
-        data : "This is the start quiz page"
-    },
+    // "/start_quiz" : {
+    //     isSingle : false,
+    //     template : "/SPAroutes/index_double.jsp",
+    //     path_left:"/views/Start_quiz_left.jsp",
+    //     path_right: "/views/Start_quiz_right.jsp",
+    //     title: "Start Quiz",
+    //     data : "This is the start quiz page"
+    // },
 
     "/cart" : {
         isSingle : true,
@@ -339,13 +340,13 @@ const teacherRoutes =  {
     },
 
 
-    "/about" : {
-        isSingle : false,
-        template : "/SPAroutesTeacher/index_double.jsp",
-        path_left:"/SPAroutesTeacher/about.html",
-        title: "about",
-        data : "This is the about page"
-    },
+    // "/about" : {
+    //     isSingle : false,
+    //     template : "/SPAroutesTeacher/index_double.jsp",
+    //     path_left:"/SPAroutesTeacher/about.html",
+    //     title: "about",
+    //     data : "This is the about page"
+    // },
 
 
     "/viewCourses" : {
@@ -437,14 +438,14 @@ const teacherRoutes =  {
         data : "This is the  create quiz page"
     },
 
-    "/start_quiz" : {
-        isSingle : false,
-        template : "/SPAroutesTeacher/index_double.jsp",
-        path_left:"/views/Start_quiz_left.jsp",
-        path_right: "/views/Start_quiz_right.jsp",
-        title: "Start Quiz",
-        data : "This is the start quiz page"
-    },
+    // "/start_quiz" : {
+    //     isSingle : false,
+    //     template : "/SPAroutesTeacher/index_double.jsp",
+    //     path_left:"/views/Start_quiz_left.jsp",
+    //     path_right: "/views/Start_quiz_right.jsp",
+    //     title: "Start Quiz",
+    //     data : "This is the start quiz page"
+    // },
 
     "/cart" : {
         isSingle : true,
@@ -571,7 +572,34 @@ const teacherRoutes =  {
         script: "../static/viewsJS/teacherCreatQuiz.js",
         title: "Start Quiz",
         data : "This is the start quiz page"
-    }
+    },
+    "/small_cardopen" : {
+        isSingle : false,
+        template : "/SPAroutes/index_double.jsp",
+        path_left:"/views/Home_content.jsp",
+        script: "../static/viewsJS/small_card_open_new1.js",
+        title: "small card open",
+        data : "This is the home page"
+    },
+
+    "/quiz_serachopen" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Home_content.jsp",
+        script: "../static/viewsJS/quiz_purchase_search.js",
+        title: "small card open",
+        data : "This is the home page"
+    },
+
+    "/continuecourse" : {
+        isSingle : false,
+        template : "/SPAroutes/index_double.jsp",
+        path_left:"/views/Create_quiz_left.jsp",
+        path_right: "/views/Create_quiz_right.jsp",
+        script: "../static/viewsJS/Student_continue_course.js",
+        title: "Follow Course",
+        data : "This is the follow course page"
+    },
 
 
 };
