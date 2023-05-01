@@ -6,7 +6,7 @@ class Q_4 extends HTMLElement {
         let accept = this.attributes.accept.value;
         let description = this.attributes.description.value;
         this.innerHTML = `
-        <div class="q-2-cart-item js-questionCards" >
+        <div class="q-2-cart-item js-questionCards fadeInanimation" >
 
         <div class="q-2-content" id="${question_ID}">
             <h2 class="fnt fnt-extraBold fnt-large">${title}</h2>

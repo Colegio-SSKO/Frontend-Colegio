@@ -7,7 +7,7 @@ class Q_3 extends HTMLElement {
         let name = this.attributes.name.value;
         let qulifi = this.attributes.qulifi.value;
         this.innerHTML = `
-        <div class="q-3-main">
+        <div class="q-3-main fadeInanimation">
         <div class="q-3-about">
             <h2 class="fnt fnt-bold fnt-large">${title}</h2>
             <p class="fnt fnt-mid">${description}</p>

@@ -905,6 +905,8 @@ const handleAuthRoutes = async (location) => {
     }
 
     document.querySelector(".cont-body").innerHTML = pageContent;
+
+
 }
 
 

@@ -7,7 +7,7 @@ class Q1 extends HTMLElement {
         let accept = this.attributes.accept.value;
         let description = this.attributes.description.value;
         this.innerHTML = `
-        <div class="q-1-cart-item js-questionCards" >
+        <div class="q-1-cart-item js-questionCards fadeInanimation" >
         <div class="q-1-tumbnail-img">
             <img src="${img_src}" alt="" srcset="">
         </div>

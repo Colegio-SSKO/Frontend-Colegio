@@ -2,7 +2,7 @@ class Signin1 extends HTMLElement {
     connectedCallback() {
 
         this.innerHTML = `
-                  <section class="signup">
+                  <section class="signup fadeInanimation">
                       <div class="hero">
                     
 <!--                        <div class="right">-->
@@ -55,16 +55,16 @@ class Signin1 extends HTMLElement {
 
         const handleSubmit =async (e)=>{
             e.preventDefault();
-            const email = document.querySelector("#email").value;
-            const password = document.querySelector("#password").value;
+            const email = document.querySelector("#email");
+            const password = document.querySelector("#password");
 
-            if (email.length == 0 || password.length == 0){
+            if (email.value.length == 0 || password.value.length == 0){
                 alert("Password or email is empty")
             }
             else{
                 const data = {
-                    "email" : email,
-                    "password" : password
+                    "email" : email.value,
+                    "password" : password.value
                 }
 
 
@@ -75,6 +75,8 @@ class Signin1 extends HTMLElement {
                 let receivedData = await response.json();
                 if(receivedData["isError"]){
                     alert(receivedData["message"])
+                    password.value = "";
+                    email.value = "";
                 }
 
                 else{

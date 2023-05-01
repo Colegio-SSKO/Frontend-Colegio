@@ -10,7 +10,8 @@ class Featured_cont extends HTMLElement {
         )
 
         this.innerHTML = `
-        <div class="fnt fnt-bold fnt-large">Featured in Colegio</div>
+        <div class="fadeInanimation">
+            <div class="fnt fnt-bold fnt-large">Featured in Colegio</div>
         <div class="featured-cont-wrap">
         <div class="featured-cont-image">
             <img src="${data['img_src']}" alt="">
@@ -43,6 +44,7 @@ class Featured_cont extends HTMLElement {
         
     </div>
     
+        </div>
         `;
 
 
