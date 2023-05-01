@@ -10,40 +10,39 @@ class Comment extends HTMLElement {
         let votes = this.attributes.votes.value;
 
         this.innerHTML = `
-               <div class="comment-main">
-        <div class="comment-about">
-            <h3 class="fnt fnt-bold fnt-large">${title}</h3>
-            <p class="fnt fnt-light fnt-mid">${description}</p>
-
-
+        <div class="comment-main">
+        
+            <div class="comment-about">
+                <h3 class="fnt fnt-bold fnt-large">${title}</h3>
+                <p class="fnt fnt-light fnt-mid">${description}</p>
+    
+                <div class="comment-profile">
+                    <div class="comment-author">
+                        <img src="${img_src}" alt="">
+                    </div>
+                    <div class="comment-author-name">
+                        <h3 class="fnt fnt-bold fnt-mid">${author}</h3>
+                        <p class="fnt fnt-mid">${author_title}</p>
+                    </div>
+                </div>
+            </div>
+    
+            <content-ratings rating="${rating}" votes="${votes}"></content-ratings>
             
-            <div class="comment-profile">
-                <div class="comment-author">
-                    <img src="${img_src}" alt="">
+            <div class="comment-cmnt">
+                <div class="comment-comment-box">
+                    <img src="../static/img/components_images/pro.png" alt="">
+                    <form>
+                        <input id="js-quiz-comment-value" type="text" class="fnt-mid fnt fnt-bold" placeholder="Comment here...">
+                        <button id="js-quiz-comment-send-btn" class="send-button"><span class="material-icons">send</span></button>
+                    </form>
                 </div>
-                <div class="comment-author-name">
-                    <h3 class="fnt fnt-bold fnt-small">${author}</h3>
-                    <p class="fnt fnt-small">${author_title}</p>
-                </div>
-            </div>
-        </div>
-
-        <content-ratings rating="${rating}" votes="${votes}"></content-ratings>
-        <div class="comment-cmnt">
-            <div class="comment-comment-box">
-                <img src="../static/img/components_images/pro.png" alt="">
-                <form>
-                    <input id="js-quiz-comment-value" type="text" placeholder="Comment here...">
+    
+                <div id="js-quiz-comment-container" class="comment-comments">
                    
-                </form>
-                 <button id="js-quiz-comment-send-btn" class="send-button"><span class="material-icons">send</span></button>
+                </div>
             </div>
-
-            <div id="js-quiz-comment-container" class="comment-comments">
-               
-            </div>
-        </div>
-
+            
     </div>
 
         `;

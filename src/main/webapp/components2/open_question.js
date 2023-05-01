@@ -32,7 +32,7 @@ class Open_question extends HTMLElement {
         </div>
         <div class="open-question-msgBox">
             <form action="#">
-                <input id="js-quession-chat-input" type="text" name="message"  class="fnt" placeholder="Type your response" >
+                <input id="js-quession-chat-input" type="text" name="message"  class="fnt fnt-mid fnt-bold" placeholder="Type your response" >
 
                 <span class="material-icons">attach_file</span>
                 <send-button/>

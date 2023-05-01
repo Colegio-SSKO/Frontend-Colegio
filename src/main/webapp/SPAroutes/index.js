@@ -81,7 +81,7 @@ const studentRoutes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/View_course2_left.jsp",
         path_right: "/views/View_course2_right.jsp",
-        script: "../static/viewsJS/Student_view_courses1.js",
+        script: "../static/viewsJS/Student_view_courses.js",
         title: "My Courses",
         data : "This is the contact page"
     },
@@ -629,7 +629,7 @@ const organizationRoutes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/View_course2_left.jsp",
         path_right: "/views/View_course2_right.jsp",
-        script: "../static/viewsJS/Student_view_courses1.js",
+        script: "../static/viewsJS/Student_view_courses.js",
         title: "My Courses",
         data : "This is the contact page"
     },
@@ -926,7 +926,7 @@ const handleAuthRoutes = async (location) => {
         alert(pageContent);
     }
     else if (location.includes("signup")){
-        pageContent = "signup"
+        // pageContent = <sign-up></sign-up>
     }
     else{
         window.history.pushState({}, "", "/");
@@ -1001,7 +1001,7 @@ const handleNormalRoutes = async (location)=>{
         document.querySelector("#navbar-container").innerHTML = `<navbar-normaluser></navbar-normaluser>`;
         document.querySelector("#sidebar-containter").innerHTML = `<sidebar-normaluser></sidebar-normaluser>`;
     }
-    else if(getUserType()==1 ){//student
+    else if(getUserType()==1 || getUserType()==3){//student
         document.querySelector("#navbar-container").innerHTML = `<nav-bar></nav-bar>`;
         document.querySelector("#sidebar-containter").innerHTML = `<side-bar></side-bar>`;
     }
