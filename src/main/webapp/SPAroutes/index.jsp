@@ -133,6 +133,7 @@
     <script src="../components2/send_answers.js"></script>
     <script src="../components2/comment-container.js"></script>
     <script src="../components2/comment_container_list.js"></script>
+    <script src="../components2/quiz-form.js"></script>
 
 
 

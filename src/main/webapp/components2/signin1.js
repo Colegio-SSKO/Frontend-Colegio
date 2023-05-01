@@ -96,7 +96,6 @@ class Signin1 extends HTMLElement {
                     //notifications handling
                     notificationWebSocket = new WebSocket('ws://localhost:8090/notificationHandler');
                     notificationWebSocket.onopen = () =>{
-                        alert("open unaaaaa");
                         const message = {
                             "config" : true,
                             "token" : jwtToken["token"]
@@ -114,7 +113,6 @@ class Signin1 extends HTMLElement {
                     let receivedMessage;
 
                     questionCHat.onopen = () => {
-                        alert("question chat ekth open una");
                         const message = {
                             "config" : true,
                             "token" : jwtToken["token"]
@@ -127,9 +125,7 @@ class Signin1 extends HTMLElement {
                     };
 
 
-                    alert("methnta nm enw")
                     questionCHat.addEventListener('message', (event)=>{
-                        alert("msg ek awa")
                         receivedMessage = JSON.parse(event.data);
 
                         if (receivedMessage["receiver"] == getUserID()){
