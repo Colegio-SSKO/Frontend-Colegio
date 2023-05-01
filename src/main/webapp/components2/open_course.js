@@ -20,7 +20,7 @@ class Open_course extends HTMLElement {
                  <i class="fas fa-star star-yellow" style="color: orange; font-size:10px;"></i>
                  <i class="fas fa-star star-yellow" style="color: orange; font-size:15px;"></i>
                  <i class="fas fa-star star-yellow" style="color: orange; font-size:10px;"></i>
-                 <h6 class="fnt fnt-light fnt-small">Ratings(${rates_count})</h6>
+                 <h6 class="fnt fnt-light fnt-mid">Ratings(${rates_count})</h6>
                  <div class="rate_report">
                     <a href=""><div class="addrate fnt fnt-bold fnt-mid" id="${content_id}">Rate</div></a>
                     <div class="addreport fnt fnt-bold fnt-mid" id="${course_id}">Report</div>

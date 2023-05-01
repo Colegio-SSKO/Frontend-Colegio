@@ -21,7 +21,7 @@ class ListedContent extends HTMLElement {
             <h5 class="fnt fnt-bold fnt-large">${title}</h5>
             <div class="tutor">
                 <div class="ratings">
-                    <h6 class="fnt fnt-bold fnt-small">by ${author}</h6>
+                    <h6 class="fnt fnt-bold fnt-mid">by ${author}</h6>
                 
                     <ratings-content rating="${rating}" votes="${votes}"/>
                 </div>

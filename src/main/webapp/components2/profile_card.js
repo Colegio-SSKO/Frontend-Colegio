@@ -14,19 +14,18 @@ class Profile_card extends HTMLElement {
             <img src="${profile_img}" alt="profile picture" srcset="">
         </div>
         <div class="profile-card-details">
-            <h4 class="fnt fnt-bold fnt-mid">${name} <span class="material-icons-outlined"> ${gender}</span></h4>
+            <h4 class="fnt fnt-bold fnt-mid">${name} | <span class="material-icons-outlined"> ${gender}</span></h4>
             <p class="fnt fnt-mid">${date}</p>
             <p class="fnt fnt-mid">${education_level}</p>
             
         </div>
         <div class="edit-and-delte-btns">
-            <button class="btn btn-solid fnt fnt-bold fnt-mid"><a href="/edit_profile" >Edit Profile</a></button>
+            <a href="/edit_profile" ><button class="btn btn-solid fnt fnt-bold fnt-mid is-a-route">Edit Profile</button></a>
             <a href="/upgrade"><button id="upgrade-to-teacher" class="btn btn-solid fnt is-a-route fnt-bold fnt-mid">Upgrade to Teacher</button></a>
             <a href="/upgrade_to_org"><button id="upgrade-to-organization" class="btn btn-solid fnt is-a-route fnt-bold fnt-mid" ${
                 veri === "1" ? "disabled style='pointer-events: none; background-color: lightslategray;'" : ""
             }>Upgrade to Organization</button></a>
-            <button id="delete-profile" class="btn btn-solid fnt fnt-bold fnt-mid">Delete Profile</button>
-             
+            <a href="/delete_profile"><button id="upgrade-to-teacher" class="btn btn-solid fnt is-a-route fnt-bold fnt-mid">Delete Profile</button></a>
         </div>
 
     </div>

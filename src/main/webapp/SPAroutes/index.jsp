@@ -118,6 +118,8 @@
     <script src="../components2/search_main_teacher.js"></script>
     <script src="../components2/search_main_organization.js"></script>
     <script src="../components2/signin1.js"></script>
+    <script src="../components2/signin.js"></script>
+    <script src="../components2/signup.js"></script>
     <script src="../components2/notification_msg.js"></script>
     <script src="../components2/profile_upgrade_form.js"></script>
     <script src="../components2/follow_course.js"></script>
