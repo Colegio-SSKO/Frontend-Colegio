@@ -35,3 +35,9 @@ let questionCHat;
 
 //increase count function
 let increaseNotificationCount;
+
+
+
+//custom events
+let titleChanged = new CustomEvent('titleChanged', {dataValue: ""});
+let descriptionChanged = new CustomEvent('descriptionChanged', {dataValue: ""});

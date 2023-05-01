@@ -68,25 +68,64 @@ class QuizForm extends HTMLElement {
                     
 <!--                    remove this lator-->
                     <button id="js-quiz-upload-submit-button" class="btn btn-outlined btn-large">Create Quiz</button>
+                     <button id="js-quiz-upload-preview-button" class="btn btn-outlined btn-large">Preview</button>
                 </div>
             </div>
     </form>
         `;
 
-        function addQuestionPreview(questionNumber){
+        function extractTextData(){
+
+            //textData
+            let quizTitle = document.querySelector("#js-quiz-upload-title");
+            let quizSubject = document.querySelector("#js-quiz-upload-subject");
+            let quizDescription = document.querySelector("#js-quiz-upload-description");
+            let quizPrice = document.querySelector("#js-quiz-upload-price");
+            let questionData = [];
+
+            let questions = document.querySelectorAll('.quiz-upload-wrapper');
+
+            questions.forEach((question)=>{
+                let newQuestion = {};
+                newQuestion["question"] = question.querySelector('.question-upload-container-description-box').value;
+                newQuestion["opt1"] = question.querySelector('#quiz-upload-container-option-box1').value;
+                newQuestion["opt2"] = question.querySelector('#quiz-upload-container-option-box2').value;
+                newQuestion["opt3"] = question.querySelector('#quiz-upload-container-option-box3').value;
+                newQuestion["opt4"] = question.querySelector('#quiz-upload-container-option-box4').value;
+                alert(JSON.stringify(newQuestion))
+                questionData.push(newQuestion)
+            })
+            alert(JSON.stringify(questionData));
+
+            let inputData = {
+
+                "userId" : getUserID(),
+                "title" : quizTitle.value,
+                "subject" : 10,
+                "description" : quizDescription.value,
+                "price" : quizPrice.value,
+                "quizQuestions" : questionData
+            }
+
+            return inputData;
+
+        }
+
+
+
+        function addQuestionPreview(questionNumber, questionDetails, questionTitle, questionDescription){
             let leftDiv = document.querySelector(".cont-body-right");
-            leftDiv.innerHTML += `<quiz-question title="Your title goes here"
-                                            Question="Your question goes here"
+            leftDiv.innerHTML += `<quiz-question title=${questionTitle}
+                                            Question=${questionDetails["question"]}
                                             q_number=${questionNumber}
-                                            answer1="Answer A"
-                                            answer2="Answer B"
-                                            answer3="Answer C"
-                                            answer4="Answer D"
+                                            answer1=${questionDetails["opt1"]}
+                                            answer2=${questionDetails["opt2"]}
+                                            answer3=${questionDetails["opt3"]}
+                                            answer4=${questionDetails["opt4"]}
                 ></quiz-question>`
         }
 
 
-        addQuestionPreview(1);
         let wrapperCount = 1;
         let addquestionButton = document.querySelector("#js-quiz-upload-container-add-btn");
 
@@ -119,6 +158,19 @@ class QuizForm extends HTMLElement {
         })
 
 
+        //handling preview
+        document.querySelector('#js-quiz-upload-preview-button').addEventListener('click', (event)=>{
+            document.querySelector(".cont-body-right").innerHTML = ""
+            event.preventDefault();
+            alert('click una');
+            let questionData = extractTextData();
+            questionData["quizQuestions"].forEach((question)=>{
+                addQuestionPreview(questionData["quizQuestions"].indexOf(question)+1, question, questionData["title"], questionData["description"])
+            })
+
+        })
+
+
         //handling upload
         let createquiz = document.querySelector("#js-quiz-upload-submit-button");
         let thumbnailUpload = document.querySelector("#js-quiz-upload-thumbnail-upload");
@@ -134,42 +186,11 @@ class QuizForm extends HTMLElement {
 
             formData.append( 'thumbnailImage' ,thumbnailUpload.files[0]);
 
-            //textData
-            let quizTitle = document.querySelector("#js-quiz-upload-title");
-            let quizSubject = document.querySelector("#js-quiz-upload-subject");
-            let quizDescription = document.querySelector("#js-quiz-upload-description");
-            let quizPrice = document.querySelector("#js-quiz-upload-price");
-
-            let questions = document.querySelectorAll('.quiz-upload-wrapper');
-
-            let questionData = [];
 
 
+            let textData = extractTextData();
+            alert(textData);
 
-            questions.forEach((question)=>{
-                let newQuestion = {};
-                newQuestion["question"] = question.querySelector('.question-upload-container-description-box').value;
-                newQuestion["opt1"] = question.querySelector('#quiz-upload-container-option-box1').value;
-                newQuestion["opt2"] = question.querySelector('#quiz-upload-container-option-box2').value;
-                newQuestion["opt3"] = question.querySelector('#quiz-upload-container-option-box3').value;
-                newQuestion["opt4"] = question.querySelector('#quiz-upload-container-option-box4').value;
-                alert(JSON.stringify(newQuestion))
-                questionData.push(newQuestion)
-            })
-            alert(JSON.stringify(questionData));
-
-
-
-
-            let textData = {
-
-                "userId" : getUserID(),
-                "title" : quizTitle.value,
-                "subject" : 10,
-                "description" : quizDescription.value,
-                "price" : quizPrice.value,
-                "questionDescriptions" : questionData
-            }
 
 
             //send the request
