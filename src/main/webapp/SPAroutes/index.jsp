@@ -134,6 +134,9 @@
     <script src="../components2/comment-container.js"></script>
     <script src="../components2/comment_container_list.js"></script>
     <script src="../components2/quiz-form.js"></script>
+    <script src="../components2/teacher_profile_card.js"></script>
+    <script src="../components2/edit_profileTeacher.js"></script>
+    <script src="../components2/upgrade_form_org.js"></script>
 
 
 
