@@ -137,6 +137,7 @@
     <script src="../components2/teacher_profile_card.js"></script>
     <script src="../components2/edit_profileTeacher.js"></script>
     <script src="../components2/upgrade_form_org.js"></script>
+    <script src="../components2/question_form.js"></script>
 
 
 
