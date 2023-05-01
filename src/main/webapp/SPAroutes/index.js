@@ -1009,7 +1009,7 @@ const handleNormalRoutes = async (location)=>{
         document.querySelector("#navbar-container").innerHTML = `<navbar-normaluser></navbar-normaluser>`;
         document.querySelector("#sidebar-containter").innerHTML = `<sidebar-normaluser></sidebar-normaluser>`;
     }
-    else if(getUserType()==1 ){//student
+    else if(getUserType()==1 || getUserType()==3){//student
         document.querySelector("#navbar-container").innerHTML = `<nav-bar></nav-bar>`;
         document.querySelector("#sidebar-containter").innerHTML = `<side-bar></side-bar>`;
     }
