@@ -17,7 +17,6 @@ class Q_4 extends HTMLElement {
         <div class="q-2-price">
             <img src="${img_src}" alt="">
         </div>
-    </div>
         `;
     }
 }

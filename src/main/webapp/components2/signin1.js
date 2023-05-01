@@ -2,53 +2,41 @@ class Signin1 extends HTMLElement {
     connectedCallback() {
 
         this.innerHTML = `
-                  <section class="signup fadeInanimation">
-                      <div class="hero">
-                    
-<!--                        <div class="right">-->
-<!--                          <div class="img">-->
-<!--                            <img src="../static/img/login/art2.png" alt="">-->
-<!--                          </div>-->
-<!--                          <div class="text">-->
-<!--                            <h2>Distance Learning</h2>-->
-<!--                            <p>Follow online cource on various subjects</p>-->
-<!--                          </div>-->
-<!--                        </div>-->
-                    
-<!--                        <div class="left">-->
-                          <div class="form">
-                            <h1 class="fnt fnt-extraBold fnt-extraLarge">Wellcome To Colegio</h1>
-                            <div class="inputs">
-                    
-                              <div class="input-field">
-                                <label for="email">Email</label>
-                                <input id="email" type="email" required>
+                  <section class="signup">
+                          <div class="hero">
+                              <div class="form">
+                                <h1 class="fnt fnt-extraBold fnt-extraLarge">Wellcome To Colegio</h1>
+                                <div class="inputs">
+                        
+                                  <div class="input-field">
+                                    <label for="email" class="fnt fnt-mid fnt-bold">Email</label>
+                                    <input id="email" class="fnt fnt-mid fnt-bold" type="email" required>
+                                  </div>
+                                  <div class="input-field">
+                                    <label for="password" class="fnt fnt-mid fnt-bold">Password</label>
+                                    <input id="password" class="fnt fnt-mid fnt-bold" type="password" required>
+                                  </div>
+                                  <div class="input-field">
+                                    <label class="fnt fnt-mid fnt-bold" for="">Forget Your <span>Password</span> ?</label>
+                                  </div>
+                                </div>
+                                <button id="js-signin-btn" class="btn btn-solid fnt fnt-mid fnt-bold"> Sign in </button>
                               </div>
-                              <div class="input-field">
-                                <label for="password">Password</label>
-                                <input id="password" type="password" required>
-                              </div>
-                              <div class="input-field">
-                                <label for="">Forget Your <span>Password</span> ?</label>
-                              </div>
-                            </div>
-                            <button id="js-signin-btn" class="btn btn-solid fnt fnt-mid fnt-bold"> Sign in </button>
+    <!--                        </div>-->
                           </div>
-<!--                        </div>-->
-                      </div>
-                    
-                      <div class="footer">
-                        <div class="footer-menu">
-                          <ul>
-                            <li><a href="" class="fnt fnt-mid fnt-bold">About</a></li>
-                            <li><a href="" class="fnt fnt-mid fnt-bold">Help Center</a></li>
-                            <li><a href="" class="fnt fnt-mid fnt-bold">User Agrement</a></li>
-                            <li><a href="" class="fnt fnt-mid fnt-bold">Privacy Policy</a></li>
-                            <li><a href="" class="fnt fnt-mid fnt-bold">Cookie Policy</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </section>
+                        
+                          <div class="footer">
+                            <div class="footer-menu">
+                              <ul>
+                                <li><a href="" class="fnt fnt-mid fnt-bold">About</a></li>
+                                <li><a href="" class="fnt fnt-mid fnt-bold">Help Center</a></li>
+                                <li><a href="" class="fnt fnt-mid fnt-bold">User Agrement</a></li>
+                                <li><a href="" class="fnt fnt-mid fnt-bold">Privacy Policy</a></li>
+                                <li><a href="" class="fnt fnt-mid fnt-bold">Cookie Policy</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                  </section>
 
         `;
 

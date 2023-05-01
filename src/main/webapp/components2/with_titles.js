@@ -11,8 +11,8 @@ class With_title extends HTMLElement {
            
             </div>
             <div class="name-container">
-                <h5>${name}</h5>
-                <h6>${qulifi}</h6>
+                <h5 class="fnt fnt-mid fnt-bold">${name}</h5>
+                <h6 class="fnt fnt-mid">${qulifi}</h6>
             </div>
         </div>
 

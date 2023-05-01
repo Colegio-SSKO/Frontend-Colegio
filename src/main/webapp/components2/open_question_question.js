@@ -14,8 +14,8 @@ class Open_question_question extends HTMLElement {
         this.innerHTML = `
        <div class="open-question-new-container">
         <div class="open-question-new-heading">
-            <h3>${title}</h3>
-            <p>
+            <h3 class="fnt fnt-large fnt-bold">${title}</h3>
+            <p class="fnt fnt-mid fnt-bold">
                 ${description}
             </p>
         </div>
@@ -28,15 +28,15 @@ class Open_question_question extends HTMLElement {
                     <img src="${author_propic}" alt="">
                 </div>
                 <div class="texts">
-                    <h4>Accepted by: <span>${author}</span></h4>
-                    <h5>${qulifi}</h5>
+                    <h4 class="fnt fnt-mid fnt-bold">Accepted by: <span class="fnt fnt-mid fnt-bold">${author}</span></h4>
+                    <h5 class="fnt fnt-small fnt-bold">${qulifi}</h5>
                 </div>
             </div>
             <div class="open-question-new-btn">
-                <button>Request Session</button>
+                <button class="btn btn-a btn-solid btn-small">Request Session</button>
             </div>
         </div>
-        <h3>
+        <h3 class="fnt fnt-large fnt-bold">
             Answers
         </h3>
         <div class="open-question-new-answers">
@@ -44,10 +44,10 @@ class Open_question_question extends HTMLElement {
             <img src="../static/img/components_images/Group%2041.png" alt="">
         </div>
         <div class="open-question-new-feedback">
-            <h3>Feedback for the answers</h3>
+            <h3 class="fnt fnt-bold fnt-large">Feedback for the answers</h3>
             <div class="open-question-new-comment">
                 <img src="${getUserProfileImage()}" alt="">
-                <input placeholder="Comment here..." type="text">
+                <input class="fnt fnt-mid fnt-bold" placeholder="Comment here..." type="text">
             </div>
         </div>
     </div>

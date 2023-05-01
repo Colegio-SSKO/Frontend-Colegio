@@ -25,7 +25,7 @@ class Edit_profile extends HTMLElement {
                 </select><br>
 
                 <button id="save-btn" class="btn btn-solid fnt fnt-bold fnt-mid" >Save</button><br>
-                <button class="btn btn-solid fnt fnt-bold fnt-mid" ><a href="/change_password">Edit Privacy & Security</a></button>
+                <a href="/change_password"><button class="btn btn-solid fnt fnt-bold fnt-mid is-a-route" >Edit Privacy & Security</button></a>
 
            
         </div>

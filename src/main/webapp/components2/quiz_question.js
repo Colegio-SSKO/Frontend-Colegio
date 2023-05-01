@@ -10,33 +10,33 @@ class QuizQuestion extends HTMLElement {
         let answer4 = this.attributes.answer4.value;
         this.innerHTML = `
         <div id="js-quiz-question-wrap" class="quiz-wrap">
-        <h3>${title}</h3>
-        <p id="js-quiz-q-question">${Question}</p>
-        <div id="js-quiz-q-answer-1-backg" class="quiz-q">
-            <div class="q-number">A</div>
-            <div id="js-quiz-q-answer-1" class="question">${answer1}</div>
-        </div>
-
-        <div id="js-quiz-q-answer-2-backg" class="quiz-q">
-            <div class="q-number">B</div>
-            <div id="js-quiz-q-answer-2" class="question">${answer2}</div>
-        </div>
-
-        <div id="js-quiz-q-answer-3-backg" class="quiz-q">
-            <div class="q-number">C</div>
-            <div id="js-quiz-q-answer-3" class="question">${answer3}</div>
-        </div>
-
-        <div id="js-quiz-q-answer-4-backg" class="quiz-q">
-            <div class="q-number">D</div>
-            <div id="js-quiz-q-answer-4" class="question">${answer4}</div>
-        </div>
-
-        <ul>
-            <li class="js-quiz-previous"><span class="material-symbols-outlined">keyboard_double_arrow_left</span></li>
-            <li id="js-quiz-q-number">${q_number}</li>
-            <li class="js-quiz-next"><span class="material-symbols-outlined">keyboard_double_arrow_right</span></li>
-        </ul>
+            <h3 class="fnt fnt-bold fnt-large">${title}</h3>
+            <p class="fnt fnt-mid fnt-bold" id="js-quiz-q-question">${Question}</p>
+            <div id="js-quiz-q-answer-1-backg" class="quiz-q">
+                <div class="q-number fnt-mid fnt fnt-bold">A</div>
+                <div id="js-quiz-q-answer-1" class="question fnt fnt-bold fnt-mid">${answer1}</div>
+            </div>
+    
+            <div id="js-quiz-q-answer-2-backg" class="quiz-q">
+                <div class="q-number fnt-mid fnt fnt-bold">B</div>
+                <div id="js-quiz-q-answer-2" class="question fnt-mid fnt fnt-bold">${answer2}</div>
+            </div>
+    
+            <div id="js-quiz-q-answer-3-backg" class="quiz-q">
+                <div class="q-number fnt-mid fnt fnt-bold">C</div>
+                <div id="js-quiz-q-answer-3" class="question fnt-mid fnt fnt-bold">${answer3}</div>
+            </div>
+    
+            <div id="js-quiz-q-answer-4-backg" class="quiz-q">
+                <div class="q-number fnt-mid fnt fnt-bold">D</div>
+                <div id="js-quiz-q-answer-4" class="question fnt-mid fnt fnt-bold">${answer4}</div>
+            </div>
+    
+            <ul>
+                <li class="js-quiz-previous"><span class="material-symbols-outlined">keyboard_double_arrow_left</span></li>
+                <li id="js-quiz-q-number" class=" fnt-mid fnt fnt-bold">${q_number}</li>
+                <li class="js-quiz-next"><span class="material-symbols-outlined">keyboard_double_arrow_right</span></li>
+            </ul>
     </div>
         `;
 
