@@ -1,4 +1,4 @@
-class Quizform extends HTMLElement {
+class Question_form extends HTMLElement {
     connectedCallback() {
 
         this.innerHTML = `
@@ -35,4 +35,4 @@ class Quizform extends HTMLElement {
     }
 }
     
-customElements.define('question-form', Quizform);
+customElements.define('question-form', Question_form);

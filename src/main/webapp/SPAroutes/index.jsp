@@ -118,6 +118,8 @@
     <script src="../components2/search_main_teacher.js"></script>
     <script src="../components2/search_main_organization.js"></script>
     <script src="../components2/signin1.js"></script>
+    <script src="../components2/signin.js"></script>
+    <script src="../components2/signup.js"></script>
     <script src="../components2/notification_msg.js"></script>
     <script src="../components2/profile_upgrade_form.js"></script>
     <script src="../components2/follow_course.js"></script>
@@ -134,6 +136,10 @@
     <script src="../components2/comment-container.js"></script>
     <script src="../components2/comment_container_list.js"></script>
     <script src="../components2/quiz-form.js"></script>
+    <script src="../components2/teacher_profile_card.js"></script>
+    <script src="../components2/edit_profileTeacher.js"></script>
+    <script src="../components2/upgrade_form_org.js"></script>
+    <script src="../components2/question_form.js"></script>
 
 
 

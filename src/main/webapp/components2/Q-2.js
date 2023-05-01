@@ -7,23 +7,19 @@ class Q_2 extends HTMLElement {
         let description = this.attributes.description.value;
         this.innerHTML = `
         <div class="q-2-cart-item js-questionCards fadeInanimation" >
-        
-        
-        <div class="q-2-price">
-            <img src="${img_src}" alt="">
-        </div>
-        
-        
+
         <div class="q-2-content" >
             <h2 class="fnt fnt-extraBold fnt-large">${title}</h2>
-            <p class="fnt fnt-bold fnt-mid">Session Accepted</p>
+            <p class="fnt fnt-small">Session Accepted</p>
             <h3 class="fnt fnt-light fnt-mid">${description}</h3>
             <button id="js-session-${question_ID}" class="btn btn-solid btn-small js-questionButton js-session">Session</button>
             <button id="js-quession-${question_ID}" class="btn btn-solid btn-small js-questionButton js-question">Question</button>
 
         </div>
 
-
+        <div class="q-2-price">
+            <img src="${img_src}" alt="">
+        </div>
     </div>
         `;
     }

@@ -8,18 +8,15 @@ class Q_4 extends HTMLElement {
         this.innerHTML = `
         <div class="q-2-cart-item js-questionCards fadeInanimation" >
 
-        <div class="q-2-price">
-            <img src="${img_src}" alt="">
-        </div>
-
         <div class="q-2-content" id="${question_ID}">
             <h2 class="fnt fnt-extraBold fnt-large">${title}</h2>
-            <p class="fnt fnt-bold fnt-mid">pending</p>
+            <p class="fnt fnt-small">pending</p>
             <h3 class="fnt fnt-light fnt-mid">${description}</h3>
         </div>
 
-
-    </div>
+        <div class="q-2-price">
+            <img src="${img_src}" alt="">
+        </div>
         `;
     }
 }
