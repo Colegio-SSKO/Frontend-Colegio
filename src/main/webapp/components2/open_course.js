@@ -18,22 +18,24 @@ class Open_course extends HTMLElement {
 
         <div class="cont-ratings">
             <span class="material-icons">star</span>
-            <div class="fnt fnt-light fnt-small">Rates count </div>
-            <div class="fnt fnt-bold fnt-small">(${rates_count})</div>
+            <div class="fnt fnt-light fnt-mid">Rates count </div>
+            <div class="fnt fnt-light fnt-mid">(${rates_count})</div>
     
         </div>
         
-        <button class="addrate fnt fnt-bold fnt-mid" id="${content_id}">Rate</button>
-        <button class="addreport fnt fnt-bold fnt-mid" id="${course_id}">Report</button>
+        
+         <a href="" class="addrate fnt fnt-bold fnt-mid link" id="${content_id}">Rate</a>
+         <span class="fnt fnt-mid fnt-bold">or</span>
+         <a href="" class="addreport fnt fnt-bold fnt-mid link" id="${course_id}">Report</a>
 
-        <h4 class="open-course-title fnt fnt-bold fnt-large">${title} </h4>
-        <p class="open-course-desc fnt fnt-light fnt-mid">${description}
-        </p>
+
+        <h4 class="open-course-title fnt fnt-bold fnt-large" style="margin-bottom: 0; padding-bottom: 0">${title} </h4>
+        <p class="open-course-desc fnt fnt-light fnt-mid" style="margin-top: 0; padding-top: 0">${description}</p>
 
         <with-title img_src = "${author_pic}" name = "${author}" qulifi = "${author_title}"></with-title>
         <div class="open-course-cont">
         
-        <button class="course_countinue btn btn-solid btn-small"><a href="/continuecourse" id="${course_id}">Continue</a></button>
+        <a href="/continuecourse" id="${course_id}"><button class="course_countinue btn btn-solid btn-small fnt-bold fnt fnt-mid is-a-route">Continue</button></a>
 
 
         </div>

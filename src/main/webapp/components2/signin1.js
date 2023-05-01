@@ -94,7 +94,6 @@ class Signin1 extends HTMLElement {
                     //notifications handling
                     notificationWebSocket = new WebSocket('ws://localhost:8090/notificationHandler');
                     notificationWebSocket.onopen = () =>{
-                        alert("open unaaaaa");
                         const message = {
                             "config" : true,
                             "token" : jwtToken["token"]
@@ -112,7 +111,6 @@ class Signin1 extends HTMLElement {
                     let receivedMessage;
 
                     questionCHat.onopen = () => {
-                        alert("question chat ekth open una");
                         const message = {
                             "config" : true,
                             "token" : jwtToken["token"]
@@ -125,9 +123,7 @@ class Signin1 extends HTMLElement {
                     };
 
 
-                    alert("methnta nm enw")
                     questionCHat.addEventListener('message', (event)=>{
-                        alert("msg ek awa")
                         receivedMessage = JSON.parse(event.data);
 
                         if (receivedMessage["receiver"] == getUserID()){
@@ -164,15 +160,14 @@ class Signin1 extends HTMLElement {
 
                     //setting the user data
 
-                    alert("gemmmmmmak tm")
                     let userData = await fetch('http://localhost:8090/api/authenticate/getUserData/', {
                         method : "GET",
                         credentials: 'include'
                     }).then((response)=>{
                         return response.json();
                     })
-                    alert(userData["userName"])
-                    alert(userData["userType"])
+                    // alert(userData["userName"])
+                    // alert(userData["userType"])
 
                     username = userData["userName"];
                     userID = userData["userID"];

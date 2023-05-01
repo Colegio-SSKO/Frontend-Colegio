@@ -12,13 +12,13 @@ class Profile_card extends HTMLElement {
             <img src="${profile_img}" alt="profile picture" srcset="">
         </div>
         <div class="profile-card-details">
-            <h4 class="fnt fnt-bold fnt-mid">${name} <span class="material-icons-outlined"> ${gender}</span></h4>
+            <h4 class="fnt fnt-bold fnt-mid">${name} | <span class="material-icons-outlined"> ${gender}</span></h4>
             <p class="fnt fnt-mid">${date}</p>
             <p class="fnt fnt-mid">${education_level}</p>
             
         </div>
         <div class="edit-and-delte-btns">
-            <button class="btn btn-solid fnt fnt-bold fnt-mid"><a href="/edit_profile" >Edit Profile</a></button>
+            <a href="/edit_profile" ><button class="btn btn-solid fnt fnt-bold fnt-mid is-a-route">Edit Profile</button></a>
             <a href="/upgrade"><button id="upgrade-to-teacher" class="btn btn-solid fnt is-a-route fnt-bold fnt-mid">Upgrade to Teacher</button></a>
             <button id="delete-profile" class="btn btn-solid fnt fnt-bold fnt-mid">Delete Profile</button>
         </div>

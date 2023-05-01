@@ -80,7 +80,7 @@ const studentRoutes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/View_course2_left.jsp",
         path_right: "/views/View_course2_right.jsp",
-        script: "../static/viewsJS/Student_view_courses1.js",
+        script: "../static/viewsJS/Student_view_courses.js",
         title: "My Courses",
         data : "This is the contact page"
     },
@@ -100,7 +100,7 @@ const studentRoutes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/Question_student_1_left.jsp",
         path_right: "/views/Question_student_1_right.jsp",
-        script: "../static/viewsJS/Student_question.js",
+        script: "../static/viewsJS/Student_question1.js",
         title: "Question",
         data : "This is the Question page"
     },
@@ -351,7 +351,7 @@ const teacherRoutes =  {
         template : "/SPAroutesTeacher/index_double.jsp",
         path_left:"/views/Question_student_1_left.jsp",
         path_right: "/views/Question_student_1_right.jsp",
-        script: "../static/viewsJS/Student_question.js",
+        script: "../static/viewsJS/Student_question1.js",
         title: "Question",
         data : "This is the Question page"
     },
@@ -568,7 +568,7 @@ const organizationRoutes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/View_course2_left.jsp",
         path_right: "/views/View_course2_right.jsp",
-        script: "../static/viewsJS/Student_view_courses1.js",
+        script: "../static/viewsJS/Student_view_courses.js",
         title: "My Courses",
         data : "This is the contact page"
     },
@@ -864,7 +864,7 @@ const handleAuthRoutes = async (location) => {
         alert(pageContent);
     }
     else if (location.includes("signup")){
-        pageContent = "signup"
+        // pageContent = <sign-up></sign-up>
     }
     else{
         window.history.pushState({}, "", "/");

@@ -20,7 +20,7 @@ class Small_listed extends HTMLElement {
         <div class="small-listed-cont-details">
             <h5 class="small_listed fnt fnt-bold fnt-mid"><a id="${content_id}" href="/small_cardopen">${title}</a></h5>
                 <div class="small-listed-cont-author">
-                    <h6 class="fnt fnt-bold fnt-small">${author}</h6>
+                    <h6 class="fnt fnt-mid">${author}</h6>
 
      
                 </div>

@@ -142,10 +142,10 @@ body {
 
 
 .open-question-wrap {
-    width: 90%;
+    width: 100%;
     margin: auto;
+    margin-top: 73px !important;
     cursor: pointer;
-    margin-top: 20px;
     border-radius: 32px;
     height: 450px;
     display: flex;
@@ -264,13 +264,14 @@ body {
 .open-course-wrap{
     position: relative;
     cursor: pointer;
-    width: 80%;
+    width: 100%;
     height: 700px;
     padding: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
     border-radius: 20px;
     background: #F9F7F7;
     margin: auto;
+    margin-top: 73px;
 }
 
 .open-course-image {
@@ -296,6 +297,10 @@ body {
     height: 30px;
     display: flex;
     align-items: center;
+}
+
+.link{
+    color: #3F72AF !important;
 }
 
 .open-course-rating span{
@@ -361,6 +366,11 @@ body {
 .featured-cont-image {
     width: 35%;
     height: 100%;
+    transition: 0.5s;
+}
+
+.featured-cont-image:hover{
+    transform: scale(0.98);
 }
 
 .featured-cont-image img {
@@ -520,7 +530,7 @@ body {
     align-items: center;
     padding: 5px;
     border-radius: 30px;
-    padding-left: 5px;
+    /*padding-left: 5px;*/
 }
 
 .pic-container {
@@ -594,6 +604,13 @@ body {
     color: #3F72AF;
 }
 
+.btn-a{
+    color: #F9F7F7;
+}
+
+.btn-a:hover{
+    background: #F9F7F7;
+}
 
 
 .btn-solid{
@@ -632,7 +649,13 @@ body {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
     border-radius: 20px;
     background: #F9F7F7;
+    transition: 0.3s all;
+    margin: 10px auto;
+}
 
+.courseList-card:hover{
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px;
+    transform: scale(1.01);
 }
 
 .courseList-card .course-image {
@@ -817,27 +840,78 @@ body {
 }
 
 
+/*------------------------q-2--------------------------*/
 
 
 
 
-.q-1-cart-item{
-    /*position: absolute;*/
-    width: 560px;
-    height: 230px;
-    border-radius: 32px;
+.q-2-cart-item{
+    border-radius: 20px;
     background: #F9F7F7;
-    padding: 5px;
+    padding: 10px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: flex-start;
-    /*width: 90%;*/
-    margin: auto;
-    margin-top: 20px;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 10px auto;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
+    transition: 0.3s all;
+}
+
+.q-2-cart-item:hover{
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px;
+    transform: scale(1.01);
+}
+
+
+.q-2-content{
+    margin-top: 5px;
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 100%;
+}
+
+
+.q-2-price{
+    position: relative;
+    width: 250px;
+    height: auto;
+    margin-left:5px;
+    margin-top: 5px;
+}
+
+.q-2-price img{
+    position: relative;
+    width: 250px;
+    height: 100%;
+    border-radius: 15px;
 
 }
 
+/**-----------------q-1-----------------*/
+
+
+.q-1-cart-item{
+    border-radius: 20px;
+    background: #F9F7F7;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 10px auto;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
+    transition: 0.3s all;
+}
+
+.q-1-cart-item:hover{
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px;
+    transform: scale(1.01);
+}
 
 .q-1-tumbnail-img{
     position: relative;
@@ -848,40 +922,20 @@ body {
 }
 
 .q-1-tumbnail-img img{
-    width: 100%;
+    position: relative;
+    width: 250px;
     height: 100%;
+    border-radius: 15px;
+
 }
 
 .q-1-content{
-    position: relative;
     margin-top: 5px;
-    margin-left: 0px;
-    width: 310px;
-    height: 250px ;
-    padding: 2px;
-    /*margin-right: 15px;*/
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 100%;
 }
 
-.q-1-content h2{
-    position: relative;
-    margin: 0;
-}
-
-.q-1-content h3{
-    position: relative;
-    margin-top: 5px;
-}
-
-
-.q-1-content p{
-    position: relative;
-    margin-top: 2px;
-}
-
-.q-1-content button{
-    position: relative;
-    margin-bottom: 0px;
-}
 
 
 .question_large{
@@ -984,45 +1038,6 @@ body {
     outline: none;
 }
 
-
-
-.q-2-content p{
-    font-weight: bold;
-}
-
-.q-2-cart-item{
-    width: 1330px;
-    border-radius: 32px;
-    background: #F9F7F7;
-    padding: 16px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    width: 90%;
-    margin: auto;
-    margin-top: 20px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
-
-}
-
-
-.q-2-content{
-    margin-top: 5px;
-    margin-left: 15px;
-    margin-right: 15px;
-}
-
-.q-2-content h3{
-    font-weight: bold;
-    margin-bottom: 16px;
-}
-
-
-.q-2-content p{
-    font-weight: bold;
-    margin-bottom: 16px;
-}
 
 
 
@@ -1129,6 +1144,12 @@ body {
     border-radius: 20px;
     background: #F9F7F7;
     margin: 1.5rem;
+    transition: 0.5s;
+}
+
+.small-listed-cont-wrap:hover{
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px;
+    transform: scale(1.03);
 }
 
 .teacher-card-wrap {
@@ -1158,7 +1179,11 @@ body {
     width: 100%;
     height: 130px;
     margin-bottom: 20px;
+    transition: 0.5s;
 }
+
+/*.small-listed-cont-image:hover{*/
+/*    transform: scale(0.8);}*/
 
 .teacher-card-image{
     width: 160px;
@@ -1260,18 +1285,22 @@ nav {
 
 .normal-user-is-a-route {
     text-decoration: none;
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 15px;
-    border-radius: 5px;
-    border: none;
+    background-color: #F9F7F7;
+    color: #3F72AF;
+    padding: 6px 15px;
+    border-radius: 8px;
+    border: 2px solid #3F72AF;
     margin: 0 5px;
     cursor: pointer;
     transition: all .3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0,0,0,.3);
+
 }
 
 .normal-user-is-a-route:hover {
-    background-color: #0062cc;
+    background-color: #3F72AF;
+    color: #F9F7F7;
+    box-shadow: 0 2px 4px rgba(0,0,0,.3);
 }
 
 .normal-user-search-form {
@@ -1342,9 +1371,9 @@ nav {
 
 .signin-user-is-a-route {
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 6px 15px;
     border-radius: 5px;
-    border: none;
+    /*border: 2px solid #3F72AF;*/
     margin: 0 5px;
     cursor: pointer;
     transition: all .3s ease-in-out;
@@ -1764,22 +1793,37 @@ h3{
 
 
 .open-question-new-container{
-    width: 500px;
+    width: 100%;
     margin: auto;
+    margin-top: 73px;
+    background: #F9F7F7;
+    padding: 15px;
+    border-radius: 15px;
 }
 
 .open-question-new-image1{
     display: flex;
-    width: 482px;
+    width: 100%;
+    padding: 15px;
+    margin: auto;
     justify-content: center;
+}
+
+.open-question-new-image1 img{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    border-radius: 15px;
 }
 
 .open-question-new-profile img{
     width: 63px;
     height: 63px;
+    border-radius: 50%;
 }
 
 .open-question-new-btn{
+    margin-bottom: 15px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -1814,6 +1858,7 @@ h3{
     margin: auto 10px;
     width: 40px;
     height: 40px;
+    border-radius: 50%;
 }
 
 .open-question-new-comment input{

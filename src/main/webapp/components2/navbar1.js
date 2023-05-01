@@ -13,12 +13,12 @@ class Navbar1 extends HTMLElement {
         
         <nav>
       <div class="navbar-left">
-        <span pagename>Logo</span>
+        <span  class="fnt fnt-extraLarge fnt-bold pagename">title</span>
       </div>
       <div class="navbar-middle">
         <form class="search-form">
           <input type="text" id="main_search_icon" placeholder="Search...">
-          <a href="/test"><button class="signin-user-is-a-route is-a-route" type="submit">Search</button></a>
+          <a href="/test"><button class=" normal-user-is-a-route is-a-route fnt fnt-mid fnt-bold" type="submit">Search</button></a>
         </form>
       </div>
       <div class="navbar-right">
