@@ -11,7 +11,7 @@ class ListedContent extends HTMLElement {
         let rating = this.attributes.rating.value;
         let votes = this.attributes.votes.value;
         this.innerHTML = `
-        <div class="courseList-card" id="${content_ID}">
+        <div class="courseList-card fadeInanimation" id="${content_ID}">
         <div class="course-image">
             <img src="${img_src}" alt="course image">
         </div>

@@ -1,56 +1,4 @@
-alert("Hellppaa");
-
-async function fetchData() {
-    const req = {
-        "user_ID" : "23"
-    }
-
-//uncomment this when connecting the database
-    // let res = await fetch("http://localhost:8081/api/getUserCourses", {method : "POST",  body : JSON.stringify(req)}).then((response)=>
-    //     response.json()
-    //
-    // );
-
-
-    //delete this. this one will return a dummy data to test
-    let res = [
-        {
-            "content_ID" : "1",
-            "content_image" : "../static/img/components_images/elec.jpg",
-            "course_title" : "This is a small title",
-            "f_name" : "Senith",
-            "l_name" : "Uthsara",
-            "description" : "This is a dummy description"
-
-
-        },
-
-        {
-            "content_ID" : "2",
-            "content_image" : "../static/img/components_images/maths.jpeg",
-            "course_title" : "This is a small title 2",
-            "f_name" : "Kavinda",
-            "l_name" : "Medagoda",
-            "description" : "This is a dummy description 2"
-
-
-        },
-
-        {
-            "content_ID" : "3",
-            "content_image" : "../static/img/components_images/ict.jpg",
-            "course_title" : "This is a small title 3",
-            "f_name" : "Sachini",
-            "l_name" : "Usha",
-            "description" : "This is a dummy description 3"
-
-
-        }
-    ]
-
-    return res
-};
-
+alert("create quiz2")
 
 //function to render right content
 
@@ -68,21 +16,13 @@ function renderRight(data) {
 
 
 
-
-
 //rendering the left content
 function renderLeft() {
-
-
-    fetchData().then((data)=>{
-
         let html_left = "";
 
         html_left += `
-            <course-form></course-form>
+            <quiz-form></quiz-form>
         `;
-
-
         document.querySelector(".cont-body-left").innerHTML = html_left;
 
         //
@@ -133,21 +73,15 @@ function renderLeft() {
 
         })
 
-
         let submit = document.querySelector("#submitbtn");
-
-
         submit.addEventListener('click', ()=>{
             alert("wed");
             let thumbnail = document.querySelector(".js-myFile-course-form").files[0];
             let videos = document.querySelectorAll(".js-video-files").files[0];
             let formData =  new FormData();
-
             let title = document.querySelector(".js-course-title-course-form").value;
             let category = document.querySelector(".js-course-category-course-form").value;
             let description = document.querySelector(".js-course-description-course-form").value;
-
-
 
             let textData = {
                 "title" : title,
@@ -155,11 +89,8 @@ function renderLeft() {
                 "description" : description
             }
 
-
             formData.append("file", thumbnail);
             formData.append("textData", JSON.stringify(textData));
-
-
 
             fetch("http://localhost:8100/api/teachers/createCourse", {
                 method: 'POST',
@@ -169,13 +100,5 @@ function renderLeft() {
                 alert("uploaded");
             })
         });
-
-
-
-    });
-
-
-
-
 
 }

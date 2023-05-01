@@ -7,7 +7,11 @@ async function fetchData(){
         };
         //uncomment this when connecting the database
         let url = "http://localhost:8090/api/users/search_main";
-        let response = await fetch(url, {method: "POST", body: JSON.stringify(requestBody)});
+        let response = await fetch(url, {
+            method: "POST",
+            body: JSON.stringify(requestBody),
+            credentials : "include"
+        });
         let data = await response.text();
         // alert("sads")
         return data;

@@ -2,7 +2,10 @@ alert("View reported courses");
 
 async function fetchData(){
 
-    let res = await fetch("http://localhost:8090/api/moderators/view_reported_quiz", {method : "GET"}).then((response)=>
+    let res = await fetch("http://localhost:8090/api/moderators/view_reported_quiz", {
+        method : "GET",
+        credentials : "include"
+    }).then((response)=>
         response.json()
     );
 

@@ -35,4 +35,4 @@ class Quizform extends HTMLElement {
     }
 }
     
-customElements.define('quiz-form', Quizform);
+customElements.define('question-form', Quizform);

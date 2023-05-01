@@ -6,7 +6,10 @@ async function fetchData(){
     alert("sew");
 //uncomment this when connecting the database
     let url = "http://localhost:8090/api/users/continue_course/:"+ temporary_data;
-    let res = await fetch(url, {method: "GET"}).then((response) =>
+    let res = await fetch(url, {
+        method: "GET",
+        credentials : "include"
+    }).then((response) =>
         response.text()
     );
     alert(res);

@@ -38,7 +38,11 @@ function renderSingle(){
                 "quli" : quli_certificates.value,
                 "refer" : references.value
             }
-            let resp = await fetch("http://localhost:8090/api/users/upgrade_to_teacher/:1", {method : "POST",  body : JSON.stringify(req)}).then((data)=>{
+            let resp = await fetch("http://localhost:8090/api/users/upgrade_to_teacher/:1", {
+                method : "POST",
+                body : JSON.stringify(req),
+                credentials : "include"
+            }).then((data)=>{
                 return data.json()
             });
             let popup = document.querySelector(".popup-content");

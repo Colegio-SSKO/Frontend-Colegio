@@ -27,7 +27,7 @@ class Edit_profileorg extends HTMLElement {
         </div>
         <div class="gender">
             <label for="" class="fnt fnt-bold fnt-mid" required>Tel number</label><br>
-            <input type="tel" class="telnum fnt fnt-bold fnt-mid" name="telnum" id="" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required><br><br>
+            <input type="tel" class="telnum fnt fnt-bold fnt-mid" name="telnum" id="" required><br><br>
         </div>
         <div class="back-btn">
             <a href=""><img src="./images/arrow_back.png" alt=""></a>

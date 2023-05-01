@@ -7,21 +7,20 @@ class Q1 extends HTMLElement {
         let accept = this.attributes.accept.value;
         let description = this.attributes.description.value;
         this.innerHTML = `
-        <div class="q-1-cart-item js-questionCards" >
-            
-            <div class="q-1-tumbnail-img">
-                <img src="${img_src}" alt="" srcset="">
-            </div>
-    
-            <div class="q-1-content">
-                <h2 class="fnt fnt-extraBold fnt-large">${title}</h2>
-                <p class="fnt fnt-bold fnt-small">${accept}</p>
-                <h3 class="fnt fnt-light fnt-mid">${description}</h3>
-                <button id="js-quession-${question_ID}" class="btn btn-small btn-solid js-question ">Question</button>
-            </div>
-            
-    
+        <div class="q-1-cart-item js-questionCards fadeInanimation" >
+        <div class="q-1-tumbnail-img">
+            <img src="${img_src}" alt="" srcset="">
         </div>
+
+        <div class="q-1-content">
+            <h2 class="fnt fnt-extraBold fnt-large">${title}</h2>
+            <p class="fnt fnt-bold fnt-small">${accept}</p>
+            <h3 class="fnt fnt-light fnt-mid">${description}</h3>
+            <button id="js-quession-${question_ID}" class="btn btn-small btn-solid js-question ">Question</button>
+
+        </div>
+
+    </div>
         `;
     }
 }

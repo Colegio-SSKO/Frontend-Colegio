@@ -2,7 +2,28 @@
 <html lang="en">
 <head>
 
+    <style>
 
+
+
+        .fadeInanimation {
+            animation-name: fadeInRight;
+            animation-duration: 0.5s;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes fadeInRight {
+            from {
+                transform: translateX(20px);
+                opacity: 0.5;
+            }
+            to {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+
+    </style>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,6 +48,7 @@
     <link rel="stylesheet" href="../static/css/views_styles.css">
     <link rel="stylesheet" href="../static/css/style.css">
     <link rel="stylesheet" href="../static/css/html_template.css">
+    <link rel="shortcut icon" href="../static/img/components_images/COllegio.png" type="image/x-icon">
 
     <link rel="stylesheet" href="../static/css/style.css">
 <%--    <link rel="stylesheet" href="../static/css/styleOrg.css">--%>
@@ -37,24 +59,6 @@
     <title>Document</title>
 
 
-        <script src="../components2/accepted.js"></script>
-        <script src="../components2/descHead.js"></script>
-        <script src="../components2/featured_cont.js"></script>
-        <script src="../components2/listedcontent.js"></script>
-        <script src="../components2/notification.js"></script>
-        <script src="../components2/open_course.js"></script>
-        <script src="../components2/open_question.js"></script>
-        <script src="../components2/profile_card.js"></script>
-        <script src="../components2/Q-1.js"></script>
-        <script src="../components2/Q-2.js"></script>
-        <script src="../components2/Q-3.js"></script>
-        <script src="../components2/question.js"></script>
-        <script src="../components2/quiz_question.js"></script>
-        <script src="../components2/send_button.js"></script>
-        <script src="../components2/small-listed.js"></script>
-        <script src="../components2/with_titles.js"></script>
-        <script src="../components2/without_title.js"></script>
-        <script src="../components2/help.js"></script>
 
     <script src="basic.js">
 
@@ -88,7 +92,6 @@
     <script src="../components2/startQuiz.js"></script>
     <script src="../components2/comment.js"></script>
     <script src="../components2/course_form1.js"></script>
-    <script src="../components2/edit_profile.js"></script>
     <script src="../components2/cart_item.js"></script>
     <script src="../components2/organization_card.js"></script>
     <script src="../components2/organization_list.js"></script>
@@ -96,7 +99,6 @@
     <script src="../components2/organization_profile_card.js"></script>
     <script src="../components2/teacher_list.js"></script>
     <script src="../components2/teacher_card.js"></script>
-    <script src="../components2/teacherlist.js"></script>
     <script src="../components2/cart_total_price.js"></script>
     <script src="../components2/organization_profile_card(stu).js"></script>
     <script src="../components2/edit_profile.js"></script>
@@ -113,12 +115,9 @@
     <script src="../components2/small_card_open_com.js"></script>
     <script src="../components2/search_result.js"></script>
     <script src="../components2/search_quiz_open.js"></script>
-    <script src="../components2/navbar1.js"></script>
     <script src="../components2/search_main_teacher.js"></script>
     <script src="../components2/search_main_organization.js"></script>
     <script src="../components2/signin1.js"></script>
-    <script src="../components2/signin.js"></script>
-    <script src="../components2/signup.js"></script>
     <script src="../components2/notification_msg.js"></script>
     <script src="../components2/profile_upgrade_form.js"></script>
     <script src="../components2/follow_course.js"></script>
@@ -134,6 +133,7 @@
     <script src="../components2/send_answers.js"></script>
     <script src="../components2/comment-container.js"></script>
     <script src="../components2/comment_container_list.js"></script>
+    <script src="../components2/quiz-form.js"></script>
 
 
 
@@ -147,9 +147,9 @@
 
 
 <div class="main-cont">
+
     <div class="main-left">
         <div id="sidebar-containter">
-            <jsp:include page="../components/sidebar.jsp"/>
         </div>
 
         <div class="burger">
@@ -162,7 +162,7 @@
     <div class="main-right">
 
         <div id="navbar-container">
-            <jsp:include page="../components/navbar.jsp"/>
+
         </div>
 
 
@@ -202,17 +202,22 @@
     let up = document.querySelector(".burger-up");
     let middle = document.querySelector(".burger-middle");
     let down = document.querySelector(".burger-down");
-    let sidebar = document.querySelector(".main-left");
+    let sidebarEl = document.querySelector(".main-left");
     let mainRight = document.querySelector(".main-right");
     menu.addEventListener("click", ()=>{
         up.classList.toggle("burgerbar-up-clicked");
         middle.classList.toggle("burgerbar-middle-clicked");
         down.classList.toggle("burgerbar-down-clicked");
-        sidebar.classList.toggle("sidebar-clicked");
+        sidebarEl.classList.toggle("sidebar-clicked");
         mainRight.classList.toggle("main-right-clicked");
         menu.classList.toggle("burger-clicked");
     });
 </script>
 
+
+
+
+
+<script type="text/javascript" src="https://www.payhere.lk/lib/payhere.js"></script>
 </body>
 </html>

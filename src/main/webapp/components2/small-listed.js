@@ -1,4 +1,6 @@
+
 class Small_listed extends HTMLElement {
+
     connectedCallback() {
 
         let content_id = this.attributes.content_id.value;
@@ -7,7 +9,8 @@ class Small_listed extends HTMLElement {
         let author = this.attributes.author.value;
         let price = this.attributes.price.value;
         let rates = this.attributes.rates.value;
-        // let votes = this.attributes.votes.value;
+
+
         this.innerHTML = `
         
         <div class="small-listed-cont-wrap"> 
@@ -31,6 +34,7 @@ class Small_listed extends HTMLElement {
             
             </div>
         </div>
+      
         `;
         let small_lited = document.querySelectorAll(".small_listed");
 
@@ -45,5 +49,4 @@ class Small_listed extends HTMLElement {
         }
     }
 }
-    
 customElements.define('small-listed', Small_listed);

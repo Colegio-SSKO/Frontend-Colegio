@@ -38,7 +38,8 @@ function renderSingle(){
             }
             let resp = await fetch("http://localhost:8090/api/users/changePassword/:1", {
                 method: "POST",
-                body: JSON.stringify(req)
+                body: JSON.stringify(req),
+                credentials : "include"
             }).then((data) => {
                 return data.json()
             });
