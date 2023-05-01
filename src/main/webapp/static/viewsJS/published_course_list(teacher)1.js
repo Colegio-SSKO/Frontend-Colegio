@@ -8,7 +8,10 @@ async function fetchData(){
 
 //uncomment this when connecting the database
     let url = "http://localhost:8090/api/users/teacher_published_course/:"+ temporary_data;
-    let res3 = await fetch(url, {method: "GET"}).then((response) =>
+    let res3 = await fetch(url, {
+        method: "GET",
+        credentials : "include"
+    }).then((response) =>
         response.text()
     );
 

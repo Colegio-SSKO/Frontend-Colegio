@@ -2,7 +2,10 @@ alert("View reported person123");
 
 async function fetchData(){
 
-    let res = await fetch("http://localhost:8090/api/moderators/handle_users", {method : "GET"}).then((response)=>
+    let res = await fetch("http://localhost:8090/api/moderators/handle_users", {
+        method : "GET",
+        credentials : "include"
+    }).then((response)=>
         response.json()
     );
 

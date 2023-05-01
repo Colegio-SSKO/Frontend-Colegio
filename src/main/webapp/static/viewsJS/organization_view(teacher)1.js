@@ -1,9 +1,12 @@
-alert("new_organization10");
+alert("new_organization10112");
 
 
 async function fetchData(){
 
-    let res = await fetch("http://localhost:8090/api/users/vieworganization", {method : "GET"}).then((response)=>
+    let res = await fetch("http://localhost:8090/api/users/vieworganization", {
+        method : "GET",
+        credentials : "include"
+    }).then((response)=>
         response.text()
 
     );
@@ -53,7 +56,11 @@ function renderSingle(){
                     "organization_id": organization_id
                 }
                 let url = "http://localhost:8090/api/teachers/teacher_send_req/:" + getTeacherID();
-                let res = await fetch(url, {method : "POST",  body : JSON.stringify(requestBody)}).then((response)=>
+                let res = await fetch(url, {
+                    method : "POST",
+                    body : JSON.stringify(requestBody),
+                    credentials : "include"
+                }).then((response)=>
                     response.json()
 
                 );

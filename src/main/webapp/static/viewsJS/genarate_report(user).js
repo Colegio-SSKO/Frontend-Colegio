@@ -2,7 +2,10 @@ alert("report_person13");
 
 async function fetchData(){
 
-    let res = await fetch("http://localhost:8090/api/moderators/generate_report_person/:" + temporary_data, {method : "GET"}).then((response)=>
+    let res = await fetch("http://localhost:8090/api/moderators/generate_report_person/:" + temporary_data, {
+        method : "GET",
+        credentials : "include"
+    }).then((response)=>
         response.text()
 
     );

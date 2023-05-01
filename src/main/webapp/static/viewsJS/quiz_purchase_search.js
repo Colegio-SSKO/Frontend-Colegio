@@ -5,7 +5,10 @@ alert("wwsdsw")
 async function fetchData() {
 
 
-    const res2 = await fetch("http://localhost:8090/api/users/search_quiz_open/:" + temporary_data, {method: "GET"}).then((response) => response.json());
+    const res2 = await fetch("http://localhost:8090/api/users/search_quiz_open/:" + temporary_data, {
+        method: "GET",
+        credentials : "include"
+    }).then((response) => response.json());
     alert(res2)
     return res2;
 }

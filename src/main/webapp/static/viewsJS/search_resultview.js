@@ -7,7 +7,11 @@ async function fetchData(){
 
 //uncomment this when connecting the database
     let url = "http://localhost:8090/api/organizations/search_teacher";
-    let res3 = await fetch(url, {method: "POST", body: JSON.stringify(req)}).then((response) =>
+    let res3 = await fetch(url, {
+        method: "POST",
+        body: JSON.stringify(req),
+        credentials : "include"
+    }).then((response) =>
             response.text()
     );
 

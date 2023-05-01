@@ -14,7 +14,10 @@ async function fetchData() {
 
 
 //uncomment this when connecting the database
-    let res = await fetch("http://localhost:8090/api/users/myQuestions/:1", {method : "GET"}).then((response)=>
+    let res = await fetch("http://localhost:8090/api/users/myQuestions/:1", {
+        method : "GET",
+        credentials : "include"
+    }).then((response)=>
         response.json()
 
     );
@@ -47,7 +50,11 @@ function renderSingle(){
         deleteBtn.addEventListener('click', async ()=>{
 
 
-            let resp = await fetch("http://localhost:8080/api/users/deleteProfile/:1", {method : "POST", body : "{}"}).then((data)=>{
+            let resp = await fetch("http://localhost:8080/api/users/deleteProfile/:1", {
+                method : "POST",
+                body : "{}",
+                credentials : "include"
+            }).then((data)=>{
                 return data.json()
             });
 

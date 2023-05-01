@@ -7,7 +7,10 @@ async function fetchData(){
 
 //uncomment this when connecting the database
     let url = "http://localhost:8090/api/users/viewcart/:" + getUserID();
-    let res3 = await fetch(url, {method: "GET"}).then((response) =>
+    let res3 = await fetch(url, {
+        method: "GET",
+        credentials : "include"
+    }).then((response) =>
         response.text()
     );
     let data2 = JSON.parse(res3);
@@ -50,7 +53,11 @@ function renderSingle(){
                     "content_id": content_id
                 }
                 let url = "http://localhost:8090/api/users/delete_cart/:" + getUserID();
-                let res = await fetch(url, {method : "POST",  body : JSON.stringify(requestBody)}).then((response)=>
+                let res = await fetch(url, {
+                    method : "POST",
+                    body : JSON.stringify(requestBody),
+                    credentials : "include"
+                }).then((response)=>
                     response.json()
 
                 );

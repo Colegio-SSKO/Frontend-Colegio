@@ -7,7 +7,10 @@ async function fetchData(){
 
 //uncomment this when connecting the database
     let url = "http://localhost:8090/api/users/vieworganizationprofile/:"+ getUserID();
-    let res3 = await fetch(url, {method: "GET"}).then((response) =>
+    let res3 = await fetch(url, {
+        method: "GET",
+        credentials : "include"
+    }).then((response) =>
         response.json()
     );
 
@@ -22,7 +25,10 @@ async function renderSingle() {
         const data = await fetchData();
         alert(typeof (data));
         console.log(data);
-        const res2 = await fetch("http://localhost:8090/api/users/ViewCont_list", { method: "GET" }).then((response) => response.text());
+        const res2 = await fetch("http://localhost:8090/api/users/ViewCont_list", {
+            method: "GET",
+            credentials : "include"
+        }).then((response) => response.text());
         const html_left = `
                             <organizationprofile-card profile_img="${data["img_src"]}" name="${data["name"]}" address="${data["address"]}" tel_num="${data["tel_num"]}" organization_id="${data["organization_id"]}"></organizationprofile-card>`+ "Trending in Colegio"+ `<content-list dataString="${encodeURIComponent(res2)}"></content-list>`;
 

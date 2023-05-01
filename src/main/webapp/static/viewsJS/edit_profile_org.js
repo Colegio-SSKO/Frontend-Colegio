@@ -55,7 +55,11 @@ function renderSingle(){
             }
 
             // Send data to server
-            let resp = await fetch("http://localhost:8090/api/users/editProfileOrg/:"+getUserID(), {method : "POST",  body : JSON.stringify(req)}).then((data)=>{
+            let resp = await fetch("http://localhost:8090/api/users/editProfileOrg/:"+getUserID(), {
+                method : "POST",
+                body : JSON.stringify(req),
+                credentials : "include"
+            }).then((data)=>{
                 return data.json()
             });
 

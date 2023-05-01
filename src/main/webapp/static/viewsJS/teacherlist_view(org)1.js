@@ -7,7 +7,10 @@ async function fetchData(){
 
 //uncomment this when connecting the database
     let url = "http://localhost:8090/api/users/Vieworg_teacher/:"+ temporary_data;
-    let res3 = await fetch(url, {method: "GET"}).then((response) =>
+    let res3 = await fetch(url, {
+        method: "GET",
+        credentials : "include"
+    }).then((response) =>
         response.text()
     );
 
@@ -68,7 +71,11 @@ function renderSingle(){
                     "teacher_id": teacher_id
                 }
                 let url = "http://localhost:8090/api/organizations/remove_teacher/:" + getOrgID();
-                let res = await fetch(url, {method : "POST",  body : JSON.stringify(requestBody)}).then((response)=>
+                let res = await fetch(url, {
+                    method : "POST",
+                    body : JSON.stringify(requestBody),
+                    credentials : "include"
+                }).then((response)=>
                     response.json()
 
                 );

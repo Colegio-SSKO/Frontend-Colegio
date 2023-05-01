@@ -8,7 +8,10 @@ async function fetchData(){
 //uncomment this when connecting the database
 
     let url = "http://localhost:8090/api/teachers/teacher_view_org_req/:" + getUserID();
-    let res3 = await fetch(url, {method: "GET"}).then((response) =>
+    let res3 = await fetch(url, {
+        method: "GET",
+        credentials : "include"
+    }).then((response) =>
         response.text()
     );
     let data2 = JSON.parse(res3);
@@ -45,7 +48,11 @@ function renderSingle(){
                     "organization_id": organization_id
                 }
                 let url = "http://localhost:8090/api/teachers/teacher_accept_org/:" + getTeacherID();
-                let res = await fetch(url, {method : "POST",  body : JSON.stringify(requestBody)}).then((response)=>
+                let res = await fetch(url, {
+                    method : "POST",
+                    body : JSON.stringify(requestBody),
+                    credentials : "include"
+                }).then((response)=>
                     response.json()
 
                 );

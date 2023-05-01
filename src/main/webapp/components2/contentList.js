@@ -14,7 +14,7 @@ class ContentList extends HTMLElement {
         }
 
         this.innerHTML = `
-         <div class="content-list-wrap">
+         <div class="content-list-wrap fadeInanimation">
             
                  `+ htmlcontent +`
         

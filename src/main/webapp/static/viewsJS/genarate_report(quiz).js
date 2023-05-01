@@ -3,7 +3,10 @@ alert("report_course123");
 async function fetchData(){
 
     alert(temporary_data);
-    let res = await fetch("http://localhost:8090/api/moderators/generate_report_quiz/:" + temporary_data, {method : "GET"}).then((response)=>
+    let res = await fetch("http://localhost:8090/api/moderators/generate_report_quiz/:" + temporary_data, {
+        method : "GET",
+        credentials : "include"
+    }).then((response)=>
         response.text()
 
     );
