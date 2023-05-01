@@ -1,4 +1,4 @@
-alert("mil2");
+alert("mil23");
 
 // import {myVar} from '../../components2/small-listed';
 

@@ -106,14 +106,14 @@ const studentRoutes = {
         data : "This is the Question page"
     },
 
-    "/session_request" : {
-        isSingle : false,
-        template : "/SPAroutes/index_double.jsp",
-        path_left:"/views/Session_request_left.jsp",
-        path_right: "/views/Session_request_right.jsp",
-        title: "Session Request",
-        data : "This is the Session request page"
-    },
+    // "/session_request" : {
+    //     isSingle : false,
+    //     template : "/SPAroutes/index_double.jsp",
+    //     path_left:"/views/Session_request_left.jsp",
+    //     path_right: "/views/Session_request_right.jsp",
+    //     title: "Session Request",
+    //     data : "This is the Session request page"
+    // },
 
     "/publish_question" : {
         isSingle : false,
@@ -556,14 +556,6 @@ const teacherRoutes =  {
         data : "This is the manage my quizzes page"
     },
 
-    "/small_cardopen" : {
-        isSingle : true,
-        template : "/SPAroutes/index_single.jsp",
-        path_left:"/views/Home_content.jsp",
-        script: "../static/viewsJS/small_card_open.js",
-        title: "small card open",
-        data : "This is the home page"
-    },
     "/createQuiz" : {
         isSingle : false,
         template : "/SPAroutesTeacher/index_double.jsp",
