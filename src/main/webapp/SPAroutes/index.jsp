@@ -2,6 +2,28 @@
 <html lang="en">
 <head>
 
+    <style>
+
+
+
+        .fadeInanimation {
+            animation-name: fadeInRight;
+            animation-duration: 0.5s;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes fadeInRight {
+            from {
+                transform: translateX(20px);
+                opacity: 0.5;
+            }
+            to {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+
+    </style>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
