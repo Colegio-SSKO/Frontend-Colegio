@@ -121,6 +121,7 @@ class QuizForm extends HTMLElement {
                 newQuestion["opt2"] = question.querySelector('#quiz-upload-container-option-box2').value;
                 newQuestion["opt3"] = question.querySelector('#quiz-upload-container-option-box3').value;
                 newQuestion["opt4"] = question.querySelector('#quiz-upload-container-option-box4').value;
+                newQuestion["answer"] = "opt2";
                 alert(JSON.stringify(newQuestion))
                 questionData.push(newQuestion)
             })
@@ -136,7 +137,7 @@ class QuizForm extends HTMLElement {
                 "subject" : 10,
                 "description" : quizDescription.value,
                 "price" : quizPrice.value,
-                "questionDescriptions" : questionData
+                "quizQuestions" : questionData
             }
 
 
