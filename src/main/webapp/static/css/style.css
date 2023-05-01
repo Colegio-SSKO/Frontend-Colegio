@@ -338,6 +338,13 @@ body {
     bottom: 5px;
 }
 
+.rate_report{
+    margin-right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 /*/==========featured content==========/*/
 
 .featured-cont{

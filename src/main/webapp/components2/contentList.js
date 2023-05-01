@@ -9,7 +9,7 @@ class ContentList extends HTMLElement {
         let htmlcontent = "";
 
         for (let i of data) {
-            htmlcontent += `<small-listed content_id="${i["content_id"]}" img_src="${i["img_src"]}" title="${i["title"]}" author="${i["author"]}" price="${i["price"]}"></small-listed>
+            htmlcontent += `<small-listed content_id="${i["content_id"]}" img_src="${i["img_src"]}" title="${i["title"]}" author="${i["author"]}" price="${i["price"]}" rates="${i["rate_count"]}"></small-listed>
             `;
         }
 
