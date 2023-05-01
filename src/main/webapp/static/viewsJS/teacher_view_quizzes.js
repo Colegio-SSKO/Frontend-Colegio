@@ -1,4 +1,4 @@
-alert("Heliidd3");
+alert("Heliidd31");
 
 //element selectors
 if (typeof previous === 'undefined') {
@@ -215,7 +215,8 @@ function renderLeft() {
             "<button class=\"btn btn-solid btn-small\"><a class=\"fnt fnt-bold fnt-mid\" href=\"\">All</a></button>\n" +
             "<button class=\"btn btn-outlined btn-small\"><a class=\"fnt fnt-bold fnt-mid\" href=\"\">Continuing</a></button>\n" +
             "<button class=\"btn btn-outlined btn-small\"><a class=\"fnt fnt-bold fnt-mid\" href=\"\">Completed</a></button><br><br>\n" +
-            "\n" +
+            "<a href=\"/createQuiz\"><button class=\"btn btn-outlined btn-small fnt fnt-bold fnt-mid is-a-route\">Create quiz</button></a><br><br>\n"+
+        "\n" +
             "";
 
 
