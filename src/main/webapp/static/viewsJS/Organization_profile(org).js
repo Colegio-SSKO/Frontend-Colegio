@@ -6,7 +6,7 @@ async function fetchData(){
     }
 
 //uncomment this when connecting the database
-    let url = "http://localhost:8090/api/users/vieworganizationprofile/:"+ getUserID();
+    let url = "http://localhost:8090/api/organizations/viewprofile/:"+ getUserID();
     let res3 = await fetch(url, {
         method: "GET",
         credentials : "include"

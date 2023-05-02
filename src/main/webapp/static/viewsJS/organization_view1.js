@@ -1,4 +1,4 @@
-alert("new_organization101");
+alert("new_organization1012");
 
 async function fetchData(){
     const req = {
@@ -6,7 +6,7 @@ async function fetchData(){
     }
 
 //uncomment this when connecting the database
-    let res = await fetch("http://localhost:8090/api/users/vieworganization", {
+    let res = await fetch("http://localhost:8090/api/organizations/vieworganization", {
         method : "GET",
         credentials : "include"
     }).then((response)=>
