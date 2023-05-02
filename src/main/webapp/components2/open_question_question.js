@@ -4,12 +4,14 @@ class Open_question_question extends HTMLElement {
 
     connectedCallback() {
 
+        let id = this.attributes.id.value;
         let author_propic = this.attributes.author_propic.value;
         let qulifi = this.attributes.qulifi.value;
         let title= this.attributes.title.value;
         let media= this.attributes.media.value;
         let description= this.attributes.description.value;
         let author = this.attributes.author.value;
+        let teacherId = this.attributes.teacherId.value
 
         this.innerHTML = `
        <div class="open-question-new-container">
@@ -33,7 +35,7 @@ class Open_question_question extends HTMLElement {
                 </div>
             </div>
             <div class="open-question-new-btn">
-                <button class="btn btn-a btn-solid btn-small">Request Session</button>
+                <button id="js-open-q-q-request-session" class="btn btn-a btn-solid btn-small">Request Session</button>
             </div>
         </div>
         <h3 class="fnt fnt-large fnt-bold">
@@ -52,6 +54,26 @@ class Open_question_question extends HTMLElement {
         </div>
     </div>
         `;
+
+        document.querySelector(`#js-open-q-q-request-session`).addEventListener('click', async (event)=>{
+            event.preventDefault();
+            alert("req session");
+            let req = {
+                "teacher_id" : teacherId,
+                "question_id" : id
+            }
+            alert(JSON.stringify(req));
+
+            let res = await fetch("http://localhost:8090/api/users/session_request/:4", {
+                method : "POST",
+                credentials : "include"
+            }).then((response)=>
+                response.json()
+
+            );
+            alert("request ek ywwa");
+
+        })
     }
 }
 

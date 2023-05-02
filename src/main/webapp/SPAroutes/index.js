@@ -101,7 +101,7 @@ const studentRoutes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/Question_student_1_left.jsp",
         path_right: "/views/Question_student_1_right.jsp",
-        script: "../static/viewsJS/Student_question1.js",
+        script: "../static/viewsJS/Student_question.js",
         title: "Question",
         data : "This is the Question page"
     },
@@ -374,7 +374,7 @@ const teacherRoutes =  {
         template : "/SPAroutesTeacher/index_double.jsp",
         path_left:"/views/Question_student_1_left.jsp",
         path_right: "/views/Question_student_1_right.jsp",
-        script: "../static/viewsJS/Student_question1.js",
+        script: "../static/viewsJS/Student_question.js",
         title: "Question",
         data : "This is the Question page"
     },
@@ -462,7 +462,7 @@ const teacherRoutes =  {
         template : "/SPAroutesTeacher/index_single.jsp",
         path_left:"/views/Notification.jsp",
         path_right: "",
-        script: "../static/viewsJS/view_teacher_org_noti.js",
+        script: "../static/viewsJS/notifications.js",
         title: "Notification",
         data : "This is the notification page"
     },
@@ -1022,7 +1022,11 @@ const handleNormalRoutes = async (location)=>{
         document.querySelector("#sidebar-containter").innerHTML = `<sidebar-teacher></sidebar-teacher>`;
     }
 
-
+    //initializing web sockets
+    alert(isSocketsStartedBefore())
+    if (!isSocketsStartedBefore()){
+        initiateWebsocket();
+    }
     //re-executing js
     let target = document.getElementById("viewsScript");
     target.innerHTML = "";
