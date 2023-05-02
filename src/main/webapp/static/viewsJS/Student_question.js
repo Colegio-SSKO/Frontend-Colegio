@@ -1,4 +1,4 @@
-alert("adsadasss");
+alert("adaddad12345");
 
 async function fetchData() {
     const req = {
@@ -14,6 +14,7 @@ async function fetchData() {
         response.json()
 
     );
+    alert(JSON.stringify(res));
 
     return res
 };

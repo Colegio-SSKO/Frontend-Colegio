@@ -57,6 +57,7 @@ class Open_question_question extends HTMLElement {
 
         document.querySelector(`#js-open-q-q-request-session`).addEventListener('click', async (event)=>{
             event.preventDefault();
+            alert(teacherId);
             alert("req session");
             let req = {
                 "teacher_id" : teacherId,
@@ -65,6 +66,7 @@ class Open_question_question extends HTMLElement {
             alert(JSON.stringify(req));
 
             let res = await fetch("http://localhost:8090/api/users/session_request/:4", {
+                body : JSON.stringify(req),
                 method : "POST",
                 credentials : "include"
             }).then((response)=>
