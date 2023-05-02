@@ -44,10 +44,13 @@ class Navbar1 extends HTMLElement {
 
 
             increaseNotificationCount = ()=>{
-            let notificationCount = document.querySelector("#navbar-notification-count");
-            let count = parseInt(notificationCount.innerHTML);
-            count++;
-            notificationCount.innerHTML = count.toString();
+                let notificationCount = document.querySelector("#navbar-notification-count");
+                if (!notificationCount){
+                    alert("notification count ek load wela ne")
+                }
+                let count = parseInt(notificationCount.innerHTML);
+                count++;
+                notificationCount.innerHTML = count.toString();
         }
     }
 

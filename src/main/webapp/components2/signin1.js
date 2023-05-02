@@ -17,7 +17,7 @@ class Signin1 extends HTMLElement {
                                     <input id="password" class="fnt fnt-mid fnt-bold" type="password" required>
                                   </div>
                                   <div class="input-field">
-                                    <label class="fnt fnt-mid fnt-bold" for="">Forget Your <span>Password</span> ?</label>
+                                    <label class="fnt fnt-mid fnt-bold" for="">Forgot Your <span><a href="/auth/forgotPassword">Password</a></span> ?</label>
                                   </div>
                                 </div>
                                 <button id="js-signin-btn" class="btn btn-solid fnt fnt-mid fnt-bold"> Sign in </button>
@@ -69,84 +69,6 @@ class Signin1 extends HTMLElement {
 
                 else{
                     alert(receivedData["message"])
-                    const jwtToken = await fetch("http://localhost:8090/api/authenticate/getToken/", {
-                        credentials: 'include'
-                    })
-                        .then((response)=>{
-                            return response.json()
-                        })
-
-
-                    console.log("mekth wed");
-                    console.log(jwtToken["token"]);
-                    console.log("wed");
-
-                    //notifications handling
-                    notificationWebSocket = new WebSocket('ws://localhost:8090/notificationHandler');
-                    notificationWebSocket.onopen = () =>{
-                        const message = {
-                            "config" : true,
-                            "token" : jwtToken["token"]
-                        }
-                        notificationWebSocket.send(JSON.stringify(message));
-                    }
-                    notificationWebSocket.onerror = (error) => {
-                        console.error('notification web socket error:', error);
-                    };
-
-
-                    //question chat handling
-                    questionCHat = new WebSocket('ws://localhost:8090/questionChatHandler');
-                    let chatContainer = document.querySelector(".open-question-chat");
-                    let receivedMessage;
-
-                    questionCHat.onopen = () => {
-                        const message = {
-                            "config" : true,
-                            "token" : jwtToken["token"]
-                        };
-                        questionCHat.send(JSON.stringify(message));
-                    }
-
-                    notificationWebSocket.onerror = (error) => {
-                        console.error('notification web socket error:', error);
-                    };
-
-
-                    questionCHat.addEventListener('message', (event)=>{
-                        receivedMessage = JSON.parse(event.data);
-
-                        if (receivedMessage["receiver"] == getUserID()){
-                            if (chatContainer){
-                                chatContainer.innerHTML += `
-                                <div class="open-question-msg open-question-incomMSG"><p>${receivedMessage["message"]}<br></p></div>
-                                <br>
-                                 `
-                            }
-                            else{
-                                alert(receivedMessage["message"]);
-                            }
-
-
-                        }
-                        else if(receivedMessage["sender"] == getUserID()){
-                            if (chatContainer){
-                                chatContainer.innerHTML += `
-                    <div class="open-question-msg open-question-outgoingMSG"> <p>${receivedMessage["message"]}</p></div>
-                    <br>
-            `
-                            }
-                            else{
-                                alert(receivedMessage["message"]);
-                            }
-
-                        }
-
-
-
-                        chatContainer.scrollTop = chatContainer.scrollHeight;
-                    })
-
 
                     //setting the user data
 
