@@ -8,6 +8,9 @@ class Q_2 extends HTMLElement {
         this.innerHTML = `
         <div class="q-2-cart-item js-questionCards fadeInanimation" >
 
+        <div class="q-2-price">
+            <img src="${img_src}" alt="">
+        </div>
         <div class="q-2-content" >
             <h2 class="fnt fnt-extraBold fnt-large">${title}</h2>
             <p class="fnt fnt-small">Session Accepted</p>
@@ -17,9 +20,6 @@ class Q_2 extends HTMLElement {
 
         </div>
 
-        <div class="q-2-price">
-            <img src="${img_src}" alt="">
-        </div>
     </div>
         `;
     }

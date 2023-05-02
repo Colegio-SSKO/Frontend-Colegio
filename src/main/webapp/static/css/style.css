@@ -1460,10 +1460,11 @@ nav {
 
 
 .material-icons {
-    color: #F9F7F7;
+    color: #3F72AF;
     display: flex;
     justify-content: center;
     margin-right: 5px;
+    cursor: pointer;
 }
 
 .side_icons {
@@ -1530,6 +1531,30 @@ h3{
     height: 30px;
     box-sizing: border-box;
 }
+
+.question_form .input-field textarea{
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.question_form .input-field select{
+    border-radius: 8px;
+    padding: 5px;
+    border: 1px solid #000000;
+}
+
+.question-upload-wrapper input{
+    padding: 15px;
+    border-radius: 15px;
+}
+
+#js-question-upload-container-add-btn{
+    margin: 5px 94px;
+}
+
+
+
+
 
 .session_request_form{
     width: 1400px;

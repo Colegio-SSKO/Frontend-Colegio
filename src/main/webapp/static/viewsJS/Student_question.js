@@ -1,4 +1,4 @@
-alert("adaddad125");
+alert("adsadasss");
 
 async function fetchData() {
     const req = {
@@ -57,10 +57,10 @@ function renderLeft() {
         let html_left = "";
 
         html_left += "" +
-            "<button class=\"btn btn-solid btn-small\"><a class=\"fnt fnt-bold fnt-mid\" href=\"\">All</a></button>\n" +
-            "<button class=\"btn btn-outlined btn-small\"><a class=\"fnt fnt-bold fnt-mid\" href=\"\">Continuing</a></button>\n" +
-            "<button class=\"btn btn-outlined btn-small\"><a class=\"fnt fnt-bold fnt-mid\" href=\"\">Completed</a></button><br><br>\n" +
-            "<a href='/publish_question'><button class=\"btn btn-outlined btn-small is-a-route\">Publish question</button></a>\n" +
+            "<a  href=\"\"><button class=\"btn btn-solid is-a-route btn-a btn-small fnt fnt-bold fnt-mid\">All</button></a>\n" +
+            "<a  href=\"\"><button class=\"btn btn-outlined is-a-route btn-a btn-solid fnt fnt-bold fnt-mid\">Continuing</button></a>\n" +
+            "<a  href=\"\"><button class=\"btn btn-outlined is-a-route btn-a btn-solid fnt fnt-bold fnt-mid\">Completed</button></a><br>\n" +
+            "<a href='/publish_question'><button class=\"btn btn-outlined btn-solid btn-a fnt-mid fnt fnt-bold is-a-route\">Publish question</button></a>\n" +
             "";
 
         for (let i of data){
