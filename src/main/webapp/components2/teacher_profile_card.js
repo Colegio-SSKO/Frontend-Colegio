@@ -6,6 +6,7 @@ class Teacher_profile_card extends HTMLElement {
         let quli = this.attributes.quli.value;
         let gender = this.attributes.gender.value;
         let user_id = this.attributes.user_id.value;
+        let tag = this.attributes.tag.value;
 
         this.innerHTML = `
         <button class="btn btn-outlined btn-large"><a class="all_courses fnt fnt-bold fnt-mid" id="${user_id}" href="/teacher_published_course">My courses</a></button>
@@ -16,7 +17,8 @@ class Teacher_profile_card extends HTMLElement {
         </div>
         <div class="profile-card-details">
             <h4 class="fnt fnt-bold fnt-mid">${name} <span class="material-icons-outlined"> ${gender}</span></h4>
-            <p class="fnt fnt-mid">${quli}</p>
+            <p class="fnt fnt-mid">${quli}</p><br>
+            <p class="fnt fnt-bold fnt-mid">Tag: ${tag}</p>
             
         </div>
         <div class="edit-and-delte-btns">

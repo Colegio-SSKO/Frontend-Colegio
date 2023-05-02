@@ -1,4 +1,4 @@
-alert("Hello cc5a1");
+alert("Hello cc5a123");
 
 async function fetchData(){
 
@@ -57,7 +57,7 @@ function renderLeft() {
 
 
         for (let i of data){
-            html_left += `  <pop-up></pop-up><listed-content content_ID="${i["content_id"]}" img_src="${i["introduction_media"]}" title="${i["course_title"]}" author="${i["f_name"] + " " +i["l_name"]}" description="${i["decription"]}" rating=\"5\" votes=\"102\"></listed-content>`;
+            html_left += `  <pop-up></pop-up><listed-content content_ID="${i["content_id"]}" img_src="${i["introduction_media"]}" title="${i["course_title"]}" author="${i["f_name"] + " " +i["l_name"]}" description="${i["decription"]}" rates="${i["rate_count"]}" ></listed-content>`;
         }
 
         document.querySelector(".cont-body-left").innerHTML = html_left;

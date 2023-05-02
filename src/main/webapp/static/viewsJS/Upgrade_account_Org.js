@@ -47,7 +47,7 @@ function renderSingle(){
 
 
 
-            let resp = await fetch("http://localhost:8090/api/users/upgrade_to_organization/:"+getUserID(), {method : "POST",  body : JSON.stringify(req)}).then((data)=>{
+            let resp = await fetch("http://localhost:8090/api/students/upgrade_to_organization/:"+getUserID(), {method : "POST",  body : JSON.stringify(req)}).then((data)=>{
                 return data.json();
             });
 

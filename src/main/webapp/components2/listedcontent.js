@@ -8,8 +8,7 @@ class ListedContent extends HTMLElement {
         let title = this.attributes.title.value;
         let author = this.attributes.author.value;
         let description = this.attributes.description.value;
-        let rating = this.attributes.rating.value;
-        let votes = this.attributes.votes.value;
+        let rates = this.attributes.rates.value;
         this.innerHTML = `
         <div class="courseList-card fadeInanimation" id="${content_ID}">
         <div class="course-image">
@@ -21,9 +20,14 @@ class ListedContent extends HTMLElement {
             <h5 class="fnt fnt-bold fnt-large">${title}</h5>
             <div class="tutor">
                 <div class="ratings">
-                    <h6 class="fnt fnt-bold fnt-mid">by ${author}</h6>
+                    <h6 class="fnt fnt-light fnt-small">by ${author}</h6>
                 
-                    <ratings-content rating="${rating}" votes="${votes}"/>
+                    <div class="ratings" style="display: flex; align-items: center;">
+                          <i class="fas fa-star star-yellow" style="color: orange; font-size:10px;"></i>
+                          <i class="fas fa-star star-yellow" style="color: orange; font-size:15px;"></i>
+                          <i class="fas fa-star star-yellow" style="color: orange; font-size:10px;"></i>
+                          <h6 class="fnt fnt-light fnt-small">Ratings(${rates})</h6>
+                    </div><br>
                 </div>
             </div>
             <p class="fnt fnt-light fnt-mid">
