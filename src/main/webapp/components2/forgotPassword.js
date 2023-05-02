@@ -83,7 +83,59 @@ class ForgotPassword extends HTMLElement {
                         alert(response["message"])
                     }
                     else {
+
                         alert(response["message"])
+                        document.querySelector('#js-forgotpassword-input-wrap').innerHTML = `
+                            <label class="fnt fnt-mid fnt-bold">Enter a new password</label>
+                            <input id="js-forgot-password-newPassword" class="fnt fnt-mid fnt-bold" type="text" required>
+                            
+                             <label class="fnt fnt-mid fnt-bold">Confirm new password</label>
+                            <input id="js-forgot-password-confirmPassword" class="fnt fnt-mid fnt-bold" type="text" required>
+                            
+                            <button id="js-forgot-password-send-btn" class="btn btn-solid  fnt fnt-mid fnt-bold"> Confirm </button>
+                        `;
+
+                        document.querySelector('#js-forgot-password-send-btn').addEventListener('click', async ()=>{
+
+
+                            let newEnteredPassword = document.querySelector('#js-forgot-password-newPassword');
+                            let newConfirmPassword = document.querySelector('#js-forgot-password-confirmPassword');
+
+                            if (validatePassword(newEnteredPassword, newConfirmPassword)){
+                                let newPassword = {
+                                    "email": otpReq["email"],
+                                    "otp" : otpReq["otp"],
+                                    "password" : document.querySelector('#js-forgot-password-newPassword').value
+                                }
+                                alert(JSON.stringify(newPassword))
+
+                                let passwordResp = await fetch("http://localhost:8090/api/authenticate/changePassword/", {
+                                    method : "POST",
+                                    body : JSON.stringify(newPassword),
+                                    credentials: 'include'
+                                }).then((response) => {
+                                    return response.json();
+                                })
+
+                                if (passwordResp["isError"]){
+                                    alert(passwordResp["message"]);
+                                }
+                                else{
+                                    alert(passwordResp["message"]);
+                                    window.history.pushState({}, "", "/auth/signin");
+                                    urlLocation();
+                                }
+
+
+                            }
+                        })
+
+
+
+
+
+
+
                     }
 
                 });
