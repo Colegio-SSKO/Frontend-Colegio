@@ -9,17 +9,17 @@ class Search_main_quiz extends HTMLElement {
         let author = this.attributes.author.value;
 
         this.innerHTML = `
-        <div class="courseList-card search_quiz_main" id="${content_ID}">
+        <div class=" search_quiz_main" id="${content_ID}">
         <div class="course-image">
             <img src="${img_src}" alt="course image">
         </div>
            
        
         <div class="course-details">
-            <h5><a href="/quiz_serachopen">${title}</a> </h5>
+            <h5><a href="/quiz_serachopen" class="fnt-mid fnt fnt-bold">${title}</a> </h5>
             <div class="tutor">
                 <div class="ratings">
-                    <h6>by ${author}</h6>
+                    <h6 class=" fnt fnt-mid">by ${author}</h6>
                 </div>
             </div>
         </div>

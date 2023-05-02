@@ -17,7 +17,7 @@ class Navbar1 extends HTMLElement {
       </div>
       <div class="navbar-middle">
         <form class="search-form">
-          <input type="text" id="main_search_icon" placeholder="Search...">
+          <input type="text" id="main_search_icon" class="fnt-bold fnt fnt-mid" placeholder="Search...">
           <a href="/test"><button class=" normal-user-is-a-route is-a-route fnt fnt-mid fnt-bold" type="submit">Search</button></a>
         </form>
       </div>

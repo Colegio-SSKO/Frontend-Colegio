@@ -12,7 +12,7 @@ class Search_main_teacher extends HTMLElement {
                 </div>
                 <div class="result-details">
                     <h3 class="fnt fnt-bold fnt-mid">${name}</h3>
-                    <h3 class="fnt fnt-bold fnt-small">${quli}</h3>
+                    <h3 class="fnt  fnt-mid">${quli}</h3>
                 </div>
             </div>
         `;
