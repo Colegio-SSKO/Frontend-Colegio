@@ -7,7 +7,7 @@ class Question_form extends HTMLElement {
                 <h3 class="fnt fnt-bold fnt-large">Lets publish your question</h3><br>
                 <div class="inputs">
                     <div class="input-field fnt fnt-light fnt-mid">
-                        <label for="" class="fnt fnt-bold fnt-mid">Enter an appropriate title for your question.</label><br><br>
+                        <label for="" class="fnt fnt-bold fnt-mid">Enter an appropriate title for your question.</label><br>
                         <input id="js-question-upload-title" type="text" class="fnt fnt-mid fnt-light" required placeholder="Question Title">
                     </div><br><br>
         
@@ -18,11 +18,11 @@ class Question_form extends HTMLElement {
                     </div><br><br>
                     
                      <div class="input-field">
-                        <p for="" class="fnt fnt-mid fnt-bold">Select the most appropriate subject for your question.</p><br><br>
-                        <select id="js-question-upload-subject">
-                            <option value="Science">Science</option>
-                            <option value="Mathematics">Mathematics</option>
-                            <option value="English">English</option>
+                        <p for="" class="fnt fnt-mid fnt-bold">Select the most appropriate subject for your question.</p><br>
+                        <select id="js-question-upload-subject" class="fnt-bold fnt fnt-mid">
+                            <option class="fnt fnt-mid fnt-bold" value="Science">Science</option>
+                            <option class="fnt fnt-mid fnt-bold" value="Mathematics">Mathematics</option>
+                            <option class="fnt fnt-mid fnt-bold" value="English">English</option>
                         </select>
                     </div><br><br>
         
@@ -35,11 +35,11 @@ class Question_form extends HTMLElement {
         
                     <div class="upload_pic"></div><br><br>
         
-                    <p class="fnt fnt-mid fnt-bold">Add teacher tags here</p>
+                    <p class="fnt fnt-mid fnt-bold">Add teacher tags here</p><br>
                      <div class="question-upload-wrapper-container">
                         <div id="question-upload-wrapper1" class="question-upload-wrapper">
                                     <p class="fnt fnt-mid fnt-bold">Teacher 1</p>
-                                    <input  id="question-upload-container-option-box1" type="text" name="option" class="question-upload-container-option-box" placeholder="ex:- #1234">
+                                    <input  id="question-upload-container-option-box1" type="text" name="option" class="question-upload-container-option-box fnt-bold fnt fnt-mid" placeholder="ex:- #1234">
                                    
                         </div>
                         
@@ -47,7 +47,7 @@ class Question_form extends HTMLElement {
                     
                     <i id="js-question-upload-container-add-btn" class="material-icons">add_box</i>
                 </div>
-                <button id="js-question-upload-submit-button" class="btn btn-outlined btn-large">Publish</button>
+                <button id="js-question-upload-submit-button" class="btn btn-solid btn-large fnt-mid fnt fnt-bold">Publish</button>
             </div>
         </form>
         
