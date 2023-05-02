@@ -17,7 +17,7 @@ class Signin1 extends HTMLElement {
                                     <input id="password" class="fnt fnt-mid fnt-bold" type="password" required>
                                   </div>
                                   <div class="input-field">
-                                    <label class="fnt fnt-mid fnt-bold" for="">Forgot Your <span><a href="/auth/forgotPassword">Password</a></span> ?</label>
+                                    <label class="fnt fnt-mid fnt-bold" for="">Forgot Your <span><a href="/auth/forgotPassword" class="link">Password</a></span> ?</label>
                                   </div>
                                 </div>
                                 <button id="js-signin-btn" class="btn btn-solid fnt fnt-mid fnt-bold"> Sign in </button>

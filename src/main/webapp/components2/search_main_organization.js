@@ -5,8 +5,8 @@ class Search_main_organization extends HTMLElement {
         let organization_id = this.attributes.organization_id.value;
 
         this.innerHTML = `
-            <div class="result-notification" id="${organization_id}">
-                <div class="result-prof-img">
+            <div class="result-notification-org" id="${organization_id}">
+                <div class="result-prof-img-org">
                     <img src="${img_src}" alt="">
                 </div>
                 <div class="result-details">

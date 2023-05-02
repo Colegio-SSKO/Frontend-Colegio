@@ -6,26 +6,26 @@ class CourseForm extends HTMLElement {
                 <h3 class="fnt fnt-bold fnt-large">Lets create your Course</h3><br>
                 <div class="inputs">
                     <div class="input-field">
-                        <label for="" class="fnt fnt-mid fnt-bold">Select a unique title for your Course.</label><br><br>
+                        <label for="" class="fnt fnt-mid fnt-bold">Select a unique title for your Course.</label><br>
                         <input id="js-course-upload-title" type="text" class="fnt fnt-mid fnt-light" required placeholder="Course Title">
                     </div><br><br>
     
                     <div class="input-field">
-                        <p for="" class="fnt fnt-mid fnt-bold">Select the most appropriate category for your course.</p><br><br>
-                        <select id="js-course-upload-subject">
-                            <option value="Science">Science</option>
-                            <option value="Mathematics">Mathematics</option>
-                            <option value="English">English</option>
+                        <p for="" class="fnt fnt-mid fnt-bold">Select the most appropriate category for your course.</p><br>
+                        <select id="js-course-upload-subject" class="fnt-bold fnt fnt-mid">
+                            <option class="fnt-bold fnt fnt-mid" value="Science">Science</option>
+                            <option class="fnt-bold fnt fnt-mid" value="Mathematics">Mathematics</option>
+                            <option class="fnt-bold fnt fnt-mid" value="English">English</option>
                         </select>
                     </div><br><br>
     
                     <div class="input-field">
-                        <label for="" class="fnt fnt-mid fnt-bold">Give your course a good description.</label><br><br>
+                        <label for="" class="fnt fnt-mid fnt-bold">Give your course a good description.</label><br>
                         <textarea id="js-course-upload-description" class="fnt fnt-mid fnt-light description_box" name="description_box" rows="7" cols="40" placeholder="Enter course description here"></textarea>
                     </div><br><br>
                     
                     <div class="input-field">
-                        <label for="" class="fnt fnt-mid fnt-bold">Price (In LKR).</label><br><br>
+                        <label for="" class="fnt fnt-mid fnt-bold">Price (In LKR).</label><br>
                         <input id="js-course-upload-price" type="text" class="fnt fnt-mid fnt-light" required placeholder="Price for the course">
                     </div><br><br>
     
@@ -34,8 +34,7 @@ class CourseForm extends HTMLElement {
                             <p style="color: #767676; margin: 10px 0;" class="fnt fnt-mid fnt-light">your course image here. <br>Important Guideline : At least 564x368 pixels; jpeg, jpg, or png</p></label>
                     </div>
     
-                    <input type="file" id="js-course-upload-thumbnail-upload" class=" myFile fnt fnt-light fnt-mid" name="thumbnail"><br><br>
-    
+                    <input type="file" id="js-course-upload-thumbnail-upload" class=" myFile fnt fnt-light fnt-mid" name="thumbnail"><br>
                     <div class="upload_pic"></div><br><br>
     
                     <div class="input-field">
@@ -53,11 +52,11 @@ class CourseForm extends HTMLElement {
                                 
                             </div>
                         </div>
-                        <i id="js-video-upload-container-add-btn" class="material-icons">add_box</i>
+                        <i id="js-video-upload-container-add-btn" class="material-icons">add_box</i><br>
                     </div>
                     
 <!--                    remove this lator-->
-                    <button id="js-course-upload-submit-button" class="btn btn-outlined btn-large">Create Course</button>
+                    <button id="js-course-upload-submit-button" class="btn btn-solid btn-large">Create Course</button>
                 </div>
             </div>
     </form>
