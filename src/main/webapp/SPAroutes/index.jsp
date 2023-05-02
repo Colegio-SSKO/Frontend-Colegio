@@ -3,6 +3,48 @@
 <head>
 
     <style>
+        #js-forgotpassword-input-wrap {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .preloader {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #fff;
+            z-index: 9999;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        .spinner {
+
+
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 3px solid #007bff;
+            border-top-color: transparent;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
 
 
 
@@ -140,6 +182,7 @@
     <script src="../components2/edit_profileTeacher.js"></script>
     <script src="../components2/upgrade_form_org.js"></script>
     <script src="../components2/question_form.js"></script>
+    <script src="../components2/forgotPassword.js"></script>
 
 
 
