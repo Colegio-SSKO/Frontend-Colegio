@@ -10,10 +10,10 @@ class follow_course extends HTMLElement {
         // let course_id = this.attributes.course_id.value;
         // let content_id = this.attributes.content_id.value;
         this.innerHTML = `
-        <div class="open-course-wrap">
+        <div class="open-course-wrap-follow">
         <div class="open-course-image">
             <iframe src="${media}" frameborder="0"></iframe>
-        </div>
+        </div><br>
 
         <h4 class="open-course-title fnt fnt-bold fnt-large">${title} </h4>
         <p class="open-course-desc fnt fnt-light fnt-mid">${description}

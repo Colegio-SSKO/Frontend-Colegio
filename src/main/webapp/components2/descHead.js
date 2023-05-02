@@ -5,9 +5,9 @@ class DescHead extends HTMLElement {
         let content = this.attributes.content.value;
         this.innerHTML = `
         <div id="${course_media_id}" class="desc-head-wrap">
-        <div class="desc-head">${heading}</div>
+        <div class="desc-head fnt-mid fnt fnt-bold">${heading}</div>
         <div class="desc-cont">
-            <p class="fnt fnt-light fnt-large">${content}</p>
+            <p class="fnt fnt-mid fnt-bold">${content}</p>
             <span class="material-icons">play_circle_filled</span>
         </div>
     </div>

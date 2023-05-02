@@ -20,10 +20,11 @@ class Open_course extends HTMLElement {
                  <i class="fas fa-star star-yellow" style="color: orange; font-size:10px;"></i>
                  <i class="fas fa-star star-yellow" style="color: orange; font-size:15px;"></i>
                  <i class="fas fa-star star-yellow" style="color: orange; font-size:10px;"></i>
-                 <h6 class="fnt fnt-light fnt-mid">Ratings(${rates_count})</h6>
+                 <h6 class="fnt fnt-light fnt-mid">Ratings(${rates_count}) &nbsp</h6><br>
                  <div class="rate_report">
-                    <a href=""><div class="addrate fnt fnt-bold fnt-mid" id="${content_id}">Rate</div></a>
-                    <div class="addreport fnt fnt-bold fnt-mid" id="${course_id}">Report</div>
+                    <a href=""><div class="addrate fnt fnt-bold fnt-mid link" id="${content_id}">Rate</div></a>
+                    <span class="fnt-bold fnt fnt-mid">&nbsp | &nbsp</span>
+                    <div class="addreport fnt fnt-bold fnt-mid link" id="${course_id}">Report</div>
                  </div>
             </div><br>
         
@@ -31,7 +32,7 @@ class Open_course extends HTMLElement {
 
         <h4 class="open-course-title fnt fnt-bold fnt-large">${title} </h4>
         <p class="open-course-desc fnt fnt-light fnt-mid">${description}
-        </p>
+        </p><br>
 
         <with-title img_src = "${author_pic}" name = "${author}" qulifi = "${author_title}"></with-title>
         <div class="open-course-cont">
