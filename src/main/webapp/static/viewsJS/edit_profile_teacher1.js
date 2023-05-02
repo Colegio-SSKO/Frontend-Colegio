@@ -1,4 +1,4 @@
-alert("edit1234")
+alert("edit123456")
 
 
 async function fetchData(){
@@ -22,10 +22,16 @@ function renderSingle(){
 
         let html_left = "";
 
-        html_left += `  <pop-up></pop-up>  <edit-profileorg></edit-profileorg>`;
+        html_left += `  <pop-up></pop-up>  <edit-profileteacher></edit-profileteacher>`;
 
 
         document.querySelector(".cont-body-content").innerHTML = html_left;
+
+        let selected = document.querySelectorAll(".courseList-card");
+
+
+
+
 
         let saveBtn = document.querySelector("#save-btn");
 
@@ -33,29 +39,26 @@ function renderSingle(){
             // Retrieve values from input fields
             let fName = document.querySelector(".fname").value;
             let lName = document.querySelector(".lname").value;
-            let address = document.querySelector(".address").value;
-            let telnum = document.querySelector(".telnum").value;
+            let dob = document.querySelector(".dob").value;
+            let gender = document.querySelector("#gender").value;
 
             // Check if required fields are empty
-            if (fName === '' || lName === '' || address === '' || telnum === '') {
+            if (fName === '' || lName === '' || dob === '') {
                 return;
             }
 
-            if (telnum.length !== 10 || isNaN(telnum)) {
-                // telnum is not a 10-digit number
-                return;
-            }
+
 
             // Create request object
             let req = {
                 "fName" : fName,
                 "lName" : lName,
-                "address" : address,
-                "telnum" : telnum
+                "dob" : dob,
+                "gender" : gender
             }
 
             // Send data to server
-            let resp = await fetch("http://localhost:8090/api/users/editProfileOrg/:"+getUserID(), {
+            let resp = await fetch("http://localhost:8090/api/teachers/editProfile/:"+getUserID(), {
                 method : "POST",
                 body : JSON.stringify(req),
                 credentials : "include"
@@ -70,21 +73,23 @@ function renderSingle(){
             let message = resp["message"];
             if (isError==0){
                 popup.innerHTML = `
-             <img src="../static/img/components_images/sucsess.png" alt="">
-               <h2>${message}</h2>
-                <button class="btn is-a-route" id="ok-btn"><a href="/profile">OK</a></button>
+                    <img src="../static/img/components_images/sucsess.png" alt="">
+                    <h2>${message}</h2>
+                    <button class="btn is-a-route" id="ok-btn"><a href="/profile">OK</a></button>
                    
         `;
             }
             else {
                 popup.innerHTML = `
-                <img src="../static/img/components_images/error.png" alt="">
-               <h2>${message}</h2>
-               <a href="/profile"><button class="btn is-a-route" id="ok-btn">OK</button></a>
+                    <img src="../static/img/components_images/error.png" alt="">
+                    <h2>${message}</h2>
+                    <a href="/profile"><button class="btn is-a-route" id="ok-btn">OK</button></a>
                    
         `;
             }
         })
+
+
 
 
     });

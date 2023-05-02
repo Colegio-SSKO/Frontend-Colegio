@@ -28,7 +28,7 @@ function renderSingle(){
                 "currEmail1": currEmail1.value,
                 "newEmail1": newEmail1.value
             }
-            let resp = await fetch("http://localhost:8090/api/users/editEmail/:1", {
+            let resp = await fetch("http://localhost:8090/api/users/editEmail/:"+getUserID(), {
                 method: "POST",
                 body: JSON.stringify(req),
                 credentials : "include"

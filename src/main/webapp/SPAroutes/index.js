@@ -207,7 +207,7 @@ const studentRoutes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/",
-        script: "../static/viewsJS/change_password.js",
+        script: "../static/viewsJS/change_password2.js",
         path_right: "",
         title: "Change password",
         data : "This is the notification page"
@@ -238,7 +238,7 @@ const studentRoutes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Organization_view.jsp",
-        script: "../static/viewsJS/organization_view.js",
+        script: "../static/viewsJS/organization_view1.js",
         path_right: "",
         title: "Organization",
         data : "This is the notification page"
@@ -258,7 +258,7 @@ const studentRoutes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Organization_profile(stu).jsp",
-        script: "../static/viewsJS/Organization_profile_new1.js",
+        script: "../static/viewsJS/Organization_profile_new.js",
         path_right: "",
         title: "Organization",
         data : "This is the notification page"
@@ -402,9 +402,10 @@ const teacherRoutes =  {
 
     "/publish_question" : {
         isSingle : false,
-        template : "/SPAroutesTeacher/index_double.jsp",
+        template : "/SPAroutes/index_double.jsp",
         path_left:"/views/publish_question_left.jsp",
         path_right: "/views/publish_question_right.jsp",
+        script: "../static/viewsJS/userPublishQuestion.js",
         title: "Publish Question",
         data : "This is the Publish question page"
     },
@@ -501,7 +502,7 @@ const teacherRoutes =  {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Organization_profile(stu).jsp",
-        script: "../static/viewsJS/Organization_profile_new1.js",
+        script: "../static/viewsJS/Organization_profile_new.js",
         path_right: "",
         title: "Organization",
         data : "This is the notification page"
@@ -511,7 +512,7 @@ const teacherRoutes =  {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Organization_profile(stu).jsp",
-        script: "../static/viewsJS/edit_profile_teacher.js",
+        script: "../static/viewsJS/edit_profile_teacher1.js",
         path_right: "",
         title: "Edit Profile",
         data : "This is the edit profile page"
@@ -530,7 +531,7 @@ const teacherRoutes =  {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/",
-        script: "../static/viewsJS/change_password.js",
+        script: "../static/viewsJS/change_password2.js",
         path_right: "",
         title: "Edit Privacy",
         data : "This is the notification page"
@@ -615,13 +616,13 @@ const organizationRoutes = {
     },
 
 
-    "/about" : {
-        isSingle : false,
-        template : "/SPAroutes/index_double.jsp",
-        path_left:"/SPAroutes/about.html",
-        title: "about",
-        data : "This is the about page"
-    },
+    // "/about" : {
+    //     isSingle : false,
+    //     template : "/SPAroutes/index_double.jsp",
+    //     path_left:"/SPAroutes/about.html",
+    //     title: "about",
+    //     data : "This is the about page"
+    // },
 
 
     "/viewCourses" : {
@@ -634,22 +635,22 @@ const organizationRoutes = {
         data : "This is the contact page"
     },
 
-    "/create_course" : {
-        isSingle : false,
-        template : "/SPAroutes/index_double.jsp",
-        path_left:"/views/Create_course_left.jsp",
-        path_right: "/views/Create_course_right.jsp",
-        script: "../static/viewsJS/create_course.js",
-        title: "Create Course",
-        data : "This is the create course page"
-    },
+    // "/create_course" : {
+    //     isSingle : false,
+    //     template : "/SPAroutes/index_double.jsp",
+    //     path_left:"/views/Create_course_left.jsp",
+    //     path_right: "/views/Create_course_right.jsp",
+    //     script: "../static/viewsJS/create_course.js",
+    //     title: "Create Course",
+    //     data : "This is the create course page"
+    // },
 
     "/question" : {
         isSingle : false,
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/Question_student_1_left.jsp",
         path_right: "/views/Question_student_1_right.jsp",
-        script: "../static/viewsJS/question1.js",
+        script: "../static/viewsJS/Student_question.js",
         title: "Question",
         data : "This is the Question page"
     },
@@ -663,14 +664,14 @@ const organizationRoutes = {
         data : "This is the Session request page"
     },
 
-    "/publish_question" : {
-        isSingle : false,
-        template : "/SPAroutes/index_double.jsp",
-        path_left:"/views/publish_question_left.jsp",
-        path_right: "/views/publish_question_right.jsp",
-        title: "Publish Question",
-        data : "This is the Publish question page"
-    },
+    // "/publish_question" : {
+    //     isSingle : false,
+    //     template : "/SPAroutes/index_double.jsp",
+    //     path_left:"/views/publish_question_left.jsp",
+    //     path_right: "/views/publish_question_right.jsp",
+    //     title: "Publish Question",
+    //     data : "This is the Publish question page"
+    // },
 
     "/profile" : {
         isSingle : true,
@@ -692,14 +693,14 @@ const organizationRoutes = {
         data : "This is the quiz page"
     },
 
-    "/create_quiz" : {
-        isSingle : false,
-        template : "/SPAroutes/index_double.jsp",
-        path_left:"/views/Create_quiz_left.jsp",
-        path_right: "/views/Create_quiz_right.jsp",
-        title: "Create quiz",
-        data : "This is the  create quiz page"
-    },
+    // "/create_quiz" : {
+    //     isSingle : false,
+    //     template : "/SPAroutes/index_double.jsp",
+    //     path_left:"/views/Create_quiz_left.jsp",
+    //     path_right: "/views/Create_quiz_right.jsp",
+    //     title: "Create quiz",
+    //     data : "This is the  create quiz page"
+    // },
 
     "/start_quiz" : {
         isSingle : false,
@@ -730,42 +731,42 @@ const organizationRoutes = {
         data : "This is the notification page"
     },
 
-    "/edit_profile" : {
-        isSingle : true,
-        template : "/SPAroutes/index_single.jsp",
-        path_left:"/views/",
-        script: "../static/viewsJS/edit_profile1.js",
-        path_right: "",
-        title: "Notification",
-        data : "This is the notification page"
-    },
+    // "/edit_profile" : {
+    //     isSingle : true,
+    //     template : "/SPAroutes/index_single.jsp",
+    //     path_left:"/views/",
+    //     script: "../static/viewsJS/edit_profile1.js",
+    //     path_right: "",
+    //     title: "Notification",
+    //     data : "This is the notification page"
+    // },
 
-    "/edit_email" : {
-        isSingle : true,
-        template : "/SPAroutes/index_single.jsp",
-        path_left:"/views/",
-        script: "../static/viewsJS/edit_email.js",
-        path_right: "",
-        title: "Notification",
-        data : "This is the notification page"
-    },
-
-    "/change_password" : {
-        isSingle : true,
-        template : "/SPAroutes/index_single.jsp",
-        path_left:"/views/",
-        script: "../static/viewsJS/change_password.js",
-        path_right: "",
-        title: "Notification",
-        data : "This is the notification page"
-    },
+    // "/edit_email" : {
+    //     isSingle : true,
+    //     template : "/SPAroutes/index_single.jsp",
+    //     path_left:"/views/",
+    //     script: "../static/viewsJS/edit_email.js",
+    //     path_right: "",
+    //     title: "Notification",
+    //     data : "This is the notification page"
+    // },
+    //
+    // "/change_password" : {
+    //     isSingle : true,
+    //     template : "/SPAroutes/index_single.jsp",
+    //     path_left:"/views/",
+    //     script: "../static/viewsJS/change_password2.js",
+    //     path_right: "",
+    //     title: "Notification",
+    //     data : "This is the notification page"
+    // },
 
 
     "/organization" : {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Organization_view.jsp",
-        script: "../static/viewsJS/organization_view(teacher)1.js",
+        script: "../static/viewsJS/organization_view1.js",
         path_right: "",
         title: "Organization",
         data : "This is the notification page"
@@ -785,7 +786,7 @@ const organizationRoutes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Organization_profile(stu).jsp",
-        script: "../static/viewsJS/Organization_profile_new1.js",
+        script: "../static/viewsJS/Organization_profile_new.js",
         path_right: "",
         title: "Organization",
         data : "This is the notification page"
@@ -825,7 +826,7 @@ const organizationRoutes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Organization_profile(stu).jsp",
-        script: "../static/viewsJS/edit_profile_org.js",
+        script: "../static/viewsJS/edit_profile_org1.js",
         path_right: "",
         title: "Invite Teacher",
         data : "This is the notification page"
@@ -844,7 +845,7 @@ const organizationRoutes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/",
-        script: "../static/viewsJS/change_password.js",
+        script: "../static/viewsJS/change_password2.js",
         path_right: "",
         title: "Notification",
         data : "This is the notification page"
@@ -868,6 +869,16 @@ const organizationRoutes = {
         script: "../static/viewsJS/published_quiz_list(teacher).js",
         title: "profile",
         data : "This is the profile page"
+    },
+
+    "/continuecourse" : {
+        isSingle : false,
+        template : "/SPAroutes/index_double.jsp",
+        path_left:"/views/Create_quiz_left.jsp",
+        path_right: "/views/Create_quiz_right.jsp",
+        script: "../static/viewsJS/Student_continue_course.js",
+        title: "Follow Course",
+        data : "This is the follow course page"
     },
 
 
