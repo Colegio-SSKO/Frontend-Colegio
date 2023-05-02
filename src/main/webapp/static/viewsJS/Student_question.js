@@ -1,4 +1,4 @@
-alert("adaddad123");
+alert("adaddad12345");
 
 async function fetchData() {
     const req = {
@@ -14,6 +14,7 @@ async function fetchData() {
         response.json()
 
     );
+    alert(JSON.stringify(res));
 
     return res
 };
@@ -65,9 +66,9 @@ function renderLeft() {
         for (let i of data){
 
 
-            if (i["status"]== 0){ /**/
+            if (i["status"]== 1){ /**/
                 html_left += ` <q-1 question_ID="${i["question.question_id"]}" img_src="${i["question_img"]}" title="${i["question_title"]}" accept="${i["f_name"]+" "+ i["l_name"]}" description="${i["question_description"]}""></q-1>`;
-            }else if (i["status"]== 1){
+            }else if (i["status"]== 2){
                 html_left += ` <q-2 question_ID="${i["question.question_id"]}" img_src="${i["question_img"]}" title="${i["question_title"]}" accept="${i["f_name"]+" "+ i["l_name"]}" description="${i["question_description"]}""></q-2>`;
             }
             else {
