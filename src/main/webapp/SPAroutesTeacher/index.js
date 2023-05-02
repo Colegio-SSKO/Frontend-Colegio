@@ -44,7 +44,7 @@ const Routes = {
         template : "/SPAroutesTeacher/index_double.jsp",
         path_left:"/views/View_course2_left.jsp",
         path_right: "/views/View_course2_right.jsp",
-        script: "../static/viewsJS/teacher_view_courses.js",
+        script: "../static/viewsJS/teacher_view_courses1.js",
         title: "My Courses",
         data : "This is the contact page"
     },
@@ -92,7 +92,7 @@ const Routes = {
         template : "/SPAroutesTeacher/index_single.jsp",
         path_left:"/views/Teahcer_profile.jsp",
         path_right: "",
-        script: "../static/viewsJS/teacher_profile(teacher).js",
+        script: "../static/viewsJS/teacher_profile(teacher)1.js",
         title: "profile",
         data : "This is the profile page"
     },
@@ -102,7 +102,7 @@ const Routes = {
         template : "/SPAroutesTeacher/index_double.jsp",
         path_left:"/views/Quiz_teacher_org1_left.jsp",
         path_right: "/views/Quiz_teacher_org1_right.jsp",
-        script: "../static/viewsJS/teacher_view_quizzes.js",
+        script: "../static/viewsJS/teacher_view_quizzes1.js",
         title: "Quizzes",
         data : "This is the quiz page"
     },
@@ -179,7 +179,7 @@ const Routes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Organization_profile(stu).jsp",
-        script: "../static/viewsJS/Organization_profile_new1.js",
+        script: "../static/viewsJS/Organization_profile_new.js",
         path_right: "",
         title: "Organization",
         data : "This is the notification page"
@@ -189,7 +189,7 @@ const Routes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Organization_profile(stu).jsp",
-        script: "../static/viewsJS/edit_profile_teacher.js",
+        script: "../static/viewsJS/edit_profile_teacher1.js",
         path_right: "",
         title: "Invite Teacher",
         data : "This is the notification page"
@@ -208,7 +208,7 @@ const Routes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/",
-        script: "../static/viewsJS/change_password.js",
+        script: "../static/viewsJS/change_password2.js",
         path_right: "",
         title: "Notification",
         data : "This is the notification page"
@@ -219,7 +219,7 @@ const Routes = {
         template : "/SPAroutesTeacher/index_single.jsp",
         path_left:"/views/Teahcer_profile.jsp",
         path_right: "",
-        script: "../static/viewsJS/published_course_list(teacher)1.js",
+        script: "../static/viewsJS/published_course_list(teacher).js",
         title: "profile",
         data : "This is the profile page"
     },
@@ -229,7 +229,7 @@ const Routes = {
         template : "/SPAroutesTeacher/index_single.jsp",
         path_left:"/views/Teahcer_profile.jsp",
         path_right: "",
-        script: "../static/viewsJS/published_quiz_list(teacher)1.js",
+        script: "../static/viewsJS/published_quiz_list(teacher).js",
         title: "profile",
         data : "This is the profile page"
     },

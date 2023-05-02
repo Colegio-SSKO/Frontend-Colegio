@@ -24,6 +24,8 @@ class Publish_coursequiz extends HTMLElement {
             disable.style.display = 'none';
         }
 
+        alert("wedaaaa")
+
         let disable = document.querySelectorAll(".teacher_disable_course");
         for (let element of disable){
             element.addEventListener('click', async (event)=>{
@@ -31,7 +33,7 @@ class Publish_coursequiz extends HTMLElement {
                 let requestBody = {
                     "content_id": content_id
                 };
-                let url = "http://localhost:8090/api/users/teacher_disable_content" ;
+                let url = "http://localhost:8090/api/teachers/teacher_disable_content" ;
                 let res = await fetch(url, {method : "POST",  body : JSON.stringify(requestBody)}).then((response)=>
                     response.json()
                 );

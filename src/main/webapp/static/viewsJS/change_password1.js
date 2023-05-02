@@ -1,5 +1,5 @@
 
-alert("ghjhgj")
+alert("ghjhgj2")
 async function fetchData(){
     // return "eeew";
 };
@@ -37,7 +37,7 @@ function renderSingle(){
                 "newPassword": newPassword.value,
                 "againPassword": againPassword.value
             }
-            let resp = await fetch("http://localhost:8080/api/users/changePassword/:1", {
+            let resp = await fetch("http://localhost:8080/api/users/changePassword/:"+getUserID(), {
                 method: "POST",
                 body: JSON.stringify(req)
             }).then((data) => {

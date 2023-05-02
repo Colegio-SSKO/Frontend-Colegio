@@ -1,4 +1,4 @@
-alert("teacher_profile12341023");
+alert("teacher_profile12341023225");
 
 async function fetchData(){
     const req = {
@@ -6,7 +6,7 @@ async function fetchData(){
     }
 
 //uncomment this when connecting the database
-    let url = "http://localhost:8090/api/users/viewteacherprofile/:"+ getUserID();
+    let url = "http://localhost:8090/api/teachers/viewprofile/:"+ getUserID();
     let res3 = await fetch(url, {
         method: "GET",
         credentials : "include"
@@ -31,7 +31,7 @@ async function renderSingle() {
         }).then((response) => response.text());
 
         const html_left = `
-                            <teacherprofile-card profile_img="${data["img_src"]}" name="${data["name"]}" quli="${data["quli"]}" gender="${data["gender"]}" user_id="${data["user_id"]}"></teacherprofile-card>`+ "Trending in Colegio"+ `<content-list dataString="${encodeURIComponent(res2)}"></content-list>`;
+                            <teacherprofile-card profile_img="${data["img_src"]}" name="${data["name"]}" quli="${data["quli"]}" gender="${data["gender"]}" user_id="${data["user_id"]}" tag="${data["tag"]}"></teacherprofile-card>`+ "Trending in Colegio"+ `<content-list dataString="${encodeURIComponent(res2)}"></content-list>`;
 
         document.querySelector(".cont-body-content").innerHTML = html_left;
 

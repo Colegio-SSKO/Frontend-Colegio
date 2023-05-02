@@ -15,6 +15,11 @@ function getUserProfileImage(){
     return userProfileImage;
 }
 
+let socketsStartedBefore = false;
+function isSocketsStartedBefore(){
+    return socketsStartedBefore;
+}
+
 let userType = 0;
 function getUserType(){
 

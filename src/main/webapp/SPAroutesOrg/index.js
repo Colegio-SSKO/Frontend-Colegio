@@ -168,7 +168,7 @@ const Routes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/",
-        script: "../static/viewsJS/change_password.js",
+        script: "../static/viewsJS/change_password2.js",
         path_right: "",
         title: "Notification",
         data : "This is the notification page"
@@ -199,7 +199,7 @@ const Routes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Organization_profile(stu).jsp",
-        script: "../static/viewsJS/Organization_profile_new1.js",
+        script: "../static/viewsJS/Organization_profile_new.js",
         path_right: "",
         title: "Organization",
         data : "This is the notification page"
@@ -239,7 +239,7 @@ const Routes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Organization_profile(stu).jsp",
-        script: "../static/viewsJS/edit_profile_org.js",
+        script: "../static/viewsJS/edit_profile_org1.js",
         path_right: "",
         title: "Invite Teacher",
         data : "This is the notification page"
@@ -258,7 +258,7 @@ const Routes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/",
-        script: "../static/viewsJS/change_password.js",
+        script: "../static/viewsJS/change_password2.js",
         path_right: "",
         title: "Notification",
         data : "This is the notification page"
@@ -269,7 +269,7 @@ const Routes = {
         template : "/SPAroutesTeacher/index_single.jsp",
         path_left:"/views/Teahcer_profile.jsp",
         path_right: "",
-        script: "../static/viewsJS/published_course_list(teacher)1.js",
+        script: "../static/viewsJS/published_course_list(teacher).js",
         title: "profile",
         data : "This is the profile page"
     },
@@ -279,7 +279,7 @@ const Routes = {
         template : "/SPAroutesTeacher/index_single.jsp",
         path_left:"/views/Teahcer_profile.jsp",
         path_right: "",
-        script: "../static/viewsJS/published_quiz_list(teacher)1.js",
+        script: "../static/viewsJS/published_quiz_list(teacher).js",
         title: "profile",
         data : "This is the profile page"
     },

@@ -1,4 +1,4 @@
-alert("adsadasss");
+alert("adaddad12345");
 
 async function fetchData() {
     const req = {
@@ -14,6 +14,7 @@ async function fetchData() {
         response.json()
 
     );
+    alert(JSON.stringify(res));
 
     return res
 };
@@ -34,7 +35,7 @@ function renderRight(data, type) {
     }
     else {
         alert("asd")
-        html_right = ` <open-question-question media="${data["question_img"]}" author_propic="${data["pro_pic"]}" title="${data["question_title"]}" author="${data["f_name"]+" "+ data["l_name"]}"  description="${data["question_description"]}" qulifi="${data["qulification_level"]}""></open-question-question>`;
+        html_right = ` <open-question-question id="${data["question.question_id"]}" media="${data["question_img"]}" author_propic="${data["pro_pic"]}" title="${data["question_title"]}" author="${data["f_name"]+" "+ data["l_name"]}"  description="${data["question_description"]}" qulifi="${data["qulification_level"]}"  teacherId="${data["question.accept_teacher_id"]}""></open-question-question>`;
 
     }
     document.querySelector(".cont-body-right").innerHTML = html_right;
@@ -56,18 +57,18 @@ function renderLeft() {
         let html_left = "";
 
         html_left += "" +
-            "<a  href=\"\"><button class=\"btn btn-solid is-a-route btn-a btn-small fnt fnt-bold fnt-mid\">All</button></a>\n" +
-            "<a  href=\"\"><button class=\"btn btn-outlined is-a-route btn-a btn-solid fnt fnt-bold fnt-mid\">Continuing</button></a>\n" +
-            "<a  href=\"\"><button class=\"btn btn-outlined is-a-route btn-a btn-solid fnt fnt-bold fnt-mid\">Completed</button></a><br>\n" +
-            "<a href='/publish_question'><button class=\"btn btn-outlined btn-solid btn-a fnt-mid fnt fnt-bold is-a-route\">Publish question</button></a>\n" +
+            "<button class=\"btn btn-solid btn-small\"><a class=\"fnt fnt-bold fnt-mid\" href=\"\">All</a></button>\n" +
+            "<button class=\"btn btn-outlined btn-small\"><a class=\"fnt fnt-bold fnt-mid\" href=\"\">Continuing</a></button>\n" +
+            "<button class=\"btn btn-outlined btn-small\"><a class=\"fnt fnt-bold fnt-mid\" href=\"\">Completed</a></button><br><br>\n" +
+            "<a href='/publish_question'><button class=\"btn btn-outlined btn-small is-a-route\">Publish question</button></a>\n" +
             "";
 
         for (let i of data){
 
 
-            if (i["status"]== 0){ /**/
+            if (i["status"]== 1){ /**/
                 html_left += ` <q-1 question_ID="${i["question.question_id"]}" img_src="${i["question_img"]}" title="${i["question_title"]}" accept="${i["f_name"]+" "+ i["l_name"]}" description="${i["question_description"]}""></q-1>`;
-            }else if (i["status"]== 1){
+            }else if (i["status"]== 2){
                 html_left += ` <q-2 question_ID="${i["question.question_id"]}" img_src="${i["question_img"]}" title="${i["question_title"]}" accept="${i["f_name"]+" "+ i["l_name"]}" description="${i["question_description"]}""></q-2>`;
             }
             else {

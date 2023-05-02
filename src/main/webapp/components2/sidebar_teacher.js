@@ -53,9 +53,11 @@ class sidebar_teacher extends HTMLElement {
                 })
             alert(logoutResponse["isSuccess"]);
             if (logoutResponse["isSuccess"]){
+                closeWebsockets();
                 //sending to home page
                 window.history.pushState({}, "", "/");
                 urlLocation();
+
             }
             else{
                 alert("logout error");

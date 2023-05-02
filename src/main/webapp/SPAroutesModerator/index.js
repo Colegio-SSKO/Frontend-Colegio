@@ -167,7 +167,7 @@ const Routes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/",
-        script: "../static/viewsJS/change_password.js",
+        script: "../static/viewsJS/change_password2.js",
         path_right: "",
         title: "Notification",
         data : "This is the notification page"
@@ -198,7 +198,7 @@ const Routes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Organization_profile(stu).jsp",
-        script: "../static/viewsJS/Organization_profile_new1.js",
+        script: "../static/viewsJS/Organization_profile_new.js",
         path_right: "",
         title: "Organization",
         data : "This is the notification page"

@@ -1,4 +1,4 @@
-alert("mil2");
+alert("mil234");
 
 // import {myVar} from '../../components2/small-listed';
 
@@ -23,6 +23,8 @@ async function fetchData() {
 
 
 function renderRight(data) {
+
+    alert("render right awa");
 
     let html_right = "";
 
