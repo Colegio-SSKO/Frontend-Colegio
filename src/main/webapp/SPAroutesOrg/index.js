@@ -269,7 +269,7 @@ const Routes = {
         template : "/SPAroutesTeacher/index_single.jsp",
         path_left:"/views/Teahcer_profile.jsp",
         path_right: "",
-        script: "../static/viewsJS/published_course_list(teacher)1.js",
+        script: "../static/viewsJS/published_course_list(teacher).js",
         title: "profile",
         data : "This is the profile page"
     },
@@ -279,7 +279,7 @@ const Routes = {
         template : "/SPAroutesTeacher/index_single.jsp",
         path_left:"/views/Teahcer_profile.jsp",
         path_right: "",
-        script: "../static/viewsJS/published_quiz_list(teacher)1.js",
+        script: "../static/viewsJS/published_quiz_list(teacher).js",
         title: "profile",
         data : "This is the profile page"
     },

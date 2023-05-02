@@ -42,7 +42,7 @@ if (typeof containerCollection === 'undefined') {
 
 
 async function fetchData() {
-    let res = await fetch("http://localhost:8090/api/users/myQuizes/:1", {
+    let res = await fetch("http://localhost:8090/api/users/myQuizes/:"+getUserID(),{
         method : "GET",
         credentials : "include"
     }).then((response)=>
@@ -220,7 +220,7 @@ function renderLeft() {
 
 
         for (let i of data){
-            html_left += ` <listed-content content_ID="${i["content_id"]}" img_src="${i["media"]}" title="${i["quiz_title"]}" author="${i["f_name"] + " " +i["l_name"]}" description="${i["description"]}" rating=\"5\" votes=\"102\"></listed-content>`;
+            html_left += ` <listed-content content_ID="${i["content_id"]}" img_src="${i["image"]}" title="${i["quiz_title"]}" author="${i["f_name"] + " " +i["l_name"]}" description="${i["description"]}" rates="${i["rate_count"]}" ></listed-content>`;
         }
 
         document.querySelector(".cont-body-left").innerHTML = html_left;

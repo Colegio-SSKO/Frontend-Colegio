@@ -55,7 +55,7 @@ function renderSingle(){
                 let requestBody= {
                     "organization_id": organization_id
                 }
-                let url = "http://localhost:8090/api/teachers/teacher_send_req/:" + getTeacherID();
+                let url = "http://localhost:8090/api/teachers/teacher_send_req/:" + getUserID();
                 let res = await fetch(url, {
                     method : "POST",
                     body : JSON.stringify(requestBody),
