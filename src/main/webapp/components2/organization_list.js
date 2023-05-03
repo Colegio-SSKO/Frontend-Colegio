@@ -6,7 +6,7 @@ class OrganizationList extends HTMLElement {
         alert(dataString);
         let data = JSON.parse(dataString);
 
-
+        alert(data);
         let htmlcontent = "";
 
         for (let i of data) {
