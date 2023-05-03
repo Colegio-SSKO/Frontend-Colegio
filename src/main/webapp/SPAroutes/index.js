@@ -430,6 +430,34 @@ const teacherRoutes =  {
         data : "This is the quiz page"
     },
 
+    "/teacher_organizations" : {
+        isSingle : true,
+        template : "/SPAroutesTeacher/index_single.jsp",
+        path_left:"/views/Quiz_teacher_org1_left.jsp",
+        script: "../static/viewsJS/Organization_profile_adpublish.js",
+        title: "Teacher organizations",
+        data : "This is the quiz page"
+    },
+
+    // "/teacher_organizations" : {
+    //     isSingle : true,
+    //     template : "/SPAroutesTeacher/index_single.jsp",
+    //     path_left:"/views/Quiz_teacher_org1_left.jsp",
+    //     script: "../static/viewsJS/organizations_of_teacher.js",
+    //     title: "Teacher organizations",
+    //     data : "This is the quiz page"
+    // },
+
+
+    "/publish_yourad" : {
+        isSingle : true,
+        template : "/SPAroutesTeacher/index_single.jsp",
+        path_left:"/views/Quiz_teacher_org1_left.jsp",
+        script: "../static/viewsJS/ad_publish_teacher.js",
+        title: "publish ads",
+        data : "This is the quiz page"
+    },
+
     "/create_quiz" : {
         isSingle : false,
         template : "/SPAroutesTeacher/index_double.jsp",

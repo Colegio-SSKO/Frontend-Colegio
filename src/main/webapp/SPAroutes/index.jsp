@@ -192,6 +192,10 @@
     <script src="../components2/search_result.js"></script>
     <script src="../components2/search_resultlist.js"></script>
     <script src="../components2/edit_profile(Org).js"></script>
+    <script src="../components2/ad_section.js"></script>
+    <script src="../components2/ad_list.js"></script>
+    <script src="../components2/organization_profile_card_adpublish(stu).js"></script>
+    <script src="../components2/ad_publish_form.js"></script>
 
     <script src="../components2/forgotPassword.js"></script>
 

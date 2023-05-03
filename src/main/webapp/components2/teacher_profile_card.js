@@ -9,8 +9,9 @@ class Teacher_profile_card extends HTMLElement {
         let tag = this.attributes.tag.value;
 
         this.innerHTML = `
-        <button class="btn btn-outlined btn-large"><a class="all_courses fnt fnt-bold fnt-mid" id="${user_id}" href="/teacher_published_course">My courses</a></button>
-        <button class="btn btn-outlined btn-large"><a class="all_quizzes fnt fnt-bold fnt-mid" id="${user_id}" href="/teacher_published_quiz">My quizess</a></button>
+        <a class="all_courses fnt fnt-bold fnt-mid" id="${user_id}" href="/teacher_published_course"><button class="btn btn-outlined btn-large is-a-route fnt fnt-mid fnt-bold btn-a">My courses</button></a>
+        <a class="all_quizzes fnt fnt-bold fnt-mid" id="${user_id}" href="/teacher_published_quiz"><button class="btn btn-outlined btn-large is-a-route fnt fnt-mid fnt-bold btn-a">My quizess</button></a>
+        <a class="all_quizzes fnt fnt-bold fnt-mid" id="${user_id}" href="/teacher_organizations"><button class="btn btn-outlined btn-large is-a-route fnt fnt-mid fnt-bold btn-a">My organizations</button></a>
         <div class="profile-card-wrap" xmlns="http://www.w3.org/1999/html">
         <div class="profile-card-image">
             <img src="${profile_img}" alt="profile picture" srcset="">
