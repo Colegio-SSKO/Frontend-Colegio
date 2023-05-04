@@ -354,7 +354,7 @@ const teacherRoutes =  {
         template : "/SPAroutesTeacher/index_double.jsp",
         path_left:"/views/View_course2_left.jsp",
         path_right: "/views/View_course2_right.jsp",
-        script: "../static/viewsJS/teacher_view_courses1.js",
+        script: "../static/viewsJS/teacher_view_courses.js",
         title: "My Courses",
         data : "This is the contact page"
     },
@@ -639,6 +639,7 @@ const organizationRoutes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Home_content.jsp",
+        script: "../static/viewsJS/home.js",
         title: "Home",
         data : "This is the home page"
     },
@@ -904,7 +905,7 @@ const organizationRoutes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/Create_quiz_left.jsp",
         path_right: "/views/Create_quiz_right.jsp",
-        script: "../static/viewsJS/Student_continue_course.js",
+        script: "../static/viewsJS/Student_continue_course1.js",
         title: "Follow Course",
         data : "This is the follow course page"
     },
