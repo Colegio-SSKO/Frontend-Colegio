@@ -37,7 +37,7 @@ class Open_course extends HTMLElement {
         <with-title img_src = "${author_pic}" name = "${author}" qulifi = "${author_title}"></with-title>
         <div class="open-course-cont">
         
-        <a href="/continuecourse" id="${content_id}"><button class="course_countinue btn btn-solid btn-small is-a-route">Continue</button></a>
+        <a href="/continuecourse"><button class="course_countinue btn btn-solid btn-small is-a-route" id="${content_id}">Continue</button></a>
 
 
         </div>

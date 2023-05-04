@@ -1,4 +1,4 @@
-alert("Hello 55");
+alert("Hello 5512");
 
 async function fetchData(){
 
@@ -23,7 +23,7 @@ function renderRight(data) {
     let html_right = "";
 
     html_right += `
-    <open-course author_pic = "${data["pro_pic"]}" img_src="${data["introduction_media"]}" title="${data["course_title"]}" description="${data["decription"]}" author="${data["f_name"] + " " +data["l_name"]}" author_title="${data["qulification_level"]}" course_id="${data["course_id"]}" content_id="${data["content_id"]}" rates_count="${data["rate_count"]}"></open-course>`;
+    <open-course author_pic = "${data["pro_pic"]}" img_src="${data["image"]}" title="${data["title"]}" description="${data["description"]}" author="${data["f_name"] + " " +data["l_name"]}" author_title="${data["qulification_level"]}" course_id="${data["course_id"]}" content_id="${data["content_id"]}" rates_count="${data["rate_count"]}"></open-course>`;
     document.querySelector(".cont-body-right").innerHTML = html_right;
 
 
@@ -54,7 +54,7 @@ function renderLeft() {
 
 
         for (let i of data){
-            html_left += `  <pop-up></pop-up><listed-content content_ID="${i["content_id"]}" img_src="${i["introduction_media"]}" title="${i["course_title"]}" author="${i["f_name"] + " " +i["l_name"]}" description="${i["decription"]}" rates="${i["rate_count"]}"></listed-content>`;
+            html_left += ` <pop-up></pop-up><listed-content content_ID="${i["content_id"]}" img_src="${i["image"]}" title="${i["title"]}" author="${i["f_name"] + " " +i["l_name"]}" description="${i["description"]}" rates="${i["rate_count"]}" ></listed-content>`;
         }
 
         document.querySelector(".cont-body-left").innerHTML = html_left;

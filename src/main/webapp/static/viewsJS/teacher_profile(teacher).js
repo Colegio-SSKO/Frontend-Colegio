@@ -1,4 +1,4 @@
-alert("teacher_profile12341023225");
+alert("teacher");
 
 async function fetchData(){
     const req = {
@@ -6,7 +6,7 @@ async function fetchData(){
     }
 
 //uncomment this when connecting the database
-    let url = "http://localhost:8090/api/teachers/viewprofile/:";
+    let url = "http://localhost:8090/api/teachers/viewprofile/:"+getUserID();
     let res3 = await fetch(url, {
         method: "GET",
         credentials : "include"

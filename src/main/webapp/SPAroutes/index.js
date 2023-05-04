@@ -81,7 +81,7 @@ const studentRoutes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/View_course2_left.jsp",
         path_right: "/views/View_course2_right.jsp",
-        script: "../static/viewsJS/Student_view_courses.js",
+        script: "../static/viewsJS/Student_view_courses1.js",
         title: "My Courses",
         data : "This is the contact page"
     },
@@ -415,7 +415,7 @@ const teacherRoutes =  {
         template : "/SPAroutesTeacher/index_single.jsp",
         path_left:"/views/Teahcer_profile.jsp",
         path_right: "",
-        script: "../static/viewsJS/teacher_profile(teacher)1.js",
+        script: "../static/viewsJS/teacher_profile(teacher).js",
         title: "profile",
         data : "This is the profile page"
     },
@@ -659,7 +659,7 @@ const organizationRoutes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/View_course2_left.jsp",
         path_right: "/views/View_course2_right.jsp",
-        script: "../static/viewsJS/Student_view_courses.js",
+        script: "../static/viewsJS/Student_view_courses1.js",
         title: "My Courses",
         data : "This is the contact page"
     },
@@ -908,6 +908,25 @@ const organizationRoutes = {
         script: "../static/viewsJS/Student_continue_course1.js",
         title: "Follow Course",
         data : "This is the follow course page"
+    },
+
+    "/teacher_content" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Organization_profile(stu).jsp",
+        script: "../static/viewsJS/teacher_content_view.js",
+        path_right: "",
+        title: "Organization",
+        data : "This is the notification page"
+    },
+
+    "/small_cardopen" : {
+        isSingle : false,
+        template : "/SPAroutes/index_double.jsp",
+        path_left:"/views/Home_content.jsp",
+        script: "../static/viewsJS/small_card_open_new.js",
+        title: "small card open",
+        data : "This is the home page"
     },
 
 
