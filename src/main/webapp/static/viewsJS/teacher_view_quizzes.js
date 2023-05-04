@@ -1,4 +1,4 @@
-alert("Heliidd3122");
+alert("Heliidd31");
 
 //element selectors
 if (typeof previous === 'undefined') {
@@ -74,7 +74,7 @@ async function renderRight(data) {
     let html_right = "";
 
     html_right += `
-<quiz-question q_number="${"1/"+ questions.length.toString()}" title="${data["quiz_title"]}" Question="${questions[0]["question"]}" answer1="${questions[0]["op1"]}" answer2="${questions[0]["op2"]}" answer3="${questions[0]["op3"]}" answer4="${questions[0]["op4"]}" ></quiz-question>`;
+<quiz-question q_number="${"1/"+ questions.length.toString()}" title="${data["title"]}" Question="${questions[0]["question"]}" answer1="${questions[0]["op1"]}" answer2="${questions[0]["op2"]}" answer3="${questions[0]["op3"]}" answer4="${questions[0]["op4"]}" ></quiz-question>`;
     document.querySelector(".cont-body-left").innerHTML = html_right;
 
     //element selecctors
@@ -221,7 +221,7 @@ function renderLeft() {
 
 
         for (let i of data){
-            html_left += ` <listed-content content_ID="${i["content_id"]}" img_src="${i["media"]}" title="${i["quiz_title"]}" author="${i["f_name"] + " " +i["l_name"]}" description="${i["description"]}" rates="${i["rate_count"]}"></listed-content>`;
+            html_left += ` <listed-content content_ID="${i["content_id"]}" img_src="${i["image"]}" title="${i["title"]}" author="${i["f_name"] + " " +i["l_name"]}" description="${i["description"]}" rates="${i["rate_count"]}"></listed-content>`;
         }
 
         document.querySelector(".cont-body-left").innerHTML = html_left;
@@ -258,7 +258,7 @@ function quizcard(element){
     alert("runn")
     let html_right = "";
 
-    html_right = `<start-quiz rating="4" votes="110" quiz_id="${element["content_id"]}" img_src="/new" title="${element["quiz_title"]}" description=${element["description"]} author=${element["f_name"] + " " + element["l_name"]} author_title=${element["qulification_level"]}></start-quiz>`;
+    html_right = `<start-quiz rating="4" votes="110" quiz_id="${element["content_id"]}" img_src="${element["pro_pic"]}" title="${element["title"]}" description=${element["description"]} author=${element["f_name"] + " " + element["l_name"]} author_title=${element["qulification_level"]}></start-quiz>`;
     document.querySelector(".cont-body-right").innerHTML = html_right;
 
     document.querySelector(".js-startquiz-start-btn").addEventListener('click', ()=>{
