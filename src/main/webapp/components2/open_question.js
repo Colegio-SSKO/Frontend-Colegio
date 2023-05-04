@@ -16,20 +16,7 @@ class Open_question extends HTMLElement {
                 <div class="open-question-chat">
                     <div class="open-question-msg open-question-incomMSG"><p>sada</p></div>
                 <br>
-                <div class="open-question-msg open-question-outgoingMSG"> <p>sdasd</p></div>
-                <br>
-
-                <div class="open-question-msg open-question-incomMSG"><p> sad<br></p></div>
-                <br>
-                <div class="open-question-msg open-question-outgoingMSG"> <p>asdasd</p></div>
-                <br>
-
-                <div class="open-question-msg open-question-incomMSG"><p> asd</p></div>
-                <br>
-
-
-
-        </div>
+            </div>
         <div class="open-question-msgBox">
             <form action="#">
                 <input id="js-quession-chat-input" type="text" name="message"  class="fnt fnt-mid fnt-bold" placeholder="Type your response" >
@@ -60,25 +47,25 @@ class Open_question extends HTMLElement {
 
         `;
 
-
-        let messageSendButton = document.querySelector("#js-quession-chat-send-btn");
-        let message = document.querySelector("#js-quession-chat-input");
-        let messageData = {};
-        messageSendButton.addEventListener('click', (event)=>{
-            alert("send btn ek wed")
-            event.preventDefault();
-            messageData = {
-                "config" : false,
-                "message" : message.value,
-                "receiver": author_ID,
-                "sender" : getUserID()
-            }
-            console.log(messageData)
-
-            questionCHat.send(JSON.stringify(messageData));
-            message.value = "";
-        })
-
+        //
+        // let messageSendButton = document.querySelector("#js-quession-chat-send-btn");
+        // let message = document.querySelector("#js-quession-chat-input");
+        // let messageData = {};
+        // messageSendButton.addEventListener('click', (event)=>{
+        //     alert("send btn ek wed")
+        //     event.preventDefault();
+        //     messageData = {
+        //         "config" : false,
+        //         "message" : message.value,
+        //         "receiver": author_ID,
+        //         "sender" : getUserID()
+        //     }
+        //     console.log(messageData)
+        //
+        //     questionCHat.send(JSON.stringify(messageData));
+        //     message.value = "";
+        // })
+        //
 
 
 

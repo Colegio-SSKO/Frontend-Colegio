@@ -201,6 +201,12 @@
     <script src="../components2/notification_msg3.js"></script>
     <script src="../components2/notification_msg5.js"></script>
     <script src="../components2/notification_msg6.js"></script>
+    <script src="../components2/chat_box.js"></script>
+    <script src="../components2/chat_list.js"></script>
+    <script src="../components2/chat_msg.js"></script>
+    <script src="../components2/chat_list_item.js"></script>
+    <script src="../components2/chat_new_full.js"></script>
+    <script src="../components2/chat.js"></script>
 
     <script src="../components2/forgotPassword.js"></script>
 
@@ -239,7 +245,6 @@
         <div class="cont-body">
 
 
-
         </div>
 
     </div>
@@ -255,6 +260,7 @@
 <div id="mainScript">
     <script src="index.js"></script>
 </div>
+<chat-last></chat-last>
 
 <%--handle back button--%>
 <script>
