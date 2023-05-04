@@ -25,21 +25,22 @@ async function initiateWebsocket(){
             };
 
             notificationWebSocket.onmessage = (event)=>{
-                alert("event.data2")
-                let notificationWrapper = document.querySelector('#js-notification-list-ui');
-                if (notificationWrapper){
-                    let newNotification = document.createElement('notification-message');
+                alert(event.data)
+                if (window.location.pathname == "/notification"){
+                    let newNotification = document.createElement('notification-message5');
                     newNotification.setAttribute("date", "2020-02-02")
                     newNotification.setAttribute("time","Now")
-                    newNotification.setAttribute("title", "this is the title")
-                    newNotification.setAttribute("sender", "mama thamai")
+                    newNotification.setAttribute("id", "1")
+                    newNotification.setAttribute("sender_name", "mama thamai")
                     newNotification.setAttribute("message", "this is the message")
-                    newNotification.setAttribute("id", "1");
-                    notificationWrapper.appendChild(newNotification)
+                    newNotification.setAttribute("img_src", "/img_src");
+                    document.querySelector('.cont-body-content').appendChild(newNotification)
                 }
                 else{
-                    // increaseNotificationCount();
+                    increaseNotificationCount();
                 }
+
+
             }
 
 
@@ -65,6 +66,7 @@ async function initiateWebsocket(){
             questionCHat.addEventListener('message', (event)=>{
                 receivedMessage = JSON.parse(event.data);
                 alert("message ek awoo")
+                alert(JSON.stringify(receivedMessage))
 
                 if (receivedMessage["receiver"] == getUserID()){
                     if (chatContainer){

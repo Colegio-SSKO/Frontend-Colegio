@@ -31,7 +31,7 @@ class Comment extends HTMLElement {
             
             <div class="comment-cmnt">
                 <div class="comment-comment-box">
-                    <img src="../static/img/components_images/pro.png" alt="">
+                    <img src="${getUserProfileImage()}" alt="">
                     <form>
                         <input id="js-quiz-comment-value" type="text" class="fnt-mid fnt fnt-bold" placeholder="Comment here...">
                         <button id="js-quiz-comment-send-btn" class="send-button"><span class="material-icons">send</span></button>
