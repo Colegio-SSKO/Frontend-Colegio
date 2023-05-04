@@ -1,9 +1,9 @@
-alert("new_organization10112");
+alert("new_organization1011325");
 
 
 async function fetchData(){
 
-    let res = await fetch("http://localhost:8090/api/users/vieworganization", {
+    let res = await fetch("http://localhost:8090/api/teachers/vieworganization/:"+getUserID(), {
         method : "GET",
         credentials : "include"
     }).then((response)=>
@@ -55,7 +55,7 @@ function renderSingle(){
                 let requestBody= {
                     "organization_id": organization_id
                 }
-                let url = "http://localhost:8090/api/teachers/teacher_send_req/:" + getUserID();
+                let url = "http://localhost:8090/api/teachers/teacher_send_req_org/:" + getUserID();
                 let res = await fetch(url, {
                     method : "POST",
                     body : JSON.stringify(requestBody),
@@ -69,28 +69,20 @@ function renderSingle(){
                 let popup = document.querySelector(".popup-content");
                 document.querySelector(".popup-container").style.display = "flex";
 
-                if(res.message==="You already send request"){
+                if(res.message==="Send request successfully"){
                     popup.innerHTML = `
-                      <img src="../static/img/components_images/error.jpg" alt="">
+                      <img src="../static/img/components_images/success.jpg" alt="">
                       <h2>${res.message}</h2>
-                      <button class="btn" id="ok-btn">OK</button>       
+                      <a href="/organization"><button class="btn is-a-route" id="ok-btn">OK</button></a>       
                 `;
                 }
                 else{
-                    if(res.message==="You already a teacher of this organization"){
-                        popup.innerHTML = `
-                          <img src="../static/img/components_images/error.jpg" alt="">
-                          <h2>${res.message}</h2>
-                          <button class="btn" id="ok-btn">OK</button>       
+                    popup.innerHTML = `
+                       <img src="../static/img/components_images/error.jpg" alt="">
+                       <h2>Error</h2>
+                       <a href="/organization"><button class="btn is-a-route" id="ok-btn">OK</button></a>       
                     `;
-                    }
-                    else {
-                        popup.innerHTML = `
-                            <img src="../static/img/components_images/success.jpg" alt="">
-                            <h2>${res.message}</h2>
-                            <button class="btn" id="ok-btn">OK</button>
-                        `;
-                    }
+
                 }
 
                 let ok_btn = document.getElementById("ok-btn");

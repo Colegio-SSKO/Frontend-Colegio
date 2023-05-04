@@ -4,6 +4,7 @@ class search_result extends HTMLElement {
         let name = this.attributes.name.value;
         let quli = this.attributes.quli.value;
         let teacher_id = this.attributes.teacher_id.value;
+        let status = this.attributes.status.value;
 
         this.innerHTML = `
             <div class="result-notification">
@@ -16,7 +17,7 @@ class search_result extends HTMLElement {
                 </div>
 
                 <div style="text-align: right" class="send_request">
-                    <button class="request-button" id="${teacher_id}">send</button>
+                    <button class="request-button" id="${teacher_id}" ${status === "1" ? "disabled" : ""}>send</button>
                 </div>
             </div>
         `;
@@ -37,7 +38,7 @@ class search_result extends HTMLElement {
                     "teacher_id": teacher_id
                 }
                 alert(teacher_id);
-                let url = "http://localhost:8090/api/organizations/org_send_request/:" + getOrgID();
+                let url = "http://localhost:8090/api/organizations/org_send_request/:" + getUserID();
                 let res = await fetch(url, {method : "POST",  body : JSON.stringify(requestBody)}).then((response)=>
                     response.json()
 

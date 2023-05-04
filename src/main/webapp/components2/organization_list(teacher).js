@@ -10,7 +10,7 @@ class OrganizationListteacher extends HTMLElement {
         let htmlcontent = "";
 
         for (let i of data) {
-            htmlcontent += `<organization-cardteacher img_src="${i["img_src"]}" name="${i["name"]}" address="${i["address"]}" organization_id="${i["organization_id"]}"></organization-cardteacher>
+            htmlcontent += `<organization-cardteacher img_src="${i["img_src"]}" name="${i["name"]}" address="${i["address"]}" organization_id="${i["organization_id"]}" status="${i["value"]}"></organization-cardteacher>
             `;
         }
 

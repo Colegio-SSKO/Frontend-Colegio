@@ -5,6 +5,7 @@ class Organization_cardteacher extends HTMLElement {
         let name = this.attributes.name.value;
         let address = this.attributes.address.value;
         let organization_id = this.attributes.organization_id.value;
+        let status = this.attributes.status.value;
         this.innerHTML = `
         <div class="teacher-card-wrap">
 
@@ -18,7 +19,7 @@ class Organization_cardteacher extends HTMLElement {
             <h5 class="fnt fnt-bold fnt-mid">${address}</h5>
         </div><br><br>
         
-        <h3 class="teacher_send_request fnt-mid fnt-light" id="${organization_id}">Send Request>></h3>
+        <h3 class="teacher_send_request fnt-mid fnt-light" id="${organization_id}">${status== 1 ? '' : 'Send Request>>'}</h3>
 
         </div>
         `;
