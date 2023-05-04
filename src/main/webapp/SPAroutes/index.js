@@ -279,7 +279,7 @@ const studentRoutes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/Create_quiz_left.jsp",
         path_right: "/views/Create_quiz_right.jsp",
-        script: "../static/viewsJS/Student_continue_course.js",
+        script: "../static/viewsJS/Student_continue_course1.js",
         title: "Follow Course",
         data : "This is the follow course page"
     },
@@ -385,7 +385,7 @@ const teacherRoutes =  {
         template : "/SPAroutesTeacher/index_double.jsp",
         path_left:"/views/Question_student_1_left.jsp",
         path_right: "/views/Question_student_1_right.jsp",
-        script: "../static/viewsJS/teacher_answer_questions.js",
+        script: "../static/viewsJS/teacher_answer_questions1.js",
         title: "Answer Question",
         data : "This is the Question page"
     },
@@ -617,7 +617,7 @@ const teacherRoutes =  {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/Create_quiz_left.jsp",
         path_right: "/views/Create_quiz_right.jsp",
-        script: "../static/viewsJS/Student_continue_course.js",
+        script: "../static/viewsJS/Student_continue_course1.js",
         title: "Follow Course",
         data : "This is the follow course page"
     },

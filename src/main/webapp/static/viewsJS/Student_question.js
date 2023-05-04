@@ -31,7 +31,7 @@ function renderRight(data, type) {
     alert(data["status"])
     if (type== 1){
         alert("kabmmm")
-        html_right = ` <open-question img_src="${data["pro_pic"]}" qulifi="${data["qulification_level"]}" title="${data["question_title"]}"  author="${data["f_name"]+" "+ data["l_name"]}" description="${data["question_description"]}" author_ID="${data["question.accept_teacher_id"]}""></open-question>`;
+        html_right = ` <open-question questionId="${data["question.question_id"]}" img_src="${data["pro_pic"]}" qulifi="${data["qulification_level"]}" title="${data["question_title"]}"  author="${data["f_name"]+" "+ data["l_name"]}" description="${data["question_description"]}" author_ID="${data["teacher.user_ID"]}""></open-question>`;
     }
     else {
         alert("asd")
@@ -54,13 +54,14 @@ function renderLeft() {
 
     fetchData().then((data)=>{
 
+        console.log(data)
         let html_left = "";
 
         html_left += "" +
-            "<button class=\"btn btn-solid btn-small\"><a class=\"fnt fnt-bold fnt-mid\" href=\"\">All</a></button>\n" +
-            "<button class=\"btn btn-outlined btn-small\"><a class=\"fnt fnt-bold fnt-mid\" href=\"\">Continuing</a></button>\n" +
-            "<button class=\"btn btn-outlined btn-small\"><a class=\"fnt fnt-bold fnt-mid\" href=\"\">Completed</a></button><br><br>\n" +
-            "<a href='/publish_question'><button class=\"btn btn-outlined btn-small is-a-route\">Publish question</button></a>\n" +
+            "<a  href=\"\"><button class=\"btn btn-solid is-a-route btn-a btn-small fnt fnt-bold fnt-mid\">All</button></a>\n" +
+            "<a  href=\"\"><button class=\"btn btn-outlined is-a-route btn-a btn-solid fnt fnt-bold fnt-mid\">Continuing</button></a>\n" +
+            "<a  href=\"\"><button class=\"btn btn-outlined is-a-route btn-a btn-solid fnt fnt-bold fnt-mid\">Completed</button></a><br>\n" +
+            "<a href='/publish_question'><button class=\"btn btn-outlined btn-solid btn-a fnt-mid fnt fnt-bold is-a-route\">Publish question</button></a>\n" +
             "";
 
         for (let i of data){

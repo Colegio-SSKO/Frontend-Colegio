@@ -1,20 +1,18 @@
-alert("view_course_media121");
+alert("view_course_media131");
 
 async function fetchData(){
 
     alert(temporary_data)
     alert("sew");
-//uncomment this when connecting the database
     let url = "http://localhost:8090/api/users/continue_course/:"+ temporary_data;
     let res = await fetch(url, {
         method: "GET",
         credentials : "include"
     }).then((response) =>
-        response.text()
+        response.json()
     );
-    alert(res);
-    let data2 = JSON.parse(res);
-    return data2;
+    alert(JSON.stringify(res));
+    return res;
 };
 
 //function to render right content
@@ -45,7 +43,7 @@ function renderLeft() {
 
 
 
-        alert(data);
+        alert(JSON.stringify(data));
         for (let i of data){
             html_left += `<description-head heading="${i["meida_title"]}" content="${i["media_description"]}" course_media_id="${i["course_media_id"]}"></description-head>`;
         }

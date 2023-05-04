@@ -13,6 +13,8 @@ async function fetchData(){
 
     );
 
+    alert(JSON.stringify(res))
+
     return res
 };
 
@@ -24,7 +26,7 @@ function renderRight(data) {
     let html_right = "";
 
     html_right += `
-    <open-course author_pic = "${data["pro_pic"]}" img_src="${data["introduction_media"]}" title="${data["course_title"]}" description="${data["decription"]}" author="${data["f_name"] + " " +data["l_name"]}" author_title="${data["qulification_level"]}" course_id="${data["course_id"]}" content_id="${data["content_id"]}" rates_count="${data["rate_count"]}"></open-course>`;
+    <open-course author_pic = "${data["pro_pic"]}" img_src="${data["image"]}" title="${data["title"]}" description="${data["description"]}" author="${data["f_name"] + " " +data["l_name"]}" author_title="${data["qulification_level"]}" course_id="${data["course_id"]}" content_id="${data["content_id"]}" rates_count="${data["rate_count"]}"></open-course>`;
     document.querySelector(".cont-body-right").innerHTML = html_right;
 
 

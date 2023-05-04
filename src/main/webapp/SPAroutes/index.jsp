@@ -202,6 +202,24 @@
     <script src="../components2/notification_msg5.js"></script>
     <script src="../components2/notification_msg6.js"></script>
 
+    <script src="../components2/organization_list(teacher).js"></script>
+    <script src="../components2/organization_card(teacher).js"></script>
+    <script src="../components2/invite_teacher.js"></script>
+    <script src="../components2/teacher_cardOrg.js"></script>
+    <script src="../components2/teacher_listOrg.js"></script>
+    <script src="../components2/search_result.js"></script>
+    <script src="../components2/search_resultlist.js"></script>
+    <script src="../components2/edit_profile(Org).js"></script>
+    <script src="../components2/notification_msg.js"></script>
+    <script src="../components2/notification_msg1.js"></script>
+    <script src="../components2/notification_msg3.js"></script>
+    <script src="../components2/notification_msg5.js"></script>
+    <script src="../components2/notification_msg6.js"></script>
+    <script src="../components2/ad_section.js"></script>
+    <script src="../components2/ad_list.js"></script>
+    <script src="../components2/organization_profile_card_adpublish(stu).js"></script>
+    <script src="../components2/ad_publish_form.js"></script>
+
     <script src="../components2/forgotPassword.js"></script>
 
 
