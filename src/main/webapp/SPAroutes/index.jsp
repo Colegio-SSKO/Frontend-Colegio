@@ -196,6 +196,11 @@
     <script src="../components2/ad_list.js"></script>
     <script src="../components2/organization_profile_card_adpublish(stu).js"></script>
     <script src="../components2/ad_publish_form.js"></script>
+    <script src="../components2/notification_msg.js"></script>
+    <script src="../components2/notification_msg1.js"></script>
+    <script src="../components2/notification_msg3.js"></script>
+    <script src="../components2/notification_msg5.js"></script>
+    <script src="../components2/notification_msg6.js"></script>
 
     <script src="../components2/forgotPassword.js"></script>
 

@@ -1,4 +1,4 @@
-alert("org_teachers(Org1)123");
+alert("org_teachers(Org1)12345");
 
 async function fetchData(){
     const req = {
@@ -92,7 +92,7 @@ function renderSingle(){
                     popup.innerHTML = `
                         <img src="../static/img/components_images/success.jpg" alt="">
                         <h2>${res.message}</h2>
-                        <button btn btn-primary><a href="/organization_Teachers">OK</a></button>
+                        <button btn btn-primary><a href="myorganization_Teachers">OK</a></button>
 
                 `;
                 }
@@ -100,7 +100,7 @@ function renderSingle(){
                     popup.innerHTML = `
                         <img src="../static/img/components_images/error.jpg" alt="">
                         <h2>${res.message}</h2>
-                        <button btn btn-primary><a href="/organization_Teachers">OK</a></button>
+                        <button btn btn-primary><a href="myorganization_Teachers">OK</a></button>
 
                 `;
                 }
