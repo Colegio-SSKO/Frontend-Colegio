@@ -192,6 +192,11 @@
     <script src="../components2/search_result.js"></script>
     <script src="../components2/search_resultlist.js"></script>
     <script src="../components2/edit_profile(Org).js"></script>
+    <script src="../components2/notification_msg.js"></script>
+    <script src="../components2/notification_msg1.js"></script>
+    <script src="../components2/notification_msg3.js"></script>
+    <script src="../components2/notification_msg5.js"></script>
+    <script src="../components2/notification_msg6.js"></script>
 
     <script src="../components2/forgotPassword.js"></script>
 

@@ -51,7 +51,7 @@ const studentRoutes = {
         isSingle : false,
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/Home_content.jsp",
-        script: "../static/viewsJS/small_card_open_new1.js",
+        script: "../static/viewsJS/small_card_open_new.js",
         title: "small card open",
         data : "This is the home page"
     },
@@ -463,7 +463,7 @@ const teacherRoutes =  {
         template : "/SPAroutesTeacher/index_single.jsp",
         path_left:"/views/Notification.jsp",
         path_right: "",
-        script: "../static/viewsJS/notifications.js",
+        script: "../static/viewsJS/notification_view.js",
         title: "Notification",
         data : "This is the notification page"
     },
@@ -472,7 +472,7 @@ const teacherRoutes =  {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Organization_view.jsp",
-        script: "../static/viewsJS/organization_view(teacher)1.js",
+        script: "../static/viewsJS/organization_view(teacher).js",
         path_right: "",
         title: "Organization",
         data : "This is the notification page"
@@ -570,7 +570,7 @@ const teacherRoutes =  {
         isSingle : false,
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/Home_content.jsp",
-        script: "../static/viewsJS/small_card_open_new1.js",
+        script: "../static/viewsJS/small_card_open_new.js",
         title: "small card open",
         data : "This is the home page"
     },
@@ -726,7 +726,7 @@ const organizationRoutes = {
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Notification.jsp",
         path_right: "",
-        script: "../static/viewsJS/view_org_teacher_noti.js",
+        script: "../static/viewsJS/notification_view.js",
         title: "Notification",
         data : "This is the notification page"
     },
@@ -806,9 +806,9 @@ const organizationRoutes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Organization_profile(stu).jsp",
-        script: "../static/viewsJS/teacherlist_view(org)1.js",
+        script: "../static/viewsJS/teacherlist_view(org).js",
         path_right: "",
-        title: "Invite Teacher",
+        title: "Teachers",
         data : "This is the notification page"
     },
 
