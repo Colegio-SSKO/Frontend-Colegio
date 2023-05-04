@@ -157,14 +157,13 @@
     <script src="../components2/search_main_results.js"></script>
     <script src="../components2/open_course_video_play.js"></script>
     <script src="../components2/small_card_open_com.js"></script>
-    <script src="../components2/search_result.js"></script>
+
     <script src="../components2/search_quiz_open.js"></script>
     <script src="../components2/search_main_teacher.js"></script>
     <script src="../components2/search_main_organization.js"></script>
     <script src="../components2/signin1.js"></script>
     <script src="../components2/signin.js"></script>
     <script src="../components2/signup.js"></script>
-    <script src="../components2/notification_msg.js"></script>
     <script src="../components2/profile_upgrade_form.js"></script>
     <script src="../components2/follow_course.js"></script>
     <script src="../components2/teacher_published_course_quiz_card.js"></script>
@@ -184,41 +183,34 @@
     <script src="../components2/edit_profileTeacher.js"></script>
     <script src="../components2/upgrade_form_org.js"></script>
     <script src="../components2/question_form.js"></script>
-    <script src="../components2/organization_list(teacher).js"></script>
-    <script src="../components2/organization_card(teacher).js"></script>
+
     <script src="../components2/invite_teacher.js"></script>
-    <script src="../components2/teacher_cardOrg.js"></script>
     <script src="../components2/teacher_listOrg.js"></script>
-    <script src="../components2/search_result.js"></script>
-    <script src="../components2/search_resultlist.js"></script>
-    <script src="../components2/edit_profile(Org).js"></script>
+
+
     <script src="../components2/ad_section.js"></script>
     <script src="../components2/ad_list.js"></script>
     <script src="../components2/organization_profile_card_adpublish(stu).js"></script>
     <script src="../components2/ad_publish_form.js"></script>
     <script src="../components2/notification_msg.js"></script>
+
+
+
+
+
+    <script src="../components2/organization_list(teacher).js"></script>
+    <script src="../components2/organization_card(teacher).js"></script>
+    <script src="../components2/teacher_cardOrg.js"></script>
+    <script src="../components2/search_result.js"></script>
+    <script src="../components2/search_resultlist.js"></script>
+    <script src="../components2/edit_profile(Org).js"></script>
     <script src="../components2/notification_msg1.js"></script>
     <script src="../components2/notification_msg3.js"></script>
     <script src="../components2/notification_msg5.js"></script>
     <script src="../components2/notification_msg6.js"></script>
 
-    <script src="../components2/organization_list(teacher).js"></script>
-    <script src="../components2/organization_card(teacher).js"></script>
-    <script src="../components2/invite_teacher.js"></script>
-    <script src="../components2/teacher_cardOrg.js"></script>
-    <script src="../components2/teacher_listOrg.js"></script>
-    <script src="../components2/search_result.js"></script>
-    <script src="../components2/search_resultlist.js"></script>
-    <script src="../components2/edit_profile(Org).js"></script>
-    <script src="../components2/notification_msg.js"></script>
-    <script src="../components2/notification_msg1.js"></script>
-    <script src="../components2/notification_msg3.js"></script>
-    <script src="../components2/notification_msg5.js"></script>
-    <script src="../components2/notification_msg6.js"></script>
-    <script src="../components2/ad_section.js"></script>
-    <script src="../components2/ad_list.js"></script>
-    <script src="../components2/organization_profile_card_adpublish(stu).js"></script>
-    <script src="../components2/ad_publish_form.js"></script>
+
+
 
     <script src="../components2/forgotPassword.js"></script>
 

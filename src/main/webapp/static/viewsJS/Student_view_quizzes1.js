@@ -1,4 +1,4 @@
-alert("www");
+alert("www1");
 
 //element selectors
 if (typeof previous === 'undefined') {
@@ -209,7 +209,7 @@ function renderLeft() {
     fetchData().then((data)=>{
 
         let html_left = "";
-        alert(data);
+        alert(JSON.stringify(data));
         console.log(data)
         html_left += "" +
             "<a  href=\"\"><button class=\"fnt fnt-bold fnt-mid btn btn-solid btn-a btn-small is-a-route\">All</button></a>\n" +
@@ -220,7 +220,7 @@ function renderLeft() {
 
 
         for (let i of data){
-            html_left += ` <listed-content content_ID="${i["content_id"]}" img_src="${i["image"]}" title="${i["quiz_title"]}" author="${i["f_name"] + " " +i["l_name"]}" description="${i["description"]}" rates="${i["rate_count"]}" ></listed-content>`;
+            html_left += ` <listed-content content_ID="${i["content_id"]}" img_src="${i["image"]}" title="${i["title"]}" author="${i["f_name"] + " " +i["l_name"]}" description="${i["description"]}" rates="${i["rate_count"]}" ></listed-content>`;
         }
 
         document.querySelector(".cont-body-left").innerHTML = html_left;
