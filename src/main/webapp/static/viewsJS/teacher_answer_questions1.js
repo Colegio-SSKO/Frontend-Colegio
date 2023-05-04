@@ -1,20 +1,22 @@
-alert("Heiya");
+alert("Heiya24");
 
 async function fetchData() {
-    const req = {
-        "user_ID" : "23"
-    }
 
-//uncomment this when connecting the database
 
-    let res = await fetch("http://localhost:8080/api/users/answer_questions/:"+getUserID(), {
+    alert("api call wenw 5")
+    let res = await fetch("http://localhost:8090/api/teachers/answer_questions/", {
         method : "GET",
         credentials : "include"
-    }).then((response)=>
-        response.json()
+    }).then((response)=>{
+        alert("athule wed")
+            alert(JSON.stringify(response));
+            return response.json()
+    }
+
 
     );
 
+    alert(JSON.stringify(res))
     return res
 };
 
@@ -29,7 +31,7 @@ function renderRight(data, type) {
 
     if (type== 1){
         alert("kabmmm")
-        html_right = ` <open-question img_src="${data["pro_pic"]}" qulifi="${data["qulification_level"]}" title="${data["question_title"]}"  author="${data["f_name"]+" "+ data["l_name"]}" description="${data["question_description"]}" author_ID="${data["question.accept_teacher_id"]}""></open-question>`;
+        html_right = ` <open-question img_src="${data["pro_pic"]}" qulifi="${data["qulification_level"]}" title="${data["question_title"]}"  author="${data["f_name"]+" "+ data["l_name"]}" description="${data["question_description"]}" author_ID="${data["question.user_id"]}" questionId="${data["question.question_id"]}""></open-question>`;
     }
     else {
         alert("asd")

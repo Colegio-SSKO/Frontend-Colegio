@@ -1,4 +1,4 @@
-alert("adaddad123");
+alert("adaddad125");
 
 async function fetchData() {
     const req = {
@@ -30,7 +30,7 @@ function renderRight(data, type) {
     alert(data["status"])
     if (type== 1){
         alert("kabmmm")
-        html_right = ` <open-question img_src="${data["pro_pic"]}" qulifi="${data["qulification_level"]}" title="${data["question_title"]}"  author="${data["f_name"]+" "+ data["l_name"]}" description="${data["question_description"]}" author_ID="${data["question.accept_teacher_id"]}""></open-question>`;
+        html_right = ` <open-question questionId="${data["question.question_id"]}" img_src="${data["pro_pic"]}" qulifi="${data["qulification_level"]}" title="${data["question_title"]}"  author="${data["f_name"]+" "+ data["l_name"]}" description="${data["question_description"]}" author_ID="${data["teacher.user_ID"]}""></open-question>`;
     }
     else {
         alert("asd")
@@ -53,6 +53,7 @@ function renderLeft() {
 
     fetchData().then((data)=>{
 
+        console.log(data)
         let html_left = "";
 
         html_left += "" +
@@ -65,9 +66,9 @@ function renderLeft() {
         for (let i of data){
 
 
-            if (i["status"]== 0){ /**/
+            if (i["status"]== 1){ /**/
                 html_left += ` <q-1 question_ID="${i["question.question_id"]}" img_src="${i["question_img"]}" title="${i["question_title"]}" accept="${i["f_name"]+" "+ i["l_name"]}" description="${i["question_description"]}""></q-1>`;
-            }else if (i["status"]== 1){
+            }else if (i["status"]== 2){
                 html_left += ` <q-2 question_ID="${i["question.question_id"]}" img_src="${i["question_img"]}" title="${i["question_title"]}" accept="${i["f_name"]+" "+ i["l_name"]}" description="${i["question_description"]}""></q-2>`;
             }
             else {

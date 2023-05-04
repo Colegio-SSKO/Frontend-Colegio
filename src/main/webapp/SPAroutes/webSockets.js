@@ -10,10 +10,6 @@ async function initiateWebsocket(){
                     return response.json()
                 })
 
-            //
-            // console.log("mekth wed");
-            // console.log(jwtToken["token"]);
-            // console.log("wed");
 
             //notifications handling
             notificationWebSocket = new WebSocket('ws://localhost:8090/notificationHandler');
@@ -58,6 +54,7 @@ async function initiateWebsocket(){
                     "token" : jwtToken["token"]
                 };
                 questionCHat.send(JSON.stringify(message));
+                alert("question chat opned");
             }
 
             notificationWebSocket.onerror = (error) => {
@@ -67,6 +64,7 @@ async function initiateWebsocket(){
 
             questionCHat.addEventListener('message', (event)=>{
                 receivedMessage = JSON.parse(event.data);
+                alert("message ek awoo")
 
                 if (receivedMessage["receiver"] == getUserID()){
                     if (chatContainer){
