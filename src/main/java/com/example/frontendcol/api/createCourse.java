@@ -70,33 +70,35 @@ public class createCourse extends HttpServlet {
                     videoPaths.add(handleVideo(file, request, randomNumber));
                 }
 
-                if (thumbnailPath.equals("")){
-                    System.out.println("Thumbnail not saved");
-                }
-                else if(videoPaths.size()==0){
-                    System.out.println("videos not saved");
-                }
-                else {
-
-
-                    jsonObject.put("thumbnail", thumbnailPath);
-
-                    JSONArray jsonArray = new JSONArray();
-                    videoPaths.forEach(path->{
-                        JSONObject videoPath = new JSONObject();
-                        videoPath.put("path", path);
-                        jsonArray.put(videoPath);
-                    });
-                    jsonObject.put("videos" , jsonArray);
-                    System.out.println("files saved");
-                    jsonObject.put("isError", false);
-                    PrintWriter out = response.getWriter();
-                    out.println(jsonObject);
-
-                }
 
 
             }
+
+            if (thumbnailPath.equals("")){
+                System.out.println("Thumbnail not saved");
+            }
+            else if(videoPaths.size()==0){
+                System.out.println("videos not saved");
+            }
+            else {
+
+
+                jsonObject.put("thumbnail", thumbnailPath);
+
+                JSONArray jsonArray = new JSONArray();
+                videoPaths.forEach(path->{
+                    JSONObject videoPath = new JSONObject();
+                    videoPath.put("path", path);
+                    jsonArray.put(videoPath);
+                });
+                jsonObject.put("videos" , jsonArray);
+                System.out.println("files saved");
+                jsonObject.put("isError", false);
+                PrintWriter out = response.getWriter();
+                out.println(jsonObject);
+
+            }
+
 
         }catch (Exception exception){
             System.out.println(exception);
