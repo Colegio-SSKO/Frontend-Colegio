@@ -22,19 +22,23 @@ async function fetchData() {
 
 
 
-function renderRight(data, type) {
+function renderRight(data2,data, type) {
 
     alert("render right awa");
 
     let html_right = "";
 
     if (type== 0){
-        for (let i of data){
+
+        html_right += `<pop-up></pop-up> <small-cardright  title="${data["title"]}" purchase_count="${data["purchase_count"]}" description="${data["description"]}" author="${data["f_name"]} ${data["l_name"]}" price="${data["price"]}" date="${data["date"]}" content_id="${data["content_id"]}" rate_count="${data["rate_count"]}" ></small-cardright>`;
+
+        for (let i of data2){
             html_right += `<description-head heading="${i["meida_title"]}" content="${i["media_description"]}" course_media_id="${i["course_media_id"]}"></description-head>`;
         }
     }
     else {
-        html_right+= `<div class="fnt fnt-bold fnt-large">Meka Quizz ekk</div>`
+        html_right += `<pop-up></pop-up> <small-cardquiz  time="${data["quiz_time_duration"]}" q_number="${data["quiz_q_Number"]}" title="${data["title"]}"  purchase_count="${data["purchase_count"]}" description="${data["description"]}" author="${data["f_name"]} ${data["l_name"]}" price="${data["price"]}" date="${data["date"]}" content_id="${data["content_id"]}" rate_count="${data["rate_count"]}" ></small-cardquiz>`;
+
 
     }
     document.querySelector(".cont-body-right").innerHTML = html_right;
@@ -52,19 +56,19 @@ function renderLeft() {
 
     fetchData().then(async (data) => {
 
-        const res3 = await fetch("http://localhost:8090/api/users/small_card_open_comment/:" + temporary_data, {method: "GET", credentials:"include"}).then((response) => response.text());
         alert("re3 wlata passe wada");
 
-        let html_left = `<pop-up></pop-up> <small-cardopen img_src="${data["image"]}" title="${data["title"]}" description="${data["description"]}" author="${data["f_name"]} ${data["l_name"]}" price="${data["price"]}" date="${data["date"]}" content_id="${data["content_id"]}" rate_count="${data["rate_count"]}" ></small-cardopen><comment-list dataString="${encodeURIComponent(res3)}"> </comment-list>`;
+        let html_left = `<pop-up></pop-up> <small-cardopen img_src="${data["image"]}" purchase_count="${data["purchase_count"]}" title="${data["title"]}" description="${data["description"]}" author="${data["f_name"]} ${data["l_name"]}" price="${data["price"]}" date="${data["date"]}" content_id="${data["content_id"]}" rate_count="${data["rate_count"]}" ></small-cardopen>`;
 
         document.querySelector(".cont-body-left").innerHTML = html_left;
 
         if (data["content.type"]==0){
             const res4 = await fetch("http://localhost:8090/api/users/get_content_media/:" + temporary_data, {method: "GET", credentials:"include"}).then((response) => response.json());
-            renderRight(res4,0);
+            renderRight(res4,data,0);
         }
         else{
-            renderRight(0,1);
+            const res5 = await fetch("http://localhost:8090/api/users/get_content_media_quiz/:" + temporary_data, {method: "GET", credentials:"include"}).then((response) => response.json());
+            renderRight(res5,data,1);
         }
 
 
