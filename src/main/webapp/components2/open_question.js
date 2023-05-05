@@ -7,7 +7,6 @@ class Open_question extends HTMLElement {
         let title= this.attributes.title.value;
         let description= this.attributes.description.value;
         let author = this.attributes.author.value;
-        let questionId = this.attributes.questionId.value;
         // let authour_ID =
         this.innerHTML = `
         <div class="open-question-wrap">
@@ -17,20 +16,7 @@ class Open_question extends HTMLElement {
                 <div class="open-question-chat">
                     <div class="open-question-msg open-question-incomMSG"><p>sada</p></div>
                 <br>
-                <div class="open-question-msg open-question-outgoingMSG"> <p>sdasd</p></div>
-                <br>
-
-                <div class="open-question-msg open-question-incomMSG"><p> sad<br></p></div>
-                <br>
-                <div class="open-question-msg open-question-outgoingMSG"> <p>asdasd</p></div>
-                <br>
-
-                <div class="open-question-msg open-question-incomMSG"><p> asd</p></div>
-                <br>
-
-
-
-        </div>
+            </div>
         <div class="open-question-msgBox">
             <form action="#">
                 <input id="js-quession-chat-input" type="text" name="message"  class="fnt fnt-mid fnt-bold" placeholder="Type your response" >

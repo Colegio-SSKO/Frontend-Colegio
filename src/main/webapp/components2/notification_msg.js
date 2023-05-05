@@ -13,15 +13,13 @@ class notification_msg extends HTMLElement {
                 <div class="notification" id="${id}">
                     <div class="noti-prof-img">
                         <img src="${img_src}" alt="">
+                        ${message}
                     </div>
 
-                    <div class="notification-header">
+                     <div class="notification-header">
                         <span class="notification-date">${date}</span>
                         <span class="notification-time">${time}</span>
                     </div>
-                  <div class="notification-message">
-                    ${message}
-                  </div>
                 </div>
             </div>
         `;

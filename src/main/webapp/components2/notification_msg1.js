@@ -12,20 +12,19 @@ class noti_1msg extends HTMLElement {
             <div class="notifications-container">
         <div class="notification" >
             <div class="noti-prof-img">
-                <img src="${img_src}" alt="">
+                <img src="${img_src}" alt="">${message}
             </div>
+            
+                <div class="notification buttons">
+                    <div class="accept btn btn-outlined btn-small" id="${notification_id}">Accept</div>
+                    <div class="delete btn btn-outlined btn-small" id="${notification_id}">Delete</div>
+                </div> 
             
             <div class="notification-header">
                 <span class="notification-date">${date}</span>
                 <span class="notification-time">${time}</span>
             </div>
-          <div class="notification-message">
-                ${message}<br>
-                <div class="notification buttons">
-                    <div class="accept btn btn-outlined btn-small" id="${notification_id}">Accept</div>
-                    <div class="delete btn btn-outlined btn-small" id="${notification_id}">Delete</div>
-                </div> 
-          </div>
+
         </div>
       </div>
         `;

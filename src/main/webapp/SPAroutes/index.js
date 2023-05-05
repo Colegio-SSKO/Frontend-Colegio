@@ -995,7 +995,7 @@ const handleAuthRoutes = async (location) => {
         alert(pageContent);
     }
     else if (location.includes("signup")){
-        // pageContent = <sign-up></sign-up>
+        pageContent = `<sign-up></sign-up>`;
     }
     else if(location.includes("forgotPassword")) {
         pageContent = `<forgot-password></forgot-password>`;

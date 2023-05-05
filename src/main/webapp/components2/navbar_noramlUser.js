@@ -15,7 +15,7 @@ class navbar_normaluser extends HTMLElement {
                     </div>
                     <div class="normal-user-main-profile router main-profile normal-user-navbar-right">
                      <a href="/auth/signin"><button class="normal-user-is-a-route is-a-route fnt-mid fnt fnt-bold">Sign In</button></a>
-                     <a href=""><button class="normal-user-is-a-route is-a-route fnt-mid fnt fnt-bold">Sign Up</button></a>
+                     <a href="/auth/signup"><button class="normal-user-is-a-route is-a-route fnt-mid fnt fnt-bold">Sign Up</button></a>
                     </div>
               </nav>
         `;
