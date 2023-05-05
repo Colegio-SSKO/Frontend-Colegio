@@ -1,26 +1,37 @@
 package com.example.frontendcol.api;
 
+import jakarta.json.JsonArray;
+import jakarta.json.JsonObject;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
 import java.io.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import java.util.Random;
+import org.json.JSONObject;
+import org.json.JSONArray;
 
-@WebServlet(name = "upgradeToteacher", value = "/api/upgradeToteacher")
+@WebServlet(name = "upgradeToteacher", value = "/api/upgradeToteacher/*")
 @MultipartConfig(
         fileSizeThreshold = 1024 * 1024 * 20, // 20MB
         maxFileSize = 1024 * 1024 * 100000, // 100000MB
         maxRequestSize = 1024 * 1024 * 5000000 // 5000000MB
 )
-
 public class upgradeToteacher extends HttpServlet {
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+    }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println("post ek weda");
 
         //generating a random number to add to the file name
         Integer min = 1;
@@ -29,38 +40,65 @@ public class upgradeToteacher extends HttpServlet {
         Random random = new Random();
         Integer randomNumber  = random.nextInt((max-min) + 1) + min;
 
+
+
         Collection<Part> files = request.getParts();
 
         String contentType = "";
+
         String thumbnailPath = "";
+//        List<String> videoPaths = new ArrayList<>();
+        System.out.println("create course eke inne");
+
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("isError", true);
 
         try {
             for (Part file : files) {
                 contentType = file.getContentType();
 
                 //handle thumbnail
-                System.out.println(contentType);
+                if(contentType ==null){
+                    System.out.println("invalid file type");
+                }
 
-                if (contentType.startsWith("image/")){
+                else if (contentType.startsWith("image/")){
                     thumbnailPath = handleThumbnail(file, request, randomNumber);
-                    System.out.println("mekata awa");
+                    System.out.println(thumbnailPath);
+                }
+
+                if (thumbnailPath.equals("")){
+                    System.out.println("Thumbnail not saved");
+                }
+
+                else {
+
+
+                    jsonObject.put("thumbnail", thumbnailPath);
+                    System.out.println("meka wada");
+
+                    jsonObject.put("isError", false);
+                    PrintWriter out = response.getWriter();
+                    out.println(jsonObject);
+
                 }
             }
-        } catch (Exception exception) {
+
+        }catch (Exception exception){
             System.out.println(exception);
         }
 
-        // return thumbnail path
-        response.setContentType("text/plain");
-        response.setCharacterEncoding("UTF-8");
-        response.getWriter().write(thumbnailPath);
     }
 
-    public static String handleThumbnail(Part thumbnail, HttpServletRequest request, Integer randomNumber) throws IOException {
+
+
+
+    public static String handleThumbnail(Part thumbnail, HttpServletRequest request, Integer randomNumber) throws IOException{
         //user id ek session eken gnna dnt hardcode krnw
         Integer userID = 1123;
-        String thumbnailFilename = "tbn" + userID + randomNumber +thumbnail.getSubmittedFileName();
+        String thumbnailFilename = "mge" + userID + randomNumber +thumbnail.getSubmittedFileName();
         thumbnailFilename = thumbnailFilename.replace(" ", "");
+
 
         ServletContext context = request.getServletContext();
         String relativePath = "";
@@ -81,5 +119,10 @@ public class upgradeToteacher extends HttpServlet {
         System.out.println("no error for thumbnail");
 
         return saveFilePath;
+
     }
+
+
+
+
 }
