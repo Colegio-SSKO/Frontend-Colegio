@@ -6,8 +6,7 @@ class Chat_msg extends HTMLElement {
 
         this.innerHTML = `
 
-                <div class="open-question-chat">
-                    <div class="open-question-msg ${type}"><p>${msg}</p></div>
+                    <div class="open-question-msg ${type}"><p>${msg}</p>
                 <br>
 
         `;

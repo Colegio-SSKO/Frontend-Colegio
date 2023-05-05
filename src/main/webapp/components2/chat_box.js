@@ -1,5 +1,6 @@
 class Chat_box extends HTMLElement {
     connectedCallback() {
+        let chatid = this.attributes.chatid.value;
 
        let data = [
             {
@@ -35,12 +36,12 @@ class Chat_box extends HTMLElement {
         let htmlcontent = "";
 
         for (let i of data) {
-            htmlcontent += `<chat-msg type="${i["type"]}" msg="${i["msg"]}"></chat-msg>
+            htmlcontent += `<chat-msg type="${i["type"]}" msg="${i["msg"]}" chatid="${chatid}"></chat-msg>
             `;
         }
 
         this.innerHTML = `
-         <div class="open-question-chat fadeInanimation">
+         <div id="open-question-chat${chatid}" class="open-question-chat fadeInanimation">
             
                  `+ htmlcontent +`
         
