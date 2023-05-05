@@ -49,10 +49,10 @@ function renderRight(data, type) {
 
 
 //rendering the left content
-function renderLeft() {
+async function renderLeft() {
 
 
-    fetchData().then((data)=>{
+    fetchData().then((data) => {
 
         console.log(data)
         let html_left = "";
@@ -64,16 +64,15 @@ function renderLeft() {
             "<a href='/publish_question'><button class=\"btn btn-outlined btn-solid btn-a fnt-mid fnt fnt-bold is-a-route\">Publish question</button></a>\n" +
             "";
 
-        for (let i of data){
+        for (let i of data) {
 
 
-            if (i["status"]== 1){ /**/
-                html_left += ` <q-1 question_ID="${i["question.question_id"]}" img_src="${i["question_img"]}" title="${i["question_title"]}" accept="${i["f_name"]+" "+ i["l_name"]}" description="${i["question_description"]}""></q-1>`;
-            }else if (i["status"]== 2){
-                html_left += ` <q-2 question_ID="${i["question.question_id"]}" img_src="${i["question_img"]}" title="${i["question_title"]}" accept="${i["f_name"]+" "+ i["l_name"]}" description="${i["question_description"]}""></q-2>`;
-            }
-            else {
-                html_left += ` <q-4 question_ID="${i["question.question_id"]}" img_src="${i["question_img"]}" title="${i["question_title"]}" accept="${i["f_name"]+" "+ i["l_name"]}" description="${i["question_description"]}""></q-4>`;
+            if (i["status"] == 1) { /**/
+                html_left += ` <q-1 question_ID="${i["question.question_id"]}" img_src="${i["question_img"]}" title="${i["question_title"]}" accept="${i["f_name"] + " " + i["l_name"]}" description="${i["question_description"]}""></q-1>`;
+            } else if (i["status"] == 2) {
+                html_left += ` <q-2 question_ID="${i["question.question_id"]}" img_src="${i["question_img"]}" title="${i["question_title"]}" accept="${i["f_name"] + " " + i["l_name"]}" description="${i["question_description"]}""></q-2>`;
+            } else {
+                html_left += ` <q-4 question_ID="${i["question.question_id"]}" img_src="${i["question_img"]}" title="${i["question_title"]}" accept="${i["f_name"] + " " + i["l_name"]}" description="${i["question_description"]}""></q-4>`;
             }
         }
 
@@ -86,34 +85,58 @@ function renderLeft() {
         let targetId;
         let buttonID;
 
-        selected_session.forEach((session)=>{
-            session.addEventListener('click', (event)=>{
+        selected_session.forEach((session) => {
+            session.addEventListener('click', (event) => {
                 targetId = event.target.id.split("-");
-                buttonID = targetId[targetId.length-1];
+                buttonID = targetId[targetId.length - 1];
 
-                clicked_data = data.find((value)=>value["question.question_id"] == buttonID )
+                clicked_data = data.find((value) => value["question.question_id"] == buttonID)
                 console.log(clicked_data);
                 renderRight(clicked_data, 1); //1 for session 0 for question
             })
         })
 
-        let selected_question= document.querySelectorAll(".js-question");
-        selected_question.forEach((quession)=>{
-            quession.addEventListener('click', (event)=>{
+        let selected_question = document.querySelectorAll(".js-question");
+        selected_question.forEach((quession) => {
+            quession.addEventListener('click', (event) => {
                 targetId = event.target.id.split("-");
-                buttonID = targetId[targetId.length-1];
+                buttonID = targetId[targetId.length - 1];
 
-                clicked_data = data.find((value)=>value["question.question_id"] == buttonID )
+                clicked_data = data.find((value) => value["question.question_id"] == buttonID)
                 console.log(clicked_data);
                 renderRight(clicked_data, 0); //1 for session 0 for question
             })
         })
 
 
-
-
-
     });
+
+
+//sssssssssssssss sdsdsd//
+
+
+    let data = await fetch("http://localhost:8090/api/users/myQuestions/:" + getUserID(), {
+        method: "GET",
+        credentials: "include"
+    }).then((response) =>
+        response.json()
+    );
+    alert(JSON.stringify(data));
+
+
+    for (let i of data){
+        if (i["status"]== 2){
+            html_left += ` <chat-listitem question_id="${i["question.question_id"]}" img_src="${i["question_img"]}" chatname="${i["question_title"]}"></chat-listitem>`;
+        }
+
+    }
+
+
+    document.querySelector(".chat-header").innerHTML = html_left;
+
+
+
+
 
 
 
