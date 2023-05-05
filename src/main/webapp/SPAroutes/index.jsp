@@ -183,6 +183,8 @@
     <script src="../components2/edit_profileTeacher.js"></script>
     <script src="../components2/upgrade_form_org.js"></script>
     <script src="../components2/question_form.js"></script>
+    <script src="../components2/organization_card(teacher)withleave.js"></script>
+    <script src="../components2/organization_list(teacher)2.js"></script>
 
     <script src="../components2/invite_teacher.js"></script>
     <script src="../components2/teacher_listOrg.js"></script>

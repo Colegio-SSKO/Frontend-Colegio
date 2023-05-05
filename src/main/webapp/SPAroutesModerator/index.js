@@ -274,6 +274,27 @@ const Routes = {
         title: "report",
         data : "This is the report page"
     },
+
+
+    "/verify_teachers" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/report_content.jsp",
+        script: "../static/viewsJS/view_teacher_verifylist.js",
+        path_right: "",
+        title: "report",
+        data : "This is the report page"
+    },
+
+    "/generate_report_verifyteacher" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/report_content.jsp",
+        script: "../static/viewsJS/genarate_report(verify_teacher).js",
+        path_right: "",
+        title: "report",
+        data : "This is the report page"
+    },
 };
 
 

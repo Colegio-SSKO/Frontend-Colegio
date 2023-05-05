@@ -23,14 +23,14 @@ function renderSingle(){
         alert(data)
         let html = `
         
-        <organization-list dataString="${encodeURIComponent(data)}"></organization-list>`;
+        <organization-2listteacher dataString="${encodeURIComponent(data)}"></organization-2listteacher>`;
 
 
         document.querySelector(".cont-body-content").innerHTML = html;
 
 
         // let teachers = document.querySelectorAll(".teacher-card-wrap");
-
+        //
         // for (let element of teachers) {
         //     element.addEventListener('click', async (event) => {
         //
@@ -43,16 +43,16 @@ function renderSingle(){
         //         }
         //
         //         alert(organization_id);
-                // let url = "http://localhost:8090/api/users/Vieworg_teacher";
-                // let res3 = await fetch(url, {method: "POST", body: JSON.stringify(requestBody)}).then((response) =>
-                //     response.json()
-                // );
-
-                // let location = window.location;
-                // window.history.pushState({}, "", location);
-                // urlLocation();
-            // })
-
+        //         let url = "http://localhost:8090/api/users/Vieworg_teacher";
+        //         let res3 = await fetch(url, {method: "POST", body: JSON.stringify(requestBody)}).then((response) =>
+        //             response.json()
+        //         );
+        //
+        //         let location = window.location;
+        //         window.history.pushState({}, "", location);
+        //         urlLocation();
+        //     })
+        //
         // }
 
     });

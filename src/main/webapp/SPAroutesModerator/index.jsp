@@ -61,6 +61,8 @@
     <script src="../components2/report_details(quiz).js"></script>
     <script src="../components2/report_details(user).js"></script>
     <script src="../components2/popup.js"></script>
+    <script src="../components2/teacher_verify_card.js"></script>
+    <script src="../components2/verify_teacherdetilas.js"></script>
 
 </div>
 

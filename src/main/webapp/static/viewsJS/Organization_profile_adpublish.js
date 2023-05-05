@@ -1,18 +1,22 @@
-alert("organization ad publish karamu");
+alert("organization ad publish karamu1");
 
 async function fetchData(){
     const req = {
         "user_ID" : "23"
     }
 
+    alert(temporary_data);
+
 //uncomment this when connecting the database
-    let url = "http://localhost:8090/api/users/vieworganizationprofile/:82";
+    let url = "http://localhost:8090/api/users/vieworganizationprofile/:"+temporary_data;
     let res3 = await fetch(url, {
         method: "GET",
         credentials : "include"
     }).then((response) =>
         response.json()
     );
+
+    alert(JSON.stringify(res3));
 
     return res3;
 };
@@ -38,7 +42,7 @@ async function renderSingle() {
 
 
 
-        let teachers = document.querySelectorAll(".all_teacher");
+        let teachers = document.querySelectorAll(".org_name");
 
         for (let element of teachers) {
             element.addEventListener('click', async (event) => {
@@ -54,7 +58,7 @@ async function renderSingle() {
                 // let res3 = await fetch(url, {method: "POST", body: JSON.stringify(requestBody)}).then((response) =>
                 //     response.json()
                 // );
-
+                //
                 // let location = window.location;
                 // window.history.pushState({}, "", location);
                 // urlLocation();

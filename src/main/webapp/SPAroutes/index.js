@@ -217,7 +217,7 @@ const studentRoutes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/",
-        script: "../static/viewsJS/Upgrade_account.js",
+        script: "../static/viewsJS/Upgrade_account1.js",
         path_right: "",
         title: "Upgrade to teacher",
         data : "This is the notification page"
@@ -284,25 +284,25 @@ const studentRoutes = {
         data : "This is the follow course page"
     },
 
-    "/teacher_published_course" : {
-        isSingle : true,
-        template : "/SPAroutesTeacher/index_single.jsp",
-        path_left:"/views/Teahcer_profile.jsp",
-        path_right: "",
-        script: "../static/viewsJS/published_course_list(teacher).js",
-        title: "profile",
-        data : "This is the profile page"
-    },
-
-    "/teacher_published_quiz" : {
-        isSingle : true,
-        template : "/SPAroutesTeacher/index_single.jsp",
-        path_left:"/views/Teahcer_profile.jsp",
-        path_right: "",
-        script: "../static/viewsJS/published_quiz_list(teacher).js",
-        title: "profile",
-        data : "This is the profile page"
-    },
+    // "/teacher_published_course" : {
+    //     isSingle : true,
+    //     template : "/SPAroutesTeacher/index_single.jsp",
+    //     path_left:"/views/Teahcer_profile.jsp",
+    //     path_right: "",
+    //     script: "../static/viewsJS/published_course_list(teacher).js",
+    //     title: "profile",
+    //     data : "This is the profile page"
+    // },
+    //
+    // "/teacher_published_quiz" : {
+    //     isSingle : true,
+    //     template : "/SPAroutesTeacher/index_single.jsp",
+    //     path_left:"/views/Teahcer_profile.jsp",
+    //     path_right: "",
+    //     script: "../static/viewsJS/published_quiz_list(teacher).js",
+    //     title: "profile",
+    //     data : "This is the profile page"
+    // },
 
     "/teacher_content" : {
         isSingle : true,
@@ -430,23 +430,23 @@ const teacherRoutes =  {
         data : "This is the quiz page"
     },
 
-    "/teacher_organizations" : {
-        isSingle : true,
-        template : "/SPAroutesTeacher/index_single.jsp",
-        path_left:"/views/Quiz_teacher_org1_left.jsp",
-        script: "../static/viewsJS/Organization_profile_adpublish.js",
-        title: "Teacher organizations",
-        data : "This is the quiz page"
-    },
-
     // "/teacher_organizations" : {
     //     isSingle : true,
     //     template : "/SPAroutesTeacher/index_single.jsp",
     //     path_left:"/views/Quiz_teacher_org1_left.jsp",
-    //     script: "../static/viewsJS/organizations_of_teacher.js",
+    //     script: "../static/viewsJS/Organization_profile_adpublish.js",
     //     title: "Teacher organizations",
     //     data : "This is the quiz page"
     // },
+
+    "/teacher_organizations" : {
+        isSingle : true,
+        template : "/SPAroutesTeacher/index_single.jsp",
+        path_left:"/views/Quiz_teacher_org1_left.jsp",
+        script: "../static/viewsJS/organizations_of_teacher.js",
+        title: "Teacher organizations",
+        data : "This is the quiz page"
+    },
 
 
     "/publish_yourad" : {
@@ -531,6 +531,16 @@ const teacherRoutes =  {
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Organization_profile(stu).jsp",
         script: "../static/viewsJS/Organization_profile_new.js",
+        path_right: "",
+        title: "Organization",
+        data : "This is the notification page"
+    },
+
+    "/Organization_profile(teacher)" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Organization_profile(stu).jsp",
+        script: "../static/viewsJS/Organization_profile_adpublish.js",
         path_right: "",
         title: "Organization",
         data : "This is the notification page"

@@ -25,7 +25,8 @@ public class FilteringRoutes implements Filter {
         Integer index = req.getRequestURI().indexOf("SPAroutes");
 
         if(req.getRequestURI().indexOf("SPAroutes")!=-1 || req.getRequestURI().indexOf("components2")!=-1
-            || req.getRequestURI().indexOf("static")!=-1 || req.getRequestURI().indexOf("favicon")!=-1
+            || req.getRequestURI().indexOf("static")!=-1 || req.getRequestURI().indexOf("favicon")!=-1 ||
+                req.getRequestURI().indexOf("api") != -1
         ){
             System.out.println(req.getRequestURI());
             chain.doFilter(request, response);

@@ -8,8 +8,6 @@ class Organization_profile_card_adpublishStu extends HTMLElement {
         let organization_id = this.attributes.organization_id.value;
 
         this.innerHTML = `
-        <button class="btn btn-outlined btn-large"><a class="all_teacher fnt fnt-bold fnt-mid" id="${organization_id}" href="/organization_Teachers">Teachers</a></button>
-        <button class="btn btn-outlined btn-large"><a class="fnt fnt-bold fnt-mid" href="">Advertisements</a></button>
         <a href="/publish_yourad"><button class="is-a-route fnt fnt-bold fnt-mid btn-a btn btn-solid">publish Your ad</button></a>
         <div class="profile-card-wrap">
         <div class="profile-card-image">

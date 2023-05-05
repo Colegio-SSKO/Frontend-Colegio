@@ -25,7 +25,7 @@ async function renderSingle() {
         const data = await fetchData();
         alert(typeof (data));
         alert(data);
-        const res2 = await fetch("http://localhost:8090/api/users/ad_view/:" + temporary_data, {
+        const res2 = await fetch("http://localhost:8090/api/users/ad_view/:82" , {
             method: "GET",
             credentials : "include"
         }).then((response) => response.text());
@@ -36,31 +36,6 @@ async function renderSingle() {
 
 
 
-
-
-        let teachers = document.querySelectorAll(".all_teacher");
-
-        for (let element of teachers) {
-            element.addEventListener('click', async (event) => {
-
-                let organization_id = event.target.id;
-                temporary_data= organization_id;
-
-
-                let requestBody = {
-                    "organization_id": organization_id
-                }
-                // let url = "http://localhost:8090/api/users/Vieworg_teacher";
-                // let res3 = await fetch(url, {method: "POST", body: JSON.stringify(requestBody)}).then((response) =>
-                //     response.json()
-                // );
-
-                // let location = window.location;
-                // window.history.pushState({}, "", location);
-                // urlLocation();
-            })
-
-        }
     } catch (error) {
         console.error(error);
     }
