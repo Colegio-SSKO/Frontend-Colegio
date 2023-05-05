@@ -88,7 +88,7 @@ class Open_course extends HTMLElement {
                         }
 
                         let url = "http://localhost:8090/api/users/addrates/:" + getUserID();
-                        let res = await fetch(url, {method : "POST",  body : JSON.stringify(requestBody)}).then((response)=>
+                        let res = await fetch(url, {method : "POST", credentials : "include", body : JSON.stringify(requestBody)}).then((response)=>
                             response.json()
 
                         );
@@ -144,7 +144,7 @@ class Open_course extends HTMLElement {
                             "course_id": course_id
                         }
                         let url = "http://localhost:8090/api/users/report_course/:" + getUserID();
-                        let res = await fetch(url, {method : "POST",  body : JSON.stringify(requestBody)}).then((response)=>
+                        let res = await fetch(url, {method : "POST", credentials : "include",  body : JSON.stringify(requestBody)}).then((response)=>
                             response.json()
 
                         );
