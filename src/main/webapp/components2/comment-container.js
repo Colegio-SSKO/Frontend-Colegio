@@ -10,17 +10,18 @@ class Comment_container extends HTMLElement {
 
         this.innerHTML = `
          <div class="comment-container">
-        <img class="comment-container-profile-pic" src="${img_src}" alt="Profile Picture">
-        <div class="comment-container-comment-details">
-          <h4 class="comment-container-commenter-name">
-            <span class="comment-container-comment-date">${date}</span>
-            ${commenter}
-          </h4>
-          <p class="comment-container-comment-text">${text}</p>
-          <div class="comment-container-comment-actions">
-            <div class="reportcomment" id="${user_id}">report</div>
-          </div>
-        </div>
+                <img class="comment-container-profile-pic " src="${img_src}" alt="Profile Picture">
+           <div class="comment-container-comment-details">
+              <div>
+                    <h4 class="comment-container-commenter-name fnt-bold fnt fnt-mid">${commenter} &nbsp&nbsp&nbsp<span class="comment-container-comment-date">${date}</span></h4>
+              </div>
+              <div>
+                    <p class="comment-container-comment-text fnt fnt-mid">${text}</p>
+              </div>
+              <div class="comment-container-comment-actions link fnt fnt-mid fnt-bold">
+                    <div class="reportcomment" id="${user_id}">report</div>
+              </div>
+            </div>
       </div>
         `;
 

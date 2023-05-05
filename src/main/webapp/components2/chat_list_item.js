@@ -1,12 +1,13 @@
 class Chat_list_item extends HTMLElement {
     connectedCallback() {
 
-        let chat_id = this.attributes.chat_id.value;
+        let question_id = this.attributes.question_id.value;
         let chatname = this.attributes.chatname.value;
+        let img_src = this.attributes.img_src.value;
 
         this.innerHTML = `
 
-            <div id="${chat_id}"> ${chatname}</div>
+            <div id="${question_id}" class="chat-list-item"> <img src="${img_src}" alt=""> ${chatname}</div>
 
 
         `;
