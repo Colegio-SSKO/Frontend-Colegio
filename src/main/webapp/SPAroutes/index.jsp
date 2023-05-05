@@ -135,7 +135,7 @@
     <script src="../components2/ratings.js"></script>
     <script src="../components2/startQuiz.js"></script>
     <script src="../components2/comment.js"></script>
-    <script src="../components2/course_form1.js"></script>
+    <script src="../components2/course_form.js"></script>
     <script src="../components2/cart_item.js"></script>
     <script src="../components2/organization_card.js"></script>
     <script src="../components2/organization_list.js"></script>
