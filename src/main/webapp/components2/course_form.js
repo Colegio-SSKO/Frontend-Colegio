@@ -101,7 +101,7 @@ class CourseForm extends HTMLElement {
 
 
 
-        createCourse.addEventListener('click', (event)=>{
+        createCourse.addEventListener('click', async (event)=>{
             event.preventDefault();
 
             alert("meka tm create course")
@@ -119,10 +119,11 @@ class CourseForm extends HTMLElement {
 
 
             //send save files request
-            let fileUploadresponse = fetch('http://localhost:8080/api/createCourse/', {method : "POST", body:formData})
+            let fileUploadresponse =await fetch('http://localhost:8080/api/createCourse/', {method : "POST", body:formData})
                 .then((res)=>{
-                    return res
+                    return res.json();
                 })
+            console.log(fileUploadresponse)
 
             if(!fileUploadresponse["isError"]){
                 alert("Upload una");
@@ -152,6 +153,7 @@ class CourseForm extends HTMLElement {
                 })
 
                 console.log(videoTitleData)
+                console.log(fileUploadresponse["thumbnail"])
 
                 let textData = {
 
@@ -165,15 +167,17 @@ class CourseForm extends HTMLElement {
                     "thumbnailPath" : fileUploadresponse["thumbnail"],
                     "videoPaths" : fileUploadresponse["videos"]
                 }
+                console.log(textData)
+                console.log("hehe")
 
                 //send save data to the db request to the backend
-                let textUploadresponse = fetch('http://localhost:8090/api/teachers/createCourse/', {
+                let textUploadresponse = await fetch('http://localhost:8090/api/teachers/createCourse/', {
                     method : "POST",
                     body:JSON.stringify(textData),
                     credentials : "include"
                 })
                     .then((res)=>{
-                        return res
+                        return res.json()
                     })
 
                 if(!textUploadresponse["isError"]){
