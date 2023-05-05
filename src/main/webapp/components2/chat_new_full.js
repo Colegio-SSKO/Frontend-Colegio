@@ -19,15 +19,15 @@ class Chat_new_full extends HTMLElement {
             <p class="fnt fnt-light fnt-mid">${description}</p>
 
             <div class="open-question-message-wrap">
-                <chat-box></chat-box>
+                <chat-box chatid="${chat_id}"></chat-box>
 
               <div class="open-question-msgBox">
                 <form action="#">
-                  <input id="js-quession-chat-input" type="text" name="message" class="fnt fnt-mid fnt-bold"
+                  <input type="text" name="message" class="fnt fnt-mid fnt-bold js-quession-chat-input${chat_id}"
                     placeholder="Type your response">
 
                   <span class="material-icons">attach_file</span>
-                  <send-button />
+                   <button  class="send-button js-quession-chat-send-btn${chat_id}"  type="submit"><span class="material-icons">send</span></button>
                 </form>
               </div>
             </div>
@@ -51,25 +51,49 @@ class Chat_new_full extends HTMLElement {
 
         `;
 
-        //
-        // let messageSendButton = document.querySelector("#js-quession-chat-send-btn");
-        // let message = document.querySelector("#js-quession-chat-input");
-        // let messageData = {};
-        // messageSendButton.addEventListener('click', (event)=>{
-        //     alert("send btn ek wed")
-        //     event.preventDefault();
-        //     messageData = {
-        //         "config" : false,
-        //         "message" : message.value,
-        //         "receiver": author_ID,
-        //         "sender" : getUserID()
-        //     }
-        //     console.log(messageData)
-        //
-        //     questionCHat.send(JSON.stringify(messageData));
-        //     message.value = "";
-        // })
-        //
+
+        let messageSendButton = document.querySelector(`.js-quession-chat-send-btn${chat_id}`);
+        let message = document.querySelector(`.js-quession-chat-input${chat_id}`);
+        let chatContainer = document.querySelector(`#open-question-chat${chat_id}`);
+
+        messageSendButton.addEventListener('click', (event)=>{
+            event.preventDefault();
+            alert(`weda bn ithn${chat_id}`)
+            let newMessage = document.createElement('chat-msg');
+            newMessage.setAttribute("msg", "AWA SAGOR");
+            newMessage.setAttribute("type", "open-question-outgoingMSG");
+            chatContainer.appendChild(newMessage);
+
+        })
+
+
+        let messageData = {};
+
+        messageSendButton.addEventListener('click', (event)=>{
+            alert("send btn ek wed")
+            event.preventDefault();
+            if (message.value != ""){
+                messageData = {
+                    "config" : false,
+                    "message" : message.value,
+                    "receiver": parseInt(author_ID),
+                    "sender" : getUserID(),
+                    "questionId" : parseInt(questionid)
+                }
+                console.log(messageData)
+
+                questionCHat.send(JSON.stringify(messageData));
+                let chatContainer = document.querySelector(".open-question-chat");
+                if (chatContainer){
+                    let newMessage = document.createElement('chat-msg');
+                    newMessage.setAttribute("msg", "AWA SAGOR");
+                    newMessage.setAttribute("type", "open-question-outgoingMSG");
+                    chatContainer.appendChild(newMessage);
+                    chatContainer.scrollTop = chatContainer.scrollHeight;
+                }
+            }
+            message.value = "";
+        })
 
 
 

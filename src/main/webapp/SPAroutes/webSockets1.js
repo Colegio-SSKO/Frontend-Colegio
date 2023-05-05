@@ -25,6 +25,7 @@ async function initiateWebsocket(){
             };
 
             notificationWebSocket.onmessage = (event)=>{
+                alert("notification ekak")
                 alert(event.data)
                 if (window.location.pathname == "/notification"){
                     let newNotification = document.createElement('notification-message5');
@@ -46,7 +47,7 @@ async function initiateWebsocket(){
 
             //question chat handling
             questionCHat = new WebSocket('ws://localhost:8090/questionChatHandler');
-            let chatContainer = document.querySelector(".open-question-chat");
+
             let receivedMessage;
 
             questionCHat.onopen = () => {
@@ -65,38 +66,30 @@ async function initiateWebsocket(){
 
             questionCHat.addEventListener('message', (event)=>{
                 receivedMessage = JSON.parse(event.data);
+
                 alert("message ek awoo")
-                alert(JSON.stringify(receivedMessage))
+                console.log(JSON.stringify(receivedMessage))
+                alert("message ek awoo")
 
                 if (receivedMessage["receiver"] == getUserID()){
+                    let chatContainer = document.querySelector(`#open-question-chat${3}`);
                     if (chatContainer){
-                        chatContainer.innerHTML += `
-                                <div class="open-question-msg open-question-incomMSG"><p>${receivedMessage["message"]}<br></p></div>
-                                <br>
-                                 `
+                        let newMessage = document.createElement('chat-msg');
+                        newMessage.setAttribute("msg", "AWA SAGOR");
+                        newMessage.setAttribute("type", "open-question-incomMSG");
+                        chatContainer.appendChild(newMessage);
+                        alert("methnt awne")
+                        chatContainer.scrollTop = chatContainer.scrollHeight;
                     }
                     else{
                         alert(receivedMessage["message"]);
+                        alert("methnt awe ne")
                     }
 
 
                 }
-                else if(receivedMessage["sender"] == getUserID()){
-                    if (chatContainer){
-                        chatContainer.innerHTML += `
-                    <div class="open-question-msg open-question-outgoingMSG"> <p>${receivedMessage["message"]}</p></div>
-                    <br>
-            `
-                    }
-                    else{
-                        alert(receivedMessage["message"]);
-                    }
-
-                }
 
 
-
-                chatContainer.scrollTop = chatContainer.scrollHeight;
             })
             socketsStartedBefore = true;
             alert("sockets weda")

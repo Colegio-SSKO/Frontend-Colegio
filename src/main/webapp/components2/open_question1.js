@@ -1,4 +1,4 @@
-class Open_question extends HTMLElement {
+class Open_question1 extends HTMLElement {
     connectedCallback() {
 
         let author_ID = this.attributes.author_ID.value;
@@ -7,6 +7,7 @@ class Open_question extends HTMLElement {
         let title= this.attributes.title.value;
         let description= this.attributes.description.value;
         let author = this.attributes.author.value;
+        let questionid = this.attributes.questionid.value
         // let authour_ID =
         this.innerHTML = `
         <div class="open-question-wrap">
@@ -54,16 +55,27 @@ class Open_question extends HTMLElement {
         messageSendButton.addEventListener('click', (event)=>{
             alert("send btn ek wed")
             event.preventDefault();
-            messageData = {
-                "config" : false,
-                "message" : message.value,
-                "receiver": parseInt(author_ID),
-                "sender" : getUserID(),
-                "questionId" : parseInt(questionId)
-            }
-            console.log(messageData)
+            if (message.value != ""){
+                messageData = {
+                    "config" : false,
+                    "message" : message.value,
+                    "receiver": parseInt(author_ID),
+                    "sender" : getUserID(),
+                    "questionId" : parseInt(questionid)
+                }
+                console.log(messageData)
 
-            questionCHat.send(JSON.stringify(messageData));
+                questionCHat.send(JSON.stringify(messageData));
+                let chatContainer = document.querySelector(".open-question-chat");
+                if (chatContainer){
+                    chatContainer.innerHTML += `
+                            <div class="open-question-msg open-question-outgoingMSG"> <p>${message.value}</p></div>
+                            <br>
+                        `
+                    alert("methnt awne")
+                    chatContainer.scrollTop = chatContainer.scrollHeight;
+                }
+            }
             message.value = "";
         })
 
@@ -74,4 +86,4 @@ class Open_question extends HTMLElement {
     }
 }
 
-customElements.define('open-question', Open_question);
+customElements.define('open-question', Open_question1);

@@ -4,7 +4,7 @@
 <script src="../components2/listedcontent.js"></script>
 <script src="../components2/notification.js"></script>
 <script src="../components2/open_course.js"></script>
-<script src="../components2/open_question.js"></script>
+<script src="../components2/open_question1.js"></script>
 <script src="../components2/profile_card.js"></script>
 <script src="../components2/Q-1.js"></script>
 <script src="../components2/Q-2.js"></script>
