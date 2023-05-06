@@ -1,30 +1,26 @@
 package com.example.frontendcol.api;
 
-import jakarta.json.JsonArray;
-import jakarta.json.JsonObject;
-import jakarta.servlet.*;
-import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.MultipartConfig;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.Part;
+import org.json.JSONObject;
 
 import java.io.*;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 import java.util.Random;
-import org.json.JSONObject;
-import org.json.JSONArray;
 
-@WebServlet(name = "upgradeToteacher", value = "/api/upgradeToteacher/*")
+@WebServlet(name = "answerQuestion", value = "/api/answerQuestion/*")
 @MultipartConfig(
         fileSizeThreshold = 1024 * 1024 * 20, // 20MB
         maxFileSize = 1024 * 1024 * 100000, // 100000MB
         maxRequestSize = 1024 * 1024 * 5000000 // 5000000MB
 )
-public class upgradeToteacher extends HttpServlet {
+public class answerQuestion extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -47,7 +43,7 @@ public class upgradeToteacher extends HttpServlet {
         String contentType = "";
 
         String thumbnailPath = "";
-//        List<String> videoPaths = new ArrayList<>();
+
         System.out.println("create course eke inne");
 
         JSONObject jsonObject = new JSONObject();
@@ -96,7 +92,7 @@ public class upgradeToteacher extends HttpServlet {
     public static String handleThumbnail(Part thumbnail, HttpServletRequest request, Integer randomNumber) throws IOException{
         //user id ek session eken gnna dnt hardcode krnw
         Integer userID = 1123;
-        String thumbnailFilename = "mge" + userID + randomNumber +thumbnail.getSubmittedFileName();
+        String thumbnailFilename = "answ" + userID + randomNumber +thumbnail.getSubmittedFileName();
         thumbnailFilename = thumbnailFilename.replace(" ", "");
 
 
