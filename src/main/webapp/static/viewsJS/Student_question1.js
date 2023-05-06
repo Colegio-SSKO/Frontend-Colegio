@@ -52,29 +52,6 @@ function renderRight(data, type) {
 async function renderLeft() {
 
 
-    // let data2 = await fetch("http://localhost:8090/api/users/mychats/:" + getUserID(), {
-    //     method: "GET",
-    //     credentials: "include"
-    //
-    // }).then((response) =>
-    //     response.json()
-    // );
-    // alert(JSON.stringify(data2));
-    // alert("meka weda")
-    //
-    //
-    // for (let i of data2){
-    //     if (i["status"]== 2){
-    //         alert("metanata enwa")
-    //         html_left += ` <chat-listitem question_id="${i["question.question_id"]}" img_src="${i["question_img"]}" chatname="${i["question_title"]}"></chat-listitem>`;
-    //     }
-    //
-    // }
-
-
-    // document.querySelector(".chat-header").innerHTML = html_left;
-
-
 
 
 
