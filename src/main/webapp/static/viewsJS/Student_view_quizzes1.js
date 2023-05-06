@@ -1,4 +1,4 @@
-alert("www1");
+alert("www2");
 
 //element selectors
 if (typeof previous === 'undefined') {
@@ -209,7 +209,7 @@ function renderLeft() {
     fetchData().then((data)=>{
 
         let html_left = "";
-        alert(JSON.stringify(data));
+        console.log(JSON.stringify(data));
         console.log(data)
         html_left += "" +
             "<a  href=\"\"><button class=\"fnt fnt-bold fnt-mid btn btn-solid btn-a btn-small is-a-route\">All</button></a>\n" +
@@ -257,7 +257,7 @@ function quizcard(element){
     alert("runn")
     let html_right = "";
 
-    html_right = `<start-quiz rating="4" votes="110" quiz_id="${element["content_id"]}" img_src="/new" title="${element["quiz_title"]}" description=${element["description"]} author=${element["f_name"] + " " + element["l_name"]} author_title=${element["qulification_level"]}></start-quiz>`;
+    html_right = `<start-quiz comments="${encodeURIComponent(JSON.stringify(element["comments"]))}" rating="4" votes="110" quiz_id="${element["content_id"]}" img_src="/new" title="${element["quiz_title"]}" description=${element["description"]} author=${element["f_name"] + " " + element["l_name"]} author_title=${element["qulification_level"]}></start-quiz>`;
     document.querySelector(".cont-body-right").innerHTML = html_right;
 
     document.querySelector(".js-startquiz-start-btn").addEventListener('click', ()=>{
