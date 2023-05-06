@@ -1,54 +1,8 @@
-alert("Hellpaaaaagit stap");
+alert("Hel222");
 
 async function fetchData() {
-    const req = {
-        "user_ID" : "23"
-    }
-
-//uncomment this when connecting the database
-    // let res = await fetch("http://localhost:8081/api/getUserCourses", {method : "POST",  body : JSON.stringify(req)}).then((response)=>
-    //     response.json()
-    //
-    // );
-
-
-    //delete this. this one will return a dummy data to test
-    let res = [
-        {
-            "content_ID" : "1",
-            "content_image" : "../static/img/components_images/elec.jpg",
-            "course_title" : "This is a small title",
-            "f_name" : "Senith",
-            "l_name" : "Uthsara",
-            "description" : "This is a dummy description"
-
-
-        },
-
-        {
-            "content_ID" : "2",
-            "content_image" : "../static/img/components_images/maths.jpeg",
-            "course_title" : "This is a small title 2",
-            "f_name" : "Kavinda",
-            "l_name" : "Medagoda",
-            "description" : "This is a dummy description 2"
-
-
-        },
-
-        {
-            "content_ID" : "3",
-            "content_image" : "../static/img/components_images/ict.jpg",
-            "course_title" : "This is a small title 3",
-            "f_name" : "Sachini",
-            "l_name" : "Usha",
-            "description" : "This is a dummy description 3"
-
-
-        }
-    ]
-
-    return res
+    let req = "";
+    return req;
 };
 
 
@@ -84,15 +38,6 @@ function renderLeft() {
 
 
         document.querySelector(".cont-body-left").innerHTML = html_left;
-
-        //
-        let title = document.querySelector(".js-course-title-course-form");
-        let description = document.querySelector(".js-course-description-course-form");
-        let imageInput = document.querySelector('.js-myFile-course-form');
-
-
-
-
 
 
     });

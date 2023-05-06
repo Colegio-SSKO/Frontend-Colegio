@@ -101,9 +101,10 @@ class CourseForm extends HTMLElement {
 
 
 
-        createCourse.addEventListener('click', (event)=>{
+        createCourse.addEventListener('click', async (event)=>{
             event.preventDefault();
 
+            alert("meka tm create course")
             //thumbnail
             let formData = new FormData();
 
@@ -116,58 +117,92 @@ class CourseForm extends HTMLElement {
                 formData.append('videoFiles', video.files[0]);
             })
 
-            //textData
-            let courseTitle = document.querySelector("#js-course-upload-title");
-            let courseSubject = document.querySelector("#js-course-upload-subject");
-            let courseDescription = document.querySelector("#js-course-upload-description");
-            let coursePrice = document.querySelector("#js-course-upload-price");
-            let videoTitles = document.querySelectorAll(".video-upload-container-title-box");
-            let videoDescription = document.querySelectorAll(".video-upload-container-description-box");
 
-            let videoTitleData = new Array(0);;
-
-            let videoNumber = 0;
-            videoTitles.forEach((title)=>{
-                videoTitleData[videoNumber] = title.value;
-                videoNumber ++;
-            })
-
-            let videoDescriptionData = new Array(0);;
-
-            videoNumber = 0;
-            videoDescription.forEach((description)=>{
-                videoDescriptionData[videoNumber] = description.value;
-                videoNumber ++;
-            })
-
-            console.log(videoTitleData)
-
-            let textData = {
-
-                "userId" : getUserID(),
-                "courseTitle" : courseTitle.value,
-                "courseSubject" : 10,
-                "courseDescription" : courseDescription.value,
-                "coursePrice" : coursePrice.value,
-                "videoTitles" : videoTitleData,
-                "videoDescriptions" : videoDescriptionData
-            }
-
-            formData.append('textData', JSON.stringify(textData));
-
-
-            //send the request
-            let uploadresponse = fetch('http://localhost:8090/api/createCourse', {method : "POST", body:formData})
+            //send save files request
+            let fileUploadresponse =await fetch('http://localhost:8080/api/createCourse/', {method : "POST", body:formData})
                 .then((res)=>{
-                    return res
+                    return res.json();
+                })
+            console.log(fileUploadresponse)
+
+            if(!fileUploadresponse["isError"]){
+                alert("Upload una");
+                //handle text data submission here
+                //textData
+                let courseTitle = document.querySelector("#js-course-upload-title");
+                let courseSubject = document.querySelector("#js-course-upload-subject");
+                let courseDescription = document.querySelector("#js-course-upload-description");
+                let coursePrice = document.querySelector("#js-course-upload-price");
+                let videoTitles = document.querySelectorAll(".video-upload-container-title-box");
+                let videoDescription = document.querySelectorAll(".video-upload-container-description-box");
+
+                let videoTitleData = new Array(0);;
+
+                let videoNumber = 0;
+                videoTitles.forEach((title)=>{
+                    videoTitleData[videoNumber] = title.value;
+                    videoNumber ++;
                 })
 
-            if(uploadresponse.ok){
-                alert("Upload una");
+                let videoDescriptionData = new Array(0);;
+
+                videoNumber = 0;
+                videoDescription.forEach((description)=>{
+                    videoDescriptionData[videoNumber] = description.value;
+                    videoNumber ++;
+                })
+
+                console.log(videoTitleData)
+                console.log(fileUploadresponse["thumbnail"])
+
+                let textData = {
+
+                    "userId" : getUserID(),
+                    "courseTitle" : courseTitle.value,
+                    "courseSubject" : 10,
+                    "courseDescription" : courseDescription.value,
+                    "coursePrice" : coursePrice.value,
+                    "videoTitles" : videoTitleData,
+                    "videoDescriptions" : videoDescriptionData,
+                    "thumbnailPath" : fileUploadresponse["thumbnail"],
+                    "videoPaths" : fileUploadresponse["videos"]
+                }
+                console.log(textData)
+                console.log("hehe")
+
+                //send save data to the db request to the backend
+                let textUploadresponse = await fetch('http://localhost:8090/api/teachers/createCourse/', {
+                    method : "POST",
+                    body:JSON.stringify(textData),
+                    credentials : "include"
+                })
+                    .then((res)=>{
+                        return res.json()
+                    })
+
+                if(!textUploadresponse["isError"]){
+                    alert("Upload una");
+                }
+                else{
+                    alert("error ekak oi")
+                }
+
             }
             else{
                 alert("error ekak oi")
             }
+
+
+
+
+
+
+
+
+            formData.append('textData', JSON.stringify(textData));
+
+
+
         })
 
 
