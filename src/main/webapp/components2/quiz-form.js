@@ -179,7 +179,7 @@ class QuizForm extends HTMLElement {
 
 
 
-        createquiz.addEventListener('click', (event)=>{
+        createquiz.addEventListener('click', async (event)=>{
             event.preventDefault();
 
             //thumbnail
@@ -187,31 +187,46 @@ class QuizForm extends HTMLElement {
 
             formData.append( 'thumbnailImage' ,thumbnailUpload.files[0]);
 
-
-
-            let textData = extractTextData();
-            alert(textData);
-
-
-
-            //send the request
-            let uploadresponse = fetch('http://localhost:8090/api/teachers/published_quiz/:1', {
-                method : "POST",
-                body:JSON.stringify(textData),
-                credentials : "include"
-            })
+            let fileUploadresponseme = await fetch('http://localhost:8080/api/createQuiz/', {method : "POST", body:formData})
                 .then((res)=>{
-                    return res
+                    alert(JSON.stringify(res));
+                    return res.json();
                 })
 
-            if(uploadresponse.ok){
+            if(!fileUploadresponseme["isError"]){
                 alert("Upload una");
+                alert(JSON.stringify(fileUploadresponseme["thumbnail"]));
+
+                let textData = extractTextData();
+                textData["image"]=fileUploadresponseme["thumbnail"];
+                alert(textData);
+
+                let textUploadresponse = await fetch('http://localhost:8090/api/teachers/published_quiz/:'+getUserID(), {
+                    method : "POST",
+                    body:JSON.stringify(textData),
+                    credentials : "include"
+                })
+                    .then((res)=>{
+                        return res.json()
+                    })
+
+                if(!textUploadresponseme["isError"]){
+                    alert("Upload una");
+                }
+                else{
+                    alert("error ekak oi")
+                }
+
             }
             else{
                 alert("error ekak oi")
             }
-        })
 
+
+
+            formData.append('textData', JSON.stringify(textData));
+
+        })
 
     }
 }

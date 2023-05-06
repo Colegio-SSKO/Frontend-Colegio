@@ -4,6 +4,7 @@ class verify_teacherdetails extends HTMLElement {
         // let data = JSON.parse(dataString);
         // alert(data);
         let name = this.attributes.name.value;
+        let gender = this.attributes.gender.value;
         let email = this.attributes.email.value;
         let education_level = this.attributes.education_level.value;
         let refer = this.attributes.refer.value;
@@ -78,7 +79,9 @@ class verify_teacherdetails extends HTMLElement {
 
                 let requestBody= {
                     "user_id": user_id,
-                    "upgrade_id":upgrade_id
+                    "upgrade_id":upgrade_id,
+                    "gender":gender,
+                    "qulification_level":education_level
                 }
                 let url = "http://localhost:8090/api/moderators/delete_teacher_verify/:" + getModeratorID();
                 let res = await fetch(url, {method : "POST",  body : JSON.stringify(requestBody)}).then((response)=>

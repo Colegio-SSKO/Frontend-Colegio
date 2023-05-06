@@ -19,7 +19,7 @@ function renderSingle(){
 
         let html = `
         
-        <verify-teacherdetails img_src="${data["certificate"]}" name="${data["f_name"]} ${data["l_name"]}" email="${data["email"]}" education_level="${data["education_level"]}" refer="${data["refers"]}" user_id="${data["user_id"]}" upgrade_id="${data["upgrade_id"]}"></verify-teacherdetails>`;
+        <verify-teacherdetails img_src="${data["certificate"]}" gender="${data["gender"]}" name="${data["f_name"]} ${data["l_name"]}" email="${data["email"]}" education_level="${data["education_level"]}" refer="${data["refers"]}" user_id="${data["user_id"]}" upgrade_id="${data["upgrade_id"]}"></verify-teacherdetails>`;
 
 
         document.querySelector(".cont-body-content").innerHTML = html;

@@ -33,49 +33,70 @@ class Profile_upgrade_form extends HTMLElement {
         upgradeToteacher.addEventListener('click', async (event)=>{
             event.preventDefault();
 
+            alert("meka tm create course")
+
             //thumbnail
             let formData = new FormData();
 
             formData.append( 'thumbnailImage' ,thumbnailUpload.files[0]);
 
-            alert(formData)
 
-            let uploadresponse = await fetch('http://localhost:8080/api/upgradeToteacher/', {method : "POST", body:formData})
+
+
+            //send save files request
+            let fileUploadresponseme = await fetch('http://localhost:8080/api/upgradeToteacher/', {method : "POST", body:formData})
                 .then((res)=>{
                     alert(JSON.stringify(res));
-                    return res
+                    return res.json();
                 })
 
 
-            //textData
-            // let education_level = document.querySelector("#education_level");
-            // let references = document.querySelector("#references");
-            //
-            //
-            //
-            // let textData = {
-            //
-            //     "userId" : getUserID(),
-            //     "education_level" : education_level.value,
-            //     "references" : references.value,
-            // }
-            //
-            // formData.append('textData', JSON.stringify(textData));
-            //
-            //
-            // //send the request
-            // let uploadresponse2 = fetch('http://localhost:8090/api/upgradetoteacher', {method : "POST", body:formData})
-            //     .then((res)=>{
-            //         return res
-            //     })
-            //
-            // if(uploadresponse.ok){
-            //     alert("Upload una");
-            // }
-            // else{
-            //     alert("error ekak oi")
-            // }
+            if(!fileUploadresponseme["isError"]){
+                alert("Upload una");
+                alert(JSON.stringify(fileUploadresponseme["thumbnail"]));
+                //handle text data submission here
+                //textData
+                let education_level = document.querySelector("#education_level");
+                let references = document.querySelector("#references");
+
+
+                let textData = {
+
+                    "userId" : getUserID(),
+                    "education_level" : education_level.value,
+                    "references" : references.value,
+                    "certificate" : fileUploadresponseme["thumbnail"],
+                }
+
+
+                //send save data to the db request to the backend
+                let textUploadresponse = await fetch('http://localhost:8090/api/students/upgrade_to_teacher/', {
+                    method : "POST",
+                    body:JSON.stringify(textData),
+                    credentials : "include"
+                })
+                    .then((res)=>{
+                        return res.json()
+                    })
+
+                if(!textUploadresponseme["isError"]){
+                    alert("Upload una");
+                }
+                else{
+                    alert("error ekak oi")
+                }
+
+            }
+            else{
+                alert("error ekak oi")
+            }
+
+
+
+            formData.append('textData', JSON.stringify(textData));
+
         })
+
 
     }
 }

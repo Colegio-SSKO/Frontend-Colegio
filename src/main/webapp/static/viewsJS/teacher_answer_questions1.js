@@ -1,4 +1,4 @@
-alert("Heiya24");
+alert("Heiya245");
 
 async function fetchData() {
 
@@ -31,11 +31,11 @@ function renderRight(data, type) {
 
     if (type== 1){
         alert("kabmmm")
-        html_right = ` <open-question img_src="${data["pro_pic"]}" qulifi="${data["qulification_level"]}" title="${data["question_title"]}"  author="${data["f_name"]+" "+ data["l_name"]}" description="${data["question_description"]}" author_ID="${data["question.user_id"]}" questionId="${data["question.question_id"]}""></open-question>`;
+        html_right = ` <open-question img_src="${data["pro_pic"]}" qulifi="${data["qulification_level"]}" title="${data["question_title"]}"  author="${data["f_name"]+" "+ data["l_name"]}" description="${data["question_description"]}" author_ID="${data["question.user_id"]}" questionId="${data["question.question_id"]}"></open-question>`;
     }
     else {
         alert("asd")
-        html_right = ` <send-answers media="${data["question_img"]}" author_propic="${data["pro_pic"]}" title="${data["question_title"]}" author="${data["f_name"]+" "+ data["l_name"]}"  description="${data["question_description"]}" qulifi="${data["qulification_level"]}""></send-answers>`;
+        html_right = ` <send-answers media="${data["question_img"]}" author_propic="${data["pro_pic"]}" title="${data["question_title"]}" author="${data["f_name"]+" "+ data["l_name"]}"  description="${data["question_description"]}" qulifi="${data["qulification_level"]}" questionId="${data["question.question_id"]}" ></send-answers>`;
 
     }
     document.querySelector(".cont-body-right").innerHTML = html_right;
