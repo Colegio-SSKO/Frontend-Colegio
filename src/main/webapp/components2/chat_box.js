@@ -2,32 +2,32 @@ class Chat_box extends HTMLElement {
     connectedCallback() {
         let chatid = this.attributes.chatid.value;
 
-       let data = [
-            {
-                "type": "open-question-incomMSG",
-                "msg": "hello"
-            },
-
-            {
-                "type": "open-question-outgoingMSG",
-                "msg": "hello"
-            },
-
-            {
-                "type": "open-question-incomMSG",
-                "msg": "hello"
-            },
-
-            {
-                "type": "open-question-outgoingMSG",
-                "msg": "hello"
-            },
-
-            {
-                "type": "open-question-incomMSG",
-                "msg": "hello"
-            }
-        ]
+       // let data = [
+        //     {
+        //         "type": "open-question-incomMSG",
+        //         "msg": "hello"
+        //     },
+        //
+        //     {
+        //         "type": "open-question-outgoingMSG",
+        //         "msg": "hello"
+        //     },
+        //
+        //     {
+        //         "type": "open-question-incomMSG",
+        //         "msg": "hello"
+        //     },
+        //
+        //     {
+        //         "type": "open-question-outgoingMSG",
+        //         "msg": "hello"
+        //     },
+        //
+        //     {
+        //         "type": "open-question-incomMSG",
+        //         "msg": "hello"
+        //     }
+        // ]
 
         // let dataString = decodeURIComponent(this.getAttribute('dataString'));
         // let data = JSON.parse(dataString);

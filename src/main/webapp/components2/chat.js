@@ -55,7 +55,7 @@ class Chat extends HTMLElement {
 
 
 
-        document.addEventListener("DOMContentLoaded", function () {
+        // document.addEventListener("DOMContentLoaded", function () {
 
             let chatbar = document.querySelector('.chatbar');
             let chatlist = document.querySelector('.chat-list');
@@ -108,7 +108,7 @@ class Chat extends HTMLElement {
 
 
 
-        });
+        // });
 
 
 
