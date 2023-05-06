@@ -9,6 +9,9 @@ class Featured_cont extends HTMLElement {
             }
         )
 
+        let content_id = 20;
+        let content_name = "title1"
+
 
         this.innerHTML = `
         <div class="fadeInanimation">
@@ -113,68 +116,78 @@ class Featured_cont extends HTMLElement {
             alert("paynow")
             let reqBody = {
                 "content" :[
-                    {"content_id": 20},
-                    {"content_id": 21}
+                    {"content_id": content_id}
+
                 ]
             }
 
-            let orderData = await fetch('http://localhost:8090/api/authenticate/getOrderData/', {
+            let orderData = await fetch('http://localhost:8090/api/users/getOrderData/', {
                 method : "POST",
-                body : JSON.stringify(reqBody)
+                body : JSON.stringify(reqBody),
+                credentials: "include"
             }).then((response)=>{
                 return response.json();
             })
-            alert(JSON.stringify(hash))
+            alert(JSON.stringify(orderData))
+
+            if (orderData["isError"]){
+                alert(orderData["errorMessage"])
+            }
+            else{
+                // Payment completed. It can be a successful failure.
+                payhere.onCompleted = function onCompleted(orderId) {
+                    console.log("Payment completed. OrderID:" + orderId);
+                    // Note: validate the payment and show success or failure page to the customer
+                };
+
+                // Payment window closed
+                payhere.onDismissed = function onDismissed() {
+                    // Note: Prompt user to pay again or show an error page
+                    console.log("Payment dismissed");
+                };
+
+                // Error occurred
+                payhere.onError = function onError(error) {
+                    // Note: show an error page
+                    console.log("Error:"  + error);
+                };
+
+                // Put the payment variables here
+                let payment = {
+                    "sandbox": true,
+                    "merchant_id": `${orderData["merahantID"]}`,    // Replace your Merchant ID
+                    "return_url": undefined,     // Important
+                    "cancel_url": undefined,     // Important
+                    "notify_url": "http://sample.com/notify",
+                    "order_id": `${orderData["orderID"]}`,
+                    "items": `${content_name}`,
+                    "amount": `${orderData["amount"]}`,
+                    "currency": `${orderData["currency"]}`,
+                    "hash": `${orderData["hash"]}`, // *Replace with generated hash retrieved from backend
+                    "first_name": `${orderData["f_name"]}`,
+                    "last_name": `${orderData["l_name"]}`,
+                    "email": `${orderData["email"]}`,
+                    "phone": `${orderData["phone"]}`,
+                    "address": `${orderData["address"]}`,
+                    "city": `${orderData["city"]}`,
+                    "country": `${orderData["country"]}`,
+                    "delivery_address": "No. 46, Galle road, Kalutara South",
+                    "delivery_city": "Kalutara",
+                    "delivery_country": "Sri Lanka",
+                    "custom_1": "",
+                    "custom_2": "",
+                    "split_payment": true,
+                    "split_payment_data" : {
+
+                    }
+                };
+                payhere.startPayment(payment);
 
 
-            // Payment completed. It can be a successful failure.
-            payhere.onCompleted = function onCompleted(orderId) {
-                console.log("Payment completed. OrderID:" + orderId);
-                // Note: validate the payment and show success or failure page to the customer
-            };
+            }
 
-            // Payment window closed
-            payhere.onDismissed = function onDismissed() {
-                // Note: Prompt user to pay again or show an error page
-                console.log("Payment dismissed");
-            };
 
-            // Error occurred
-            payhere.onError = function onError(error) {
-                // Note: show an error page
-                console.log("Error:"  + error);
-            };
 
-            // Put the payment variables here
-            let payment = {
-                "sandbox": true,
-                "merchant_id": `${orderData["merahantID"]}`,    // Replace your Merchant ID
-                "return_url": undefined,     // Important
-                "cancel_url": undefined,     // Important
-                "notify_url": "http://sample.com/notify",
-                "order_id": `${orderData["orderID"]}`,
-                "items": "Door bell wireles",
-                "amount": `${orderData["amount"]}`,
-                "currency": "LKR",
-                "hash": `${orderData["hash"]}`, // *Replace with generated hash retrieved from backend
-                "first_name": `${orderData["f_name"]}`,
-                "last_name": `${orderData["l_name"]}`,
-                "email": `${orderData["email"]}`,
-                "phone": `${orderData["phone"]}`,
-                "address": `${orderData["address"]}`,
-                "city": `${orderData["city"]}`,
-                "country": `${orderData["country"]}`,
-                "delivery_address": "No. 46, Galle road, Kalutara South",
-                "delivery_city": "Kalutara",
-                "delivery_country": "Sri Lanka",
-                "custom_1": "",
-                "custom_2": "",
-                "split_payment": true,
-                "split_payment_data" : {
-
-                }
-            };
-            payhere.startPayment(payment);
 
 
         })
