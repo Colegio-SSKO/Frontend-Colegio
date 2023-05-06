@@ -135,6 +135,18 @@ class Signup extends HTMLElement {
         const validateConfirmPassword = () => {
             if (password.value !== cpassword.value) {
                 error = "Password and the confirm password do not match";
+                let popup = document.querySelector(".popup-content");
+                document.querySelector(".popup-container").style.display = "flex";
+                popup.innerHTML = `
+                        <img src="../static/img/components_images/error.jpg" alt="">
+                        <h2 class="fnt fnt-bold fnt-large">Password and the confirm password do not match</h2>
+                        <button class="btn btn-primary " id="ok-btn">OK</button>
+
+                `;
+                let ok_btn = document.getElementById("ok-btn");
+                ok_btn.addEventListener("click", ()=>{
+                    document.querySelector(".popup-container").style.display = "none";
+                })
                 return false
             }
             else{
@@ -147,6 +159,18 @@ class Signup extends HTMLElement {
 
             if (password.value.length <8){
                 error  = "Password must have atleast 8 characters";
+                let popup = document.querySelector(".popup-content");
+                document.querySelector(".popup-container").style.display = "flex";
+                popup.innerHTML = `
+                        <img src="../static/img/components_images/error.jpg" alt="">
+                        <h2 class="fnt fnt-bold fnt-large">Password must have atleast 8 characters</h2>
+                        <button class="btn btn-primary " id="ok-btn">OK</button>
+
+                `;
+                let ok_btn = document.getElementById("ok-btn");
+                ok_btn.addEventListener("click", ()=>{
+                    document.querySelector(".popup-container").style.display = "none";
+                })
                 return false;
             }
             else
@@ -156,6 +180,18 @@ class Signup extends HTMLElement {
         const validateNumberLength = () => {
             if (numberCount(password.value)<1){
                 error = "Password must have atleast one digit";
+                let popup = document.querySelector(".popup-content");
+                document.querySelector(".popup-container").style.display = "flex";
+                popup.innerHTML = `
+                        <img src="../static/img/components_images/error.jpg" alt="">
+                        <h2 class="fnt fnt-bold fnt-large">Password must have atleast one digit</h2>
+                        <button class="btn btn-primary " id="ok-btn">OK</button>
+
+                `;
+                let ok_btn = document.getElementById("ok-btn");
+                ok_btn.addEventListener("click", ()=>{
+                    document.querySelector(".popup-container").style.display = "none";
+                })
                 return false
             }
             else
@@ -169,7 +205,19 @@ class Signup extends HTMLElement {
                 return true;
             }
             else{
-                alert(error);
+                let popup = document.querySelector(".popup-content");
+                document.querySelector(".popup-container").style.display = "flex";
+                popup.innerHTML = `
+                        <img src="../static/img/components_images/error.jpg" alt="">
+                        <h2 class="fnt fnt-bold fnt-large">${error}</h2>
+                        <button class="btn btn-primary " id="ok-btn">OK</button>
+
+                `;
+                let ok_btn = document.getElementById("ok-btn");
+                ok_btn.addEventListener("click", ()=>{
+                    document.querySelector(".popup-container").style.display = "none";
+                })
+
                 return false;
             }
 
@@ -201,17 +249,37 @@ class Signup extends HTMLElement {
                 }
 
 //, body : `${data}`
-                alert(JSON.stringify(data))
                 let response = await fetch("http://localhost:8090/api/authenticate/signup", {method : "POST",  body : JSON.stringify(data), credentials: 'include'}).then((response) => {
                     return response.json();
                 });
-                alert(JSON.stringify(response));
 
                 if (response["isError"]){
-                    alert(response["message"]);
+                    let popup = document.querySelector(".popup-content");
+                    document.querySelector(".popup-container").style.display = "flex";
+                    popup.innerHTML = `
+                        <img src="../static/img/components_images/error.jpg" alt="">
+                        <h2 class="fnt fnt-bold fnt-large">${response["message"]}</h2>
+                        <button class="btn btn-primary " id="ok-btn">OK</button>
+
+                `;
+                    let ok_btn = document.getElementById("ok-btn");
+                    ok_btn.addEventListener("click", ()=>{
+                        document.querySelector(".popup-container").style.display = "none";
+                    })
                 }
                 else {
-                    alert(response["message"]);
+                    let popup = document.querySelector(".popup-content");
+                    document.querySelector(".popup-container").style.display = "flex";
+                    popup.innerHTML = `
+                        <img src="../static/img/components_images/success.jpg" alt="">
+                        <h2 class="fnt fnt-bold fnt-large">response["message"]</h2>
+                        <button class="btn btn-primary " id="ok-btn">OK</button>
+
+                `;
+                    let ok_btn = document.getElementById("ok-btn");
+                    ok_btn.addEventListener("click", ()=>{
+                        document.querySelector(".popup-container").style.display = "none";
+                    })
                     window.history.pushState({}, "", "/auth/signin");
                     urlLocation();
                 }
@@ -220,7 +288,18 @@ class Signup extends HTMLElement {
 
 
             }else {
-                alert("Resubmit");
+                let popup = document.querySelector(".popup-content");
+                document.querySelector(".popup-container").style.display = "flex";
+                popup.innerHTML = `
+                        <img src="../static/img/components_images/success.jpg" alt="">
+                        <h2 class="fnt fnt-bold fnt-large">Resubmit</h2>
+                        <button class="btn btn-primary " id="ok-btn">OK</button>
+
+                `;
+                let ok_btn = document.getElementById("ok-btn");
+                ok_btn.addEventListener("click", ()=>{
+                    document.querySelector(".popup-container").style.display = "none";
+                })
             }
 
         }

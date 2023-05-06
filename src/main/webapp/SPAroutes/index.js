@@ -990,15 +990,15 @@ const handleAuthRoutes = async (location) => {
     //check is signup
     let pageContent = "";
     if(location.includes("signin")){
-        pageContent = `<sign-in></sign-in>`;
+        pageContent = `<pop-up></pop-up><sign-in></sign-in>`;
 
         alert(pageContent);
     }
     else if (location.includes("signup")){
-        pageContent = `<sign-up></sign-up>`;
+        pageContent = `<pop-up></pop-up><sign-up></sign-up>`;
     }
     else if(location.includes("forgotPassword")) {
-        pageContent = `<forgot-password></forgot-password>`;
+        pageContent = `<pop-up></pop-up><forgot-password></forgot-password>`;
     }
 
     else{

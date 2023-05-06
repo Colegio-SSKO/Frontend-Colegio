@@ -2632,19 +2632,20 @@ a{
     flex-direction: row;
     position: fixed;
     z-index: 100000;
-    right: 0;
+    right: 0px;
     bottom: 0px;
     transition: 0.2s;
 }
 
 .chatbar{
-    background: rgb(242, 238, 135);
+    background: rgb(222, 79, 68);
     height: 40px;
-    width: 200px;
+    width: 100%;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .chat-headers{
@@ -2672,7 +2673,7 @@ a{
 .chat-list-hide{
     position: absolute;
     bottom: 20px;
-    right: -206px;
+    right: -244px;
     transition: 0.5s;
     overflow-y: hidden;
 }
