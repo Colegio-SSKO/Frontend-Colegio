@@ -38,8 +38,22 @@ class Open_course extends HTMLElement {
         <div class="open-course-cont">
         
         <a href="/continuecourse"><button class="course_countinue btn btn-solid btn-small is-a-route" id="${content_id}">Continue</button></a>
-
-
+        <br><br>
+            <div class="comment-cmnt">
+                <div class="comment-comment-box">
+                    <img src="${getUserProfileImage()}" alt="">
+                    <form>
+                        <input id="js-quiz-comment-value" type="text" class="fnt-mid fnt fnt-bold" placeholder="Comment here...">
+                        <button id="js-quiz-comment-send-btn" class="send-button"><span class="material-icons">send</span></button>
+                    </form>
+                </div>
+    
+                <div id="js-quiz-comment-container" class="comment-comments">
+                   
+                </div>
+            </div>
+         
+         
         </div>
     </div>
 
