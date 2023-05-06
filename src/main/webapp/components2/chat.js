@@ -15,8 +15,23 @@ class Chat extends HTMLElement {
             response.json()
 
         );
+
+        //answer questions
+        let data2 = await fetch("http://localhost:8090/api/teachers/answer_questions/", {
+            method : "GET",
+            credentials : "include"
+        }).then((response)=>
+            response.json()
+
+        );
+        alert("data2: " + JSON.stringify(data2))
+        console.log("data2")
+        console.log(data2)
+
+
+
         alert(JSON.stringify(data));
-        alert("wedwed")
+        alert("wedwed2")
 
 
 
@@ -24,7 +39,19 @@ class Chat extends HTMLElement {
 
         for (let i of data) {
             if (i["status"]== 2){
-                htmlcontent += `<new-chat chat_id="${i["question.question_id"]}" img_src="${i["question_img"]}" qulifi="${i["qualification_level"]}" title="${i["question_title"]}" description="${i["question_description"]}" author="${i["f_name"] + i["l_name"]}"></new-chat>
+                htmlcontent += `<new-chat author_id="${i["teacher.user_ID"]}" chat_id="${i["question.question_id"]}" img_src="${i["pro_pic"]}" qulifi="${i["qualification_level"]}" title="${i["question_title"]}" description="${i["question_description"]}" author="${i["f_name"] + i["l_name"]}"></new-chat>
+                `;
+
+            }
+        }
+
+        let htmlcontent2 = "";
+        console.log("mekaa")
+        console.log(data2)
+
+        for (let i of data2) {
+            if (i["question.status"]== 2){
+                htmlcontent2 += `<new-chat author_id="${i["question.user_id"]}" chat_id="${i["question.question_id"]}" img_src="${i["pro_pic"]}" qulifi="${i["qualification_level"]}" title="${i["question_title"]}" description="${i["question_description"]}" author="${i["f_name"] + i["l_name"]}"></new-chat>
                 `;
 
             }
@@ -32,14 +59,23 @@ class Chat extends HTMLElement {
 
         this.innerHTML = `
 
+       
          <div class="chat-container">
           <div class="chat-msgs">
-          `+ htmlcontent +`
+          `+ htmlcontent + htmlcontent2 +`
                   
            </div>
            <chat-list></chat-list>
         </div>
+        
+        
+        
         `;
+
+
+
+
+
         let html_left = ``;
         for (let i of data){
             if (i["status"]== 2){
@@ -50,7 +86,19 @@ class Chat extends HTMLElement {
         }
 
 
-        document.querySelector(".chat-headers").innerHTML = html_left;
+        let html_left2 = ``;
+        for (let i of data2){
+            if (i["question.status"]== 2){
+                alert("metanata enwa")
+                html_left2 += ` <chat-listitem question_id="${i["question.question_id"]}" img_src="${i["question_img"]}" chatname="${i["question_title"]}"></chat-listitem>`;
+            }
+
+        }
+
+
+        document.querySelector(".chat-headers").innerHTML =`<h4>My questions</h4><br>`+ html_left + `<h4>Anser questions</h4><br>` +html_left2;
+
+
 
 
 
