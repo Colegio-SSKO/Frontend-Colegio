@@ -1,4 +1,4 @@
-alert("Hello cc5a1232");
+alert("Hello cc5a1");
 
 async function fetchData(){
 
@@ -14,6 +14,7 @@ async function fetchData(){
     );
 
     alert(JSON.stringify(res))
+    console.log(res)
 
     return res
 };

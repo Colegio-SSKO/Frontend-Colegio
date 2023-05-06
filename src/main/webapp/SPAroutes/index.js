@@ -354,7 +354,7 @@ const teacherRoutes =  {
         template : "/SPAroutesTeacher/index_double.jsp",
         path_left:"/views/View_course2_left.jsp",
         path_right: "/views/View_course2_right.jsp",
-        script: "../static/viewsJS/teacher_view_courses.js",
+        script: "../static/viewsJS/teacher_view_courses1.js",
         title: "My Courses",
         data : "This is the contact page"
     },
