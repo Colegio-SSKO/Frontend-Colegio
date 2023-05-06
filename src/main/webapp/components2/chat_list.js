@@ -40,7 +40,7 @@ class Chat_list extends HTMLElement {
 
         this.innerHTML = `
            <div class="chat-list">
-                <div class="chatbar">Message Box</div>
+                <div class="chatbar fnt-mid fnt fnt-bold">Your Sessions</div>
                     <div class="chat-headers fadeInanimation">
             
                  `+ htmlcontent +`

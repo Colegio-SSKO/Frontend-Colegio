@@ -4,6 +4,7 @@ class Signup extends HTMLElement {
         this.innerHTML = `
                        <section class="signup">
                           <div class="hero">
+                          <form method="post">
                               <div class="form">
                                 <h1 class="fnt fnt-extraBold fnt-extraLarge">Create your free account</h1>
                                 <div class="inputs">
@@ -25,7 +26,7 @@ class Signup extends HTMLElement {
                             
                             
                                     <label for="telnum" class="fnt fnt-mid fnt-bold">Telephone Number</label>
-                                    <input name="telnum" id="telnum" class="fnt fnt-mid fnt-bold" type="text" required>
+                                    <input name="telnum" id="telnum" class="fnt fnt-mid fnt-bold" type="number" minlength="10" maxlength="10" required>
                                         
                                     <label for="city" class="fnt fnt-mid fnt-bold">City:</label>
                                     <select id="city" name="city" class="fnt fnt-mid fnt-bold" required>
@@ -87,6 +88,8 @@ class Signup extends HTMLElement {
                                 </div>
                                 <button id="js-signin-btn" class="btn btn-solid fnt fnt-mid fnt-bold"> Sign in </button>
                               </div>
+                          </form>
+                              
     <!--                        </div>-->
                           </div>
                         

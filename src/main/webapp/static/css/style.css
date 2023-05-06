@@ -164,7 +164,7 @@ body {
 }
 
 .open-question-msg {
-    background: #F9F7F7;
+    background: #DBE2EF;
     width: fit-content;
     padding-left: 20px;
     padding-right: 20px;
@@ -1246,7 +1246,7 @@ body {
 
 .small-listed-cont-wrap:hover{
     box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px;
-    transform: scale(1.03);
+    transform: scale(1.01);
 }
 
 .teacher-card-wrap {
@@ -2638,27 +2638,38 @@ a{
 }
 
 .chatbar{
-    background: rgb(222, 79, 68);
-    height: 40px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: #3F72AF;
+    height: 50px;
     width: 100%;
+    color: #F9F7F7;
+    border-top: 2px solid #3F72AF;
+    border-left: 2px solid #3F72AF;
+    border-right: 2px solid #3F72AF;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    box-shadow: rgba(0,0,0,0.3) 0px 1px 4px;
 }
 
 .chat-headers{
-    background: #656565;
+    background: #F9F7F7;
     padding: 20px;
-    height: 200px;
+    height: 300px;
+    border-bottom: 2px solid #3F72AF;
+    border-left: 2px solid #3F72AF;
+    border-right: 2px solid #3F72AF;
     /*overflow-y: auto;*/
+    box-shadow: rgba(0,0,0,0.3) 0px 1px 4px;
     z-index: 100000;
 }
 
 .chat-msgs{
     position: absolute;
-    right: 212px;
+    right: 286px;
     transition: 0.5s;
     bottom:10px;
     width: 450px;
@@ -2672,18 +2683,18 @@ a{
 
 .chat-list-hide{
     position: absolute;
-    bottom: 20px;
-    right: -244px;
+    bottom: 10px;
+    right: 20px;
     transition: 0.5s;
     overflow-y: hidden;
 }
 
 .chat-list{
     position: absolute;
-    bottom: -210px;
+    bottom: -300px;
     transition: 0.5s;
     overflow-y: hidden;
-    right: -206px;
+    right: 20px;
 }
 
 
@@ -2704,8 +2715,9 @@ a{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: #9ce787;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
+    background: #F9F7F7;
+    border: 2px solid #3F72AF;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 4px;
     padding: 20px;
 }
 .open-question-message-wrap {
@@ -2722,7 +2734,7 @@ a{
 }
 
 .open-question-msg {
-    background: #F9F7F7;
+    background: #DBE2EF;
     width: fit-content;
     padding-left: 20px;
     padding-right: 20px;
@@ -2744,6 +2756,7 @@ a{
     border-top-left-radius: 40px;
     border-bottom-left-radius: 0px;
     color: #6D6D6D;
+
 }
 
 
@@ -2752,6 +2765,7 @@ a{
     border-top-right-radius: 40px;
     border-bottom-right-radius: 0px;
     float: right;
+
     background-color: #112D4E;
     color: #F9F7F7;
 }
@@ -2819,7 +2833,7 @@ a{
     justify-content: flex-start;
     border: 1px solid black;
     padding: 10px;
-    width: 200px;
+    width: 220px;
     overflow-x: hidden;
     border-radius: 5px;
 }

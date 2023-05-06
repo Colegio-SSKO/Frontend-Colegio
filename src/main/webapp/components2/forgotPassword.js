@@ -3,7 +3,8 @@ class ForgotPassword extends HTMLElement {
 
         this.innerHTML = `
                   <section class="signup">
-                          <div class="hero">
+                        <form method="post" name="form">
+                             <div class="hero">
                               <div class="form">
                                 <h1 class="fnt fnt-extraBold fnt-extraLarge">Forgot Your Password?</h1>
                                 <div id="js-forgotpassword-input-wrap" class="inputs">    
@@ -13,12 +14,13 @@ class ForgotPassword extends HTMLElement {
                                         <label for="email" class="fnt fnt-mid fnt-bold">Enter account email</label>
                                         <input id="js-forgot-password-email" class="fnt fnt-mid fnt-bold" type="email" required>
                                       </div>    
-                                      <button id="js-forgot-password-send-btn" class="btn btn-solid  fnt fnt-mid fnt-bold"> Send</button>
+                                      <button id="js-forgot-password-send-btn" class="btn btn-solid fnt fnt-mid fnt-bold" type="submit"> Send</button>
                                 </div>
                                 
                               </div>
     <!--                        </div>-->
                           </div>
+                        </form>
                         
                           <div class="footer">
                             <div class="footer-menu">

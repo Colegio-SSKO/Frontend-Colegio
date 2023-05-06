@@ -220,6 +220,7 @@
     <script src="../components2/chat.js"></script>
     <script src="../components2/item_buying_right.js"></script>
     <script src="../components2/item_buying_right_quiz.js"></script>
+    <script src="../components2/quiz_results.js"></script>
 
 
 

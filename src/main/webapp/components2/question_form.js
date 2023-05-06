@@ -2,7 +2,7 @@ class Question_form extends HTMLElement {
     connectedCallback() {
 
         this.innerHTML = `
-        <form>
+        <form method="post">
             <div class="question_form">
                 <h3 class="fnt fnt-bold fnt-large">Lets publish your question</h3><br>
                 <div class="inputs">
@@ -14,12 +14,12 @@ class Question_form extends HTMLElement {
         
                     <div class="input-field">
                         <label for="" class="fnt fnt-bold fnt-mid">Enter your question, describe what you want.</label><br><br>
-                        <textarea id="js-question-upload-description" class="description_box fnt fnt-mid fnt-light" name="description_box" rows="7" cols="40" placeholder="Enter question description here"></textarea>
+                        <textarea id="js-question-upload-description" class="description_box fnt fnt-mid fnt-light" name="description_box" rows="7" cols="40" placeholder="Enter question description here" required></textarea>
                     </div><br><br>
                     
                      <div class="input-field">
                         <p for="" class="fnt fnt-mid fnt-bold">Select the most appropriate subject for your question.</p><br>
-                        <select id="js-question-upload-subject" class="fnt-bold fnt fnt-mid">
+                        <select id="js-question-upload-subject" class="fnt-bold fnt fnt-mid" required>
                             <option class="fnt fnt-mid fnt-bold" value="Science">Science</option>
                             <option class="fnt fnt-mid fnt-bold" value="Mathematics">Mathematics</option>
                             <option class="fnt fnt-mid fnt-bold" value="English">English</option>
@@ -31,7 +31,7 @@ class Question_form extends HTMLElement {
                             <p style="color: #767676; margin: 10px 0;" class="fnt fnt-mid fnt-light">Upload your question image here. <br>Important Guideline : At least 564x368 pixels; jpeg, jpg, or png</p></label>
                     </div>
         
-                    <input id="js-thumbnail-upload" type="file" class="myFile fnt fnt-light fnt-mid" name="filename"><br><br>
+                    <input id="js-thumbnail-upload" type="file" class="myFile fnt fnt-light fnt-mid" name="filename" required><br><br>
         
                     <div class="upload_pic"></div><br><br>
         

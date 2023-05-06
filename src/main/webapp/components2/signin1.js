@@ -4,7 +4,8 @@ class Signin1 extends HTMLElement {
         this.innerHTML = `
                   <section class="signup">
                           <div class="hero">
-                              <div class="form">
+                          <form method="post" >
+                                <div class="form">
                                 <h1 class="fnt fnt-extraBold fnt-extraLarge">Wellcome To Colegio</h1>
                                 <div class="inputs">
                         
@@ -20,8 +21,10 @@ class Signin1 extends HTMLElement {
                                     <label class="fnt fnt-mid fnt-bold" for="">Forgot Your <span><a href="/auth/forgotPassword" class="link">Password</a></span> ?</label>
                                   </div>
                                 </div>
-                                <button id="js-signin-btn" class="btn btn-solid fnt fnt-mid fnt-bold"> Sign in </button>
+                                <button id="js-signin-btn" class="btn btn-solid fnt fnt-mid fnt-bold" type="submit"> Sign in </button>
                               </div>
+                          </form>
+                              
     <!--                        </div>-->
                           </div>
                         

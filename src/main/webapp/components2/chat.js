@@ -35,8 +35,9 @@ class Chat extends HTMLElement {
          <div class="chat-container">
           <div class="chat-msgs">
           `+ htmlcontent +`
-                  <chat-list></chat-list>
+                  
            </div>
+           <chat-list></chat-list>
         </div>
         `;
         let html_left = ``;
