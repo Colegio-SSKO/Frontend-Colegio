@@ -1,49 +1,33 @@
 class Chat extends HTMLElement {
 
 
-    connectedCallback() {
+    async connectedCallback() {
 
 
         // let dataString = decodeURIComponent(this.getAttribute('dataString'));
         // let data = JSON.parse(dataString);
 
-        let data = [
-            {
-                "chat_id" : "1",
-                "img_src" : "ss",
-                "qulifi" : "qusadlgggifi",
-                "title" : "title",
-                "description" : "meka susadapiri",
-                "author" : "shano"
-            },            {
-                "chat_id" : "2",
-                "img_src" : "ss",
-                "qulifi" : "quasdlifi",
-                "title" : "title",
-                "description" : "meka supiri",
-                "author" : "shano"
-            },            {
-                "chat_id" : "3",
-                "img_src" : "ss",
-                "qulifi" : "qugqqqqqqggglasdifi",
-                "title" : "titsd le",
-                "description" : "mekasdsd  supis sri",
-                "author" : "shano"
-            },            {
-                "chat_id" : "4",
-                "img_src" : "ss",
-                "qulifi" : "qulifi",
-                "title" : "tiaaatsddsle",
-                "description" : "meka susd  sdsd sdpiri",
-                "author" : "shano"
-            },
-        ]
+        //chat config
+        let data = await fetch("http://localhost:8090/api/users/myQuestions/:"+getUserID(), {
+            method : "GET",
+            credentials : "include"
+        }).then((response)=>
+            response.json()
+
+        );
+        alert(JSON.stringify(data));
+        alert("wedwed")
+
+
 
         let htmlcontent = "";
 
         for (let i of data) {
-            htmlcontent += `<new-chat chat_id="${i["chat_id"]}" img_src="${i["img_src"]}" qulifi="${i["qulifi"]}" title="${i["title"]}" description="${i["description"]}" author="${i["author"]}"></new-chat>
-            `;
+            if (i["status"]== 2){
+                htmlcontent += `<new-chat chat_id="${i["question.question_id"]}" img_src="${i["question_img"]}" qulifi="${i["qualification_level"]}" title="${i["question_title"]}" description="${i["question_description"]}" author="${i["f_name"] + i["l_name"]}"></new-chat>
+                `;
+
+            }
         }
 
         this.innerHTML = `
@@ -55,6 +39,18 @@ class Chat extends HTMLElement {
            </div>
         </div>
         `;
+        let html_left = ``;
+        for (let i of data){
+            if (i["status"]== 2){
+                alert("metanata enwa")
+                html_left += ` <chat-listitem question_id="${i["question.question_id"]}" img_src="${i["question_img"]}" chatname="${i["question_title"]}"></chat-listitem>`;
+            }
+
+        }
+
+
+        document.querySelector(".chat-headers").innerHTML = html_left;
+
 
 
 
