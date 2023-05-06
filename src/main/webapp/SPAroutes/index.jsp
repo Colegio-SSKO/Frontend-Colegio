@@ -225,6 +225,7 @@
 
 
     <script src="../components2/forgotPassword.js"></script>
+    <script src="../components2/commentListItem.js"></script>
 
 
 
