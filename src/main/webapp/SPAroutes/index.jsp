@@ -98,10 +98,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Colegio | Educational Platform</title>
 
 
+<%--    //payhere--%>
 
+    <script type="text/javascript" src="https://www.payhere.lk/lib/payhere.js"></script>
     <script src="basic.js">
 
     </script>
@@ -216,6 +218,8 @@
     <script src="../components2/chat_list_item.js"></script>
     <script src="../components2/chat_new_full.js"></script>
     <script src="../components2/chat.js"></script>
+    <script src="../components2/item_buying_right.js"></script>
+    <script src="../components2/item_buying_right_quiz.js"></script>
 
 
 

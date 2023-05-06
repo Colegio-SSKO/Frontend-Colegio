@@ -4,10 +4,9 @@ class notification_msg extends HTMLElement {
         let date = this.attributes.date.value;
         let time = this.attributes.time.value;
         let img_src = this.attributes.img_src.value;
-        let sender_name = this.attributes.sender_name.value;
         let message = this.attributes.message.value;
         let id = this.attributes.id.value;
-        let notification_id = this.attributes.notification_id.value;
+        // let notification_id = this.attributes.notification_id.value;
         this.innerHTML = `
             <div class="notifications-container">
                 <div class="notification" id="${id}">

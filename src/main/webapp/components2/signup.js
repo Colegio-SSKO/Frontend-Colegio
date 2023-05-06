@@ -18,6 +18,52 @@ class Signup extends HTMLElement {
                                         <input name="lname" id="lname" class="fnt fnt-mid fnt-bold" type="text" required>
                                       </div>
                                  </div>
+                                 
+                                 <div>
+                                    <label for="address" class="fnt fnt-mid fnt-bold">Address:</label>
+                                    <textarea id="address" name="address" rows="4" class="fnt fnt-mid fnt-bold" cols="50" required></textarea>
+                            
+                            
+                                    <label for="telnum" class="fnt fnt-mid fnt-bold">Telephone Number</label>
+                                    <input name="telnum" id="telnum" class="fnt fnt-mid fnt-bold" type="text" required>
+                                        
+                                    <label for="city" class="fnt fnt-mid fnt-bold">City:</label>
+                                    <select id="city" name="city" class="fnt fnt-mid fnt-bold" required>
+                                        <option class="fnt fnt-mid fnt-bold" value="">Select a city</option>
+                                        <option class="fnt fnt-mid fnt-bold"  value="Colombo">Colombo</option>
+                                        <option class="fnt fnt-mid fnt-bold"  value="Gampaha">Gampaha</option>
+                                        <option class="fnt fnt-mid fnt-bold"  value="Kandy">Kandy</option>
+                                        <option class="fnt fnt-mid fnt-bold"  value="Galle">Galle</option>
+                                        <option class="fnt fnt-mid fnt-bold"  value="Matara">Matara</option>
+                                        <option class="fnt fnt-mid fnt-bold"  value="Jaffna">Jaffna</option>
+                                        <option class="fnt fnt-mid fnt-bold"  value="Batticaloa">Batticaloa</option>
+                                        <option class="fnt fnt-mid fnt-bold"  value="Trincomalee">Trincomalee</option>
+                                        <option class="fnt fnt-mid fnt-bold"  value="Anuradhapura">Anuradhapura</option>
+                                        <option class="fnt fnt-mid fnt-bold"  value="Polonnaruwa">Polonnaruwa</option>
+                                        <option class="fnt fnt-mid fnt-bold"  value="Kurunegala">Kurunegala</option>
+                                        <option class="fnt fnt-mid fnt-bold"  value="Badulla">Badulla</option>
+                                        <option class="fnt fnt-mid fnt-bold"  value="Ratnapura">Ratnapura</option>
+                                        <option class="fnt fnt-mid fnt-bold"  value="Puttalam">Puttalam</option>
+                                        <option class="fnt fnt-mid fnt-bold"  value="Hambantota">Hambantota</option>
+                                        <option class="fnt fnt-mid fnt-bold"  value="Matale">Matale</option>
+                                        <option class="fnt fnt-mid fnt-bold"  value="Nuwara Eliya">Nuwara Eliya</option>
+                                        <option class="fnt fnt-mid fnt-bold"  value="Kalutara">Kalutara</option>
+                                        <option class="fnt fnt-mid fnt-bold"  value="Kegalle">Kegalle</option>
+                                        <option class="fnt fnt-mid fnt-bold"  value="Mullaitivu">Mullaitivu</option>
+                                        <option class="fnt fnt-mid fnt-bold"  value="Mannar">Mannar</option>
+                                        <option class="fnt fnt-mid fnt-bold"  value="Vavuniya">Vavuniya</option>
+                                        <option class="fnt fnt-mid fnt-bold"  value="Kilinochchi">Kilinochchi</option>
+                                        <option class="fnt fnt-mid fnt-bold"  value="Ampara">Ampara</option>
+                                        <option class="fnt fnt-mid fnt-bold"  value="Monaragala">Monaragala</option>
+                                        <option class="fnt fnt-mid fnt-bold"  value="Battaramulla">Battaramulla</option>
+                                        <option class="fnt fnt-mid fnt-bold"  value="Dehiwala-Mount Lavinia">Dehiwala-Mount Lavinia</option>
+                                        <option class="fnt fnt-mid fnt-bold"  value="Moratuwa">Moratuwa</option>
+                                        <option class="fnt fnt-mid fnt-bold"  value="Panadura">Panadura</option>
+                                        <option class="fnt fnt-mid fnt-bold" value="Kotte">Kotte</option>
+                                        <option class="fnt fnt-mid fnt-bold"  value="Piliyandala">Piliyandala</option>
+                                    </select>
+                            
+                                 </div>
                                   
                                   <div class="input-field">
                                     <label for="email" class="fnt fnt-mid fnt-bold">Email Address</label>
@@ -64,8 +110,12 @@ class Signup extends HTMLElement {
         const lname = document.querySelector("#lname");
         const email = document.querySelector("#email");
         const password = document.querySelector("#password");
+        const address = document.querySelector("#address");
+        const tel_num = document.querySelector("#telnum");
+        const city = document.querySelector("#city");
         const cpassword = document.querySelector("#cpassword");
         const submitBtn = document.querySelector("#js-signin-btn");
+
 
 
 
@@ -143,11 +193,15 @@ class Signup extends HTMLElement {
                     "fname" : fname.value,
                     "lname" : lname.value,
                     "email" : email.value,
-                    "password" : password.value
+                    "password" : password.value,
+                    "address" : address.value,
+                    "city" : city.value,
+                    "tel_num" : tel_num.value
 
                 }
 
 //, body : `${data}`
+                alert(JSON.stringify(data))
                 let response = await fetch("http://localhost:8090/api/authenticate/signup", {method : "POST",  body : JSON.stringify(data), credentials: 'include'}).then((response) => {
                     return response.json();
                 });

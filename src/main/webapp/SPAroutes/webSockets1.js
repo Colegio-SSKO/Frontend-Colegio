@@ -26,15 +26,15 @@ async function initiateWebsocket(){
 
             notificationWebSocket.onmessage = (event)=>{
                 alert("notification ekak")
-                alert(event.data)
+                let notification = JSON.parse(event.data);
                 if (window.location.pathname == "/notification"){
-                    let newNotification = document.createElement('notification-message5');
-                    newNotification.setAttribute("date", "2020-02-02")
-                    newNotification.setAttribute("time","Now")
-                    newNotification.setAttribute("id", "1")
-                    newNotification.setAttribute("sender_name", "mama thamai")
-                    newNotification.setAttribute("message", "this is the message")
-                    newNotification.setAttribute("img_src", "/img_src");
+                    let newNotification = document.createElement('notification-0message');
+                    newNotification.setAttribute("date", notification["date"])
+                    newNotification.setAttribute("time",notification["time"])
+                    newNotification.setAttribute("id", notification["id"] || "")
+                    newNotification.setAttribute("message", notification["message"])
+                    newNotification.setAttribute("img_src", notification["img_src"]);
+
                     document.querySelector('.cont-body-content').appendChild(newNotification)
                 }
                 else{
