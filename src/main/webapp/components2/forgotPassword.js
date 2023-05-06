@@ -40,7 +40,6 @@ class ForgotPassword extends HTMLElement {
             let emailReq = {
                 "email" : document.querySelector('#js-forgot-password-email').value
             }
-            alert("send ek wed")
             document.querySelector('#js-forgotpassword-input-wrap').innerHTML = `
                     <div class="preloader">
                         <div class="spinner"></div>
@@ -55,7 +54,18 @@ class ForgotPassword extends HTMLElement {
                 return response.json();
             })
             if (response["isError"]){
-                alert(response["message"])
+                let popup = document.querySelector(".popup-content");
+                document.querySelector(".popup-container").style.display = "flex";
+                popup.innerHTML = `
+                            <img src="../static/img/components_images/error.jpg" alt="">
+                            <h2 class="fnt fnt-bold fnt-large">${response["message"]}</h2>
+                            <button class="btn btn-primary " id="ok-btn">OK</button>
+    
+                    `;
+                let ok_btn = document.getElementById("ok-btn");
+                ok_btn.addEventListener("click", ()=>{
+                    document.querySelector(".popup-container").style.display = "none";
+                })
             }
             else {
                 document.querySelector('#js-forgotpassword-input-wrap').innerHTML = `
@@ -80,11 +90,33 @@ class ForgotPassword extends HTMLElement {
                         return response.json();
                     })
                     if (response["isError"]){
-                        alert(response["message"])
+                        let popup = document.querySelector(".popup-content");
+                        document.querySelector(".popup-container").style.display = "flex";
+                        popup.innerHTML = `
+                            <img src="../static/img/components_images/error.jpg" alt="">
+                            <h2 class="fnt fnt-bold fnt-large">${response["isError"]}</h2>
+                            <button class="btn btn-primary " id="ok-btn">OK</button>
+    
+                    `;
+                        let ok_btn = document.getElementById("ok-btn");
+                        ok_btn.addEventListener("click", ()=>{
+                            document.querySelector(".popup-container").style.display = "none";
+                        })
                     }
                     else {
+                        let popup = document.querySelector(".popup-content");
+                        document.querySelector(".popup-container").style.display = "flex";
+                        popup.innerHTML = `
+                            <img src="../static/img/components_images/error.jpg" alt="">
+                            <h2 class="fnt fnt-bold fnt-large">${response["message"]}</h2>
+                            <button class="btn btn-primary " id="ok-btn">OK</button>
+    
+                    `;
+                        let ok_btn = document.getElementById("ok-btn");
+                        ok_btn.addEventListener("click", ()=>{
+                            document.querySelector(".popup-container").style.display = "none";
+                        })
 
-                        alert(response["message"])
                         document.querySelector('#js-forgotpassword-input-wrap').innerHTML = `
                             <label class="fnt fnt-mid fnt-bold">Enter a new password</label>
                             <input id="js-forgot-password-newPassword" class="fnt fnt-mid fnt-bold" type="text" required>
@@ -107,7 +139,6 @@ class ForgotPassword extends HTMLElement {
                                     "otp" : otpReq["otp"],
                                     "password" : document.querySelector('#js-forgot-password-newPassword').value
                                 }
-                                alert(JSON.stringify(newPassword))
 
                                 let passwordResp = await fetch("http://localhost:8090/api/authenticate/changePassword/", {
                                     method : "POST",
@@ -118,10 +149,20 @@ class ForgotPassword extends HTMLElement {
                                 })
 
                                 if (passwordResp["isError"]){
-                                    alert(passwordResp["message"]);
+                                    let popup = document.querySelector(".popup-content");
+                                    document.querySelector(".popup-container").style.display = "flex";
+                                    popup.innerHTML = `
+                                                <img src="../static/img/components_images/error.jpg" alt="">
+                                                <h2 class="fnt fnt-bold fnt-large">${passwordResp["message"]}</h2>
+                                                <button class="btn btn-primary " id="ok-btn">OK</button>
+                        
+                                        `;
+                                    let ok_btn = document.getElementById("ok-btn");
+                                    ok_btn.addEventListener("click", ()=>{
+                                        document.querySelector(".popup-container").style.display = "none";
+                                    })
                                 }
                                 else{
-                                    alert(passwordResp["message"]);
                                     window.history.pushState({}, "", "/auth/signin");
                                     urlLocation();
                                 }
