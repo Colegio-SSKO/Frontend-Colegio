@@ -101,7 +101,7 @@ const studentRoutes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/Question_student_1_left.jsp",
         path_right: "/views/Question_student_1_right.jsp",
-        script: "../static/viewsJS/Student_question.js",
+        script: "../static/viewsJS/Student_question1.js",
         title: "Question",
         data : "This is the Question page"
     },
@@ -374,7 +374,7 @@ const teacherRoutes =  {
         template : "/SPAroutesTeacher/index_double.jsp",
         path_left:"/views/Question_student_1_left.jsp",
         path_right: "/views/Question_student_1_right.jsp",
-        script: "../static/viewsJS/Student_question.js",
+        script: "../static/viewsJS/Student_question1.js",
         title: "Question",
         data : "This is the Question page"
     },
@@ -689,7 +689,7 @@ const organizationRoutes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/Question_student_1_left.jsp",
         path_right: "/views/Question_student_1_right.jsp",
-        script: "../static/viewsJS/Student_question.js",
+        script: "../static/viewsJS/Student_question1.js",
         title: "Question",
         data : "This is the Question page"
     },
