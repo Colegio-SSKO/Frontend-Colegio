@@ -34,24 +34,20 @@ class Profile_upgrade_form extends HTMLElement {
             event.preventDefault();
 
             alert("meka tm create course")
+
             //thumbnail
             let formData = new FormData();
 
             formData.append( 'thumbnailImage' ,thumbnailUpload.files[0]);
 
-            //videos
-            // courseVideoUploads = document.querySelectorAll(".js-course-video-uploader");
-            // courseVideoUploads.forEach((video)=>{
-            //
-            //     formData.append('videoFiles', video.files[0]);
-            // })
+
 
 
             //send save files request
             let fileUploadresponseme = await fetch('http://localhost:8080/api/upgradeToteacher/', {method : "POST", body:formData})
                 .then((res)=>{
                     alert(JSON.stringify(res));
-                    return res
+                    return res.json();
                 })
 
 
@@ -69,7 +65,7 @@ class Profile_upgrade_form extends HTMLElement {
                     "userId" : getUserID(),
                     "education_level" : education_level.value,
                     "references" : references.value,
-                    "certificate" : "kejnf",
+                    "certificate" : fileUploadresponseme["thumbnail"],
                 }
 
 
@@ -80,7 +76,7 @@ class Profile_upgrade_form extends HTMLElement {
                     credentials : "include"
                 })
                     .then((res)=>{
-                        return res
+                        return res.json()
                     })
 
                 if(!textUploadresponseme["isError"]){

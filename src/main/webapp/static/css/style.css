@@ -2757,6 +2757,69 @@ a{
 
 
 
+
+/*popup CSS*/
+
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.blur-background {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+}
+
+.popup-content {
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ccc;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.popup-content img{
+    width: 100px;
+    height: 100px;
+}
+
+.popup-content button{
+    background: #46344e;
+    padding: 5px 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+    color: white;
+
+}
+
+
+
 /*------------ notifications-----------------*/
 
 

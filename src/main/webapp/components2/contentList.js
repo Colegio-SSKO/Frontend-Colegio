@@ -4,6 +4,7 @@ class ContentList extends HTMLElement {
 
         let dataString = decodeURIComponent(this.getAttribute('dataString'));
         let data = JSON.parse(dataString);
+        alert(JSON.stringify(data));
 
 
         let htmlcontent = "";

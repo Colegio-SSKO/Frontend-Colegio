@@ -31,7 +31,7 @@ class Question_form extends HTMLElement {
                             <p style="color: #767676; margin: 10px 0;" class="fnt fnt-mid fnt-light">Upload your question image here. <br>Important Guideline : At least 564x368 pixels; jpeg, jpg, or png</p></label>
                     </div>
         
-                    <input type="file" class="myFile fnt fnt-light fnt-mid" name="filename"><br><br>
+                    <input id="js-thumbnail-upload" type="file" class="myFile fnt fnt-light fnt-mid" name="filename"><br><br>
         
                     <div class="upload_pic"></div><br><br>
         
@@ -80,10 +80,11 @@ class Question_form extends HTMLElement {
         let subject = document.querySelector('#js-question-upload-subject');
         let description = document.querySelector('#js-question-upload-description');
         let teachers = document.querySelectorAll('.question-upload-container-option-box');
+        let thumbnailUpload = document.querySelector("#js-thumbnail-upload");
         alert(teachers.length)
 
         
-        document.querySelector('#js-question-upload-submit-button').addEventListener('click', (event)=>{
+        document.querySelector('#js-question-upload-submit-button').addEventListener('click', async (event)=>{
             event.preventDefault();
             alert("publish ek wed");
 
@@ -99,32 +100,57 @@ class Question_form extends HTMLElement {
                 teacherData.push(newTag);
             })
 
-            let questionData = {
+            let formData = new FormData();
+
+            formData.append( 'thumbnailImage' ,thumbnailUpload.files[0]);
+
+            let fileUploadresponseme = await fetch('http://localhost:8080/api/publishQuestion/', {method : "POST", body:formData})
+                .then((res)=>{
+                    alert(JSON.stringify(res));
+                    return res.json();
+                })
+
+            if(!fileUploadresponseme["isError"]){
+                alert("Upload una");
+                alert(JSON.stringify(fileUploadresponseme["thumbnail"]));
+
+            let textData = {
                 "title" : title.value,
                 "subject" : 10,//change this later
                 "description" : description.value,
-                "teachers" : teacherData
+                "teachers" : teacherData,
+                "image" : fileUploadresponseme["thumbnail"],
             }
-            alert(JSON.stringify(questionData))
+
+            alert(JSON.stringify(textData))
 
             //send the request
-            let uploadresponse = fetch('http://localhost:8090/api/users/publish_question/:1', {
+            let uploadresponse = fetch('http://localhost:8090/api/users/publish_question/:'+getUserID(), {
                 method : "POST",
-                body:JSON.stringify(questionData),
+                body:JSON.stringify(textData),
                 credentials : "include"
             })
                 .then((res)=>{
-                    return res
+                    return res.json();
                 })
 
-            if(uploadresponse.ok){
-                alert("Upload una");
+                if(!textUploadresponseme["isError"]){
+                    alert("Upload una");
+                }
+                else{
+                    alert("error ekak oi")
+                }
+
             }
             else{
                 alert("error ekak oi")
             }
 
+
+
+            formData.append('textData', JSON.stringify(textData));
         })
+
 
     }
 }
