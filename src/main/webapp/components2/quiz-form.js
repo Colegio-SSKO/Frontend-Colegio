@@ -1,7 +1,7 @@
 class QuizForm extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-             <form>
+             <form method="post">
             <div class="quiz_form">
                 <h3 class="fnt fnt-bold fnt-large">Lets create your Quiz</h3><br>
                 <div class="inputs">
@@ -12,7 +12,7 @@ class QuizForm extends HTMLElement {
     
                     <div class="input-field">
                         <p for="" class="fnt fnt-mid fnt-bold">Select the most appropriate category for your quiz.</p><br><br>
-                        <select id="js-quiz-upload-subject">
+                        <select id="js-quiz-upload-subject" required>
                             <option value="Science">Science</option>
                             <option value="Mathematics">Mathematics</option>
                             <option value="English">English</option>
@@ -21,7 +21,7 @@ class QuizForm extends HTMLElement {
     
                     <div class="input-field">
                         <label for="" class="fnt fnt-mid fnt-bold">Give your quiz a good description.</label><br><br>
-                        <textarea id="js-quiz-upload-description" class="fnt fnt-mid fnt-light description_box" name="description_box" rows="7" cols="40" placeholder="Enter quiz description here"></textarea>
+                        <textarea id="js-quiz-upload-description" class="fnt fnt-mid fnt-light description_box" name="description_box" rows="7" cols="40" placeholder="Enter quiz description here" required></textarea>
                     </div><br><br>
                     
                     <div class="input-field">
@@ -34,7 +34,7 @@ class QuizForm extends HTMLElement {
                             <p style="color: #767676; margin: 10px 0;" class="fnt fnt-mid fnt-light">your quiz image here. <br>Important Guideline : At least 564x368 pixels; jpeg, jpg, or png</p></label>
                     </div>
     
-                    <input type="file" id="js-quiz-upload-thumbnail-upload" class=" myFile fnt fnt-light fnt-mid" name="thumbnail"><br><br>
+                    <input type="file" id="js-quiz-upload-thumbnail-upload" class=" myFile fnt fnt-light fnt-mid" name="thumbnail" required><br><br>
     
                     <div class="upload_pic"></div><br><br>
     
@@ -55,7 +55,7 @@ class QuizForm extends HTMLElement {
                                 
                                 <!--                                correct answerr-->
                                 <p class="fnt fnt-mid fnt-bold">Correct Answer</p>
-                                <select id="js-quiz-upload-answer">
+                                <select id="js-quiz-upload-answer" required>
                                     <option value="opt1">Option 01</option>
                                     <option value="opt2">Option 02</option>
                                     <option value="opt3">Option 03</option>
@@ -67,7 +67,7 @@ class QuizForm extends HTMLElement {
                     </div>
                     
 <!--                    remove this lator-->
-                    <button id="js-quiz-upload-submit-button" class="btn btn-outlined btn-large">Create Quiz</button>
+                    <button id="js-quiz-upload-submit-button" class="btn btn-outlined btn-large" type="submit">Create Quiz</button>
                      <button id="js-quiz-upload-preview-button" class="btn btn-outlined btn-large">Preview</button>
                 </div>
             </div>

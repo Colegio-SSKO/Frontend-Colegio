@@ -1,7 +1,7 @@
 class CourseForm extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-             <form>
+             <form method="post">
             <div class="course_form">
                 <h3 class="fnt fnt-bold fnt-large">Lets create your Course</h3><br>
                 <div class="inputs">
@@ -12,7 +12,7 @@ class CourseForm extends HTMLElement {
     
                     <div class="input-field">
                         <p for="" class="fnt fnt-mid fnt-bold">Select the most appropriate category for your course.</p><br>
-                        <select id="js-course-upload-subject" class="fnt-bold fnt fnt-mid">
+                        <select id="js-course-upload-subject" class="fnt-bold fnt fnt-mid" required>
                             <option class="fnt-bold fnt fnt-mid" value="Science">Science</option>
                             <option class="fnt-bold fnt fnt-mid" value="Mathematics">Mathematics</option>
                             <option class="fnt-bold fnt fnt-mid" value="English">English</option>
@@ -21,7 +21,7 @@ class CourseForm extends HTMLElement {
     
                     <div class="input-field">
                         <label for="" class="fnt fnt-mid fnt-bold">Give your course a good description.</label><br>
-                        <textarea id="js-course-upload-description" class="fnt fnt-mid fnt-light description_box" name="description_box" rows="7" cols="40" placeholder="Enter course description here"></textarea>
+                        <textarea id="js-course-upload-description" class="fnt fnt-mid fnt-light description_box" name="description_box" rows="7" cols="40" placeholder="Enter course description here" required></textarea>
                     </div><br><br>
                     
                     <div class="input-field">
@@ -34,7 +34,7 @@ class CourseForm extends HTMLElement {
                             <p style="color: #767676; margin: 10px 0;" class="fnt fnt-mid fnt-light">your course image here. <br>Important Guideline : At least 564x368 pixels; jpeg, jpg, or png</p></label>
                     </div>
     
-                    <input type="file" id="js-course-upload-thumbnail-upload" class=" myFile fnt fnt-light fnt-mid" name="thumbnail"><br>
+                    <input type="file" id="js-course-upload-thumbnail-upload" class=" myFile fnt fnt-light fnt-mid" name="thumbnail" required><br>
                     <div class="upload_pic"></div><br><br>
     
                     <div class="input-field">
@@ -56,7 +56,7 @@ class CourseForm extends HTMLElement {
                     </div>
                     
 <!--                    remove this lator-->
-                    <button id="js-course-upload-submit-button" class="btn btn-solid btn-large">Create Course</button>
+                    <button id="js-course-upload-submit-button" class="btn btn-solid btn-large" type="submit">Create Course</button>
                 </div>
             </div>
     </form>

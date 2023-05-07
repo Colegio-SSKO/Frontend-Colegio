@@ -9,14 +9,13 @@ class Profile_upgrade_form extends HTMLElement {
                 <textarea id="education_level" class="upgrade-inputs upgrade-textarea edu_level fnt fnt-bold fnt-mid" id="education" name="education" rows="5" required></textarea>
                 
                 <label class="upgrade-label fnt fnt-bold fnt-large" for="certification">Qulification Certifications:</label>
-                <input type="file" id="js-thumbnail-upload" class=" myFile fnt fnt-light fnt-mid" name="thumbnail">
+                <input type="file" id="js-thumbnail-upload" class=" myFile fnt fnt-light fnt-mid" name="thumbnail" required>
                 
                 <label class="upgrade-label fnt fnt-bold fnt-large" for="references">References:</label>
-                <textarea id="references" class="upgrade-inputs upgrade-textarea refer fnt fnt-bold fnt-mid" id="references" name="references" rows="5"></textarea>
-                
+                <textarea id="references" class="upgrade-inputs upgrade-textarea refer fnt fnt-bold fnt-mid" id="references" name="references" rows="15" required></textarea>
                 
                 <button class="btn btn-large btn-outlined fnt fnt-mid fnt-bold " id="submit_btn" type="submit">Submit</button>
-              </form>
+            </form>
               
         </div>
       </div>

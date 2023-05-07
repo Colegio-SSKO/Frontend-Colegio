@@ -28,7 +28,7 @@ function getUserType(){
 
 let temporary_data;
 
-const quizCommentSocket = new WebSocket('ws://localhost:8090/quizCommentsHandler');
+let commentSocket;
 
 //notification socket
 let notificationWebSocket;

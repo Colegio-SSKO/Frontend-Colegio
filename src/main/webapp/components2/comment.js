@@ -8,6 +8,15 @@ class Comment extends HTMLElement {
         let author_title = this.attributes.author_title.value;
         let rating = this.attributes.rating.value;
         let votes = this.attributes.votes.value;
+        let id = this.attributes.id.value;
+        let comments = this.attributes.comments.value;
+
+        let commentDecoded = decodeURIComponent(comments);
+        let commentsJson = JSON.parse(commentDecoded)
+
+        console.log("quizz")
+
+
 
         this.innerHTML = `
         <div class="comment-main">
@@ -47,24 +56,49 @@ class Comment extends HTMLElement {
 
         `;
 
-        let comment = document.querySelector("#js-quiz-comment-value");
         let commentContainer = document.querySelector("#js-quiz-comment-container");
+        let commentElement;
+        console.log(commentsJson)
+        commentsJson.forEach((comment)=>{
+            commentElement = document.createElement('comment-item');
+            commentElement.setAttribute("name", comment["user.f_name"] + comment["user.l_name"]);
+            commentElement.setAttribute("pro_pic", comment["user.pro_pic"]);
+            commentElement.setAttribute("message", comment["comments.message"])
+            commentContainer.appendChild(commentElement)
+        })
+
+
+        let comment = document.querySelector("#js-quiz-comment-value");
+
 
         let sendButton = document.querySelector("#js-quiz-comment-send-btn");
-        sendButton.addEventListener("click" , (ev)=>{
-            quizCommentSocket.send(comment.value);
+        sendButton.addEventListener("click" , async (event)=>{
+            event.preventDefault();
+            let commentData = {
+                "content_id" : id,
+                "message" : comment.value,
+            }
+            alert(JSON.stringify(commentData));
+            let res = await fetch("http://localhost:8090/api/users/addComments/:"+getUserID(),{
+                method : "POST",
+                credentials : "include",
+                body : JSON.stringify(commentData)
+            }).then((response)=>
+                response.json()
+
+            );
             comment.value = "";
         })
 
-        quizCommentSocket.addEventListener('message', (event)=>{
-            commentContainer.innerHTML += `
-                <div class="comment-cmnt-1">
-                    <img src="${getUserProfileImage()}" alt="">
-                    <p class="fnt fnt-mid">${event.data}
-                    </p>
-                </div>
-            `;
-        })
+        // quizCommentSocket.addEventListener('message', (event)=>{
+        //     commentContainer.innerHTML += `
+        //         <div class="comment-cmnt-1">
+        //             <img src="${getUserProfileImage()}" alt="">
+        //             <p class="fnt fnt-mid">${event.data}
+        //             </p>
+        //         </div>
+        //     `;
+        // })
     }
 }
 

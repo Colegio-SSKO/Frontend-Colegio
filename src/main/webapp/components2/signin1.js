@@ -4,7 +4,8 @@ class Signin1 extends HTMLElement {
         this.innerHTML = `
                   <section class="signup">
                           <div class="hero">
-                              <div class="form">
+                          <form method="post" >
+                                <div class="form">
                                 <h1 class="fnt fnt-extraBold fnt-extraLarge">Wellcome To Colegio</h1>
                                 <div class="inputs">
                         
@@ -20,8 +21,10 @@ class Signin1 extends HTMLElement {
                                     <label class="fnt fnt-mid fnt-bold" for="">Forgot Your <span><a href="/auth/forgotPassword" class="link">Password</a></span> ?</label>
                                   </div>
                                 </div>
-                                <button id="js-signin-btn" class="btn btn-solid fnt fnt-mid fnt-bold"> Sign in </button>
+                                <button id="js-signin-btn" class="btn btn-solid fnt fnt-mid fnt-bold" type="submit"> Sign in </button>
                               </div>
+                          </form>
+                              
     <!--                        </div>-->
                           </div>
                         
@@ -42,12 +45,25 @@ class Signin1 extends HTMLElement {
 
 
         const handleSubmit =async (e)=>{
+
+
             e.preventDefault();
             const email = document.querySelector("#email");
             const password = document.querySelector("#password");
 
             if (email.value.length == 0 || password.value.length == 0){
-                alert("Password or email is empty")
+                let popup = document.querySelector(".popup-content");
+                document.querySelector(".popup-container").style.display = "flex";
+                popup.innerHTML = `
+                        <img src="../static/img/components_images/error.jpg" alt="">
+                        <h2 class="fnt fnt-bold fnt-large">Password or email is empty</h2>
+                        <button class="btn btn-primary " id="ok-btn">OK</button>
+
+                `;
+                let ok_btn = document.getElementById("ok-btn");
+                ok_btn.addEventListener("click", ()=>{
+                    document.querySelector(".popup-container").style.display = "none";
+                })
             }
             else{
                 const data = {
@@ -62,14 +78,29 @@ class Signin1 extends HTMLElement {
 
                 let receivedData = await response.json();
                 if(receivedData["isError"]){
-                    alert(receivedData["message"])
+                    let popup = document.querySelector(".popup-content");
+                    document.querySelector(".popup-container").style.display = "flex";
+                    popup.innerHTML = `
+                        <img src="../static/img/components_images/error.jpg" alt="">
+                        <h2 class="fnt fnt-bold fnt-large">${message}</h2>
+                        <button class="btn btn-primary " id="ok-btn">OK</button>
+
+                `;
+
                     password.value = "";
                     email.value = "";
                 }
 
                 else{
-                    alert(receivedData["message"])
 
+                    let popup = document.querySelector(".popup-content");
+                    document.querySelector(".popup-container").style.display = "flex";
+                    popup.innerHTML = `
+                        <img src="../static/img/components_images/success.jpg" alt="">
+                        <h2 class="fnt fnt-bold fnt-large">${receivedData["message"]}</h2>
+                        <button class="btn btn-primary " id="ok-btn">OK</button>
+
+                `;
                     //setting the user data
 
 

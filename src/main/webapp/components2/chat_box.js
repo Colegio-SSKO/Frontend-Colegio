@@ -41,7 +41,7 @@ class Chat_box extends HTMLElement {
         }
 
         this.innerHTML = `
-         <div id="${chatid}" class="open-question-chat fadeInanimation">
+         <div id="Js-question-chat-box${chatid}" class="open-question-chat fadeInanimation">
             
                  `+ htmlcontent +`
         

@@ -101,7 +101,7 @@ const studentRoutes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/Question_student_1_left.jsp",
         path_right: "/views/Question_student_1_right.jsp",
-        script: "../static/viewsJS/Student_question.js",
+        script: "../static/viewsJS/Student_question1.js",
         title: "Question",
         data : "This is the Question page"
     },
@@ -354,7 +354,7 @@ const teacherRoutes =  {
         template : "/SPAroutesTeacher/index_double.jsp",
         path_left:"/views/View_course2_left.jsp",
         path_right: "/views/View_course2_right.jsp",
-        script: "../static/viewsJS/teacher_view_courses.js",
+        script: "../static/viewsJS/teacher_view_courses1.js",
         title: "My Courses",
         data : "This is the contact page"
     },
@@ -374,7 +374,7 @@ const teacherRoutes =  {
         template : "/SPAroutesTeacher/index_double.jsp",
         path_left:"/views/Question_student_1_left.jsp",
         path_right: "/views/Question_student_1_right.jsp",
-        script: "../static/viewsJS/Student_question.js",
+        script: "../static/viewsJS/Student_question1.js",
         title: "Question",
         data : "This is the Question page"
     },
@@ -425,7 +425,7 @@ const teacherRoutes =  {
         template : "/SPAroutesTeacher/index_double.jsp",
         path_left:"/views/Quiz_teacher_org1_left.jsp",
         path_right: "/views/Quiz_teacher_org1_right.jsp",
-        script: "../static/viewsJS/teacher_view_quizzes.js",
+        script: "../static/viewsJS/teacher_view_quizzes1.js",
         title: "Quizzes",
         data : "This is the quiz page"
     },
@@ -689,7 +689,7 @@ const organizationRoutes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/Question_student_1_left.jsp",
         path_right: "/views/Question_student_1_right.jsp",
-        script: "../static/viewsJS/Student_question.js",
+        script: "../static/viewsJS/Student_question1.js",
         title: "Question",
         data : "This is the Question page"
     },
@@ -990,15 +990,15 @@ const handleAuthRoutes = async (location) => {
     //check is signup
     let pageContent = "";
     if(location.includes("signin")){
-        pageContent = `<sign-in></sign-in>`;
+        pageContent = `<pop-up></pop-up><sign-in></sign-in>`;
 
         alert(pageContent);
     }
     else if (location.includes("signup")){
-        pageContent = `<sign-up></sign-up>`;
+        pageContent = `<pop-up></pop-up><sign-up></sign-up>`;
     }
     else if(location.includes("forgotPassword")) {
-        pageContent = `<forgot-password></forgot-password>`;
+        pageContent = `<pop-up></pop-up><forgot-password></forgot-password>`;
     }
 
     else{

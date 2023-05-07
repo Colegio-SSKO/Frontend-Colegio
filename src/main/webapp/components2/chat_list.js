@@ -2,30 +2,30 @@ class Chat_list extends HTMLElement {
     connectedCallback() {
 
 
-       let data = [
-            {
-                "chat_id" : "1",
-                "chatname": "kavinda",
-                "img_src": "sdsa"
-            },
-
-            {
-                "chat_id" : "2",
-                "img_src": "sdsa",
-                "chatname": "sachini"
-            },
-
-            {
-                "chat_id" : "3",
-                "img_src": "sdsa",
-                "chatname": "senith"
-            },
-            {
-                "chat_id" : "4",
-                "img_src": "sdsa",
-                "chatname": "bosa"
-            }
-        ]
+       // let data = [
+       //      {
+       //          "chat_id" : "1",
+       //          "chatname": "kavinda",
+       //          "img_src": "sdsa"
+       //      },
+       //
+       //      {
+       //          "chat_id" : "2",
+       //          "img_src": "sdsa",
+       //          "chatname": "sachini"
+       //      },
+       //
+       //      {
+       //          "chat_id" : "3",
+       //          "img_src": "sdsa",
+       //          "chatname": "senith"
+       //      },
+       //      {
+       //          "chat_id" : "4",
+       //          "img_src": "sdsa",
+       //          "chatname": "bosa"
+       //      }
+       //  ]
 
         // let dataString = decodeURIComponent(this.getAttribute('dataString'));
         // let data = JSON.parse(dataString);
@@ -40,7 +40,7 @@ class Chat_list extends HTMLElement {
 
         this.innerHTML = `
            <div class="chat-list">
-                <div class="chatbar">Message Box</div>
+                <div class="chatbar fnt-mid fnt fnt-bold">Your Sessions</div>
                     <div class="chat-headers fadeInanimation">
             
                  `+ htmlcontent +`

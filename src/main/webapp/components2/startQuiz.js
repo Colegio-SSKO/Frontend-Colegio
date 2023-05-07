@@ -9,11 +9,16 @@ class StartQuiz extends HTMLElement {
         let author_title = this.attributes.author_title.value;
         let rating = this.attributes.rating.value;
         let votes = this.attributes.votes.value;
+        let comments = this.attributes.comments.value;
+
+        // let commentDecoded = decodeURIComponent(comments);
+        // let commentsJson = JSON.parse(commentDecoded)
+        // console.log(commentsJson)
 
 
         this.innerHTML = `
-            <div class="starQuiz">
-                <quiz-comment rating="${rating}" votes="${votes}" img_src="${img_src}" title="${title}" description="${description}" author="${author}" author_title="${author_title}"></quiz-comment>
+            <div class="starQuiz" id="js-start-quiz-id${quiz_id}">
+                <quiz-comment comments="${comments}" id="${quiz_id}" rating="${rating}" votes="${votes}" img_src="${img_src}" title="${title}" description="${description}" author="${author}" author_title="${author_title}"></quiz-comment>
                 <button class="js-startquiz-start-btn btn btn-a btn-large btn-solid" id="${quiz_id}">Start Quiz</button>
             </div>
             
