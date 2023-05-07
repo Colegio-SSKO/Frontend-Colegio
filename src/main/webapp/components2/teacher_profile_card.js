@@ -9,22 +9,24 @@ class Teacher_profile_card extends HTMLElement {
         let tag = this.attributes.tag.value;
 
         this.innerHTML = `
-        <a class="all_courses fnt fnt-bold fnt-mid" href="/teacher_published_course"><button class="btn btn-outlined btn-large is-a-route fnt fnt-mid fnt-bold btn-a" id="${user_id}">My courses</button></a>
-        <a class="all_quizzes fnt fnt-bold fnt-mid" href="/teacher_published_quiz"><button class="btn btn-outlined btn-large is-a-route fnt fnt-mid fnt-bold btn-a" id="${user_id}">My quizess</button></a>
-        <a class="all_quizzes fnt fnt-bold fnt-mid" href="/teacher_organizations"><button class="btn btn-outlined btn-large is-a-route fnt fnt-mid fnt-bold btn-a" id="${user_id}">My organizations</button></a>
+        <a class="all_courses fnt fnt-bold fnt-mid" href="/teacher_published_course"><button class="btn btn-solid btn-a is-a-route fnt fnt-mid fnt-bold btn-a" id="${user_id}">My courses</button></a>
+        <a class="all_quizzes fnt fnt-bold fnt-mid" href="/teacher_published_quiz"><button class="btn  btn-solid btn-a is-a-route fnt fnt-mid fnt-bold btn-a" id="${user_id}">My quizess</button></a>
+        <a class="all_quizzes fnt fnt-bold fnt-mid" href="/teacher_organizations"><button class="btn  btn-solid btn-a is-a-route fnt fnt-mid fnt-bold btn-a" id="${user_id}">My organizations</button></a>
+        
+        
         <div class="profile-card-wrap" xmlns="http://www.w3.org/1999/html">
         <div class="profile-card-image">
             <img src="${profile_img}" alt="profile picture" srcset="">
         </div>
         <div class="profile-card-details">
-            <h4 class="fnt fnt-bold fnt-mid">${name} <span class="material-icons-outlined"> ${gender}</span></h4>
-            <p class="fnt fnt-mid">${quli}</p><br>
-            <p class="fnt fnt-bold fnt-mid">Tag: ${tag}</p>
+            <h4 class="fnt fnt-bold fnt-large">Name: ${name}</h4><br>
+            <p class="fnt fnt-large fnt-bold">Gender: ${gender}</p><br>
+            <p class="fnt fnt-large fnt-bold">Qualification level: ${quli}</p><br>
+            <p class="fnt fnt-bold fnt-large">Tag: ${tag}</p>
             
         </div>
         <div class="edit-and-delte-btns">
-            <button class="btn btn-solid fnt fnt-bold fnt-mid"><a href="/edit_profileTeacher" >Edit Profile</a></button>
-            <button id="delete-profile" class="btn btn-solid fnt fnt-bold fnt-mid">Delete Profile</button>
+            <a href="/edit_profileTeacher" ><button class="btn-profile is-a-route fnt fnt-bold fnt-mid">Edit Profile</button></a>
         </div>
 
     </div>

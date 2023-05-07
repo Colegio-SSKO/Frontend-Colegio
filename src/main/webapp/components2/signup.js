@@ -86,7 +86,7 @@ class Signup extends HTMLElement {
                                           </div>
                                   </div>
                                   <div class="input-field">
-                                    <label class="fnt fnt-mid fnt-bold" for="">Already have an account? <span><a href="/auth/signin" class="link">Signin</a></span> ?</label>
+                                    <label class="fnt fnt-mid fnt-bold" for="">Already have an account? <span><a href="/auth/signin" class="link">Signin</a></span></label>
                                   </div>
                                 </div>
                                 <button id="js-signin-btn" class="btn btn-solid fnt fnt-mid fnt-bold" type="submit"> Sign Up </button>

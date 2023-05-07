@@ -222,6 +222,8 @@
     <script src="../components2/item_buying_right_quiz.js"></script>
     <script src="../components2/quiz_results.js"></script>
     <script src="../components2/hero.js"></script>
+    <script src="../components2/easy_nav_card.js"></script>
+    <script src="../components2/easy_nav_card_results.js"></script>
 
 
 

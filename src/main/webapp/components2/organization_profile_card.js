@@ -8,21 +8,20 @@ class Organization_profile_card extends HTMLElement {
         let organization_id = this.attributes.organization_id.value;
 
         this.innerHTML = `
-        <button class="btn btn-outlined btn-large"><a class="all_teacher fnt fnt-bold fnt-mid" id="${organization_id}" href="/myorganization_Teachers">Teachers</a></button>
-        <button class="btn btn-outlined btn-large"><a class="fnt fnt-bold fnt-mid" href="">Advertisements</a></button>
+        <a class="all_teacher fnt fnt-bold fnt-mid" id="${organization_id}" href="/myorganization_Teachers"><button class="btn btn-solid btn-a">Teachers</button></a>
+        <a class="fnt fnt-bold fnt-mid" href=""><button class="btn btn-solid btn-a">Advertisements</button></a>
         <div class="profile-card-wrap" xmlns="http://www.w3.org/1999/html">
         <div class="profile-card-image">
             <img src="${profile_img}" alt="profile picture" srcset="">
         </div>
         <div class="profile-card-details">
-            <h4 class="fnt fnt-bold fnt-mid">${name}</h4>
-            <p class="fnt fnt-mid">${address}</p>
-            <p class="fnt fnt-mid">${tel_num}</p>
+            <h4 class="fnt fnt-bold fnt-large">Organization Name: ${name}</h4><br>
+            <p class="fnt fnt-large fnt-bold">Address: ${address}</p><br>
+            <p class="fnt fnt-large fnt-bold">Tel No: ${tel_num}</p>
             
         </div>
         <div class="edit-and-delte-btns">
-            <button class="btn btn-solid fnt fnt-bold fnt-mid"><a href="/edit_profileOrg">Edit Profile</a></button>
-            <button id="delete-profile" class="btn btn-solid fnt fnt-bold fnt-mid">Delete Profile</button>
+            <a href="/edit_profileOrg"><button class="btn-profile is-a-route fnt fnt-bold fnt-mid">Edit Profile</button></a>
         </div>
 
     </div>

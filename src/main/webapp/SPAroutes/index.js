@@ -47,6 +47,17 @@ const studentRoutes = {
         data : "This is the home page"
     },
 
+    "/easy_nav_cards" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Home_content.jsp",
+        script: "../static/viewsJS/easy_nav_cards.js",
+        title: "Home",
+        data : "This is the home page"
+    },
+
+
+
     "/small_cardopen" : {
         isSingle : false,
         template : "/SPAroutes/index_double.jsp",
