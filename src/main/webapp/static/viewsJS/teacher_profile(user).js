@@ -1,4 +1,4 @@
-alert("teacher_profile123");
+
 
 async function fetchData(){
     const req = {
@@ -10,7 +10,7 @@ async function fetchData(){
     let res3 = await fetch(url, {method: "GET"}).then((response) =>
         response.json()
     );
-    alert(res3);
+
     return res3;
 };
 

@@ -1,11 +1,11 @@
-alert("organization ad publish karamu");
+
 
 async function fetchData(){
     const req = {
         "user_ID" : "23"
     }
 
-    alert(temporary_data);
+
 
 //uncomment this when connecting the database
     let url = "http://localhost:8090/api/users/vieworganizationprofile/:"+temporary_data;
@@ -16,7 +16,7 @@ async function fetchData(){
         response.json()
     );
 
-    alert(JSON.stringify(res3));
+
 
     return res3;
 };
@@ -27,8 +27,7 @@ async function fetchData(){
 async function renderSingle() {
     try {
         const data = await fetchData();
-        alert(typeof (data));
-        alert(data);
+
         const res2 = await fetch("http://localhost:8090/api/users/ad_view/:82", {
             method: "GET",
             credentials : "include"

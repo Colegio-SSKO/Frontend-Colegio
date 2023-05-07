@@ -24,7 +24,7 @@ class Publish_coursequiz extends HTMLElement {
             disable.style.display = 'none';
         }
 
-        alert("wedaaaa")
+
 
         let disable = document.querySelectorAll(".teacher_disable_course");
         for (let element of disable){

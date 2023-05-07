@@ -113,7 +113,7 @@
 
 
 </head>
-<body>
+
 
 <div id="components">
     <script src="../components2/accepted.js"></script>
@@ -216,7 +216,7 @@
     <script src="../components2/chat_list.js"></script>
     <script src="../components2/chat_msg.js"></script>
     <script src="../components2/chat_list_item.js"></script>
-    <script src="../components2/chat_new_full.js"></script>
+    <script src="../components2/chat_new_full1.js"></script>
     <script src="../components2/chat.js"></script>
     <script src="../components2/item_buying_right.js"></script>
     <script src="../components2/item_buying_right_quiz.js"></script>
@@ -278,10 +278,11 @@
 
 
 
+
 <div id="mainScript">
     <script src="index.js"></script>
 </div>
-<chat-last></chat-last>
+<%--<chat-last></chat-last>--%>
 
 <%--handle back button--%>
 <script>
@@ -313,7 +314,7 @@
 
 
 
-
+    <div id="js-chat-in-body-tag"></div>
 
 </body>
 </html>

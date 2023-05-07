@@ -1,4 +1,4 @@
-alert("org_teachers");
+
 
 async function fetchData(){
     const req = {
@@ -20,8 +20,7 @@ function renderSingle(){
 
     fetchData().then((data)=>{
 
-        alert(temporary_data);
-        alert(data);
+
         let html = `
         
         <teacher-list dataString="${encodeURIComponent(data)}"></teacher-list>`;
@@ -44,7 +43,7 @@ function renderSingle(){
                     "user_id": user_id
                 }
 
-                alert(user_id);
+
                 // let url = "http://localhost:8090/api/users/Vieworg_teacher";
                 // let res3 = await fetch(url, {method: "POST", body: JSON.stringify(requestBody)}).then((response) =>
                 //     response.json()

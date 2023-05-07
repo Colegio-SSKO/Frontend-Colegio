@@ -65,7 +65,7 @@ class CourseForm extends HTMLElement {
 
         //setting event listener for the video upload icon of first wrapper
         document.querySelector(`#video-upload-wrapper1 #js-video-upload-icon`).addEventListener('click',(event)=>{
-            alert(event.target.parentElement.id);
+
             document.querySelector(`#${event.target.parentElement.id} .js-course-video-uploader`).click();
         })
 
@@ -88,7 +88,7 @@ class CourseForm extends HTMLElement {
         `;
             document.querySelector(".video-upload-wrapper-container").appendChild(newVideoWrapper);
             document.querySelector(`#video-upload-wrapper${wrapperCount} #js-video-upload-icon`).addEventListener('click',(event)=>{
-                alert(event.target.parentElement.id);
+
                 document.querySelector(`#${event.target.parentElement.id} .js-course-video-uploader`).click();
             })
         })
@@ -104,7 +104,7 @@ class CourseForm extends HTMLElement {
         createCourse.addEventListener('click', async (event)=>{
             event.preventDefault();
 
-            alert("meka tm create course")
+
             //thumbnail
             let formData = new FormData();
 
@@ -126,7 +126,7 @@ class CourseForm extends HTMLElement {
             console.log(fileUploadresponse)
 
             if(!fileUploadresponse["isError"]){
-                alert("Upload una");
+
                 //handle text data submission here
                 //textData
                 let courseTitle = document.querySelector("#js-course-upload-title");

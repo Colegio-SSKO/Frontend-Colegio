@@ -3,7 +3,7 @@
 
 async function initiateWebsocket(){
         if (userType>0){
-            alert("ado ado awa2")
+
             const jwtToken = await fetch("http://localhost:8090/api/authenticate/getToken/", {
                 credentials: 'include'
             })
@@ -23,13 +23,13 @@ async function initiateWebsocket(){
                     "token" : jwtToken["token"]
                 };
                 commentSocket.send(JSON.stringify(message));
-                alert("comment opened");
+
             }
             commentSocket.onmessage = (event)=>{
-                alert(event.data)
+
                 let comment = JSON.parse(event.data);
                 let target = document.querySelector(`#js-start-quiz-id${comment["content_id"]}`);
-                alert(`js-start-quiz-id${comment["content_id"]}`)
+
                 if (target){
                     let container = target.querySelector("#js-quiz-comment-container");
                     container.innerHTML += `
@@ -61,7 +61,7 @@ async function initiateWebsocket(){
             };
 
             notificationWebSocket.onmessage = (event)=>{
-                alert("notification ekak")
+
                 let notification = JSON.parse(event.data);
                 if (window.location.pathname == "/notification"){
                     let newNotification = document.createElement('notification-0message');
@@ -92,7 +92,7 @@ async function initiateWebsocket(){
                     "token" : jwtToken["token"]
                 };
                 questionCHat.send(JSON.stringify(message));
-                alert("question chat opned");
+
             }
 
             notificationWebSocket.onerror = (error) => {
@@ -103,9 +103,9 @@ async function initiateWebsocket(){
             questionCHat.addEventListener('message', (event)=>{
                 receivedMessage = JSON.parse(event.data);
 
-                alert("message ek awoo")
+
                 console.log(JSON.stringify(receivedMessage))
-                alert("message ek awoo")
+
 
                 if (receivedMessage["receiver"] == getUserID()){
                     let chatContainer = document.querySelector(`#Js-question-chat-box${receivedMessage["questionId"]}`);
@@ -118,7 +118,7 @@ async function initiateWebsocket(){
                     }
                     else{
                         alert(receivedMessage["message"]);
-                        alert("methnt awe ne")
+
                     }
 
 
@@ -127,7 +127,7 @@ async function initiateWebsocket(){
 
             })
             socketsStartedBefore = true;
-            alert("sockets weda")
+
 
         }
 }

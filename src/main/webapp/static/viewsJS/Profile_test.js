@@ -1,4 +1,4 @@
-alert("dew");
+
 
 async function fetchData() {
     const req = {

@@ -34,21 +34,29 @@ class noti_1msg extends HTMLElement {
             1: {
                 "accept": "",
                 "reject": "",
+                "body" : {
+
+                }
             },
 
             2: {
                 "accept": "",
                 "reject": "",
+                "body" : {
+
+                }
             },
 
             3: {
                 "accept": "",
                 "reject": "",
+                "body" : ""
             },
 
             4: {
                 "accept": "",
                 "reject": "",
+                "body" : ""
             }
         }
 
@@ -79,7 +87,7 @@ class noti_1msg extends HTMLElement {
                     response.json()
 
                 );
-                alert("API eka cl klaa")
+
                 let location = window.location;
                 window.history.pushState({}, "", location);
                 urlLocation();
@@ -114,7 +122,7 @@ class noti_1msg extends HTMLElement {
                     response.json()
 
                 );
-                alert("API eka cl klaa")
+
                 let location = window.location;
                 window.history.pushState({}, "", location);
                 urlLocation();

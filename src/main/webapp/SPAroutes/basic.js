@@ -101,7 +101,7 @@ const validatePassword = (password, cpassword) => {
         return true;
     }
     else{
-        alert(resp["message"]);
+
         return false;
     }
 

@@ -3,6 +3,7 @@ class Report_detailsquiz extends HTMLElement {
         let dataString = decodeURIComponent(this.getAttribute('dataString'));
         let data = JSON.parse(dataString);
         let title = data[0].title;
+        let p_count = data[0].p_count;
         let report_count=0;
 
 
@@ -32,8 +33,9 @@ class Report_detailsquiz extends HTMLElement {
             <div class="report-cont-wrap">
                 <div class="report-cont-details">
                     <center><u><h3 class="fnt fnt-bold fnt-large">Details of reported quiz</h3></u></center><br>
-                    <h3 class="fnt fnt-bold fnt-mid">quiz Title:- ${title}</h3>
+                    <h3 class="fnt fnt-bold fnt-mid">Quiz Title:- ${title}</h3>
                     <h3 class="fnt fnt-bold fnt-mid">Author Name:- ${globalauthorq}</h3>
+                    <h3 class="fnt fnt-bold fnt-mid">Author Name:- ${p_count}</h3>
                     <h3 class="fnt fnt-bold fnt-mid">Reported count:- ${report_count}</h3><br>
                 </div>
 

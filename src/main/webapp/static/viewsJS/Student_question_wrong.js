@@ -1,4 +1,4 @@
-alert("He");
+
 
 async function fetchData() {
     const req = {
@@ -27,14 +27,14 @@ function renderRight(data) {
 
     let html_right = "";
 
-    alert(data["status"])
+
     if (data["status"]== 1){
-        alert("kabmmm")
+
         html_right = ` <open-question img_src="${data["pro_pic"]}" qulifi="${data["qulification_level"]}" title="${data["question_title"]}"  author="${data["f_name"]+" "+ data["l_name"]}" description="${data["question_description"]}"></open-question>`;
 
     }
     else {
-        alert("kavind")
+
         html_right = ` <question img_src2="${data["question_img"]}" img_src="${data["pro_pic"]}" title="${data["question_title"]}" accept_person="${data["f_name"]+" "+ data["l_name"]}"  description="${data["question_description"]}"></question>`;
 
     }

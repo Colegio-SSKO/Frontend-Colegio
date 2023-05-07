@@ -1,4 +1,4 @@
-alert("report_person13");
+alert("report_person123");
 
 async function fetchData(){
 
@@ -41,6 +41,31 @@ function renderSingle(){
                     response.json()
 
                 );
+
+                let popup = document.querySelector(".popup-content");
+                document.querySelector(".popup-container").style.display = "flex";
+
+                if(res.message==="Disable person successfully"){
+                    popup.innerHTML = `
+                      <img src="../static/img/components_images/success.jpg" alt="">
+                      <h2>${res.message}</h2>
+                      <button class="btn" id="ok-btn"><a href="/report_person">OK</a></button>       
+                `;
+                }
+                else{
+                    popup.innerHTML = `
+                        <img src="../static/img/components_images/error.jpg" alt="">
+                        <h2 class="fnt fnt-large fnt-light">Error</h2>
+                        <button class="btn" id="ok-btn"><a href="/report_person">OK</a></button>
+                    `;
+
+                }
+
+                let ok_btn = document.getElementById("ok-btn");
+                ok_btn.addEventListener("click", ()=>{
+                    document.querySelector(".popup-container").style.display = "none";
+                })
+                alert(res.message);
 
                 window.history.back();
             })

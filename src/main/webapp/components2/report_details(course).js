@@ -4,6 +4,7 @@ class Report_detailsCourse extends HTMLElement {
         let data = JSON.parse(dataString);
         let title = data[0].title;
         let report_count=0;
+        let p_count = data[0].p_count;
 
 
 
@@ -23,6 +24,7 @@ class Report_detailsCourse extends HTMLElement {
                 <td class="fnt fnt-mid fnt-light">
                     <report-personrowd date="${i["date"]}"></report-personrowd>
                 </td>
+                
               
             </tr>
   `;
@@ -34,6 +36,7 @@ class Report_detailsCourse extends HTMLElement {
                     <center><u><h3 class="fnt fnt-bold fnt-large">Details of reported course</h3></u></center><br>
                     <h3 class="fnt fnt-bold fnt-mid">Course Title:- ${title}</h3>
                     <h3 class="fnt fnt-bold fnt-mid">Author Name:- ${globalauthor}</h3>
+                    <h3 class="fnt fnt-bold fnt-mid">Purchase count:- ${p_count}</h3>
                     <h3 class="fnt fnt-bold fnt-mid">Reported count:- ${report_count}</h3><br>
                 </div>
 
