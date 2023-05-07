@@ -32,25 +32,47 @@ class Send_answers extends HTMLElement {
                         <h4>Question From: <span>${author}</span></h4>
                     </div>
                 </div>
-                <div class="open-question-new-btn">
+                <div id="js-answer-upload-wrapper" class="open-question-new-btn">
                     <label for="">Upload answers</label>
-                    <input id="js-thumbnail-upload" type="file">
+                    <input style="display: none" id="js-thumbnail-upload" type="file">
+                    <i id="js-image-upload-answer" class="material-icons">image</i>
                 </div>
             </div>
             <h3>
                 Answers
             </h3>
             <div class="open-question-new-answers">
-                <img src="../static/img/components_images/Group%2041.png" alt="">
-                <img src="../static/img/components_images/Group%2041.png" alt="">
+                <img id="js-answer-preview"  src="../static/img/components_images/Group%2041.png" alt="">
+
             </div>
             <button id="js-question-upload-submit-button" class="btn btn-solid btn-large fnt-mid fnt fnt-bold">Submit</button>
         </div>
         </form>
         `;
+        //setting event listener for the video upload icon of first wrapper
+        document.querySelector(`#js-image-upload-answer`).addEventListener('click',(event)=>{
+            alert(event.target.parentElement.id);
+            document.querySelector(`#${event.target.parentElement.id} #js-thumbnail-upload`).click();
+        })
 
 
         let thumbnailUpload = document.querySelector("#js-thumbnail-upload");
+
+
+        let preview = document.querySelector('#js-answer-preview');
+
+
+        thumbnailUpload.addEventListener('change', (event)=>{
+            let image = thumbnailUpload.files[0];
+            const reader = new FileReader();
+            reader.addEventListener("load",  () =>{
+                preview.src = reader.result;
+            }, false);
+
+            if (image) {
+                reader.readAsDataURL(image);
+            }
+        })
 
         alert(questionId);
 
@@ -90,8 +112,9 @@ class Send_answers extends HTMLElement {
                         return res.json();
                     })
 
-                if(!textUploadresponseme["isError"]){
+                if(!uploadresponse["isError"]){
                     alert("Upload una");
+
                 }
                 else{
                     alert("error ekak oi")
