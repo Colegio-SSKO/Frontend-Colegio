@@ -13,14 +13,14 @@ class Small_listed extends HTMLElement {
 
         this.innerHTML = `
         
-        <div class="small-listed-cont-wrap"> 
+        <div class="small-listed-cont-wrap${content_id} small-listed-cont-wrap"> 
             <div class="small-listed-cont-image">
                 <img src="${img_src}" alt="course image">
             </div>
            
        
             <div class="small-listed-cont-details">
-                <h5 class="small_listed fnt fnt-bold fnt-mid"><a id="${content_id}" href="/small_cardopen">${title}</a></h5>
+                <h5 class="small_listed fnt fnt-bold fnt-mid">${title}</h5>
                     <div class="small-listed-cont-author">
                         <h6 class="fnt fnt-bold fnt-mid">${author}</h6><br>
                         <div class="ratings" style="display: flex; align-items: center; justify-content: flex-end;">
@@ -36,17 +36,18 @@ class Small_listed extends HTMLElement {
         </div>
       
         `;
-        let small_lited = document.querySelectorAll(".small_listed");
+        let small_lited = document.querySelector(`.small-listed-cont-wrap${content_id}`);
 
-        for (let element of small_lited){
-            element.addEventListener('click',async (event)=> {
 
-                    let content_id = event.target.id;
-                    temporary_data = content_id;
-                    alert(temporary_data);
-                }
-            );
-        }
+        small_lited.addEventListener('click',async (event)=> {
+            event.preventDefault();
+            alert("aaaa")
+            temporary_data = content_id;
+            alert("hihi"+temporary_data);
+            window.history.pushState({}, "", "/small_cardopen");
+            urlLocation();
+        });
+
     }
 }
 customElements.define('small-listed', Small_listed);

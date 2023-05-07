@@ -178,7 +178,7 @@ const studentRoutes = {
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Notification.jsp",
         path_right: "",
-        script: "../static/viewsJS/notification_view.js",
+        script: "../static/viewsJS/notification_view1.js",
         title: "Notification",
         data : "This is the notification page"
     },
@@ -491,7 +491,7 @@ const teacherRoutes =  {
         template : "/SPAroutesTeacher/index_single.jsp",
         path_left:"/views/Notification.jsp",
         path_right: "",
-        script: "../static/viewsJS/notification_view.js",
+        script: "../static/viewsJS/notification_view1.js",
         title: "Notification",
         data : "This is the notification page"
     },
@@ -765,7 +765,7 @@ const organizationRoutes = {
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Notification.jsp",
         path_right: "",
-        script: "../static/viewsJS/notification_view.js",
+        script: "../static/viewsJS/notification_view1.js",
         title: "Notification",
         data : "This is the notification page"
     },
