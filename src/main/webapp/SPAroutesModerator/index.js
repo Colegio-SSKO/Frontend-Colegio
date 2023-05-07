@@ -290,7 +290,7 @@ const Routes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/report_content.jsp",
-        script: "../static/viewsJS/genarate_report(verify_teacher).js",
+        script: "../static/viewsJS/genarate_report(verify_teacher)1.js",
         path_right: "",
         title: "report",
         data : "This is the report page"

@@ -41,10 +41,10 @@ class verify_teacherdetails extends HTMLElement {
         });
 
 
-        let accept = document.querySelectorAll(".accept");
+        let reject = document.querySelectorAll(".reject");
 
 
-        for (let element of accept){
+        for (let element of reject){
             element.addEventListener('click',async (event)=>{
 
                 let user_id = event.target.id;
@@ -54,7 +54,7 @@ class verify_teacherdetails extends HTMLElement {
                     "user_id": user_id,
                     "upgrade_id":upgrade_id
                 }
-                let url = "http://localhost:8090/api/moderators/accept_teacher_verify/:" + getModeratorID();
+                let url = "http://localhost:8090/api/moderators/delete_teacher_verify/:" + getModeratorID();
                 let res = await fetch(url, {method : "POST",  body : JSON.stringify(requestBody)}).then((response)=>
                     response.json()
 
@@ -68,10 +68,10 @@ class verify_teacherdetails extends HTMLElement {
 
 
 
-        let remove = document.querySelectorAll(".reject");
+        let accept = document.querySelectorAll(".accept");
 
 
-        for (let element of remove){
+        for (let element of accept){
             element.addEventListener('click',async (event)=>{
 
                 let user_id = event.target.id;
@@ -81,9 +81,9 @@ class verify_teacherdetails extends HTMLElement {
                     "user_id": user_id,
                     "upgrade_id":upgrade_id,
                     "gender":gender,
-                    "qulification_level":education_level
+                    "education_level":education_level
                 }
-                let url = "http://localhost:8090/api/moderators/delete_teacher_verify/:" + getModeratorID();
+                let url = "http://localhost:8090/api/moderators/accept_teacher_verify/:" + getModeratorID();
                 let res = await fetch(url, {method : "POST",  body : JSON.stringify(requestBody)}).then((response)=>
                     response.json()
 
