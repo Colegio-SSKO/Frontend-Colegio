@@ -38,37 +38,37 @@ async function renderSingle() {
 
 
 
-        let teachers = document.querySelectorAll(".all_courses");
-
-        for (let element of teachers) {
-            element.addEventListener('click', async (event) => {
-
-                let user_id = event.target.id;
-                temporary_data= user_id;
-
-                alert(temporary_data);
-
-
-            })
-
-        }
-
-
-        let teachers2 = document.querySelectorAll(".all_quizzes");
-
-
-        for (let element of teachers2) {
-            element.addEventListener('click', async (event) => {
-
-                let user_id = event.target.id;
-                temporary_data= user_id;
-                alert("sewsew")
-                alert(temporary_data);
-
-
-            })
-
-        }
+        // let teachers = document.querySelectorAll(".all_courses");
+        //
+        // for (let element of teachers) {
+        //     element.addEventListener('click', async (event) => {
+        //
+        //         let user_id = event.target.id;
+        //         temporary_data= user_id;
+        //
+        //         alert(temporary_data);
+        //
+        //
+        //     })
+        //
+        // }
+        //
+        //
+        // let teachers2 = document.querySelectorAll(".all_quizzes");
+        //
+        //
+        // for (let element of teachers2) {
+        //     element.addEventListener('click', async (event) => {
+        //
+        //         let user_id = event.target.id;
+        //         temporary_data= user_id;
+        //         alert("sewsew")
+        //         alert(temporary_data);
+        //
+        //
+        //     })
+        //
+        // }
 
     } catch (error) {
         console.error(error);

@@ -120,7 +120,7 @@ public class createCourse extends HttpServlet {
         String relativePath = "";
         String thumbnailPath = context.getRealPath(relativePath);
 
-        String saveFilePath = "/"+thumbnailFilename;
+        String saveFilePath = "../../src/main/webapp/static/img/course_img"+thumbnailFilename;
         File savedThumbnailFile = new File(thumbnailPath, saveFilePath);
         InputStream thumbnailInputStream = thumbnail.getInputStream();
         OutputStream thumbnailOutputStream = new FileOutputStream(savedThumbnailFile);
@@ -165,6 +165,7 @@ public class createCourse extends HttpServlet {
         videoInputStream.close();
         System.out.println("no error for videos");
 
+        saveFilePath=".."+saveFilePath.split("webapp")[1];
         return saveFilePath;
     }
 

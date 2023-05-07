@@ -44,7 +44,7 @@ function renderSingle(){
                 "edu" : edu.value,
                 "gender" : gender.value
             }
-            let resp = await fetch("http://localhost:8080/api/users/editProfile/:1", {
+            let resp = await fetch("http://localhost:8080/api/users/editProfile/:"+getUserID(), {
                 method : "POST",
                 body : JSON.stringify(req),
                 credentials : "include"

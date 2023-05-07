@@ -4,6 +4,7 @@ class noti_1msg extends HTMLElement {
         let date = this.attributes.date.value;
         let time = this.attributes.time.value;
         let img_src = this.attributes.img_src.value;
+        let type = this.attributes.type.value;
         let sender_name = this.attributes.sender_name.value;
         let message = this.attributes.message.value;
         let id = this.attributes.id.value;
@@ -29,6 +30,30 @@ class noti_1msg extends HTMLElement {
       </div>
         `;
 
+        let apiUrl = {
+            1: {
+                "accept": "",
+                "reject": "",
+            },
+
+            2: {
+                "accept": "",
+                "reject": "",
+            },
+
+            3: {
+                "accept": "",
+                "reject": "",
+            },
+
+            4: {
+                "accept": "",
+                "reject": "",
+            }
+        }
+
+
+
         let accept = document.querySelectorAll(".accept");
 
 
@@ -42,7 +67,9 @@ class noti_1msg extends HTMLElement {
                     "notification_id": notification_id,
                     "sender_userid": id
                 }
-                let url = "http://localhost:8090/api/organizations/org_accept_teacher/:" + getUserID();
+                // let url = `http://localhost:8090/api/organizations/org_accept_teacher/:` + getUserID();
+
+                let url = `${apiUrl[type]["accept"]}` + getUserID();
 
                 let res = await fetch(url, {
                     method : "POST",
@@ -76,7 +103,8 @@ class noti_1msg extends HTMLElement {
                     "notification_id": notification_id,
                     "sender_userid": id
                 }
-                let url = "http://localhost:8090/api/organizations/org_delete_teacher_request/:" + getUserID();
+                // let url = "http://localhost:8090/api/organizations/org_delete_teacher_request/:" + getUserID();
+                let url = `${apiUrl[type]["reject"]}` + getUserID();
 
                 let res = await fetch(url, {
                     method : "POST",

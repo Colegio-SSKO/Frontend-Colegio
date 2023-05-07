@@ -59,12 +59,13 @@ class Ad_publish_form extends HTMLElement {
                 let textData = {
 
                     "userId" : getUserID(),
+                    "organization_id": organization_id,
                     "add" : fileUploadresponseme["thumbnail"],
                 }
 
 
                 //send save data to the db request to the backend
-                let textUploadresponse = await fetch('http://localhost:8090/api/teachers/publish_add/', {
+                let textUploadresponse = await fetch('http://localhost:8090/api/teachers/add_publish/', {
                     method : "POST",
                     body:JSON.stringify(textData),
                     credentials : "include"
@@ -75,6 +76,7 @@ class Ad_publish_form extends HTMLElement {
 
                 if(!textUploadresponseme["isError"]){
                     alert("Upload una");
+                    userProfileImage=fileUploadresponseme["thumbnail"];
                 }
                 else{
                     alert("error ekak oi")

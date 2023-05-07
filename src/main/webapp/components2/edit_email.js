@@ -1,15 +1,16 @@
 class Edit_email extends HTMLElement {
     connectedCallback() {
 
+        let img_src= this.attributes.img_src.value;
+
 
         this.innerHTML = `
       <div class="edit-profile">
         <div class="pro-pic-edit">
-            <img src="./images/Prof Pict.png" alt="your-image-description">
-            <div class="text fnt fnt-bold fnt-mid link"><a class="link" href="">Edit</a></div>
+            <img src="${img_src}" alt="your-image-description">
         </div>
         <div class="main-details">
-                <label for="email" class="fnt fnt-bold fnt-mid">Email</label><br>
+                <label for="email" class="fnt fnt-bold fnt-mid">Edit-Email</label><br>
                 <input type="Password" name="" id="currPassword1" class="fnt fnt-bold fnt-mid" placeholder="Enter Current Password"><br>
                 <input type="email" name="" id="currEmail1" class="fnt fnt-bold fnt-mid" placeholder="Enter Current Email"><br>
                 <input type="email" name="" id="newEmail1" class="fnt fnt-bold fnt-mid" placeholder="Enter New Email"><br>

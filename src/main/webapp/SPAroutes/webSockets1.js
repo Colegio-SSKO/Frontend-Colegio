@@ -108,13 +108,12 @@ async function initiateWebsocket(){
                 alert("message ek awoo")
 
                 if (receivedMessage["receiver"] == getUserID()){
-                    let chatContainer = document.querySelector(`#open-question-chat${3}`);
+                    let chatContainer = document.querySelector(`#Js-question-chat-box${receivedMessage["questionId"]}`);
                     if (chatContainer){
                         let newMessage = document.createElement('chat-msg');
-                        newMessage.setAttribute("msg", "AWA SAGOR");
+                        newMessage.setAttribute("msg", receivedMessage["message"]);
                         newMessage.setAttribute("type", "open-question-incomMSG");
                         chatContainer.appendChild(newMessage);
-                        alert("methnt awne")
                         chatContainer.scrollTop = chatContainer.scrollHeight;
                     }
                     else{

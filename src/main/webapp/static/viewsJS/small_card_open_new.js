@@ -1,4 +1,4 @@
-alert("mil234565");
+alert("mil234565632");
 
 // import {myVar} from '../../components2/small-listed';
 
@@ -37,7 +37,8 @@ function renderRight(data2,data, type) {
         }
     }
     else {
-        html_right += `<pop-up></pop-up> <small-cardquiz  time="${data["quiz_time_duration"]}" q_number="${data["quiz_q_Number"]}" title="${data["title"]}"  purchase_count="${data["purchase_count"]}" description="${data["description"]}" author="${data["f_name"]} ${data["l_name"]}" price="${data["price"]}" date="${data["date"]}" content_id="${data["content_id"]}" rate_count="${data["rate_count"]}" ></small-cardquiz>`;
+
+        html_right += `<pop-up></pop-up> <small-cardquiz  time="${data2["duration"]}" q_number="${data2["quiz_q_number"]}" title="${data2["title"]}"  purchase_count="${data2["purchase_count"]}" description="${data2["description"]}" author="${data2["f_name"]} ${data2["l_name"]}" price="${data2["price"]}" date="${data2["date"]}" content_id="${data2["content_id"]}" rate_count="${data2["rate_count"]}" ></small-cardquiz>`;
 
 
     }
@@ -68,6 +69,7 @@ function renderLeft() {
         }
         else{
             const res5 = await fetch("http://localhost:8090/api/users/get_content_media_quiz/:" + temporary_data, {method: "GET", credentials:"include"}).then((response) => response.json());
+            alert(JSON.stringify(res5))
             renderRight(res5,data,1);
         }
 

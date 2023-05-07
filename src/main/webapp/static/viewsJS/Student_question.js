@@ -35,7 +35,7 @@ function renderRight(data, type) {
     }
     else {
         alert("asd")
-        html_right = ` <open-question-question id="${data["question.question_id"]}" media="${data["question_img"]}" author_propic="${data["pro_pic"]}" title="${data["question_title"]}" author="${data["f_name"]+" "+ data["l_name"]}"  description="${data["question_description"]}" qulifi="${data["qulification_level"]}"  teacherId="${data["question.accept_teacher_id"]}""></open-question-question>`;
+        html_right = ` <open-question-question id="${data["question.question_id"]}" media="${data["question_img"]}" author_propic="${data["pro_pic"]}" title="${data["question_title"]}" author="${data["f_name"]+" "+ data["l_name"]}"  description="${data["question_description"]}" qulifi="${data["qulification_level"]}"  teacherId="${data["question.accept_teacher_id"]}" img_src2="${data["question_media.media"]}"></open-question-question>`;
 
     }
     document.querySelector(".cont-body-right").innerHTML = html_right;
