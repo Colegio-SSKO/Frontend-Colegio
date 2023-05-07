@@ -1,4 +1,4 @@
-alert("sachiniii23")
+
 async function sendData(jsonRequest){
     await fetch("")
 }

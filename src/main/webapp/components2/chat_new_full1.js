@@ -1,4 +1,4 @@
-class Chat_new_full extends HTMLElement {
+class Chat_new_full1 extends HTMLElement {
     connectedCallback() {
 
         let chat_id = this.attributes.chat_id.value;
@@ -8,9 +8,15 @@ class Chat_new_full extends HTMLElement {
         let description= this.attributes.description.value;
         let author = this.attributes.author.value;
         let author_id = this.attributes.author_id.value
+        let messages = this.attributes.messages.value;
+        let isTeacher = this.attributes.isTeacher.value;
+        let teacher_id = this.attributes.teacher_id.value;
+
+        let messagesDecoded = decodeURIComponent(messages);
+        let messagesJson = JSON.parse(messagesDecoded)
 
 
-
+        console.log("length ek: " + messagesJson.length)
 
 
         this.innerHTML = `
@@ -20,7 +26,7 @@ class Chat_new_full extends HTMLElement {
             <p class="fnt fnt-light fnt-mid">${description}</p>
 
             <div class="open-question-message-wrap">
-                <chat-box chatid="${chat_id}"></chat-box>
+                <chat-box messages="${messages}" isTeacher="${isTeacher}" chatid="${chat_id}"></chat-box>
 
               <div class="open-question-msgBox">
                 <form action="#">
@@ -58,25 +64,29 @@ class Chat_new_full extends HTMLElement {
         messageSendButton.addEventListener('click', (event)=>{
 
             event.preventDefault();
-            alert("send btn ek wed2")
+
             if (message.value != ""){
                 messageData = {
                     "config" : false,
                     "message" : message.value,
                     "receiver": parseInt(author_id),
                     "sender" : getUserID(),
-                    "questionId" : parseInt(chat_id)
+                    "questionId" : parseInt(chat_id),
+                    "isTeacherSent": parseInt(isTeacher),
+                    "teacher_id": parseInt(teacher_id)
                 }
                 console.log(messageData)
+                console.log("aaah")
 
                 questionCHat.send(JSON.stringify(messageData));
-                let chatContainer = document.querySelector(".open-question-chat");
+                console.log("uuuh")
+                let chatContainer = document.querySelector(`#Js-question-chat-box${chat_id}`);
                 if (chatContainer){
                     chatContainer.innerHTML += `
                             <div class="open-question-msg open-question-outgoingMSG"> <p>${message.value}</p></div>
                             <br>
                         `
-                    alert("methnt awne")
+
                     chatContainer.scrollTop = chatContainer.scrollHeight;
                 }
             }
@@ -86,4 +96,4 @@ class Chat_new_full extends HTMLElement {
     }
 }
 
-customElements.define('new-chat', Chat_new_full);
+customElements.define('new-chat', Chat_new_full1);

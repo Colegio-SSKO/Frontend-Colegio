@@ -13,7 +13,7 @@ async function fetchData(){
             credentials : "include"
         });
         let data = await response.text();
-        // alert("sads")
+
         return data;
     } catch (error) {
         console.error(error);

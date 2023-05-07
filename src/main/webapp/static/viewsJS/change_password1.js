@@ -1,5 +1,5 @@
 
-alert("ghjhgj2")
+
 async function fetchData(){
     // return "eeew";
 };
@@ -46,7 +46,7 @@ function renderSingle(){
             alert(resp);
 
             let popup = document.querySelector(".popup-content");
-            alert("helloo weeessa")
+
             document.querySelector(".popup-container").style.display = "flex";
 
             alert(resp);

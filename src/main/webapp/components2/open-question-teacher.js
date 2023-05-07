@@ -66,7 +66,7 @@ class Open_question extends HTMLElement {
         let message = document.querySelector("#js-quession-chat-input");
         let messageData = {};
         messageSendButton.addEventListener('click', (event)=>{
-            alert("send btn ek wed")
+
             event.preventDefault();
             messageData = {
                 "config" : false,

@@ -1,8 +1,7 @@
-alert("report_course123");
+
 
 async function fetchData(){
 
-    alert(temporary_data);
     let res = await fetch("http://localhost:8090/api/moderators/generate_report/:" + temporary_data, {
         method : "GET",
         credentials : "include"

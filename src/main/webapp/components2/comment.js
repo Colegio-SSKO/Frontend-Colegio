@@ -78,7 +78,7 @@ class Comment extends HTMLElement {
                 "content_id" : id,
                 "message" : comment.value,
             }
-            alert(JSON.stringify(commentData));
+
             let res = await fetch("http://localhost:8090/api/users/addComments/:"+getUserID(),{
                 method : "POST",
                 credentials : "include",

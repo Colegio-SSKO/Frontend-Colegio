@@ -1,4 +1,4 @@
-alert("create question")
+
 
 //function to render right content
 

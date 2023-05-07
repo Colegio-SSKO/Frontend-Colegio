@@ -1,4 +1,4 @@
-alert("Hello 5512");
+
 
 async function fetchData(){
 
@@ -63,7 +63,7 @@ function renderLeft() {
 
         for (let element of selected){
             element.addEventListener('click', ()=>{
-                alert("clicked");
+
                 for (let el of data){
 
                     if (el["content_id"] == element.getAttribute("id")){

@@ -1,4 +1,4 @@
-alert("new_organization1012");
+
 
 async function fetchData(){
     const req = {
@@ -41,7 +41,7 @@ function renderSingle(){
                     "organization_id": organization_id
                 }
 
-                alert(organization_id);
+
                 // let url = "http://localhost:8090/api/users/Vieworg_teacher";
                 // let res3 = await fetch(url, {method: "POST", body: JSON.stringify(requestBody)}).then((response) =>
                 //     response.json()

@@ -1,4 +1,4 @@
-alert("teacher_list");
+
 
 
 

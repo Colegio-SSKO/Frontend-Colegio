@@ -1,4 +1,4 @@
-alert("organization_profile(org)   qqqqq");
+
 
 async function fetchData(){
     const req = {
@@ -23,7 +23,7 @@ async function fetchData(){
 async function renderSingle() {
     try {
         const data = await fetchData();
-        alert(typeof (data));
+
         console.log(data);
         const res2 = await fetch("http://localhost:8090/api/users/ViewCont_list", {
             method: "GET",
