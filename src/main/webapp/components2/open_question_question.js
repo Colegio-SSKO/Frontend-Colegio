@@ -12,6 +12,7 @@ class Open_question_question extends HTMLElement {
         let description= this.attributes.description.value;
         let author = this.attributes.author.value;
         let teacherId = this.attributes.teacherId.value
+        let img_src2 = this.attributes.img_src2.value
 
         this.innerHTML = `
        <div class="open-question-new-container">
@@ -42,15 +43,7 @@ class Open_question_question extends HTMLElement {
             Answers
         </h3>
         <div class="open-question-new-answers">
-            <img src="../static/img/components_images/Group%2041.png" alt="">
-            <img src="../static/img/components_images/Group%2041.png" alt="">
-        </div>
-        <div class="open-question-new-feedback">
-            <h3 class="fnt fnt-bold fnt-large">Feedback for the answers</h3>
-            <div class="open-question-new-comment">
-                <img src="${getUserProfileImage()}" alt="">
-                <input class="fnt fnt-mid fnt-bold" placeholder="Comment here..." type="text">
-            </div>
+            <img src="${img_src2}" alt="">
         </div>
     </div>
         `;

@@ -76,6 +76,7 @@ class Ad_publish_form extends HTMLElement {
 
                 if(!textUploadresponseme["isError"]){
                     alert("Upload una");
+                    userProfileImage=fileUploadresponseme["thumbnail"];
                 }
                 else{
                     alert("error ekak oi")

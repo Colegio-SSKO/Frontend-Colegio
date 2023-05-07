@@ -104,7 +104,7 @@ public class upgradeToteacher extends HttpServlet {
         String relativePath = "";
         String thumbnailPath = context.getRealPath(relativePath);
 
-        String saveFilePath = "/"+thumbnailFilename;
+        String saveFilePath = "../../src/main/webapp/static/img/teachers"+thumbnailFilename;
         File savedThumbnailFile = new File(thumbnailPath, saveFilePath);
         InputStream thumbnailInputStream = thumbnail.getInputStream();
         OutputStream thumbnailOutputStream = new FileOutputStream(savedThumbnailFile);
@@ -118,6 +118,7 @@ public class upgradeToteacher extends HttpServlet {
         thumbnailInputStream.close();
         System.out.println("no error for thumbnail");
 
+        saveFilePath=".."+saveFilePath.split("webapp")[1];
         return saveFilePath;
 
     }

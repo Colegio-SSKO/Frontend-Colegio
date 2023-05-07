@@ -100,7 +100,7 @@ public class uploadPropic extends HttpServlet {
         String relativePath = "";
         String thumbnailPath = context.getRealPath(relativePath);
 
-        String saveFilePath = "../../src/main/webapp/static/img/"+thumbnailFilename;
+        String saveFilePath = "../../src/main/webapp/static/img/profile_pic"+thumbnailFilename;
         File savedThumbnailFile = new File(thumbnailPath, saveFilePath);
         InputStream thumbnailInputStream = thumbnail.getInputStream();
         OutputStream thumbnailOutputStream = new FileOutputStream(savedThumbnailFile);
@@ -114,7 +114,7 @@ public class uploadPropic extends HttpServlet {
         thumbnailInputStream.close();
         System.out.println("no error for thumbnail");
 
-        System.out.println(saveFilePath.split("webapp")[1]);
+
         saveFilePath=".."+saveFilePath.split("webapp")[1];
         return saveFilePath;
 
