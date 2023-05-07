@@ -21,7 +21,9 @@ class Profile_card extends HTMLElement {
         </div>
         <div class="edit-and-delte-btns">
             <a href="/edit_profile" ><button class="btn btn-solid fnt fnt-bold fnt-mid is-a-route">Edit Profile</button></a>
-            <a href="/upgrade"><button id="upgrade-to-teacher" class="btn btn-solid fnt is-a-route fnt-bold fnt-mid">Upgrade to Teacher</button></a>
+            <a href="/upgrade"><button id="upgrade-to-teacher" class="btn btn-solid fnt is-a-route fnt-bold fnt-mid"${
+            veri === "1" ? "disabled style='pointer-events: none; background-color: lightslategray;'" : ""
+            }>Upgrade to Teacher</button></a>
             <a href="/upgrade_to_org"><button id="upgrade-to-organization" class="btn btn-solid fnt is-a-route fnt-bold fnt-mid" ${
                 veri === "1" ? "disabled style='pointer-events: none; background-color: lightslategray;'" : ""
             }>Upgrade to Organization</button></a>

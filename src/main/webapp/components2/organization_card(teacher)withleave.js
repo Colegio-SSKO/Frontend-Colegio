@@ -15,7 +15,7 @@ class Organization_cardteacher_withleave extends HTMLElement {
 
 
         <div class="teacher-card-details">
-            <h5 class="fnt fnt-bold fnt-large"><a class="org_name" href="/Organization_profile(teacher)" style="text-decoration: none"  id="${organization_id}">${name}</a></h5>
+            <a href="/Organization_profile(teacher)"><div class="org_name fnt fnt-bold fnt-large is-a-route" id="${organization_id}">${name}</div></a>
             <h5 class="fnt fnt-bold fnt-mid">${address}</h5>
         </div><br><br>
         

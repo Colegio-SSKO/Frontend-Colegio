@@ -34,7 +34,7 @@ class Publish_coursequiz extends HTMLElement {
                     "content_id": content_id
                 };
                 let url = "http://localhost:8090/api/teachers/teacher_disable_content" ;
-                let res = await fetch(url, {method : "POST",  body : JSON.stringify(requestBody)}).then((response)=>
+                let res = await fetch(url, {method : "POST", credentials: "include", body : JSON.stringify(requestBody)}).then((response)=>
                     response.json()
                 );
 

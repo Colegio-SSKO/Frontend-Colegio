@@ -1,12 +1,11 @@
 class Change_password extends HTMLElement {
     connectedCallback() {
-
+        let img_src= this.attributes.img_src.value;
 
         this.innerHTML = `
       <div class="edit-profile">
         <div class="pro-pic-edit">
-            <img src="./images/Prof Pict.png" alt="your-image-description">
-            <div class="text fnt fnt-bold fnt-mid link"><a class="link" href="">Edit</a></div>
+            <img src="${img_src}" alt="your-image-description">
         </div>
         <div class="main-details">
             

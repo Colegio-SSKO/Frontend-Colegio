@@ -1,4 +1,4 @@
-alert("organization ad publish karamu1");
+alert("organization ad publish karamu");
 
 async function fetchData(){
     const req = {
