@@ -49,10 +49,10 @@ function renderLeft() {
         let html_left = "";
 
         html_left += "" +
-            "<a class=\"fnt fnt-bold fnt-mid\" href=\"\"><button class=\"btn btn-solid btn-small is-a-route\">All</button></a>\n" +
-            "<a class=\"fnt fnt-bold fnt-mid\" href=\"\"><button class=\"btn btn-solid btn-small is-a-route\">Continuing</button></a>\n\n" +
-            "<a class=\"fnt fnt-bold fnt-mid\" href=\"\"><button class=\"btn btn-solid btn-small is-a-route\">Completed</button></a>\n<br><br>\n" +
-            "<a class=\"fnt fnt-bold fnt-mid\" href=\"/create_course\"><button class=\"btn btn-outlined btn-large is-a-route  js-createCourseButton\">Create Course</button></a>" +
+            "<a class=\"fnt fnt-bold fnt-mid\" href=\"\"><button class=\"btn btn-solid btn-small fnt fnt-bold fnt-mid is-a-route\">All</button></a>\n" +
+            "<a class=\"fnt fnt-bold fnt-mid\" href=\"\"><button class=\"btn btn-solid btn-small fnt fnt-bold fnt-mid is-a-route\">Continuing</button></a>\n\n" +
+            "<a class=\"fnt fnt-bold fnt-mid\" href=\"\"><button class=\"btn btn-solid btn-small fnt fnt-bold fnt-mid is-a-route\">Completed</button></a>\n\n" +
+            "<a class=\"fnt fnt-bold fnt-mid\" href=\"/create_course\"><button class=\"btn-special is-a-route  fnt fnt-bold fnt-mid js-createCourseButton\">Create Course</button></a>" +
 
             "\n" +
             "";

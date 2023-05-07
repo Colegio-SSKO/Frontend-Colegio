@@ -32,7 +32,7 @@ const studentRoutes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Home_content.jsp",
-        script: "../static/viewsJS/home.js",
+        script: "../static/viewsJS/home1.js",
         title: "Home",
         data : "This is the home page"
     },
@@ -101,7 +101,7 @@ const studentRoutes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/Question_student_1_left.jsp",
         path_right: "/views/Question_student_1_right.jsp",
-        script: "../static/viewsJS/Student_question1.js",
+        script: "../static/viewsJS/Student_question.js",
         title: "Question",
         data : "This is the Question page"
     },
@@ -334,7 +334,7 @@ const teacherRoutes =  {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Home_content.jsp",
-        script: "../static/viewsJS/home.js",
+        script: "../static/viewsJS/home1.js",
         title: "Home",
         data : "This is the home page"
     },
@@ -374,7 +374,7 @@ const teacherRoutes =  {
         template : "/SPAroutesTeacher/index_double.jsp",
         path_left:"/views/Question_student_1_left.jsp",
         path_right: "/views/Question_student_1_right.jsp",
-        script: "../static/viewsJS/Student_question1.js",
+        script: "../static/viewsJS/Student_question.js",
         title: "Question",
         data : "This is the Question page"
     },
@@ -385,7 +385,7 @@ const teacherRoutes =  {
         template : "/SPAroutesTeacher/index_double.jsp",
         path_left:"/views/Question_student_1_left.jsp",
         path_right: "/views/Question_student_1_right.jsp",
-        script: "../static/viewsJS/teacher_answer_questions1.js",
+        script: "../static/viewsJS/teacher_answer_questions.js",
         title: "Answer Question",
         data : "This is the Question page"
     },
@@ -649,7 +649,7 @@ const organizationRoutes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Home_content.jsp",
-        script: "../static/viewsJS/home.js",
+        script: "../static/viewsJS/home1.js",
         title: "Home",
         data : "This is the home page"
     },
@@ -689,7 +689,7 @@ const organizationRoutes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/Question_student_1_left.jsp",
         path_right: "/views/Question_student_1_right.jsp",
-        script: "../static/viewsJS/Student_question1.js",
+        script: "../static/viewsJS/Student_question.js",
         title: "Question",
         data : "This is the Question page"
     },

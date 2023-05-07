@@ -22,8 +22,12 @@ class Navbar1 extends HTMLElement {
         </form>
       </div>
       <div class="navbar-right">
-        <a href="/cart" class="navbar-right-icon"><img class="signin-user-is-a-route is-a-route" src="../static/img/components_images/shopping_cart.svg" alt=""></a>
-        <a href="/notification" class="navbar-right-icon"><img class="signin-user-is-a-route is-a-route" src="../static/img/components_images/notifications.svg" alt=""></i></a>
+          <div>
+            <a href="/cart" class="navbar-right-icon"><img class="signin-user-is-a-route is-a-route" src="../static/img/components_images/shopping_cart.svg" alt=""></a>
+            <a href="/notification" class="navbar-right-icon"><img class="signin-user-is-a-route is-a-route" src="../static/img/components_images/notifications.svg" alt=""></i></a>
+            <span class="noti-number">5</span>
+          </div>
+
         <div class="navbar-right-user">
           <img src="${userProfileImage}" alt="" srcset="">
           <a href="/profile"><span class="signin-user-is-a-route is-a-route">${username}</span></a>

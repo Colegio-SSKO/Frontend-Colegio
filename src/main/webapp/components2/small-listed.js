@@ -22,7 +22,7 @@ class Small_listed extends HTMLElement {
             <div class="small-listed-cont-details">
                 <h5 class="small_listed fnt fnt-bold fnt-mid"><a id="${content_id}" href="/small_cardopen">${title}</a></h5>
                     <div class="small-listed-cont-author">
-                        <h6 class="fnt fnt-bold fnt-mid">${author}</h6><br>
+                        <h6 class="fnt fnt-bold fnt-mid">${author}</h6>
                         <div class="ratings" style="display: flex; align-items: center; justify-content: flex-end;">
                           <i class="fas fa-star star-yellow" style="color: orange; font-size:10px;"></i>
                           <i class="fas fa-star star-yellow" style="color: orange; font-size:15px;"></i>

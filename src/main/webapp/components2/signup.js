@@ -2,14 +2,14 @@ class Signup extends HTMLElement {
     connectedCallback() {
 
         this.innerHTML = `
-                       <section class="signup">
-                          <div class="hero">
+                       <section class="signup-signup">
+                          <div class="hero-signup">
                           <form method="post">
                               <div class="form">
                                 <h1 class="fnt fnt-extraBold fnt-extraLarge">Create your free account</h1>
                                 <div class="inputs">
                         
-                                 <div style="display: flex;">
+                                 <div>
                                          <div class="input-field">
                                         <label for="fname" class="fnt fnt-mid fnt-bold">First name</label>
                                         <input name="fname" id="fname" class="fnt fnt-mid fnt-bold" type="text" required>
@@ -20,14 +20,16 @@ class Signup extends HTMLElement {
                                       </div>
                                  </div>
                                  
-                                 <div>
+                                 <div class="input-field">
                                     <label for="address" class="fnt fnt-mid fnt-bold">Address:</label>
-                                    <textarea id="address" name="address" rows="4" class="fnt fnt-mid fnt-bold" cols="50" required></textarea>
-                            
-                            
+                                    <textarea id="address" name="address" rows="2" class="fnt fnt-mid fnt-bold" cols="20" required></textarea>
+                                 </div>
+                                 <div class="input-field">
                                     <label for="telnum" class="fnt fnt-mid fnt-bold">Telephone Number</label>
                                     <input name="telnum" id="telnum" class="fnt fnt-mid fnt-bold" type="number" minlength="10" maxlength="10" required>
-                                        
+                                 </div>
+
+                                  <div class="input-field">
                                     <label for="city" class="fnt fnt-mid fnt-bold">City:</label>
                                     <select id="city" name="city" class="fnt fnt-mid fnt-bold" required>
                                         <option class="fnt fnt-mid fnt-bold" value="">Select a city</option>
@@ -63,15 +65,16 @@ class Signup extends HTMLElement {
                                         <option class="fnt fnt-mid fnt-bold" value="Kotte">Kotte</option>
                                         <option class="fnt fnt-mid fnt-bold"  value="Piliyandala">Piliyandala</option>
                                     </select>
+                                 </div>    
+
                             
-                                 </div>
                                   
                                   <div class="input-field">
                                     <label for="email" class="fnt fnt-mid fnt-bold">Email Address</label>
                                     <input name="email" id="email" class="fnt fnt-mid fnt-bold" type="email" required>
                                   </div>
                                   
-                                  <div style="display: flex">
+                                  <div>
                                           <div class="input-field">
                                             <label for="password" class="fnt fnt-mid fnt-bold">New Password</label>
                                             <input name="password" id="password" class="fnt fnt-mid fnt-bold" type="password" required>
@@ -86,7 +89,7 @@ class Signup extends HTMLElement {
                                     <label class="fnt fnt-mid fnt-bold" for="">Already have an account? <span><a href="/auth/signin" class="link">Signin</a></span> ?</label>
                                   </div>
                                 </div>
-                                <button id="js-signin-btn" class="btn btn-solid fnt fnt-mid fnt-bold"> Sign in </button>
+                                <button id="js-signin-btn" class="btn btn-solid fnt fnt-mid fnt-bold" type="submit"> Sign Up </button>
                               </div>
                           </form>
                               
@@ -294,7 +297,7 @@ class Signup extends HTMLElement {
                 let popup = document.querySelector(".popup-content");
                 document.querySelector(".popup-container").style.display = "flex";
                 popup.innerHTML = `
-                        <img src="../static/img/components_images/success.jpg" alt="">
+                        <img src="../static/img/components_images/error.jpg" alt="">
                         <h2 class="fnt fnt-bold fnt-large">Resubmit</h2>
                         <button class="btn btn-primary " id="ok-btn">OK</button>
 

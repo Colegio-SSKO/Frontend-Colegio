@@ -212,10 +212,10 @@ function renderLeft() {
         alert(data);
         console.log(data)
         html_left += "" +
-            "<button class=\"btn btn-solid btn-small\"><a class=\"fnt fnt-bold fnt-mid\" href=\"\">All</a></button>\n" +
-            "<button class=\"btn btn-outlined btn-small\"><a class=\"fnt fnt-bold fnt-mid\" href=\"\">Continuing</a></button>\n" +
-            "<button class=\"btn btn-outlined btn-small\"><a class=\"fnt fnt-bold fnt-mid\" href=\"\">Completed</a></button><br><br>\n" +
-            "<a href=\"/createQuiz\"><button class=\"btn btn-outlined btn-small fnt fnt-bold fnt-mid is-a-route\">Create quiz</button></a><br><br>\n"+
+            "<a  href=\"\"><button class=\"fnt fnt-bold fnt-mid btn btn-solid btn-a  is-a-route\">All</button></a>\n" +
+            "<a  href=\"\"><button class=\"fnt fnt-bold fnt-mid btn btn-solid btn-a  is-a-route\">Continuing</button></a>\n" +
+            "<a  href=\"\"><button class=\"fnt fnt-bold fnt-mid btn btn-solid btn-a  is-a-route\">Completed</button></a>\n" +
+            "<a href=\"/createQuiz\"><button class=\"btn-special fnt fnt-bold fnt-mid is-a-route\">Create quiz</button></a><br><br>\n"+
         "\n" +
             "";
 

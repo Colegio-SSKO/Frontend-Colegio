@@ -24,7 +24,7 @@ const Routes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Home_content.jsp",
-        script: "../static/viewsJS/home.js",
+        script: "../static/viewsJS/home1.js",
         title: "Home",
         data : "This is the home page"
     },

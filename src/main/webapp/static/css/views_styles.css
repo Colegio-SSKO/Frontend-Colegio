@@ -8,7 +8,7 @@ body {
     width: 100%;
     height: auto;
     overflow: scroll;
-    background: #DBE2EF;
+    background: #E8EDE7;
 
 }
 
@@ -31,7 +31,7 @@ body {
 
 
 .btn-solid{
-    margin-top: 1rem;
+    /*margin-top: 1rem;*/
     border: #FE793D 1px solid;
     background: #E4E4E4;
     color: #FE793D;

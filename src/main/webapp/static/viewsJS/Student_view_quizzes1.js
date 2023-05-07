@@ -212,9 +212,9 @@ function renderLeft() {
         console.log(JSON.stringify(data));
         console.log(data)
         html_left += "" +
-            "<a  href=\"\"><button class=\"fnt fnt-bold fnt-mid btn btn-solid btn-a btn-small is-a-route\">All</button></a>\n" +
-            "<a  href=\"\"><button class=\"fnt fnt-bold fnt-mid btn btn-solid btn-a btn-small is-a-route\">Continuing</button></a>\n" +
-            "<a  href=\"\"><button class=\"fnt fnt-bold fnt-mid btn btn-solid btn-a btn-small is-a-route\">Completed</button></a><br>\n" +
+            "<a  href=\"\"><button class=\"fnt fnt-bold fnt-mid btn btn-solid btn-a  is-a-route\">All</button></a>\n" +
+            "<a  href=\"\"><button class=\"fnt fnt-bold fnt-mid btn btn-solid btn-a  is-a-route\">Continuing</button></a>\n" +
+            "<a  href=\"\"><button class=\"fnt fnt-bold fnt-mid btn btn-solid btn-a  is-a-route\">Completed</button></a><br>\n" +
             "\n" +
             "";
 
