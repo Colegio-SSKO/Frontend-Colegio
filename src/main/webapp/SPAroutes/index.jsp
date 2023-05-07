@@ -113,7 +113,7 @@
 
 
 </head>
-<div>
+
 
 <div id="components">
     <script src="../components2/accepted.js"></script>
@@ -273,7 +273,7 @@
 
 
 
-<div id="js-chat-in-body-tag"></div>
+
 
 
 
@@ -312,7 +312,7 @@
 
 
 
-
+    <div id="js-chat-in-body-tag"></div>
 
 </body>
 </html>
