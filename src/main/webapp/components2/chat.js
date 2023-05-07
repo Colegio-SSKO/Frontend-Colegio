@@ -15,6 +15,8 @@ class Chat extends HTMLElement {
             response.json()
 
         );
+        console.log("data1")
+        console.log(data)
 
         //answer questions
         let data2 = await fetch("http://localhost:8090/api/teachers/answer_questions/", {
@@ -39,7 +41,8 @@ class Chat extends HTMLElement {
 
         for (let i of data) {
             if (i["status"]== 2){
-                htmlcontent += `<new-chat author_id="${i["teacher.user_ID"]}" chat_id="${i["question.question_id"]}" img_src="${i["pro_pic"]}" qulifi="${i["qualification_level"]}" title="${i["question_title"]}" description="${i["question_description"]}" author="${i["f_name"] + i["l_name"]}"></new-chat>
+
+                htmlcontent += `<new-chat isTeacher="0" messages="${encodeURIComponent(JSON.stringify(i["messages"]))}" teacher_id="${i["question.accept_teacher_id"]}" author_id="${i["teacher.user_ID"]}" chat_id="${i["question.question_id"]}" img_src="${i["pro_pic"]}" qulifi="${i["qualification_level"]}" title="${i["question_title"]}" description="${i["question_description"]}" author="${i["f_name"] + i["l_name"]}"></new-chat>
                 `;
 
             }
@@ -51,7 +54,7 @@ class Chat extends HTMLElement {
 
         for (let i of data2) {
             if (i["question.status"]== 2){
-                htmlcontent2 += `<new-chat author_id="${i["question.user_id"]}" chat_id="${i["question.question_id"]}" img_src="${i["pro_pic"]}" qulifi="${i["qualification_level"]}" title="${i["question_title"]}" description="${i["question_description"]}" author="${i["f_name"] + i["l_name"]}"></new-chat>
+                htmlcontent2 += `<new-chat teacher_id="${i["question.accept_teacher_id"]}" isTeacher="1" messages="${encodeURIComponent(JSON.stringify(i["messages"]))}" author_id="${i["question.user_id"]}" chat_id="${i["question.question_id"]}" img_src="${i["pro_pic"]}" qulifi="${i["qualification_level"]}" title="${i["question_title"]}" description="${i["question_description"]}" author="${i["f_name"] + i["l_name"]}"></new-chat>
                 `;
 
             }

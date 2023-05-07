@@ -1,8 +1,8 @@
-alert("report_course123");
+
 
 async function fetchData(){
 
-    alert(temporary_data);
+
     let res = await fetch("http://localhost:8090/api/moderators/generate_report_quiz/:" + temporary_data, {
         method : "GET",
         credentials : "include"
@@ -66,7 +66,7 @@ function renderSingle(){
                 ok_btn.addEventListener("click", ()=>{
                     document.querySelector(".popup-container").style.display = "none";
                 })
-                alert(res.message);
+
 
             })
         }

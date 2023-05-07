@@ -1,4 +1,4 @@
-alert("upgrade");
+
 async function sendData(jsonRequest){
     await fetch("")
 }

@@ -1,4 +1,4 @@
-alert("Helleo");
+
 
 async function fetchData() {
     const req = {

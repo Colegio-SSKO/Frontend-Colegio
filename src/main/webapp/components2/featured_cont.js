@@ -88,7 +88,7 @@ class Featured_cont extends HTMLElement {
                 let popup = document.querySelector(".popup-content");
                 document.querySelector(".popup-container").style.display = "flex";
 
-                alert(res.message);
+
 
                 if(res.message==="You already added this content"){
                     popup.innerHTML = `
@@ -109,11 +109,11 @@ class Featured_cont extends HTMLElement {
             })
         }
 
-        alert("payhere")
+
         document.querySelector('#js-payhere-paynow-btn').addEventListener('click', async (event)=>{
             event.preventDefault();
 
-            alert("paynow")
+
             let reqBody = {
                 "content" :[
                     {"content_id": content_id}
@@ -128,10 +128,10 @@ class Featured_cont extends HTMLElement {
             }).then((response)=>{
                 return response.json();
             })
-            alert(JSON.stringify(orderData))
+
 
             if (orderData["isError"]){
-                alert(orderData["errorMessage"])
+                (orderData["errorMessage"])
             }
             else{
                 // Payment completed. It can be a successful failure.

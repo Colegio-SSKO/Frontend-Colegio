@@ -1,4 +1,4 @@
-alert("Hellppaa");
+
 
 async function fetchData() {
     const req = {
@@ -138,7 +138,7 @@ function renderLeft() {
 
 
         submit.addEventListener('click', ()=>{
-            alert("wed");
+
             let thumbnail = document.querySelector(".js-myFile-course-form").files[0];
             let videos = document.querySelectorAll(".js-video-files").files[0];
             let formData =  new FormData();

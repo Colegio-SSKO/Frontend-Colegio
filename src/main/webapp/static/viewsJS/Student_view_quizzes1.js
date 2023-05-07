@@ -1,4 +1,4 @@
-alert("www2");
+
 
 //element selectors
 if (typeof previous === 'undefined') {
@@ -111,7 +111,7 @@ async function renderRight(data) {
         }
 
         changeColorOfNumber(questionTracker, "#46344e");
-        alert("previouss");
+
 
     })
 
@@ -124,7 +124,7 @@ async function renderRight(data) {
         }
 
         changeColorOfNumber(questionTracker, "#46344e");
-        alert("nextt")
+
     })
 
 
@@ -140,8 +140,8 @@ async function renderRight(data) {
     //adding event listners to containers
     for (let container of containerCollection){
         container.addEventListener('click', (event)=>{
-            alert("container clicked")
-            alert(event.target.id);
+
+
             for(let selectedContainer of containerCollection){
                 let children = selectedContainer.querySelectorAll("*");
                 children[0].style.backgroundColor = "#46344e";
@@ -149,7 +149,7 @@ async function renderRight(data) {
             }
 
             if(event.target.classList.contains("q-number")){
-                alert("wed");
+
                 event.target.style.backgroundColor = "#6D6D6D";
             }
             else {
@@ -184,7 +184,7 @@ async function renderRight(data) {
         number.addEventListener('click', (event)=>{
             event.preventDefault();
             let targetID = event.target.id[event.target.id.length-1];
-            alert(targetID);
+
             changeColorOfNumber(questionTracker, "#d9d9d9");
             questionTracker = targetID
             changeQuestion(questionTracker, questions,answers);
@@ -254,7 +254,7 @@ function renderLeft() {
 
 function quizcard(element){
 
-    alert("runn")
+
     let html_right = "";
 
     html_right = `<start-quiz comments="${encodeURIComponent(JSON.stringify(element["comments"]))}" rating="4" votes="110" quiz_id="${element["content_id"]}" img_src="/new" title="${element["quiz_title"]}" description=${element["description"]} author=${element["f_name"] + " " + element["l_name"]} author_title=${element["qulification_level"]}></start-quiz>`;

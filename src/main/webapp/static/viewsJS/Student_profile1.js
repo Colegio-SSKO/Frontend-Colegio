@@ -1,4 +1,4 @@
-alert("11111")
+
 async function fetchData(){
     return "eeew";
 };
@@ -45,7 +45,7 @@ function renderSingle(){
 
 
         let deleteBtn = document.querySelector("#delete-profile");
-        alert("5555555")
+
 
         deleteBtn.addEventListener('click', async ()=>{
 
@@ -59,10 +59,10 @@ function renderSingle(){
             });
 
             let popup = document.querySelector(".popup-content");
-            alert("helloo weeessa")
+
             document.querySelector(".popup-container").style.display = "flex";
 
-            alert(resp);
+
             let isError = resp["isError"];
             let message = resp["message"];
             if (isError==0){
@@ -81,7 +81,7 @@ function renderSingle(){
                        
                 `;
             }
-            alert("888")
+
 
 
         })

@@ -53,7 +53,7 @@ class Open_question1 extends HTMLElement {
         let message = document.querySelector("#js-quession-chat-input");
         let messageData = {};
         messageSendButton.addEventListener('click', (event)=>{
-            alert("send btn ek wed")
+
             event.preventDefault();
             if (message.value != ""){
                 messageData = {
@@ -72,7 +72,7 @@ class Open_question1 extends HTMLElement {
                             <div class="open-question-msg open-question-outgoingMSG"> <p>${message.value}</p></div>
                             <br>
                         `
-                    alert("methnt awne")
+
                     chatContainer.scrollTop = chatContainer.scrollHeight;
                 }
             }

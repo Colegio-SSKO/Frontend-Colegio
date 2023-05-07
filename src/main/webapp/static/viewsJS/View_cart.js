@@ -1,4 +1,4 @@
-alert("View cartnew1");
+
 
 async function fetchData(){
     const req = {
@@ -25,7 +25,7 @@ function renderSingle(){
 
     fetchData().then((data)=>{
         let total_price = 0;
-        alert(typeof(data));
+
         for (let i of data){
             total_price += i.price;
         }

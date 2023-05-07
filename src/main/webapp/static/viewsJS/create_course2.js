@@ -1,4 +1,4 @@
-alert("Hel222");
+
 
 async function fetchData() {
     let req = "";

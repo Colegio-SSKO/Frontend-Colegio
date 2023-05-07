@@ -1,4 +1,4 @@
-alert("create quiz2")
+
 
 //function to render right content
 

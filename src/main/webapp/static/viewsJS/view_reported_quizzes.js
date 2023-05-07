@@ -1,4 +1,4 @@
-alert("View reported courses");
+
 
 async function fetchData(){
 

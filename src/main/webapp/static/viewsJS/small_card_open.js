@@ -1,4 +1,4 @@
-alert("sssss")
+
 
 
 
@@ -9,7 +9,7 @@ async function fetchData() {
         method: "GET",
         credentials : "include"
     }).then((response) => response.json());
-    alert(res2)
+
     return res2;
 }
 //uncomment this when connecting the database
@@ -24,11 +24,11 @@ async function fetchData() {
 async function renderSingle() {
     try {
         let data = await fetchData();
-        alert(data);
+
 
         const res3 = await fetch("http://localhost:8090/api/users/small_card_open_comment/:" + temporary_data, {method: "GET"}).then((response) => response.text());
 
-        alert("tempory "+ temporary_data)
+
 
         let html_left = "";
         html_left = `<pop-up></pop-up> <small-cardopen img_src="${data.introduction_media}" title="${data.course_title}" description="${data.decription}" author="${data.f_name}+${data.l_name}" price="${data.price}" date="${data.date}" content_id="${data.content_id}" rate_count="${data.rate_count}" ></small-cardopen><comment-list dataString="${encodeURIComponent(res3)}"> </comment-list>`;

@@ -1,4 +1,4 @@
-alert("notification1")
+
 async function fetchData(){
     let bbb = document.querySelector("#main_search_icon").value;
     try {
@@ -6,12 +6,12 @@ async function fetchData(){
             "name": bbb
         };
         //uncomment this when connecting the database
-        let url = "http://localhost:8090/api/users/read_notification"+getUserID();
-        let response = await fetch(url, {
+        let url = "http://localhost:8090/api/users/read_notification/:"+getUserID();
+        let data = await fetch(url, {
             method: "GET",
             credentials : "include"
-        }).then((response)=> response.text());
-        let data = JSON.parse(response);
+        }).then((response)=> response.json());
+        console.log(data)
 
         return data;
     } catch (error) {

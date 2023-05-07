@@ -975,7 +975,7 @@ const urlLocation = async () =>{
     }
 
     if(location.includes("auth")){
-        alert("aa")
+
         handleAuthRoutes(location);
     }
     else{
@@ -992,7 +992,7 @@ const handleAuthRoutes = async (location) => {
     if(location.includes("signin")){
         pageContent = `<pop-up></pop-up><sign-in></sign-in>`;
 
-        alert(pageContent);
+
     }
     else if (location.includes("signup")){
         pageContent = `<pop-up></pop-up><sign-up></sign-up>`;
@@ -1045,16 +1045,15 @@ const handleNormalRoutes = async (location)=>{
 
 
     //setting the user data
-    alert("gemmmmmmak tm")
+
     let userData = await fetch('http://localhost:8090/api/authenticate/getUserData/', {
         method : "GET",
         credentials: 'include'
     }).then((response)=>{
         return response.json();
     })
-    // alert(userData["userName"])
-    // alert(userData["userType"])
-    alert("is token : " +userData["isTokenPresent"])
+
+
     let isTokenPresent = userData["isTokenPresent"];
     if (isTokenPresent == 0){
         userType = 0;
@@ -1084,7 +1083,7 @@ const handleNormalRoutes = async (location)=>{
     }
 
     //initializing web sockets
-    alert(isSocketsStartedBefore())
+
     if (!isSocketsStartedBefore()){
         initiateWebsocket();
     }
@@ -1111,6 +1110,11 @@ const handleNormalRoutes = async (location)=>{
 
     //changing the page name
     document.querySelector(".pagename").innerText = route.title;
+
+
+    //loading chats
+    let chat = document.createElement('chat-last');
+    document.querySelector('#js-chat-in-body-tag').innerHTML = '<chat-last></chat-last>'
 }
 
 
