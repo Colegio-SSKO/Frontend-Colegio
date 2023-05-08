@@ -41,7 +41,6 @@ function renderSingle(){
                     "organization_id": organization_id
                 }
 
-                alert(organization_id);
             })
 
         }

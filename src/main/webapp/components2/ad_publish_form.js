@@ -74,9 +74,10 @@ class Ad_publish_form extends HTMLElement {
                         return res.json()
                     })
 
-                if(!textUploadresponseme["isError"]){
+                if(!Boolean(textUploadresponse["isError"])){
                     alert("Upload una");
-                    userProfileImage=fileUploadresponseme["thumbnail"];
+                    window.history.pushState({}, "", "/profile");
+                    urlLocation();
                 }
                 else{
                     alert("error ekak oi")
