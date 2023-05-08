@@ -1,13 +1,13 @@
 alert("search main")
 async function fetchData(){
-    let bbb = document.querySelector("#main_search_icon").value;
+    let bbb = temporary_data;
     try {
         alert(bbb);
         let requestBody = {
             "name": bbb
         };
         //uncomment this when connecting the database
-        let url = "http://localhost:8090/api/users/search_main";
+        let url = "http://localhost:8090/api/visitors/search_main";
         let response = await fetch(url, {
             method: "POST",
             body: JSON.stringify(requestBody),
