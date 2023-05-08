@@ -741,6 +741,11 @@ body {
 }
 
 
+.more-btn{
+    margin: auto;
+    text-align: center;
+}
+
 .btn-profile{
     width: 150px;
     height: 45px;
