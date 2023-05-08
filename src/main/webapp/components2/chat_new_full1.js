@@ -34,7 +34,7 @@ class Chat_new_full1 extends HTMLElement {
                     placeholder="Type your response">
 
                   <span class="material-icons">attach_file</span>
-                   <button  class="send-button js-quession-chat-send-btn${chat_id}"><span class="material-icons">send</span></button>
+                   <button  class="send-button js-quession-chat-send-btn${chat_id}" type="submit"><span class="material-icons">send</span></button>
                 </form>
               </div>
             </div>

@@ -1,4 +1,3 @@
-alert("edit12345655")
 
 
 async function fetchData(){
@@ -9,7 +8,6 @@ async function fetchData(){
     }).then((response) =>
         response.json()
     );
-    alert(res3);
     return res3;
 };
 

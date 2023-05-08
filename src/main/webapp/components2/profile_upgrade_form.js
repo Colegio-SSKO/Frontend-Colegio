@@ -77,6 +77,28 @@ class Profile_upgrade_form extends HTMLElement {
                         return res.json()
                     })
 
+                let popup = document.querySelector(".popup-content");
+                document.querySelector(".popup-container").style.display = "flex";
+
+                alert(textUploadresponse.message);
+
+                if(textUploadresponse.message==="Send upgrade to teacher details successfully"){
+                    popup.innerHTML = `
+                        <img src="../static/img/components_images/success.jpg" alt="">
+                        <h2>${textUploadresponse.message}</h2>
+                        <button btn btn-primary><a href="/profile">OK</a></button>
+
+                `;
+                }
+                else {
+                    popup.innerHTML = `
+                        <img src="../static/img/components_images/error.jpg" alt="">
+                        <h2>Error</h2>
+                        <button btn btn-primary><a href="/profile">OK</a></button>
+
+                `;
+                }
+
                 if(!textUploadresponseme["isError"]){
                     alert("Upload una");
                 }

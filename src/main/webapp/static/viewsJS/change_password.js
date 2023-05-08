@@ -1,4 +1,3 @@
-alert("password111")
 async function fetchData(){
 
     let res = await fetch("http://localhost:8090/api/users/viewprofile/:"+getUserID(), {method : "GET", credentials : "include"}).then((response)=>

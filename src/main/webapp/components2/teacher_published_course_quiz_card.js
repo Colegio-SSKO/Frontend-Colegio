@@ -15,7 +15,7 @@ class Publish_coursequiz extends HTMLElement {
                 <h5 class="fnt fnt-bold fnt-mid">${title}</h5>
                 <h3 class="fnt fnt-bold fnt-large">LKR.${price}</h3>
             </div>
-            <h3 class="teacher_disable_course fnt-mid fnt-light" id="${content_id}">${num == 1 ? '' : 'Disable content>>'}</h3>
+            <h3 class="teacher_disable_course fnt-mid fnt-light" id="${content_id}"><button class="btn-a btn-solid btn">${num == 1 ? '' : 'Disable content>>'}</button></h3>
         </div>
         `;
 

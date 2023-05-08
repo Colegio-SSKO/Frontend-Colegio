@@ -1,4 +1,3 @@
-alert("awa waa")
 
 
 
@@ -11,7 +10,6 @@ async function fetchData() {
         method: "GET",
         credentials : "include"
     }).then((response) => response.json());
-    alert(res2)
     return res2;
 }
 

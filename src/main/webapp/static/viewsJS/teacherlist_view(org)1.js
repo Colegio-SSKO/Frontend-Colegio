@@ -1,3 +1,4 @@
+alert("org_teachers(Org1)123245");
 
 async function fetchData(){
     const req = {
@@ -43,7 +44,7 @@ function renderSingle(){
                     "user_id": user_id
                 }
 
-
+                alert(user_id);
                 // let url = "http://localhost:8090/api/users/Vieworg_teacher";
                 // let res3 = await fetch(url, {method: "POST", body: JSON.stringify(requestBody)}).then((response) =>
                 //     response.json()
@@ -57,53 +58,7 @@ function renderSingle(){
         }
 
 
-        let remove = document.querySelectorAll(".remove_teacher");
 
-
-        for (let element of remove){
-            element.addEventListener('click',async (event)=>{
-
-                let teacher_id = event.target.id;
-
-
-                let requestBody= {
-                    "teacher_id": teacher_id
-                }
-                let url = "http://localhost:8090/api/organizations/remove_teacher/:" + getUserID();
-                let res = await fetch(url, {
-                    method : "POST",
-                    body : JSON.stringify(requestBody),
-                    credentials : "include"
-                }).then((response)=>
-                    response.json()
-
-                );
-
-
-                let popup = document.querySelector(".popup-content");
-
-                document.querySelector(".popup-container").style.display = "flex";
-
-
-                if(res.message==="Remove teacher successfully"){
-                    popup.innerHTML = `
-                        <img src="../static/img/components_images/success.jpg" alt="">
-                        <h2>${res.message}</h2>
-                        <button btn btn-primary><a href="myorganization_Teachers">OK</a></button>
-
-                `;
-                }
-                else {
-                    popup.innerHTML = `
-                        <img src="../static/img/components_images/error.jpg" alt="">
-                        <h2>${res.message}</h2>
-                        <button btn btn-primary><a href="myorganization_Teachers">OK</a></button>
-
-                `;
-                }
-
-            })
-        }
 
     });
 }

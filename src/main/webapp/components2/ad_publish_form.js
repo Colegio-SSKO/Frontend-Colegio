@@ -8,12 +8,13 @@ class Ad_publish_form extends HTMLElement {
                 <form action="#" class="upgrade-form" method="post">
                 
                     
-                    <label class="upgrade-label fnt fnt-bold fnt-large" for="certification">Upload your ad(only jpg,png files)</label>
-                    <input type="file" id="certification" class="quli_certificates" name="certification" accept=".jpeg, .png">
+                    <label class="upgrade-label fnt fnt-bold fnt-extraLarge" for="certification">Upload your ad(only jpg,png files)</label><br>
+                    <input type="file" id="certification" class="quli_certificates" name="certification" accept=".jpeg, .png"><br>
                     
                     
                     <button class="btn btn-large btn-outlined fnt fnt-mid fnt-bold " id="submit_btn" type="submit">Submit</button>
-                </form>
+                </form><br><br>
+                <center><img src="../static/img/add_img/add.png" width="400px" height="300px"><center>
               
         </div>
       </div>

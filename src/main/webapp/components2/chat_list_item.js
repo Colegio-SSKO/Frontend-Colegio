@@ -7,7 +7,7 @@ class Chat_list_item extends HTMLElement {
 
         this.innerHTML = `
 
-            <div id="${question_id}" class="chat-list-item"> <img src="${img_src}" alt=""> ${chatname}</div>
+            <div id="${question_id}" class="chat-list-item fnt-bold fnt fnt-mid"> <img src="${img_src}" alt=""> ${chatname}</div>
 
 
         `;

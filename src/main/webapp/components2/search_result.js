@@ -49,18 +49,18 @@ class search_result extends HTMLElement {
                 document.querySelector(".popup-container").style.display = "flex";
                 alert(res.message);
 
-                if(res.message==="Send request successfully"){
+                if(res.message==="Request send successfully"){
                     popup.innerHTML = `
                       <img src="../static/img/components_images/success.jpg" alt="">
                       <h2>${res.message}</h2>
-                      <button class="btn" id="ok-btn">OK</button>       
+                      <button class="btn" id="ok-btn"><a href="/invite_teachers">OK</a></button>      
                 `;
                 }
                 else{
                     popup.innerHTML = `
                        <img src="../static/img/components_images/error.jpg" alt="">
                        <h2>${res.message}</h2>
-                       <button class="btn" id="ok-btn">OK</button>       
+                       <button class="btn" id="ok-btn is-a-route">OK</button>       
                     `;
                 }
 

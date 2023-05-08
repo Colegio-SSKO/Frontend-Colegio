@@ -1,8 +1,6 @@
-alert("dfdf3")
 async function fetchData(){
 
 
-    alert(temporary_data);
 
 //uncomment this when connecting the database
     let url = "http://localhost:8090/api/users/vieworganizationprofile/:"+temporary_data;

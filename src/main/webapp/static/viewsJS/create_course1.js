@@ -166,7 +166,6 @@ function renderLeft() {
                 body: formData,
                 credentials : "include"
             }).then(()=>{
-                alert("uploaded");
             })
         });
 

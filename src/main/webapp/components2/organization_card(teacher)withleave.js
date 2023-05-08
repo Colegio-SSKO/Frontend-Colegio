@@ -29,54 +29,100 @@ class Organization_cardteacher_withleave extends HTMLElement {
         let teacher_leave = document.querySelectorAll(".teacher_leave");
 
 
+
         for (let element of teacher_leave){
             element.addEventListener('click',async (event)=>{
-
-                let organization_id = event.target.id;
-                temporary_data= organization_id;
-
-
-                let requestBody= {
-                    "organization_id": organization_id
-                }
-                let url = "http://localhost:8090/api/teachers/leave_from_org/:" + getUserID();
-                let res = await fetch(url, {
-                    method : "POST",
-                    body : JSON.stringify(requestBody),
-                    credentials : "include"
-                }).then((response)=>
-                    response.json()
-
-                );
-
-                let location = window.location;
-                window.history.pushState({}, "", location);
-                urlLocation();
-
 
                 let popup = document.querySelector(".popup-content");
                 document.querySelector(".popup-container").style.display = "flex";
 
-                if(res.message==="Send request successfully"){
                     popup.innerHTML = `
-                      <img src="../static/img/components_images/success.jpg" alt="">
-                      <h2>${res.message}</h2>
-                      <a href="/organization"><button class="btn is-a-route" id="ok-btn">OK</button></a>       
-                `;
-                }
-                else{
-                    popup.innerHTML = `
-                       <img src="../static/img/components_images/error.jpg" alt="">
-                       <h2>Error</h2>
-                       <a href="/organization"><button class="btn is-a-route" id="ok-btn">OK</button></a>       
-                    `;
+                      <h2 class="fnt fnt-bold fnt-large">Confirm leave form organization</h2>
+                      
+                      <div style="display: inline-block">
+                            <button class="ok-btn btn btn-large fnt fnt-large fnt-bold" id="${organization_id}" style="margin-right: 10px;" >OK</button><button class="btn btn-large fnt fnt-large fnt-bold" id="cancel-btn" style="background-color: darkred">Cancel</button>      
+                      </div>
+`;
+
+
+
+                let ok = document.querySelectorAll(".ok-btn");
+
+                for (let element of ok){
+                    element.addEventListener('click',async (event)=>{
+
+                        let organization_id = event.target.id;
+                        temporary_data= organization_id;
+
+                        let requestBody= {
+                            "organization_id": organization_id
+                        }
+                        let url = "http://localhost:8090/api/teachers/leave_from_org/:" + getUserID();
+                        let res = await fetch(url, {
+                            method : "POST",
+                            body : JSON.stringify(requestBody),
+                            credentials : "include"
+                        }).then((response)=>
+                            response.json()
+
+                        );
+
+
+
+
+                        let popup = document.querySelector(".popup-content");
+                        document.querySelector(".popup-container").style.display = "flex";
+
+                        if(res.message==="Leave successfully"){
+                            popup.innerHTML = `
+                                  <img src="../static/img/components_images/success.jpg" alt="">
+                                  <h2>${res.message}</h2>
+                                  <button class="btn is-a-route" id="ok-btn">OK</button>      
+                            `;
+
+                            let ok_btn = document.getElementById("ok-btn");
+                            ok_btn.addEventListener("click", ()=>{
+                                let location = window.location;
+                                window.history.pushState({}, "", location);
+                                urlLocation();
+                            })
+                        }
+                        else{
+                            popup.innerHTML = `
+                               <img src="../static/img/components_images/error.jpg" alt="">
+                               <h2>Error</h2>
+                               <button class="btn is-a-route" id="ok-btn">OK</button>      
+                        `;
+                            let ok_btn = document.getElementById("ok-btn");
+                            ok_btn.addEventListener("click", ()=>{
+                                let location = window.location;
+                                window.history.pushState({}, "", location);
+                                urlLocation();
+                            })
+
+                        }
+
+                        let ok_btn = document.getElementById("ok-btn");
+                        ok_btn.addEventListener("click", ()=>{
+                            document.querySelector(".popup-container").style.display = "none";
+                        })
+
+                    })
+
+                    let cancel_btn = document.getElementById("cancel-btn");
+                    cancel_btn.addEventListener("click", ()=>{
+                        document.querySelector(".popup-container").style.display = "none";
+                    })
+
+
+
+
+
+
 
                 }
 
-                let ok_btn = document.getElementById("ok-btn");
-                ok_btn.addEventListener("click", ()=>{
-                    document.querySelector(".popup-container").style.display = "none";
-                })
+
             })
         }
     }
