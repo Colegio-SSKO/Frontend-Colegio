@@ -12,16 +12,8 @@
 <body>
     <nav>
 
-        <h3 class="pagename fnt fnt-bold fnt-extraLarge">Notifications</h3>
-        
-        <div class="nav-middle">
-            <input type="text" class="fnt fnt-bold" placeholder="Search here ...">
-        </div>
+        <h3 class="pagename fnt fnt-bold fnt-extraLarge">Moderator</h3>
 
-        <div class="main-profile router">
-            <h5 class="fnt fnt-bold fnt-mid"><a href="/profile">Senith Uthsara</a> </h5>
-        </div>
-        
     </nav>
 </body>
 </html>
