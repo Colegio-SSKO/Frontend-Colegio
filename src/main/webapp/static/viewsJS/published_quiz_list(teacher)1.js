@@ -1,4 +1,3 @@
-alert("quizzzzz12345006");
 
 async function fetchData(){
 

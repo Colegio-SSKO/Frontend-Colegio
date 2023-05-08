@@ -15,8 +15,9 @@ class Teacher_profile_carduser extends HTMLElement {
             <img src="${profile_img}" alt="profile picture" srcset="">
         </div>
         <div class="profile-card-details">
-            <h4 class="fnt fnt-bold fnt-mid">${name} <span class="material-icons-outlined"> ${gender}</span></h4>
-            <p class="fnt fnt-mid">${quli}</p>
+            <h4 class="fnt fnt-bold fnt-large">Name: <span class="fnt-mid fnt-bold fnt">${name}</span></h4>
+            <p class="fnt fnt-large fnt-bold">Gender: <span class="fnt-mid fnt-bold fnt">${gender}</span></p>
+            <p class="fnt fnt-large fnt-bold">Qualification Level: <span class="fnt-mid fnt-bold fnt">${quli}</span></p>
             
         </div>
    

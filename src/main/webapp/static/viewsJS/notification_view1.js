@@ -112,13 +112,11 @@ function renderSingle(){
                 // }
             }
 
-            alert("notifications thynw")
             document.querySelector(".cont-body-content").innerHTML = html;
 
             //remove this
             document.querySelector('#js-notification-test').addEventListener('click', (event)=>{
                 event.preventDefault();
-                alert("click una")
             })
 
 

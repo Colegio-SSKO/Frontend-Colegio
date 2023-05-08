@@ -1,4 +1,3 @@
-alert("teacher_course");
 
 async function fetchData(){
     const req = {
@@ -20,7 +19,6 @@ function renderSingle(){
 
     fetchData().then((data)=>{
 
-        alert(data);
         let html = `
  
         <content-list dataString="${encodeURIComponent(data)}"></content-list>`;

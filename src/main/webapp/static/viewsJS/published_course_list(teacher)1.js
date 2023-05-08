@@ -1,4 +1,3 @@
-alert("aa1232");
 
 async function fetchData(){
     const req = {

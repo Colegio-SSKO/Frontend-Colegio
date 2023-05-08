@@ -22,7 +22,7 @@ class Edit_profileorg extends HTMLElement {
                 <input type="text" class="address fnt fnt-bold fnt-mid" name="address" id="" required><br><br>
 
                 <button id="save-btn" type="submit" class="btn btn-solid fnt fnt-bold fnt-mid">Save</button><br>
-                <button class="btn btn-solid fnt fnt-bold fnt-mid" ><a href="/change_password">Edit Privacy & Security</a></button>
+                <a href="/change_password"><button class="btn btn-solid btn-a is-a-route fnt fnt-bold fnt-mid" >Edit Privacy & Security</button></a>
 
            
         </div>

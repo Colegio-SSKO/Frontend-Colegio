@@ -1,4 +1,3 @@
-alert("invite_teacher");
 
 async function renderSingle() {
     try {

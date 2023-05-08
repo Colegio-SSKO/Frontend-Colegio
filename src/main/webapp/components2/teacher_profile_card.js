@@ -19,10 +19,10 @@ class Teacher_profile_card extends HTMLElement {
             <img src="${profile_img}" alt="profile picture" srcset="">
         </div>
         <div class="profile-card-details">
-            <h4 class="fnt fnt-bold fnt-large">Name: ${name}</h4><br>
-            <p class="fnt fnt-large fnt-bold">Gender: ${gender}</p><br>
-            <p class="fnt fnt-large fnt-bold">Qualification level: ${quli}</p><br>
-            <p class="fnt fnt-bold fnt-large">Tag: ${tag}</p>
+            <h4 class="fnt fnt-bold fnt-large">Name: <span class="fnt-mid fnt-bold fnt">${name}</span></h4><br>
+            <p class="fnt fnt-large fnt-bold">Gender: <span class="fnt-mid fnt-bold fnt">${gender}</span></p><br>
+            <p class="fnt fnt-large fnt-bold">Qualification level: <span class="fnt-mid fnt-bold fnt">${quli}</span></p><br>
+            <p class="fnt fnt-bold fnt-large">Tag: <span class="fnt-mid fnt-bold fnt">${tag}</span></p>
             
         </div>
         <div class="edit-and-delte-btns">

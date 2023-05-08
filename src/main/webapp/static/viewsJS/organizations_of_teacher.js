@@ -1,4 +1,3 @@
-alert("my_organizs2232222233s");
 
 async function fetchData(){
     const req = {

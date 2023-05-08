@@ -1,5 +1,4 @@
 
-alert("Hello");
 
 async function fetchData() {
     const req = {

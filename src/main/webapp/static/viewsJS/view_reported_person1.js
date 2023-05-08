@@ -1,4 +1,3 @@
-alert("View reported person123");
 
 async function fetchData(){
 

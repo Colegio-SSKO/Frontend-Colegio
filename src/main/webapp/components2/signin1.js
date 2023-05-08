@@ -33,7 +33,7 @@ class Signin1 extends HTMLElement {
                               <ul>
                                 <li><a href="" class="fnt fnt-mid fnt-bold">About</a></li>
                                 <li><a href="" class="fnt fnt-mid fnt-bold">Help Center</a></li>
-                                <li><a href="" class="fnt fnt-mid fnt-bold">User Agrement</a></li>
+                                <li><a href="" class="fnt fnt-mid fnt-bold">User Argument</a></li>
                                 <li><a href="" class="fnt fnt-mid fnt-bold">Privacy Policy</a></li>
                                 <li><a href="" class="fnt fnt-mid fnt-bold">Cookie Policy</a></li>
                               </ul>
@@ -57,7 +57,7 @@ class Signin1 extends HTMLElement {
                 popup.innerHTML = `
                         <img src="../static/img/components_images/error.jpg" alt="">
                         <h2 class="fnt fnt-bold fnt-large">Password or email is empty</h2>
-                        <button class="btn btn-primary " id="ok-btn">OK</button>
+                        <button class="btn btn-special fnt fnt-mid fnt-bold" id="ok-btn">OK</button>
 
                 `;
                 let ok_btn = document.getElementById("ok-btn");
@@ -82,10 +82,13 @@ class Signin1 extends HTMLElement {
                     document.querySelector(".popup-container").style.display = "flex";
                     popup.innerHTML = `
                         <img src="../static/img/components_images/error.jpg" alt="">
-                        <h2 class="fnt fnt-bold fnt-large">${message}</h2>
-                        <button class="btn btn-primary " id="ok-btn">OK</button>
+                        <h2 class="fnt fnt-bold fnt-large">${receivedData["message"]}</h2>
+                        <button class="btn btn-special fnt fnt-mid fnt-bold" id="ok-btn">OK</button>
 
-                `;
+                `;       let ok_btn = document.getElementById("ok-btn");
+                    ok_btn.addEventListener("click", ()=>{
+                        document.querySelector(".popup-container").style.display = "none";
+                    })
 
                     password.value = "";
                     email.value = "";
@@ -98,9 +101,12 @@ class Signin1 extends HTMLElement {
                     popup.innerHTML = `
                         <img src="../static/img/components_images/success.jpg" alt="">
                         <h2 class="fnt fnt-bold fnt-large">${receivedData["message"]}</h2>
-                        <button class="btn btn-primary " id="ok-btn">OK</button>
+                        <button class="btn btn-special fnt fnt-mid fnt-bold" id="ok-btn">OK</button>
 
-                `;
+                `;       let ok_btn = document.getElementById("ok-btn");
+                    ok_btn.addEventListener("click", ()=>{
+                        document.querySelector(".popup-container").style.display = "none";
+                    })
                     //setting the user data
 
 

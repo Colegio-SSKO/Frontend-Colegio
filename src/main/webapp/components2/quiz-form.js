@@ -63,12 +63,13 @@ class QuizForm extends HTMLElement {
                                 </select>
                             </div>
                         </div>
-                        <i id="js-quiz-upload-container-add-btn" class="material-icons">add_box</i>
+                        <i id="js-quiz-upload-container-add-btn" class="material-icons">add_box</i><br>
+                        
                     </div>
                     
 <!--                    remove this lator-->
-                    <button id="js-quiz-upload-submit-button" class="btn btn-outlined btn-large" type="submit">Create Quiz</button>
-                     <button id="js-quiz-upload-preview-button" class="btn btn-outlined btn-large">Preview</button>
+                    <button id="js-quiz-upload-submit-button" class="btn btn-solid fnt fnt-bold fnt-mid" type="submit">Create Quiz</button>
+                     <button id="js-quiz-upload-preview-button" class="btn btn-solid  fnt fnt-bold fnt-mid">Preview</button>
                 </div>
             </div>
     </form>

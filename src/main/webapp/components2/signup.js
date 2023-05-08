@@ -86,7 +86,7 @@ class Signup extends HTMLElement {
                                           </div>
                                   </div>
                                   <div class="input-field">
-                                    <label class="fnt fnt-mid fnt-bold" for="">Already have an account? <span><a href="/auth/signin" class="link">Signin</a></span></label>
+                                    <label class="fnt fnt-mid fnt-bold" for="">Already have an account? <span><a href="/auth/signin" class="link">Sign in</a></span></label>
                                   </div>
                                 </div>
                                 <button id="js-signin-btn" class="btn btn-solid fnt fnt-mid fnt-bold" type="submit"> Sign Up </button>
@@ -146,7 +146,7 @@ class Signup extends HTMLElement {
                 popup.innerHTML = `
                         <img src="../static/img/components_images/error.jpg" alt="">
                         <h2 class="fnt fnt-bold fnt-large">Password and the confirm password do not match</h2>
-                        <button class="btn btn-primary " id="ok-btn">OK</button>
+                        <button class="btn btn-special fnt fnt-mid fnt-bold" id="ok-btn">OK</button>
 
                 `;
                 let ok_btn = document.getElementById("ok-btn");
@@ -170,7 +170,7 @@ class Signup extends HTMLElement {
                 popup.innerHTML = `
                         <img src="../static/img/components_images/error.jpg" alt="">
                         <h2 class="fnt fnt-bold fnt-large">Password must have atleast 8 characters</h2>
-                        <button class="btn btn-primary " id="ok-btn">OK</button>
+                        <button class="btn btn-special fnt fnt-mid fnt-bold" id="ok-btn">OK</button>
 
                 `;
                 let ok_btn = document.getElementById("ok-btn");
@@ -191,7 +191,7 @@ class Signup extends HTMLElement {
                 popup.innerHTML = `
                         <img src="../static/img/components_images/error.jpg" alt="">
                         <h2 class="fnt fnt-bold fnt-large">Password must have atleast one digit</h2>
-                        <button class="btn btn-primary " id="ok-btn">OK</button>
+                        <button class="btn btn-special fnt fnt-mid fnt-bold" id="ok-btn">OK</button>
 
                 `;
                 let ok_btn = document.getElementById("ok-btn");
@@ -216,7 +216,7 @@ class Signup extends HTMLElement {
                 popup.innerHTML = `
                         <img src="../static/img/components_images/error.jpg" alt="">
                         <h2 class="fnt fnt-bold fnt-large">${error}</h2>
-                        <button class="btn btn-primary " id="ok-btn">OK</button>
+                        <button class="btn btn-special fnt fnt-mid fnt-bold" id="ok-btn">OK</button>
 
                 `;
                 let ok_btn = document.getElementById("ok-btn");
@@ -265,7 +265,7 @@ class Signup extends HTMLElement {
                     popup.innerHTML = `
                         <img src="../static/img/components_images/error.jpg" alt="">
                         <h2 class="fnt fnt-bold fnt-large">${response["message"]}</h2>
-                        <button class="btn btn-primary " id="ok-btn">OK</button>
+                        <button class="btn btn-special fnt fnt-mid fnt-bold" id="ok-btn">OK</button>
 
                 `;
                     let ok_btn = document.getElementById("ok-btn");
@@ -279,7 +279,7 @@ class Signup extends HTMLElement {
                     popup.innerHTML = `
                         <img src="../static/img/components_images/success.jpg" alt="">
                         <h2 class="fnt fnt-bold fnt-large">response["message"]</h2>
-                        <button class="btn btn-primary " id="ok-btn">OK</button>
+                        <button class="btn btn-special fnt fnt-mid fnt-bold" id="ok-btn">OK</button>
 
                 `;
                     let ok_btn = document.getElementById("ok-btn");
@@ -297,9 +297,9 @@ class Signup extends HTMLElement {
                 let popup = document.querySelector(".popup-content");
                 document.querySelector(".popup-container").style.display = "flex";
                 popup.innerHTML = `
-                        <img src="../static/img/components_images/error.jpg" alt="">
+                        <img src="../static/img/components_images/error.png" alt="">
                         <h2 class="fnt fnt-bold fnt-large">Resubmit</h2>
-                        <button class="btn btn-primary " id="ok-btn">OK</button>
+                        <button class="btn btn-special fnt fnt-mid fnt-bold" id="ok-btn">OK</button>
 
                 `;
                 let ok_btn = document.getElementById("ok-btn");

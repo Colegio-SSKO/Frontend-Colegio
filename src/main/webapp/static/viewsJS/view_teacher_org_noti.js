@@ -1,4 +1,3 @@
-alert("Notification1234");
 
 async function fetchData(){
     const req = {
@@ -80,7 +79,6 @@ function renderSingle(){
                 ok_btn.addEventListener("click", ()=>{
                     document.querySelector(".popup-container").style.display = "none";
                 })
-                alert(res.message);
                 // let location = window.location;
                 // window.history.pushState({}, "", location);
                 // urlLocation();

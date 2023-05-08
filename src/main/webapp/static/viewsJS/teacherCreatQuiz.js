@@ -75,7 +75,6 @@ function renderLeft() {
 
         let submit = document.querySelector("#submitbtn");
         submit.addEventListener('click', ()=>{
-            alert("wed");
             let thumbnail = document.querySelector(".js-myFile-course-form").files[0];
             let videos = document.querySelectorAll(".js-video-files").files[0];
             let formData =  new FormData();
@@ -97,7 +96,6 @@ function renderLeft() {
                 body: formData,
                 credentials : "include"
             }).then(()=>{
-                alert("uploaded");
             })
         });
 
