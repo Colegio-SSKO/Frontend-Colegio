@@ -63,7 +63,7 @@ class Item_buying_right extends HTMLElement {
 
 
                 let popup = document.querySelector(".popup-content");
-                alert("helloo weeessa")
+
                 document.querySelector(".popup-container").style.display = "flex";
 
                 alert(res.message);
@@ -119,6 +119,7 @@ class Item_buying_right extends HTMLElement {
                 alert(orderData["errorMessage"])
             }
             else{
+                alert("purchase successful")
                 // Payment completed. It can be a successful failure.
                 payhere.onCompleted = function onCompleted(orderId) {
                     console.log("Payment completed. OrderID:" + orderId);
