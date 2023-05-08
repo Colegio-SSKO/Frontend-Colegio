@@ -1,22 +1,21 @@
-alert("Heiya245");
+
 
 async function fetchData() {
 
 
-    alert("api call wenw 5")
+
     let res = await fetch("http://localhost:8090/api/teachers/answer_questions/", {
         method : "GET",
         credentials : "include"
     }).then((response)=>{
-        alert("athule wed")
-            alert(JSON.stringify(response));
+
             return response.json()
     }
 
 
     );
 
-    alert(JSON.stringify(res))
+
     return res
 };
 
@@ -30,11 +29,11 @@ function renderRight(data, type) {
     let html_right = "";
 
     if (type== 1){
-        alert("kabmmm")
+
         html_right = ` <open-question img_src="${data["pro_pic"]}" qulifi="${data["qulification_level"]}" title="${data["question_title"]}"  author="${data["f_name"]+" "+ data["l_name"]}" description="${data["question_description"]}" author_ID="${data["question.user_id"]}" questionId="${data["question.question_id"]}"></open-question>`;
     }
     else {
-        alert("asd")
+
         html_right = ` <send-answers media="${data["question_img"]}" author_propic="${data["pro_pic"]}" title="${data["question_title"]}" author="${data["f_name"]+" "+ data["l_name"]}"  description="${data["question_description"]}" qulifi="${data["qulification_level"]}" questionId="${data["question.question_id"]}" ></send-answers>`;
 
     }

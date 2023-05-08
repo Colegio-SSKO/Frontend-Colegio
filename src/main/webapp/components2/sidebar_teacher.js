@@ -44,17 +44,23 @@ class sidebar_teacher extends HTMLElement {
 
         let logoutBtn = document.querySelector("#js-logout-btn");
         logoutBtn.addEventListener('click', async ()=>{
-            alert("logout");
+
             let logoutResponse = await fetch('http://localhost:8090/api/authenticate/logout/', {
                 credentials: 'include'
             })
                 .then((response)=>{
                     return response.json();
                 })
-            alert(logoutResponse["isSuccess"]);
+
             if (logoutResponse["isSuccess"]){
                 closeWebsockets();
+
+                //unloading chats
+
+                document.querySelector('#js-chat-in-body-tag').innerHTML = ''
+
                 //sending to home page
+
                 window.history.pushState({}, "", "/");
                 urlLocation();
 

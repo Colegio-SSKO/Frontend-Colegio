@@ -82,7 +82,7 @@ class Signin1 extends HTMLElement {
                     document.querySelector(".popup-container").style.display = "flex";
                     popup.innerHTML = `
                         <img src="../static/img/components_images/error.jpg" alt="">
-                        <h2 class="fnt fnt-bold fnt-large">${message}</h2>
+                        <h2 class="fnt fnt-bold fnt-large">${receivedData["message"]}</h2>
                         <button class="btn btn-primary " id="ok-btn">OK</button>
 
                 `;
@@ -102,6 +102,7 @@ class Signin1 extends HTMLElement {
 
                 `;
                     //setting the user data
+
 
 
                     //sending to home page

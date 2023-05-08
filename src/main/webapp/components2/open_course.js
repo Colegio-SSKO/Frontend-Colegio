@@ -187,8 +187,7 @@ class Open_course extends HTMLElement {
 
                 let course_id = event.target.id;
                 temporary_data= course_id;
-                alert(course_id);
-                alert("sachini")
+
 
 
             })

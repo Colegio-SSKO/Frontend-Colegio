@@ -1,7 +1,5 @@
 
 
-alert("aa home")
-
 async function fetchData(){
 
 

@@ -9,7 +9,7 @@ async function fetchData(){
         response.json()
 
     );
-    alert(JSON.stringify(res));
+
     return res
 
 };

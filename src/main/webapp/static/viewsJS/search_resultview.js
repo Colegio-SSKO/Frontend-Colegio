@@ -1,4 +1,3 @@
-alert("search_result");
 
 async function fetchData(){
     let requestBody = {

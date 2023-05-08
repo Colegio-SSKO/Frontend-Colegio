@@ -20,8 +20,7 @@ async function fetchData(){
 async function renderSingle() {
     try {
         const data = await fetchData();
-        alert(typeof (data));
-        alert(data);
+
         const res2 = await fetch("http://localhost:8090/api/users/ViewCont_list", { method: "GET" }).then((response) => response.text());
 
         const html_left = `
@@ -40,7 +39,6 @@ async function renderSingle() {
                 let user_id = event.target.id;
                 temporary_data= user_id;
 
-                alert(temporary_data);
 
 
             })
@@ -56,8 +54,7 @@ async function renderSingle() {
 
                 let user_id = event.target.id;
                 temporary_data= user_id;
-                alert("sewsew")
-                alert(temporary_data);
+
 
 
             })

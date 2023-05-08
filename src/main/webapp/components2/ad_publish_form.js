@@ -45,14 +45,13 @@ class Ad_publish_form extends HTMLElement {
             //send save files request
             let fileUploadresponseme = await fetch('http://localhost:8080/api/addpublish/', {method : "POST", body:formData})
                 .then((res)=>{
-                    alert(JSON.stringify(res));
+
                     return res.json();
                 })
 
 
             if(!fileUploadresponseme["isError"]){
-                alert("Upload una");
-                alert(JSON.stringify(fileUploadresponseme["thumbnail"]));
+
                 //handle text data submission here
                 //textData
 

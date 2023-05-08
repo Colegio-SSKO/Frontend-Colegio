@@ -51,7 +51,7 @@ class Send_answers extends HTMLElement {
         `;
         //setting event listener for the video upload icon of first wrapper
         document.querySelector(`#js-image-upload-answer`).addEventListener('click',(event)=>{
-            alert(event.target.parentElement.id);
+
             document.querySelector(`#${event.target.parentElement.id} #js-thumbnail-upload`).click();
         })
 
@@ -74,11 +74,11 @@ class Send_answers extends HTMLElement {
             }
         })
 
-        alert(questionId);
+
 
         document.querySelector('#js-question-upload-submit-button').addEventListener('click', async (event)=>{
             event.preventDefault();
-            alert("publish ek wed");
+
 
 
             let formData = new FormData();
@@ -87,23 +87,22 @@ class Send_answers extends HTMLElement {
 
             let fileUploadresponseme = await fetch('http://localhost:8080/api/answerQuestion/', {method : "POST", body:formData})
                 .then((res)=>{
-                    alert(JSON.stringify(res));
+
                     return res.json();
                 })
 
             if(!fileUploadresponseme["isError"]){
-                alert("Upload una");
-                alert(JSON.stringify(fileUploadresponseme["thumbnail"]));
+
 
                 let textData = {
                     "question_id" : questionId,
                     "image" : fileUploadresponseme["thumbnail"],
                 }
 
-                alert(JSON.stringify(textData))
+
 
                 //send the request
-                let uploadresponse = fetch('http://localhost:8090/api/teachers/answer_question/:'+getUserID(), {
+                let uploadresponse = await fetch('http://localhost:8090/api/teachers/answer_question/:'+getUserID(), {
                     method : "POST",
                     body:JSON.stringify(textData),
                     credentials : "include"

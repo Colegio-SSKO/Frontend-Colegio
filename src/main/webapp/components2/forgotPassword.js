@@ -78,7 +78,8 @@ class ForgotPassword extends HTMLElement {
                     <button id="js-forgot-password-send-btn" class="btn btn-solid  fnt fnt-mid fnt-bold"> Send</button>
                 `;
 
-                document.querySelector('#js-forgot-password-send-btn').addEventListener('click', async ()=>{
+                document.querySelector('#js-forgot-password-send-btn').addEventListener('click', async (event)=>{
+                    event.preventDefault();
                     let otpReq = {
                         "email" : emailReq["email"],
                         "otp" : document.querySelector('#js-forgot-password-otp').value
@@ -92,6 +93,7 @@ class ForgotPassword extends HTMLElement {
                         return response.json();
                     })
                     if (response["isError"]){
+
                         let popup = document.querySelector(".popup-content");
                         document.querySelector(".popup-container").style.display = "flex";
                         popup.innerHTML = `
@@ -106,69 +108,74 @@ class ForgotPassword extends HTMLElement {
                         })
                     }
                     else {
-                        let popup = document.querySelector(".popup-content");
-                        document.querySelector(".popup-container").style.display = "flex";
-                        popup.innerHTML = `
-                            <img src="../static/img/components_images/error.jpg" alt="">
-                            <h2 class="fnt fnt-bold fnt-large">${response["message"]}</h2>
-                            <button class="btn btn-primary " id="ok-btn">OK</button>
-    
-                    `;
-                        let ok_btn = document.getElementById("ok-btn");
-                        ok_btn.addEventListener("click", ()=>{
-                            document.querySelector(".popup-container").style.display = "none";
-                        })
+
+
 
                         document.querySelector('#js-forgotpassword-input-wrap').innerHTML = `
                             <label class="fnt fnt-mid fnt-bold">Enter a new password</label>
-                            <input id="js-forgot-password-newPassword" class="fnt fnt-mid fnt-bold" type="text" required>
+                            <input id="js-forgot-password-newPassword" class="fnt fnt-mid fnt-bold" type="password" required>
                             
                              <label class="fnt fnt-mid fnt-bold">Confirm new password</label>
-                            <input id="js-forgot-password-confirmPassword" class="fnt fnt-mid fnt-bold" type="text" required>
+                            <input id="js-forgot-password-confirmPassword" class="fnt fnt-mid fnt-bold" type="password" required>
                             
                             <button id="js-forgot-password-send-btn" class="btn btn-solid  fnt fnt-mid fnt-bold"> Confirm </button>
                         `;
 
-                        document.querySelector('#js-forgot-password-send-btn').addEventListener('click', async ()=>{
+                        alert("methnt enw")
+                        document.querySelector('#js-forgot-password-send-btn').addEventListener('click', async (event)=>{
 
-
+                            event.preventDefault();
                             let newEnteredPassword = document.querySelector('#js-forgot-password-newPassword');
                             let newConfirmPassword = document.querySelector('#js-forgot-password-confirmPassword');
 
-                            if (validatePassword(newEnteredPassword, newConfirmPassword)){
-                                let newPassword = {
-                                    "email": otpReq["email"],
-                                    "otp" : otpReq["otp"],
-                                    "password" : document.querySelector('#js-forgot-password-newPassword').value
-                                }
+                            if (validatePasswordLength(newEnteredPassword)) {
+                                if (validateNumberLength(newEnteredPassword)) {
+                                    if (validateConfirmPassword(newEnteredPassword, newConfirmPassword)){
+                                        let newPassword = {
+                                            "email": otpReq["email"],
+                                            "otp" : otpReq["otp"],
+                                            "password" : document.querySelector('#js-forgot-password-newPassword').value
+                                        }
 
-                                let passwordResp = await fetch("http://localhost:8090/api/authenticate/changePassword/", {
-                                    method : "POST",
-                                    body : JSON.stringify(newPassword),
-                                    credentials: 'include'
-                                }).then((response) => {
-                                    return response.json();
-                                })
+                                        let passwordResp = await fetch("http://localhost:8090/api/authenticate/changePassword/", {
+                                            method : "POST",
+                                            body : JSON.stringify(newPassword),
+                                            credentials: 'include'
+                                        }).then((response) => {
+                                            return response.json();
+                                        })
 
-                                if (passwordResp["isError"]){
-                                    let popup = document.querySelector(".popup-content");
-                                    document.querySelector(".popup-container").style.display = "flex";
-                                    popup.innerHTML = `
+                                        if (passwordResp["isError"]){
+                                            let popup = document.querySelector(".popup-content");
+                                            document.querySelector(".popup-container").style.display = "flex";
+                                            popup.innerHTML = `
                                                 <img src="../static/img/components_images/error.jpg" alt="">
                                                 <h2 class="fnt fnt-bold fnt-large">${passwordResp["message"]}</h2>
                                                 <button class="btn btn-primary " id="ok-btn">OK</button>
                         
                                         `;
-                                    let ok_btn = document.getElementById("ok-btn");
-                                    ok_btn.addEventListener("click", ()=>{
-                                        document.querySelector(".popup-container").style.display = "none";
-                                    })
-                                }
-                                else{
-                                    window.history.pushState({}, "", "/auth/signin");
-                                    urlLocation();
-                                }
+                                            let ok_btn = document.getElementById("ok-btn");
+                                            ok_btn.addEventListener("click", ()=>{
+                                                document.querySelector(".popup-container").style.display = "none";
+                                            })
+                                        }
+                                        else{
+                                            window.history.pushState({}, "", "/auth/signin");
+                                            urlLocation();
+                                        }
 
+
+                                    }
+                                    else{
+                                        alert("Password and the confirm password do not match")
+                                    }
+
+                                } else {
+                                    alert("Password must contain at least one digit")
+                                }
+                            }
+                            else{
+                                alert("Password must be at least 8 characters long")
 
                             }
                         })

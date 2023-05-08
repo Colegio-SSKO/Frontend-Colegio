@@ -1,4 +1,4 @@
-alert("teacher_course1");
+
 
 async function fetchData(){
     const req = {
@@ -20,12 +20,12 @@ function renderSingle(){
 
     fetchData().then(async (data)=>{
 
-        alert(data);
+
         const res3 = await fetch("http://localhost:8090/api/users/teacher_quiz/:"+ temporary_data, {
             method: "GET",
             credentials : "include"
         }).then((response) => response.text());
-        alert(res3);
+
         let html = "<div class='fnt fnt-bold fnt-large'>Courses</div>"+
  
         `<content-list dataString="${encodeURIComponent(data)}"></content-list>`+"<br><br><p><p><div class='fnt fnt-bold fnt-large'>Quizes</div>"+`<content-list dataString="${encodeURIComponent(res3)}"></content-list>`;

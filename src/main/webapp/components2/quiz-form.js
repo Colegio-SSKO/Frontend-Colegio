@@ -93,10 +93,10 @@ class QuizForm extends HTMLElement {
                 newQuestion["opt3"] = question.querySelector('#quiz-upload-container-option-box3').value;
                 newQuestion["opt4"] = question.querySelector('#quiz-upload-container-option-box4').value;
                 newQuestion["answer"] = question.querySelector('#js-quiz-upload-answer').value;
-                alert(JSON.stringify(newQuestion))
+
                 questionData.push(newQuestion)
             })
-            alert(JSON.stringify(questionData));
+
 
             let inputData = {
 
@@ -189,13 +189,12 @@ class QuizForm extends HTMLElement {
 
             let fileUploadresponseme = await fetch('http://localhost:8080/api/createQuiz/', {method : "POST", body:formData})
                 .then((res)=>{
-                    alert(JSON.stringify(res));
+
                     return res.json();
                 })
 
             if(!fileUploadresponseme["isError"]){
-                alert("Upload una");
-                alert(JSON.stringify(fileUploadresponseme["thumbnail"]));
+
 
                 let textData = extractTextData();
                 textData["image"]=fileUploadresponseme["thumbnail"];

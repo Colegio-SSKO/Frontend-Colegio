@@ -26,14 +26,12 @@ class Chat extends HTMLElement {
             response.json()
 
         );
-        alert("data2: " + JSON.stringify(data2))
+
         console.log("data2")
         console.log(data2)
 
 
 
-        alert(JSON.stringify(data));
-        alert("wedwed2")
 
 
 
@@ -82,7 +80,7 @@ class Chat extends HTMLElement {
         let html_left = ``;
         for (let i of data){
             if (i["status"]== 2){
-                alert("metanata enwa")
+
                 html_left += ` <chat-listitem question_id="${i["question.question_id"]}" img_src="${i["question_img"]}" chatname="${i["question_title"]}"></chat-listitem>`;
             }
 
@@ -92,7 +90,7 @@ class Chat extends HTMLElement {
         let html_left2 = ``;
         for (let i of data2){
             if (i["question.status"]== 2){
-                alert("metanata enwa")
+
                 html_left2 += ` <chat-listitem question_id="${i["question.question_id"]}" img_src="${i["question_img"]}" chatname="${i["question_title"]}"></chat-listitem>`;
             }
 

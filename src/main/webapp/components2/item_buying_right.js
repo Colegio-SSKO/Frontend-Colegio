@@ -107,7 +107,7 @@ class Item_buying_right extends HTMLElement {
             }).then((response)=>{
                 return response.json();
             })
-            alert(JSON.stringify(hash))
+
 
 
             // Payment completed. It can be a successful failure.

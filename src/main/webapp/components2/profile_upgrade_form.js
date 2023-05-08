@@ -32,7 +32,7 @@ class Profile_upgrade_form extends HTMLElement {
         upgradeToteacher.addEventListener('click', async (event)=>{
             event.preventDefault();
 
-            alert("meka tm create course")
+
 
             //thumbnail
             let formData = new FormData();
@@ -45,14 +45,13 @@ class Profile_upgrade_form extends HTMLElement {
             //send save files request
             let fileUploadresponseme = await fetch('http://localhost:8080/api/upgradeToteacher/', {method : "POST", body:formData})
                 .then((res)=>{
-                    alert(JSON.stringify(res));
+
                     return res.json();
                 })
 
 
             if(!fileUploadresponseme["isError"]){
-                alert("Upload una");
-                alert(JSON.stringify(fileUploadresponseme["thumbnail"]));
+
                 //handle text data submission here
                 //textData
                 let education_level = document.querySelector("#education_level");
