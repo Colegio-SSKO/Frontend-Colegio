@@ -31,11 +31,11 @@ class QuizQuestion extends HTMLElement {
                 <div class="q-number fnt-mid fnt fnt-bold">D</div>
                 <div id="js-quiz-q-answer-4" class="question fnt-mid fnt fnt-bold">${answer4}</div>
             </div>
-    
+            <br>
             <ul>
-                <li class="js-quiz-previous"><span class="material-symbols-outlined">keyboard_double_arrow_left</span></li>
+                <li class="js-quiz-previous"><img src="../static/img/components_images/skip_previous.svg" alt=""></li>
                 <li id="js-quiz-q-number" class=" fnt-mid fnt fnt-bold">${q_number}</li>
-                <li class="js-quiz-next"><span class="material-symbols-outlined">keyboard_double_arrow_right</span></li>
+                <li class="js-quiz-next"><img src="../static/img/components_images/skip_next.svg" alt=""></li>
             </ul>
     </div>
         `;

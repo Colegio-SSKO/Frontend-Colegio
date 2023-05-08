@@ -1,7 +1,8 @@
-
+alert("search main")
 async function fetchData(){
     let bbb = document.querySelector("#main_search_icon").value;
     try {
+        alert(bbb);
         let requestBody = {
             "name": bbb
         };
@@ -13,7 +14,7 @@ async function fetchData(){
             credentials : "include"
         });
         let data = await response.text();
-
+        alert(data)
         return data;
     } catch (error) {
         console.error(error);

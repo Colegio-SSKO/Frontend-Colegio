@@ -1,5 +1,4 @@
 
-
 //element selectors
 if (typeof previous === 'undefined') {
     let previous;
@@ -42,7 +41,7 @@ if (typeof containerCollection === 'undefined') {
 
 
 async function fetchData() {
-    let res = await fetch("http://localhost:8090/api/users/myQuizes/:"+getUserID(),{
+    let res = await fetch("http://localhost:8090/api/users/myQuizes/:"+getUserID(), {
         method : "GET",
         credentials : "include"
     }).then((response)=>
@@ -74,7 +73,7 @@ async function renderRight(data) {
     let html_right = "";
 
     html_right += `
-<quiz-question q_number="${"1/"+ questions.length.toString()}" title="${data["quiz_title"]}" Question="${questions[0]["question"]}" answer1="${questions[0]["op1"]}" answer2="${questions[0]["op2"]}" answer3="${questions[0]["op3"]}" answer4="${questions[0]["op4"]}" ></quiz-question>`;
+<quiz-question q_number="${"1/"+ questions.length.toString()}" title="${data["title"]}" Question="${questions[0]["question"]}" answer1="${questions[0]["op1"]}" answer2="${questions[0]["op2"]}" answer3="${questions[0]["op3"]}" answer4="${questions[0]["op4"]}" ></quiz-question>`;
     document.querySelector(".cont-body-left").innerHTML = html_right;
 
     //element selecctors
@@ -94,7 +93,7 @@ async function renderRight(data) {
     renderProgress(questions.length);
     //setting the first question as active
     let questionTracker = 1;
-    changeColorOfNumber(questionTracker, "#46344e");
+    changeColorOfNumber(questionTracker, "#112D4E");
 
 
     //controlling next and previous buttons
@@ -104,27 +103,25 @@ async function renderRight(data) {
     previous.addEventListener('click', ()=>{
 
 
-        changeColorOfNumber(questionTracker, "#d9d9d9");
+        changeColorOfNumber(questionTracker, "#3F72AF");
         if (questionTracker != 1){
             questionTracker--;
             changeQuestion(questionTracker, questions, answers)
         }
 
-        changeColorOfNumber(questionTracker, "#46344e");
-
+        changeColorOfNumber(questionTracker, "#112D4E");
 
     })
 
     next.addEventListener('click', ()=>{
 
-        changeColorOfNumber(questionTracker, "#d9d9d9");
+        changeColorOfNumber(questionTracker, "#3F72AF");
         if (questionTracker != questions.length){
             questionTracker++;
             changeQuestion(questionTracker, questions, answers)
         }
 
-        changeColorOfNumber(questionTracker, "#46344e");
-
+        changeColorOfNumber(questionTracker, "#112D4E");
     })
 
 
@@ -140,20 +137,17 @@ async function renderRight(data) {
     //adding event listners to containers
     for (let container of containerCollection){
         container.addEventListener('click', (event)=>{
-
-
             for(let selectedContainer of containerCollection){
                 let children = selectedContainer.querySelectorAll("*");
-                children[0].style.backgroundColor = "#46344e";
+                children[0].style.backgroundColor = "#112D4E";
                 children[1].style.backgroundColor = "transparent";
             }
 
             if(event.target.classList.contains("q-number")){
-
-                event.target.style.backgroundColor = "#6D6D6D";
+                event.target.style.backgroundColor = "#3F72AF";
             }
             else {
-                event.target.previousElementSibling.style.backgroundColor = "#6D6D6D";
+                event.target.previousElementSibling.style.backgroundColor = "#3F72AF";
             }
 
 
@@ -184,11 +178,10 @@ async function renderRight(data) {
         number.addEventListener('click', (event)=>{
             event.preventDefault();
             let targetID = event.target.id[event.target.id.length-1];
-
-            changeColorOfNumber(questionTracker, "#d9d9d9");
+            changeColorOfNumber(questionTracker, "#3F72AF");
             questionTracker = targetID
             changeQuestion(questionTracker, questions,answers);
-            changeColorOfNumber(questionTracker, "#46344e");
+            changeColorOfNumber(questionTracker, "#112D4E");
 
 
         })
@@ -209,18 +202,18 @@ function renderLeft() {
     fetchData().then((data)=>{
 
         let html_left = "";
-        console.log(JSON.stringify(data));
         console.log(data)
         html_left += "" +
             "<a  href=\"\"><button class=\"fnt fnt-bold fnt-mid btn btn-solid btn-a  is-a-route\">All</button></a>\n" +
             "<a  href=\"\"><button class=\"fnt fnt-bold fnt-mid btn btn-solid btn-a  is-a-route\">Continuing</button></a>\n" +
-            "<a  href=\"\"><button class=\"fnt fnt-bold fnt-mid btn btn-solid btn-a  is-a-route\">Completed</button></a><br>\n" +
-            "\n" +
+            "<a  href=\"\"><button class=\"fnt fnt-bold fnt-mid btn btn-solid btn-a  is-a-route\">Completed</button></a>\n" +
+            "<a href=\"/createQuiz\"><button class=\"btn-special fnt fnt-bold fnt-mid is-a-route\">Create quiz</button></a><br><br>\n"+
+        "\n" +
             "";
 
 
         for (let i of data){
-            html_left += ` <listed-content content_ID="${i["content_id"]}" img_src="${i["image"]}" title="${i["title"]}" author="${i["f_name"] + " " +i["l_name"]}" description="${i["description"]}" rates="${i["rate_count"]}" ></listed-content>`;
+            html_left += ` <listed-content content_ID="${i["content_id"]}" img_src="${i["image"]}" title="${i["title"]}" author="${i["f_name"] + " " +i["l_name"]}" description="${i["description"]}" rates="${i["rate_count"]}"></listed-content>`;
         }
 
         document.querySelector(".cont-body-left").innerHTML = html_left;
@@ -254,10 +247,9 @@ function renderLeft() {
 
 function quizcard(element){
 
-
     let html_right = "";
 
-    html_right = `<start-quiz comments="${encodeURIComponent(JSON.stringify(element["comments"]))}" rating="4" votes="110" quiz_id="${element["content_id"]}" img_src="/new" title="${element["quiz_title"]}" description=${element["description"]} author=${element["f_name"] + " " + element["l_name"]} author_title=${element["qulification_level"]}></start-quiz>`;
+    html_right = `<start-quiz comments="${encodeURIComponent(JSON.stringify(element["comments"]))}" rating="4" votes="110" quiz_id="${element["content_id"]}" img_src="${element["pro_pic"]}" title="${element["title"]}" description=${element["description"]} author=${element["f_name"] + " " + element["l_name"]} author_title=${element["qulification_level"]}></start-quiz>`;
     document.querySelector(".cont-body-right").innerHTML = html_right;
 
     document.querySelector(".js-startquiz-start-btn").addEventListener('click', ()=>{
@@ -297,12 +289,12 @@ function changeQuestion(questionTracker, questions, answers){
     //unselect all questions
     for(let selectedContainer of containerCollection){
         let children = selectedContainer.querySelectorAll("*");
-        children[0].style.backgroundColor = "#46344e";
+        children[0].style.backgroundColor = "#112D4E";
         children[1].style.backgroundColor = "transparent";
     }
 
     if (answers[questionTracker] !== undefined){
-        document.getElementById(answers[questionTracker]).firstElementChild.style.backgroundColor = "#6D6D6D";
+        document.getElementById(answers[questionTracker]).firstElementChild.style.backgroundColor = "#3F72AF";
     }
 }
 

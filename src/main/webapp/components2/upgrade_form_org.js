@@ -3,8 +3,8 @@ class upgrade_form_org extends HTMLElement {
         this.innerHTML = `
            <div class="account-upgrade-container">
         <div class="upgrade">
-            <form method="post">
-            
+            <form method="post" class="upgrade-form">
+                <label class="fnt fnt-extraLarge fnt-bold upgrader-hero">Let's Upgrade your account as Organization</label><br><br>
                 <label class="upgrade-label fnt fnt-bold fnt-large" for="name">First Name:</label>
                 <input class="upgrade-inputs fname fnt fnt-bold fnt-mid" type="text" id="name" name="name" required>
                 

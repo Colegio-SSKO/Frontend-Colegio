@@ -43,7 +43,7 @@ const studentRoutes = {
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Home_content.jsp",
         script: "../static/viewsJS/main_search1.js",
-        title: "Home",
+        title: "Search Results",
         data : "This is the home page"
     },
 
@@ -151,7 +151,7 @@ const studentRoutes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/Quiz_teacher_org1_left.jsp",
         path_right: "/views/Quiz_teacher_org1_right.jsp",
-        script: "../static/viewsJS/Student_view_quizzes1.js",
+        script: "../static/viewsJS/Student_view_quizzes.js",
         title: "Quizzes",
         data : "This is the quiz page"
     },
@@ -436,7 +436,7 @@ const teacherRoutes =  {
         template : "/SPAroutesTeacher/index_double.jsp",
         path_left:"/views/Quiz_teacher_org1_left.jsp",
         path_right: "/views/Quiz_teacher_org1_right.jsp",
-        script: "../static/viewsJS/teacher_view_quizzes1.js",
+        script: "../static/viewsJS/teacher_view_quizzes.js",
         title: "Quizzes",
         data : "This is the quiz page"
     },
@@ -738,7 +738,7 @@ const organizationRoutes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/Quiz_teacher_org1_left.jsp",
         path_right: "/views/Quiz_teacher_org1_right.jsp",
-        script: "../static/viewsJS/Student_view_quizzes1.js",
+        script: "../static/viewsJS/Student_view_quizzes.js",
         title: "Quizzes",
         data : "This is the quiz page"
     },
