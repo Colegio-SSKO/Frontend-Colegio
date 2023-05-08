@@ -1873,8 +1873,6 @@ h3{
 
 .box-container input[type=text] {
     padding: 6px;
-    margin-top: 10px;
-    margin-left: 10px;
     width:260px;
     border: 2px solid #112D4E;
     border-radius: 10px;
@@ -1883,12 +1881,17 @@ h3{
 
 }
 
+.box-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .box-container button {
     position: relative;
+    margin-top: 15px;
     float: right;
-    background: yellow;
-    font-size: 17px;
-    border: none;
+    background: #3F72AF;
+    /*border: none;*/
     cursor: pointer;
 }
 
@@ -2614,11 +2617,12 @@ a{
 
 .result-notification{
     position: relative;
-    width: 300px;
+    width: 350px;
     margin: auto;
     height: 80px;
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
     flex-direction: row;
     background: #F9F7F7;
     padding: 10px;
@@ -2628,10 +2632,11 @@ a{
 }
 .result-notification-org{
     position: relative;
-    width: 300px;
+    width: 350px;
     margin: auto;
     height: 80px;
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
     background: #e8e8e8;
@@ -2641,10 +2646,14 @@ a{
     margin-bottom: 15px;
 }
 
+.request-button{
+    margin-left: 10px;
+}
 
 .result-prof-img{
     width: 60px;
-    padding: 10px;
+    padding: 5px;
+    margin-right: 10px;
 }
 
 .result-prof-img img{
@@ -2655,7 +2664,7 @@ a{
 
 .result-prof-img-org{
     width: 60px;
-    padding: 10px;
+    padding: 5px;
 }
 
 .result-prof-img-org img{

@@ -873,7 +873,7 @@ const organizationRoutes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Organization_profile(stu).jsp",
-        script: "../static/viewsJS/teacherlist_view(org)1.js",
+        script: "../static/viewsJS/teacherlist_view(org)2.js",
         path_right: "",
         title: "Teachers",
         data : "This is the notification page"

@@ -10,7 +10,7 @@ class navbar_normaluser extends HTMLElement {
                     <div class="normal-user-navbar-middle">
                       <form class="normal-user-search-form">
                         <input type="text" id="main_search_icon" class="fnt-bold fnt fnt-mid" placeholder="Search...">
-                        <a href="/test"><button class="normal-user-is-a-route is-a-route fnt-mid fnt fnt-bold" >Search</button></a>
+                      <button class="normal-user-is-a-route is-a-route fnt-mid fnt fnt-bold" >Search</button>
                       </form>
                     </div>
                     <div class="normal-user-main-profile router main-profile normal-user-navbar-right">
@@ -19,6 +19,18 @@ class navbar_normaluser extends HTMLElement {
                     </div>
               </nav>
         `;
+
+
+        let btn = document.querySelector(".normal-user-is-a-route");
+        btn.addEventListener("click",(event)=>{
+            event.preventDefault();
+            alert("jjj");
+            temporary_data = document.querySelector("#main_search_icon").value;
+            alert(temporary_data);
+            window.history.pushState({}, "", "/test");
+            urlLocation();
+
+        })
     }
 }
 

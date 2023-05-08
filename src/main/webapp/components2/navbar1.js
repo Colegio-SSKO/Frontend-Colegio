@@ -34,7 +34,8 @@ class Navbar1 extends HTMLElement {
 
 
         let btn = document.querySelector(".normal-user-is-a-route");
-        btn.addEventListener("click",()=>{
+        btn.addEventListener("click",(event)=>{
+            event.preventDefault();
             alert("jjj");
             temporary_data = document.querySelector("#main_search_icon").value;
             alert(temporary_data);

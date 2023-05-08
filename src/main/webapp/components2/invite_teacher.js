@@ -9,7 +9,7 @@ class invite_teacher extends HTMLElement {
         
                     <div class="box-container" style="text-align: left;">
                       <input type="text" placeholder="Search teachers" name="name" class="search2" id="searchTeacher">
-                      <button class="search">search</button>
+                      <button class="search btn btn-solid fnt fnt-mid fnt-bold">search</button>
                     </div>
         
                     <img src="../static/img/components_images/inviteTeacher.jpg" width="510px" height="310px" class="main_img">

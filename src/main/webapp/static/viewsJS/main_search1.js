@@ -26,6 +26,7 @@ function renderSingle(){
 
 
             let html = "";
+            alert(data)
             html += `<search-mainresults dataString="${encodeURIComponent(data)}"></search-mainresults>`;
             document.querySelector(".cont-body-content").innerHTML = html;
         })
