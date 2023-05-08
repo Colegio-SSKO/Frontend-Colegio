@@ -1,8 +1,9 @@
-alert("search main")
+alert("search ")
 async function fetchData(){
-    let bbb = document.querySelector("#main_search_icon").value;
+    let bbb = temporary_data;
+    alert("hello " + bbb)
     try {
-        alert(bbb);
+        alert(bbb+ "hari");
         let requestBody = {
             "name": bbb
         };
@@ -12,10 +13,7 @@ async function fetchData(){
             method: "POST",
             body: JSON.stringify(requestBody),
             credentials : "include"
-        });
-        let data = await response.text();
-        alert(data)
-        return data;
+        }).then((response)=>response.text());
     } catch (error) {
         console.error(error);
         throw new Error('Failed to fetch data from server');

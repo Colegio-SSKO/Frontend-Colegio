@@ -63,6 +63,10 @@ class CourseForm extends HTMLElement {
         `;
 
 
+
+
+
+
         //setting event listener for the video upload icon of first wrapper
         document.querySelector(`#video-upload-wrapper1 #js-video-upload-icon`).addEventListener('click',(event)=>{
 
@@ -104,6 +108,17 @@ class CourseForm extends HTMLElement {
         createCourse.addEventListener('click', async (event)=>{
             event.preventDefault();
 
+            function validateForm() {
+                const inputs = document.querySelectorAll('form input');
+                for (let i = 0; i < inputs.length; i++) {
+                    if (inputs[i].value === '') {
+                        alert('Please fill out all fields');
+                        return false;
+                    }
+                }
+                return true;
+            }
+
 
             //thumbnail
             let formData = new FormData();
@@ -137,6 +152,18 @@ class CourseForm extends HTMLElement {
                 let videoDescription = document.querySelectorAll(".video-upload-container-description-box");
 
                 let videoTitleData = new Array(0);;
+
+
+
+               let videotitle1 = document.querySelector(".video-upload-container-title-box")
+               let videodesc1 = document.querySelector(".video-upload-container-description-box")
+               let video = document.querySelector(".js-course-video-uploader")
+
+                if (videotitle1.value.length == 0 || videodesc1.value.length == 0 || video.value.length == 0){
+                    alert("hiess")
+                }
+
+
 
                 let videoNumber = 0;
                 videoTitles.forEach((title)=>{

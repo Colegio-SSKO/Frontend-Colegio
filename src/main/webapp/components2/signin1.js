@@ -6,7 +6,7 @@ class Signin1 extends HTMLElement {
                           <div class="hero">
                           <form method="post" >
                                 <div class="form">
-                                <h1 class="fnt fnt-extraBold fnt-extraLarge">Wellcome To Colegio</h1>
+                                <h1 class="fnt fnt-extraBold fnt-extraLarge">Welcome To Colegio</h1>
                                 <div class="inputs">
                         
                                   <div class="input-field">
