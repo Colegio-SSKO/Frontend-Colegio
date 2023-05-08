@@ -53,7 +53,7 @@ class search_result extends HTMLElement {
                     popup.innerHTML = `
                       <img src="../static/img/components_images/success.jpg" alt="">
                       <h2>${res.message}</h2>
-                      <button class="btn" id="ok-btn">OK</button>       
+                      <button class="btn btn-a" id="ok-btn">OK</button>       
                 `;
                 }
                 else{
