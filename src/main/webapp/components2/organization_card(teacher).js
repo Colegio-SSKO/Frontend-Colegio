@@ -19,8 +19,8 @@ class Organization_cardteacher extends HTMLElement {
             <h5 class="fnt fnt-bold fnt-mid">${address}</h5>
         </div><br><br>
         
-        <h3 class="teacher_send_request fnt-mid fnt-light" id="${organization_id}"><button class="btn-solid btn-a btn fnt fnt-mid">${status== 1 ? '' : 'Send Request>>'}</button></h3>
-        <h3 class="teacher_send_request fnt-mid fnt-light">${status== 1 ? '' : 'Send Request>>'}</h3>
+
+        <h3 class="teacher_send_request fnt-mid fnt-light link" id="${organization_id}">${status== 1 ? '' : 'Send Request>>'}</h3>
 
         </div>
         `;
@@ -33,6 +33,8 @@ class Organization_cardteacher extends HTMLElement {
         for (let element of teacher_send_request){
             element.addEventListener('click',async (event)=>{
 
+                let organization_id = event.target.id;
+
                 let popup = document.querySelector(".popup-content");
                 document.querySelector(".popup-container").style.display = "flex";
 
@@ -40,7 +42,7 @@ class Organization_cardteacher extends HTMLElement {
                       <h2 class="fnt fnt-bold fnt-large">Confirm send request</h2>
                       
                       <div style="display: inline-block">
-                            <button class="ok-btn btn btn-large fnt fnt-large fnt-bold" id="${organization_id}" style="margin-right: 10px;" >OK</button><button class="btn btn-large fnt fnt-large fnt-bold" id="cancel-btn" style="background-color: darkred">Cancel</button>      
+                            <button class="ok-btn btn btn-large fnt fnt-large fnt-bold" style="margin-right: 10px;" >OK</button><button class="btn btn-large fnt fnt-large fnt-bold" id="cancel-btn" style="background-color: darkred">Cancel</button>      
                       </div>
 `;
 
@@ -51,7 +53,7 @@ class Organization_cardteacher extends HTMLElement {
                 for (let element of ok){
                     element.addEventListener('click',async (event)=>{
 
-                        let organization_id = event.target.id;
+
 
 
                         let requestBody= {

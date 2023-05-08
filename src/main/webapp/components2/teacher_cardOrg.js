@@ -19,7 +19,7 @@ class Teacher_cardorg extends HTMLElement {
                 <h5 class="fnt fnt-bold fnt-mid">${quli}</h5>
             </div>
         
-            <h3 class="remove_teacher fnt-mid fnt-light">Remove</h3>
+            <h3 class="remove_teacher fnt-mid fnt-light" id="${teacher_id2}">Remove</h3>
         </div>
         `;
 
@@ -31,6 +31,8 @@ class Teacher_cardorg extends HTMLElement {
         for (let element of remove){
             element.addEventListener('click',async (event)=>{
 
+                let teacher_id2 = event.target.id;
+
                 let popup = document.querySelector(".popup-content");
                 document.querySelector(".popup-container").style.display = "flex";
 
@@ -38,7 +40,7 @@ class Teacher_cardorg extends HTMLElement {
                       <h2 class="fnt fnt-bold fnt-large">Confirm remove teacher</h2>
                       
                       <div style="display: inline-block">
-                            <button class="ok-btn btn btn-large fnt fnt-large fnt-bold" id="${teacher_id2}" style="margin-right: 10px;" >OK</button><button class="btn btn-large fnt fnt-large fnt-bold" id="cancel-btn" style="background-color: darkred">Cancel</button>      
+                            <button class="ok-btn btn btn-large fnt fnt-large fnt-bold" style="margin-right: 10px;" >OK</button><button class="btn btn-large fnt fnt-large fnt-bold" id="cancel-btn" style="background-color: darkred">Cancel</button>      
                       </div>
 `;
 
@@ -49,11 +51,11 @@ class Teacher_cardorg extends HTMLElement {
                 for (let element of ok){
                     element.addEventListener('click',async (event)=>{
 
-                        let teacher_id = event.target.id;
+
 
 
                         let requestBody= {
-                            "teacher_id": teacher_id
+                            "teacher_id": teacher_id2
                         }
                         let url = "http://localhost:8090/api/organizations/remove_teacher/:" + getUserID();
                         let res = await fetch(url, {

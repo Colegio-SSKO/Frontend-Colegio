@@ -17,7 +17,7 @@ class search_result extends HTMLElement {
                 </div>
 
                 <div style="text-align: right" class="send_request">
-                    <button class="request-button" id="${teacher_id}" ${status === "1" ? "disabled" : ""}>send</button>
+                    <button class="request-button" id="${teacher_id}" ${status === "1" ? "disabled" : ""}>send>></button>
                 </div>
             </div>
         `;

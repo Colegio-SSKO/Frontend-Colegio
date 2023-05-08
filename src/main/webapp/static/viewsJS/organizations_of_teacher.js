@@ -12,14 +12,14 @@ async function fetchData(){
         response.text()
 
     );
-    alert("hellowww" +res);
+;
     return res
 };
 function renderSingle(){
 
     fetchData().then((data)=>{
-        alert("metana weda my")
-        alert(data)
+
+
         let html = `<pop-up></pop-up>
         
         <organization-2listteacher dataString="${encodeURIComponent(data)}"></organization-2listteacher>`;

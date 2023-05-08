@@ -533,7 +533,7 @@ const teacherRoutes =  {
         path_left:"/views/Organization_profile(stu).jsp",
         script: "../static/viewsJS/teacher_content_view.js",
         path_right: "",
-        title: "Organization",
+        title: "All Content",
         data : "This is the notification page"
     },
 
