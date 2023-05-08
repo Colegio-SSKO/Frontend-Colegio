@@ -53,6 +53,9 @@ async function fetchData() {
     return res
 };
 
+let result = [];
+let resObj = {};
+
 
 //function to render right content
 
@@ -74,7 +77,7 @@ async function renderRight(data) {
     let html_right = "";
 
     html_right += `
-<quiz-question q_number="${"1/"+ questions.length.toString()}" title="${data["title"]}" Question="${questions[0]["question"]}" answer1="${questions[0]["op1"]}" answer2="${questions[0]["op2"]}" answer3="${questions[0]["op3"]}" answer4="${questions[0]["op4"]}" ></quiz-question>`;
+<quiz-question correct="${questions[0]["answer"]}" q_number="${"1/"+ questions.length.toString()}" title="${data["title"]}" Question="${questions[0]["question"]}" answer1="${questions[0]["op1"]}" answer2="${questions[0]["op2"]}" answer3="${questions[0]["op3"]}" answer4="${questions[0]["op4"]}" ></quiz-question>`;
     document.querySelector(".cont-body-left").innerHTML = html_right;
 
     //element selecctors
@@ -158,12 +161,22 @@ async function renderRight(data) {
 
             //saving answer
             answers[questionTracker] = event.target.parentNode.id;
+            resObj = {
+                "answer" : event.target.parentNode.id,
+                "correct" : questions[questionTracker-1]["answer"],
+                "op1" : questions[questionTracker-1]["op1"],
+                "op2" : questions[questionTracker-1]["op2"],
+                "op3" : questions[questionTracker-1]["op3"],
+                "op4" : questions[questionTracker-1]["op4"]
+            }
+            result[questionTracker-1] = resObj;
 
             let reqBody = {
                 "quiz_qid" : questions[questionTracker-1]["quiz_qid"],
                 "user_id" : getUserID(),
                 "answer" : containers[event.target.parentNode.id]
             }
+            console.log(result)
             fetch("http://localhost:8090/api/users/saveAnswer", {
                 method : "POST",
                 body :JSON.stringify(reqBody),
@@ -193,6 +206,30 @@ async function renderRight(data) {
         })
     }
 
+
+
+
+    let submitbtn = document.querySelector('#js-quiz-submit-result-btn');
+    submitbtn.addEventListener('click', (event)=>{
+        event.preventDefault();
+        //handling submit
+        let newQACont;
+        let contleft = document.querySelector(".cont-body-left");
+        contleft.innerHTML = "";
+        console.log(result);
+        newQACont = document.createElement('quiza-cont');
+        newQACont.setAttribute('title', data["title"]);
+        newQACont.setAttribute('Question', questions[0]["question"]);
+        newQACont.setAttribute('q_number', "1/"+ questions.length.toString());
+        newQACont.setAttribute('answer1', questions[0]["op1"]);
+        newQACont.setAttribute('answer2', questions[0]["op2"]);
+        newQACont.setAttribute('answer3', questions[0]["op3"]);
+        newQACont.setAttribute('answer4', questions[0]["op4"]);
+        newQACont.setAttribute('correct', questions[0]["answer"]);
+        newQACont.setAttribute('given', result[0]["answer"]);
+        contleft.appendChild(newQACont)
+        console.log("mekt awa")
+    })
 
 
 }

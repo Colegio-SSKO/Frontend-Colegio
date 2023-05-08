@@ -1,4 +1,4 @@
-class QuizQuestion extends HTMLElement {
+class Quiz_answer_cont extends HTMLElement {
     connectedCallback() {
 
         let title = this.attributes.title.value;
@@ -9,6 +9,7 @@ class QuizQuestion extends HTMLElement {
         let answer3 = this.attributes.answer3.value;
         let answer4 = this.attributes.answer4.value;
         let correct = this.attributes.correct.value;
+        let given = this.attributes.given.value;
         this.innerHTML = `
         <div id="js-quiz-question-wrap" class="quiz-wrap">
             <h3 class="fnt fnt-bold fnt-large">${title}</h3>
@@ -40,39 +41,19 @@ class QuizQuestion extends HTMLElement {
             </ul>
     </div>
         `;
-
-    let observingElementsAncestor = document.querySelector(".cont-body");
-    let observingElement = document.querySelector("#js-quiz-question-wrap");
-
-    let quizObserver = new MutationObserver((mutations)=> {
-        for(let mutation of mutations){
-            if(mutation.type === "childList" && !document.contains(observingElement)){
-                alert("Remove wennai ynne deiyoo");
-
-                observingElement.dispatchEvent(new Event('beforeRemove', {cancelable: true}));
-            }
-        }
-    })
-
-    let congif = {
-        childList : true,
-        subtree: true
-    }  ;
-
-    quizObserver.observe(observingElementsAncestor, congif);
-    observingElement.addEventListener('beforeRemove', (event)=>{
-        if(confirm("Are you sure you want to remove this element?")){
-            quizObserver.disconnect();
-            alert("true");
-
-        }
-        else{
-            event.preventDefault()
+        let correctCont = {
+            "op1" : "js-quiz-q-answer-1-backg",
+            "op2" : "js-quiz-q-answer-2-backg",
+            "op3" : "js-quiz-q-answer-3-backg",
+            "op4" : "js-quiz-q-answer-4-backg"
         }
 
-    })
+        //color the correct one
+        let correctAnserCont = document.querySelector(`#${correctCont[correct]}`).querySelector('.q-number');
+
+        correctAnserCont.style.backgroundColor = 'red';
 
     }
 }
 
-customElements.define('quiz-question', QuizQuestion);
+customElements.define('quiza-cont', Quiz_answer_cont);
