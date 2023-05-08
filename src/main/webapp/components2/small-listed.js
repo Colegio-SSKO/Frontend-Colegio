@@ -41,9 +41,9 @@ class Small_listed extends HTMLElement {
 
         small_lited.addEventListener('click',async (event)=> {
             event.preventDefault();
-            alert("aaaa")
+
             temporary_data = content_id;
-            alert("hihi"+temporary_data);
+
             window.history.pushState({}, "", "/small_cardopen");
             urlLocation();
         });

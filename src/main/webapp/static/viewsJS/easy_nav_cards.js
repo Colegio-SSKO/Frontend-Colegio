@@ -1,4 +1,4 @@
-
+alert("aa")
 
 
 
@@ -19,8 +19,10 @@ function renderSingle(){
         .then((data) => {
 
 
+            console.log(data)
+            let obj = JSON.stringify(data)
             let html = "";
-            html += `<easy-navresult dataString="${encodeURIComponent(data)}"></easy-navresult>`;
+            html += `<easy-navresult dataString="${encodeURIComponent(obj)}"></easy-navresult>`;
             document.querySelector(".cont-body-content").innerHTML = html;
         })
         .catch((error) => {

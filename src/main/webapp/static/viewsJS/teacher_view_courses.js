@@ -47,14 +47,14 @@ function renderLeft() {
 
     fetchData().then((data)=>{
 
-        let html_left = "";
+        let html_left = ``;
 
         html_left += "" +
             "<a class=\"fnt fnt-bold fnt-mid\" href=\"\"><button class=\"btn btn-solid btn-small fnt fnt-bold fnt-mid is-a-route\">All</button></a>\n" +
             "<a class=\"fnt fnt-bold fnt-mid\" href=\"\"><button class=\"btn btn-solid btn-small fnt fnt-bold fnt-mid is-a-route\">Continuing</button></a>\n\n" +
             "<a class=\"fnt fnt-bold fnt-mid\" href=\"\"><button class=\"btn btn-solid btn-small fnt fnt-bold fnt-mid is-a-route\">Completed</button></a>\n\n" +
             "<a class=\"fnt fnt-bold fnt-mid\" href=\"/create_course\"><button class=\"btn-special is-a-route  fnt fnt-bold fnt-mid js-createCourseButton\">Create Course</button></a>" +
-
+            `<h4 class='fnt fnt-bold fnt-mid'>You have purchased ${data.length} courses<h4>`+
             "\n" +
             "";
 

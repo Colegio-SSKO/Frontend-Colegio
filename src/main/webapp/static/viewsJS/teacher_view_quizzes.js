@@ -53,8 +53,7 @@ async function fetchData() {
     return res
 };
 
-let result = [];
-let resObj = {};
+
 
 
 //function to render right content
@@ -139,6 +138,9 @@ async function renderRight(data) {
         "js-quiz-q-answer-4-backg": "op4"
 
     }
+
+    let result = [];
+    let resObj = {};
 
     //adding event listners to containers
     for (let container of containerCollection){
@@ -252,7 +254,8 @@ function renderLeft() {
             "<a  href=\"\"><button class=\"fnt fnt-bold fnt-mid btn btn-solid btn-a  is-a-route\">Continuing</button></a>\n" +
             "<a  href=\"\"><button class=\"fnt fnt-bold fnt-mid btn btn-solid btn-a  is-a-route\">Completed</button></a>\n" +
             "<a href=\"/createQuiz\"><button class=\"btn-special fnt fnt-bold fnt-mid is-a-route\">Create quiz</button></a><br><br>\n"+
-        "\n" +
+            `<h4 class='fnt fnt-bold fnt-mid'>You have purchased ${data.length} quizzes<h4>`+
+            "\n" +
             "";
 
 

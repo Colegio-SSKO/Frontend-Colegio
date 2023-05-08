@@ -66,7 +66,11 @@ class Featured_cont extends HTMLElement {
                     "content_id": content_id
                 }
                 let url = "http://localhost:8090/api/users/addtocart/:" + getUserID();
-                let res = await fetch(url, {method : "POST",  body : JSON.stringify(requestBody)}).then((response)=>
+                let res = await fetch(url, {
+                    method : "POST",
+                    body : JSON.stringify(requestBody),
+                    credentials : "include"
+                }).then((response)=>
                     response.json()
 
                 );

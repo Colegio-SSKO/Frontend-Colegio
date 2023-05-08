@@ -63,7 +63,7 @@ const studentRoutes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/Home_content.jsp",
         script: "../static/viewsJS/small_card_open_new.js",
-        title: "small card open",
+        title: "Contents",
         data : "This is the home page"
     },
 
@@ -620,7 +620,7 @@ const teacherRoutes =  {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/Home_content.jsp",
         script: "../static/viewsJS/small_card_open_new.js",
-        title: "small card open",
+        title: "Contents",
         data : "This is the home page"
     },
 
@@ -641,6 +641,23 @@ const teacherRoutes =  {
         script: "../static/viewsJS/Student_continue_course1.js",
         title: "Follow Course",
         data : "This is the follow course page"
+    },
+    "/easy_nav_cards" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Home_content.jsp",
+        script: "../static/viewsJS/easy_nav_cards.js",
+        title: "Home",
+        data : "This is the home page"
+    },
+
+    "/test" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Home_content.jsp",
+        script: "../static/viewsJS/main_search1.js",
+        title: "Home",
+        data : "This is the home page"
     },
 
 
@@ -946,7 +963,16 @@ const organizationRoutes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/Home_content.jsp",
         script: "../static/viewsJS/small_card_open_new.js",
-        title: "small card open",
+        title: "Contents",
+        data : "This is the home page"
+    },
+
+    "/test" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Home_content.jsp",
+        script: "../static/viewsJS/main_search1.js",
+        title: "Home",
         data : "This is the home page"
     },
 

@@ -66,7 +66,8 @@ async function renderLeft() {
             "<a  href=\"\"><button class=\"btn btn-solid is-a-route btn-a btn-small fnt fnt-bold fnt-mid\">All</button></a>\n" +
             "<a  href=\"\"><button class=\"btn btn-outlined is-a-route btn-a btn-solid fnt fnt-bold fnt-mid\">Continuing</button></a>\n" +
             "<a  href=\"\"><button class=\"btn btn-outlined is-a-route btn-a btn-solid fnt fnt-bold fnt-mid\">Completed</button></a>\n" +
-            "<a href='/publish_question'><button class=\"fnt fnt-mid fnt-bold btn-special \">Publish question</button></a>\n" +
+            "<a href='/publish_question'><button class=\"fnt fnt-mid fnt-bold btn-special is-a-route\">Publish question</button></a>\n" +
+            `<h4 class='fnt fnt-bold fnt-mid'>You have asked ${data.length} questions<h4>`+
             "";
 
         for (let i of data) {

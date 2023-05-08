@@ -11,12 +11,14 @@ async function fetchData(){
             method: "GET",
             credentials : "include"
         }).then((response) =>
-            response.text()
+            response.json()
         );
 
+        console.log(data)
         let html = '<pop-up></pop-up>';
-        html += `   
-        <publishcoursequiz-list dataString="${encodeURIComponent(data)}"></publishcoursequiz-list>`;
+        html += `
+        <h4 class='fnt fnt-bold fnt-mid'>You have published ${data.length} quizzes <h4><br>
+        <publishcoursequiz-list dataString="${encodeURIComponent(JSON.stringify(data))}"></publishcoursequiz-list>`;
 
         return html;
     };

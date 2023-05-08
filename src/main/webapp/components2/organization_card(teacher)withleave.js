@@ -32,6 +32,7 @@ class Organization_cardteacher_withleave extends HTMLElement {
 
         for (let element of teacher_leave){
             element.addEventListener('click',async (event)=>{
+                organization_id = event.target.getAttribute("id");
 
                 let popup = document.querySelector(".popup-content");
                 document.querySelector(".popup-container").style.display = "flex";
@@ -40,7 +41,7 @@ class Organization_cardteacher_withleave extends HTMLElement {
                       <h2 class="fnt fnt-bold fnt-large">Confirm leave form organization</h2>
                       
                       <div style="display: inline-block">
-                            <button class="ok-btn btn btn-large fnt fnt-large fnt-bold" id="${organization_id}" style="margin-right: 10px;" >OK</button><button class="btn btn-large fnt fnt-large fnt-bold" id="cancel-btn" style="background-color: darkred">Cancel</button>      
+                            <button class="ok-btn btn btn-large fnt fnt-large fnt-bold"  style="margin-right: 10px;" >OK</button><button class="btn btn-large fnt fnt-large fnt-bold" id="cancel-btn" style="background-color: darkred">Cancel</button>      
                       </div>
 `;
 
@@ -51,7 +52,7 @@ class Organization_cardteacher_withleave extends HTMLElement {
                 for (let element of ok){
                     element.addEventListener('click',async (event)=>{
 
-                        let organization_id = event.target.id;
+
                         temporary_data= organization_id;
 
                         let requestBody= {
