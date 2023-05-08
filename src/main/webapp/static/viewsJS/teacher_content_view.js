@@ -26,9 +26,9 @@ function renderSingle(){
             credentials : "include"
         }).then((response) => response.text());
 
-        let html = "<div class='fnt fnt-bold fnt-large'>Courses</div>"+
+        let html =+
  
-        `<content-list dataString="${encodeURIComponent(data)}"></content-list>`+"<br><br><p><p><div class='fnt fnt-bold fnt-large'>Quizes</div>"+`<content-list dataString="${encodeURIComponent(res3)}"></content-list>`;
+        `<content-list dataString="${encodeURIComponent(data)}"></content-list>`;
 
 
         document.querySelector(".cont-body-content").innerHTML = html;

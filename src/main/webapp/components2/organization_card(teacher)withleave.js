@@ -53,7 +53,7 @@ class Organization_cardteacher_withleave extends HTMLElement {
                     element.addEventListener('click',async (event)=>{
 
 
-                        temporary_data= organization_id;
+
 
                         let requestBody= {
                             "organization_id": organization_id

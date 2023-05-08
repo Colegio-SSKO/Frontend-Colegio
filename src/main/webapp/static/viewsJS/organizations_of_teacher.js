@@ -12,12 +12,13 @@ async function fetchData(){
         response.text()
 
     );
-
+;
     return res
 };
 function renderSingle(){
 
     fetchData().then((data)=>{
+
 
         let html = `<pop-up></pop-up>
         
