@@ -83,12 +83,9 @@ class Signin1 extends HTMLElement {
                     popup.innerHTML = `
                         <img src="../static/img/components_images/error.jpg" alt="">
                         <h2 class="fnt fnt-bold fnt-large">${receivedData["message"]}</h2>
-                        <button class="btn btn-special fnt fnt-mid fnt-bold" id="ok-btn">OK</button>
+                        <button class="btn btn-primary " id="ok-btn">OK</button>
 
-                `;       let ok_btn = document.getElementById("ok-btn");
-                    ok_btn.addEventListener("click", ()=>{
-                        document.querySelector(".popup-container").style.display = "none";
-                    })
+                `;
 
                     password.value = "";
                     email.value = "";
@@ -108,6 +105,7 @@ class Signin1 extends HTMLElement {
                         document.querySelector(".popup-container").style.display = "none";
                     })
                     //setting the user data
+
 
 
                     //sending to home page

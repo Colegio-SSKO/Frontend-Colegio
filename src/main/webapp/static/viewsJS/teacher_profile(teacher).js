@@ -1,4 +1,5 @@
 
+
 async function fetchData(){
     const req = {
         "user_ID" : "23"
@@ -12,6 +13,7 @@ async function fetchData(){
     }).then((response) =>
         response.json()
     );
+
     return res3;
 };
 
@@ -21,6 +23,8 @@ async function fetchData(){
 async function renderSingle() {
     try {
         const data = await fetchData();
+
+
         const res2 = await fetch("http://localhost:8090/api/users/ViewCont_list", {
             method: "GET",
             credentials : "include"

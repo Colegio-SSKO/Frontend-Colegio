@@ -66,6 +66,7 @@ function renderSingle(){
                     document.querySelector(".popup-container").style.display = "none";
                 })
 
+
             })
         }
 

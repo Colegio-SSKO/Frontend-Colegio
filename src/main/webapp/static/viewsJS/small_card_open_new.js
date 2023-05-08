@@ -1,4 +1,5 @@
 
+
 // import {myVar} from '../../components2/small-listed';
 
 async function fetchData() {
@@ -9,6 +10,7 @@ async function fetchData() {
 //uncomment this when connecting the database
 
     const res2 = await fetch("http://localhost:8090/api/users/small_card_open/:" + temporary_data, {method: "GET", credentials:"include"}).then((response) => response.json());
+
     return res2;
 
 
@@ -21,6 +23,7 @@ async function fetchData() {
 
 
 function renderRight(data2,data, type) {
+
 
 
     let html_right = "";
@@ -55,6 +58,7 @@ function renderLeft() {
     fetchData().then(async (data) => {
 
 
+
         let html_left = `<pop-up></pop-up> <small-cardopen img_src="${data["image"]}" purchase_count="${data["purchase_count"]}" title="${data["title"]}" description="${data["description"]}" author="${data["f_name"]} ${data["l_name"]}" price="${data["price"]}" date="${data["date"]}" content_id="${data["content_id"]}" rate_count="${data["rate_count"]}" ></small-cardopen>`;
 
         document.querySelector(".cont-body-left").innerHTML = html_left;
@@ -65,6 +69,7 @@ function renderLeft() {
         }
         else{
             const res5 = await fetch("http://localhost:8090/api/users/get_content_media_quiz/:" + temporary_data, {method: "GET", credentials:"include"}).then((response) => response.json());
+
             renderRight(res5,data,1);
         }
 

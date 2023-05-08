@@ -8,6 +8,7 @@ class QuizQuestion extends HTMLElement {
         let answer2 = this.attributes.answer2.value;
         let answer3 = this.attributes.answer3.value;
         let answer4 = this.attributes.answer4.value;
+        let correct = this.attributes.correct.value;
         this.innerHTML = `
         <div id="js-quiz-question-wrap" class="quiz-wrap">
             <h3 class="fnt fnt-bold fnt-large">${title}</h3>

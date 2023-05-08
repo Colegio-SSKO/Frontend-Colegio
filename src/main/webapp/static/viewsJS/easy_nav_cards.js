@@ -1,4 +1,4 @@
-alert("mekata enne na")
+
 
 
 
@@ -20,7 +20,7 @@ function renderSingle(){
 
 
             let html = "";
-            html += `<easy-navresult dataString="${encodeURIComponent(data)}"></easy-navresult>`;
+            html += `<easy-navresult dataString="${encodeURIComponent(obj)}"></easy-navresult>`;
             document.querySelector(".cont-body-content").innerHTML = html;
         })
         .catch((error) => {

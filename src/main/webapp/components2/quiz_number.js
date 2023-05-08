@@ -15,7 +15,7 @@ class Quiz_number extends HTMLElement {
            ${insertThisHTML}
         </div>
         <div class="quiz-number-submit">
-            <button class="btn btn-solid btn-a fnt fnt-bold fnt-mid">Submit</button>
+            <button id="js-quiz-submit-result-btn"  class="btn btn-solid btn-a fnt fnt-bold fnt-mid">Submit</button>
         </div>
     </div>
         `;

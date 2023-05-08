@@ -1,4 +1,5 @@
 
+
 async function fetchData(){
 
     let res = await fetch("http://localhost:8090/api/moderators/handle_users", {

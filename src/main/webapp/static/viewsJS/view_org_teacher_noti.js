@@ -1,4 +1,5 @@
 
+
 async function fetchData(){
     const req = {
         "user_ID" : "23"
@@ -78,6 +79,7 @@ function renderSingle(){
                 ok_btn.addEventListener("click", ()=>{
                     document.querySelector(".popup-container").style.display = "none";
                 })
+
                 // let location = window.location;
                 // window.history.pushState({}, "", location);
                 // urlLocation();

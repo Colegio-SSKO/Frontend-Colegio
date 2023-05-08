@@ -14,7 +14,9 @@ class Comment extends HTMLElement {
         let commentDecoded = decodeURIComponent(comments);
         let commentsJson = JSON.parse(commentDecoded)
 
+
         console.log("quizz")
+        console.log(commentsJson)
 
 
 
@@ -63,8 +65,18 @@ class Comment extends HTMLElement {
             commentElement = document.createElement('comment-item');
             commentElement.setAttribute("name", comment["user.f_name"] + comment["user.l_name"]);
             commentElement.setAttribute("pro_pic", comment["user.pro_pic"]);
-            commentElement.setAttribute("message", comment["comments.message"])
+            commentElement.setAttribute("message", comment["comments.message"]);
+            commentElement.setAttribute("date", comment["comments.date"])
             commentContainer.appendChild(commentElement)
+
+            // commentContainer.innerHTML += `
+            //       <div class="comment-cmnt-1">
+            //             <img src="${comment["pro_pic"]}" alt="">
+            //             <h5 class="fnt fnt-mid">${comment["name"]}</h5></br>
+            //             <p class="fnt fnt-mid">${comment["message"]}
+            //             </p>
+            //       </div>
+            // `;
         })
 
 

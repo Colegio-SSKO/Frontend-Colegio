@@ -13,9 +13,14 @@ class CourseForm extends HTMLElement {
                     <div class="input-field">
                         <p for="" class="fnt fnt-mid fnt-bold">Select the most appropriate category for your course.</p><br>
                         <select id="js-course-upload-subject" class="fnt-bold fnt fnt-mid" required>
-                            <option class="fnt-bold fnt fnt-mid" value="Science">Science</option>
-                            <option class="fnt-bold fnt fnt-mid" value="Mathematics">Mathematics</option>
-                            <option class="fnt-bold fnt fnt-mid" value="English">English</option>
+                           <option value="11">Science</option>
+                            <option value="10">Maths</option>
+                            <option value="12">English</option>
+                            <option value="13">History</option>
+                            <option value="14">ICT</option>
+                            <option value="15">Chemistry</option>
+                            <option value="16">Physics</option>
+                            <option value="17">Biology</option>
                         </select>
                     </div><br><br>
     
@@ -26,7 +31,7 @@ class CourseForm extends HTMLElement {
                     
                     <div class="input-field">
                         <label for="" class="fnt fnt-mid fnt-bold">Price (In LKR).</label><br>
-                        <input id="js-course-upload-price" type="text" class="fnt fnt-mid fnt-light" required placeholder="Price for the course">
+                        <input id="js-course-upload-price" type="number" class="fnt fnt-mid fnt-light" required placeholder="Price for the course">
                     </div><br><br>
     
                     <div class="input-field">
@@ -186,7 +191,7 @@ class CourseForm extends HTMLElement {
 
                     "userId" : getUserID(),
                     "courseTitle" : courseTitle.value,
-                    "courseSubject" : 10,
+                    "courseSubject" : parseInt(courseSubject.value),
                     "courseDescription" : courseDescription.value,
                     "coursePrice" : coursePrice.value,
                     "videoTitles" : videoTitleData,
@@ -207,16 +212,19 @@ class CourseForm extends HTMLElement {
                         return res.json()
                     })
 
-                if(!textUploadresponse["isError"]){
-                    alert("Upload una");
+                alert(textUploadresponse["isError"])
+                if(Boolean(textUploadresponse["isError"])){
+
+                    window.history.pushState({}, "", "/teacher_published_course");
+                    urlLocation();
                 }
                 else{
-                    alert("error ekak oi")
+                    alert("Error")
                 }
 
             }
             else{
-                alert("error ekak oi")
+                alert("Error")
             }
 
 

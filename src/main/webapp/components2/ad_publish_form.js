@@ -8,12 +8,13 @@ class Ad_publish_form extends HTMLElement {
                 <form action="#" class="upgrade-form" method="post">
                 
                     
-                    <label class="upgrade-label fnt fnt-bold fnt-large" for="certification">Upload your ad(only jpg,png files)</label>
-                    <input type="file" id="certification" class="quli_certificates" name="certification" accept=".jpeg, .png">
+                    <label class="upgrade-label fnt fnt-bold fnt-extraLarge" for="certification">Upload your ad(only jpg,png files)</label><br>
+                    <input type="file" id="certification" class="quli_certificates" name="certification" accept=".jpeg, .png"><br>
                     
                     
                     <button class="btn btn-large btn-outlined fnt fnt-mid fnt-bold " id="submit_btn" type="submit">Submit</button>
-                </form>
+                </form><br><br>
+                <center><img src="../static/img/add_img/add.png" width="400px" height="300px"><center>
               
         </div>
       </div>
@@ -45,14 +46,13 @@ class Ad_publish_form extends HTMLElement {
             //send save files request
             let fileUploadresponseme = await fetch('http://localhost:8080/api/addpublish/', {method : "POST", body:formData})
                 .then((res)=>{
-                    alert(JSON.stringify(res));
+
                     return res.json();
                 })
 
 
             if(!fileUploadresponseme["isError"]){
-                alert("Upload una");
-                alert(JSON.stringify(fileUploadresponseme["thumbnail"]));
+
                 //handle text data submission here
                 //textData
 
@@ -74,9 +74,10 @@ class Ad_publish_form extends HTMLElement {
                         return res.json()
                     })
 
-                if(!textUploadresponseme["isError"]){
+                if(!Boolean(textUploadresponse["isError"])){
                     alert("Upload una");
-                    userProfileImage=fileUploadresponseme["thumbnail"];
+                    window.history.pushState({}, "", "/profile");
+                    urlLocation();
                 }
                 else{
                     alert("error ekak oi")

@@ -74,7 +74,7 @@ class Open_course extends HTMLElement {
 
                 popup.innerHTML = `
                         <div class="rating-box">
-                              <header>Add your rates</header>
+                              <header class="fnt fnt-bold fnt-large">Add your rates</header>
                               <div class="stars">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -138,10 +138,12 @@ class Open_course extends HTMLElement {
                 document.querySelector(".popup-container").style.display = "flex";
 
                 popup.innerHTML = `
-                        <label for="reason">Enter the reason:</label>
-                        <input type="text" id="reason" name="reason"><br><br>
-                        <button class="submit">Sumbit</button>
+                        <label for="reason" class="fnt fnt-bold fnt-large">Enter the reason:</label><br>
+                        <input type="text" id="reason" name="reason" class="fnt fnt-large fnt-light" style="width: 300px; height: 30px;"><br><br>
+                        <button class="submit fnt fnt-bold fnt-large btn btn-small">Sumbit</button>
                 `;
+
+
 
                 let report = document.querySelectorAll(".submit");
 
@@ -187,8 +189,7 @@ class Open_course extends HTMLElement {
 
                 let course_id = event.target.id;
                 temporary_data= course_id;
-                alert(course_id);
-                alert("sachini")
+
 
 
             })

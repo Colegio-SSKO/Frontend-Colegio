@@ -43,6 +43,7 @@ function renderSingle(){
                     "user_id": user_id
                 }
 
+
                 // let url = "http://localhost:8090/api/users/Vieworg_teacher";
                 // let res3 = await fetch(url, {method: "POST", body: JSON.stringify(requestBody)}).then((response) =>
                 //     response.json()
@@ -80,6 +81,7 @@ function renderSingle(){
 
 
                 let popup = document.querySelector(".popup-content");
+
                 document.querySelector(".popup-container").style.display = "flex";
 
 

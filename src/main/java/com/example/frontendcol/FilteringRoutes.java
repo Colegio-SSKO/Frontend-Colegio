@@ -22,6 +22,12 @@ public class FilteringRoutes implements Filter {
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse res = (HttpServletResponse) response;
 
+
+        res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+        res.setHeader("Pragma", "no-cache");
+        res.setHeader("Expires", "0");
+
+
         Integer index = req.getRequestURI().indexOf("SPAroutes");
 
         if(req.getRequestURI().indexOf("SPAroutes")!=-1 || req.getRequestURI().indexOf("components2")!=-1

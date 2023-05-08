@@ -32,7 +32,7 @@ class Profile_upgrade_form extends HTMLElement {
         upgradeToteacher.addEventListener('click', async (event)=>{
             event.preventDefault();
 
-            alert("meka tm create course")
+
 
             //thumbnail
             let formData = new FormData();
@@ -45,14 +45,13 @@ class Profile_upgrade_form extends HTMLElement {
             //send save files request
             let fileUploadresponseme = await fetch('http://localhost:8080/api/upgradeToteacher/', {method : "POST", body:formData})
                 .then((res)=>{
-                    alert(JSON.stringify(res));
+
                     return res.json();
                 })
 
 
             if(!fileUploadresponseme["isError"]){
-                alert("Upload una");
-                alert(JSON.stringify(fileUploadresponseme["thumbnail"]));
+
                 //handle text data submission here
                 //textData
                 let education_level = document.querySelector("#education_level");
@@ -77,6 +76,28 @@ class Profile_upgrade_form extends HTMLElement {
                     .then((res)=>{
                         return res.json()
                     })
+
+                let popup = document.querySelector(".popup-content");
+                document.querySelector(".popup-container").style.display = "flex";
+
+                alert(textUploadresponse.message);
+
+                if(textUploadresponse.message==="Send upgrade to teacher details successfully"){
+                    popup.innerHTML = `
+                        <img src="../static/img/components_images/success.jpg" alt="">
+                        <h2>${textUploadresponse.message}</h2>
+                        <button btn btn-primary><a href="/profile">OK</a></button>
+
+                `;
+                }
+                else {
+                    popup.innerHTML = `
+                        <img src="../static/img/components_images/error.jpg" alt="">
+                        <h2>Error</h2>
+                        <button btn btn-primary><a href="/profile">OK</a></button>
+
+                `;
+                }
 
                 if(!textUploadresponseme["isError"]){
                     alert("Upload una");

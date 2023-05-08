@@ -3,12 +3,14 @@ async function fetchData(){
 };
 
 
+
 async function renderSingle() {
 
     try {
 
 
         const data = await fetchData();
+
 
         const res3 = await fetch("http://localhost:8090/api/users/ViewCont_list", {
             method: "GET",

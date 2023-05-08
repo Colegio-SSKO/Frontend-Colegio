@@ -2,7 +2,7 @@ class Easy_nav_card_results extends HTMLElement {
 
     connectedCallback() {
     alert("mekata awaa")
-        let dataString = decodeURIComponent(this.getAttribute('dataString'));
+        let dataString = decodeURIComponent(this.attributes.dataString.value);
         let data = JSON.parse(dataString);
 
         let htmlcontent = "";

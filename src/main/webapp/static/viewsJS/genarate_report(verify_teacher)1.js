@@ -8,6 +8,7 @@ async function fetchData(){
         response.json()
 
     );
+
     return res
 
 };

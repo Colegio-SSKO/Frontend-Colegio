@@ -9,8 +9,8 @@ class Featured_cont extends HTMLElement {
             }
         )
 
-        let content_id = 20;
-        let content_name = "title1"
+        let content_id = data['content_id'];
+        let content_name = data['title'];
 
 
         this.innerHTML = `
@@ -59,14 +59,18 @@ class Featured_cont extends HTMLElement {
         for (let element of addtocart){
             element.addEventListener('click',async (event)=>{
 
-                let content_id = event.target.id;
+
 
 
                 let requestBody= {
                     "content_id": content_id
                 }
                 let url = "http://localhost:8090/api/users/addtocart/:" + getUserID();
-                let res = await fetch(url, {method : "POST",  body : JSON.stringify(requestBody)}).then((response)=>
+                let res = await fetch(url, {
+                    method : "POST",
+                    body : JSON.stringify(requestBody),
+                    credentials : "include"
+                }).then((response)=>
                     response.json()
 
                 );
@@ -113,7 +117,11 @@ class Featured_cont extends HTMLElement {
         document.querySelector('#js-payhere-paynow-btn').addEventListener('click', async (event)=>{
             event.preventDefault();
 
-
+            if (getUserType() !=1 && getUserType() !=2 && getUserType() !=3){
+                window.history.pushState({}, "", "/auth/signin" +
+                    "");
+                urlLocation();
+            }
             let reqBody = {
                 "content" :[
                     {"content_id": content_id}
@@ -131,7 +139,7 @@ class Featured_cont extends HTMLElement {
 
 
             if (orderData["isError"]){
-                (orderData["errorMessage"])
+                alert(orderData["errorMessage"])
             }
             else{
                 // Payment completed. It can be a successful failure.

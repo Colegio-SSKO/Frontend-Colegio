@@ -63,7 +63,7 @@ const studentRoutes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/Home_content.jsp",
         script: "../static/viewsJS/small_card_open_new.js",
-        title: "small card open",
+        title: "Contents",
         data : "This is the home page"
     },
 
@@ -112,7 +112,7 @@ const studentRoutes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/Question_student_1_left.jsp",
         path_right: "/views/Question_student_1_right.jsp",
-        script: "../static/viewsJS/Student_question.js",
+        script: "../static/viewsJS/Student_question1.js",
         title: "Question",
         data : "This is the Question page"
     },
@@ -300,7 +300,7 @@ const studentRoutes = {
     //     template : "/SPAroutesTeacher/index_single.jsp",
     //     path_left:"/views/Teahcer_profile.jsp",
     //     path_right: "",
-    //     script: "../static/viewsJS/published_course_list(teacher)1.js",
+    //     script: "../static/viewsJS/published_course_list(teacher).js",
     //     title: "profile",
     //     data : "This is the profile page"
     // },
@@ -310,7 +310,7 @@ const studentRoutes = {
     //     template : "/SPAroutesTeacher/index_single.jsp",
     //     path_left:"/views/Teahcer_profile.jsp",
     //     path_right: "",
-    //     script: "../static/viewsJS/published_quiz_list(teacher)1.js",
+    //     script: "../static/viewsJS/published_quiz_list(teacher).js",
     //     title: "profile",
     //     data : "This is the profile page"
     // },
@@ -365,7 +365,7 @@ const teacherRoutes =  {
         template : "/SPAroutesTeacher/index_double.jsp",
         path_left:"/views/View_course2_left.jsp",
         path_right: "/views/View_course2_right.jsp",
-        script: "../static/viewsJS/teacher_view_courses1.js",
+        script: "../static/viewsJS/teacher_view_courses.js",
         title: "My Courses",
         data : "This is the contact page"
     },
@@ -385,7 +385,7 @@ const teacherRoutes =  {
         template : "/SPAroutesTeacher/index_double.jsp",
         path_left:"/views/Question_student_1_left.jsp",
         path_right: "/views/Question_student_1_right.jsp",
-        script: "../static/viewsJS/Student_question.js",
+        script: "../static/viewsJS/Student_question1.js",
         title: "Question",
         data : "This is the Question page"
     },
@@ -396,7 +396,7 @@ const teacherRoutes =  {
         template : "/SPAroutesTeacher/index_double.jsp",
         path_left:"/views/Question_student_1_left.jsp",
         path_right: "/views/Question_student_1_right.jsp",
-        script: "../static/viewsJS/teacher_answer_questions.js",
+        script: "../static/viewsJS/teacher_answer_questions1.js",
         title: "Answer Question",
         data : "This is the Question page"
     },
@@ -454,7 +454,7 @@ const teacherRoutes =  {
         isSingle : true,
         template : "/SPAroutesTeacher/index_single.jsp",
         path_left:"/views/Quiz_teacher_org1_left.jsp",
-        script: "../static/viewsJS/organizations_of_teacher1.js",
+        script: "../static/viewsJS/organizations_of_teacher.js",
         title: "Teacher organizations",
         data : "This is the quiz page"
     },
@@ -511,7 +511,7 @@ const teacherRoutes =  {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Organization_view.jsp",
-        script: "../static/viewsJS/organization_view(teacher).js",
+        script: "../static/viewsJS/organization_view(teacher)1.js",
         path_right: "",
         title: "Organization",
         data : "This is the notification page"
@@ -533,7 +533,7 @@ const teacherRoutes =  {
         path_left:"/views/Organization_profile(stu).jsp",
         script: "../static/viewsJS/teacher_content_view.js",
         path_right: "",
-        title: "Organization",
+        title: "All Content",
         data : "This is the notification page"
     },
 
@@ -591,7 +591,7 @@ const teacherRoutes =  {
         template : "/SPAroutesTeacher/index_single.jsp",
         path_left:"/views/Teahcer_profile.jsp",
         path_right: "",
-        script: "../static/viewsJS/published_course_list(teacher)1.js",
+        script: "../static/viewsJS/published_course_list(teacher).js",
         title: "Manage my courses",
         data : "This is the manage my course page"
     },
@@ -601,7 +601,7 @@ const teacherRoutes =  {
         template : "/SPAroutesTeacher/index_single.jsp",
         path_left:"/views/Teahcer_profile.jsp",
         path_right: "",
-        script: "../static/viewsJS/published_quiz_list(teacher)1.js",
+        script: "../static/viewsJS/published_quiz_list(teacher).js",
         title: "Manage my quizzes",
         data : "This is the manage my quizzes page"
     },
@@ -620,7 +620,7 @@ const teacherRoutes =  {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/Home_content.jsp",
         script: "../static/viewsJS/small_card_open_new.js",
-        title: "small card open",
+        title: "Contents",
         data : "This is the home page"
     },
 
@@ -641,6 +641,23 @@ const teacherRoutes =  {
         script: "../static/viewsJS/Student_continue_course1.js",
         title: "Follow Course",
         data : "This is the follow course page"
+    },
+    "/easy_nav_cards" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Home_content.jsp",
+        script: "../static/viewsJS/easy_nav_cards.js",
+        title: "Home",
+        data : "This is the home page"
+    },
+
+    "/test" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Home_content.jsp",
+        script: "../static/viewsJS/main_search1.js",
+        title: "Home",
+        data : "This is the home page"
     },
 
 
@@ -700,7 +717,7 @@ const organizationRoutes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/Question_student_1_left.jsp",
         path_right: "/views/Question_student_1_right.jsp",
-        script: "../static/viewsJS/Student_question.js",
+        script: "../static/viewsJS/Student_question1.js",
         title: "Question",
         data : "This is the Question page"
     },
@@ -856,7 +873,7 @@ const organizationRoutes = {
         isSingle : true,
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Organization_profile(stu).jsp",
-        script: "../static/viewsJS/teacherlist_view(org).js",
+        script: "../static/viewsJS/teacherlist_view(org)1.js",
         path_right: "",
         title: "Teachers",
         data : "This is the notification page"
@@ -906,7 +923,7 @@ const organizationRoutes = {
         template : "/SPAroutesTeacher/index_single.jsp",
         path_left:"/views/Teahcer_profile.jsp",
         path_right: "",
-        script: "../static/viewsJS/published_course_list(teacher)1.js",
+        script: "../static/viewsJS/published_course_list(teacher).js",
         title: "profile",
         data : "This is the profile page"
     },
@@ -916,7 +933,7 @@ const organizationRoutes = {
         template : "/SPAroutesTeacher/index_single.jsp",
         path_left:"/views/Teahcer_profile.jsp",
         path_right: "",
-        script: "../static/viewsJS/published_quiz_list(teacher)1.js",
+        script: "../static/viewsJS/published_quiz_list(teacher).js",
         title: "profile",
         data : "This is the profile page"
     },
@@ -946,7 +963,16 @@ const organizationRoutes = {
         template : "/SPAroutes/index_double.jsp",
         path_left:"/views/Home_content.jsp",
         script: "../static/viewsJS/small_card_open_new.js",
-        title: "small card open",
+        title: "Contents",
+        data : "This is the home page"
+    },
+
+    "/test" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Home_content.jsp",
+        script: "../static/viewsJS/main_search1.js",
+        title: "Home",
         data : "This is the home page"
     },
 
@@ -1123,9 +1149,7 @@ const handleNormalRoutes = async (location)=>{
     document.querySelector(".pagename").innerText = route.title;
 
 
-    //loading chats
-    let chat = document.createElement('chat-last');
-    document.querySelector('#js-chat-in-body-tag').innerHTML = '<chat-last></chat-last>'
+
 }
 
 

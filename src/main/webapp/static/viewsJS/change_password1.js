@@ -44,9 +44,11 @@ function renderSingle(){
                 return data.json()
             });
 
+
             let popup = document.querySelector(".popup-content");
 
             document.querySelector(".popup-container").style.display = "flex";
+
 
             let isError = resp["isError"];
             let message = resp["message"];
@@ -68,6 +70,7 @@ function renderSingle(){
 
             }
             let ok_btn = document.getElementById("ok-btn");
+
             ok_btn.addEventListener("click", ()=>{
                 document.querySelector(".popup-container").style.display = "none";
             })

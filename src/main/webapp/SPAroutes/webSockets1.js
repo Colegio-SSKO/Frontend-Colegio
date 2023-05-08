@@ -126,6 +126,11 @@ async function initiateWebsocket(){
 
 
             })
+            //loading chats
+
+            document.querySelector('#js-chat-in-body-tag').innerHTML = '<chat-last></chat-last>'
+
+
             socketsStartedBefore = true;
 
 

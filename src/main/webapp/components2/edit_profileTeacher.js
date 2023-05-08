@@ -75,22 +75,21 @@ class Edit_profileteacher extends HTMLElement {
 
                 let fileUploadresponseme = await fetch('http://localhost:8080/api/uploadPropic/', {method : "POST", body:formData})
                     .then((res)=>{
-                        alert(JSON.stringify(res));
+
                         return res.json();
                     })
 
                 if(!fileUploadresponseme["isError"]){
-                    alert("Upload una");
-                    alert(JSON.stringify(fileUploadresponseme["thumbnail"]));
+
 
                     let textData = {
                         "image" : fileUploadresponseme["thumbnail"],
                     }
 
-                    alert(JSON.stringify(textData))
+
 
                     //send the request
-                    let uploadresponse = fetch('http://localhost:8090/api/users/upload_pro_pic/:'+getUserID(), {
+                    let uploadresponse = await fetch('http://localhost:8090/api/users/upload_pro_pic/:'+getUserID(), {
                         method : "POST",
                         body:JSON.stringify(textData),
                         credentials : "include"

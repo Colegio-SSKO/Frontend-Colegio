@@ -13,9 +13,14 @@ class QuizForm extends HTMLElement {
                     <div class="input-field">
                         <p for="" class="fnt fnt-mid fnt-bold">Select the most appropriate category for your quiz.</p><br><br>
                         <select id="js-quiz-upload-subject" required>
-                            <option value="Science">Science</option>
-                            <option value="Mathematics">Mathematics</option>
-                            <option value="English">English</option>
+                            <option value="11">Science</option>
+                            <option value="10">Maths</option>
+                            <option value="12">English</option>
+                            <option value="13">History</option>
+                            <option value="14">ICT</option>
+                            <option value="15">Chemistry</option>
+                            <option value="16">Physics</option>
+                            <option value="17">Biology</option>
                         </select>
                     </div><br><br>
     
@@ -26,7 +31,7 @@ class QuizForm extends HTMLElement {
                     
                     <div class="input-field">
                         <label for="" class="fnt fnt-mid fnt-bold">Price (In LKR).</label><br><br>
-                        <input id="js-quiz-upload-price" type="text" class="fnt fnt-mid fnt-light" required placeholder="Price for the quiz">
+                        <input id="js-quiz-upload-price" type="number" class="fnt fnt-mid fnt-light" required placeholder="Price for the quiz">
                     </div><br><br>
     
                     <div class="input-field">
@@ -94,16 +99,17 @@ class QuizForm extends HTMLElement {
                 newQuestion["opt3"] = question.querySelector('#quiz-upload-container-option-box3').value;
                 newQuestion["opt4"] = question.querySelector('#quiz-upload-container-option-box4').value;
                 newQuestion["answer"] = question.querySelector('#js-quiz-upload-answer').value;
-                alert(JSON.stringify(newQuestion))
+
                 questionData.push(newQuestion)
             })
-            alert(JSON.stringify(questionData));
+
 
             let inputData = {
 
+
                 "userId" : getUserID(),
                 "title" : quizTitle.value,
-                "subject" : 10,
+                "subject" : parseInt(quizSubject.value),
                 "description" : quizDescription.value,
                 "price" : quizPrice.value,
                 "quizQuestions" : questionData
@@ -190,13 +196,12 @@ class QuizForm extends HTMLElement {
 
             let fileUploadresponseme = await fetch('http://localhost:8080/api/createQuiz/', {method : "POST", body:formData})
                 .then((res)=>{
-                    alert(JSON.stringify(res));
+
                     return res.json();
                 })
 
             if(!fileUploadresponseme["isError"]){
-                alert("Upload una");
-                alert(JSON.stringify(fileUploadresponseme["thumbnail"]));
+
 
                 let textData = extractTextData();
                 textData["image"]=fileUploadresponseme["thumbnail"];
@@ -211,8 +216,10 @@ class QuizForm extends HTMLElement {
                         return res.json()
                     })
 
-                if(!textUploadresponseme["isError"]){
+                if(!Boolean(textUploadresponse["isError"])){
                     alert("Upload una");
+                    window.history.pushState({}, "", "/teacher_published_quiz");
+                    urlLocation();
                 }
                 else{
                     alert("error ekak oi")

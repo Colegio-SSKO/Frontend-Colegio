@@ -10,7 +10,7 @@ class TeacherListorg extends HTMLElement {
         let htmlcontent = "";
 
         for (let i of data) {
-            htmlcontent += `<teacher-cardorg img_src="${i["img_src"]}" name="${i["name"]}" quli="${i["quli"]}" user_id="${i["user_id"]}"  teacher_id="${i["teacher_id"]}"></teacher-cardOrg>
+            htmlcontent += `<teacher-cardorg img_src="${i["img_src"]}" name="${i["name"]}" quli="${i["quli"]}" user_id="${i["user_id"]}"  teacher_id2="${i["teacher_id"]}"></teacher-cardOrg>
             `;
         }
 

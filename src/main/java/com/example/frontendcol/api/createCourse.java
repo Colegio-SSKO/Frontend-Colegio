@@ -101,7 +101,7 @@ public class createCourse extends HttpServlet {
 
 
         }catch (Exception exception){
-            System.out.println(exception);
+            exception.printStackTrace();
         }
 
     }
@@ -120,7 +120,7 @@ public class createCourse extends HttpServlet {
         String relativePath = "";
         String thumbnailPath = context.getRealPath(relativePath);
 
-        String saveFilePath = "../../src/main/webapp/static/img/course_img"+thumbnailFilename;
+        String saveFilePath = "../../src/main/webapp/static/img/quiz_img"+thumbnailFilename;
         File savedThumbnailFile = new File(thumbnailPath, saveFilePath);
         InputStream thumbnailInputStream = thumbnail.getInputStream();
         OutputStream thumbnailOutputStream = new FileOutputStream(savedThumbnailFile);
@@ -133,6 +133,7 @@ public class createCourse extends HttpServlet {
         thumbnailOutputStream.close();
         thumbnailInputStream.close();
         System.out.println("no error for thumbnail");
+        saveFilePath=".."+saveFilePath.split("webapp")[1];
 
         return saveFilePath;
 
@@ -151,7 +152,7 @@ public class createCourse extends HttpServlet {
         String videoPath = context.getRealPath(relativePath);
 
 
-        String saveFilePath = "/"+videoFilename;
+        String saveFilePath = "../../src/main/webapp/static/img/quiz_img"+videoFilename;
         File savedVideoFile = new File(videoPath, saveFilePath);
         InputStream videoInputStream = video.getInputStream();
         OutputStream videoOutputStream = new FileOutputStream(savedVideoFile);
@@ -164,6 +165,7 @@ public class createCourse extends HttpServlet {
         videoOutputStream.close();
         videoInputStream.close();
         System.out.println("no error for videos");
+        System.out.println(saveFilePath);
 
         saveFilePath=".."+saveFilePath.split("webapp")[1];
         return saveFilePath;

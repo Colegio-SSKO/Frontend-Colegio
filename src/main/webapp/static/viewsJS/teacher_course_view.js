@@ -1,4 +1,5 @@
 
+
 async function fetchData(){
     const req = {
         "user_ID" : "23"
@@ -18,6 +19,7 @@ async function fetchData(){
 function renderSingle(){
 
     fetchData().then((data)=>{
+
 
         let html = `
  

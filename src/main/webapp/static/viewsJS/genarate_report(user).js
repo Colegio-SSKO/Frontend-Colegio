@@ -1,4 +1,5 @@
 
+
 async function fetchData(){
 
     let res = await fetch("http://localhost:8090/api/moderators/generate_report_person/:" + temporary_data, {
@@ -64,6 +65,7 @@ function renderSingle(){
                 ok_btn.addEventListener("click", ()=>{
                     document.querySelector(".popup-container").style.display = "none";
                 })
+
 
                 window.history.back();
             })

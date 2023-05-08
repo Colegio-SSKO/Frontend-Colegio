@@ -106,13 +106,12 @@ class Question_form extends HTMLElement {
 
             let fileUploadresponseme = await fetch('http://localhost:8080/api/publishQuestion/', {method : "POST", body:formData})
                 .then((res)=>{
-                    alert(JSON.stringify(res));
+
                     return res.json();
                 })
 
             if(!fileUploadresponseme["isError"]){
-                alert("Upload una");
-                alert(JSON.stringify(fileUploadresponseme["thumbnail"]));
+
 
             let textData = {
                 "title" : title.value,
@@ -122,10 +121,10 @@ class Question_form extends HTMLElement {
                 "image" : fileUploadresponseme["thumbnail"],
             }
 
-            alert(JSON.stringify(textData))
+
 
             //send the request
-            let uploadresponse = fetch('http://localhost:8090/api/users/publish_question/:'+getUserID(), {
+            let uploadresponse = await fetch('http://localhost:8090/api/users/publish_question/:'+getUserID(), {
                 method : "POST",
                 body:JSON.stringify(textData),
                 credentials : "include"

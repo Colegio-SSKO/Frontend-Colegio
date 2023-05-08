@@ -55,7 +55,7 @@ class Item_buying_right extends HTMLElement {
                     "content_id": content_id
                 }
                 let url = "http://localhost:8090/api/users/addtocart/:" + getUserID();
-                let res = await fetch(url, {method : "POST",  body : JSON.stringify(requestBody)}).then((response)=>
+                let res = await fetch(url, {method : "POST", credentials:"include", body : JSON.stringify(requestBody)}).then((response)=>
                     response.json()
 
                 );
@@ -107,7 +107,7 @@ class Item_buying_right extends HTMLElement {
             }).then((response)=>{
                 return response.json();
             })
-            alert(JSON.stringify(hash))
+
 
 
             // Payment completed. It can be a successful failure.
