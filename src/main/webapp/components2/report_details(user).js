@@ -47,9 +47,8 @@ class Reportperson_list extends HTMLElement {
                 </table><br>
                 
                 <div class="report_button">
-                    <button class="disable_user btn btn-solid btn-large" id="${data[0].user_id}">Ban User account</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <button class="btn btn-solid btn-large">Temporarily ban</button>
-                    <button class="pending btn btn-solid btn-large">Pending</button>
+                    <a href="/report_person"><button class="disable_user btn btn-solid btn-large" id="${data[0].user_id}">Ban User account</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button class="pending btn btn-solid btn-large is-a-route">Pending</button>
                 </div>
                 
             </div>
