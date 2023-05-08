@@ -37,9 +37,9 @@ class Comment_container extends HTMLElement {
                 document.querySelector(".popup-container").style.display = "flex";
 
                 popup.innerHTML = `
-                        <label for="reason">Enter the reason:</label>
-                        <input type="text" id="reason" name="reason"><br><br>
-                        <button class="submit">Sumbit</button>
+                        <label for="reason" class="fnt fnt-large fnt-bold">Enter the reason:</label><br>
+                        <input type="text" id="reason" name="reason" class="fnt fnt-large fnt-light" style="width: 300px; height: 30px;"><br><br>
+                        <button class="submit btn btn-small">Sumbit</button>
                 `;
 
                 let report = document.querySelectorAll(".submit");
@@ -57,7 +57,7 @@ class Comment_container extends HTMLElement {
                             "user_id": user_id
                         }
                         let url = "http://localhost:8090/api/users/report_comment/:" + getUserID();
-                        let res = await fetch(url, {method : "POST",  body : JSON.stringify(requestBody)}).then((response)=>
+                        let res = await fetch(url, {method : "POST",  credentials:"include",body : JSON.stringify(requestBody)}).then((response)=>
                             response.json()
 
                         );
@@ -66,10 +66,11 @@ class Comment_container extends HTMLElement {
 
                         popup.innerHTML = `
                         <img src="../static/img/components_images/success.jpg" alt="">
-                        <h2 class="fnt fnt-bold fnt-large">${res.message}</h2>
-                        <button btn btn-primary><a href="/">OK</a></button>
+                        <h2 class="fnt fnt-bold fnt-large">Report update successfully</h2><br>
+                        <a href="/"><div class="btn btn-small btn-outlined is-a-route fnt fnt-bold fnt-large">OK</div></a>
 
                 `;
+
                     })
                 }
 

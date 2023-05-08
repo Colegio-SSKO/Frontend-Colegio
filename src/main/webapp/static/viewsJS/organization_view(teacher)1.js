@@ -1,29 +1,25 @@
-alert("my_organizs223s");
+alert("new_organization10113225");
+
 
 async function fetchData(){
-    const req = {
-        "user_ID" : "23"
-    }
 
-//uncomment this when connecting the database
-    let res = await fetch("http://localhost:8090/api/teachers/viewmyorganization/:" + getUserID(), {
+    let res = await fetch("http://localhost:8090/api/teachers/vieworganization/:"+getUserID(), {
         method : "GET",
         credentials : "include"
     }).then((response)=>
         response.text()
 
     );
-    alert("hellowww" +res);
     return res
 };
 function renderSingle(){
 
     fetchData().then((data)=>{
-        alert("metana weda my")
-        alert(data)
-        let html = `
+
+
+        let html = `<pop-up></pop-up>
         
-        <organization-2listteacher dataString="${encodeURIComponent(data)}"></organization-2listteacher>`;
+        <organization-listteacher dataString="${encodeURIComponent(data)}"></organization-listteacher>`;
 
 
         document.querySelector(".cont-body-content").innerHTML = html;
@@ -42,14 +38,15 @@ function renderSingle(){
                     "organization_id": organization_id
                 }
 
-                alert(organization_id);
             })
 
         }
 
+
+
+
     });
 }
-
 
 
 
