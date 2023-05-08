@@ -9,7 +9,7 @@ async function fetchData() {
 
 //uncomment this when connecting the database
 
-    const res2 = await fetch("http://localhost:8090/api/users/small_card_open/:" + temporary_data, {method: "GET", credentials:"include"}).then((response) => response.json());
+    const res2 = await fetch("http://localhost:8090/api/visitors/small_card_open/:" + temporary_data, {method: "GET", credentials:"include"}).then((response) => response.json());
 
     return res2;
 
@@ -68,7 +68,7 @@ function renderLeft() {
             renderRight(res4,data,0);
         }
         else{
-            const res5 = await fetch("http://localhost:8090/api/users/get_content_media_quiz/:" + temporary_data, {method: "GET", credentials:"include"}).then((response) => response.json());
+            const res5 = await fetch("http://localhost:8090/api/visitors/get_content_media_quiz/:" + temporary_data, {method: "GET", credentials:"include"}).then((response) => response.json());
 
             renderRight(res5,data,1);
         }

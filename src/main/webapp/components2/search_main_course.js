@@ -34,6 +34,10 @@ class Search_main_course extends HTMLElement {
 
                     let content_id = event.currentTarget.id;
                     temporary_data = content_id;
+
+
+                window.history.pushState({}, "", "/small_cardopen");
+                urlLocation();
                 }
             );
         }

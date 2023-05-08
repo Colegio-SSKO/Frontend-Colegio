@@ -50,7 +50,7 @@ class Navbar1 extends HTMLElement {
 
         searchButton.addEventListener('click', ()=>{
             temporary_data = searchIcon.value;
-            alert(temporary_data)
+
         })
 
 

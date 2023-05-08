@@ -12,7 +12,7 @@ async function fetchData() {
     return res2;
 }
 //uncomment this when connecting the database
-//     let res = await fetch("http://localhost:8090/api/users/small_card_open/:1", {method : "GET"}).then((response)=>
+//     let res = await fetch("http://localhost:8090/api/visitors/small_card_open/:1", {method : "GET"}).then((response)=>
 //         response.json()
 //
 //     );

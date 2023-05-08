@@ -11,7 +11,7 @@ class Small_card_open_com extends HTMLElement {
         // let rate_count = this.attributes.rate_count.value;
         let content_id = this.attributes.content_id.value;
 
-        const res3 = await fetch("http://localhost:8090/api/users/small_card_open_comment/:" + content_id, {method: "GET", credentials:"include"}).then((response) => response.text());
+        const res3 = await fetch("http://localhost:8090/api/visitors/small_card_open_comment/:" + content_id, {method: "GET", credentials:"include"}).then((response) => response.text());
 
         this.innerHTML = `
             <div class="featured-cont-wrap-buying" id="${content_id}">

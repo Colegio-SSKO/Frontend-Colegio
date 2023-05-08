@@ -5,7 +5,7 @@
 async function fetchData() {
 
 
-    const res2 = await fetch("http://localhost:8090/api/users/small_card_open/:" + temporary_data, {
+    const res2 = await fetch("http://localhost:8090/api/visitors/small_card_open/:" + temporary_data, {
         method: "GET",
         credentials : "include"
     }).then((response) => response.json());
@@ -13,7 +13,7 @@ async function fetchData() {
     return res2;
 }
 //uncomment this when connecting the database
-//     let res = await fetch("http://localhost:8090/api/users/small_card_open/:1", {method : "GET"}).then((response)=>
+//     let res = await fetch("http://localhost:8090/api/visitors/small_card_open/:1", {method : "GET"}).then((response)=>
 //         response.json()
 //
 //     );
@@ -26,7 +26,7 @@ async function renderSingle() {
         let data = await fetchData();
 
 
-        const res3 = await fetch("http://localhost:8090/api/users/small_card_open_comment/:" + temporary_data, {method: "GET"}).then((response) => response.text());
+        const res3 = await fetch("http://localhost:8090/api/visitors/small_card_open_comment/:" + temporary_data, {method: "GET"}).then((response) => response.text());
 
 
 
