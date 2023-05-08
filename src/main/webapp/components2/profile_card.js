@@ -14,10 +14,10 @@ class Profile_card extends HTMLElement {
             <img src="${profile_img}" alt="profile picture" srcset="">
         </div>
         <div class="profile-card-details">
-            <h4 class="fnt fnt-bold fnt-large">Name: ${name} </h4><br>
-            <p class="fnt fnt-bold fnt-large">Gender: ${gender}</p><br>
-            <p class="fnt fnt-bold fnt-large">Registered date: ${date}</p><br>
-            <p class="fnt fnt-bold fnt-large">Education level: ${education_level}</p>
+            <h4 class="fnt fnt-bold fnt-large">Name: <span class="fnt-mid fnt-bold fnt">${name}</span></h4><br>
+            <p class="fnt fnt-bold fnt-large">Gender: <span class="fnt-mid fnt-bold fnt">${gender}</span></p><br>
+            <p class="fnt fnt-bold fnt-large">Registered date: <span class="fnt-mid fnt-bold fnt">${date}</span></p><br>
+            <p class="fnt fnt-bold fnt-large">Education level: <span class="fnt-mid fnt-bold fnt">${education_level}</span></p>
             
         </div>
         <div class="edit-and-delte-btns">

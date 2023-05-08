@@ -273,14 +273,14 @@ body {
     border-radius: 10px;
     background: #F9F7F7;
     margin: auto;
-    margin-top: 73px;
+    margin-top: 55px;
 }
 
 .open-course-wrap-follow{
     position: relative;
     cursor: pointer;
     width: 100%;
-    height: 700px;
+    /*height: 700px;*/
     padding: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
     border-radius: 10px;
@@ -346,8 +346,13 @@ body {
     position: relative;
 }
 
+.open-course-cont a{
+    margin: auto;
+}
+
+
 .open-course-cont > div {
-    position: absolute;
+    /*position: absolute;*/
 
 }
 
@@ -443,6 +448,7 @@ body {
 .featured-cont-wrap-x {
     margin: 1.5rem;
     width: 100%;
+    height: 370px;
     cursor: pointer;
     display: flex;
     padding: 10px;
@@ -537,7 +543,7 @@ body {
 
 .desc-head {
     width: 20%;
-    background-color: #3F72AF;
+    background-color: #112D4E;
     height: 100%;
     display: flex;
     color: #F9F7F7 !important;
@@ -571,7 +577,7 @@ body {
 }
 
 .desc-cont span {
-    color: #3F72AF;
+    color: #112D4E;
 }
 
 
@@ -916,7 +922,7 @@ cmnt-text{
 }
 
 .comment-main {
-    margin-top: 73px;
+    margin-top: 58px;
     padding: 16px;
     width: 100%;
     background: #F9F7F7;
@@ -977,7 +983,7 @@ cmnt-text{
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 2rem;
+    /*margin-bottom: 2rem;*/
     position: relative;
 }
 
@@ -2434,12 +2440,15 @@ input[type="file"] {
 .pro-pic-edit{
     position: relative;
     display: inline-block;
-    border-radius: 50%;
+    width: 217px;
+    height: 217px;
 }
 
 .pro-pic-edit img{
-    width: 217px;
-    height: 217px;
+    border-radius: 50%;
+    width: 100%;
+    border: 2px solid #101116;
+    height: auto;
 }
 a{
     text-decoration: none;

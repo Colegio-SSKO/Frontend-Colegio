@@ -18,8 +18,8 @@ class StartQuiz extends HTMLElement {
 
         this.innerHTML = `
             <div class="starQuiz" id="js-start-quiz-id${quiz_id}">
-                <quiz-comment comments="${comments}" id="${quiz_id}" rating="${rating}" votes="${votes}" img_src="${img_src}" title="${title}" description="${description}" author="${author}" author_title="${author_title}"></quiz-comment>
-                <button class="js-startquiz-start-btn btn btn-a btn-large btn-solid" id="${quiz_id}">Start Quiz</button>
+                <quiz-comment comments="${comments}" id="${quiz_id}" rating="${rating}" votes="${votes}" img_src="${img_src}" title="${title}" description="${description}" author="${author}" author_title="${author_title}"></quiz-comment><br>
+                <button class="js-startquiz-start-btn btn btn-profile btn-solid fnt-bold fnt fnt-mid" id="${quiz_id}">Start Quiz</button>
             </div>
             
         `;

@@ -15,11 +15,11 @@ class Organization_cardteacher extends HTMLElement {
 
 
         <div class="teacher-card-details">
-            <h5 class="fnt fnt-bold fnt-large"><a class="org_name" href="/Organization_profile(stu)" style="text-decoration: none"  id="${organization_id}">${name}</a></h5>
+            <h5 class="fnt fnt-bold fnt-large"><a class="org_name fnt fnt-mid fnt-bold" href="/Organization_profile(stu)" style="text-decoration: none"  id="${organization_id}">${name}</a></h5>
             <h5 class="fnt fnt-bold fnt-mid">${address}</h5>
         </div><br><br>
         
-        <h3 class="teacher_send_request fnt-mid fnt-light" id="${organization_id}">${status== 1 ? '' : 'Send Request>>'}</h3>
+        <h3 class="teacher_send_request fnt-mid fnt-light" id="${organization_id}"><button class="btn-solid btn-a btn fnt fnt-mid">${status== 1 ? '' : 'Send Request>>'}</button></h3>
 
         </div>
         `;

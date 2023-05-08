@@ -15,7 +15,7 @@ class Open_course extends HTMLElement {
             <div class="open-course-image">
                 <img src="${img_src}" alt="">
             </div>
-
+            <br>
             <div class="ratings" style="display: flex; align-items: center;">
                  <i class="fas fa-star star-yellow" style="color: orange; font-size:10px;"></i>
                  <i class="fas fa-star star-yellow" style="color: orange; font-size:15px;"></i>
@@ -37,7 +37,7 @@ class Open_course extends HTMLElement {
         <with-title img_src = "${author_pic}" name = "${author}" qulifi = "${author_title}"></with-title>
         <div class="open-course-cont">
         
-        <a href="/continuecourse"><button class="course_countinue btn btn-solid btn-small is-a-route" id="${content_id}">Continue</button></a>
+        <a href="/continuecourse"><button class="course_countinue btn btn-profile btn-solid fnt-mid fnt fnt-bold is-a-route" id="${content_id}">Continue</button></a>
         <br><br>
             <div class="comment-cmnt">
                 <div class="comment-comment-box">

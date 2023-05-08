@@ -8,15 +8,15 @@ class Organization_profile_card_stu extends HTMLElement {
         let organization_id = this.attributes.organization_id.value;
 
         this.innerHTML = `
-        <button class="btn btn-outlined btn-large"><a class="all_teacher fnt fnt-bold fnt-mid" id="${organization_id}" href="/organization_Teachers">Our Teachers</a></button>
+        <a class="all_teacher fnt fnt-bold fnt-mid" id="${organization_id}" href="/organization_Teachers"><button class="is-a-route fnt fnt-bold fnt-mid btn btn-a btn-solid">Our Teachers</button></a>
         <div class="profile-card-wrap">
         <div class="profile-card-image">
             <img src="${profile_img}" alt="profile picture" srcset="">
         </div>
         <div class="profile-card-details">
-            <h4 class="fnt fnt-bold fnt-large">${name}</h4>
-            <p class="fnt fnt-mid">${address}</p>
-            <p class="fnt fnt-mid">${tel_num}</p>
+            <h4 class="fnt fnt-bold fnt-large">Name: <span class="fnt-mid fnt-bold fnt">${name}</span></h4>
+            <p class="fnt fnt-large fnt-bold">Address: <span class="fnt-mid fnt-bold fnt">${address}</span></p>
+            <p class="fnt fnt-large fnt-bold">Tel No: <span class="fnt-mid fnt-bold fnt">${tel_num}</span></p>
 
         </div>
     </div>

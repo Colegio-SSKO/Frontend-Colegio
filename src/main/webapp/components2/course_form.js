@@ -56,7 +56,7 @@ class CourseForm extends HTMLElement {
                     </div>
                     
 <!--                    remove this lator-->
-                    <button id="js-course-upload-submit-button" class="btn btn-solid btn-large" type="submit">Create Course</button>
+                    <button id="js-course-upload-submit-button" class="btn btn-solid btn-large fnt fnt-mid fnt-bold" type="submit">Create Course</button>
                 </div>
             </div>
     </form>
