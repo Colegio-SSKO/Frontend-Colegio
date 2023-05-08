@@ -57,9 +57,7 @@ function renderLeft() {
         let html_left = "";
 
         html_left += "" +
-            "<a class=\"fnt fnt-bold fnt-mid\" href=\"\"><button class=\"btn btn-solid is-a-route btn-a btn-solid fnt fnt-bold fnt-mid\">All</button></a>\n" +
-            "<a class=\"fnt fnt-bold fnt-mid\" href=\"\"><button class=\"btn btn-solid is-a-route btn-a btn-solid fnt fnt-bold fnt-mid\">Continuing</button></a>\n" +
-            "<a class=\"fnt fnt-bold fnt-mid\" href=\"\"><button class=\"btn btn-solid is-a-route btn-a btn-solid fnt fnt-bold fnt-mid\">Completed</button></a>\n" +
+
             `<h4 class='fnt fnt-bold fnt-mid'>You have ${data.length} questions to answer<h4>`+
             "\n" +
             "";
