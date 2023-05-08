@@ -1,7 +1,6 @@
 async function fetchData(){
     return "eeew";
 };
-alert("menna wda")
 
 
 async function renderSingle() {
@@ -10,7 +9,6 @@ async function renderSingle() {
 
 
         const data = await fetchData();
-        alert(data);
 
         const res3 = await fetch("http://localhost:8090/api/users/ViewCont_list", {
             method: "GET",

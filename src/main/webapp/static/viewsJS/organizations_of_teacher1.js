@@ -1,4 +1,3 @@
-alert("my_organizs223s");
 
 async function fetchData(){
     const req = {
@@ -13,14 +12,11 @@ async function fetchData(){
         response.text()
 
     );
-    alert("hellowww" +res);
     return res
 };
 function renderSingle(){
 
     fetchData().then((data)=>{
-        alert("metana weda my")
-        alert(data)
         let html = `
         
         <organization-2listteacher dataString="${encodeURIComponent(data)}"></organization-2listteacher>`;
@@ -42,7 +38,6 @@ function renderSingle(){
                     "organization_id": organization_id
                 }
 
-                alert(organization_id);
             })
 
         }

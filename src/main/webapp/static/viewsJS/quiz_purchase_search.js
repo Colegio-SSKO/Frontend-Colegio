@@ -1,4 +1,3 @@
-alert("wwsdsw")
 
 
 
@@ -9,7 +8,6 @@ async function fetchData() {
         method: "GET",
         credentials : "include"
     }).then((response) => response.json());
-    alert(res2)
     return res2;
 }
 //uncomment this when connecting the database
@@ -24,16 +22,13 @@ async function fetchData() {
 async function renderSingle() {
     try {
         let data = await fetchData();
-        alert(data);
 
 
 
         const html_left = `<pop-up></pop-up> <search-quizopen img_src="${data.image}" title="${data.quiz_title}" description="${data.description}" author="${data.f_name}+${data.l_name}" date="${data.date}" content_id="${data.content_id}" ></search-quizopen>`;
-        alert("hellowww")
         document.querySelector(".cont-body-content").innerHTML = html_left;
 
     } catch (error) {
         console.error(error);
-        alert(error)
     }
 };

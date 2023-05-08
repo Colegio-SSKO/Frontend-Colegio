@@ -297,7 +297,7 @@ class Signup extends HTMLElement {
                 let popup = document.querySelector(".popup-content");
                 document.querySelector(".popup-container").style.display = "flex";
                 popup.innerHTML = `
-                        <img src="../static/img/components_images/error.jpg" alt="">
+                        <img src="../static/img/components_images/error.png" alt="">
                         <h2 class="fnt fnt-bold fnt-large">Resubmit</h2>
                         <button class="btn btn-special fnt fnt-mid fnt-bold" id="ok-btn">OK</button>
 

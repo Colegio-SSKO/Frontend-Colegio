@@ -33,7 +33,7 @@ class Signin1 extends HTMLElement {
                               <ul>
                                 <li><a href="" class="fnt fnt-mid fnt-bold">About</a></li>
                                 <li><a href="" class="fnt fnt-mid fnt-bold">Help Center</a></li>
-                                <li><a href="" class="fnt fnt-mid fnt-bold">User Agrement</a></li>
+                                <li><a href="" class="fnt fnt-mid fnt-bold">User Argument</a></li>
                                 <li><a href="" class="fnt fnt-mid fnt-bold">Privacy Policy</a></li>
                                 <li><a href="" class="fnt fnt-mid fnt-bold">Cookie Policy</a></li>
                               </ul>

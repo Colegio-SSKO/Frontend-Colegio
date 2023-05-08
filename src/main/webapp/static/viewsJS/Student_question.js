@@ -1,4 +1,3 @@
-alert("a4225");
 
 async function fetchData() {
     const req = {
@@ -14,7 +13,6 @@ async function fetchData() {
         response.json()
 
     );
-    alert(JSON.stringify(res));
 
     return res
 };
@@ -28,13 +26,10 @@ function renderRight(data, type) {
 
     let html_right = "";
 
-    alert(data["status"])
     if (type== 1){
-        alert("kabmmm")
         html_right = ` <open-question questionId="${data["question.question_id"]}" img_src="${data["pro_pic"]}" qulifi="${data["qulification_level"]}" title="${data["question_title"]}"  author="${data["f_name"]+" "+ data["l_name"]}" description="${data["question_description"]}" author_ID="${data["teacher.user_ID"]}""></open-question>`;
     }
     else {
-        alert("asd")
         html_right = ` <open-question-question id="${data["question.question_id"]}" media="${data["question_img"]}" author_propic="${data["pro_pic"]}" title="${data["question_title"]}" author="${data["f_name"]+" "+ data["l_name"]}"  description="${data["question_description"]}" qulifi="${data["qulification_level"]}"  teacherId="${data["question.accept_teacher_id"]}" img_src2="${data["question_media.media"]}"></open-question-question>`;
 
     }

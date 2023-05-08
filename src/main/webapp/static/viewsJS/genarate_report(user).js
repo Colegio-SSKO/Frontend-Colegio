@@ -1,4 +1,3 @@
-alert("report_person123");
 
 async function fetchData(){
 
@@ -65,7 +64,6 @@ function renderSingle(){
                 ok_btn.addEventListener("click", ()=>{
                     document.querySelector(".popup-container").style.display = "none";
                 })
-                alert(res.message);
 
                 window.history.back();
             })

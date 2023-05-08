@@ -1,4 +1,3 @@
-alert("new_organization1011325");
 
 
 async function fetchData(){

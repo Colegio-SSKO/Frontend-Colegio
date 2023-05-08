@@ -1,10 +1,8 @@
-alert("Hello cc5a1");
 
 async function fetchData(){
 
 
 //uncomment this when connecting the database
-    alert("tech");
     let res = await fetch("http://localhost:8090/api/users/myCources/:"+ getUserID(), {
         method : "GET",
         credentials: "include"}
@@ -13,7 +11,6 @@ async function fetchData(){
 
     );
 
-    alert(JSON.stringify(res))
     console.log(res)
 
     return res
@@ -69,7 +66,6 @@ function renderLeft() {
 
         for (let element of selected){
             element.addEventListener('click', ()=>{
-                alert("clicked");
                 for (let el of data){
 
                     if (el["content_id"] == element.getAttribute("id")){

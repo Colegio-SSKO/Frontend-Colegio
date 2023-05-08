@@ -1,4 +1,3 @@
-alert("teacher");
 
 async function fetchData(){
     const req = {
@@ -13,7 +12,6 @@ async function fetchData(){
     }).then((response) =>
         response.json()
     );
-    alert(res3);
     return res3;
 };
 
@@ -23,8 +21,6 @@ async function fetchData(){
 async function renderSingle() {
     try {
         const data = await fetchData();
-        alert(typeof (data));
-        alert(data);
         const res2 = await fetch("http://localhost:8090/api/users/ViewCont_list", {
             method: "GET",
             credentials : "include"

@@ -1,4 +1,3 @@
-alert("mil234565632");
 
 // import {myVar} from '../../components2/small-listed';
 
@@ -10,7 +9,6 @@ async function fetchData() {
 //uncomment this when connecting the database
 
     const res2 = await fetch("http://localhost:8090/api/users/small_card_open/:" + temporary_data, {method: "GET", credentials:"include"}).then((response) => response.json());
-    alert("res2 awa "+res2)
     return res2;
 
 
@@ -24,7 +22,6 @@ async function fetchData() {
 
 function renderRight(data2,data, type) {
 
-    alert("render right awa");
 
     let html_right = "";
 
@@ -57,7 +54,6 @@ function renderLeft() {
 
     fetchData().then(async (data) => {
 
-        alert("re3 wlata passe wada");
 
         let html_left = `<pop-up></pop-up> <small-cardopen img_src="${data["image"]}" purchase_count="${data["purchase_count"]}" title="${data["title"]}" description="${data["description"]}" author="${data["f_name"]} ${data["l_name"]}" price="${data["price"]}" date="${data["date"]}" content_id="${data["content_id"]}" rate_count="${data["rate_count"]}" ></small-cardopen>`;
 
@@ -69,7 +65,6 @@ function renderLeft() {
         }
         else{
             const res5 = await fetch("http://localhost:8090/api/users/get_content_media_quiz/:" + temporary_data, {method: "GET", credentials:"include"}).then((response) => response.json());
-            alert(JSON.stringify(res5))
             renderRight(res5,data,1);
         }
 

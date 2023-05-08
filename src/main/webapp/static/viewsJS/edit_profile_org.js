@@ -1,4 +1,3 @@
-alert("edit1234565")
 
 
 async function fetchData(){
@@ -96,7 +95,6 @@ function renderSingle(){
         `;
                 let ok_btn = document.getElementById("ok-btn");
                 ok_btn.addEventListener("click", ()=>{
-                    alert("ok eka wada");
                     document.querySelector(".popup-container").style.display = "none";
                 })
             }
