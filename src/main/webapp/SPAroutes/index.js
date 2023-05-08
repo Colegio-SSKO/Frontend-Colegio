@@ -43,7 +43,7 @@ const studentRoutes = {
         template : "/SPAroutes/index_single.jsp",
         path_left:"/views/Home_content.jsp",
         script: "../static/viewsJS/main_search1.js",
-        title: "Home",
+        title: "Search Results",
         data : "This is the home page"
     },
 

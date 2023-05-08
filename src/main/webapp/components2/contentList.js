@@ -18,8 +18,9 @@ class ContentList extends HTMLElement {
          <div class="content-list-wrap fadeInanimation">
             
                  `+ htmlcontent +`
-        
             </div>
+            <div class="more-btn"><button class="fnt-bold fnt fnt-mid btn btn-special more-btn">Show more</button></div>
+            
         `;
     }
 }

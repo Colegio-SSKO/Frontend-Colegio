@@ -96,7 +96,7 @@ async function renderRight(data) {
     renderProgress(questions.length);
     //setting the first question as active
     let questionTracker = 1;
-    changeColorOfNumber(questionTracker, "#46344e");
+    changeColorOfNumber(questionTracker, "#112D4E");
 
 
     //controlling next and previous buttons
@@ -106,27 +106,26 @@ async function renderRight(data) {
     previous.addEventListener('click', ()=>{
 
 
-        changeColorOfNumber(questionTracker, "#d9d9d9");
+        changeColorOfNumber(questionTracker, "#3F72AF");
         if (questionTracker != 1){
             questionTracker--;
             changeQuestion(questionTracker, questions, answers)
         }
 
-        changeColorOfNumber(questionTracker, "#46344e");
+        changeColorOfNumber(questionTracker, "#112D4E");
 
 
     })
 
     next.addEventListener('click', ()=>{
 
-        changeColorOfNumber(questionTracker, "#d9d9d9");
+        changeColorOfNumber(questionTracker, "#3F72AF");
         if (questionTracker != questions.length){
             questionTracker++;
             changeQuestion(questionTracker, questions, answers)
         }
 
-        changeColorOfNumber(questionTracker, "#46344e");
-
+        changeColorOfNumber(questionTracker, "#112D4E");
     })
 
 
@@ -148,16 +147,15 @@ async function renderRight(data) {
 
             for(let selectedContainer of containerCollection){
                 let children = selectedContainer.querySelectorAll("*");
-                children[0].style.backgroundColor = "#46344e";
+                children[0].style.backgroundColor = "#112D4E";
                 children[1].style.backgroundColor = "transparent";
             }
 
             if(event.target.classList.contains("q-number")){
-
-                event.target.style.backgroundColor = "#6D6D6D";
+                event.target.style.backgroundColor = "#3F72AF";
             }
             else {
-                event.target.previousElementSibling.style.backgroundColor = "#6D6D6D";
+                event.target.previousElementSibling.style.backgroundColor = "#3F72AF";
             }
 
 
@@ -198,11 +196,10 @@ async function renderRight(data) {
         number.addEventListener('click', (event)=>{
             event.preventDefault();
             let targetID = event.target.id[event.target.id.length-1];
-
-            changeColorOfNumber(questionTracker, "#d9d9d9");
+            changeColorOfNumber(questionTracker, "#3F72AF");
             questionTracker = targetID
             changeQuestion(questionTracker, questions,answers);
-            changeColorOfNumber(questionTracker, "#46344e");
+            changeColorOfNumber(questionTracker, "#112D4E");
 
 
         })
@@ -337,12 +334,12 @@ function changeQuestion(questionTracker, questions, answers){
     //unselect all questions
     for(let selectedContainer of containerCollection){
         let children = selectedContainer.querySelectorAll("*");
-        children[0].style.backgroundColor = "#46344e";
+        children[0].style.backgroundColor = "#112D4E";
         children[1].style.backgroundColor = "transparent";
     }
 
     if (answers[questionTracker] !== undefined){
-        document.getElementById(answers[questionTracker]).firstElementChild.style.backgroundColor = "#6D6D6D";
+        document.getElementById(answers[questionTracker]).firstElementChild.style.backgroundColor = "#3F72AF";
     }
 }
 

@@ -14,7 +14,7 @@ class Send_answers extends HTMLElement {
         this.innerHTML = `
         <form>
            <div class="open-question-new-container">
-            <div class="open-question-new-heading">
+            <div class="open-question-new-heading fnt fnt-mid fnt-bold">
                 <h3>${title}</h3>
                 <p>
                     ${description}
@@ -29,11 +29,11 @@ class Send_answers extends HTMLElement {
                         <img src="${author_propic}" alt="">
                     </div>
                     <div class="texts">
-                        <h4>Question From: <span>${author}</span></h4>
+                        <h4 class=" fnt fnt-mid fnt-bold">Question From: <span class=" fnt fnt-mid fnt-bold">${author}</span></h4>
                     </div>
                 </div>
                 <div id="js-answer-upload-wrapper" class="open-question-new-btn">
-                    <label for="">Upload answers</label>
+                    <label for="" class=" fnt fnt-mid fnt-bold">Upload answers</label>
                     <input style="display: none" id="js-thumbnail-upload" type="file">
                     <i id="js-image-upload-answer" class="material-icons">image</i>
                 </div>
