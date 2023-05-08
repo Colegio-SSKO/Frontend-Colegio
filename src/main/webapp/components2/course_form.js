@@ -214,6 +214,7 @@ class CourseForm extends HTMLElement {
 
                 alert(textUploadresponse["isError"])
                 if(Boolean(textUploadresponse["isError"])){
+                    location.reload();
 
                     window.history.pushState({}, "", "/teacher_published_course");
                     urlLocation();

@@ -224,6 +224,7 @@
     <script src="../components2/hero.js"></script>
     <script src="../components2/easy_nav_card.js"></script>
     <script src="../components2/easy_nav_card_results.js"></script>
+    <script src="../components2/featured_cont_visitor.js"></script>
 
 
 

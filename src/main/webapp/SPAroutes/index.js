@@ -56,6 +56,15 @@ const studentRoutes = {
         data : "This is the home page"
     },
 
+    "/visitor" : {
+        isSingle : true,
+        template : "/SPAroutes/index_single.jsp",
+        path_left:"/views/Home_content.jsp",
+        script: "../static/viewsJS/visitor_home.js",
+        title: "Home",
+        data : "This is the home page"
+    },
+
 
 
     "/small_cardopen" : {
@@ -1000,7 +1009,13 @@ const urlLocation = async () =>{
 
     //changing the default path
     if(window.location.pathname == "/SPAroutes/index.jsp"){
-        window.history.pushState({}, "", "/");
+        if (userType == 0){
+            window.history.pushState({}, "", "/visitor");
+        }
+        else{
+            window.history.pushState({}, "", "/");
+        }
+
 
     }
 
@@ -1067,6 +1082,7 @@ const handleNormalRoutes = async (location)=>{
     }
     else {
         Routes = studentRoutes;
+
     }
 
 
