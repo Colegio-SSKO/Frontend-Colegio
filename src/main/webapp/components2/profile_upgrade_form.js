@@ -4,7 +4,7 @@ class Profile_upgrade_form extends HTMLElement {
            <div class="account-upgrade-container">
         <div class="upgrade">
             <form action="#" class="upgrade-form" method="post">
-            
+                <label class="fnt fnt-extraLarge fnt-bold upgrader-hero">Let's Upgrade your account as Teacher</label><br>
                 <label class="upgrade-label fnt fnt-bold fnt-large" for="education">Educational Level:</label>
                 <textarea id="education_level" class="upgrade-inputs upgrade-textarea edu_level fnt fnt-bold fnt-mid" id="education" name="education" rows="5" required></textarea>
                 

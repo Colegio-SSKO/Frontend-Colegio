@@ -7,7 +7,9 @@ class Ans_q2 extends HTMLElement {
         let description = this.attributes.description.value;
         this.innerHTML = `
         <div class="q-2-cart-item js-questionCards" >
-
+        <div class="q-2-price">
+            <img src="${img_src}" alt="">
+        </div>
         <div class="q-2-content" >
             <h2 class="fnt fnt-extraBold fnt-large">${title}</h2>
             <p class="fnt fnt-small">${accept}</p>
@@ -17,9 +19,7 @@ class Ans_q2 extends HTMLElement {
 
         </div>
 
-        <div class="q-2-price">
-            <img src="${img_src}" alt="">
-        </div>
+
     </div>
         `;
     }
