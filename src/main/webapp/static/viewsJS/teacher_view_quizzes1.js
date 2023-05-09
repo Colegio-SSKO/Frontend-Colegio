@@ -73,7 +73,7 @@ async function renderRight(data) {
     let html_right = "";
 
     html_right += `
-<quiz-question q_number="${"1/"+ questions.length.toString()}" title="${data["title"]}" Question="${questions[0]["question"]}" answer1="${questions[0]["op1"]}" answer2="${questions[0]["op2"]}" answer3="${questions[0]["op3"]}" answer4="${questions[0]["op4"]}" ></quiz-question>`;
+<quiz-question correct="${data["answer"]} q_number="${"1/"+ questions.length.toString()}" title="${data["title"]}" Question="${questions[0]["question"]}" answer1="${questions[0]["op1"]}" answer2="${questions[0]["op2"]}" answer3="${questions[0]["op3"]}" answer4="${questions[0]["op4"]}" ></quiz-question>`;
     document.querySelector(".cont-body-left").innerHTML = html_right;
 
     //element selecctors
