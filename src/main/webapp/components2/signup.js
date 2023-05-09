@@ -278,7 +278,7 @@ class Signup extends HTMLElement {
                     document.querySelector(".popup-container").style.display = "flex";
                     popup.innerHTML = `
                         <img src="../static/img/components_images/success.jpg" alt="">
-                        <h2 class="fnt fnt-bold fnt-large">response["message"]</h2>
+                        <h2 class="fnt fnt-bold fnt-large">${response["message"]}</h2>
                         <button class="btn btn-special fnt fnt-mid fnt-bold" id="ok-btn">OK</button>
 
                 `;
@@ -298,7 +298,7 @@ class Signup extends HTMLElement {
                 document.querySelector(".popup-container").style.display = "flex";
                 popup.innerHTML = `
                         <img src="../static/img/components_images/error.png" alt="">
-                        <h2 class="fnt fnt-bold fnt-large">Resubmit</h2>
+                        <h2 class="fnt fnt-bold fnt-large">Refill all</h2>
                         <button class="btn btn-special fnt fnt-mid fnt-bold" id="ok-btn">OK</button>
 
                 `;

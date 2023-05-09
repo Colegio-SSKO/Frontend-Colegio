@@ -189,6 +189,28 @@ class QuizForm extends HTMLElement {
         createquiz.addEventListener('click', async (event)=>{
             event.preventDefault();
 
+            validateForm()
+            function validateForm() {
+                const inputs = document.querySelectorAll('form input');
+                for (let i = 0; i < inputs.length; i++) {
+                    if (inputs[i].value === '') {
+                        let popup = document.querySelector(".popup-content");
+                        document.querySelector(".popup-container").style.display = "flex";
+                        popup.innerHTML = `
+                        <img src="../static/img/components_images/error.jpg" alt="">
+                        <h2 class="fnt fnt-bold fnt-large">Please fill out all fields</h2>
+                        <button class="btn btn-special fnt fnt-mid fnt-bold" id="ok-btn">OK</button>
+
+                `;
+                        let ok_btn = document.getElementById("ok-btn");
+                        ok_btn.addEventListener("click", ()=>{
+                            document.querySelector(".popup-container").style.display = "none";
+                        })
+                        return false;
+                    }
+                }
+                return true;
+            }
             //thumbnail
             let formData = new FormData();
 

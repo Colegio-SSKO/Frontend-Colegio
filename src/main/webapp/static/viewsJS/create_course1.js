@@ -79,7 +79,7 @@ function renderLeft() {
         let html_left = "";
 
         html_left += `
-            <course-form></course-form>
+            <pop-up></pop-up><course-form></course-form>
         `;
 
 

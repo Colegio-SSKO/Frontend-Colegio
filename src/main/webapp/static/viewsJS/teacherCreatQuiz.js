@@ -21,7 +21,7 @@ function renderLeft() {
         let html_left = "";
 
         html_left += `
-            <quiz-form></quiz-form>
+            <pop-up></pop-up><quiz-form></quiz-form>
         `;
         document.querySelector(".cont-body-left").innerHTML = html_left;
 
