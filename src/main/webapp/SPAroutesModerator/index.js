@@ -220,7 +220,7 @@ const Routes = {
         path_left:"/views/report_content.jsp",
         script: "../static/viewsJS/genarate_report(course)1.js",
         path_right: "",
-        title: "report",
+        title: "Reports",
         data : "This is the report page"
     },
 
@@ -230,7 +230,7 @@ const Routes = {
         path_left:"/views/report_content.jsp",
         script: "../static/viewsJS/view_reported_courses.js",
         path_right: "",
-        title: "report",
+        title: "Reports",
         data : "This is the report page"
     },
 
@@ -240,7 +240,7 @@ const Routes = {
         path_left:"/views/report_content.jsp",
         script: "../static/viewsJS/genarate_report(quiz).js",
         path_right: "",
-        title: "report",
+        title: "Reports",
         data : "This is the report page"
     },
 
@@ -250,7 +250,7 @@ const Routes = {
         path_left:"/views/report_content.jsp",
         script: "../static/viewsJS/view_reported_quizzes.js",
         path_right: "",
-        title: "report",
+        title: "Reports",
         data : "This is the report page"
     },
 
@@ -261,7 +261,7 @@ const Routes = {
         path_left:"/views/report_content.jsp",
         script: "../static/viewsJS/view_reported_person1.js",
         path_right: "",
-        title: "report",
+        title: "Reports",
         data : "This is the report page"
     },
 
@@ -271,7 +271,7 @@ const Routes = {
         path_left:"/views/report_content.jsp",
         script: "../static/viewsJS/genarate_report(user).js",
         path_right: "",
-        title: "report",
+        title: "Reports",
         data : "This is the report page"
     },
 
@@ -282,7 +282,7 @@ const Routes = {
         path_left:"/views/report_content.jsp",
         script: "../static/viewsJS/view_teacher_verifylist.js",
         path_right: "",
-        title: "report",
+        title: "Verification",
         data : "This is the report page"
     },
 
@@ -292,7 +292,7 @@ const Routes = {
         path_left:"/views/report_content.jsp",
         script: "../static/viewsJS/genarate_report(verify_teacher)1.js",
         path_right: "",
-        title: "report",
+        title: "Verification",
         data : "This is the report page"
     },
 };
