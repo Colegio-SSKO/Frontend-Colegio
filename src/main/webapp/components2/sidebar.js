@@ -51,7 +51,7 @@ class sidebar extends HTMLElement {
             if (logoutResponse["isSuccess"]){
                 closeWebsockets();
                 //sending to home page
-                window.history.pushState({}, "", "/");
+                window.history.pushState({}, "", "/visitor");
                 urlLocation();
             }
             else{
